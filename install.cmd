@@ -1,6 +1,7 @@
 echo "# RDPGuard" >> README.md
-git init
+git push origin main
 git rm -r .
+git init
 git add .
 git commit -m "first commit"
 git branch -M main
