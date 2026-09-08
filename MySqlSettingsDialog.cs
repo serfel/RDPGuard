@@ -9,63 +9,63 @@ internal sealed class MySqlSettingsDialog : Form0
 {
 	private IContainer icontainer_0;
 
-	private Class66 class66_0;
+	private Class66 mbtnSave;
 
-	private Class66 class66_1;
+	private Class66 btnCancel;
 
-	private GControl0 gcontrol0_0;
+	private GControl0 separatorLine1;
 
-	private Class62 class62_0;
+	private Class62 label2;
 
-	private PictureBox pictureBox_0;
+	private PictureBox imgBigIcon;
 
-	private Class62 class62_1;
+	private Class62 lblCaption;
 
-	private GClass3 gclass3_0;
+	private GClass3 mlnkOnlineHelp;
 
-	private Class61 class61_0;
+	private Class61 mchbEnableMySqlEngine;
 
-	private Class61 class61_1;
+	private Class61 mchbAutomaticConfigLocation;
 
-	private Class63 class63_0;
+	private Class63 mlblEnableMySqlProtectionHInt;
 
-	private Class63 class63_1;
+	private Class63 mlblAutomaticConfigLocationHint;
 
-	private Class54 class54_0;
+	private Class54 medConfigFileLocation;
 
-	private Class62 class62_2;
+	private Class62 mlblConfigFileLocation;
 
-	private Class63 class63_2;
+	private Class63 mlblConfigFileLocationHint;
 
-	private Class63 class63_3;
+	private Class63 mlblLogFileLocationHint;
 
-	private Class62 class62_3;
+	private Class62 mlblLogFileLocation;
 
-	private Class54 class54_1;
+	private Class54 medLogFileLocation;
 
-	private Class63 class63_4;
+	private Class63 mlblAutomaticLogFileLocationHint;
 
-	private Class61 class61_2;
+	private Class61 mchbAutomaticLogFileLocation;
 
-	private Class63 class63_5;
+	private Class63 mlblMonitoringViaGeneralLogHint;
 
-	private Class63 class63_6;
+	private Class63 mlblMonitoringViaApplicationEventLogHint;
 
-	private Class64 class64_0;
+	private Class64 mrbMonitoringViaGeneralLog;
 
-	private Class64 class64_1;
+	private Class64 mrbMonitoringViaApplicationEventLog;
 
-	private Class62 class62_4;
+	private Class62 mlblSelectMonitoringMethod;
 
 	private GEnum9 GEnum9_0
 	{
 		get
 		{
-			if (class64_1.Checked)
+			if (mrbMonitoringViaApplicationEventLog.Checked)
 			{
 				return GEnum9.const_1;
 			}
-			if (!class64_0.Checked)
+			if (!mrbMonitoringViaGeneralLog.Checked)
 			{
 				throw new NotImplementedException("MySqlSettingsDialog::MonitoringMethod::get: unknown_monitoring_method");
 			}
@@ -78,12 +78,12 @@ internal sealed class MySqlSettingsDialog : Form0
 			default:
 				throw new NotImplementedException("MySqlSettingsDialog::MonitoringMethod::set: unknown_monitoring_method");
 			case GEnum9.const_1:
-				class64_1.Checked = true;
-				class64_0.Checked = false;
+				mrbMonitoringViaApplicationEventLog.Checked = true;
+				mrbMonitoringViaGeneralLog.Checked = false;
 				break;
 			case GEnum9.const_0:
-				class64_1.Checked = false;
-				class64_0.Checked = true;
+				mrbMonitoringViaApplicationEventLog.Checked = false;
+				mrbMonitoringViaGeneralLog.Checked = true;
 				break;
 			}
 		}
@@ -94,22 +94,22 @@ internal sealed class MySqlSettingsDialog : Form0
 		get
 		{
 			Class119 @class = new Class119();
-			@class.bool_0 = class61_0.Checked;
+			@class.bool_0 = mchbEnableMySqlEngine.Checked;
 			@class.genum9_0 = GEnum9_0;
-			@class.bool_3 = class61_1.Checked;
-			@class.bool_2 = class61_2.Checked;
-			@class.string_10 = class54_0.Text;
-			@class.String_1 = new string[1] { class54_1.Text };
+			@class.bool_3 = mchbAutomaticConfigLocation.Checked;
+			@class.bool_2 = mchbAutomaticLogFileLocation.Checked;
+			@class.string_10 = medConfigFileLocation.Text;
+			@class.String_1 = new string[1] { medLogFileLocation.Text };
 			return @class;
 		}
 		set
 		{
-			class61_0.Checked = value.bool_0;
+			mchbEnableMySqlEngine.Checked = value.bool_0;
 			GEnum9_0 = value.genum9_0;
-			class61_1.Checked = value.bool_3;
-			class61_2.Checked = value.bool_2;
-			class54_0.Text = value.string_10;
-			class54_1.Text = value.String_1[0];
+			mchbAutomaticConfigLocation.Checked = value.bool_3;
+			mchbAutomaticLogFileLocation.Checked = value.bool_2;
+			medConfigFileLocation.Text = value.string_10;
+			medLogFileLocation.Text = value.String_1[0];
 			OnLoad();
 		}
 	}
@@ -118,78 +118,78 @@ internal sealed class MySqlSettingsDialog : Form0
 		: base(new Size(595, 680))
 	{
 		ValidateInput();
-		vmethod_1();
-		InitializeComponents();
+		InitializeFormPosition();
+		InitializeComponent();
 		OnButtonOk();
 		Class119_0 = class119_0;
 	}
 
-	private void InitializeComponents()
+	private void InitializeComponent()
 	{
-		class54_0.String_0 = "Click to specify MySQL config file location";
-		class54_0.String_2 = "MySQL Config Files|my.ini; my.cnf";
-		class54_1.String_0 = "Click to specify MySQL general log file location";
-		class54_1.String_2 = "MySQL General Log File|*.*";
+		medConfigFileLocation.String_0 = "Click to specify MySQL config file location";
+		medConfigFileLocation.String_2 = "MySQL Config Files|my.ini; my.cnf";
+		medLogFileLocation.String_0 = "Click to specify MySQL general log file location";
+		medLogFileLocation.String_2 = "MySQL General Log File|*.*";
 		string text = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData), "MySQL");
 		if (Directory.Exists(text))
 		{
-			class54_0.String_1 = text;
-			class54_1.String_1 = text;
+			medConfigFileLocation.String_1 = text;
+			medLogFileLocation.String_1 = text;
 		}
 	}
 
 	private void OnButtonOk()
 	{
-		gclass3_0.Click += gclass3_0_Click;
-		class61_0.CheckedChanged += class61_0_CheckedChanged;
-		class64_1.CheckedChanged += class64_1_CheckedChanged;
-		class64_0.CheckedChanged += class64_0_CheckedChanged;
-		class61_1.CheckedChanged += class61_1_CheckedChanged;
-		class61_2.CheckedChanged += class61_2_CheckedChanged;
-		class54_0.TextChanged += class54_0_TextChanged;
-		class54_1.TextChanged += class54_1_TextChanged;
-		class66_0.Click += class66_0_Click;
-		class66_1.Click += class66_1_Click;
+		mlnkOnlineHelp.Click += mlnkOnlineHelp_Click;
+		mchbEnableMySqlEngine.CheckedChanged += mchbEnableMySqlEngine_CheckedChanged;
+		mrbMonitoringViaApplicationEventLog.CheckedChanged += mrbMonitoringViaApplicationEventLog_CheckedChanged;
+		mrbMonitoringViaGeneralLog.CheckedChanged += mrbMonitoringViaGeneralLog_CheckedChanged;
+		mchbAutomaticConfigLocation.CheckedChanged += mchbAutomaticConfigLocation_CheckedChanged;
+		mchbAutomaticLogFileLocation.CheckedChanged += mchbAutomaticLogFileLocation_CheckedChanged;
+		medConfigFileLocation.TextChanged += medConfigFileLocation_TextChanged;
+		medLogFileLocation.TextChanged += medLogFileLocation_TextChanged;
+		mbtnSave.Click += mbtnSave_Click;
+		btnCancel.Click += btnCancel_Click;
 	}
 
 	private void OnButtonCancel()
 	{
 		bool flag = true;
-		if (class61_0.Checked)
+		if (mchbEnableMySqlEngine.Checked)
 		{
-			if (!class61_1.Checked)
+			if (!mchbAutomaticConfigLocation.Checked)
 			{
-				flag &= !string.IsNullOrEmpty(class54_0.Text);
+				flag &= !string.IsNullOrEmpty(medConfigFileLocation.Text);
 			}
-			if (!class61_2.Checked)
+			if (!mchbAutomaticLogFileLocation.Checked)
 			{
-				flag &= !string.IsNullOrEmpty(class54_1.Text);
+				flag &= !string.IsNullOrEmpty(medLogFileLocation.Text);
 			}
 		}
-		class66_0.Enabled = flag;
+		mbtnSave.Enabled = flag;
 	}
 
 	private void OnLoad()
 	{
-		bool flag = class61_0.Checked;
-		class62_4.Enabled = flag;
-		class64_1.Enabled = flag;
-		class63_6.Enabled = flag;
-		class64_0.Enabled = flag;
-		class63_5.Enabled = flag;
-		bool flag2 = class64_0.Checked;
-		class61_1.Enabled = flag && flag2;
-		class63_1.Enabled = flag && flag2;
-		bool flag3 = class61_1.Checked;
-		class62_2.Enabled = flag && flag2 && !flag3;
-		class54_0.Enabled = flag && flag2 && !flag3;
-		class63_2.Enabled = flag && flag2 && !flag3;
-		class61_2.Enabled = flag && flag2;
-		class63_4.Enabled = flag && flag2;
-		bool flag4 = class61_2.Checked;
-		class62_3.Enabled = flag && flag2 && !flag4;
-		class54_1.Enabled = flag && flag2 && !flag4;
-		class63_3.Enabled = flag && flag2 && !flag4;
+		bool flag = mchbEnableMySqlEngine.Checked;
+		mlblSelectMonitoringMethod.Enabled = flag;
+		mrbMonitoringViaApplicationEventLog.Enabled = flag;
+		mlblMonitoringViaApplicationEventLogHint.Enabled = flag;
+		mrbMonitoringViaGeneralLog.Enabled = flag;
+		mlblMonitoringViaGeneralLogHint.Enabled = flag;
+		bool flag2 = mrbMonitoringViaGeneralLog.Checked;
+		mchbAutomaticConfigLocation.Enabled = flag && flag2;
+		mlblAutomaticConfigLocationHint.Enabled = flag && flag2;
+		bool flag3 = mchbAutomaticConfigLocation.Checked;
+		mlblConfigFileLocation.Enabled = flag && flag2 && !flag3;
+		medConfigFileLocation.Enabled = flag && flag2 && !flag3;
+		mlblConfigFileLocationHint.Enabled = flag && flag2 && !flag3;
+		mchbAutomaticLogFileLocation.Enabled = flag && flag2;
+		mlblAutomaticLogFileLocationHint.Enabled = flag && flag2;
+		bool flag4 = mchbAutomaticLogFileLocation.Checked;
+		mlblLogFileLocation.Enabled = flag && flag2 && !flag4;
+		medLogFileLocation.Enabled = flag && flag2 && !flag4;
+		mlblLogFileLocationHint.Enabled = flag && flag2 && !flag4;
 		OnButtonCancel();
 	}
 
@@ -205,307 +205,307 @@ internal sealed class MySqlSettingsDialog : Form0
 	private void ValidateInput()
 	{
 		icontainer_0 = new Container();
-		class66_0 = new Class66();
-		class66_1 = new Class66();
-		gcontrol0_0 = new GControl0();
-		class62_0 = new Class62();
-		pictureBox_0 = new PictureBox();
-		class62_1 = new Class62();
-		gclass3_0 = new GClass3();
-		class61_0 = new Class61();
-		class61_1 = new Class61();
-		class63_0 = new Class63();
-		class63_1 = new Class63();
-		class54_0 = new Class54();
-		class62_2 = new Class62();
-		class63_2 = new Class63();
-		class63_3 = new Class63();
-		class62_3 = new Class62();
-		class54_1 = new Class54();
-		class63_4 = new Class63();
-		class61_2 = new Class61();
-		class63_5 = new Class63();
-		class63_6 = new Class63();
-		class64_0 = new Class64();
-		class64_1 = new Class64();
-		class62_4 = new Class63();
-		((ISupportInitialize)pictureBox_0).BeginInit();
+		mbtnSave = new Class66();
+		btnCancel = new Class66();
+		separatorLine1 = new GControl0();
+		label2 = new Class62();
+		imgBigIcon = new PictureBox();
+		lblCaption = new Class62();
+		mlnkOnlineHelp = new GClass3();
+		mchbEnableMySqlEngine = new Class61();
+		mchbAutomaticConfigLocation = new Class61();
+		mlblEnableMySqlProtectionHInt = new Class63();
+		mlblAutomaticConfigLocationHint = new Class63();
+		medConfigFileLocation = new Class54();
+		mlblConfigFileLocation = new Class62();
+		mlblConfigFileLocationHint = new Class63();
+		mlblLogFileLocationHint = new Class63();
+		mlblLogFileLocation = new Class62();
+		medLogFileLocation = new Class54();
+		mlblAutomaticLogFileLocationHint = new Class63();
+		mchbAutomaticLogFileLocation = new Class61();
+		mlblMonitoringViaGeneralLogHint = new Class63();
+		mlblMonitoringViaApplicationEventLogHint = new Class63();
+		mrbMonitoringViaGeneralLog = new Class64();
+		mrbMonitoringViaApplicationEventLog = new Class64();
+		mlblSelectMonitoringMethod = new Class63();
+		((ISupportInitialize)imgBigIcon).BeginInit();
 		SuspendLayout();
-		class66_0.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-		class66_0.Image = Resources.opts_16;
-		class66_0.Location = new Point(358, 593);
-		class66_0.Margin = new Padding(4);
-		class66_0.Name = "m_btnSave";
-		class66_0.Size = new Size(100, 36);
-		class66_0.TabIndex = 7;
-		class66_0.Text = "Save";
-		class66_0.TextAlign = ContentAlignment.MiddleRight;
-		class66_0.TextImageRelation = TextImageRelation.ImageBeforeText;
-		class66_0.UseVisualStyleBackColor = true;
-		class66_1.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-		class66_1.Image = Resources.cancl_16;
-		class66_1.Location = new Point(466, 593);
-		class66_1.Margin = new Padding(4);
-		class66_1.Name = "btnCancel";
-		class66_1.Size = new Size(100, 36);
-		class66_1.TabIndex = 8;
-		class66_1.Text = "Cancel";
-		class66_1.TextAlign = ContentAlignment.MiddleRight;
-		class66_1.TextImageRelation = TextImageRelation.ImageBeforeText;
-		class66_1.UseVisualStyleBackColor = true;
-		gcontrol0_0.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-		gcontrol0_0.Location = new Point(16, 81);
-		gcontrol0_0.Name = "separatorLine1";
-		gcontrol0_0.Size = new Size(551, 2);
-		gcontrol0_0.TabIndex = 50;
-		gcontrol0_0.TabStop = false;
-		class62_0.AutoSize = true;
-		class62_0.Font = new Font("Microsoft Sans Serif", 9.75f, FontStyle.Bold, GraphicsUnit.Point, 204);
-		class62_0.Location = new Point(79, 15);
-		class62_0.Margin = new Padding(4, 0, 4, 0);
-		class62_0.Name = "label2";
-		class62_0.Size = new Size(116, 16);
-		class62_0.TabIndex = 49;
-		class62_0.Text = "MySQL Settings";
-		pictureBox_0.Image = Resources.mysql_logo_48;
-		pictureBox_0.Location = new Point(16, 15);
-		pictureBox_0.Margin = new Padding(4);
-		pictureBox_0.Name = "imgBigIcon";
-		pictureBox_0.Size = new Size(48, 45);
-		pictureBox_0.SizeMode = PictureBoxSizeMode.AutoSize;
-		pictureBox_0.TabIndex = 47;
-		pictureBox_0.TabStop = false;
-		class62_1.AutoSize = true;
-		class62_1.Location = new Point(79, 47);
-		class62_1.Margin = new Padding(4, 0, 4, 0);
-		class62_1.Name = "lblCaption";
-		class62_1.Size = new Size(227, 16);
-		class62_1.TabIndex = 48;
-		class62_1.Text = "Advanced MySQL protection settings";
-		gclass3_0.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-		gclass3_0.AutoSize = true;
-		gclass3_0.LinkBehavior = LinkBehavior.NeverUnderline;
-		gclass3_0.LinkColor = Color.FromArgb(38, 135, 200);
-		gclass3_0.Location = new Point(494, 9);
-		gclass3_0.Name = "m_lnkOnlineHelp";
-		gclass3_0.Size = new Size(72, 16);
-		gclass3_0.TabIndex = 9;
-		gclass3_0.TabStop = true;
-		gclass3_0.Text = "online help";
-		gclass3_0.VisitedLinkColor = Color.FromArgb(38, 135, 200);
-		class61_0.AutoSize = true;
-		class61_0.Location = new Point(16, 97);
-		class61_0.Name = "m_chbEnableMySqlEngine";
-		class61_0.Size = new Size(178, 20);
-		class61_0.TabIndex = 0;
-		class61_0.Text = "Enable MySQL protection";
-		class61_0.UseVisualStyleBackColor = true;
-		class61_1.AutoSize = true;
-		class61_1.Location = new Point(16, 294);
-		class61_1.Name = "m_chbAutomaticConfigLocation";
-		class61_1.Size = new Size(255, 20);
-		class61_1.TabIndex = 3;
-		class61_1.Text = "Automatically detect config file location";
-		class61_1.UseVisualStyleBackColor = true;
-		class63_0.AutoSize = true;
-		class63_0.ForeColor = SystemColors.ControlDarkDark;
-		class63_0.Location = new Point(13, 122);
-		class63_0.Name = "m_lblEnableMySqlProtectionHInt";
-		class63_0.Size = new Size(220, 16);
-		class63_0.TabIndex = 58;
-		class63_0.Text = "Turn on to enable MySQL protection";
-		class63_1.AutoSize = true;
-		class63_1.ForeColor = SystemColors.ControlDarkDark;
-		class63_1.Location = new Point(13, 319);
-		class63_1.Name = "m_lblAutomaticConfigLocationHint";
-		class63_1.Size = new Size(349, 16);
-		class63_1.TabIndex = 59;
-		class63_1.Text = "RdpGuard will detect my.ini (my.cnf) location automatically";
-		class54_0.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-		class54_0.Enabled = false;
-		class54_0.String_1 = null;
-		class54_0.Location = new Point(23, 380);
-		class54_0.Name = "m_edConfigFileLocation";
-		class54_0.Size = new Size(543, 22);
-		class54_0.TabIndex = 4;
-		class62_2.AutoSize = true;
-		class62_2.Enabled = false;
-		class62_2.Location = new Point(13, 354);
-		class62_2.Name = "m_lblConfigFileLocation";
-		class62_2.Size = new Size(118, 16);
-		class62_2.TabIndex = 61;
-		class62_2.Text = "Config file location:";
-		class63_2.AutoSize = true;
-		class63_2.Enabled = false;
-		class63_2.ForeColor = SystemColors.ControlDarkDark;
-		class63_2.Location = new Point(20, 405);
-		class63_2.Name = "m_lblConfigFileLocationHint";
-		class63_2.Size = new Size(313, 16);
-		class63_2.TabIndex = 62;
-		class63_2.Text = "You can specify location of my.ini (my.cnf) manually";
-		class63_3.AutoSize = true;
-		class63_3.Enabled = false;
-		class63_3.ForeColor = SystemColors.ControlDarkDark;
-		class63_3.Location = new Point(20, 551);
-		class63_3.Name = "m_lblLogFileLocationHint";
-		class63_3.Size = new Size(526, 16);
-		class63_3.TabIndex = 68;
-		class63_3.Text = "You can specify location of general log file manually. General logging must be enabled.";
-		class62_3.AutoSize = true;
-		class62_3.Enabled = false;
-		class62_3.Location = new Point(13, 500);
-		class62_3.Name = "m_lblLogFileLocation";
-		class62_3.Size = new Size(150, 16);
-		class62_3.TabIndex = 67;
-		class62_3.Text = "General log file location:";
-		class54_1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-		class54_1.Enabled = false;
-		class54_1.String_1 = null;
-		class54_1.Location = new Point(23, 526);
-		class54_1.Name = "m_edLogFileLocation";
-		class54_1.Size = new Size(543, 22);
-		class54_1.TabIndex = 6;
-		class63_4.AutoSize = true;
-		class63_4.ForeColor = SystemColors.ControlDarkDark;
-		class63_4.Location = new Point(13, 465);
-		class63_4.Name = "m_lblAutomaticLogFileLocationHint";
-		class63_4.Size = new Size(354, 16);
-		class63_4.TabIndex = 65;
-		class63_4.Text = "RdpGuard will detect general log file location automatically";
-		class61_2.AutoSize = true;
-		class61_2.Location = new Point(16, 440);
-		class61_2.Name = "m_chbAutomaticLogFileLocation";
-		class61_2.Size = new Size(287, 20);
-		class61_2.TabIndex = 5;
-		class61_2.Text = "Automatically detect general log file location";
-		class61_2.UseVisualStyleBackColor = true;
-		class63_5.AutoSize = true;
-		class63_5.Enabled = false;
-		class63_5.ForeColor = SystemColors.ControlDarkDark;
-		class63_5.Location = new Point(25, 260);
-		class63_5.Name = "m_lblMonitoringViaGeneralLogHint";
-		class63_5.Size = new Size(480, 16);
-		class63_5.TabIndex = 86;
-		class63_5.Text = "Works with all MySQL editions. May work slow on heavy loaded MySQL servers.";
-		class63_6.AutoSize = true;
-		class63_6.Enabled = false;
-		class63_6.ForeColor = SystemColors.ControlDarkDark;
-		class63_6.Location = new Point(25, 207);
-		class63_6.Name = "m_lblMonitoringViaApplicationEventLogHint";
-		class63_6.Size = new Size(529, 16);
-		class63_6.TabIndex = 85;
-		class63_6.Text = "Works with MySQL 5.7 and higher. Faster and less resource consuming. Recommended.";
-		class64_0.AutoSize = true;
-		class64_0.Enabled = false;
-		class64_0.Location = new Point(28, 235);
-		class64_0.Name = "m_rbMonitoringViaGeneralLog";
-		class64_0.Size = new Size(146, 20);
-		class64_0.TabIndex = 2;
-		class64_0.TabStop = true;
-		class64_0.Text = "MySQL General Log";
-		class64_0.UseVisualStyleBackColor = true;
-		class64_1.AutoSize = true;
-		class64_1.Enabled = false;
-		class64_1.Location = new Point(28, 182);
-		class64_1.Name = "m_rbMonitoringViaApplicationEventLog";
-		class64_1.Size = new Size(155, 20);
-		class64_1.TabIndex = 1;
-		class64_1.TabStop = true;
-		class64_1.Text = "Application Event Log";
-		class64_1.UseVisualStyleBackColor = true;
-		class62_4.AutoSize = true;
-		class62_4.Enabled = false;
-		class62_4.Location = new Point(13, 154);
-		class62_4.Name = "m_lblSelectMonitoringMethod";
-		class62_4.Size = new Size(158, 16);
-		class62_4.TabIndex = 82;
-		class62_4.Text = "Select monitoring method";
+		mbtnSave.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+		mbtnSave.Image = Resources.opts_16;
+		mbtnSave.Location = new Point(358, 593);
+		mbtnSave.Margin = new Padding(4);
+		mbtnSave.Name = "m_btnSave";
+		mbtnSave.Size = new Size(100, 36);
+		mbtnSave.TabIndex = 7;
+		mbtnSave.Text = "Save";
+		mbtnSave.TextAlign = ContentAlignment.MiddleRight;
+		mbtnSave.TextImageRelation = TextImageRelation.ImageBeforeText;
+		mbtnSave.UseVisualStyleBackColor = true;
+		btnCancel.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+		btnCancel.Image = Resources.cancl_16;
+		btnCancel.Location = new Point(466, 593);
+		btnCancel.Margin = new Padding(4);
+		btnCancel.Name = "btnCancel";
+		btnCancel.Size = new Size(100, 36);
+		btnCancel.TabIndex = 8;
+		btnCancel.Text = "Cancel";
+		btnCancel.TextAlign = ContentAlignment.MiddleRight;
+		btnCancel.TextImageRelation = TextImageRelation.ImageBeforeText;
+		btnCancel.UseVisualStyleBackColor = true;
+		separatorLine1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+		separatorLine1.Location = new Point(16, 81);
+		separatorLine1.Name = "separatorLine1";
+		separatorLine1.Size = new Size(551, 2);
+		separatorLine1.TabIndex = 50;
+		separatorLine1.TabStop = false;
+		label2.AutoSize = true;
+		label2.Font = new Font("Microsoft Sans Serif", 9.75f, FontStyle.Bold, GraphicsUnit.Point, 204);
+		label2.Location = new Point(79, 15);
+		label2.Margin = new Padding(4, 0, 4, 0);
+		label2.Name = "label2";
+		label2.Size = new Size(116, 16);
+		label2.TabIndex = 49;
+		label2.Text = "MySQL Settings";
+		imgBigIcon.Image = Resources.mysql_logo_48;
+		imgBigIcon.Location = new Point(16, 15);
+		imgBigIcon.Margin = new Padding(4);
+		imgBigIcon.Name = "imgBigIcon";
+		imgBigIcon.Size = new Size(48, 45);
+		imgBigIcon.SizeMode = PictureBoxSizeMode.AutoSize;
+		imgBigIcon.TabIndex = 47;
+		imgBigIcon.TabStop = false;
+		lblCaption.AutoSize = true;
+		lblCaption.Location = new Point(79, 47);
+		lblCaption.Margin = new Padding(4, 0, 4, 0);
+		lblCaption.Name = "lblCaption";
+		lblCaption.Size = new Size(227, 16);
+		lblCaption.TabIndex = 48;
+		lblCaption.Text = "Advanced MySQL protection settings";
+		mlnkOnlineHelp.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+		mlnkOnlineHelp.AutoSize = true;
+		mlnkOnlineHelp.LinkBehavior = LinkBehavior.NeverUnderline;
+		mlnkOnlineHelp.LinkColor = Color.FromArgb(38, 135, 200);
+		mlnkOnlineHelp.Location = new Point(494, 9);
+		mlnkOnlineHelp.Name = "m_lnkOnlineHelp";
+		mlnkOnlineHelp.Size = new Size(72, 16);
+		mlnkOnlineHelp.TabIndex = 9;
+		mlnkOnlineHelp.TabStop = true;
+		mlnkOnlineHelp.Text = "online help";
+		mlnkOnlineHelp.VisitedLinkColor = Color.FromArgb(38, 135, 200);
+		mchbEnableMySqlEngine.AutoSize = true;
+		mchbEnableMySqlEngine.Location = new Point(16, 97);
+		mchbEnableMySqlEngine.Name = "m_chbEnableMySqlEngine";
+		mchbEnableMySqlEngine.Size = new Size(178, 20);
+		mchbEnableMySqlEngine.TabIndex = 0;
+		mchbEnableMySqlEngine.Text = "Enable MySQL protection";
+		mchbEnableMySqlEngine.UseVisualStyleBackColor = true;
+		mchbAutomaticConfigLocation.AutoSize = true;
+		mchbAutomaticConfigLocation.Location = new Point(16, 294);
+		mchbAutomaticConfigLocation.Name = "m_chbAutomaticConfigLocation";
+		mchbAutomaticConfigLocation.Size = new Size(255, 20);
+		mchbAutomaticConfigLocation.TabIndex = 3;
+		mchbAutomaticConfigLocation.Text = "Automatically detect config file location";
+		mchbAutomaticConfigLocation.UseVisualStyleBackColor = true;
+		mlblEnableMySqlProtectionHInt.AutoSize = true;
+		mlblEnableMySqlProtectionHInt.ForeColor = SystemColors.ControlDarkDark;
+		mlblEnableMySqlProtectionHInt.Location = new Point(13, 122);
+		mlblEnableMySqlProtectionHInt.Name = "m_lblEnableMySqlProtectionHInt";
+		mlblEnableMySqlProtectionHInt.Size = new Size(220, 16);
+		mlblEnableMySqlProtectionHInt.TabIndex = 58;
+		mlblEnableMySqlProtectionHInt.Text = "Turn on to enable MySQL protection";
+		mlblAutomaticConfigLocationHint.AutoSize = true;
+		mlblAutomaticConfigLocationHint.ForeColor = SystemColors.ControlDarkDark;
+		mlblAutomaticConfigLocationHint.Location = new Point(13, 319);
+		mlblAutomaticConfigLocationHint.Name = "m_lblAutomaticConfigLocationHint";
+		mlblAutomaticConfigLocationHint.Size = new Size(349, 16);
+		mlblAutomaticConfigLocationHint.TabIndex = 59;
+		mlblAutomaticConfigLocationHint.Text = "RdpGuard will detect my.ini (my.cnf) location automatically";
+		medConfigFileLocation.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+		medConfigFileLocation.Enabled = false;
+		medConfigFileLocation.String_1 = null;
+		medConfigFileLocation.Location = new Point(23, 380);
+		medConfigFileLocation.Name = "m_edConfigFileLocation";
+		medConfigFileLocation.Size = new Size(543, 22);
+		medConfigFileLocation.TabIndex = 4;
+		mlblConfigFileLocation.AutoSize = true;
+		mlblConfigFileLocation.Enabled = false;
+		mlblConfigFileLocation.Location = new Point(13, 354);
+		mlblConfigFileLocation.Name = "m_lblConfigFileLocation";
+		mlblConfigFileLocation.Size = new Size(118, 16);
+		mlblConfigFileLocation.TabIndex = 61;
+		mlblConfigFileLocation.Text = "Config file location:";
+		mlblConfigFileLocationHint.AutoSize = true;
+		mlblConfigFileLocationHint.Enabled = false;
+		mlblConfigFileLocationHint.ForeColor = SystemColors.ControlDarkDark;
+		mlblConfigFileLocationHint.Location = new Point(20, 405);
+		mlblConfigFileLocationHint.Name = "m_lblConfigFileLocationHint";
+		mlblConfigFileLocationHint.Size = new Size(313, 16);
+		mlblConfigFileLocationHint.TabIndex = 62;
+		mlblConfigFileLocationHint.Text = "You can specify location of my.ini (my.cnf) manually";
+		mlblLogFileLocationHint.AutoSize = true;
+		mlblLogFileLocationHint.Enabled = false;
+		mlblLogFileLocationHint.ForeColor = SystemColors.ControlDarkDark;
+		mlblLogFileLocationHint.Location = new Point(20, 551);
+		mlblLogFileLocationHint.Name = "m_lblLogFileLocationHint";
+		mlblLogFileLocationHint.Size = new Size(526, 16);
+		mlblLogFileLocationHint.TabIndex = 68;
+		mlblLogFileLocationHint.Text = "You can specify location of general log file manually. General logging must be enabled.";
+		mlblLogFileLocation.AutoSize = true;
+		mlblLogFileLocation.Enabled = false;
+		mlblLogFileLocation.Location = new Point(13, 500);
+		mlblLogFileLocation.Name = "m_lblLogFileLocation";
+		mlblLogFileLocation.Size = new Size(150, 16);
+		mlblLogFileLocation.TabIndex = 67;
+		mlblLogFileLocation.Text = "General log file location:";
+		medLogFileLocation.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+		medLogFileLocation.Enabled = false;
+		medLogFileLocation.String_1 = null;
+		medLogFileLocation.Location = new Point(23, 526);
+		medLogFileLocation.Name = "m_edLogFileLocation";
+		medLogFileLocation.Size = new Size(543, 22);
+		medLogFileLocation.TabIndex = 6;
+		mlblAutomaticLogFileLocationHint.AutoSize = true;
+		mlblAutomaticLogFileLocationHint.ForeColor = SystemColors.ControlDarkDark;
+		mlblAutomaticLogFileLocationHint.Location = new Point(13, 465);
+		mlblAutomaticLogFileLocationHint.Name = "m_lblAutomaticLogFileLocationHint";
+		mlblAutomaticLogFileLocationHint.Size = new Size(354, 16);
+		mlblAutomaticLogFileLocationHint.TabIndex = 65;
+		mlblAutomaticLogFileLocationHint.Text = "RdpGuard will detect general log file location automatically";
+		mchbAutomaticLogFileLocation.AutoSize = true;
+		mchbAutomaticLogFileLocation.Location = new Point(16, 440);
+		mchbAutomaticLogFileLocation.Name = "m_chbAutomaticLogFileLocation";
+		mchbAutomaticLogFileLocation.Size = new Size(287, 20);
+		mchbAutomaticLogFileLocation.TabIndex = 5;
+		mchbAutomaticLogFileLocation.Text = "Automatically detect general log file location";
+		mchbAutomaticLogFileLocation.UseVisualStyleBackColor = true;
+		mlblMonitoringViaGeneralLogHint.AutoSize = true;
+		mlblMonitoringViaGeneralLogHint.Enabled = false;
+		mlblMonitoringViaGeneralLogHint.ForeColor = SystemColors.ControlDarkDark;
+		mlblMonitoringViaGeneralLogHint.Location = new Point(25, 260);
+		mlblMonitoringViaGeneralLogHint.Name = "m_lblMonitoringViaGeneralLogHint";
+		mlblMonitoringViaGeneralLogHint.Size = new Size(480, 16);
+		mlblMonitoringViaGeneralLogHint.TabIndex = 86;
+		mlblMonitoringViaGeneralLogHint.Text = "Works with all MySQL editions. May work slow on heavy loaded MySQL servers.";
+		mlblMonitoringViaApplicationEventLogHint.AutoSize = true;
+		mlblMonitoringViaApplicationEventLogHint.Enabled = false;
+		mlblMonitoringViaApplicationEventLogHint.ForeColor = SystemColors.ControlDarkDark;
+		mlblMonitoringViaApplicationEventLogHint.Location = new Point(25, 207);
+		mlblMonitoringViaApplicationEventLogHint.Name = "m_lblMonitoringViaApplicationEventLogHint";
+		mlblMonitoringViaApplicationEventLogHint.Size = new Size(529, 16);
+		mlblMonitoringViaApplicationEventLogHint.TabIndex = 85;
+		mlblMonitoringViaApplicationEventLogHint.Text = "Works with MySQL 5.7 and higher. Faster and less resource consuming. Recommended.";
+		mrbMonitoringViaGeneralLog.AutoSize = true;
+		mrbMonitoringViaGeneralLog.Enabled = false;
+		mrbMonitoringViaGeneralLog.Location = new Point(28, 235);
+		mrbMonitoringViaGeneralLog.Name = "m_rbMonitoringViaGeneralLog";
+		mrbMonitoringViaGeneralLog.Size = new Size(146, 20);
+		mrbMonitoringViaGeneralLog.TabIndex = 2;
+		mrbMonitoringViaGeneralLog.TabStop = true;
+		mrbMonitoringViaGeneralLog.Text = "MySQL General Log";
+		mrbMonitoringViaGeneralLog.UseVisualStyleBackColor = true;
+		mrbMonitoringViaApplicationEventLog.AutoSize = true;
+		mrbMonitoringViaApplicationEventLog.Enabled = false;
+		mrbMonitoringViaApplicationEventLog.Location = new Point(28, 182);
+		mrbMonitoringViaApplicationEventLog.Name = "m_rbMonitoringViaApplicationEventLog";
+		mrbMonitoringViaApplicationEventLog.Size = new Size(155, 20);
+		mrbMonitoringViaApplicationEventLog.TabIndex = 1;
+		mrbMonitoringViaApplicationEventLog.TabStop = true;
+		mrbMonitoringViaApplicationEventLog.Text = "Application Event Log";
+		mrbMonitoringViaApplicationEventLog.UseVisualStyleBackColor = true;
+		mlblSelectMonitoringMethod.AutoSize = true;
+		mlblSelectMonitoringMethod.Enabled = false;
+		mlblSelectMonitoringMethod.Location = new Point(13, 154);
+		mlblSelectMonitoringMethod.Name = "m_lblSelectMonitoringMethod";
+		mlblSelectMonitoringMethod.Size = new Size(158, 16);
+		mlblSelectMonitoringMethod.TabIndex = 82;
+		mlblSelectMonitoringMethod.Text = "Select monitoring method";
 		base.AutoScaleDimensions = new SizeF(8f, 16f);
 		base.AutoScaleMode = AutoScaleMode.Font;
 		base.ClientSize = new Size(579, 642);
-		base.Controls.Add(class63_5);
-		base.Controls.Add(class63_6);
-		base.Controls.Add(class64_0);
-		base.Controls.Add(class64_1);
-		base.Controls.Add(class62_4);
-		base.Controls.Add(class63_3);
-		base.Controls.Add(class62_3);
-		base.Controls.Add(class54_1);
-		base.Controls.Add(class63_4);
-		base.Controls.Add(class61_2);
-		base.Controls.Add(class63_2);
-		base.Controls.Add(class62_2);
-		base.Controls.Add(class54_0);
-		base.Controls.Add(class63_1);
-		base.Controls.Add(class63_0);
-		base.Controls.Add(class61_1);
-		base.Controls.Add(class61_0);
-		base.Controls.Add(gclass3_0);
-		base.Controls.Add(gcontrol0_0);
-		base.Controls.Add(class62_0);
-		base.Controls.Add(class62_1);
-		base.Controls.Add(pictureBox_0);
-		base.Controls.Add(class66_0);
-		base.Controls.Add(class66_1);
+		base.Controls.Add(mlblMonitoringViaGeneralLogHint);
+		base.Controls.Add(mlblMonitoringViaApplicationEventLogHint);
+		base.Controls.Add(mrbMonitoringViaGeneralLog);
+		base.Controls.Add(mrbMonitoringViaApplicationEventLog);
+		base.Controls.Add(mlblSelectMonitoringMethod);
+		base.Controls.Add(mlblLogFileLocationHint);
+		base.Controls.Add(mlblLogFileLocation);
+		base.Controls.Add(medLogFileLocation);
+		base.Controls.Add(mlblAutomaticLogFileLocationHint);
+		base.Controls.Add(mchbAutomaticLogFileLocation);
+		base.Controls.Add(mlblConfigFileLocationHint);
+		base.Controls.Add(mlblConfigFileLocation);
+		base.Controls.Add(medConfigFileLocation);
+		base.Controls.Add(mlblAutomaticConfigLocationHint);
+		base.Controls.Add(mlblEnableMySqlProtectionHInt);
+		base.Controls.Add(mchbAutomaticConfigLocation);
+		base.Controls.Add(mchbEnableMySqlEngine);
+		base.Controls.Add(mlnkOnlineHelp);
+		base.Controls.Add(separatorLine1);
+		base.Controls.Add(label2);
+		base.Controls.Add(lblCaption);
+		base.Controls.Add(imgBigIcon);
+		base.Controls.Add(mbtnSave);
+		base.Controls.Add(btnCancel);
 		Font = new Font("Microsoft Sans Serif", 9.75f, FontStyle.Regular, GraphicsUnit.Point, 204);
 		base.Margin = new Padding(5, 4, 5, 4);
 		base.Name = "MySqlSettingsDialog";
 		base.StartPosition = FormStartPosition.Manual;
 		Text = "MySQL Settings";
-		((ISupportInitialize)pictureBox_0).EndInit();
+		((ISupportInitialize)imgBigIcon).EndInit();
 		ResumeLayout(performLayout: false);
 		PerformLayout();
 	}
 
-	private void gclass3_0_Click(object sender, EventArgs e)
+	private void mlnkOnlineHelp_Click(object sender, EventArgs e)
 	{
-		method_9(Class148.Class151.String_8);
+		ShowOnlineHelp(Class148.Class151.String_8);
 	}
 
-	private void class61_0_CheckedChanged(object sender, EventArgs e)
-	{
-		OnLoad();
-	}
-
-	private void class64_1_CheckedChanged(object sender, EventArgs e)
+	private void mchbEnableMySqlEngine_CheckedChanged(object sender, EventArgs e)
 	{
 		OnLoad();
 	}
 
-	private void class64_0_CheckedChanged(object sender, EventArgs e)
+	private void mrbMonitoringViaApplicationEventLog_CheckedChanged(object sender, EventArgs e)
 	{
 		OnLoad();
 	}
 
-	private void class61_1_CheckedChanged(object sender, EventArgs e)
+	private void mrbMonitoringViaGeneralLog_CheckedChanged(object sender, EventArgs e)
 	{
 		OnLoad();
-		OnButtonCancel();
 	}
 
-	private void class61_2_CheckedChanged(object sender, EventArgs e)
+	private void mchbAutomaticConfigLocation_CheckedChanged(object sender, EventArgs e)
 	{
 		OnLoad();
 		OnButtonCancel();
 	}
 
-	private void class54_0_TextChanged(object sender, EventArgs e)
+	private void mchbAutomaticLogFileLocation_CheckedChanged(object sender, EventArgs e)
+	{
+		OnLoad();
+		OnButtonCancel();
+	}
+
+	private void medConfigFileLocation_TextChanged(object sender, EventArgs e)
 	{
 		OnButtonCancel();
 	}
 
-	private void class54_1_TextChanged(object sender, EventArgs e)
+	private void medLogFileLocation_TextChanged(object sender, EventArgs e)
 	{
 		OnButtonCancel();
 	}
 
-	private void class66_0_Click(object sender, EventArgs e)
+	private void mbtnSave_Click(object sender, EventArgs e)
 	{
-		method_8(DialogResult.OK);
+		CloseDialog(DialogResult.OK);
 	}
 
-	private void class66_1_Click(object sender, EventArgs e)
+	private void btnCancel_Click(object sender, EventArgs e)
 	{
-		method_8(DialogResult.Cancel);
+		CloseDialog(DialogResult.Cancel);
 	}
 }

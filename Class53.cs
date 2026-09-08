@@ -45,7 +45,7 @@ internal abstract class Class53 : TextBox
 		}
 	}
 
-	protected abstract void vmethod_0();
+	protected abstract void OnFormClosing();
 
 	private void method_0(bool bool_0)
 	{
@@ -111,7 +111,7 @@ internal abstract class Class53 : TextBox
 
 	protected override void OnMouseDoubleClick(MouseEventArgs mouseEventArgs_0)
 	{
-		vmethod_0();
+		OnFormClosing();
 		base.OnMouseDoubleClick(mouseEventArgs_0);
 	}
 
@@ -137,6 +137,6 @@ internal abstract class Class53 : TextBox
 
 	private void pictureBox_0_Click(object sender, EventArgs e)
 	{
-		vmethod_0();
+		OnFormClosing();
 	}
 }

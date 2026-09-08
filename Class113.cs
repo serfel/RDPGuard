@@ -135,7 +135,7 @@ internal abstract class Class113
 	{
 		Dictionary<string, object> dictionary = new Dictionary<string, object>();
 		method_1(dictionary);
-		vmethod_0(dictionary);
+		OnFormClosing(dictionary);
 		return Convert.ToBase64String(Encoding.UTF8.GetBytes(JsonConvert.SerializeObject((object)dictionary)));
 	}
 
@@ -152,7 +152,7 @@ internal abstract class Class113
 		dictionary_0.Add(string_9, String_1);
 	}
 
-	public abstract void vmethod_0(Dictionary<string, object> dictionary_0);
+	public abstract void OnFormClosing(Dictionary<string, object> dictionary_0);
 
 	public static Class113 smethod_0(Type type_0, string string_10)
 	{
@@ -192,7 +192,7 @@ internal abstract class Class113
 
 	protected abstract void DeserializeEngineSpeificFields(JObject _jo);
 
-	protected virtual void vmethod_1(StringBuilder stringBuilder_0)
+	protected virtual void InitializeFormPosition(StringBuilder stringBuilder_0)
 	{
 		stringBuilder_0.Append("TrafficMonitoringMethod: " + Class190.Class190_0[genum5_0] + "; ");
 		if (genum5_0 == GEnum5.const_0)

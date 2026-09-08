@@ -12,31 +12,31 @@ internal sealed class RdpSettingsDialog : Form0
 
 	private IContainer icontainer_0;
 
-	private Class66 class66_0;
+	private Class66 mbtnSave;
 
-	private Class66 class66_1;
+	private Class66 mbtnCancel;
 
-	private GControl0 gcontrol0_0;
+	private GControl0 separatorLine1;
 
-	private Class62 class62_0;
+	private Class62 mlblCaption;
 
-	private PictureBox pictureBox_0;
+	private PictureBox mimgBigIcon;
 
-	private Class62 class62_1;
+	private Class62 mlblSubCaption;
 
-	private GClass3 gclass3_0;
+	private GClass3 mlnkOnlineHelp;
 
-	private Class61 class61_0;
+	private Class61 mchbEnableRdpEngine;
 
-	private Class63 class63_0;
+	private Class63 mlblEnableRdpProtectionHint;
 
-	private Panel panel_0;
+	private Panel mpanel;
 
-	private Class63 class63_1;
+	private Class63 mlblEnableTrafficMonitoringHint;
 
-	private Class61 class61_1;
+	private Class61 mchbEnableTrafficMonitoring;
 
-	private GClass3 gclass3_1;
+	private GClass3 mlnkExclusions;
 
 	public Class122 Class122_0
 	{
@@ -44,42 +44,42 @@ internal sealed class RdpSettingsDialog : Form0
 		{
 			return new Class122
 			{
-				bool_0 = class61_0.Checked,
+				bool_0 = mchbEnableRdpEngine.Checked,
 				genum5_0 = control12_0.GEnum5_0,
 				UInt16_0 = control12_0.UInt16_0,
 				bool_1 = control12_0.bool_1,
 				GClass24_0 = control12_0.gclass24_0,
 				class127_0 = control12_0.class127_0,
-				Boolean_0 = class61_1.Checked,
+				Boolean_0 = mchbEnableTrafficMonitoring.Checked,
 				string_10 = string_0
 			};
 		}
 		set
 		{
-			class61_0.Checked = value.bool_0;
+			mchbEnableRdpEngine.Checked = value.bool_0;
 			control12_0.UInt16_0 = value.UInt16_0;
 			control12_0.class127_0 = value.class127_0;
 			control12_0.GEnum5_0 = value.genum5_0;
 			control12_0.bool_1 = value.bool_1;
 			control12_0.gclass24_0 = value.GClass24_0;
-			class61_1.Checked = value.Boolean_0;
+			mchbEnableTrafficMonitoring.Checked = value.Boolean_0;
 			string_0 = value.string_10;
 			OnButtonCancel();
 		}
 	}
 
-	protected override Button Button_0 => class66_0;
+	protected override Button Button_0 => mbtnSave;
 
 	public RdpSettingsDialog()
 		: base(new Size(565, 550))
 	{
 		ValidateInput();
-		vmethod_1();
-		InitializeComponents();
+		InitializeFormPosition();
+		InitializeComponent();
 		OnButtonOk();
 	}
 
-	private void InitializeComponents()
+	private void InitializeComponent()
 	{
 		control12_0 = new TrafficMonitoringControl(null)
 		{
@@ -88,29 +88,29 @@ internal sealed class RdpSettingsDialog : Form0
 			String_2 = "You can also specify multiple comma-separated ports, i.e. 3389, 3390",
 			Dock = DockStyle.Fill
 		};
-		panel_0.Controls.Add(control12_0);
+		mpanel.Controls.Add(control12_0);
 	}
 
 	private void OnButtonOk()
 	{
-		gclass3_0.Click += gclass3_0_Click;
-		class61_0.CheckedChanged += class61_0_CheckedChanged;
-		class61_1.CheckedChanged += class61_1_CheckedChanged;
+		mlnkOnlineHelp.Click += mlnkOnlineHelp_Click;
+		mchbEnableRdpEngine.CheckedChanged += mchbEnableRdpEngine_CheckedChanged;
+		mchbEnableTrafficMonitoring.CheckedChanged += mchbEnableTrafficMonitoring_CheckedChanged;
 		control12_0.Event_1 += SaveSettings;
 		control12_0.Event_0 += LoadSettings;
-		gclass3_1.Click += gclass3_1_Click;
-		class66_0.Click += class66_0_Click;
-		class66_1.Click += class66_1_Click;
+		mlnkExclusions.Click += mlnkExclusions_Click;
+		mbtnSave.Click += mbtnSave_Click;
+		mbtnCancel.Click += mbtnCancel_Click;
 	}
 
 	private void OnButtonCancel()
 	{
-		bool flag = class61_0.Checked;
-		class61_1.Enabled = flag;
-		class63_1.Enabled = flag;
-		control12_0.Enabled = flag && class61_1.Checked;
-		gclass3_1.Enabled = flag;
-		vmethod_0();
+		bool flag = mchbEnableRdpEngine.Checked;
+		mchbEnableTrafficMonitoring.Enabled = flag;
+		mlblEnableTrafficMonitoringHint.Enabled = flag;
+		control12_0.Enabled = flag && mchbEnableTrafficMonitoring.Checked;
+		mlnkExclusions.Enabled = flag;
+		OnFormClosing();
 	}
 
 	private void OnLoad()
@@ -134,9 +134,9 @@ internal sealed class RdpSettingsDialog : Form0
 		}
 	}
 
-	protected override void vmethod_0()
+	protected override void OnFormClosing()
 	{
-		Button_0.Enabled = !class61_1.Checked || control12_0.Boolean_0;
+		Button_0.Enabled = !mchbEnableTrafficMonitoring.Checked || control12_0.Boolean_0;
 	}
 
 	protected override void Dispose(bool disposing)
@@ -152,191 +152,191 @@ internal sealed class RdpSettingsDialog : Form0
 	{
 		icontainer_0 = new Container();
 		new ComponentResourceManager(typeof(RdpSettingsDialog));
-		class66_0 = new Class66();
-		class66_1 = new Class66();
-		gcontrol0_0 = new GControl0();
-		class62_0 = new Class62();
-		pictureBox_0 = new PictureBox();
-		class62_1 = new Class62();
-		gclass3_0 = new GClass3();
-		class61_0 = new Class61();
-		class63_0 = new Class63();
-		panel_0 = new Panel();
-		class63_1 = new Class63();
-		class61_1 = new Class61();
-		gclass3_1 = new GClass3();
-		((ISupportInitialize)pictureBox_0).BeginInit();
+		mbtnSave = new Class66();
+		mbtnCancel = new Class66();
+		separatorLine1 = new GControl0();
+		mlblCaption = new Class62();
+		mimgBigIcon = new PictureBox();
+		mlblSubCaption = new Class62();
+		mlnkOnlineHelp = new GClass3();
+		mchbEnableRdpEngine = new Class61();
+		mlblEnableRdpProtectionHint = new Class63();
+		mpanel = new Panel();
+		mlblEnableTrafficMonitoringHint = new Class63();
+		mchbEnableTrafficMonitoring = new Class61();
+		mlnkExclusions = new GClass3();
+		((ISupportInitialize)mimgBigIcon).BeginInit();
 		SuspendLayout();
-		class66_0.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-		class66_0.Enabled = false;
-		class66_0.Image = Resources.opts_16;
-		class66_0.Location = new Point(336, 462);
-		class66_0.Margin = new Padding(4);
-		class66_0.Name = "m_btnSave";
-		class66_0.Size = new Size(100, 36);
-		class66_0.TabIndex = 7;
-		class66_0.Text = "Save";
-		class66_0.TextAlign = ContentAlignment.MiddleRight;
-		class66_0.TextImageRelation = TextImageRelation.ImageBeforeText;
-		class66_0.UseVisualStyleBackColor = true;
-		class66_1.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-		class66_1.Image = Resources.cancl_16;
-		class66_1.Location = new Point(444, 462);
-		class66_1.Margin = new Padding(4);
-		class66_1.Name = "m_btnCancel";
-		class66_1.Size = new Size(100, 36);
-		class66_1.TabIndex = 8;
-		class66_1.Text = "Cancel";
-		class66_1.TextAlign = ContentAlignment.MiddleRight;
-		class66_1.TextImageRelation = TextImageRelation.ImageBeforeText;
-		class66_1.UseVisualStyleBackColor = true;
-		gcontrol0_0.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-		gcontrol0_0.Location = new Point(16, 81);
-		gcontrol0_0.Name = "separatorLine1";
-		gcontrol0_0.Size = new Size(529, 2);
-		gcontrol0_0.TabIndex = 50;
-		gcontrol0_0.TabStop = false;
-		class62_0.AutoSize = true;
-		class62_0.Font = new Font("Microsoft Sans Serif", 9.75f, FontStyle.Bold, GraphicsUnit.Point, 204);
-		class62_0.Location = new Point(79, 15);
-		class62_0.Margin = new Padding(4, 0, 4, 0);
-		class62_0.Name = "m_lblCaption";
-		class62_0.Size = new Size(99, 16);
-		class62_0.TabIndex = 49;
-		class62_0.Text = "RDP Settings";
-		pictureBox_0.Image = Resources.rdp_48;
-		pictureBox_0.Location = new Point(16, 15);
-		pictureBox_0.Margin = new Padding(4);
-		pictureBox_0.Name = "m_imgBigIcon";
-		pictureBox_0.Size = new Size(48, 48);
-		pictureBox_0.SizeMode = PictureBoxSizeMode.AutoSize;
-		pictureBox_0.TabIndex = 47;
-		pictureBox_0.TabStop = false;
-		class62_1.AutoSize = true;
-		class62_1.Location = new Point(79, 47);
-		class62_1.Margin = new Padding(4, 0, 4, 0);
-		class62_1.Name = "m_lblSubCaption";
-		class62_1.Size = new Size(212, 16);
-		class62_1.TabIndex = 48;
-		class62_1.Text = "Advanced RDP protection settings";
-		gclass3_0.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-		gclass3_0.AutoSize = true;
-		gclass3_0.LinkBehavior = LinkBehavior.NeverUnderline;
-		gclass3_0.LinkColor = Color.FromArgb(38, 135, 200);
-		gclass3_0.Location = new Point(472, 9);
-		gclass3_0.Name = "m_lnkOnlineHelp";
-		gclass3_0.Size = new Size(72, 16);
-		gclass3_0.TabIndex = 9;
-		gclass3_0.TabStop = true;
-		gclass3_0.Text = "online help";
-		gclass3_0.VisitedLinkColor = Color.FromArgb(38, 135, 200);
-		class61_0.AutoSize = true;
-		class61_0.Location = new Point(16, 97);
-		class61_0.Name = "m_chbEnableRdpEngine";
-		class61_0.Size = new Size(163, 20);
-		class61_0.TabIndex = 0;
-		class61_0.Text = "Enable RDP protection";
-		class61_0.UseVisualStyleBackColor = true;
-		class63_0.AutoSize = true;
-		class63_0.ForeColor = SystemColors.ControlDarkDark;
-		class63_0.Location = new Point(13, 122);
-		class63_0.Name = "m_lblEnableRdpProtectionHint";
-		class63_0.Size = new Size(205, 16);
-		class63_0.TabIndex = 58;
-		class63_0.Text = "Turn on to enable RDP protection";
-		panel_0.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-		panel_0.Location = new Point(12, 211);
-		panel_0.Name = "m_panel";
-		panel_0.Size = new Size(533, 244);
-		panel_0.TabIndex = 112;
-		class63_1.AutoSize = true;
-		class63_1.ForeColor = SystemColors.ControlDarkDark;
-		class63_1.Location = new Point(13, 178);
-		class63_1.Name = "m_lblEnableTrafficMonitoringHint";
-		class63_1.Size = new Size(514, 16);
-		class63_1.TabIndex = 114;
-		class63_1.Text = "Required on Windows Server 2008, usually not needed on other versions, check help..";
-		class61_1.AutoSize = true;
-		class61_1.Location = new Point(16, 153);
-		class61_1.Name = "m_chbEnableTrafficMonitoring";
-		class61_1.Size = new Size(168, 20);
-		class61_1.TabIndex = 113;
-		class61_1.Text = "Enable traffic monitoring";
-		class61_1.UseVisualStyleBackColor = true;
-		gclass3_1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-		gclass3_1.AutoSize = true;
-		gclass3_1.LinkBehavior = LinkBehavior.NeverUnderline;
-		gclass3_1.LinkColor = Color.FromArgb(38, 135, 200);
-		gclass3_1.Location = new Point(9, 482);
-		gclass3_1.Name = "m_lnkExclusions";
-		gclass3_1.Size = new Size(77, 16);
-		gclass3_1.TabIndex = 115;
-		gclass3_1.TabStop = true;
-		gclass3_1.Text = "Exclusions..";
-		gclass3_1.VisitedLinkColor = Color.FromArgb(38, 135, 200);
+		mbtnSave.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+		mbtnSave.Enabled = false;
+		mbtnSave.Image = Resources.opts_16;
+		mbtnSave.Location = new Point(336, 462);
+		mbtnSave.Margin = new Padding(4);
+		mbtnSave.Name = "m_btnSave";
+		mbtnSave.Size = new Size(100, 36);
+		mbtnSave.TabIndex = 7;
+		mbtnSave.Text = "Save";
+		mbtnSave.TextAlign = ContentAlignment.MiddleRight;
+		mbtnSave.TextImageRelation = TextImageRelation.ImageBeforeText;
+		mbtnSave.UseVisualStyleBackColor = true;
+		mbtnCancel.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+		mbtnCancel.Image = Resources.cancl_16;
+		mbtnCancel.Location = new Point(444, 462);
+		mbtnCancel.Margin = new Padding(4);
+		mbtnCancel.Name = "m_btnCancel";
+		mbtnCancel.Size = new Size(100, 36);
+		mbtnCancel.TabIndex = 8;
+		mbtnCancel.Text = "Cancel";
+		mbtnCancel.TextAlign = ContentAlignment.MiddleRight;
+		mbtnCancel.TextImageRelation = TextImageRelation.ImageBeforeText;
+		mbtnCancel.UseVisualStyleBackColor = true;
+		separatorLine1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+		separatorLine1.Location = new Point(16, 81);
+		separatorLine1.Name = "separatorLine1";
+		separatorLine1.Size = new Size(529, 2);
+		separatorLine1.TabIndex = 50;
+		separatorLine1.TabStop = false;
+		mlblCaption.AutoSize = true;
+		mlblCaption.Font = new Font("Microsoft Sans Serif", 9.75f, FontStyle.Bold, GraphicsUnit.Point, 204);
+		mlblCaption.Location = new Point(79, 15);
+		mlblCaption.Margin = new Padding(4, 0, 4, 0);
+		mlblCaption.Name = "m_lblCaption";
+		mlblCaption.Size = new Size(99, 16);
+		mlblCaption.TabIndex = 49;
+		mlblCaption.Text = "RDP Settings";
+		mimgBigIcon.Image = Resources.rdp_48;
+		mimgBigIcon.Location = new Point(16, 15);
+		mimgBigIcon.Margin = new Padding(4);
+		mimgBigIcon.Name = "m_imgBigIcon";
+		mimgBigIcon.Size = new Size(48, 48);
+		mimgBigIcon.SizeMode = PictureBoxSizeMode.AutoSize;
+		mimgBigIcon.TabIndex = 47;
+		mimgBigIcon.TabStop = false;
+		mlblSubCaption.AutoSize = true;
+		mlblSubCaption.Location = new Point(79, 47);
+		mlblSubCaption.Margin = new Padding(4, 0, 4, 0);
+		mlblSubCaption.Name = "m_lblSubCaption";
+		mlblSubCaption.Size = new Size(212, 16);
+		mlblSubCaption.TabIndex = 48;
+		mlblSubCaption.Text = "Advanced RDP protection settings";
+		mlnkOnlineHelp.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+		mlnkOnlineHelp.AutoSize = true;
+		mlnkOnlineHelp.LinkBehavior = LinkBehavior.NeverUnderline;
+		mlnkOnlineHelp.LinkColor = Color.FromArgb(38, 135, 200);
+		mlnkOnlineHelp.Location = new Point(472, 9);
+		mlnkOnlineHelp.Name = "m_lnkOnlineHelp";
+		mlnkOnlineHelp.Size = new Size(72, 16);
+		mlnkOnlineHelp.TabIndex = 9;
+		mlnkOnlineHelp.TabStop = true;
+		mlnkOnlineHelp.Text = "online help";
+		mlnkOnlineHelp.VisitedLinkColor = Color.FromArgb(38, 135, 200);
+		mchbEnableRdpEngine.AutoSize = true;
+		mchbEnableRdpEngine.Location = new Point(16, 97);
+		mchbEnableRdpEngine.Name = "m_chbEnableRdpEngine";
+		mchbEnableRdpEngine.Size = new Size(163, 20);
+		mchbEnableRdpEngine.TabIndex = 0;
+		mchbEnableRdpEngine.Text = "Enable RDP protection";
+		mchbEnableRdpEngine.UseVisualStyleBackColor = true;
+		mlblEnableRdpProtectionHint.AutoSize = true;
+		mlblEnableRdpProtectionHint.ForeColor = SystemColors.ControlDarkDark;
+		mlblEnableRdpProtectionHint.Location = new Point(13, 122);
+		mlblEnableRdpProtectionHint.Name = "m_lblEnableRdpProtectionHint";
+		mlblEnableRdpProtectionHint.Size = new Size(205, 16);
+		mlblEnableRdpProtectionHint.TabIndex = 58;
+		mlblEnableRdpProtectionHint.Text = "Turn on to enable RDP protection";
+		mpanel.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+		mpanel.Location = new Point(12, 211);
+		mpanel.Name = "m_panel";
+		mpanel.Size = new Size(533, 244);
+		mpanel.TabIndex = 112;
+		mlblEnableTrafficMonitoringHint.AutoSize = true;
+		mlblEnableTrafficMonitoringHint.ForeColor = SystemColors.ControlDarkDark;
+		mlblEnableTrafficMonitoringHint.Location = new Point(13, 178);
+		mlblEnableTrafficMonitoringHint.Name = "m_lblEnableTrafficMonitoringHint";
+		mlblEnableTrafficMonitoringHint.Size = new Size(514, 16);
+		mlblEnableTrafficMonitoringHint.TabIndex = 114;
+		mlblEnableTrafficMonitoringHint.Text = "Required on Windows Server 2008, usually not needed on other versions, check help..";
+		mchbEnableTrafficMonitoring.AutoSize = true;
+		mchbEnableTrafficMonitoring.Location = new Point(16, 153);
+		mchbEnableTrafficMonitoring.Name = "m_chbEnableTrafficMonitoring";
+		mchbEnableTrafficMonitoring.Size = new Size(168, 20);
+		mchbEnableTrafficMonitoring.TabIndex = 113;
+		mchbEnableTrafficMonitoring.Text = "Enable traffic monitoring";
+		mchbEnableTrafficMonitoring.UseVisualStyleBackColor = true;
+		mlnkExclusions.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+		mlnkExclusions.AutoSize = true;
+		mlnkExclusions.LinkBehavior = LinkBehavior.NeverUnderline;
+		mlnkExclusions.LinkColor = Color.FromArgb(38, 135, 200);
+		mlnkExclusions.Location = new Point(9, 482);
+		mlnkExclusions.Name = "m_lnkExclusions";
+		mlnkExclusions.Size = new Size(77, 16);
+		mlnkExclusions.TabIndex = 115;
+		mlnkExclusions.TabStop = true;
+		mlnkExclusions.Text = "Exclusions..";
+		mlnkExclusions.VisitedLinkColor = Color.FromArgb(38, 135, 200);
 		base.AutoScaleDimensions = new SizeF(8f, 16f);
 		base.AutoScaleMode = AutoScaleMode.Font;
 		base.ClientSize = new Size(557, 511);
-		base.Controls.Add(gclass3_1);
-		base.Controls.Add(class63_1);
-		base.Controls.Add(class61_1);
-		base.Controls.Add(panel_0);
-		base.Controls.Add(class63_0);
-		base.Controls.Add(class61_0);
-		base.Controls.Add(gclass3_0);
-		base.Controls.Add(gcontrol0_0);
-		base.Controls.Add(class62_0);
-		base.Controls.Add(class62_1);
-		base.Controls.Add(pictureBox_0);
-		base.Controls.Add(class66_0);
-		base.Controls.Add(class66_1);
+		base.Controls.Add(mlnkExclusions);
+		base.Controls.Add(mlblEnableTrafficMonitoringHint);
+		base.Controls.Add(mchbEnableTrafficMonitoring);
+		base.Controls.Add(mpanel);
+		base.Controls.Add(mlblEnableRdpProtectionHint);
+		base.Controls.Add(mchbEnableRdpEngine);
+		base.Controls.Add(mlnkOnlineHelp);
+		base.Controls.Add(separatorLine1);
+		base.Controls.Add(mlblCaption);
+		base.Controls.Add(mlblSubCaption);
+		base.Controls.Add(mimgBigIcon);
+		base.Controls.Add(mbtnSave);
+		base.Controls.Add(mbtnCancel);
 		Font = new Font("Microsoft Sans Serif", 9.75f, FontStyle.Regular, GraphicsUnit.Point, 204);
 		base.Margin = new Padding(5, 4, 5, 4);
 		base.Name = "RdpSettingsDialog";
 		base.StartPosition = FormStartPosition.Manual;
 		Text = "RDP Settings";
-		((ISupportInitialize)pictureBox_0).EndInit();
+		((ISupportInitialize)mimgBigIcon).EndInit();
 		ResumeLayout(performLayout: false);
 		PerformLayout();
 	}
 
-	private void gclass3_0_Click(object sender, EventArgs e)
+	private void mlnkOnlineHelp_Click(object sender, EventArgs e)
 	{
-		method_9(Class148.Class151.String_0);
+		ShowOnlineHelp(Class148.Class151.String_0);
 	}
 
-	private void class61_0_CheckedChanged(object sender, EventArgs e)
+	private void mchbEnableRdpEngine_CheckedChanged(object sender, EventArgs e)
 	{
 		OnButtonCancel();
 	}
 
-	private void class61_1_CheckedChanged(object sender, EventArgs e)
+	private void mchbEnableTrafficMonitoring_CheckedChanged(object sender, EventArgs e)
 	{
 		OnButtonCancel();
 	}
 
 	private void SaveSettings(object sender, EventArgs e)
 	{
-		vmethod_0();
+		OnFormClosing();
 	}
 
 	private void LoadSettings(object sender, EventArgs e)
 	{
-		class66_0.PerformClick();
+		mbtnSave.PerformClick();
 	}
 
-	private void gclass3_1_Click(object sender, EventArgs e)
+	private void mlnkExclusions_Click(object sender, EventArgs e)
 	{
 		OnLoad();
 	}
 
-	private void class66_0_Click(object sender, EventArgs e)
+	private void mbtnSave_Click(object sender, EventArgs e)
 	{
-		method_8(DialogResult.OK);
+		CloseDialog(DialogResult.OK);
 	}
 
-	private void class66_1_Click(object sender, EventArgs e)
+	private void mbtnCancel_Click(object sender, EventArgs e)
 	{
-		method_8(DialogResult.Cancel);
+		CloseDialog(DialogResult.Cancel);
 	}
 }

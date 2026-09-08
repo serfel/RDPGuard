@@ -71,12 +71,12 @@ internal sealed class Class79 : WebBrowser
 		}
 	}
 
-	public void method_8(Dictionary<string, HtmlElementEventHandler> dictionary_0)
+	public void CloseDialog(Dictionary<string, HtmlElementEventHandler> dictionary_0)
 	{
 		dictionary_0.smethod_0(method_12);
 	}
 
-	public void method_9(string string_0, HtmlElementEventHandler htmlElementEventHandler_0)
+	public void ShowOnlineHelp(string string_0, HtmlElementEventHandler htmlElementEventHandler_0)
 	{
 		HtmlElement htmlElement = method_10(string_0);
 		if (null != htmlElement)
@@ -98,6 +98,6 @@ internal sealed class Class79 : WebBrowser
 
 	private void method_12(KeyValuePair<string, HtmlElementEventHandler> keyValuePair_0)
 	{
-		method_9(keyValuePair_0.Key, keyValuePair_0.Value);
+		ShowOnlineHelp(keyValuePair_0.Key, keyValuePair_0.Value);
 	}
 }

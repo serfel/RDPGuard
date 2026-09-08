@@ -3,7 +3,7 @@ using System.Text;
 
 internal abstract class Class143
 {
-	public virtual void vmethod_0()
+	public virtual void OnFormClosing()
 	{
 		AppDomain.CurrentDomain.UnhandledException += method_1;
 	}
@@ -20,10 +20,10 @@ internal abstract class Class143
 		{
 			stringBuilder.AppendLine($"\r\nInner Exception: {exception_0.InnerException}");
 		}
-		vmethod_1(stringBuilder.ToString());
+		InitializeFormPosition(stringBuilder.ToString());
 	}
 
-	protected abstract void vmethod_1(string string_0);
+	protected abstract void InitializeFormPosition(string string_0);
 
 	private void method_1(object sender, UnhandledExceptionEventArgs e)
 	{

@@ -53,7 +53,7 @@ internal class IPListEntry
 		Comment = string_1?.Trim();
 	}
 
-	public virtual bool vmethod_0(GClass24 gclass24_1)
+	public virtual bool MatchesIP(GClass24 gclass24_1)
 	{
 		if (!(gclass24_1 == gclass24_0))
 		{

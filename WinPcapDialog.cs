@@ -49,27 +49,27 @@ internal sealed class WinPcapDialog : Form0
 
 	private IContainer icontainer_0;
 
-	private Class66 class66_0;
+	private Class66 mbtnSave;
 
-	private Class66 class66_1;
+	private Class66 mbtnCancel;
 
-	private GControl0 gcontrol0_0;
+	private GControl0 separatorLine1;
 
-	private Class62 class62_0;
+	private Class62 mlblCaption;
 
-	private PictureBox pictureBox_0;
+	private PictureBox mimgBigIcon;
 
-	private Class62 class62_1;
+	private Class62 mlblSubCaption;
 
-	private GClass3 gclass3_0;
+	private GClass3 mlnkOnlineHelp;
 
 	private ImageList imageList_0;
 
-	private GClass3 gclass3_1;
+	private GClass3 mlnkWinPcap;
 
-	private Class62 class62_2;
+	private Class62 mlblWinPcapWarning;
 
-	private Class61 class61_0;
+	private Class61 mchbHideIrrelevantAdapters;
 
 	public Class127 Class127_0
 	{
@@ -83,20 +83,20 @@ internal sealed class WinPcapDialog : Form0
 		}
 	}
 
-	protected override Button Button_0 => class66_0;
+	protected override Button Button_0 => mbtnSave;
 
 	public WinPcapDialog(Class127 class127_2)
 		: base(new Size(550, 400))
 	{
 		Class127_0 = class127_2;
 		OnTextChanged();
-		vmethod_1();
+		InitializeFormPosition();
 		ValidateInput();
 		LoadSettings();
 		base.Shown += Form18_Shown;
 	}
 
-	public void InitializeComponents()
+	public void InitializeComponent()
 	{
 		Class89.eventHandler_22 = (EventHandler<EventArgs6>)Delegate.Combine(Class89.eventHandler_22, new EventHandler<EventArgs6>(OnButtonOk));
 		Class89.smethod_31();
@@ -115,9 +115,9 @@ internal sealed class WinPcapDialog : Form0
 		}
 		else if (!@class.eventArgs6_0.bool_0)
 		{
-			class61_0.Visible = false;
-			class62_2.Visible = true;
-			gclass3_1.Visible = true;
+			mchbHideIrrelevantAdapters.Visible = false;
+			mlblWinPcapWarning.Visible = true;
+			mlnkWinPcap.Visible = true;
 		}
 		else
 		{
@@ -137,7 +137,7 @@ internal sealed class WinPcapDialog : Form0
 
 	private Class127[] OnLoad()
 	{
-		if (!class61_0.Checked)
+		if (!mchbHideIrrelevantAdapters.Checked)
 		{
 			Class127[] source = class127_0;
 			Func<Class127, bool> predicate = _003C_003Ec._003C_003E9.method_1;
@@ -164,7 +164,7 @@ internal sealed class WinPcapDialog : Form0
 		bi2.HeaderStyle = ColumnHeaderStyle.None;
 		bi2.Location = new Point(16, 97);
 		bi2.Width = base.ClientRectangle.Width - 30;
-		bi2.Height = class66_1.Top - 97 - 15;
+		bi2.Height = mbtnCancel.Top - 97 - 15;
 		bi2.SmallImageList = imageList_0;
 		bi2.UseCompatibleStateImageBehavior = false;
 		bi2.View = View.Details;
@@ -177,15 +177,15 @@ internal sealed class WinPcapDialog : Form0
 
 	private void LoadSettings()
 	{
-		gclass3_0.Click += gclass3_0_Click;
+		mlnkOnlineHelp.Click += mlnkOnlineHelp_Click;
 		bi_0.SelectedIndexChanged += bi_0_SelectedIndexChanged;
-		class61_0.CheckedChanged += class61_0_CheckedChanged;
-		gclass3_1.Click += gclass3_1_Click;
-		class66_0.Click += class66_0_Click;
-		class66_1.Click += class66_1_Click;
+		mchbHideIrrelevantAdapters.CheckedChanged += mchbHideIrrelevantAdapters_CheckedChanged;
+		mlnkWinPcap.Click += mlnkWinPcap_Click;
+		mbtnSave.Click += mbtnSave_Click;
+		mbtnCancel.Click += mbtnCancel_Click;
 	}
 
-	protected override void vmethod_0()
+	protected override void OnFormClosing()
 	{
 		Button_0.Enabled = bi_0.Boolean_2;
 	}
@@ -203,141 +203,141 @@ internal sealed class WinPcapDialog : Form0
 	{
 		icontainer_0 = new Container();
 		ComponentResourceManager componentResourceManager = new ComponentResourceManager(typeof(WinPcapDialog));
-		class66_0 = new Class66();
-		class66_1 = new Class66();
-		gcontrol0_0 = new GControl0();
-		class62_0 = new Class62();
-		pictureBox_0 = new PictureBox();
-		class62_1 = new Class62();
-		gclass3_0 = new GClass3();
+		mbtnSave = new Class66();
+		mbtnCancel = new Class66();
+		separatorLine1 = new GControl0();
+		mlblCaption = new Class62();
+		mimgBigIcon = new PictureBox();
+		mlblSubCaption = new Class62();
+		mlnkOnlineHelp = new GClass3();
 		imageList_0 = new ImageList(icontainer_0);
-		gclass3_1 = new GClass3();
-		class62_2 = new Class62();
-		class61_0 = new Class61();
-		((ISupportInitialize)pictureBox_0).BeginInit();
+		mlnkWinPcap = new GClass3();
+		mlblWinPcapWarning = new Class62();
+		mchbHideIrrelevantAdapters = new Class61();
+		((ISupportInitialize)mimgBigIcon).BeginInit();
 		SuspendLayout();
-		class66_0.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-		class66_0.Image = Resources.opts_16;
-		class66_0.Location = new Point(315, 349);
-		class66_0.Margin = new Padding(4);
-		class66_0.Name = "m_btnSave";
-		class66_0.Size = new Size(100, 36);
-		class66_0.TabIndex = 7;
-		class66_0.Text = "Save";
-		class66_0.TextAlign = ContentAlignment.MiddleRight;
-		class66_0.TextImageRelation = TextImageRelation.ImageBeforeText;
-		class66_0.UseVisualStyleBackColor = true;
-		class66_1.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-		class66_1.Image = Resources.cancl_16;
-		class66_1.Location = new Point(423, 349);
-		class66_1.Margin = new Padding(4);
-		class66_1.Name = "m_btnCancel";
-		class66_1.Size = new Size(100, 36);
-		class66_1.TabIndex = 8;
-		class66_1.Text = "Cancel";
-		class66_1.TextAlign = ContentAlignment.MiddleRight;
-		class66_1.TextImageRelation = TextImageRelation.ImageBeforeText;
-		class66_1.UseVisualStyleBackColor = true;
-		gcontrol0_0.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-		gcontrol0_0.Location = new Point(16, 73);
-		gcontrol0_0.Name = "separatorLine1";
-		gcontrol0_0.Size = new Size(507, 10);
-		gcontrol0_0.TabIndex = 50;
-		gcontrol0_0.TabStop = false;
-		class62_0.AutoSize = true;
-		class62_0.Font = new Font("Microsoft Sans Serif", 9.75f, FontStyle.Bold, GraphicsUnit.Point, 204);
-		class62_0.Location = new Point(79, 15);
-		class62_0.Margin = new Padding(4, 0, 4, 0);
-		class62_0.Name = "m_lblCaption";
-		class62_0.Size = new Size(181, 16);
-		class62_0.TabIndex = 49;
-		class62_0.Text = "WinPcap/Npcap Settings";
-		pictureBox_0.Image = Resources.traffic_monitoring_48;
-		pictureBox_0.Location = new Point(16, 15);
-		pictureBox_0.Margin = new Padding(4);
-		pictureBox_0.Name = "m_imgBigIcon";
-		pictureBox_0.Size = new Size(48, 48);
-		pictureBox_0.SizeMode = PictureBoxSizeMode.AutoSize;
-		pictureBox_0.TabIndex = 47;
-		pictureBox_0.TabStop = false;
-		class62_1.AutoSize = true;
-		class62_1.Location = new Point(79, 47);
-		class62_1.Margin = new Padding(4, 0, 4, 0);
-		class62_1.Name = "m_lblSubCaption";
-		class62_1.Size = new Size(397, 16);
-		class62_1.TabIndex = 48;
-		class62_1.Text = "Please select network adapter for traffic monitoring and click Save";
-		gclass3_0.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-		gclass3_0.AutoSize = true;
-		gclass3_0.LinkColor = Color.FromArgb(38, 135, 200);
-		gclass3_0.Location = new Point(451, 9);
-		gclass3_0.Name = "m_lnkOnlineHelp";
-		gclass3_0.Size = new Size(73, 16);
-		gclass3_0.TabIndex = 9;
-		gclass3_0.TabStop = true;
-		gclass3_0.Text = "online help";
-		gclass3_0.VisitedLinkColor = Color.FromArgb(38, 135, 200);
+		mbtnSave.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+		mbtnSave.Image = Resources.opts_16;
+		mbtnSave.Location = new Point(315, 349);
+		mbtnSave.Margin = new Padding(4);
+		mbtnSave.Name = "m_btnSave";
+		mbtnSave.Size = new Size(100, 36);
+		mbtnSave.TabIndex = 7;
+		mbtnSave.Text = "Save";
+		mbtnSave.TextAlign = ContentAlignment.MiddleRight;
+		mbtnSave.TextImageRelation = TextImageRelation.ImageBeforeText;
+		mbtnSave.UseVisualStyleBackColor = true;
+		mbtnCancel.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+		mbtnCancel.Image = Resources.cancl_16;
+		mbtnCancel.Location = new Point(423, 349);
+		mbtnCancel.Margin = new Padding(4);
+		mbtnCancel.Name = "m_btnCancel";
+		mbtnCancel.Size = new Size(100, 36);
+		mbtnCancel.TabIndex = 8;
+		mbtnCancel.Text = "Cancel";
+		mbtnCancel.TextAlign = ContentAlignment.MiddleRight;
+		mbtnCancel.TextImageRelation = TextImageRelation.ImageBeforeText;
+		mbtnCancel.UseVisualStyleBackColor = true;
+		separatorLine1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+		separatorLine1.Location = new Point(16, 73);
+		separatorLine1.Name = "separatorLine1";
+		separatorLine1.Size = new Size(507, 10);
+		separatorLine1.TabIndex = 50;
+		separatorLine1.TabStop = false;
+		mlblCaption.AutoSize = true;
+		mlblCaption.Font = new Font("Microsoft Sans Serif", 9.75f, FontStyle.Bold, GraphicsUnit.Point, 204);
+		mlblCaption.Location = new Point(79, 15);
+		mlblCaption.Margin = new Padding(4, 0, 4, 0);
+		mlblCaption.Name = "m_lblCaption";
+		mlblCaption.Size = new Size(181, 16);
+		mlblCaption.TabIndex = 49;
+		mlblCaption.Text = "WinPcap/Npcap Settings";
+		mimgBigIcon.Image = Resources.traffic_monitoring_48;
+		mimgBigIcon.Location = new Point(16, 15);
+		mimgBigIcon.Margin = new Padding(4);
+		mimgBigIcon.Name = "m_imgBigIcon";
+		mimgBigIcon.Size = new Size(48, 48);
+		mimgBigIcon.SizeMode = PictureBoxSizeMode.AutoSize;
+		mimgBigIcon.TabIndex = 47;
+		mimgBigIcon.TabStop = false;
+		mlblSubCaption.AutoSize = true;
+		mlblSubCaption.Location = new Point(79, 47);
+		mlblSubCaption.Margin = new Padding(4, 0, 4, 0);
+		mlblSubCaption.Name = "m_lblSubCaption";
+		mlblSubCaption.Size = new Size(397, 16);
+		mlblSubCaption.TabIndex = 48;
+		mlblSubCaption.Text = "Please select network adapter for traffic monitoring and click Save";
+		mlnkOnlineHelp.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+		mlnkOnlineHelp.AutoSize = true;
+		mlnkOnlineHelp.LinkColor = Color.FromArgb(38, 135, 200);
+		mlnkOnlineHelp.Location = new Point(451, 9);
+		mlnkOnlineHelp.Name = "m_lnkOnlineHelp";
+		mlnkOnlineHelp.Size = new Size(73, 16);
+		mlnkOnlineHelp.TabIndex = 9;
+		mlnkOnlineHelp.TabStop = true;
+		mlnkOnlineHelp.Text = "online help";
+		mlnkOnlineHelp.VisitedLinkColor = Color.FromArgb(38, 135, 200);
 		imageList_0.ImageStream = (ImageListStreamer)componentResourceManager.GetObject("m_smallImageList.ImageStream");
 		imageList_0.TransparentColor = Color.Transparent;
 		imageList_0.Images.SetKeyName(0, "PCI-card_24.png");
-		gclass3_1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-		gclass3_1.AutoSize = true;
-		gclass3_1.LinkColor = Color.FromArgb(38, 135, 200);
-		gclass3_1.Location = new Point(13, 369);
-		gclass3_1.Name = "m_lnkWinPcap";
-		gclass3_1.Size = new Size(244, 16);
-		gclass3_1.TabIndex = 137;
-		gclass3_1.TabStop = true;
-		gclass3_1.Text = "click here to download WinPcap/Npcap";
-		gclass3_1.Visible = false;
-		gclass3_1.VisitedLinkColor = Color.FromArgb(38, 135, 200);
-		class62_2.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-		class62_2.AutoSize = true;
-		class62_2.ForeColor = Color.Red;
-		class62_2.Location = new Point(13, 349);
-		class62_2.Margin = new Padding(4, 0, 4, 0);
-		class62_2.Name = "m_lblWinPcapWarning";
-		class62_2.Size = new Size(235, 16);
-		class62_2.TabIndex = 138;
-		class62_2.Text = "WinPcap/Npcap driver is not installed,";
-		class62_2.Boolean_0 = true;
-		class62_2.Visible = false;
-		class61_0.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-		class61_0.AutoSize = true;
-		class61_0.Checked = true;
-		class61_0.CheckState = CheckState.Checked;
-		class61_0.Location = new Point(16, 365);
-		class61_0.Name = "m_chbHideIrrelevantAdapters";
-		class61_0.Size = new Size(171, 20);
-		class61_0.TabIndex = 140;
-		class61_0.Text = "Hide irrelevant adapters";
-		class61_0.UseVisualStyleBackColor = true;
+		mlnkWinPcap.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+		mlnkWinPcap.AutoSize = true;
+		mlnkWinPcap.LinkColor = Color.FromArgb(38, 135, 200);
+		mlnkWinPcap.Location = new Point(13, 369);
+		mlnkWinPcap.Name = "m_lnkWinPcap";
+		mlnkWinPcap.Size = new Size(244, 16);
+		mlnkWinPcap.TabIndex = 137;
+		mlnkWinPcap.TabStop = true;
+		mlnkWinPcap.Text = "click here to download WinPcap/Npcap";
+		mlnkWinPcap.Visible = false;
+		mlnkWinPcap.VisitedLinkColor = Color.FromArgb(38, 135, 200);
+		mlblWinPcapWarning.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+		mlblWinPcapWarning.AutoSize = true;
+		mlblWinPcapWarning.ForeColor = Color.Red;
+		mlblWinPcapWarning.Location = new Point(13, 349);
+		mlblWinPcapWarning.Margin = new Padding(4, 0, 4, 0);
+		mlblWinPcapWarning.Name = "m_lblWinPcapWarning";
+		mlblWinPcapWarning.Size = new Size(235, 16);
+		mlblWinPcapWarning.TabIndex = 138;
+		mlblWinPcapWarning.Text = "WinPcap/Npcap driver is not installed,";
+		mlblWinPcapWarning.Boolean_0 = true;
+		mlblWinPcapWarning.Visible = false;
+		mchbHideIrrelevantAdapters.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+		mchbHideIrrelevantAdapters.AutoSize = true;
+		mchbHideIrrelevantAdapters.Checked = true;
+		mchbHideIrrelevantAdapters.CheckState = CheckState.Checked;
+		mchbHideIrrelevantAdapters.Location = new Point(16, 365);
+		mchbHideIrrelevantAdapters.Name = "m_chbHideIrrelevantAdapters";
+		mchbHideIrrelevantAdapters.Size = new Size(171, 20);
+		mchbHideIrrelevantAdapters.TabIndex = 140;
+		mchbHideIrrelevantAdapters.Text = "Hide irrelevant adapters";
+		mchbHideIrrelevantAdapters.UseVisualStyleBackColor = true;
 		base.AutoScaleDimensions = new SizeF(8f, 16f);
 		base.AutoScaleMode = AutoScaleMode.Font;
 		base.ClientSize = new Size(536, 398);
-		base.Controls.Add(class61_0);
-		base.Controls.Add(class62_2);
-		base.Controls.Add(gclass3_1);
-		base.Controls.Add(gclass3_0);
-		base.Controls.Add(gcontrol0_0);
-		base.Controls.Add(class62_0);
-		base.Controls.Add(class62_1);
-		base.Controls.Add(pictureBox_0);
-		base.Controls.Add(class66_0);
-		base.Controls.Add(class66_1);
+		base.Controls.Add(mchbHideIrrelevantAdapters);
+		base.Controls.Add(mlblWinPcapWarning);
+		base.Controls.Add(mlnkWinPcap);
+		base.Controls.Add(mlnkOnlineHelp);
+		base.Controls.Add(separatorLine1);
+		base.Controls.Add(mlblCaption);
+		base.Controls.Add(mlblSubCaption);
+		base.Controls.Add(mimgBigIcon);
+		base.Controls.Add(mbtnSave);
+		base.Controls.Add(mbtnCancel);
 		Font = new Font("Microsoft Sans Serif", 9.75f, FontStyle.Regular, GraphicsUnit.Point, 204);
 		base.Margin = new Padding(5, 4, 5, 4);
 		base.Name = "WinPcapDialog";
 		base.StartPosition = FormStartPosition.Manual;
 		Text = "WinPcap/Npcap Settings";
-		((ISupportInitialize)pictureBox_0).EndInit();
+		((ISupportInitialize)mimgBigIcon).EndInit();
 		ResumeLayout(performLayout: false);
 		PerformLayout();
 	}
 
 	private void Form18_Shown(object sender, EventArgs e)
 	{
-		InitializeComponents();
+		InitializeComponent();
 	}
 
 	private ListViewItem OnCheckedChanged(Class127 class127_2)
@@ -350,33 +350,33 @@ internal sealed class WinPcapDialog : Form0
 		};
 	}
 
-	private void gclass3_0_Click(object sender, EventArgs e)
+	private void mlnkOnlineHelp_Click(object sender, EventArgs e)
 	{
-		method_9(Class148.Class155.String_1);
+		ShowOnlineHelp(Class148.Class155.String_1);
 	}
 
 	private void bi_0_SelectedIndexChanged(object sender, EventArgs e)
 	{
-		vmethod_0();
+		OnFormClosing();
 	}
 
-	private void class61_0_CheckedChanged(object sender, EventArgs e)
+	private void mchbHideIrrelevantAdapters_CheckedChanged(object sender, EventArgs e)
 	{
 		OnButtonCancel();
 	}
 
-	private void gclass3_1_Click(object sender, EventArgs e)
+	private void mlnkWinPcap_Click(object sender, EventArgs e)
 	{
-		method_9(Class148.String_6);
+		ShowOnlineHelp(Class148.String_6);
 	}
 
-	private void class66_0_Click(object sender, EventArgs e)
+	private void mbtnSave_Click(object sender, EventArgs e)
 	{
-		method_8(DialogResult.OK);
+		CloseDialog(DialogResult.OK);
 	}
 
-	private void class66_1_Click(object sender, EventArgs e)
+	private void mbtnCancel_Click(object sender, EventArgs e)
 	{
-		method_8(DialogResult.Cancel);
+		CloseDialog(DialogResult.Cancel);
 	}
 }

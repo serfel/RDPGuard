@@ -18,7 +18,7 @@ internal sealed class Class119 : Class113
 
 	public override int Int32_0 => 8;
 
-	public override void vmethod_0(Dictionary<string, object> dictionary_0)
+	public override void OnFormClosing(Dictionary<string, object> dictionary_0)
 	{
 		dictionary_0.Add(string_11, (int)genum9_0);
 		dictionary_0.Add(string_12, bool_3);
@@ -33,7 +33,7 @@ internal sealed class Class119 : Class113
 		string_10 = (string)_jo[string_13];
 	}
 
-	public void vmethod_2(StringBuilder stringBuilder_0)
+	public void AdjustFormSize(StringBuilder stringBuilder_0)
 	{
 		stringBuilder_0.Append("MySqlLogSource: " + Class193.Class193_0[genum9_0] + "; ");
 		if (GEnum9.const_1 != genum9_0 && genum9_0 == GEnum9.const_0)

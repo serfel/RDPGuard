@@ -19,13 +19,13 @@ internal sealed class Class144 : Class143
 
 	public static Class144 Class144_0 => lazy_0.Value;
 
-	public override void vmethod_0()
+	public override void OnFormClosing()
 	{
-		base.vmethod_0();
+		base.OnFormClosing();
 		Application.ThreadException += method_2;
 	}
 
-	protected override void vmethod_1(string string_0)
+	protected override void InitializeFormPosition(string string_0)
 	{
 		try
 		{

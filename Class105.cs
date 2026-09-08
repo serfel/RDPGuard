@@ -9,7 +9,7 @@ internal sealed class Class105 : Class102
 
 	public override bool Boolean_0 => true;
 
-	public override string vmethod_0()
+	public override string OnFormClosing()
 	{
 		StringBuilder stringBuilder = new StringBuilder();
 		stringBuilder.AppendFormat("<f827def9d38e>");
@@ -31,7 +31,7 @@ internal sealed class Class105 : Class102
 		};
 	}
 
-	public override Dictionary<string, object> vmethod_1()
+	public override Dictionary<string, object> InitializeFormPosition()
 	{
 		return new Dictionary<string, object> { ["Exclusions"] = string_0.Replace("\r\n", "**OR**") };
 	}

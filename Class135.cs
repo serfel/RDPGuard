@@ -25,9 +25,9 @@ internal sealed class Class135 : IPListEntry
 		class177_0 = new Class177(string_1);
 	}
 
-	public override bool vmethod_0(GClass24 gclass24_1)
+	public override bool OnFormClosing(GClass24 gclass24_1)
 	{
-		if (!base.vmethod_0(gclass24_1))
+		if (!base.OnFormClosing(gclass24_1))
 		{
 			return class177_0.method_0(gclass24_1.method_6());
 		}

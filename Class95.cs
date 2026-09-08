@@ -13,7 +13,7 @@ internal abstract class Class95
 		StringBuilder stringBuilder = new StringBuilder();
 		stringBuilder.AppendFormat("<a2ccb09edc2e>");
 		stringBuilder.AppendFormat("<{0}>{1}</{0}>", "e53efeb5a341", (int)GEnum2_0);
-		stringBuilder.AppendFormat("<{0}>{1}</{0}>", "a8671c8bc3b2", class102_0.vmethod_0());
+		stringBuilder.AppendFormat("<{0}>{1}</{0}>", "a8671c8bc3b2", class102_0.OnFormClosing());
 		stringBuilder.AppendFormat("</a2ccb09edc2e>");
 		return stringBuilder.ToString();
 	}

@@ -5,7 +5,7 @@ internal sealed class Class120 : Class113
 {
 	public override int Int32_0 => 11;
 
-	public override void vmethod_0(Dictionary<string, object> dictionary_0)
+	public override void OnFormClosing(Dictionary<string, object> dictionary_0)
 	{
 	}
 

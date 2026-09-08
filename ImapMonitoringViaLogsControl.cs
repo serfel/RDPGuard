@@ -7,19 +7,19 @@ internal sealed class ImapMonitoringViaLogsControl : Control2
 {
 	private IContainer icontainer_0;
 
-	private Class65 class65_0;
+	private Class65 mgbServerTypeAndLogLocation;
 
-	private GClass2 gclass2_0;
+	private GClass2 mlblLogFilesLocationHint;
 
-	private Class54 class54_0;
+	private Class54 medLogFileOrDirectory;
 
-	private Class62 class62_0;
+	private Class62 mlblLogFilesLocation;
 
-	private Class63 class63_0;
+	private Class63 mlblServerTypeHint;
 
-	private Class0 class0_0;
+	private Class0 mcbServerType;
 
-	private Class62 class62_1;
+	private Class62 mlblServerType;
 
 	public override Size Size_0 => new Size(600, 240);
 
@@ -27,11 +27,11 @@ internal sealed class ImapMonitoringViaLogsControl : Control2
 	{
 		get
 		{
-			return Class192.Class192_0[class0_0.Text];
+			return Class192.Class192_0[mcbServerType.Text];
 		}
 		set
 		{
-			class0_0.Text = Class192.Class192_0[value];
+			mcbServerType.Text = Class192.Class192_0[value];
 		}
 	}
 
@@ -39,26 +39,26 @@ internal sealed class ImapMonitoringViaLogsControl : Control2
 	{
 		get
 		{
-			return class54_0.Text;
+			return medLogFileOrDirectory.Text;
 		}
 		set
 		{
-			class54_0.Text = value;
+			medLogFileOrDirectory.Text = value;
 		}
 	}
 
-	protected override void vmethod_0()
+	protected override void OnFormClosing()
 	{
 		InitializeComponent();
-		ComboBox.ObjectCollection items = class0_0.Items;
+		ComboBox.ObjectCollection items = mcbServerType.Items;
 		object[] prop_ = Class192.Class192_0.Prop_1;
 		object[] items2 = prop_;
 		items.AddRange(items2);
 	}
 
-	protected override void vmethod_1()
+	protected override void InitializeFormPosition()
 	{
-		class0_0.SelectedIndexChanged += class0_0_SelectedIndexChanged;
+		mcbServerType.SelectedIndexChanged += class0_0_SelectedIndexChanged;
 	}
 
 	private void AddTask()
@@ -66,62 +66,62 @@ internal sealed class ImapMonitoringViaLogsControl : Control2
 		switch (GEnum8_0)
 		{
 		default:
-			class62_0.Text = "Log file or directory:";
-			gclass2_0.Text = "Specify the log file/directory location";
+			mlblLogFilesLocation.Text = "Log file or directory:";
+			mlblLogFilesLocationHint.Text = "Specify the log file/directory location";
 			break;
 		case GEnum8.const_0:
-			class62_0.Text = "Log files directory:";
-			class54_0.bool_0 = true;
-			class54_0.String_1 = "C:\\Program Files (x86)\\Mail Enable\\Logging";
-			gclass2_0.Text = "Specify log files directory, usually C:\\Program Files (x86)\\Mail Enable\\Logging\\IMAP";
+			mlblLogFilesLocation.Text = "Log files directory:";
+			medLogFileOrDirectory.bool_0 = true;
+			medLogFileOrDirectory.String_1 = "C:\\Program Files (x86)\\Mail Enable\\Logging";
+			mlblLogFilesLocationHint.Text = "Specify log files directory, usually C:\\Program Files (x86)\\Mail Enable\\Logging\\IMAP";
 			break;
 		case GEnum8.const_1:
-			class62_0.Text = "Security log file:";
-			class54_0.bool_0 = false;
-			class54_0.String_1 = "C:\\Program Files\\Kerio\\MailServer\\store\\logs";
-			gclass2_0.Text = "Specify the Security log file location, usually C:\\Program Files\\Kerio\\MailServer\\store\\logs\\security.log";
+			mlblLogFilesLocation.Text = "Security log file:";
+			medLogFileOrDirectory.bool_0 = false;
+			medLogFileOrDirectory.String_1 = "C:\\Program Files\\Kerio\\MailServer\\store\\logs";
+			mlblLogFilesLocationHint.Text = "Specify the Security log file location, usually C:\\Program Files\\Kerio\\MailServer\\store\\logs\\security.log";
 			break;
 		case GEnum8.const_2:
-			class62_0.Text = "Log files directory:";
-			class54_0.bool_0 = true;
-			class54_0.String_1 = "C:\\hMailServer\\Logs";
-			gclass2_0.Text = "Specify hMailServer log files directory (for example C:\\hMailServer\\Logs)";
+			mlblLogFilesLocation.Text = "Log files directory:";
+			medLogFileOrDirectory.bool_0 = true;
+			medLogFileOrDirectory.String_1 = "C:\\hMailServer\\Logs";
+			mlblLogFilesLocationHint.Text = "Specify hMailServer log files directory (for example C:\\hMailServer\\Logs)";
 			break;
 		case GEnum8.const_3:
-			class62_0.Text = "Log files directory:";
-			class54_0.bool_0 = true;
-			class54_0.String_1 = "C:\\Program Files\\Microsoft\\Exchange Server\\V15\\Logging\\Imap4";
-			gclass2_0.Text = "Specify log files directory, usually C:\\Program Files\\Microsoft\\Exchange Server\\V15\\Logging\\Imap4";
-			gclass2_0.Text += "\r\n\r\nUse the following command in Exchange Management Shell to enable logging:";
-			gclass2_0.Text += "\r\nSet-ImapSettings -Server \"YOUR-SERVER-NAME\" -ProtocolLogEnabled $true";
+			mlblLogFilesLocation.Text = "Log files directory:";
+			medLogFileOrDirectory.bool_0 = true;
+			medLogFileOrDirectory.String_1 = "C:\\Program Files\\Microsoft\\Exchange Server\\V15\\Logging\\Imap4";
+			mlblLogFilesLocationHint.Text = "Specify log files directory, usually C:\\Program Files\\Microsoft\\Exchange Server\\V15\\Logging\\Imap4";
+			mlblLogFilesLocationHint.Text += "\r\n\r\nUse the following command in Exchange Management Shell to enable logging:";
+			mlblLogFilesLocationHint.Text += "\r\nSet-ImapSettings -Server \"YOUR-SERVER-NAME\" -ProtocolLogEnabled $true";
 			break;
 		case GEnum8.const_4:
-			class62_0.Text = "Security log file:";
-			class54_0.bool_0 = false;
-			class54_0.String_1 = "C:\\Program Files\\Axigen Mail Server\\log";
-			gclass2_0.Text = "Specify the security log file location, usually C:\\Program Files\\Axigen Mail Server\\log\\security.txt";
-			gclass2_0.Text += "\r\n\r\nTo enable security logging set 'enableSecurityLog = yes' in the following config file:\r\n";
-			gclass2_0.Text += "C:\\Program Files\\Axigen Mail Server\\run\\axigen.cfg";
+			mlblLogFilesLocation.Text = "Security log file:";
+			medLogFileOrDirectory.bool_0 = false;
+			medLogFileOrDirectory.String_1 = "C:\\Program Files\\Axigen Mail Server\\log";
+			mlblLogFilesLocationHint.Text = "Specify the security log file location, usually C:\\Program Files\\Axigen Mail Server\\log\\security.txt";
+			mlblLogFilesLocationHint.Text += "\r\n\r\nTo enable security logging set 'enableSecurityLog = yes' in the following config file:\r\n";
+			mlblLogFilesLocationHint.Text += "C:\\Program Files\\Axigen Mail Server\\run\\axigen.cfg";
 			break;
 		case GEnum8.const_5:
-			class62_0.Text = "Log files directory:";
-			class54_0.bool_0 = true;
-			class54_0.String_1 = "C:\\MDaemon\\Logs";
-			gclass2_0.Text = "Specify MDaemon log files directory (for example C:\\MDaemon\\Logs)";
+			mlblLogFilesLocation.Text = "Log files directory:";
+			medLogFileOrDirectory.bool_0 = true;
+			medLogFileOrDirectory.String_1 = "C:\\MDaemon\\Logs";
+			mlblLogFilesLocationHint.Text = "Specify MDaemon log files directory (for example C:\\MDaemon\\Logs)";
 			break;
 		case GEnum8.const_6:
-			class62_0.Text = "Log files directory:";
-			class54_0.bool_0 = true;
-			class54_0.String_1 = "C:\\SmarterMail\\Logs";
-			gclass2_0.Text = "Specify SmarterMail log files directory (for example C:\\SmarterMail\\Logs)";
+			mlblLogFilesLocation.Text = "Log files directory:";
+			medLogFileOrDirectory.bool_0 = true;
+			medLogFileOrDirectory.String_1 = "C:\\SmarterMail\\Logs";
+			mlblLogFilesLocationHint.Text = "Specify SmarterMail log files directory (for example C:\\SmarterMail\\Logs)";
 			break;
 		}
-		vmethod_2();
+		AdjustFormSize();
 	}
 
-	protected override void vmethod_2()
+	protected override void AdjustFormSize()
 	{
-		base.Boolean_0 = !string.IsNullOrEmpty(class54_0.Text);
+		base.Boolean_0 = !string.IsNullOrEmpty(medLogFileOrDirectory.Text);
 	}
 
 	protected override void Dispose(bool disposing)
@@ -135,82 +135,82 @@ internal sealed class ImapMonitoringViaLogsControl : Control2
 
 	private void InitializeComponent()
 	{
-		class65_0 = new Class65();
-		gclass2_0 = new GClass2();
-		class54_0 = new Class54();
-		class62_0 = new Class62();
-		class63_0 = new Class63();
-		class0_0 = new Class0();
-		class62_1 = new Class62();
-		class65_0.SuspendLayout();
+		mgbServerTypeAndLogLocation = new Class65();
+		mlblLogFilesLocationHint = new GClass2();
+		medLogFileOrDirectory = new Class54();
+		mlblLogFilesLocation = new Class62();
+		mlblServerTypeHint = new Class63();
+		mcbServerType = new Class0();
+		mlblServerType = new Class62();
+		mgbServerTypeAndLogLocation.SuspendLayout();
 		SuspendLayout();
-		class65_0.Controls.Add(gclass2_0);
-		class65_0.Controls.Add(class54_0);
-		class65_0.Controls.Add(class62_0);
-		class65_0.Controls.Add(class63_0);
-		class65_0.Controls.Add(class0_0);
-		class65_0.Controls.Add(class62_1);
-		class65_0.Dock = DockStyle.Fill;
-		class65_0.Location = new Point(0, 0);
-		class65_0.Name = "m_gbServerTypeAndLogLocation";
-		class65_0.Size = new Size(600, 240);
-		class65_0.TabIndex = 0;
-		class65_0.TabStop = false;
-		class65_0.Text = "Server type and log location";
-		gclass2_0.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-		gclass2_0.BackColor = SystemColors.Control;
-		gclass2_0.BorderStyle = BorderStyle.None;
-		gclass2_0.Cursor = Cursors.Default;
-		gclass2_0.ForeColor = SystemColors.ControlDarkDark;
-		gclass2_0.Location = new Point(28, 165);
-		gclass2_0.Multiline = true;
-		gclass2_0.Name = "m_lblLogFilesLocationHint";
-		gclass2_0.ReadOnly = true;
-		gclass2_0.Size = new Size(566, 69);
-		gclass2_0.TabIndex = 142;
-		gclass2_0.TabStop = false;
-		gclass2_0.Text = "<LOG_FILES_LOCATION_HINT>";
-		class54_0.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-		class54_0.String_1 = null;
-		class54_0.Location = new Point(28, 137);
-		class54_0.Name = "m_edLogFileOrDirectory";
-		class54_0.Size = new Size(566, 22);
-		class54_0.TabIndex = 147;
-		class62_0.AutoSize = true;
-		class62_0.Location = new Point(15, 115);
-		class62_0.Name = "m_lblLogFilesLocation";
-		class62_0.Size = new Size(165, 16);
-		class62_0.TabIndex = 146;
-		class62_0.Text = "<LOG_FILES_LOCATION>";
-		class63_0.AutoSize = true;
-		class63_0.ForeColor = SystemColors.ControlDarkDark;
-		class63_0.Location = new Point(25, 84);
-		class63_0.Name = "m_lblServerTypeHint";
-		class63_0.Size = new Size(323, 16);
-		class63_0.TabIndex = 145;
-		class63_0.Text = "Select IMAP server software installed on the machine.";
-		class0_0.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-		class0_0.DropDownStyle = ComboBoxStyle.DropDownList;
-		class0_0.FormattingEnabled = true;
-		class0_0.Location = new Point(28, 54);
-		class0_0.Name = "m_cbServerType";
-		class0_0.Size = new Size(566, 23);
-		class0_0.TabIndex = 144;
-		class62_1.AutoSize = true;
-		class62_1.Location = new Point(15, 32);
-		class62_1.Name = "m_lblServerType";
-		class62_1.Size = new Size(85, 16);
-		class62_1.TabIndex = 143;
-		class62_1.Text = "IMAP Server:";
+		mgbServerTypeAndLogLocation.Controls.Add(mlblLogFilesLocationHint);
+		mgbServerTypeAndLogLocation.Controls.Add(medLogFileOrDirectory);
+		mgbServerTypeAndLogLocation.Controls.Add(mlblLogFilesLocation);
+		mgbServerTypeAndLogLocation.Controls.Add(mlblServerTypeHint);
+		mgbServerTypeAndLogLocation.Controls.Add(mcbServerType);
+		mgbServerTypeAndLogLocation.Controls.Add(mlblServerType);
+		mgbServerTypeAndLogLocation.Dock = DockStyle.Fill;
+		mgbServerTypeAndLogLocation.Location = new Point(0, 0);
+		mgbServerTypeAndLogLocation.Name = "m_gbServerTypeAndLogLocation";
+		mgbServerTypeAndLogLocation.Size = new Size(600, 240);
+		mgbServerTypeAndLogLocation.TabIndex = 0;
+		mgbServerTypeAndLogLocation.TabStop = false;
+		mgbServerTypeAndLogLocation.Text = "Server type and log location";
+		mlblLogFilesLocationHint.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+		mlblLogFilesLocationHint.BackColor = SystemColors.Control;
+		mlblLogFilesLocationHint.BorderStyle = BorderStyle.None;
+		mlblLogFilesLocationHint.Cursor = Cursors.Default;
+		mlblLogFilesLocationHint.ForeColor = SystemColors.ControlDarkDark;
+		mlblLogFilesLocationHint.Location = new Point(28, 165);
+		mlblLogFilesLocationHint.Multiline = true;
+		mlblLogFilesLocationHint.Name = "m_lblLogFilesLocationHint";
+		mlblLogFilesLocationHint.ReadOnly = true;
+		mlblLogFilesLocationHint.Size = new Size(566, 69);
+		mlblLogFilesLocationHint.TabIndex = 142;
+		mlblLogFilesLocationHint.TabStop = false;
+		mlblLogFilesLocationHint.Text = "<LOG_FILES_LOCATION_HINT>";
+		medLogFileOrDirectory.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+		medLogFileOrDirectory.String_1 = null;
+		medLogFileOrDirectory.Location = new Point(28, 137);
+		medLogFileOrDirectory.Name = "m_edLogFileOrDirectory";
+		medLogFileOrDirectory.Size = new Size(566, 22);
+		medLogFileOrDirectory.TabIndex = 147;
+		mlblLogFilesLocation.AutoSize = true;
+		mlblLogFilesLocation.Location = new Point(15, 115);
+		mlblLogFilesLocation.Name = "m_lblLogFilesLocation";
+		mlblLogFilesLocation.Size = new Size(165, 16);
+		mlblLogFilesLocation.TabIndex = 146;
+		mlblLogFilesLocation.Text = "<LOG_FILES_LOCATION>";
+		mlblServerTypeHint.AutoSize = true;
+		mlblServerTypeHint.ForeColor = SystemColors.ControlDarkDark;
+		mlblServerTypeHint.Location = new Point(25, 84);
+		mlblServerTypeHint.Name = "m_lblServerTypeHint";
+		mlblServerTypeHint.Size = new Size(323, 16);
+		mlblServerTypeHint.TabIndex = 145;
+		mlblServerTypeHint.Text = "Select IMAP server software installed on the machine.";
+		mcbServerType.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+		mcbServerType.DropDownStyle = ComboBoxStyle.DropDownList;
+		mcbServerType.FormattingEnabled = true;
+		mcbServerType.Location = new Point(28, 54);
+		mcbServerType.Name = "m_cbServerType";
+		mcbServerType.Size = new Size(566, 23);
+		mcbServerType.TabIndex = 144;
+		mlblServerType.AutoSize = true;
+		mlblServerType.Location = new Point(15, 32);
+		mlblServerType.Name = "m_lblServerType";
+		mlblServerType.Size = new Size(85, 16);
+		mlblServerType.TabIndex = 143;
+		mlblServerType.Text = "IMAP Server:";
 		base.AutoScaleDimensions = new SizeF(8f, 16f);
 		base.AutoScaleMode = AutoScaleMode.Font;
-		base.Controls.Add(class65_0);
+		base.Controls.Add(mgbServerTypeAndLogLocation);
 		Font = new Font("Microsoft Sans Serif", 9.75f, FontStyle.Regular, GraphicsUnit.Point, 204);
 		base.Margin = new Padding(4);
 		base.Name = "ImapMonitoringViaLogsControl";
 		base.Size = new Size(600, 240);
-		class65_0.ResumeLayout(performLayout: false);
-		class65_0.PerformLayout();
+		mgbServerTypeAndLogLocation.ResumeLayout(performLayout: false);
+		mgbServerTypeAndLogLocation.PerformLayout();
 		ResumeLayout(performLayout: false);
 	}
 

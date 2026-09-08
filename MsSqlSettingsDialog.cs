@@ -12,37 +12,37 @@ internal sealed class MsSqlSettingsDialog : Form0
 
 	private IContainer icontainer_0;
 
-	private Class66 class66_0;
+	private Class66 mbtnSave;
 
-	private Class66 class66_1;
+	private Class66 btnCancel;
 
-	private GControl0 gcontrol0_0;
+	private GControl0 separatorLine1;
 
-	private Class62 class62_0;
+	private Class62 label2;
 
-	private PictureBox pictureBox_0;
+	private PictureBox imgBigIcon;
 
-	private Class62 class62_1;
+	private Class62 lblCaption;
 
-	private GClass3 gclass3_0;
+	private GClass3 mlnkOnlineHelp;
 
-	private Class61 class61_0;
+	private Class61 mchbEnableEngine;
 
-	private Class63 class63_0;
+	private Class63 mlblEnableEngineHint;
 
-	private Class62 class62_2;
+	private Class62 mlblEnable18456Hint;
 
-	private Class61 class61_1;
+	private Class61 mchbEnable18456;
 
-	private GClass3 gclass3_1;
+	private GClass3 mlnkEevent18456Exclusions;
 
-	private Class62 class62_3;
+	private Class62 mlblEnable17832Hint;
 
-	private Class61 class61_2;
+	private Class61 mchbEnable17832;
 
-	private Class62 class62_4;
+	private Class62 mlblEnable17836Hint;
 
-	private Class61 class61_3;
+	private Class61 mchbEnable17836;
 
 	public Class117 Class117_0
 	{
@@ -50,14 +50,14 @@ internal sealed class MsSqlSettingsDialog : Form0
 		{
 			return new Class117
 			{
-				bool_0 = class61_0.Checked,
+				bool_0 = mchbEnableEngine.Checked,
 				int_1 = Int32_0,
 				string_10 = string_0
 			};
 		}
 		set
 		{
-			class61_0.Checked = value.bool_0;
+			mchbEnableEngine.Checked = value.bool_0;
 			Int32_0 = value.int_1;
 			string_0 = value.string_10;
 		}
@@ -68,15 +68,15 @@ internal sealed class MsSqlSettingsDialog : Form0
 		get
 		{
 			List<int> list = new List<int>();
-			if (class61_1.Checked)
+			if (mchbEnable18456.Checked)
 			{
 				list.Add(18456);
 			}
-			if (class61_2.Checked)
+			if (mchbEnable17832.Checked)
 			{
 				list.Add(17832);
 			}
-			if (class61_3.Checked)
+			if (mchbEnable17836.Checked)
 			{
 				list.Add(17836);
 			}
@@ -84,9 +84,9 @@ internal sealed class MsSqlSettingsDialog : Form0
 		}
 		set
 		{
-			class61_1.Checked = value.Contains(18456);
-			class61_2.Checked = value.Contains(17832);
-			class61_3.Checked = value.Contains(17836);
+			mchbEnable18456.Checked = value.Contains(18456);
+			mchbEnable17832.Checked = value.Contains(17832);
+			mchbEnable17836.Checked = value.Contains(17836);
 		}
 	}
 
@@ -94,34 +94,34 @@ internal sealed class MsSqlSettingsDialog : Form0
 		: base(new Size(465, 415))
 	{
 		OnButtonCancel();
-		vmethod_1();
-		InitializeComponents();
+		InitializeFormPosition();
+		InitializeComponent();
 		Class117_0 = class117_0;
-		class61_0.Focus();
+		mchbEnableEngine.Focus();
 	}
 
-	private void InitializeComponents()
+	private void InitializeComponent()
 	{
-		gclass3_0.Click += gclass3_0_Click;
-		class61_0.CheckedChanged += class61_0_CheckedChanged;
-		class61_1.CheckedChanged += class61_1_CheckedChanged;
-		class61_2.CheckedChanged += class61_2_CheckedChanged;
-		class61_3.CheckedChanged += class61_3_CheckedChanged;
-		gclass3_1.Click += gclass3_1_Click;
-		class66_0.Click += class66_0_Click;
-		class66_1.Click += class66_1_Click;
+		mlnkOnlineHelp.Click += mlnkOnlineHelp_Click;
+		mchbEnableEngine.CheckedChanged += mchbEnableEngine_CheckedChanged;
+		mchbEnable18456.CheckedChanged += mchbEnable18456_CheckedChanged;
+		mchbEnable17832.CheckedChanged += mchbEnable17832_CheckedChanged;
+		mchbEnable17836.CheckedChanged += mchbEnable17836_CheckedChanged;
+		mlnkEevent18456Exclusions.Click += mlnkEevent18456Exclusions_Click;
+		mbtnSave.Click += mbtnSave_Click;
+		btnCancel.Click += btnCancel_Click;
 	}
 
 	private void OnButtonOk()
 	{
-		class61_1.Enabled = class61_0.Checked;
-		class62_2.Enabled = class61_0.Checked;
-		gclass3_1.Enabled = class61_0.Checked && class61_1.Checked;
-		class61_2.Enabled = class61_0.Checked;
-		class62_3.Enabled = class61_0.Checked;
-		class61_3.Enabled = class61_0.Checked;
-		class62_4.Enabled = class61_0.Checked;
-		class66_0.Enabled = !class61_0.Checked || class61_1.Checked || false || (class61_2.Checked ? true : false) || class61_3.Checked;
+		mchbEnable18456.Enabled = mchbEnableEngine.Checked;
+		mlblEnable18456Hint.Enabled = mchbEnableEngine.Checked;
+		mlnkEevent18456Exclusions.Enabled = mchbEnableEngine.Checked && mchbEnable18456.Checked;
+		mchbEnable17832.Enabled = mchbEnableEngine.Checked;
+		mlblEnable17832Hint.Enabled = mchbEnableEngine.Checked;
+		mchbEnable17836.Enabled = mchbEnableEngine.Checked;
+		mlblEnable17836Hint.Enabled = mchbEnableEngine.Checked;
+		mbtnSave.Enabled = !mchbEnableEngine.Checked || mchbEnable18456.Checked || false || (mchbEnable17832.Checked ? true : false) || mchbEnable17836.Checked;
 	}
 
 	protected override void Dispose(bool disposing)
@@ -137,215 +137,215 @@ internal sealed class MsSqlSettingsDialog : Form0
 	{
 		icontainer_0 = new Container();
 		new ComponentResourceManager(typeof(MsSqlSettingsDialog));
-		class66_0 = new Class66();
-		class66_1 = new Class66();
-		gcontrol0_0 = new GControl0();
-		class62_0 = new Class62();
-		pictureBox_0 = new PictureBox();
-		class62_1 = new Class62();
-		gclass3_0 = new GClass3();
-		class61_0 = new Class61();
-		class63_0 = new Class63();
-		class62_2 = new Class62();
-		class61_1 = new Class61();
-		gclass3_1 = new GClass3();
-		class62_3 = new Class62();
-		class61_2 = new Class61();
-		class62_4 = new Class62();
-		class61_3 = new Class61();
-		((ISupportInitialize)pictureBox_0).BeginInit();
+		mbtnSave = new Class66();
+		btnCancel = new Class66();
+		separatorLine1 = new GControl0();
+		label2 = new Class62();
+		imgBigIcon = new PictureBox();
+		lblCaption = new Class62();
+		mlnkOnlineHelp = new GClass3();
+		mchbEnableEngine = new Class61();
+		mlblEnableEngineHint = new Class63();
+		mlblEnable18456Hint = new Class62();
+		mchbEnable18456 = new Class61();
+		mlnkEevent18456Exclusions = new GClass3();
+		mlblEnable17832Hint = new Class62();
+		mchbEnable17832 = new Class61();
+		mlblEnable17836Hint = new Class62();
+		mchbEnable17836 = new Class61();
+		((ISupportInitialize)imgBigIcon).BeginInit();
 		SuspendLayout();
-		class66_0.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-		class66_0.Image = Resources.opts_16;
-		class66_0.Location = new Point(228, 328);
-		class66_0.Margin = new Padding(4);
-		class66_0.Name = "m_btnSave";
-		class66_0.Size = new Size(100, 36);
-		class66_0.TabIndex = 5;
-		class66_0.Text = "Save";
-		class66_0.TextAlign = ContentAlignment.MiddleRight;
-		class66_0.TextImageRelation = TextImageRelation.ImageBeforeText;
-		class66_0.UseVisualStyleBackColor = true;
-		class66_1.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-		class66_1.Image = Resources.cancl_16;
-		class66_1.Location = new Point(336, 328);
-		class66_1.Margin = new Padding(4);
-		class66_1.Name = "btnCancel";
-		class66_1.Size = new Size(100, 36);
-		class66_1.TabIndex = 6;
-		class66_1.Text = "Cancel";
-		class66_1.TextAlign = ContentAlignment.MiddleRight;
-		class66_1.TextImageRelation = TextImageRelation.ImageBeforeText;
-		class66_1.UseVisualStyleBackColor = true;
-		gcontrol0_0.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-		gcontrol0_0.Location = new Point(16, 81);
-		gcontrol0_0.Name = "separatorLine1";
-		gcontrol0_0.Size = new Size(421, 2);
-		gcontrol0_0.TabIndex = 50;
-		gcontrol0_0.TabStop = false;
-		class62_0.AutoSize = true;
-		class62_0.Font = new Font("Microsoft Sans Serif", 9.75f, FontStyle.Bold, GraphicsUnit.Point, 204);
-		class62_0.Location = new Point(79, 15);
-		class62_0.Margin = new Padding(4, 0, 4, 0);
-		class62_0.Name = "label2";
-		class62_0.Size = new Size(124, 16);
-		class62_0.TabIndex = 49;
-		class62_0.Text = "MS-SQL Settings";
-		pictureBox_0.Image = Resources.ms_sql_48;
-		pictureBox_0.Location = new Point(16, 15);
-		pictureBox_0.Margin = new Padding(4);
-		pictureBox_0.Name = "imgBigIcon";
-		pictureBox_0.Size = new Size(48, 48);
-		pictureBox_0.SizeMode = PictureBoxSizeMode.AutoSize;
-		pictureBox_0.TabIndex = 47;
-		pictureBox_0.TabStop = false;
-		class62_1.AutoSize = true;
-		class62_1.Location = new Point(79, 47);
-		class62_1.Margin = new Padding(4, 0, 4, 0);
-		class62_1.Name = "lblCaption";
-		class62_1.Size = new Size(234, 16);
-		class62_1.TabIndex = 48;
-		class62_1.Text = "Advanced MS-SQL protection settings";
-		gclass3_0.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-		gclass3_0.AutoSize = true;
-		gclass3_0.LinkColor = Color.FromArgb(38, 135, 200);
-		gclass3_0.Location = new Point(364, 9);
-		gclass3_0.Name = "m_lnkOnlineHelp";
-		gclass3_0.Size = new Size(73, 16);
-		gclass3_0.TabIndex = 7;
-		gclass3_0.TabStop = true;
-		gclass3_0.Text = "online help";
-		gclass3_0.VisitedLinkColor = Color.FromArgb(38, 135, 200);
-		class61_0.AutoSize = true;
-		class61_0.Location = new Point(16, 97);
-		class61_0.Name = "m_chbEnableEngine";
-		class61_0.Size = new Size(185, 20);
-		class61_0.TabIndex = 0;
-		class61_0.Text = "Enable MS-SQL protection";
-		class61_0.UseVisualStyleBackColor = true;
-		class63_0.AutoSize = true;
-		class63_0.ForeColor = SystemColors.ControlDarkDark;
-		class63_0.Location = new Point(13, 122);
-		class63_0.Name = "m_lblEnableEngineHint";
-		class63_0.Size = new Size(227, 16);
-		class63_0.TabIndex = 58;
-		class63_0.Text = "Turn on to enable MS-SQL protection";
-		class62_2.AutoSize = true;
-		class62_2.Enabled = false;
-		class62_2.ForeColor = SystemColors.ControlDarkDark;
-		class62_2.Location = new Point(13, 179);
-		class62_2.Name = "m_lblEnable18456Hint";
-		class62_2.Size = new Size(418, 16);
-		class62_2.TabIndex = 74;
-		class62_2.Text = "In most cases this event indicates brute-force attacks, keep it enabled";
-		class61_1.AutoSize = true;
-		class61_1.Checked = true;
-		class61_1.CheckState = CheckState.Checked;
-		class61_1.Enabled = false;
-		class61_1.Location = new Point(16, 154);
-		class61_1.Name = "m_chbEnable18456";
-		class61_1.Size = new Size(162, 20);
-		class61_1.TabIndex = 1;
-		class61_1.Text = "Monitor Event ID 18456";
-		class61_1.UseVisualStyleBackColor = true;
-		gclass3_1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-		gclass3_1.AutoSize = true;
-		gclass3_1.Enabled = false;
-		gclass3_1.LinkColor = Color.FromArgb(38, 135, 200);
-		gclass3_1.Location = new Point(351, 155);
-		gclass3_1.Name = "m_lnkEevent18456Exclusions";
-		gclass3_1.Size = new Size(77, 16);
-		gclass3_1.TabIndex = 2;
-		gclass3_1.TabStop = true;
-		gclass3_1.Text = "exclusions..";
-		gclass3_1.VisitedLinkColor = Color.FromArgb(38, 135, 200);
-		class62_3.AutoSize = true;
-		class62_3.Enabled = false;
-		class62_3.ForeColor = SystemColors.ControlDarkDark;
-		class62_3.Location = new Point(13, 236);
-		class62_3.Name = "m_lblEnable17832Hint";
-		class62_3.Size = new Size(367, 16);
-		class62_3.TabIndex = 77;
-		class62_3.Text = "This event may also be a part of an attack on MS-SQL server";
-		class61_2.AutoSize = true;
-		class61_2.Enabled = false;
-		class61_2.Location = new Point(16, 211);
-		class61_2.Name = "m_chbEnable17832";
-		class61_2.Size = new Size(162, 20);
-		class61_2.TabIndex = 3;
-		class61_2.Text = "Monitor Event ID 17832";
-		class61_2.UseVisualStyleBackColor = true;
-		class62_4.AutoSize = true;
-		class62_4.Enabled = false;
-		class62_4.ForeColor = SystemColors.ControlDarkDark;
-		class62_4.Location = new Point(13, 293);
-		class62_4.Name = "m_lblEnable17836Hint";
-		class62_4.Size = new Size(367, 16);
-		class62_4.TabIndex = 79;
-		class62_4.Text = "This event may also be a part of an attack on MS-SQL server";
-		class61_3.AutoSize = true;
-		class61_3.Enabled = false;
-		class61_3.Location = new Point(16, 268);
-		class61_3.Name = "m_chbEnable17836";
-		class61_3.Size = new Size(162, 20);
-		class61_3.TabIndex = 4;
-		class61_3.Text = "Monitor Event ID 17836";
-		class61_3.UseVisualStyleBackColor = true;
+		mbtnSave.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+		mbtnSave.Image = Resources.opts_16;
+		mbtnSave.Location = new Point(228, 328);
+		mbtnSave.Margin = new Padding(4);
+		mbtnSave.Name = "m_btnSave";
+		mbtnSave.Size = new Size(100, 36);
+		mbtnSave.TabIndex = 5;
+		mbtnSave.Text = "Save";
+		mbtnSave.TextAlign = ContentAlignment.MiddleRight;
+		mbtnSave.TextImageRelation = TextImageRelation.ImageBeforeText;
+		mbtnSave.UseVisualStyleBackColor = true;
+		btnCancel.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+		btnCancel.Image = Resources.cancl_16;
+		btnCancel.Location = new Point(336, 328);
+		btnCancel.Margin = new Padding(4);
+		btnCancel.Name = "btnCancel";
+		btnCancel.Size = new Size(100, 36);
+		btnCancel.TabIndex = 6;
+		btnCancel.Text = "Cancel";
+		btnCancel.TextAlign = ContentAlignment.MiddleRight;
+		btnCancel.TextImageRelation = TextImageRelation.ImageBeforeText;
+		btnCancel.UseVisualStyleBackColor = true;
+		separatorLine1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+		separatorLine1.Location = new Point(16, 81);
+		separatorLine1.Name = "separatorLine1";
+		separatorLine1.Size = new Size(421, 2);
+		separatorLine1.TabIndex = 50;
+		separatorLine1.TabStop = false;
+		label2.AutoSize = true;
+		label2.Font = new Font("Microsoft Sans Serif", 9.75f, FontStyle.Bold, GraphicsUnit.Point, 204);
+		label2.Location = new Point(79, 15);
+		label2.Margin = new Padding(4, 0, 4, 0);
+		label2.Name = "label2";
+		label2.Size = new Size(124, 16);
+		label2.TabIndex = 49;
+		label2.Text = "MS-SQL Settings";
+		imgBigIcon.Image = Resources.ms_sql_48;
+		imgBigIcon.Location = new Point(16, 15);
+		imgBigIcon.Margin = new Padding(4);
+		imgBigIcon.Name = "imgBigIcon";
+		imgBigIcon.Size = new Size(48, 48);
+		imgBigIcon.SizeMode = PictureBoxSizeMode.AutoSize;
+		imgBigIcon.TabIndex = 47;
+		imgBigIcon.TabStop = false;
+		lblCaption.AutoSize = true;
+		lblCaption.Location = new Point(79, 47);
+		lblCaption.Margin = new Padding(4, 0, 4, 0);
+		lblCaption.Name = "lblCaption";
+		lblCaption.Size = new Size(234, 16);
+		lblCaption.TabIndex = 48;
+		lblCaption.Text = "Advanced MS-SQL protection settings";
+		mlnkOnlineHelp.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+		mlnkOnlineHelp.AutoSize = true;
+		mlnkOnlineHelp.LinkColor = Color.FromArgb(38, 135, 200);
+		mlnkOnlineHelp.Location = new Point(364, 9);
+		mlnkOnlineHelp.Name = "m_lnkOnlineHelp";
+		mlnkOnlineHelp.Size = new Size(73, 16);
+		mlnkOnlineHelp.TabIndex = 7;
+		mlnkOnlineHelp.TabStop = true;
+		mlnkOnlineHelp.Text = "online help";
+		mlnkOnlineHelp.VisitedLinkColor = Color.FromArgb(38, 135, 200);
+		mchbEnableEngine.AutoSize = true;
+		mchbEnableEngine.Location = new Point(16, 97);
+		mchbEnableEngine.Name = "m_chbEnableEngine";
+		mchbEnableEngine.Size = new Size(185, 20);
+		mchbEnableEngine.TabIndex = 0;
+		mchbEnableEngine.Text = "Enable MS-SQL protection";
+		mchbEnableEngine.UseVisualStyleBackColor = true;
+		mlblEnableEngineHint.AutoSize = true;
+		mlblEnableEngineHint.ForeColor = SystemColors.ControlDarkDark;
+		mlblEnableEngineHint.Location = new Point(13, 122);
+		mlblEnableEngineHint.Name = "m_lblEnableEngineHint";
+		mlblEnableEngineHint.Size = new Size(227, 16);
+		mlblEnableEngineHint.TabIndex = 58;
+		mlblEnableEngineHint.Text = "Turn on to enable MS-SQL protection";
+		mlblEnable18456Hint.AutoSize = true;
+		mlblEnable18456Hint.Enabled = false;
+		mlblEnable18456Hint.ForeColor = SystemColors.ControlDarkDark;
+		mlblEnable18456Hint.Location = new Point(13, 179);
+		mlblEnable18456Hint.Name = "m_lblEnable18456Hint";
+		mlblEnable18456Hint.Size = new Size(418, 16);
+		mlblEnable18456Hint.TabIndex = 74;
+		mlblEnable18456Hint.Text = "In most cases this event indicates brute-force attacks, keep it enabled";
+		mchbEnable18456.AutoSize = true;
+		mchbEnable18456.Checked = true;
+		mchbEnable18456.CheckState = CheckState.Checked;
+		mchbEnable18456.Enabled = false;
+		mchbEnable18456.Location = new Point(16, 154);
+		mchbEnable18456.Name = "m_chbEnable18456";
+		mchbEnable18456.Size = new Size(162, 20);
+		mchbEnable18456.TabIndex = 1;
+		mchbEnable18456.Text = "Monitor Event ID 18456";
+		mchbEnable18456.UseVisualStyleBackColor = true;
+		mlnkEevent18456Exclusions.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+		mlnkEevent18456Exclusions.AutoSize = true;
+		mlnkEevent18456Exclusions.Enabled = false;
+		mlnkEevent18456Exclusions.LinkColor = Color.FromArgb(38, 135, 200);
+		mlnkEevent18456Exclusions.Location = new Point(351, 155);
+		mlnkEevent18456Exclusions.Name = "m_lnkEevent18456Exclusions";
+		mlnkEevent18456Exclusions.Size = new Size(77, 16);
+		mlnkEevent18456Exclusions.TabIndex = 2;
+		mlnkEevent18456Exclusions.TabStop = true;
+		mlnkEevent18456Exclusions.Text = "exclusions..";
+		mlnkEevent18456Exclusions.VisitedLinkColor = Color.FromArgb(38, 135, 200);
+		mlblEnable17832Hint.AutoSize = true;
+		mlblEnable17832Hint.Enabled = false;
+		mlblEnable17832Hint.ForeColor = SystemColors.ControlDarkDark;
+		mlblEnable17832Hint.Location = new Point(13, 236);
+		mlblEnable17832Hint.Name = "m_lblEnable17832Hint";
+		mlblEnable17832Hint.Size = new Size(367, 16);
+		mlblEnable17832Hint.TabIndex = 77;
+		mlblEnable17832Hint.Text = "This event may also be a part of an attack on MS-SQL server";
+		mchbEnable17832.AutoSize = true;
+		mchbEnable17832.Enabled = false;
+		mchbEnable17832.Location = new Point(16, 211);
+		mchbEnable17832.Name = "m_chbEnable17832";
+		mchbEnable17832.Size = new Size(162, 20);
+		mchbEnable17832.TabIndex = 3;
+		mchbEnable17832.Text = "Monitor Event ID 17832";
+		mchbEnable17832.UseVisualStyleBackColor = true;
+		mlblEnable17836Hint.AutoSize = true;
+		mlblEnable17836Hint.Enabled = false;
+		mlblEnable17836Hint.ForeColor = SystemColors.ControlDarkDark;
+		mlblEnable17836Hint.Location = new Point(13, 293);
+		mlblEnable17836Hint.Name = "m_lblEnable17836Hint";
+		mlblEnable17836Hint.Size = new Size(367, 16);
+		mlblEnable17836Hint.TabIndex = 79;
+		mlblEnable17836Hint.Text = "This event may also be a part of an attack on MS-SQL server";
+		mchbEnable17836.AutoSize = true;
+		mchbEnable17836.Enabled = false;
+		mchbEnable17836.Location = new Point(16, 268);
+		mchbEnable17836.Name = "m_chbEnable17836";
+		mchbEnable17836.Size = new Size(162, 20);
+		mchbEnable17836.TabIndex = 4;
+		mchbEnable17836.Text = "Monitor Event ID 17836";
+		mchbEnable17836.UseVisualStyleBackColor = true;
 		base.AutoScaleDimensions = new SizeF(8f, 16f);
 		base.AutoScaleMode = AutoScaleMode.Font;
 		base.ClientSize = new Size(449, 377);
-		base.Controls.Add(class62_4);
-		base.Controls.Add(class61_3);
-		base.Controls.Add(class62_3);
-		base.Controls.Add(class61_2);
-		base.Controls.Add(gclass3_1);
-		base.Controls.Add(class62_2);
-		base.Controls.Add(class61_1);
-		base.Controls.Add(class63_0);
-		base.Controls.Add(class61_0);
-		base.Controls.Add(gclass3_0);
-		base.Controls.Add(gcontrol0_0);
-		base.Controls.Add(class62_0);
-		base.Controls.Add(class62_1);
-		base.Controls.Add(pictureBox_0);
-		base.Controls.Add(class66_0);
-		base.Controls.Add(class66_1);
+		base.Controls.Add(mlblEnable17836Hint);
+		base.Controls.Add(mchbEnable17836);
+		base.Controls.Add(mlblEnable17832Hint);
+		base.Controls.Add(mchbEnable17832);
+		base.Controls.Add(mlnkEevent18456Exclusions);
+		base.Controls.Add(mlblEnable18456Hint);
+		base.Controls.Add(mchbEnable18456);
+		base.Controls.Add(mlblEnableEngineHint);
+		base.Controls.Add(mchbEnableEngine);
+		base.Controls.Add(mlnkOnlineHelp);
+		base.Controls.Add(separatorLine1);
+		base.Controls.Add(label2);
+		base.Controls.Add(lblCaption);
+		base.Controls.Add(imgBigIcon);
+		base.Controls.Add(mbtnSave);
+		base.Controls.Add(btnCancel);
 		Font = new Font("Microsoft Sans Serif", 9.75f, FontStyle.Regular, GraphicsUnit.Point, 204);
 		base.Margin = new Padding(5, 4, 5, 4);
 		base.Name = "MsSqlSettingsDialog";
 		base.StartPosition = FormStartPosition.Manual;
 		Text = "MS-SQL Settings";
-		((ISupportInitialize)pictureBox_0).EndInit();
+		((ISupportInitialize)imgBigIcon).EndInit();
 		ResumeLayout(performLayout: false);
 		PerformLayout();
 	}
 
-	private void gclass3_0_Click(object sender, EventArgs e)
+	private void mlnkOnlineHelp_Click(object sender, EventArgs e)
 	{
-		method_9(Class148.Class151.String_9);
+		ShowOnlineHelp(Class148.Class151.String_9);
 	}
 
-	private void class61_0_CheckedChanged(object sender, EventArgs e)
-	{
-		OnButtonOk();
-	}
-
-	private void class61_1_CheckedChanged(object sender, EventArgs e)
+	private void mchbEnableEngine_CheckedChanged(object sender, EventArgs e)
 	{
 		OnButtonOk();
 	}
 
-	private void class61_2_CheckedChanged(object sender, EventArgs e)
+	private void mchbEnable18456_CheckedChanged(object sender, EventArgs e)
 	{
 		OnButtonOk();
 	}
 
-	private void class61_3_CheckedChanged(object sender, EventArgs e)
+	private void mchbEnable17832_CheckedChanged(object sender, EventArgs e)
 	{
 		OnButtonOk();
 	}
 
-	private void gclass3_1_Click(object sender, EventArgs e)
+	private void mchbEnable17836_CheckedChanged(object sender, EventArgs e)
+	{
+		OnButtonOk();
+	}
+
+	private void mlnkEevent18456Exclusions_Click(object sender, EventArgs e)
 	{
 		MsSqlExclusionsDialog form = new MsSqlExclusionsDialog
 		{
@@ -360,13 +360,13 @@ internal sealed class MsSqlSettingsDialog : Form0
 		}
 	}
 
-	private void class66_0_Click(object sender, EventArgs e)
+	private void mbtnSave_Click(object sender, EventArgs e)
 	{
-		method_8(DialogResult.OK);
+		CloseDialog(DialogResult.OK);
 	}
 
-	private void class66_1_Click(object sender, EventArgs e)
+	private void btnCancel_Click(object sender, EventArgs e)
 	{
-		method_8(DialogResult.Cancel);
+		CloseDialog(DialogResult.Cancel);
 	}
 }

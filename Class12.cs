@@ -172,8 +172,8 @@ internal sealed class Class12
 
 	private void method_6()
 	{
-		method_8();
-		gclass0_0.ContextMenuStrip = method_9();
+		CloseDialog();
+		gclass0_0.ContextMenuStrip = ShowOnlineHelp();
 	}
 
 	private void InitializeComponent()
@@ -181,7 +181,7 @@ internal sealed class Class12
 		gclass0_0.Resize += gclass0_0_Resize;
 	}
 
-	private void method_8()
+	private void CloseDialog()
 	{
 		if (gclass0_0.SmallImageList == null)
 		{
@@ -201,7 +201,7 @@ internal sealed class Class12
 		gclass0_0.SmallImageList.Images.Add(Resources.error_16);
 	}
 
-	private ContextMenuStrip method_9()
+	private ContextMenuStrip ShowOnlineHelp()
 	{
 		Class57 @class = new Class57();
 		ToolStripItem[] array = new ToolStripItem[9]

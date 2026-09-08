@@ -28,7 +28,7 @@ internal sealed class Class122 : Class113
 		}
 	}
 
-	public override void vmethod_0(Dictionary<string, object> dictionary_0)
+	public override void OnFormClosing(Dictionary<string, object> dictionary_0)
 	{
 		dictionary_0.Add(string_11, Boolean_0);
 		dictionary_0.Add(string_12, string_10);
@@ -40,7 +40,7 @@ internal sealed class Class122 : Class113
 		string_10 = (string)_jo[string_12];
 	}
 
-	public string vmethod_2()
+	public string AdjustFormSize()
 	{
 		if (!bool_0)
 		{
@@ -56,7 +56,7 @@ internal sealed class Class122 : Class113
 		{
 			return stringBuilder.ToString();
 		}
-		vmethod_1(stringBuilder);
+		InitializeFormPosition(stringBuilder);
 		return stringBuilder.ToString();
 	}
 }

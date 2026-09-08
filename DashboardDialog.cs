@@ -253,7 +253,7 @@ internal sealed class DashboardDialog : Form0
 
 		internal void method_4(object sender, EventArgs e)
 		{
-			form32_0.method_9(Class148.smethod_0(gclass24_0.method_6()));
+			form32_0.ShowOnlineHelp(Class148.smethod_0(gclass24_0.method_6()));
 		}
 	}
 
@@ -275,73 +275,73 @@ internal sealed class DashboardDialog : Form0
 
 	private IContainer icontainer_0;
 
-	private StatusStrip statusStrip_0;
+	private StatusStrip statusBar;
 
-	private ToolStripStatusLabel toolStripStatusLabel_0;
+	private ToolStripStatusLabel toolStripCurrentStatus;
 
-	private MenuStrip menuStrip_0;
+	private MenuStrip mainMenu;
 
-	private ToolStripMenuItem toolStripMenuItem_0;
+	private ToolStripMenuItem mainMenuFile;
 
-	private ToolStripSeparator toolStripSeparator_0;
+	private ToolStripSeparator toolStripSeparator4;
 
-	private ToolStripMenuItem toolStripMenuItem_1;
+	private ToolStripMenuItem mainMenuFileExit;
 
-	private ToolStripMenuItem toolStripMenuItem_2;
+	private ToolStripMenuItem mainMenuView;
 
-	private ToolStripMenuItem toolStripMenuItem_3;
+	private ToolStripMenuItem mainMenuViewShowStatusbar;
 
-	private ToolStripMenuItem toolStripMenuItem_4;
+	private ToolStripMenuItem mainMenuViewShowEventLog;
 
-	private ToolStripMenuItem toolStripMenuItem_5;
+	private ToolStripMenuItem mainMenuTools;
 
-	private ToolStripMenuItem toolStripMenuItem_6;
+	private ToolStripMenuItem mainMenuToolsRdpGuardService;
 
-	private ToolStripMenuItem toolStripMenuItem_7;
+	private ToolStripMenuItem mainMenuToolsRdpGuardServiceStart;
 
-	private ToolStripMenuItem toolStripMenuItem_8;
+	private ToolStripMenuItem mainMenuToolsRdpGuardServiceStop;
 
-	private ToolStripMenuItem toolStripMenuItem_9;
+	private ToolStripMenuItem mainMenuToolsRdpGuardServiceRestart;
 
-	private ToolStripSeparator toolStripSeparator_1;
+	private ToolStripSeparator toolStripSeparator3;
 
-	private ToolStripMenuItem toolStripMenuItem_10;
+	private ToolStripMenuItem mainMenuToolsDiagnostic;
 
-	private ToolStripMenuItem toolStripMenuItem_11;
+	private ToolStripMenuItem mainMenuToolsOptions;
 
-	private ToolStripMenuItem toolStripMenuItem_12;
+	private ToolStripMenuItem mainMenuHelp;
 
-	private ToolStripMenuItem toolStripMenuItem_13;
+	private ToolStripMenuItem mainMenuHelpOnlineHelp;
 
-	private ToolStripMenuItem toolStripMenuItem_14;
+	private ToolStripMenuItem mainMenuHelpContactUs;
 
-	private ToolStripMenuItem toolStripMenuItem_15;
+	private ToolStripMenuItem mainMenuHelpCheckNewVersion;
 
-	private ToolStripSeparator toolStripSeparator_2;
+	private ToolStripSeparator mainMenuHelpSeparator1;
 
-	private ToolStripMenuItem toolStripMenuItem_16;
+	private ToolStripMenuItem mainMenuHelpBuyPro;
 
-	private ToolStripMenuItem toolStripMenuItem_17;
+	private ToolStripMenuItem mmainMenuHelpProductActivation;
 
-	private ToolStripSeparator toolStripSeparator_3;
+	private ToolStripSeparator mainMenuHelpSeparator2;
 
-	private ToolStripMenuItem toolStripMenuItem_18;
+	private ToolStripMenuItem mainMenuHelpAbout;
 
-	private ToolStripMenuItem toolStripMenuItem_19;
+	private ToolStripMenuItem mmainMenuToolsWhitelist;
 
-	private ToolStripMenuItem toolStripMenuItem_20;
+	private ToolStripMenuItem mainMenuToolsUnblockAllIPAddresses;
 
-	private ToolStripMenuItem toolStripMenuItem_21;
+	private ToolStripMenuItem mainMenuToolsFindIPAddress;
 
-	private ToolStripSeparator toolStripSeparator_4;
+	private ToolStripSeparator toolStripSeparator2;
 
-	private ToolStripMenuItem toolStripMenuItem_22;
+	private ToolStripMenuItem mainMenuToolsCustomActions;
 
-	private ToolStripMenuItem toolStripMenuItem_23;
+	private ToolStripMenuItem mmainMenuToolsBlacklist;
 
-	private ToolStripSeparator toolStripSeparator_5;
+	private ToolStripSeparator toolStripSeparator5;
 
-	private ToolStripSeparator toolStripSeparator_6;
+	private ToolStripSeparator toolStripSeparator6;
 
 	private NotifyIcon NotifyIcon_0
 	{
@@ -385,7 +385,7 @@ internal sealed class DashboardDialog : Form0
 	{
 		base.Controls.Add(method_44());
 		InitializeComponent();
-		vmethod_1();
+		InitializeFormPosition();
 		OnButtonOk();
 		OnButtonCancel();
 	}
@@ -401,7 +401,7 @@ internal sealed class DashboardDialog : Form0
 		base.WndProc(ref message_0);
 	}
 
-	private void InitializeComponents()
+	private void InitializeComponent()
 	{
 		EventHandler<EventArgs> eventHandler_ = Class89.eventHandler_0;
 		EventHandler<EventArgs> b = _003C_003Ec._003C_003E9.method_0;
@@ -436,32 +436,32 @@ internal sealed class DashboardDialog : Form0
 	{
 		base.Shown += Form32_Shown;
 		class79_0.DocumentCompleted += class79_0_DocumentCompleted;
-		toolStripMenuItem_5.DropDownOpening += toolStripMenuItem_5_DropDownOpening;
-		toolStripMenuItem_6.DropDownOpening += toolStripMenuItem_6_DropDownOpening;
-		toolStripStatusLabel_0.Click += toolStripStatusLabel_0_Click;
+		mainMenuTools.DropDownOpening += toolStripMenuItem_5_DropDownOpening;
+		mainMenuToolsRdpGuardService.DropDownOpening += toolStripMenuItem_6_DropDownOpening;
+		toolStripCurrentStatus.Click += toolStripCurrentStatus_Click;
 		base.FormClosing += Form32_FormClosing;
 		base.Resize += Form32_Resize;
-		toolStripMenuItem_1.Click += toolStripMenuItem_1_Click;
-		toolStripMenuItem_3.Click += toolStripMenuItem_3_Click;
-		toolStripMenuItem_4.Click += toolStripMenuItem_4_Click;
-		toolStripMenuItem_19.Click += toolStripMenuItem_19_Click;
-		toolStripMenuItem_23.Click += toolStripMenuItem_23_Click;
-		toolStripMenuItem_20.Click += toolStripMenuItem_20_Click;
-		ToolStripMenuItem toolStripMenuItem = toolStripMenuItem_21;
+		mainMenuFileExit.Click += mainMenuFileExit_Click;
+		mainMenuViewShowStatusbar.Click += mainMenuViewShowStatusbar_Click;
+		mainMenuViewShowEventLog.Click += mainMenuViewShowEventLog_Click;
+		mmainMenuToolsWhitelist.Click += mmainMenuToolsWhitelist_Click;
+		mmainMenuToolsBlacklist.Click += mmainMenuToolsBlacklist_Click;
+		mainMenuToolsUnblockAllIPAddresses.Click += mainMenuToolsUnblockAllIPAddresses_Click;
+		ToolStripMenuItem toolStripMenuItem = mainMenuToolsFindIPAddress;
 		EventHandler value = _003C_003Ec._003C_003E9.method_1;
 		toolStripMenuItem.Click += value;
-		toolStripMenuItem_22.Click += toolStripMenuItem_22_Click;
-		toolStripMenuItem_10.Click += toolStripMenuItem_10_Click;
-		toolStripMenuItem_11.Click += toolStripMenuItem_11_Click;
-		toolStripMenuItem_7.Click += toolStripMenuItem_7_Click;
-		toolStripMenuItem_8.Click += toolStripMenuItem_8_Click;
-		toolStripMenuItem_9.Click += toolStripMenuItem_9_Click;
-		toolStripMenuItem_13.Click += toolStripMenuItem_13_Click;
-		toolStripMenuItem_14.Click += toolStripMenuItem_14_Click;
-		toolStripMenuItem_15.Click += toolStripMenuItem_15_Click;
-		toolStripMenuItem_16.Click += toolStripMenuItem_16_Click;
-		toolStripMenuItem_17.Click += toolStripMenuItem_17_Click;
-		toolStripMenuItem_18.Click += toolStripMenuItem_18_Click;
+		mainMenuToolsCustomActions.Click += mainMenuToolsCustomActions_Click;
+		mainMenuToolsDiagnostic.Click += mainMenuToolsDiagnostic_Click;
+		mainMenuToolsOptions.Click += mainMenuToolsOptions_Click;
+		mainMenuToolsRdpGuardServiceStart.Click += mainMenuToolsRdpGuardServiceStart_Click;
+		mainMenuToolsRdpGuardServiceStop.Click += mainMenuToolsRdpGuardServiceStop_Click;
+		mainMenuToolsRdpGuardServiceRestart.Click += mainMenuToolsRdpGuardServiceRestart_Click;
+		mainMenuHelpOnlineHelp.Click += mainMenuHelpOnlineHelp_Click;
+		mainMenuHelpContactUs.Click += mainMenuHelpContactUs_Click;
+		mainMenuHelpCheckNewVersion.Click += mainMenuHelpCheckNewVersion_Click;
+		mainMenuHelpBuyPro.Click += mainMenuHelpBuyPro_Click;
+		mmainMenuHelpProductActivation.Click += mmainMenuHelpProductActivation_Click;
+		mainMenuHelpAbout.Click += mainMenuHelpAbout_Click;
 	}
 
 	private void OnLoad()
@@ -648,7 +648,7 @@ internal sealed class DashboardDialog : Form0
 		}
 		else
 		{
-			toolStripStatusLabel_0.Text = ((@class.eventArgs12_0.class157_0.Any() ? true : false) ? @class.eventArgs12_0.class157_0.Last().ToString().Replace("\r\n", "") : string.Empty);
+			toolStripCurrentStatus.Text = ((@class.eventArgs12_0.class157_0.Any() ? true : false) ? @class.eventArgs12_0.class157_0.Last().ToString().Replace("\r\n", "") : string.Empty);
 		}
 	}
 
@@ -782,7 +782,7 @@ internal sealed class DashboardDialog : Form0
 
 	private void method_34(bool bool_1)
 	{
-		toolStripMenuItem_4.Checked = bool_1;
+		mainMenuViewShowEventLog.Checked = bool_1;
 		if (bool_1)
 		{
 			if (form31_0 == null)
@@ -801,30 +801,30 @@ internal sealed class DashboardDialog : Form0
 
 	private void method_35(bool bool_1)
 	{
-		statusStrip_0.Visible = bool_1;
-		toolStripMenuItem_3.Checked = bool_1;
+		statusBar.Visible = bool_1;
+		mainMenuViewShowStatusbar.Checked = bool_1;
 	}
 
 	private void method_36()
 	{
-		IEnumerable<ToolStripItem> source = toolStripMenuItem_5.DropDownItems.Cast<ToolStripItem>();
+		IEnumerable<ToolStripItem> source = mainMenuTools.DropDownItems.Cast<ToolStripItem>();
 		Func<ToolStripItem, bool> predicate = _003C_003Ec._003C_003E9.method_2;
 		ToolStripItem toolStripItem = source.FirstOrDefault(predicate);
 		if (Keys.Control != (Control.ModifierKeys & Keys.Control))
 		{
 			if (toolStripItem != null)
 			{
-				toolStripMenuItem_5.DropDownItems.Remove(toolStripItem);
-				toolStripMenuItem_5.DropDownItems.RemoveByKey("f046f3008a71");
+				mainMenuTools.DropDownItems.Remove(toolStripItem);
+				mainMenuTools.DropDownItems.RemoveByKey("f046f3008a71");
 			}
 		}
 		else if (toolStripItem == null)
 		{
-			toolStripMenuItem_5.DropDownItems.Add(new ToolStripSeparator
+			mainMenuTools.DropDownItems.Add(new ToolStripSeparator
 			{
 				Name = "f046f3008a71"
 			});
-			ToolStripItemCollection dropDownItems = toolStripMenuItem_5.DropDownItems;
+			ToolStripItemCollection dropDownItems = mainMenuTools.DropDownItems;
 			Class56 @class = new Class56
 			{
 				Text = "Advanced..",
@@ -859,11 +859,11 @@ internal sealed class DashboardDialog : Form0
 
 	private void method_37()
 	{
-		toolStripMenuItem_7.Enabled = class85_0.Boolean_2;
-		toolStripMenuItem_8.Enabled = class85_0.Boolean_1;
+		mainMenuToolsRdpGuardServiceStart.Enabled = class85_0.Boolean_2;
+		mainMenuToolsRdpGuardServiceStop.Enabled = class85_0.Boolean_1;
 	}
 
-	private void method_38()
+	private void OnButtonOk()
 	{
 		Class36 @class = new Class36();
 		@class.form32_0 = this;
@@ -946,8 +946,8 @@ internal sealed class DashboardDialog : Form0
 
 	private void class79_0_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
 	{
-		class79_0.Document.MouseUp -= method_75;
-		class79_0.Document.MouseUp += method_75;
+		class79_0.Document.MouseUp -= ValidateInput;
+		class79_0.Document.MouseUp += ValidateInput;
 		class79_0.PreviewKeyDown -= class79_0_PreviewKeyDown;
 		class79_0.PreviewKeyDown += class79_0_PreviewKeyDown;
 		class79_0.method_6(new Dictionary<string, HtmlElementEventHandler>
@@ -962,30 +962,30 @@ internal sealed class DashboardDialog : Form0
 			{ "edit_filter_link", method_52 },
 			{ "reset_filter_link", method_53 },
 			{ "edit_filter_link2", method_52 },
-			{ "lnk_rdp_status", method_57 },
-			{ "lnk_ftp_status", method_58 },
-			{ "lnk_http_status", method_59 },
-			{ "lnk_smtp_status", method_60 },
-			{ "lnk_imap_status", method_61 },
-			{ "lnk_pop3_status", method_62 },
-			{ "lnk_mysql_status", method_63 },
-			{ "lnk_mssql_status", method_64 },
-			{ "lnk_sip_status", method_65 },
+			{ "lnk_rdp_status", OnButtonOk },
+			{ "lnk_ftp_status", OnButtonOk },
+			{ "lnk_http_status", OnButtonOk },
+			{ "lnk_smtp_status", OnButtonOk },
+			{ "lnk_imap_status", OnButtonOk },
+			{ "lnk_pop3_status", OnButtonOk },
+			{ "lnk_mysql_status", OnButtonOk },
+			{ "lnk_mssql_status", OnButtonOk },
+			{ "lnk_sip_status", OnButtonOk },
 			{ "lnk_openssh_status", method_66 },
-			{ "lnk_aspnetwebforms_status", method_67 },
-			{ "lnk_rdweb_status", method_68 },
+			{ "lnk_aspnetwebforms_status", OnButtonOk },
+			{ "lnk_rdweb_status", OnButtonOk },
 			{ "lnk_msvpn_status", method_69 },
 			{ "local_ips_switcher", method_70 },
 			{ "cloud_ips_switcher", method_71 },
 			{ "geoip_ips_switcher", method_72 },
 			{ "all_ips_switcher", method_73 }
 		});
-		class79_0.method_8(new Dictionary<string, HtmlElementEventHandler> { { "new_version_box", method_50 } });
+		class79_0.CloseDialog(new Dictionary<string, HtmlElementEventHandler> { { "new_version_box", method_50 } });
 	}
 
 	private void method_45(object sender, HtmlElementEventArgs e)
 	{
-		method_9(Class148.Class150.smethod_0("main"));
+		ShowOnlineHelp(Class148.Class150.smethod_0("main"));
 	}
 
 	private void method_46(object sender, HtmlElementEventArgs e)
@@ -1005,7 +1005,7 @@ internal sealed class DashboardDialog : Form0
 
 	private void method_49(object sender, HtmlElementEventArgs e)
 	{
-		method_9(Class148.Class149.String_0);
+		ShowOnlineHelp(Class148.Class149.String_0);
 	}
 
 	private void method_50(object sender, HtmlElementEventArgs e)
@@ -1028,7 +1028,7 @@ internal sealed class DashboardDialog : Form0
 
 	private void method_51(object sender, HtmlElementEventArgs e)
 	{
-		method_9(Class148.Class150.String_1);
+		ShowOnlineHelp(Class148.Class150.String_1);
 	}
 
 	private void method_52(object sender, HtmlElementEventArgs e)
@@ -1043,7 +1043,7 @@ internal sealed class DashboardDialog : Form0
 
 	private void method_54(object sender, HtmlElementEventArgs e)
 	{
-		method_38();
+		OnButtonOk();
 	}
 
 	private void method_55()
@@ -1060,7 +1060,7 @@ internal sealed class DashboardDialog : Form0
 		Class89.smethod_18(class164_0);
 	}
 
-	private void method_57(object sender, HtmlElementEventArgs e)
+	private void OnButtonOk(object sender, HtmlElementEventArgs e)
 	{
 		RdpSettingsDialog form = new RdpSettingsDialog
 		{
@@ -1076,7 +1076,7 @@ internal sealed class DashboardDialog : Form0
 		}
 	}
 
-	private void method_58(object sender, HtmlElementEventArgs e)
+	private void OnButtonOk(object sender, HtmlElementEventArgs e)
 	{
 		FtpSettingsDialog form = new FtpSettingsDialog(class164_0.Class114_0);
 		using (form)
@@ -1089,7 +1089,7 @@ internal sealed class DashboardDialog : Form0
 		}
 	}
 
-	private void method_59(object sender, HtmlElementEventArgs e)
+	private void OnButtonOk(object sender, HtmlElementEventArgs e)
 	{
 		HttpSettingsDialog form = new HttpSettingsDialog(class164_0.Class115_0);
 		using (form)
@@ -1102,7 +1102,7 @@ internal sealed class DashboardDialog : Form0
 		}
 	}
 
-	private void method_60(object sender, HtmlElementEventArgs e)
+	private void OnButtonOk(object sender, HtmlElementEventArgs e)
 	{
 		SmtpSettingsDialog form = new SmtpSettingsDialog(class164_0.Class125_0);
 		if (DialogResult.OK == form.ShowDialog())
@@ -1112,7 +1112,7 @@ internal sealed class DashboardDialog : Form0
 		}
 	}
 
-	private void method_61(object sender, HtmlElementEventArgs e)
+	private void OnButtonOk(object sender, HtmlElementEventArgs e)
 	{
 		ImapSettingsDialog form = new ImapSettingsDialog(class164_0.Class116_0);
 		if (DialogResult.OK == form.ShowDialog())
@@ -1122,7 +1122,7 @@ internal sealed class DashboardDialog : Form0
 		}
 	}
 
-	private void method_62(object sender, HtmlElementEventArgs e)
+	private void OnButtonOk(object sender, HtmlElementEventArgs e)
 	{
 		Pop3SettingsDialog form = new Pop3SettingsDialog(class164_0.Class121_0);
 		if (DialogResult.OK == form.ShowDialog())
@@ -1132,7 +1132,7 @@ internal sealed class DashboardDialog : Form0
 		}
 	}
 
-	private void method_63(object sender, HtmlElementEventArgs e)
+	private void OnButtonOk(object sender, HtmlElementEventArgs e)
 	{
 		MySqlSettingsDialog form = new MySqlSettingsDialog(class164_0.Class119_0);
 		if (DialogResult.OK == form.ShowDialog())
@@ -1142,7 +1142,7 @@ internal sealed class DashboardDialog : Form0
 		}
 	}
 
-	private void method_64(object sender, HtmlElementEventArgs e)
+	private void OnButtonOk(object sender, HtmlElementEventArgs e)
 	{
 		MsSqlSettingsDialog form = new MsSqlSettingsDialog(class164_0.Class117_0);
 		if (DialogResult.OK == form.ShowDialog())
@@ -1152,7 +1152,7 @@ internal sealed class DashboardDialog : Form0
 		}
 	}
 
-	private void method_65(object sender, HtmlElementEventArgs e)
+	private void OnButtonOk(object sender, HtmlElementEventArgs e)
 	{
 		SipSettingsDialog form = new SipSettingsDialog(class164_0.Class124_0);
 		if (DialogResult.OK == form.ShowDialog())
@@ -1171,7 +1171,7 @@ internal sealed class DashboardDialog : Form0
 		method_55();
 	}
 
-	private void method_67(object sender, HtmlElementEventArgs e)
+	private void OnButtonOk(object sender, HtmlElementEventArgs e)
 	{
 		using WebFormsSettingsDialog form = new WebFormsSettingsDialog(class164_0.Class126_0);
 		if (DialogResult.OK == form.ShowDialog())
@@ -1181,7 +1181,7 @@ internal sealed class DashboardDialog : Form0
 		}
 	}
 
-	private void method_68(object sender, HtmlElementEventArgs e)
+	private void OnButtonOk(object sender, HtmlElementEventArgs e)
 	{
 		RDWebSettingsDialog form = new RDWebSettingsDialog(class164_0.Class123_0);
 		if (DialogResult.OK == form.ShowDialog())
@@ -1257,7 +1257,7 @@ internal sealed class DashboardDialog : Form0
 		}
 	}
 
-	private void method_75(object sender, HtmlElementEventArgs e)
+	private void ValidateInput(object sender, HtmlElementEventArgs e)
 	{
 		Class38 @class = new Class38();
 		@class.form32_0 = this;
@@ -1368,7 +1368,7 @@ internal sealed class DashboardDialog : Form0
 				Class90 @class = Class90.smethod_1(htmlElement_0.Name);
 				if (@class.gclass11_0.gclass24_0.Boolean_2)
 				{
-					method_9(Class148.smethod_0(@class.gclass11_0.gclass24_0.method_6()));
+					ShowOnlineHelp(Class148.smethod_0(@class.gclass11_0.gclass24_0.method_6()));
 					Class80.smethod_1(@class.gclass11_0.gclass24_0);
 				}
 				htmlElement_0.SetAttribute("className", "ip_lnk_visited");
@@ -1483,189 +1483,189 @@ internal sealed class DashboardDialog : Form0
 
 	private void InitializeComponent()
 	{
-		this.statusStrip_0 = new System.Windows.Forms.StatusStrip();
-		this.toolStripStatusLabel_0 = new System.Windows.Forms.ToolStripStatusLabel();
-		this.menuStrip_0 = new System.Windows.Forms.MenuStrip();
-		this.toolStripMenuItem_0 = new System.Windows.Forms.ToolStripMenuItem();
-		this.toolStripSeparator_0 = new System.Windows.Forms.ToolStripSeparator();
-		this.toolStripMenuItem_1 = new System.Windows.Forms.ToolStripMenuItem();
-		this.toolStripMenuItem_2 = new System.Windows.Forms.ToolStripMenuItem();
-		this.toolStripMenuItem_3 = new System.Windows.Forms.ToolStripMenuItem();
-		this.toolStripMenuItem_4 = new System.Windows.Forms.ToolStripMenuItem();
-		this.toolStripMenuItem_5 = new System.Windows.Forms.ToolStripMenuItem();
-		this.toolStripMenuItem_6 = new System.Windows.Forms.ToolStripMenuItem();
-		this.toolStripMenuItem_7 = new System.Windows.Forms.ToolStripMenuItem();
-		this.toolStripMenuItem_8 = new System.Windows.Forms.ToolStripMenuItem();
-		this.toolStripMenuItem_9 = new System.Windows.Forms.ToolStripMenuItem();
-		this.toolStripSeparator_1 = new System.Windows.Forms.ToolStripSeparator();
-		this.toolStripMenuItem_19 = new System.Windows.Forms.ToolStripMenuItem();
-		this.toolStripMenuItem_23 = new System.Windows.Forms.ToolStripMenuItem();
-		this.toolStripSeparator_5 = new System.Windows.Forms.ToolStripSeparator();
-		this.toolStripMenuItem_20 = new System.Windows.Forms.ToolStripMenuItem();
-		this.toolStripMenuItem_21 = new System.Windows.Forms.ToolStripMenuItem();
-		this.toolStripSeparator_4 = new System.Windows.Forms.ToolStripSeparator();
-		this.toolStripMenuItem_22 = new System.Windows.Forms.ToolStripMenuItem();
-		this.toolStripSeparator_6 = new System.Windows.Forms.ToolStripSeparator();
-		this.toolStripMenuItem_10 = new System.Windows.Forms.ToolStripMenuItem();
-		this.toolStripMenuItem_11 = new System.Windows.Forms.ToolStripMenuItem();
-		this.toolStripMenuItem_12 = new System.Windows.Forms.ToolStripMenuItem();
-		this.toolStripMenuItem_13 = new System.Windows.Forms.ToolStripMenuItem();
-		this.toolStripMenuItem_14 = new System.Windows.Forms.ToolStripMenuItem();
-		this.toolStripMenuItem_15 = new System.Windows.Forms.ToolStripMenuItem();
-		this.toolStripSeparator_2 = new System.Windows.Forms.ToolStripSeparator();
-		this.toolStripMenuItem_16 = new System.Windows.Forms.ToolStripMenuItem();
-		this.toolStripMenuItem_17 = new System.Windows.Forms.ToolStripMenuItem();
-		this.toolStripSeparator_3 = new System.Windows.Forms.ToolStripSeparator();
-		this.toolStripMenuItem_18 = new System.Windows.Forms.ToolStripMenuItem();
-		this.statusStrip_0.SuspendLayout();
-		this.menuStrip_0.SuspendLayout();
+		this.statusBar = new System.Windows.Forms.StatusStrip();
+		this.toolStripCurrentStatus = new System.Windows.Forms.ToolStripStatusLabel();
+		this.mainMenu = new System.Windows.Forms.MenuStrip();
+		this.mainMenuFile = new System.Windows.Forms.ToolStripMenuItem();
+		this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+		this.mainMenuFileExit = new System.Windows.Forms.ToolStripMenuItem();
+		this.mainMenuView = new System.Windows.Forms.ToolStripMenuItem();
+		this.mainMenuViewShowStatusbar = new System.Windows.Forms.ToolStripMenuItem();
+		this.mainMenuViewShowEventLog = new System.Windows.Forms.ToolStripMenuItem();
+		this.mainMenuTools = new System.Windows.Forms.ToolStripMenuItem();
+		this.mainMenuToolsRdpGuardService = new System.Windows.Forms.ToolStripMenuItem();
+		this.mainMenuToolsRdpGuardServiceStart = new System.Windows.Forms.ToolStripMenuItem();
+		this.mainMenuToolsRdpGuardServiceStop = new System.Windows.Forms.ToolStripMenuItem();
+		this.mainMenuToolsRdpGuardServiceRestart = new System.Windows.Forms.ToolStripMenuItem();
+		this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+		this.mmainMenuToolsWhitelist = new System.Windows.Forms.ToolStripMenuItem();
+		this.mmainMenuToolsBlacklist = new System.Windows.Forms.ToolStripMenuItem();
+		this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+		this.mainMenuToolsUnblockAllIPAddresses = new System.Windows.Forms.ToolStripMenuItem();
+		this.mainMenuToolsFindIPAddress = new System.Windows.Forms.ToolStripMenuItem();
+		this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+		this.mainMenuToolsCustomActions = new System.Windows.Forms.ToolStripMenuItem();
+		this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
+		this.mainMenuToolsDiagnostic = new System.Windows.Forms.ToolStripMenuItem();
+		this.mainMenuToolsOptions = new System.Windows.Forms.ToolStripMenuItem();
+		this.mainMenuHelp = new System.Windows.Forms.ToolStripMenuItem();
+		this.mainMenuHelpOnlineHelp = new System.Windows.Forms.ToolStripMenuItem();
+		this.mainMenuHelpContactUs = new System.Windows.Forms.ToolStripMenuItem();
+		this.mainMenuHelpCheckNewVersion = new System.Windows.Forms.ToolStripMenuItem();
+		this.mainMenuHelpSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+		this.mainMenuHelpBuyPro = new System.Windows.Forms.ToolStripMenuItem();
+		this.mmainMenuHelpProductActivation = new System.Windows.Forms.ToolStripMenuItem();
+		this.mainMenuHelpSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+		this.mainMenuHelpAbout = new System.Windows.Forms.ToolStripMenuItem();
+		this.statusBar.SuspendLayout();
+		this.mainMenu.SuspendLayout();
 		base.SuspendLayout();
-		this.statusStrip_0.Items.AddRange(new System.Windows.Forms.ToolStripItem[1] { this.toolStripStatusLabel_0 });
-		this.statusStrip_0.Location = new System.Drawing.Point(0, 639);
-		this.statusStrip_0.Name = "statusBar";
-		this.statusStrip_0.RenderMode = System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode;
-		this.statusStrip_0.Size = new System.Drawing.Size(483, 22);
-		this.statusStrip_0.TabIndex = 4;
-		this.statusStrip_0.Text = "statusStrip1";
-		this.toolStripStatusLabel_0.Name = "toolStripCurrentStatus";
-		this.toolStripStatusLabel_0.Size = new System.Drawing.Size(468, 17);
-		this.toolStripStatusLabel_0.Spring = true;
-		this.toolStripStatusLabel_0.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-		this.menuStrip_0.Font = new System.Drawing.Font("Tahoma", 9f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 204);
-		this.menuStrip_0.Items.AddRange(new System.Windows.Forms.ToolStripItem[4] { this.toolStripMenuItem_0, this.toolStripMenuItem_2, this.toolStripMenuItem_5, this.toolStripMenuItem_12 });
-		this.menuStrip_0.Location = new System.Drawing.Point(0, 0);
-		this.menuStrip_0.Name = "mainMenu";
-		this.menuStrip_0.Padding = new System.Windows.Forms.Padding(8, 3, 0, 3);
-		this.menuStrip_0.Size = new System.Drawing.Size(483, 25);
-		this.menuStrip_0.TabIndex = 5;
-		this.menuStrip_0.Text = "menuStrip1";
-		this.toolStripMenuItem_0.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[2] { this.toolStripSeparator_0, this.toolStripMenuItem_1 });
-		this.toolStripMenuItem_0.Name = "mainMenuFile";
-		this.toolStripMenuItem_0.Size = new System.Drawing.Size(36, 19);
-		this.toolStripMenuItem_0.Text = "File";
-		this.toolStripSeparator_0.Name = "toolStripSeparator4";
-		this.toolStripSeparator_0.Size = new System.Drawing.Size(91, 6);
-		this.toolStripMenuItem_1.Image = Properties.Resources.exit_16;
-		this.toolStripMenuItem_1.Name = "mainMenuFileExit";
-		this.toolStripMenuItem_1.Size = new System.Drawing.Size(94, 22);
-		this.toolStripMenuItem_1.Text = "Exit";
-		this.toolStripMenuItem_2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[2] { this.toolStripMenuItem_3, this.toolStripMenuItem_4 });
-		this.toolStripMenuItem_2.Name = "mainMenuView";
-		this.toolStripMenuItem_2.Size = new System.Drawing.Size(46, 19);
-		this.toolStripMenuItem_2.Text = "View";
-		this.toolStripMenuItem_3.Name = "mainMenuViewShowStatusbar";
-		this.toolStripMenuItem_3.Size = new System.Drawing.Size(161, 22);
-		this.toolStripMenuItem_3.Text = "Show statusbar";
-		this.toolStripMenuItem_4.Name = "mainMenuViewShowEventLog";
-		this.toolStripMenuItem_4.Size = new System.Drawing.Size(161, 22);
-		this.toolStripMenuItem_4.Text = "Show event log";
-		this.toolStripMenuItem_5.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[12]
+		this.statusBar.Items.AddRange(new System.Windows.Forms.ToolStripItem[1] { this.toolStripCurrentStatus });
+		this.statusBar.Location = new System.Drawing.Point(0, 639);
+		this.statusBar.Name = "statusBar";
+		this.statusBar.RenderMode = System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode;
+		this.statusBar.Size = new System.Drawing.Size(483, 22);
+		this.statusBar.TabIndex = 4;
+		this.statusBar.Text = "statusStrip1";
+		this.toolStripCurrentStatus.Name = "toolStripCurrentStatus";
+		this.toolStripCurrentStatus.Size = new System.Drawing.Size(468, 17);
+		this.toolStripCurrentStatus.Spring = true;
+		this.toolStripCurrentStatus.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+		this.mainMenu.Font = new System.Drawing.Font("Tahoma", 9f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 204);
+		this.mainMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[4] { this.mainMenuFile, this.mainMenuView, this.mainMenuTools, this.mainMenuHelp });
+		this.mainMenu.Location = new System.Drawing.Point(0, 0);
+		this.mainMenu.Name = "mainMenu";
+		this.mainMenu.Padding = new System.Windows.Forms.Padding(8, 3, 0, 3);
+		this.mainMenu.Size = new System.Drawing.Size(483, 25);
+		this.mainMenu.TabIndex = 5;
+		this.mainMenu.Text = "menuStrip1";
+		this.mainMenuFile.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[2] { this.toolStripSeparator4, this.mainMenuFileExit });
+		this.mainMenuFile.Name = "mainMenuFile";
+		this.mainMenuFile.Size = new System.Drawing.Size(36, 19);
+		this.mainMenuFile.Text = "File";
+		this.toolStripSeparator4.Name = "toolStripSeparator4";
+		this.toolStripSeparator4.Size = new System.Drawing.Size(91, 6);
+		this.mainMenuFileExit.Image = Properties.Resources.exit_16;
+		this.mainMenuFileExit.Name = "mainMenuFileExit";
+		this.mainMenuFileExit.Size = new System.Drawing.Size(94, 22);
+		this.mainMenuFileExit.Text = "Exit";
+		this.mainMenuView.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[2] { this.mainMenuViewShowStatusbar, this.mainMenuViewShowEventLog });
+		this.mainMenuView.Name = "mainMenuView";
+		this.mainMenuView.Size = new System.Drawing.Size(46, 19);
+		this.mainMenuView.Text = "View";
+		this.mainMenuViewShowStatusbar.Name = "mainMenuViewShowStatusbar";
+		this.mainMenuViewShowStatusbar.Size = new System.Drawing.Size(161, 22);
+		this.mainMenuViewShowStatusbar.Text = "Show statusbar";
+		this.mainMenuViewShowEventLog.Name = "mainMenuViewShowEventLog";
+		this.mainMenuViewShowEventLog.Size = new System.Drawing.Size(161, 22);
+		this.mainMenuViewShowEventLog.Text = "Show event log";
+		this.mainMenuTools.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[12]
 		{
-			this.toolStripMenuItem_6, this.toolStripSeparator_1, this.toolStripMenuItem_19, this.toolStripMenuItem_23, this.toolStripSeparator_5, this.toolStripMenuItem_20, this.toolStripMenuItem_21, this.toolStripSeparator_4, this.toolStripMenuItem_22, this.toolStripSeparator_6,
-			this.toolStripMenuItem_10, this.toolStripMenuItem_11
+			this.mainMenuToolsRdpGuardService, this.toolStripSeparator3, this.mmainMenuToolsWhitelist, this.mmainMenuToolsBlacklist, this.toolStripSeparator5, this.mainMenuToolsUnblockAllIPAddresses, this.mainMenuToolsFindIPAddress, this.toolStripSeparator2, this.mainMenuToolsCustomActions, this.toolStripSeparator6,
+			this.mainMenuToolsDiagnostic, this.mainMenuToolsOptions
 		});
-		this.toolStripMenuItem_5.Name = "mainMenuTools";
-		this.toolStripMenuItem_5.Size = new System.Drawing.Size(48, 19);
-		this.toolStripMenuItem_5.Text = "Tools";
-		this.toolStripMenuItem_6.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[3] { this.toolStripMenuItem_7, this.toolStripMenuItem_8, this.toolStripMenuItem_9 });
-		this.toolStripMenuItem_6.Image = Properties.Resources.fastf_16;
-		this.toolStripMenuItem_6.Name = "mainMenuToolsRdpGuardService";
-		this.toolStripMenuItem_6.Size = new System.Drawing.Size(238, 22);
-		this.toolStripMenuItem_6.Text = "RdpGuard Service";
-		this.toolStripMenuItem_7.Image = Properties.Resources.play_16;
-		this.toolStripMenuItem_7.Name = "mainMenuToolsRdpGuardServiceStart";
-		this.toolStripMenuItem_7.Size = new System.Drawing.Size(113, 22);
-		this.toolStripMenuItem_7.Text = "Start";
-		this.toolStripMenuItem_8.Image = Properties.Resources.splay_16;
-		this.toolStripMenuItem_8.Name = "mainMenuToolsRdpGuardServiceStop";
-		this.toolStripMenuItem_8.Size = new System.Drawing.Size(113, 22);
-		this.toolStripMenuItem_8.Text = "Stop";
-		this.toolStripMenuItem_9.Image = Properties.Resources.redo_16;
-		this.toolStripMenuItem_9.Name = "mainMenuToolsRdpGuardServiceRestart";
-		this.toolStripMenuItem_9.Size = new System.Drawing.Size(113, 22);
-		this.toolStripMenuItem_9.Text = "Restart";
-		this.toolStripSeparator_1.Name = "toolStripSeparator3";
-		this.toolStripSeparator_1.Size = new System.Drawing.Size(235, 6);
-		this.toolStripMenuItem_19.Image = Properties.Resources.whitelist_16;
-		this.toolStripMenuItem_19.Name = "m_mainMenuToolsWhitelist";
-		this.toolStripMenuItem_19.Size = new System.Drawing.Size(238, 22);
-		this.toolStripMenuItem_19.Text = "Whitelist...";
-		this.toolStripMenuItem_23.Image = Properties.Resources.blacklist_16;
-		this.toolStripMenuItem_23.Name = "m_mainMenuToolsBlacklist";
-		this.toolStripMenuItem_23.Size = new System.Drawing.Size(238, 22);
-		this.toolStripMenuItem_23.Text = "Blacklist...";
-		this.toolStripSeparator_5.Name = "toolStripSeparator5";
-		this.toolStripSeparator_5.Size = new System.Drawing.Size(235, 6);
-		this.toolStripMenuItem_20.Image = Properties.Resources.unblock_16;
-		this.toolStripMenuItem_20.Name = "mainMenuToolsUnblockAllIPAddresses";
-		this.toolStripMenuItem_20.Size = new System.Drawing.Size(238, 22);
-		this.toolStripMenuItem_20.Text = "Unblock all IP addresses";
-		this.toolStripMenuItem_21.Image = Properties.Resources.magnifier_16;
-		this.toolStripMenuItem_21.Name = "mainMenuToolsFindIPAddress";
-		this.toolStripMenuItem_21.Size = new System.Drawing.Size(238, 22);
-		this.toolStripMenuItem_21.Text = "Find IP address..";
-		this.toolStripSeparator_4.Name = "toolStripSeparator2";
-		this.toolStripSeparator_4.Size = new System.Drawing.Size(235, 6);
-		this.toolStripMenuItem_22.Image = Properties.Resources.notifications_16;
-		this.toolStripMenuItem_22.Name = "mainMenuToolsCustomActions";
-		this.toolStripMenuItem_22.Size = new System.Drawing.Size(238, 22);
-		this.toolStripMenuItem_22.Text = "Custom Actions / Notifications";
-		this.toolStripSeparator_6.Name = "toolStripSeparator6";
-		this.toolStripSeparator_6.Size = new System.Drawing.Size(235, 6);
-		this.toolStripMenuItem_10.Image = Properties.Resources.diagnostics_16;
-		this.toolStripMenuItem_10.Name = "mainMenuToolsDiagnostic";
-		this.toolStripMenuItem_10.Size = new System.Drawing.Size(238, 22);
-		this.toolStripMenuItem_10.Text = "Diagnostics...";
-		this.toolStripMenuItem_11.Image = Properties.Resources.apps_16;
-		this.toolStripMenuItem_11.Name = "mainMenuToolsOptions";
-		this.toolStripMenuItem_11.Size = new System.Drawing.Size(238, 22);
-		this.toolStripMenuItem_11.Text = "Options...";
-		this.toolStripMenuItem_12.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[8] { this.toolStripMenuItem_13, this.toolStripMenuItem_14, this.toolStripMenuItem_15, this.toolStripSeparator_2, this.toolStripMenuItem_16, this.toolStripMenuItem_17, this.toolStripSeparator_3, this.toolStripMenuItem_18 });
-		this.toolStripMenuItem_12.Name = "mainMenuHelp";
-		this.toolStripMenuItem_12.Size = new System.Drawing.Size(43, 19);
-		this.toolStripMenuItem_12.Text = "Help";
-		this.toolStripMenuItem_13.Image = Properties.Resources.online_help_24;
-		this.toolStripMenuItem_13.Name = "mainMenuHelpOnlineHelp";
-		this.toolStripMenuItem_13.Size = new System.Drawing.Size(180, 22);
-		this.toolStripMenuItem_13.Text = "Online Help";
-		this.toolStripMenuItem_14.Image = Properties.Resources.contactus_16;
-		this.toolStripMenuItem_14.Name = "mainMenuHelpContactUs";
-		this.toolStripMenuItem_14.Size = new System.Drawing.Size(180, 22);
-		this.toolStripMenuItem_14.Text = "Contact Us";
-		this.toolStripMenuItem_15.Image = Properties.Resources.new_version_check_24;
-		this.toolStripMenuItem_15.Name = "mainMenuHelpCheckNewVersion";
-		this.toolStripMenuItem_15.Size = new System.Drawing.Size(180, 22);
-		this.toolStripMenuItem_15.Text = "New Version Check";
-		this.toolStripSeparator_2.Name = "mainMenuHelpSeparator1";
-		this.toolStripSeparator_2.Size = new System.Drawing.Size(177, 6);
-		this.toolStripMenuItem_16.Image = Properties.Resources.key_16;
-		this.toolStripMenuItem_16.Name = "mainMenuHelpBuyPro";
-		this.toolStripMenuItem_16.Size = new System.Drawing.Size(180, 22);
-		this.toolStripMenuItem_16.Text = "Purchase RdpGuard";
-		this.toolStripMenuItem_17.Image = Properties.Resources.activate_pro_16__2_;
-		this.toolStripMenuItem_17.Name = "m_mainMenuHelpProductActivation";
-		this.toolStripMenuItem_17.Size = new System.Drawing.Size(180, 22);
-		this.toolStripMenuItem_17.Text = "Product Activation";
-		this.toolStripSeparator_3.Name = "mainMenuHelpSeparator2";
-		this.toolStripSeparator_3.Size = new System.Drawing.Size(177, 6);
-		this.toolStripMenuItem_18.Image = Properties.Resources.about_24;
-		this.toolStripMenuItem_18.Name = "mainMenuHelpAbout";
-		this.toolStripMenuItem_18.Size = new System.Drawing.Size(180, 22);
-		this.toolStripMenuItem_18.Text = "About...";
+		this.mainMenuTools.Name = "mainMenuTools";
+		this.mainMenuTools.Size = new System.Drawing.Size(48, 19);
+		this.mainMenuTools.Text = "Tools";
+		this.mainMenuToolsRdpGuardService.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[3] { this.mainMenuToolsRdpGuardServiceStart, this.mainMenuToolsRdpGuardServiceStop, this.mainMenuToolsRdpGuardServiceRestart });
+		this.mainMenuToolsRdpGuardService.Image = Properties.Resources.fastf_16;
+		this.mainMenuToolsRdpGuardService.Name = "mainMenuToolsRdpGuardService";
+		this.mainMenuToolsRdpGuardService.Size = new System.Drawing.Size(238, 22);
+		this.mainMenuToolsRdpGuardService.Text = "RdpGuard Service";
+		this.mainMenuToolsRdpGuardServiceStart.Image = Properties.Resources.play_16;
+		this.mainMenuToolsRdpGuardServiceStart.Name = "mainMenuToolsRdpGuardServiceStart";
+		this.mainMenuToolsRdpGuardServiceStart.Size = new System.Drawing.Size(113, 22);
+		this.mainMenuToolsRdpGuardServiceStart.Text = "Start";
+		this.mainMenuToolsRdpGuardServiceStop.Image = Properties.Resources.splay_16;
+		this.mainMenuToolsRdpGuardServiceStop.Name = "mainMenuToolsRdpGuardServiceStop";
+		this.mainMenuToolsRdpGuardServiceStop.Size = new System.Drawing.Size(113, 22);
+		this.mainMenuToolsRdpGuardServiceStop.Text = "Stop";
+		this.mainMenuToolsRdpGuardServiceRestart.Image = Properties.Resources.redo_16;
+		this.mainMenuToolsRdpGuardServiceRestart.Name = "mainMenuToolsRdpGuardServiceRestart";
+		this.mainMenuToolsRdpGuardServiceRestart.Size = new System.Drawing.Size(113, 22);
+		this.mainMenuToolsRdpGuardServiceRestart.Text = "Restart";
+		this.toolStripSeparator3.Name = "toolStripSeparator3";
+		this.toolStripSeparator3.Size = new System.Drawing.Size(235, 6);
+		this.mmainMenuToolsWhitelist.Image = Properties.Resources.whitelist_16;
+		this.mmainMenuToolsWhitelist.Name = "m_mainMenuToolsWhitelist";
+		this.mmainMenuToolsWhitelist.Size = new System.Drawing.Size(238, 22);
+		this.mmainMenuToolsWhitelist.Text = "Whitelist...";
+		this.mmainMenuToolsBlacklist.Image = Properties.Resources.blacklist_16;
+		this.mmainMenuToolsBlacklist.Name = "m_mainMenuToolsBlacklist";
+		this.mmainMenuToolsBlacklist.Size = new System.Drawing.Size(238, 22);
+		this.mmainMenuToolsBlacklist.Text = "Blacklist...";
+		this.toolStripSeparator5.Name = "toolStripSeparator5";
+		this.toolStripSeparator5.Size = new System.Drawing.Size(235, 6);
+		this.mainMenuToolsUnblockAllIPAddresses.Image = Properties.Resources.unblock_16;
+		this.mainMenuToolsUnblockAllIPAddresses.Name = "mainMenuToolsUnblockAllIPAddresses";
+		this.mainMenuToolsUnblockAllIPAddresses.Size = new System.Drawing.Size(238, 22);
+		this.mainMenuToolsUnblockAllIPAddresses.Text = "Unblock all IP addresses";
+		this.mainMenuToolsFindIPAddress.Image = Properties.Resources.magnifier_16;
+		this.mainMenuToolsFindIPAddress.Name = "mainMenuToolsFindIPAddress";
+		this.mainMenuToolsFindIPAddress.Size = new System.Drawing.Size(238, 22);
+		this.mainMenuToolsFindIPAddress.Text = "Find IP address..";
+		this.toolStripSeparator2.Name = "toolStripSeparator2";
+		this.toolStripSeparator2.Size = new System.Drawing.Size(235, 6);
+		this.mainMenuToolsCustomActions.Image = Properties.Resources.notifications_16;
+		this.mainMenuToolsCustomActions.Name = "mainMenuToolsCustomActions";
+		this.mainMenuToolsCustomActions.Size = new System.Drawing.Size(238, 22);
+		this.mainMenuToolsCustomActions.Text = "Custom Actions / Notifications";
+		this.toolStripSeparator6.Name = "toolStripSeparator6";
+		this.toolStripSeparator6.Size = new System.Drawing.Size(235, 6);
+		this.mainMenuToolsDiagnostic.Image = Properties.Resources.diagnostics_16;
+		this.mainMenuToolsDiagnostic.Name = "mainMenuToolsDiagnostic";
+		this.mainMenuToolsDiagnostic.Size = new System.Drawing.Size(238, 22);
+		this.mainMenuToolsDiagnostic.Text = "Diagnostics...";
+		this.mainMenuToolsOptions.Image = Properties.Resources.apps_16;
+		this.mainMenuToolsOptions.Name = "mainMenuToolsOptions";
+		this.mainMenuToolsOptions.Size = new System.Drawing.Size(238, 22);
+		this.mainMenuToolsOptions.Text = "Options...";
+		this.mainMenuHelp.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[8] { this.mainMenuHelpOnlineHelp, this.mainMenuHelpContactUs, this.mainMenuHelpCheckNewVersion, this.mainMenuHelpSeparator1, this.mainMenuHelpBuyPro, this.mmainMenuHelpProductActivation, this.mainMenuHelpSeparator2, this.mainMenuHelpAbout });
+		this.mainMenuHelp.Name = "mainMenuHelp";
+		this.mainMenuHelp.Size = new System.Drawing.Size(43, 19);
+		this.mainMenuHelp.Text = "Help";
+		this.mainMenuHelpOnlineHelp.Image = Properties.Resources.online_help_24;
+		this.mainMenuHelpOnlineHelp.Name = "mainMenuHelpOnlineHelp";
+		this.mainMenuHelpOnlineHelp.Size = new System.Drawing.Size(180, 22);
+		this.mainMenuHelpOnlineHelp.Text = "Online Help";
+		this.mainMenuHelpContactUs.Image = Properties.Resources.contactus_16;
+		this.mainMenuHelpContactUs.Name = "mainMenuHelpContactUs";
+		this.mainMenuHelpContactUs.Size = new System.Drawing.Size(180, 22);
+		this.mainMenuHelpContactUs.Text = "Contact Us";
+		this.mainMenuHelpCheckNewVersion.Image = Properties.Resources.new_version_check_24;
+		this.mainMenuHelpCheckNewVersion.Name = "mainMenuHelpCheckNewVersion";
+		this.mainMenuHelpCheckNewVersion.Size = new System.Drawing.Size(180, 22);
+		this.mainMenuHelpCheckNewVersion.Text = "New Version Check";
+		this.mainMenuHelpSeparator1.Name = "mainMenuHelpSeparator1";
+		this.mainMenuHelpSeparator1.Size = new System.Drawing.Size(177, 6);
+		this.mainMenuHelpBuyPro.Image = Properties.Resources.key_16;
+		this.mainMenuHelpBuyPro.Name = "mainMenuHelpBuyPro";
+		this.mainMenuHelpBuyPro.Size = new System.Drawing.Size(180, 22);
+		this.mainMenuHelpBuyPro.Text = "Purchase RdpGuard";
+		this.mmainMenuHelpProductActivation.Image = Properties.Resources.activate_pro_16__2_;
+		this.mmainMenuHelpProductActivation.Name = "m_mainMenuHelpProductActivation";
+		this.mmainMenuHelpProductActivation.Size = new System.Drawing.Size(180, 22);
+		this.mmainMenuHelpProductActivation.Text = "Product Activation";
+		this.mainMenuHelpSeparator2.Name = "mainMenuHelpSeparator2";
+		this.mainMenuHelpSeparator2.Size = new System.Drawing.Size(177, 6);
+		this.mainMenuHelpAbout.Image = Properties.Resources.about_24;
+		this.mainMenuHelpAbout.Name = "mainMenuHelpAbout";
+		this.mainMenuHelpAbout.Size = new System.Drawing.Size(180, 22);
+		this.mainMenuHelpAbout.Text = "About...";
 		base.AutoScaleDimensions = new System.Drawing.SizeF(7f, 16f);
 		base.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 		base.ClientSize = new System.Drawing.Size(483, 661);
-		base.Controls.Add(this.menuStrip_0);
-		base.Controls.Add(this.statusStrip_0);
+		base.Controls.Add(this.mainMenu);
+		base.Controls.Add(this.statusBar);
 		this.Font = new System.Drawing.Font("Tahoma", 9.75f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 204);
 		base.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
 		base.Name = "DashboardDialog";
 		base.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
 		this.Text = "formMain";
-		this.statusStrip_0.ResumeLayout(false);
-		this.statusStrip_0.PerformLayout();
-		this.menuStrip_0.ResumeLayout(false);
-		this.menuStrip_0.PerformLayout();
+		this.statusBar.ResumeLayout(false);
+		this.statusBar.PerformLayout();
+		this.mainMenu.ResumeLayout(false);
+		this.mainMenu.PerformLayout();
 		base.ResumeLayout(false);
 		base.PerformLayout();
 	}
@@ -1695,7 +1695,7 @@ internal sealed class DashboardDialog : Form0
 
 	private void Form32_Shown(object sender, EventArgs e)
 	{
-		InitializeComponents();
+		InitializeComponent();
 	}
 
 	private void toolStripMenuItem_5_DropDownOpening(object sender, EventArgs e)
@@ -1708,7 +1708,7 @@ internal sealed class DashboardDialog : Form0
 		method_37();
 	}
 
-	private void toolStripStatusLabel_0_Click(object sender, EventArgs e)
+	private void toolStripCurrentStatus_Click(object sender, EventArgs e)
 	{
 		Class163.Class163_0.class166_0.Boolean_0 = true;
 		Class163.Class163_0.method_3();
@@ -1753,12 +1753,12 @@ internal sealed class DashboardDialog : Form0
 		}
 	}
 
-	private void toolStripMenuItem_1_Click(object sender, EventArgs e)
+	private void mainMenuFileExit_Click(object sender, EventArgs e)
 	{
 		method_42();
 	}
 
-	private void toolStripMenuItem_3_Click(object sender, EventArgs e)
+	private void mainMenuViewShowStatusbar_Click(object sender, EventArgs e)
 	{
 		bool flag = !Class163.Class163_0.class166_1.Boolean_0;
 		method_35(flag);
@@ -1766,7 +1766,7 @@ internal sealed class DashboardDialog : Form0
 		Class163.Class163_0.method_3();
 	}
 
-	private void toolStripMenuItem_4_Click(object sender, EventArgs e)
+	private void mainMenuViewShowEventLog_Click(object sender, EventArgs e)
 	{
 		bool flag = !Class163.Class163_0.class166_0.Boolean_0;
 		method_34(flag);
@@ -1774,22 +1774,22 @@ internal sealed class DashboardDialog : Form0
 		Class163.Class163_0.method_3();
 	}
 
-	private void toolStripMenuItem_19_Click(object sender, EventArgs e)
+	private void mmainMenuToolsWhitelist_Click(object sender, EventArgs e)
 	{
 		ValidateInput();
 	}
 
-	private void toolStripMenuItem_23_Click(object sender, EventArgs e)
+	private void mmainMenuToolsBlacklist_Click(object sender, EventArgs e)
 	{
 		LoadSettings();
 	}
 
-	private void toolStripMenuItem_20_Click(object sender, EventArgs e)
+	private void mainMenuToolsUnblockAllIPAddresses_Click(object sender, EventArgs e)
 	{
 		OnCheckedChanged();
 	}
 
-	private void toolStripMenuItem_22_Click(object sender, EventArgs e)
+	private void mainMenuToolsCustomActions_Click(object sender, EventArgs e)
 	{
 		if (method_21())
 		{
@@ -1797,7 +1797,7 @@ internal sealed class DashboardDialog : Form0
 		}
 	}
 
-	private void toolStripMenuItem_10_Click(object sender, EventArgs e)
+	private void mainMenuToolsDiagnostic_Click(object sender, EventArgs e)
 	{
 		if (method_21())
 		{
@@ -1805,52 +1805,52 @@ internal sealed class DashboardDialog : Form0
 		}
 	}
 
-	private void toolStripMenuItem_11_Click(object sender, EventArgs e)
+	private void mainMenuToolsOptions_Click(object sender, EventArgs e)
 	{
-		method_38();
+		OnButtonOk();
 	}
 
-	private void toolStripMenuItem_7_Click(object sender, EventArgs e)
+	private void mainMenuToolsRdpGuardServiceStart_Click(object sender, EventArgs e)
 	{
 		class85_0.method_1();
 	}
 
-	private void toolStripMenuItem_8_Click(object sender, EventArgs e)
+	private void mainMenuToolsRdpGuardServiceStop_Click(object sender, EventArgs e)
 	{
 		class85_0.method_2();
 	}
 
-	private void toolStripMenuItem_9_Click(object sender, EventArgs e)
+	private void mainMenuToolsRdpGuardServiceRestart_Click(object sender, EventArgs e)
 	{
 		class85_0.method_3();
 	}
 
-	private void toolStripMenuItem_13_Click(object sender, EventArgs e)
+	private void mainMenuHelpOnlineHelp_Click(object sender, EventArgs e)
 	{
-		method_9(Class148.String_0);
+		ShowOnlineHelp(Class148.String_0);
 	}
 
-	private void toolStripMenuItem_14_Click(object sender, EventArgs e)
+	private void mainMenuHelpContactUs_Click(object sender, EventArgs e)
 	{
-		method_9(Class148.String_1);
+		ShowOnlineHelp(Class148.String_1);
 	}
 
-	private void toolStripMenuItem_15_Click(object sender, EventArgs e)
+	private void mainMenuHelpCheckNewVersion_Click(object sender, EventArgs e)
 	{
-		method_9(Class148.Class149.String_0);
+		ShowOnlineHelp(Class148.Class149.String_0);
 	}
 
-	private void toolStripMenuItem_16_Click(object sender, EventArgs e)
+	private void mainMenuHelpBuyPro_Click(object sender, EventArgs e)
 	{
-		method_9(Class148.Class150.smethod_0("menu"));
+		ShowOnlineHelp(Class148.Class150.smethod_0("menu"));
 	}
 
-	private void toolStripMenuItem_17_Click(object sender, EventArgs e)
+	private void mmainMenuHelpProductActivation_Click(object sender, EventArgs e)
 	{
 		OnLoad();
 	}
 
-	private void toolStripMenuItem_18_Click(object sender, EventArgs e)
+	private void mainMenuHelpAbout_Click(object sender, EventArgs e)
 	{
 		new AboutDialog(Text).method_1();
 	}
@@ -1859,7 +1859,7 @@ internal sealed class DashboardDialog : Form0
 	{
 		Class163.Class163_0.class166_0.Boolean_0 = false;
 		Class163.Class163_0.method_3();
-		toolStripMenuItem_4.Checked = false;
+		mainMenuViewShowEventLog.Checked = false;
 		form31_0 = null;
 	}
 

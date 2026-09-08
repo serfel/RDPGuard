@@ -50,31 +50,31 @@ internal sealed class SmtpServersDialog : Form0
 
 	private IContainer icontainer_0;
 
-	private Class66 class66_0;
+	private Class66 mbtnSave;
 
-	private Class66 class66_1;
+	private Class66 btnCancel;
 
-	private GControl0 gcontrol0_0;
+	private GControl0 separatorLine1;
 
-	private Class62 class62_0;
+	private Class62 label2;
 
-	private PictureBox pictureBox_0;
+	private PictureBox imgBigIcon;
 
-	private Class62 class62_1;
+	private Class62 lblCaption;
 
-	private GClass0 gclass0_0;
+	private GClass0 mlstSmtpServers;
 
 	private ColumnHeader columnHeader_0;
 
 	private ColumnHeader columnHeader_1;
 
-	private Class66 class66_2;
+	private Class66 mbtnDelete;
 
-	private Class66 class66_3;
+	private Class66 mbtnEdit;
 
-	private Class66 class66_4;
+	private Class66 mbtnAdd;
 
-	private GClass3 gclass3_0;
+	private GClass3 mlnkOnlineHelp;
 
 	private ColumnHeader columnHeader_2;
 
@@ -86,7 +86,7 @@ internal sealed class SmtpServersDialog : Form0
 	{
 		get
 		{
-			IEnumerable<ListViewItem> source = gclass0_0.Items.Cast<ListViewItem>();
+			IEnumerable<ListViewItem> source = mlstSmtpServers.Items.Cast<ListViewItem>();
 			Func<ListViewItem, Class109> selector = _003C_003Ec._003C_003E9.method_0;
 			return source.Select(selector).ToArray();
 		}
@@ -95,13 +95,13 @@ internal sealed class SmtpServersDialog : Form0
 	public SmtpServersDialog()
 		: base(new Size(700, 525))
 	{
-		method_21();
-		vmethod_1();
+		ValidateInput();
+		InitializeFormPosition();
 		LoadSettings();
 		base.Shown += Form25_Shown;
 	}
 
-	private void InitializeComponents()
+	private void InitializeComponent()
 	{
 		Class89.eventHandler_23 = (EventHandler<EventArgs4>)Delegate.Combine(Class89.eventHandler_23, new EventHandler<EventArgs4>(OnButtonOk));
 		Class89.smethod_32();
@@ -140,43 +140,43 @@ internal sealed class SmtpServersDialog : Form0
 
 	private void ValidateInput()
 	{
-		using SmtpServerAddEditDialog form = new SmtpServerAddEditDialog(gclass0_0.SelectedItems[0].Tag as Class109);
+		using SmtpServerAddEditDialog form = new SmtpServerAddEditDialog(mlstSmtpServers.SelectedItems[0].Tag as Class109);
 		if (DialogResult.OK == form.ShowDialog())
 		{
-			gclass0_0.SelectedItems[0].Tag = form.Class109_0;
+			mlstSmtpServers.SelectedItems[0].Tag = form.Class109_0;
 			OnSelectedIndexChanged();
 		}
 	}
 
 	private void SaveSettings()
 	{
-		IEnumerable<ListViewItem> ienumerable_ = gclass0_0.SelectedItems.Cast<ListViewItem>();
+		IEnumerable<ListViewItem> ienumerable_ = mlstSmtpServers.SelectedItems.Cast<ListViewItem>();
 		Action<ListViewItem> action_ = _003C_003Ec._003C_003E9.method_1;
 		ienumerable_.smethod_0(action_);
 	}
 
 	private void LoadSettings()
 	{
-		gclass0_0.SelectedIndexChanged += gclass0_0_SelectedIndexChanged;
-		gclass0_0.MouseDoubleClick += gclass0_0_MouseDoubleClick;
-		gclass0_0.KeyUp += gclass0_0_KeyUp;
-		class66_4.Click += class66_4_Click;
-		class66_3.Click += class66_3_Click;
-		class66_2.Click += class66_2_Click;
-		class66_0.Click += class66_0_Click;
-		class66_1.Click += class66_1_Click;
-		gclass3_0.Click += gclass3_0_Click;
+		mlstSmtpServers.SelectedIndexChanged += gclass0_0_SelectedIndexChanged;
+		mlstSmtpServers.MouseDoubleClick += mlstSmtpServers_MouseDoubleClick;
+		mlstSmtpServers.KeyUp += mlstSmtpServers_KeyUp;
+		mbtnAdd.Click += mbtnAdd_Click;
+		mbtnEdit.Click += mbtnEdit_Click;
+		mbtnDelete.Click += mbtnDelete_Click;
+		mbtnSave.Click += mbtnSave_Click;
+		btnCancel.Click += btnCancel_Click;
+		mlnkOnlineHelp.Click += mlnkOnlineHelp_Click;
 	}
 
 	private void OnTextChanged()
 	{
-		class66_3.Enabled = gclass0_0.Boolean_2;
-		class66_2.Enabled = gclass0_0.Boolean_1;
+		mbtnEdit.Enabled = mlstSmtpServers.Boolean_2;
+		mbtnDelete.Enabled = mlstSmtpServers.Boolean_1;
 	}
 
 	private void OnCheckedChanged(Class109 class109_0)
 	{
-		gclass0_0.Items.Add(new ListViewItem
+		mlstSmtpServers.Items.Add(new ListViewItem
 		{
 			Tag = class109_0
 		});
@@ -184,7 +184,7 @@ internal sealed class SmtpServersDialog : Form0
 
 	private void OnSelectedIndexChanged()
 	{
-		IEnumerator enumerator = gclass0_0.Items.GetEnumerator();
+		IEnumerator enumerator = mlstSmtpServers.Items.GetEnumerator();
 		try
 		{
 			while (enumerator.MoveNext() ? true : false)
@@ -218,88 +218,88 @@ internal sealed class SmtpServersDialog : Form0
 		base.Dispose(disposing);
 	}
 
-	private void method_21()
+	private void ValidateInput()
 	{
-		class66_0 = new Class66();
-		class66_1 = new Class66();
-		gcontrol0_0 = new GControl0();
-		class62_0 = new Class62();
-		pictureBox_0 = new PictureBox();
-		class62_1 = new Class62();
-		gclass0_0 = new GClass0();
+		mbtnSave = new Class66();
+		btnCancel = new Class66();
+		separatorLine1 = new GControl0();
+		label2 = new Class62();
+		imgBigIcon = new PictureBox();
+		lblCaption = new Class62();
+		mlstSmtpServers = new GClass0();
 		columnHeader_0 = new ColumnHeader();
 		columnHeader_1 = new ColumnHeader();
 		columnHeader_2 = new ColumnHeader();
 		columnHeader_3 = new ColumnHeader();
 		columnHeader_4 = new ColumnHeader();
-		class66_2 = new Class66();
-		class66_3 = new Class66();
-		class66_4 = new Class66();
-		gclass3_0 = new GClass3();
-		((ISupportInitialize)pictureBox_0).BeginInit();
+		mbtnDelete = new Class66();
+		mbtnEdit = new Class66();
+		mbtnAdd = new Class66();
+		mlnkOnlineHelp = new GClass3();
+		((ISupportInitialize)imgBigIcon).BeginInit();
 		SuspendLayout();
-		class66_0.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-		class66_0.Image = Resources.opts_16;
-		class66_0.Location = new Point(463, 438);
-		class66_0.Margin = new Padding(4);
-		class66_0.Name = "m_btnSave";
-		class66_0.Size = new Size(100, 36);
-		class66_0.TabIndex = 3;
-		class66_0.Text = "Save";
-		class66_0.TextAlign = ContentAlignment.MiddleRight;
-		class66_0.TextImageRelation = TextImageRelation.ImageBeforeText;
-		class66_0.UseVisualStyleBackColor = true;
-		class66_1.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-		class66_1.Image = Resources.cancl_16;
-		class66_1.Location = new Point(571, 438);
-		class66_1.Margin = new Padding(4);
-		class66_1.Name = "btnCancel";
-		class66_1.Size = new Size(100, 36);
-		class66_1.TabIndex = 4;
-		class66_1.Text = "Cancel";
-		class66_1.TextAlign = ContentAlignment.MiddleRight;
-		class66_1.TextImageRelation = TextImageRelation.ImageBeforeText;
-		class66_1.UseVisualStyleBackColor = true;
-		gcontrol0_0.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-		gcontrol0_0.Location = new Point(16, 81);
-		gcontrol0_0.Name = "separatorLine1";
-		gcontrol0_0.Size = new Size(656, 2);
-		gcontrol0_0.TabIndex = 50;
-		gcontrol0_0.TabStop = false;
-		class62_0.AutoSize = true;
-		class62_0.Font = new Font("Microsoft Sans Serif", 9.75f, FontStyle.Bold, GraphicsUnit.Point, 204);
-		class62_0.Location = new Point(79, 15);
-		class62_0.Margin = new Padding(4, 0, 4, 0);
-		class62_0.Name = "label2";
-		class62_0.Size = new Size(108, 16);
-		class62_0.TabIndex = 49;
-		class62_0.Text = "SMTP Servers";
-		pictureBox_0.Image = Resources.mail_server_48;
-		pictureBox_0.Location = new Point(16, 15);
-		pictureBox_0.Margin = new Padding(4);
-		pictureBox_0.Name = "imgBigIcon";
-		pictureBox_0.Size = new Size(48, 48);
-		pictureBox_0.SizeMode = PictureBoxSizeMode.AutoSize;
-		pictureBox_0.TabIndex = 47;
-		pictureBox_0.TabStop = false;
-		class62_1.AutoSize = true;
-		class62_1.Location = new Point(79, 47);
-		class62_1.Margin = new Padding(4, 0, 4, 0);
-		class62_1.Name = "lblCaption";
-		class62_1.Size = new Size(251, 16);
-		class62_1.TabIndex = 48;
-		class62_1.Text = "SMTP servers  to use for sending emails.";
-		gclass0_0.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-		gclass0_0.Columns.AddRange(new ColumnHeader[5] { columnHeader_0, columnHeader_1, columnHeader_2, columnHeader_3, columnHeader_4 });
-		gclass0_0.FullRowSelect = true;
-		gclass0_0.GridLines = true;
-		gclass0_0.HideSelection = false;
-		gclass0_0.Location = new Point(15, 98);
-		gclass0_0.Name = "m_lstSmtpServers";
-		gclass0_0.Size = new Size(657, 325);
-		gclass0_0.TabIndex = 6;
-		gclass0_0.UseCompatibleStateImageBehavior = false;
-		gclass0_0.View = View.Details;
+		mbtnSave.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+		mbtnSave.Image = Resources.opts_16;
+		mbtnSave.Location = new Point(463, 438);
+		mbtnSave.Margin = new Padding(4);
+		mbtnSave.Name = "m_btnSave";
+		mbtnSave.Size = new Size(100, 36);
+		mbtnSave.TabIndex = 3;
+		mbtnSave.Text = "Save";
+		mbtnSave.TextAlign = ContentAlignment.MiddleRight;
+		mbtnSave.TextImageRelation = TextImageRelation.ImageBeforeText;
+		mbtnSave.UseVisualStyleBackColor = true;
+		btnCancel.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+		btnCancel.Image = Resources.cancl_16;
+		btnCancel.Location = new Point(571, 438);
+		btnCancel.Margin = new Padding(4);
+		btnCancel.Name = "btnCancel";
+		btnCancel.Size = new Size(100, 36);
+		btnCancel.TabIndex = 4;
+		btnCancel.Text = "Cancel";
+		btnCancel.TextAlign = ContentAlignment.MiddleRight;
+		btnCancel.TextImageRelation = TextImageRelation.ImageBeforeText;
+		btnCancel.UseVisualStyleBackColor = true;
+		separatorLine1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+		separatorLine1.Location = new Point(16, 81);
+		separatorLine1.Name = "separatorLine1";
+		separatorLine1.Size = new Size(656, 2);
+		separatorLine1.TabIndex = 50;
+		separatorLine1.TabStop = false;
+		label2.AutoSize = true;
+		label2.Font = new Font("Microsoft Sans Serif", 9.75f, FontStyle.Bold, GraphicsUnit.Point, 204);
+		label2.Location = new Point(79, 15);
+		label2.Margin = new Padding(4, 0, 4, 0);
+		label2.Name = "label2";
+		label2.Size = new Size(108, 16);
+		label2.TabIndex = 49;
+		label2.Text = "SMTP Servers";
+		imgBigIcon.Image = Resources.mail_server_48;
+		imgBigIcon.Location = new Point(16, 15);
+		imgBigIcon.Margin = new Padding(4);
+		imgBigIcon.Name = "imgBigIcon";
+		imgBigIcon.Size = new Size(48, 48);
+		imgBigIcon.SizeMode = PictureBoxSizeMode.AutoSize;
+		imgBigIcon.TabIndex = 47;
+		imgBigIcon.TabStop = false;
+		lblCaption.AutoSize = true;
+		lblCaption.Location = new Point(79, 47);
+		lblCaption.Margin = new Padding(4, 0, 4, 0);
+		lblCaption.Name = "lblCaption";
+		lblCaption.Size = new Size(251, 16);
+		lblCaption.TabIndex = 48;
+		lblCaption.Text = "SMTP servers  to use for sending emails.";
+		mlstSmtpServers.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+		mlstSmtpServers.Columns.AddRange(new ColumnHeader[5] { columnHeader_0, columnHeader_1, columnHeader_2, columnHeader_3, columnHeader_4 });
+		mlstSmtpServers.FullRowSelect = true;
+		mlstSmtpServers.GridLines = true;
+		mlstSmtpServers.HideSelection = false;
+		mlstSmtpServers.Location = new Point(15, 98);
+		mlstSmtpServers.Name = "m_lstSmtpServers";
+		mlstSmtpServers.Size = new Size(657, 325);
+		mlstSmtpServers.TabIndex = 6;
+		mlstSmtpServers.UseCompatibleStateImageBehavior = false;
+		mlstSmtpServers.View = View.Details;
 		columnHeader_0.Text = "Host";
 		columnHeader_0.Width = 100;
 		columnHeader_1.Text = "Port";
@@ -310,78 +310,78 @@ internal sealed class SmtpServersDialog : Form0
 		columnHeader_3.Width = 100;
 		columnHeader_4.Text = "Password";
 		columnHeader_4.Width = 100;
-		class66_2.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-		class66_2.Enabled = false;
-		class66_2.Image = Resources.del_16;
-		class66_2.ImageAlign = ContentAlignment.MiddleRight;
-		class66_2.Location = new Point(232, 438);
-		class66_2.Margin = new Padding(4);
-		class66_2.Name = "m_btnDelete";
-		class66_2.Size = new Size(100, 36);
-		class66_2.TabIndex = 2;
-		class66_2.Text = "Delete";
-		class66_2.TextImageRelation = TextImageRelation.ImageBeforeText;
-		class66_2.UseVisualStyleBackColor = true;
-		class66_3.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-		class66_3.Enabled = false;
-		class66_3.Image = Resources.edit_16;
-		class66_3.ImageAlign = ContentAlignment.MiddleRight;
-		class66_3.Location = new Point(124, 438);
-		class66_3.Margin = new Padding(4);
-		class66_3.Name = "m_btnEdit";
-		class66_3.Size = new Size(100, 36);
-		class66_3.TabIndex = 1;
-		class66_3.Text = "Edit";
-		class66_3.TextImageRelation = TextImageRelation.ImageBeforeText;
-		class66_3.UseVisualStyleBackColor = true;
-		class66_4.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-		class66_4.Image = Resources.add_16;
-		class66_4.ImageAlign = ContentAlignment.MiddleRight;
-		class66_4.Location = new Point(16, 438);
-		class66_4.Margin = new Padding(4);
-		class66_4.Name = "m_btnAdd";
-		class66_4.Size = new Size(100, 36);
-		class66_4.TabIndex = 0;
-		class66_4.Text = "Add";
-		class66_4.TextImageRelation = TextImageRelation.ImageBeforeText;
-		class66_4.UseVisualStyleBackColor = true;
-		gclass3_0.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-		gclass3_0.AutoSize = true;
-		gclass3_0.LinkColor = Color.FromArgb(38, 135, 200);
-		gclass3_0.Location = new Point(599, 9);
-		gclass3_0.Name = "m_lnkOnlineHelp";
-		gclass3_0.Size = new Size(73, 16);
-		gclass3_0.TabIndex = 5;
-		gclass3_0.TabStop = true;
-		gclass3_0.Text = "online help";
-		gclass3_0.VisitedLinkColor = Color.FromArgb(38, 135, 200);
+		mbtnDelete.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+		mbtnDelete.Enabled = false;
+		mbtnDelete.Image = Resources.del_16;
+		mbtnDelete.ImageAlign = ContentAlignment.MiddleRight;
+		mbtnDelete.Location = new Point(232, 438);
+		mbtnDelete.Margin = new Padding(4);
+		mbtnDelete.Name = "m_btnDelete";
+		mbtnDelete.Size = new Size(100, 36);
+		mbtnDelete.TabIndex = 2;
+		mbtnDelete.Text = "Delete";
+		mbtnDelete.TextImageRelation = TextImageRelation.ImageBeforeText;
+		mbtnDelete.UseVisualStyleBackColor = true;
+		mbtnEdit.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+		mbtnEdit.Enabled = false;
+		mbtnEdit.Image = Resources.edit_16;
+		mbtnEdit.ImageAlign = ContentAlignment.MiddleRight;
+		mbtnEdit.Location = new Point(124, 438);
+		mbtnEdit.Margin = new Padding(4);
+		mbtnEdit.Name = "m_btnEdit";
+		mbtnEdit.Size = new Size(100, 36);
+		mbtnEdit.TabIndex = 1;
+		mbtnEdit.Text = "Edit";
+		mbtnEdit.TextImageRelation = TextImageRelation.ImageBeforeText;
+		mbtnEdit.UseVisualStyleBackColor = true;
+		mbtnAdd.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+		mbtnAdd.Image = Resources.add_16;
+		mbtnAdd.ImageAlign = ContentAlignment.MiddleRight;
+		mbtnAdd.Location = new Point(16, 438);
+		mbtnAdd.Margin = new Padding(4);
+		mbtnAdd.Name = "m_btnAdd";
+		mbtnAdd.Size = new Size(100, 36);
+		mbtnAdd.TabIndex = 0;
+		mbtnAdd.Text = "Add";
+		mbtnAdd.TextImageRelation = TextImageRelation.ImageBeforeText;
+		mbtnAdd.UseVisualStyleBackColor = true;
+		mlnkOnlineHelp.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+		mlnkOnlineHelp.AutoSize = true;
+		mlnkOnlineHelp.LinkColor = Color.FromArgb(38, 135, 200);
+		mlnkOnlineHelp.Location = new Point(599, 9);
+		mlnkOnlineHelp.Name = "m_lnkOnlineHelp";
+		mlnkOnlineHelp.Size = new Size(73, 16);
+		mlnkOnlineHelp.TabIndex = 5;
+		mlnkOnlineHelp.TabStop = true;
+		mlnkOnlineHelp.Text = "online help";
+		mlnkOnlineHelp.VisitedLinkColor = Color.FromArgb(38, 135, 200);
 		base.AutoScaleDimensions = new SizeF(8f, 16f);
 		base.AutoScaleMode = AutoScaleMode.Font;
 		base.ClientSize = new Size(684, 487);
-		base.Controls.Add(gclass3_0);
-		base.Controls.Add(class66_2);
-		base.Controls.Add(class66_3);
-		base.Controls.Add(class66_4);
-		base.Controls.Add(gclass0_0);
-		base.Controls.Add(gcontrol0_0);
-		base.Controls.Add(class62_0);
-		base.Controls.Add(class62_1);
-		base.Controls.Add(pictureBox_0);
-		base.Controls.Add(class66_0);
-		base.Controls.Add(class66_1);
+		base.Controls.Add(mlnkOnlineHelp);
+		base.Controls.Add(mbtnDelete);
+		base.Controls.Add(mbtnEdit);
+		base.Controls.Add(mbtnAdd);
+		base.Controls.Add(mlstSmtpServers);
+		base.Controls.Add(separatorLine1);
+		base.Controls.Add(label2);
+		base.Controls.Add(lblCaption);
+		base.Controls.Add(imgBigIcon);
+		base.Controls.Add(mbtnSave);
+		base.Controls.Add(btnCancel);
 		Font = new Font("Microsoft Sans Serif", 9.75f, FontStyle.Regular, GraphicsUnit.Point, 204);
 		base.Margin = new Padding(5, 4, 5, 4);
 		base.Name = "SmtpServersDialog";
 		base.StartPosition = FormStartPosition.Manual;
 		Text = "SMTP Servers";
-		((ISupportInitialize)pictureBox_0).EndInit();
+		((ISupportInitialize)imgBigIcon).EndInit();
 		ResumeLayout(performLayout: false);
 		PerformLayout();
 	}
 
 	private void Form25_Shown(object sender, EventArgs e)
 	{
-		InitializeComponents();
+		InitializeComponent();
 	}
 
 	private void gclass0_0_SelectedIndexChanged(object sender, EventArgs e)
@@ -389,55 +389,55 @@ internal sealed class SmtpServersDialog : Form0
 		OnTextChanged();
 	}
 
-	private void gclass0_0_MouseDoubleClick(object sender, MouseEventArgs e)
+	private void mlstSmtpServers_MouseDoubleClick(object sender, MouseEventArgs e)
 	{
 		ValidateInput();
 	}
 
-	private void gclass0_0_KeyUp(object sender, KeyEventArgs e)
+	private void mlstSmtpServers_KeyUp(object sender, KeyEventArgs e)
 	{
 		if (Keys.Delete == e.KeyCode)
 		{
-			class66_2.PerformClick();
+			mbtnDelete.PerformClick();
 		}
 		if (Keys.Insert == e.KeyCode)
 		{
-			class66_4.PerformClick();
+			mbtnAdd.PerformClick();
 		}
 		if (Keys.F2 == e.KeyCode)
 		{
-			class66_3.PerformClick();
+			mbtnEdit.PerformClick();
 		}
 	}
 
-	private void class66_4_Click(object sender, EventArgs e)
+	private void mbtnAdd_Click(object sender, EventArgs e)
 	{
 		OnLoad();
 	}
 
-	private void class66_3_Click(object sender, EventArgs e)
+	private void mbtnEdit_Click(object sender, EventArgs e)
 	{
 		ValidateInput();
 	}
 
-	private void class66_2_Click(object sender, EventArgs e)
+	private void mbtnDelete_Click(object sender, EventArgs e)
 	{
 		SaveSettings();
 	}
 
-	private void class66_0_Click(object sender, EventArgs e)
+	private void mbtnSave_Click(object sender, EventArgs e)
 	{
 		OnButtonCancel();
-		method_8(DialogResult.OK);
+		CloseDialog(DialogResult.OK);
 	}
 
-	private void class66_1_Click(object sender, EventArgs e)
+	private void btnCancel_Click(object sender, EventArgs e)
 	{
-		method_8(DialogResult.Cancel);
+		CloseDialog(DialogResult.Cancel);
 	}
 
-	private void gclass3_0_Click(object sender, EventArgs e)
+	private void mlnkOnlineHelp_Click(object sender, EventArgs e)
 	{
-		method_9(Class148.Class154.String_0);
+		ShowOnlineHelp(Class148.Class154.String_0);
 	}
 }

@@ -24,7 +24,7 @@ internal sealed class Class126 : Class113
 		}
 	}
 
-	public override void vmethod_0(Dictionary<string, object> dictionary_0)
+	public override void OnFormClosing(Dictionary<string, object> dictionary_0)
 	{
 		dictionary_0.Add("ucr", bool_3);
 		dictionary_0.Add("cr", string_11);
@@ -37,7 +37,7 @@ internal sealed class Class126 : Class113
 		string_11 = (string)_jo["cr"];
 	}
 
-	public void vmethod_2(StringBuilder stringBuilder_0)
+	public void AdjustFormSize(StringBuilder stringBuilder_0)
 	{
 		stringBuilder_0.Append($"UseCustomRules: {bool_3}; ");
 		if (bool_3)

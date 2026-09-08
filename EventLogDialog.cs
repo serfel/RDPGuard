@@ -9,16 +9,16 @@ internal sealed class EventLogDialog : Form0
 
 	private IContainer icontainer_0;
 
-	private GClass0 gclass0_0;
+	private GClass0 lstEventLog;
 
 	private ColumnHeader columnHeader_0;
 
 	public EventLogDialog()
 		: base(new Size(320, 240))
 	{
-		InitializeComponents();
-		vmethod_1();
-		class12_0 = new Class12(gclass0_0);
+		InitializeComponent();
+		InitializeFormPosition();
+		class12_0 = new Class12(lstEventLog);
 	}
 
 	protected override void OnClosed(EventArgs eventArgs_0)
@@ -36,26 +36,26 @@ internal sealed class EventLogDialog : Form0
 		base.Dispose(disposing);
 	}
 
-	private void InitializeComponents()
+	private void InitializeComponent()
 	{
-		gclass0_0 = new GClass0();
+		lstEventLog = new GClass0();
 		columnHeader_0 = new ColumnHeader();
 		SuspendLayout();
-		gclass0_0.Columns.AddRange(new ColumnHeader[1] { columnHeader_0 });
-		gclass0_0.Dock = DockStyle.Fill;
-		gclass0_0.HeaderStyle = ColumnHeaderStyle.None;
-		gclass0_0.HideSelection = false;
-		gclass0_0.Location = new Point(0, 0);
-		gclass0_0.Name = "lstEventLog";
-		gclass0_0.ShowItemToolTips = true;
-		gclass0_0.Size = new Size(495, 259);
-		gclass0_0.TabIndex = 0;
-		gclass0_0.UseCompatibleStateImageBehavior = false;
-		gclass0_0.View = View.Details;
+		lstEventLog.Columns.AddRange(new ColumnHeader[1] { columnHeader_0 });
+		lstEventLog.Dock = DockStyle.Fill;
+		lstEventLog.HeaderStyle = ColumnHeaderStyle.None;
+		lstEventLog.HideSelection = false;
+		lstEventLog.Location = new Point(0, 0);
+		lstEventLog.Name = "lstEventLog";
+		lstEventLog.ShowItemToolTips = true;
+		lstEventLog.Size = new Size(495, 259);
+		lstEventLog.TabIndex = 0;
+		lstEventLog.UseCompatibleStateImageBehavior = false;
+		lstEventLog.View = View.Details;
 		base.AutoScaleDimensions = new SizeF(6f, 13f);
 		base.AutoScaleMode = AutoScaleMode.Font;
 		base.ClientSize = new Size(495, 259);
-		base.Controls.Add(gclass0_0);
+		base.Controls.Add(lstEventLog);
 		base.Name = "EventLogDialog";
 		base.StartPosition = FormStartPosition.Manual;
 		Text = "Event Log";

@@ -8,35 +8,35 @@ internal sealed class MsSqlExclusionsDialog : Form0
 {
 	private IContainer icontainer_0;
 
-	private Class66 class66_0;
+	private Class66 mbtnSave;
 
-	private Class66 class66_1;
+	private Class66 btnCancel;
 
-	private PictureBox pictureBox_0;
+	private PictureBox imgBigIcon;
 
-	private Class62 class62_0;
+	private Class62 lblCaption;
 
-	private Class62 class62_1;
+	private Class62 label2;
 
-	private GControl0 gcontrol0_0;
+	private GControl0 separatorLine1;
 
-	private GClass3 gclass3_0;
+	private GClass3 mlnkOnlineHelp;
 
-	private TextBox textBox_0;
+	private TextBox medExclusions;
 
-	private Class62 class62_2;
+	private Class62 label1;
 
-	private GClass2 gclass2_0;
+	private GClass2 mlblExlucionsHint;
 
 	public string[] String_0
 	{
 		get
 		{
-			return textBox_0.Lines;
+			return medExclusions.Lines;
 		}
 		set
 		{
-			textBox_0.Lines = value;
+			medExclusions.Lines = value;
 		}
 	}
 
@@ -44,15 +44,15 @@ internal sealed class MsSqlExclusionsDialog : Form0
 		: base(new Size(465, 415))
 	{
 		OnButtonOk();
-		vmethod_1();
-		InitializeComponents();
+		InitializeFormPosition();
+		InitializeComponent();
 	}
 
-	private void InitializeComponents()
+	private void InitializeComponent()
 	{
-		gclass3_0.Click += gclass3_0_Click;
-		class66_0.Click += class66_0_Click;
-		class66_1.Click += class66_1_Click;
+		mlnkOnlineHelp.Click += mlnkOnlineHelp_Click;
+		mbtnSave.Click += mbtnSave_Click;
+		btnCancel.Click += btnCancel_Click;
 	}
 
 	protected override void Dispose(bool disposing)
@@ -68,133 +68,133 @@ internal sealed class MsSqlExclusionsDialog : Form0
 	{
 		icontainer_0 = new Container();
 		new ComponentResourceManager(typeof(MsSqlExclusionsDialog));
-		class66_0 = new Class66();
-		class66_1 = new Class66();
-		pictureBox_0 = new PictureBox();
-		class62_0 = new Class62();
-		class62_1 = new Class62();
-		gcontrol0_0 = new GControl0();
-		gclass3_0 = new GClass3();
-		textBox_0 = new TextBox();
-		class62_2 = new Class62();
-		gclass2_0 = new GClass2();
-		((ISupportInitialize)pictureBox_0).BeginInit();
+		mbtnSave = new Class66();
+		btnCancel = new Class66();
+		imgBigIcon = new PictureBox();
+		lblCaption = new Class62();
+		label2 = new Class62();
+		separatorLine1 = new GControl0();
+		mlnkOnlineHelp = new GClass3();
+		medExclusions = new TextBox();
+		label1 = new Class62();
+		mlblExlucionsHint = new GClass2();
+		((ISupportInitialize)imgBigIcon).BeginInit();
 		SuspendLayout();
-		class66_0.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-		class66_0.Image = Resources.opts_16;
-		class66_0.Location = new Point(294, 416);
-		class66_0.Margin = new Padding(4);
-		class66_0.Name = "m_btnSave";
-		class66_0.Size = new Size(100, 36);
-		class66_0.TabIndex = 7;
-		class66_0.Text = "Save";
-		class66_0.TextAlign = ContentAlignment.MiddleRight;
-		class66_0.TextImageRelation = TextImageRelation.ImageBeforeText;
-		class66_0.UseVisualStyleBackColor = true;
-		class66_1.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-		class66_1.Image = Resources.cancl_16;
-		class66_1.Location = new Point(402, 416);
-		class66_1.Margin = new Padding(4);
-		class66_1.Name = "btnCancel";
-		class66_1.Size = new Size(100, 36);
-		class66_1.TabIndex = 8;
-		class66_1.Text = "Cancel";
-		class66_1.TextAlign = ContentAlignment.MiddleRight;
-		class66_1.TextImageRelation = TextImageRelation.ImageBeforeText;
-		class66_1.UseVisualStyleBackColor = true;
-		pictureBox_0.Image = Resources.ms_sql_filter_48;
-		pictureBox_0.Location = new Point(16, 15);
-		pictureBox_0.Margin = new Padding(4);
-		pictureBox_0.Name = "imgBigIcon";
-		pictureBox_0.Size = new Size(48, 48);
-		pictureBox_0.SizeMode = PictureBoxSizeMode.AutoSize;
-		pictureBox_0.TabIndex = 47;
-		pictureBox_0.TabStop = false;
-		class62_0.AutoSize = true;
-		class62_0.Location = new Point(79, 47);
-		class62_0.Margin = new Padding(4, 0, 4, 0);
-		class62_0.Name = "lblCaption";
-		class62_0.Size = new Size(180, 16);
-		class62_0.TabIndex = 48;
-		class62_0.Text = "Exclusions for Event ID 18456";
-		class62_1.AutoSize = true;
-		class62_1.Font = new Font("Microsoft Sans Serif", 9.75f, FontStyle.Bold, GraphicsUnit.Point, 204);
-		class62_1.Location = new Point(79, 15);
-		class62_1.Margin = new Padding(4, 0, 4, 0);
-		class62_1.Name = "label2";
-		class62_1.Size = new Size(141, 16);
-		class62_1.TabIndex = 49;
-		class62_1.Text = "MS-SQL Exclusions";
-		gcontrol0_0.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-		gcontrol0_0.Location = new Point(16, 81);
-		gcontrol0_0.Name = "separatorLine1";
-		gcontrol0_0.Size = new Size(487, 2);
-		gcontrol0_0.TabIndex = 50;
-		gcontrol0_0.TabStop = false;
-		gclass3_0.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-		gclass3_0.AutoSize = true;
-		gclass3_0.LinkColor = Color.FromArgb(38, 135, 200);
-		gclass3_0.Location = new Point(430, 9);
-		gclass3_0.Name = "m_lnkOnlineHelp";
-		gclass3_0.Size = new Size(72, 16);
-		gclass3_0.TabIndex = 9;
-		gclass3_0.TabStop = true;
-		gclass3_0.Text = "online help";
-		gclass3_0.VisitedLinkColor = Color.FromArgb(38, 135, 200);
-		textBox_0.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-		textBox_0.Location = new Point(16, 126);
-		textBox_0.Multiline = true;
-		textBox_0.Name = "m_edExclusions";
-		textBox_0.Size = new Size(486, 231);
-		textBox_0.TabIndex = 51;
-		class62_2.AutoSize = true;
-		class62_2.Location = new Point(13, 97);
-		class62_2.Margin = new Padding(4, 0, 4, 0);
-		class62_2.Name = "label1";
-		class62_2.Size = new Size(236, 16);
-		class62_2.TabIndex = 52;
-		class62_2.Text = "Exclusion patterns for the Reason field:";
-		gclass2_0.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-		gclass2_0.Location = new Point(16, 363);
-		gclass2_0.Name = "m_lblExlucionsHint";
-		gclass2_0.Size = new Size(486, 46);
-		gclass2_0.TabIndex = 53;
-		gclass2_0.Text = "You can specify one exclusion pattern per line. Event ID 18456 is skipped if the Reason field contains any of the exclusion patterns.";
+		mbtnSave.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+		mbtnSave.Image = Resources.opts_16;
+		mbtnSave.Location = new Point(294, 416);
+		mbtnSave.Margin = new Padding(4);
+		mbtnSave.Name = "m_btnSave";
+		mbtnSave.Size = new Size(100, 36);
+		mbtnSave.TabIndex = 7;
+		mbtnSave.Text = "Save";
+		mbtnSave.TextAlign = ContentAlignment.MiddleRight;
+		mbtnSave.TextImageRelation = TextImageRelation.ImageBeforeText;
+		mbtnSave.UseVisualStyleBackColor = true;
+		btnCancel.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+		btnCancel.Image = Resources.cancl_16;
+		btnCancel.Location = new Point(402, 416);
+		btnCancel.Margin = new Padding(4);
+		btnCancel.Name = "btnCancel";
+		btnCancel.Size = new Size(100, 36);
+		btnCancel.TabIndex = 8;
+		btnCancel.Text = "Cancel";
+		btnCancel.TextAlign = ContentAlignment.MiddleRight;
+		btnCancel.TextImageRelation = TextImageRelation.ImageBeforeText;
+		btnCancel.UseVisualStyleBackColor = true;
+		imgBigIcon.Image = Resources.ms_sql_filter_48;
+		imgBigIcon.Location = new Point(16, 15);
+		imgBigIcon.Margin = new Padding(4);
+		imgBigIcon.Name = "imgBigIcon";
+		imgBigIcon.Size = new Size(48, 48);
+		imgBigIcon.SizeMode = PictureBoxSizeMode.AutoSize;
+		imgBigIcon.TabIndex = 47;
+		imgBigIcon.TabStop = false;
+		lblCaption.AutoSize = true;
+		lblCaption.Location = new Point(79, 47);
+		lblCaption.Margin = new Padding(4, 0, 4, 0);
+		lblCaption.Name = "lblCaption";
+		lblCaption.Size = new Size(180, 16);
+		lblCaption.TabIndex = 48;
+		lblCaption.Text = "Exclusions for Event ID 18456";
+		label2.AutoSize = true;
+		label2.Font = new Font("Microsoft Sans Serif", 9.75f, FontStyle.Bold, GraphicsUnit.Point, 204);
+		label2.Location = new Point(79, 15);
+		label2.Margin = new Padding(4, 0, 4, 0);
+		label2.Name = "label2";
+		label2.Size = new Size(141, 16);
+		label2.TabIndex = 49;
+		label2.Text = "MS-SQL Exclusions";
+		separatorLine1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+		separatorLine1.Location = new Point(16, 81);
+		separatorLine1.Name = "separatorLine1";
+		separatorLine1.Size = new Size(487, 2);
+		separatorLine1.TabIndex = 50;
+		separatorLine1.TabStop = false;
+		mlnkOnlineHelp.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+		mlnkOnlineHelp.AutoSize = true;
+		mlnkOnlineHelp.LinkColor = Color.FromArgb(38, 135, 200);
+		mlnkOnlineHelp.Location = new Point(430, 9);
+		mlnkOnlineHelp.Name = "m_lnkOnlineHelp";
+		mlnkOnlineHelp.Size = new Size(72, 16);
+		mlnkOnlineHelp.TabIndex = 9;
+		mlnkOnlineHelp.TabStop = true;
+		mlnkOnlineHelp.Text = "online help";
+		mlnkOnlineHelp.VisitedLinkColor = Color.FromArgb(38, 135, 200);
+		medExclusions.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+		medExclusions.Location = new Point(16, 126);
+		medExclusions.Multiline = true;
+		medExclusions.Name = "m_edExclusions";
+		medExclusions.Size = new Size(486, 231);
+		medExclusions.TabIndex = 51;
+		label1.AutoSize = true;
+		label1.Location = new Point(13, 97);
+		label1.Margin = new Padding(4, 0, 4, 0);
+		label1.Name = "label1";
+		label1.Size = new Size(236, 16);
+		label1.TabIndex = 52;
+		label1.Text = "Exclusion patterns for the Reason field:";
+		mlblExlucionsHint.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+		mlblExlucionsHint.Location = new Point(16, 363);
+		mlblExlucionsHint.Name = "m_lblExlucionsHint";
+		mlblExlucionsHint.Size = new Size(486, 46);
+		mlblExlucionsHint.TabIndex = 53;
+		mlblExlucionsHint.Text = "You can specify one exclusion pattern per line. Event ID 18456 is skipped if the Reason field contains any of the exclusion patterns.";
 		base.AutoScaleDimensions = new SizeF(8f, 16f);
 		base.AutoScaleMode = AutoScaleMode.Font;
 		base.ClientSize = new Size(515, 465);
-		base.Controls.Add(gclass2_0);
-		base.Controls.Add(class62_2);
-		base.Controls.Add(textBox_0);
-		base.Controls.Add(gclass3_0);
-		base.Controls.Add(gcontrol0_0);
-		base.Controls.Add(class62_1);
-		base.Controls.Add(class62_0);
-		base.Controls.Add(pictureBox_0);
-		base.Controls.Add(class66_0);
-		base.Controls.Add(class66_1);
+		base.Controls.Add(mlblExlucionsHint);
+		base.Controls.Add(label1);
+		base.Controls.Add(medExclusions);
+		base.Controls.Add(mlnkOnlineHelp);
+		base.Controls.Add(separatorLine1);
+		base.Controls.Add(label2);
+		base.Controls.Add(lblCaption);
+		base.Controls.Add(imgBigIcon);
+		base.Controls.Add(mbtnSave);
+		base.Controls.Add(btnCancel);
 		Font = new Font("Microsoft Sans Serif", 9.75f, FontStyle.Regular, GraphicsUnit.Point, 204);
 		base.Margin = new Padding(5, 4, 5, 4);
 		base.Name = "MsSqlExclusionsDialog";
 		base.StartPosition = FormStartPosition.Manual;
 		Text = "MS-SQL Exclusions";
-		((ISupportInitialize)pictureBox_0).EndInit();
+		((ISupportInitialize)imgBigIcon).EndInit();
 		ResumeLayout(performLayout: false);
 		PerformLayout();
 	}
 
-	private void gclass3_0_Click(object sender, EventArgs e)
+	private void mlnkOnlineHelp_Click(object sender, EventArgs e)
 	{
-		method_9(Class148.Class151.String_10);
+		ShowOnlineHelp(Class148.Class151.String_10);
 	}
 
-	private void class66_0_Click(object sender, EventArgs e)
+	private void mbtnSave_Click(object sender, EventArgs e)
 	{
-		method_8(DialogResult.OK);
+		CloseDialog(DialogResult.OK);
 	}
 
-	private void class66_1_Click(object sender, EventArgs e)
+	private void btnCancel_Click(object sender, EventArgs e)
 	{
-		method_8(DialogResult.Cancel);
+		CloseDialog(DialogResult.Cancel);
 	}
 }

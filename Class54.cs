@@ -52,7 +52,7 @@ internal sealed class Class54 : Class53
 		image_1 = Resources.folder_16_gray;
 	}
 
-	protected override void vmethod_0()
+	protected override void OnFormClosing()
 	{
 		if (bool_0)
 		{

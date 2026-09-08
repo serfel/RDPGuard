@@ -4,7 +4,7 @@ internal sealed class Class103 : Class102
 {
 	public override bool Boolean_0 => false;
 
-	public override string vmethod_0()
+	public override string OnFormClosing()
 	{
 		return string.Empty;
 	}
@@ -14,7 +14,7 @@ internal sealed class Class103 : Class102
 		return new Class103();
 	}
 
-	public override Dictionary<string, object> vmethod_1()
+	public override Dictionary<string, object> InitializeFormPosition()
 	{
 		return new Dictionary<string, object>();
 	}

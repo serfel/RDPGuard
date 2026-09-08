@@ -23,7 +23,7 @@ internal static class Program
 	{
 		try
 		{
-			Class144.Class144_0.vmethod_0();
+			Class144.Class144_0.OnFormClosing();
 			if (smethod_0(args))
 			{
 				return;

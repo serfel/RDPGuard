@@ -318,7 +318,7 @@ internal sealed class Class164 : Class162
 		base.Class166_0.FirstOrDefault(@class.method_0).String_1 = @class.class113_0.method_0();
 	}
 
-	public void method_8(Delegate3 delegate3_0)
+	public void CloseDialog(Delegate3 delegate3_0)
 	{
 		Class132 class132_ = Class132_0;
 		delegate3_0(class132_);

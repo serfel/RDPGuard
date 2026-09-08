@@ -14,7 +14,7 @@ internal sealed class Class124 : Class113
 		System.Net.Sockets.ProtocolType.Udp
 	};
 
-	public override void vmethod_0(Dictionary<string, object> dictionary_0)
+	public override void OnFormClosing(Dictionary<string, object> dictionary_0)
 	{
 	}
 

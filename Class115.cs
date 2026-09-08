@@ -28,7 +28,7 @@ internal sealed class Class115 : Class113
 		}
 	}
 
-	public override void vmethod_0(Dictionary<string, object> dictionary_0)
+	public override void OnFormClosing(Dictionary<string, object> dictionary_0)
 	{
 		dictionary_0.Add("ucr", bool_3);
 		if (!string.IsNullOrEmpty(string_11))
@@ -61,12 +61,12 @@ internal sealed class Class115 : Class113
 		}
 	}
 
-	public string vmethod_2()
+	public string AdjustFormSize()
 	{
 		return "IIS";
 	}
 
-	public void vmethod_3(StringBuilder stringBuilder_0)
+	public void UpdateTaskType(StringBuilder stringBuilder_0)
 	{
 		stringBuilder_0.Append($"UseCustomRules: {bool_3}; ");
 		if (bool_3)

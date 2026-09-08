@@ -10,25 +10,25 @@ internal sealed class ProtocolRulesDialog : Form0
 
 	private IContainer icontainer_0;
 
-	private Class66 class66_0;
+	private Class66 mbtnSave;
 
-	private Class66 class66_1;
+	private Class66 btnCancel;
 
-	private PictureBox pictureBox_0;
+	private PictureBox imgBigIcon;
 
-	private Class62 class62_0;
+	private Class62 mlblSubCaption;
 
-	private Class62 class62_1;
+	private Class62 mlblCaption;
 
-	private GControl0 gcontrol0_0;
+	private GControl0 separatorLine1;
 
-	private GClass3 gclass3_0;
+	private GClass3 mlnkOnlineHelp;
 
-	private TextBox textBox_0;
+	private TextBox medRules;
 
-	private Class62 class62_2;
+	private Class62 mlblRules;
 
-	private Class63 class63_0;
+	private Class63 mlblRulesHint;
 
 	public string String_0
 	{
@@ -42,7 +42,7 @@ internal sealed class ProtocolRulesDialog : Form0
 	{
 		set
 		{
-			class62_1.Text = value;
+			mlblCaption.Text = value;
 		}
 	}
 
@@ -50,7 +50,7 @@ internal sealed class ProtocolRulesDialog : Form0
 	{
 		set
 		{
-			class62_0.Text = value;
+			mlblSubCaption.Text = value;
 		}
 	}
 
@@ -58,7 +58,7 @@ internal sealed class ProtocolRulesDialog : Form0
 	{
 		set
 		{
-			class62_2.Text = value;
+			mlblRules.Text = value;
 		}
 	}
 
@@ -66,11 +66,11 @@ internal sealed class ProtocolRulesDialog : Form0
 	{
 		get
 		{
-			return textBox_0.Text;
+			return medRules.Text;
 		}
 		set
 		{
-			textBox_0.Text = value;
+			medRules.Text = value;
 		}
 	}
 
@@ -78,7 +78,7 @@ internal sealed class ProtocolRulesDialog : Form0
 	{
 		set
 		{
-			class63_0.Text = value;
+			mlblRulesHint.Text = value;
 		}
 	}
 
@@ -86,15 +86,15 @@ internal sealed class ProtocolRulesDialog : Form0
 		: base(new Size(580, 470))
 	{
 		OnButtonOk();
-		vmethod_1();
-		InitializeComponents();
+		InitializeFormPosition();
+		InitializeComponent();
 	}
 
-	private void InitializeComponents()
+	private void InitializeComponent()
 	{
-		gclass3_0.Click += gclass3_0_Click;
-		class66_0.Click += class66_0_Click;
-		class66_1.Click += class66_1_Click;
+		mlnkOnlineHelp.Click += mlnkOnlineHelp_Click;
+		mbtnSave.Click += mbtnSave_Click;
+		btnCancel.Click += btnCancel_Click;
 	}
 
 	protected override void Dispose(bool disposing)
@@ -110,138 +110,138 @@ internal sealed class ProtocolRulesDialog : Form0
 	{
 		icontainer_0 = new Container();
 		new ComponentResourceManager(typeof(ProtocolRulesDialog));
-		class66_0 = new Class66();
-		class66_1 = new Class66();
-		pictureBox_0 = new PictureBox();
-		class62_0 = new Class62();
-		class62_1 = new Class62();
-		gcontrol0_0 = new GControl0();
-		gclass3_0 = new GClass3();
-		textBox_0 = new TextBox();
-		class62_2 = new Class62();
-		class63_0 = new Class63();
-		((ISupportInitialize)pictureBox_0).BeginInit();
+		mbtnSave = new Class66();
+		btnCancel = new Class66();
+		imgBigIcon = new PictureBox();
+		mlblSubCaption = new Class62();
+		mlblCaption = new Class62();
+		separatorLine1 = new GControl0();
+		mlnkOnlineHelp = new GClass3();
+		medRules = new TextBox();
+		mlblRules = new Class62();
+		mlblRulesHint = new Class63();
+		((ISupportInitialize)imgBigIcon).BeginInit();
 		SuspendLayout();
-		class66_0.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-		class66_0.Image = Resources.opts_16;
-		class66_0.Location = new Point(295, 433);
-		class66_0.Margin = new Padding(4);
-		class66_0.Name = "m_btnSave";
-		class66_0.Size = new Size(100, 36);
-		class66_0.TabIndex = 7;
-		class66_0.Text = "Save";
-		class66_0.TextAlign = ContentAlignment.MiddleRight;
-		class66_0.TextImageRelation = TextImageRelation.ImageBeforeText;
-		class66_0.UseVisualStyleBackColor = true;
-		class66_1.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-		class66_1.Image = Resources.cancl_16;
-		class66_1.Location = new Point(403, 433);
-		class66_1.Margin = new Padding(4);
-		class66_1.Name = "btnCancel";
-		class66_1.Size = new Size(100, 36);
-		class66_1.TabIndex = 8;
-		class66_1.Text = "Cancel";
-		class66_1.TextAlign = ContentAlignment.MiddleRight;
-		class66_1.TextImageRelation = TextImageRelation.ImageBeforeText;
-		class66_1.UseVisualStyleBackColor = true;
-		pictureBox_0.Image = Resources.filter_48;
-		pictureBox_0.Location = new Point(16, 15);
-		pictureBox_0.Margin = new Padding(4);
-		pictureBox_0.Name = "imgBigIcon";
-		pictureBox_0.Size = new Size(48, 48);
-		pictureBox_0.SizeMode = PictureBoxSizeMode.AutoSize;
-		pictureBox_0.TabIndex = 47;
-		pictureBox_0.TabStop = false;
-		class62_0.AutoSize = true;
-		class62_0.Location = new Point(79, 47);
-		class62_0.Margin = new Padding(4, 0, 4, 0);
-		class62_0.Name = "m_lblSubCaption";
-		class62_0.Size = new Size(104, 16);
-		class62_0.TabIndex = 48;
-		class62_0.Text = "{SUBCAPTION}";
-		class62_1.AutoSize = true;
-		class62_1.Font = new Font("Microsoft Sans Serif", 9.75f, FontStyle.Bold, GraphicsUnit.Point, 204);
-		class62_1.Location = new Point(79, 15);
-		class62_1.Margin = new Padding(4, 0, 4, 0);
-		class62_1.Name = "m_lblCaption";
-		class62_1.Size = new Size(85, 16);
-		class62_1.TabIndex = 49;
-		class62_1.Text = "{CAPTION}";
-		gcontrol0_0.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-		gcontrol0_0.Location = new Point(16, 81);
-		gcontrol0_0.Name = "separatorLine1";
-		gcontrol0_0.Size = new Size(487, 2);
-		gcontrol0_0.TabIndex = 50;
-		gcontrol0_0.TabStop = false;
-		gclass3_0.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-		gclass3_0.AutoSize = true;
-		gclass3_0.LinkBehavior = LinkBehavior.NeverUnderline;
-		gclass3_0.LinkColor = Color.FromArgb(38, 135, 200);
-		gclass3_0.Location = new Point(430, 9);
-		gclass3_0.Name = "m_lnkOnlineHelp";
-		gclass3_0.Size = new Size(72, 16);
-		gclass3_0.TabIndex = 9;
-		gclass3_0.TabStop = true;
-		gclass3_0.Text = "online help";
-		gclass3_0.VisitedLinkColor = Color.FromArgb(38, 135, 200);
-		textBox_0.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-		textBox_0.Location = new Point(16, 126);
-		textBox_0.Multiline = true;
-		textBox_0.Name = "m_edRules";
-		textBox_0.ScrollBars = ScrollBars.Both;
-		textBox_0.Size = new Size(486, 261);
-		textBox_0.TabIndex = 51;
-		textBox_0.WordWrap = false;
-		class62_2.AutoSize = true;
-		class62_2.Location = new Point(13, 97);
-		class62_2.Margin = new Padding(4, 0, 4, 0);
-		class62_2.Name = "m_lblRules";
-		class62_2.Size = new Size(128, 16);
-		class62_2.TabIndex = 52;
-		class62_2.Text = "{RULES_CAPTION}";
-		class63_0.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-		class63_0.AutoSize = true;
-		class63_0.ForeColor = SystemColors.ControlDarkDark;
-		class63_0.Location = new Point(13, 397);
-		class63_0.Name = "m_lblRulesHint";
-		class63_0.Size = new Size(101, 16);
-		class63_0.TabIndex = 59;
-		class63_0.Text = "{RULES_HINT}";
+		mbtnSave.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+		mbtnSave.Image = Resources.opts_16;
+		mbtnSave.Location = new Point(295, 433);
+		mbtnSave.Margin = new Padding(4);
+		mbtnSave.Name = "m_btnSave";
+		mbtnSave.Size = new Size(100, 36);
+		mbtnSave.TabIndex = 7;
+		mbtnSave.Text = "Save";
+		mbtnSave.TextAlign = ContentAlignment.MiddleRight;
+		mbtnSave.TextImageRelation = TextImageRelation.ImageBeforeText;
+		mbtnSave.UseVisualStyleBackColor = true;
+		btnCancel.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+		btnCancel.Image = Resources.cancl_16;
+		btnCancel.Location = new Point(403, 433);
+		btnCancel.Margin = new Padding(4);
+		btnCancel.Name = "btnCancel";
+		btnCancel.Size = new Size(100, 36);
+		btnCancel.TabIndex = 8;
+		btnCancel.Text = "Cancel";
+		btnCancel.TextAlign = ContentAlignment.MiddleRight;
+		btnCancel.TextImageRelation = TextImageRelation.ImageBeforeText;
+		btnCancel.UseVisualStyleBackColor = true;
+		imgBigIcon.Image = Resources.filter_48;
+		imgBigIcon.Location = new Point(16, 15);
+		imgBigIcon.Margin = new Padding(4);
+		imgBigIcon.Name = "imgBigIcon";
+		imgBigIcon.Size = new Size(48, 48);
+		imgBigIcon.SizeMode = PictureBoxSizeMode.AutoSize;
+		imgBigIcon.TabIndex = 47;
+		imgBigIcon.TabStop = false;
+		mlblSubCaption.AutoSize = true;
+		mlblSubCaption.Location = new Point(79, 47);
+		mlblSubCaption.Margin = new Padding(4, 0, 4, 0);
+		mlblSubCaption.Name = "m_lblSubCaption";
+		mlblSubCaption.Size = new Size(104, 16);
+		mlblSubCaption.TabIndex = 48;
+		mlblSubCaption.Text = "{SUBCAPTION}";
+		mlblCaption.AutoSize = true;
+		mlblCaption.Font = new Font("Microsoft Sans Serif", 9.75f, FontStyle.Bold, GraphicsUnit.Point, 204);
+		mlblCaption.Location = new Point(79, 15);
+		mlblCaption.Margin = new Padding(4, 0, 4, 0);
+		mlblCaption.Name = "m_lblCaption";
+		mlblCaption.Size = new Size(85, 16);
+		mlblCaption.TabIndex = 49;
+		mlblCaption.Text = "{CAPTION}";
+		separatorLine1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+		separatorLine1.Location = new Point(16, 81);
+		separatorLine1.Name = "separatorLine1";
+		separatorLine1.Size = new Size(487, 2);
+		separatorLine1.TabIndex = 50;
+		separatorLine1.TabStop = false;
+		mlnkOnlineHelp.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+		mlnkOnlineHelp.AutoSize = true;
+		mlnkOnlineHelp.LinkBehavior = LinkBehavior.NeverUnderline;
+		mlnkOnlineHelp.LinkColor = Color.FromArgb(38, 135, 200);
+		mlnkOnlineHelp.Location = new Point(430, 9);
+		mlnkOnlineHelp.Name = "m_lnkOnlineHelp";
+		mlnkOnlineHelp.Size = new Size(72, 16);
+		mlnkOnlineHelp.TabIndex = 9;
+		mlnkOnlineHelp.TabStop = true;
+		mlnkOnlineHelp.Text = "online help";
+		mlnkOnlineHelp.VisitedLinkColor = Color.FromArgb(38, 135, 200);
+		medRules.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+		medRules.Location = new Point(16, 126);
+		medRules.Multiline = true;
+		medRules.Name = "m_edRules";
+		medRules.ScrollBars = ScrollBars.Both;
+		medRules.Size = new Size(486, 261);
+		medRules.TabIndex = 51;
+		medRules.WordWrap = false;
+		mlblRules.AutoSize = true;
+		mlblRules.Location = new Point(13, 97);
+		mlblRules.Margin = new Padding(4, 0, 4, 0);
+		mlblRules.Name = "m_lblRules";
+		mlblRules.Size = new Size(128, 16);
+		mlblRules.TabIndex = 52;
+		mlblRules.Text = "{RULES_CAPTION}";
+		mlblRulesHint.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+		mlblRulesHint.AutoSize = true;
+		mlblRulesHint.ForeColor = SystemColors.ControlDarkDark;
+		mlblRulesHint.Location = new Point(13, 397);
+		mlblRulesHint.Name = "m_lblRulesHint";
+		mlblRulesHint.Size = new Size(101, 16);
+		mlblRulesHint.TabIndex = 59;
+		mlblRulesHint.Text = "{RULES_HINT}";
 		base.AutoScaleDimensions = new SizeF(8f, 16f);
 		base.AutoScaleMode = AutoScaleMode.Font;
 		base.ClientSize = new Size(515, 482);
-		base.Controls.Add(class63_0);
-		base.Controls.Add(class62_2);
-		base.Controls.Add(textBox_0);
-		base.Controls.Add(gclass3_0);
-		base.Controls.Add(gcontrol0_0);
-		base.Controls.Add(class62_1);
-		base.Controls.Add(class62_0);
-		base.Controls.Add(pictureBox_0);
-		base.Controls.Add(class66_0);
-		base.Controls.Add(class66_1);
+		base.Controls.Add(mlblRulesHint);
+		base.Controls.Add(mlblRules);
+		base.Controls.Add(medRules);
+		base.Controls.Add(mlnkOnlineHelp);
+		base.Controls.Add(separatorLine1);
+		base.Controls.Add(mlblCaption);
+		base.Controls.Add(mlblSubCaption);
+		base.Controls.Add(imgBigIcon);
+		base.Controls.Add(mbtnSave);
+		base.Controls.Add(btnCancel);
 		Font = new Font("Microsoft Sans Serif", 9.75f, FontStyle.Regular, GraphicsUnit.Point, 204);
 		base.Margin = new Padding(5, 4, 5, 4);
 		base.Name = "ProtocolRulesDialog";
 		base.StartPosition = FormStartPosition.Manual;
 		Text = "{WINDOW_TITLE}";
-		((ISupportInitialize)pictureBox_0).EndInit();
+		((ISupportInitialize)imgBigIcon).EndInit();
 		ResumeLayout(performLayout: false);
 		PerformLayout();
 	}
 
-	private void gclass3_0_Click(object sender, EventArgs e)
+	private void mlnkOnlineHelp_Click(object sender, EventArgs e)
 	{
-		method_9(string_0);
+		ShowOnlineHelp(string_0);
 	}
 
-	private void class66_0_Click(object sender, EventArgs e)
+	private void mbtnSave_Click(object sender, EventArgs e)
 	{
-		method_8(DialogResult.OK);
+		CloseDialog(DialogResult.OK);
 	}
 
-	private void class66_1_Click(object sender, EventArgs e)
+	private void btnCancel_Click(object sender, EventArgs e)
 	{
-		method_8(DialogResult.Cancel);
+		CloseDialog(DialogResult.Cancel);
 	}
 }

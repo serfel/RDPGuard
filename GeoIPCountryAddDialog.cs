@@ -54,29 +54,29 @@ internal sealed class GeoIPCountryAddDialog : Form0
 
 	private IContainer icontainer_0;
 
-	private Class66 class66_0;
+	private Class66 mbtnAdd;
 
-	private Class66 class66_1;
+	private Class66 mbtnCancel;
 
-	private GControl0 gcontrol0_0;
+	private GControl0 separatorLine1;
 
-	private Class62 class62_0;
+	private Class62 label2;
 
-	private PictureBox pictureBox_0;
+	private PictureBox mimgBigIcon;
 
-	private Class62 class62_1;
+	private Class62 lblCaption;
 
-	private GClass3 gclass3_0;
+	private GClass3 mlnkOnlineHelp;
 
-	private GeoIPCountriesTable control1_0;
+	private GeoIPCountriesTable mlstCountries;
 
-	private PictureBox pictureBox_1;
+	private PictureBox mpicLoading;
 
-	private Class63 class63_0;
+	private Class63 mlblLoadingHint;
 
-	public GClass5[] GClass5_0 => control1_0.GClass5_0;
+	public GClass5[] GClass5_0 => mlstCountries.GClass5_0;
 
-	protected override Button Button_0 => class66_0;
+	protected override Button Button_0 => mbtnAdd;
 
 	public GeoIPCountryAddDialog(GClass5[] gclass5_0, GeoIPDBVersion geoIPDBVersion_1)
 		: base(new Size(600, 525))
@@ -85,13 +85,13 @@ internal sealed class GeoIPCountryAddDialog : Form0
 		string_0 = gclass5_0.Select(selector).ToArray();
 		geoIPDBVersion_0 = geoIPDBVersion_1;
 		SaveSettings();
-		vmethod_1();
+		InitializeFormPosition();
 		OnButtonCancel();
 		OnLoad();
 		base.Shown += Form7_Shown;
 	}
 
-	private void InitializeComponents()
+	private void InitializeComponent()
 	{
 		ValidateInput(bool_0: true);
 		Class89.eventHandler_28 = (EventHandler<EventArgs0>)Delegate.Combine(Class89.eventHandler_28, new EventHandler<EventArgs0>(OnButtonOk));
@@ -111,7 +111,7 @@ internal sealed class GeoIPCountryAddDialog : Form0
 			return;
 		}
 		ValidateInput(bool_0: false);
-		GeoIPCountriesTable control = control1_0;
+		GeoIPCountriesTable control = mlstCountries;
 		IEnumerable<GClass5> source = @class.eventArgs0_0.gclass29_0.gclass5_0.Where(@class.method_1);
 		Func<GClass5, string> keySelector = _003C_003Ec._003C_003E9.method_1;
 		control.GClass5_1 = source.OrderBy(keySelector).ToArray();
@@ -119,33 +119,33 @@ internal sealed class GeoIPCountryAddDialog : Form0
 
 	private void OnButtonCancel()
 	{
-		pictureBox_0.Image = ((Class163.Class163_0.Boolean_0 ? true : false) ? Resources.location_pin_48_dark : Resources.location_pin_48);
-		pictureBox_1.Image = ((Class163.Class163_0.Boolean_0 ? true : false) ? Resources.wait_16_dark : Resources.wait_16);
+		mimgBigIcon.Image = ((Class163.Class163_0.Boolean_0 ? true : false) ? Resources.location_pin_48_dark : Resources.location_pin_48);
+		mpicLoading.Image = ((Class163.Class163_0.Boolean_0 ? true : false) ? Resources.wait_16_dark : Resources.wait_16);
 	}
 
 	private void OnLoad()
 	{
-		control1_0.Event_0 += LoadSettings;
-		control1_0.Event_3 += OnTextChanged;
-		class66_0.Click += class66_0_Click;
-		class66_1.Click += class66_1_Click;
-		gclass3_0.Click += gclass3_0_Click;
+		mlstCountries.Event_0 += LoadSettings;
+		mlstCountries.Event_3 += OnTextChanged;
+		mbtnAdd.Click += mbtnAdd_Click;
+		mbtnCancel.Click += mbtnCancel_Click;
+		mlnkOnlineHelp.Click += mlnkOnlineHelp_Click;
 	}
 
 	private void ValidateInput(bool bool_0)
 	{
-		pictureBox_1.Visible = bool_0;
-		class63_0.Visible = bool_0;
-		control1_0.Enabled = !bool_0;
-		class66_0.Enabled = !bool_0;
-		class66_1.Enabled = !bool_0;
-		vmethod_0();
-		control1_0.Focus();
+		mpicLoading.Visible = bool_0;
+		mlblLoadingHint.Visible = bool_0;
+		mlstCountries.Enabled = !bool_0;
+		mbtnAdd.Enabled = !bool_0;
+		mbtnCancel.Enabled = !bool_0;
+		OnFormClosing();
+		mlstCountries.Focus();
 	}
 
-	protected override void vmethod_0()
+	protected override void OnFormClosing()
 	{
-		class66_0.Enabled = control1_0.Boolean_0;
+		mbtnAdd.Enabled = mlstCountries.Boolean_0;
 	}
 
 	protected override void Dispose(bool disposing)
@@ -159,156 +159,156 @@ internal sealed class GeoIPCountryAddDialog : Form0
 
 	private void SaveSettings()
 	{
-		class66_0 = new Class66();
-		class66_1 = new Class66();
-		gcontrol0_0 = new GControl0();
-		class62_0 = new Class62();
-		pictureBox_0 = new PictureBox();
-		class62_1 = new Class62();
-		gclass3_0 = new GClass3();
-		control1_0 = new GeoIPCountriesTable();
-		pictureBox_1 = new PictureBox();
-		class63_0 = new Class63();
-		((ISupportInitialize)pictureBox_0).BeginInit();
-		((ISupportInitialize)pictureBox_1).BeginInit();
+		mbtnAdd = new Class66();
+		mbtnCancel = new Class66();
+		separatorLine1 = new GControl0();
+		label2 = new Class62();
+		mimgBigIcon = new PictureBox();
+		lblCaption = new Class62();
+		mlnkOnlineHelp = new GClass3();
+		mlstCountries = new GeoIPCountriesTable();
+		mpicLoading = new PictureBox();
+		mlblLoadingHint = new Class63();
+		((ISupportInitialize)mimgBigIcon).BeginInit();
+		((ISupportInitialize)mpicLoading).BeginInit();
 		SuspendLayout();
-		class66_0.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-		class66_0.Image = Resources.opts_16;
-		class66_0.Location = new Point(464, 438);
-		class66_0.Margin = new Padding(4);
-		class66_0.Name = "m_btnAdd";
-		class66_0.Size = new Size(100, 36);
-		class66_0.TabIndex = 20;
-		class66_0.Text = "Add";
-		class66_0.TextAlign = ContentAlignment.MiddleRight;
-		class66_0.TextImageRelation = TextImageRelation.ImageBeforeText;
-		class66_0.UseVisualStyleBackColor = true;
-		class66_1.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-		class66_1.Image = Resources.cancl_16;
-		class66_1.Location = new Point(572, 438);
-		class66_1.Margin = new Padding(4);
-		class66_1.Name = "m_btnCancel";
-		class66_1.Size = new Size(100, 36);
-		class66_1.TabIndex = 21;
-		class66_1.Text = "Cancel";
-		class66_1.TextAlign = ContentAlignment.MiddleRight;
-		class66_1.TextImageRelation = TextImageRelation.ImageBeforeText;
-		class66_1.UseVisualStyleBackColor = true;
-		gcontrol0_0.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-		gcontrol0_0.Location = new Point(16, 81);
-		gcontrol0_0.Name = "separatorLine1";
-		gcontrol0_0.Size = new Size(656, 2);
-		gcontrol0_0.TabIndex = 50;
-		gcontrol0_0.TabStop = false;
-		class62_0.AutoSize = true;
-		class62_0.Font = new Font("Microsoft Sans Serif", 9.75f, FontStyle.Bold, GraphicsUnit.Point, 204);
-		class62_0.Location = new Point(79, 15);
-		class62_0.Margin = new Padding(4, 0, 4, 0);
-		class62_0.Name = "label2";
-		class62_0.Size = new Size(91, 16);
-		class62_0.TabIndex = 49;
-		class62_0.Text = "Add Country";
-		pictureBox_0.Location = new Point(16, 15);
-		pictureBox_0.Margin = new Padding(4);
-		pictureBox_0.Name = "m_imgBigIcon";
-		pictureBox_0.Size = new Size(48, 48);
-		pictureBox_0.SizeMode = PictureBoxSizeMode.AutoSize;
-		pictureBox_0.TabIndex = 47;
-		pictureBox_0.TabStop = false;
-		class62_1.AutoSize = true;
-		class62_1.Location = new Point(79, 47);
-		class62_1.Margin = new Padding(4, 0, 4, 0);
-		class62_1.Name = "lblCaption";
-		class62_1.Size = new Size(384, 16);
-		class62_1.TabIndex = 48;
-		class62_1.Text = "Select one or multiple countries from the list below and click Add";
-		gclass3_0.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-		gclass3_0.AutoSize = true;
-		gclass3_0.LinkBehavior = LinkBehavior.NeverUnderline;
-		gclass3_0.LinkColor = Color.FromArgb(38, 135, 200);
-		gclass3_0.Location = new Point(599, 9);
-		gclass3_0.Name = "m_lnkOnlineHelp";
-		gclass3_0.Size = new Size(72, 16);
-		gclass3_0.TabIndex = 55;
-		gclass3_0.TabStop = true;
-		gclass3_0.Text = "online help";
-		gclass3_0.VisitedLinkColor = Color.FromArgb(38, 135, 200);
-		control1_0.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-		control1_0.GClass5_1 = new GClass5[0];
-		control1_0.IPListEntry_0 = new IPListEntry[0];
-		control1_0.Font = new Font("Microsoft Sans Serif", 9.75f, FontStyle.Regular, GraphicsUnit.Point, 204);
-		control1_0.Location = new Point(16, 98);
-		control1_0.Margin = new Padding(4);
-		control1_0.Name = "m_lstCountries";
-		control1_0.Size = new Size(656, 327);
-		control1_0.TabIndex = 56;
-		pictureBox_1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-		pictureBox_1.Location = new Point(16, 458);
-		pictureBox_1.Name = "m_picLoading";
-		pictureBox_1.Size = new Size(16, 16);
-		pictureBox_1.TabIndex = 76;
-		pictureBox_1.TabStop = false;
-		pictureBox_1.Visible = false;
-		class63_0.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-		class63_0.AutoSize = true;
-		class63_0.ForeColor = SystemColors.ControlDarkDark;
-		class63_0.Location = new Point(39, 458);
-		class63_0.Margin = new Padding(4, 0, 4, 0);
-		class63_0.Name = "m_lblLoadingHint";
-		class63_0.Size = new Size(58, 16);
-		class63_0.TabIndex = 77;
-		class63_0.Text = "loading..";
+		mbtnAdd.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+		mbtnAdd.Image = Resources.opts_16;
+		mbtnAdd.Location = new Point(464, 438);
+		mbtnAdd.Margin = new Padding(4);
+		mbtnAdd.Name = "m_btnAdd";
+		mbtnAdd.Size = new Size(100, 36);
+		mbtnAdd.TabIndex = 20;
+		mbtnAdd.Text = "Add";
+		mbtnAdd.TextAlign = ContentAlignment.MiddleRight;
+		mbtnAdd.TextImageRelation = TextImageRelation.ImageBeforeText;
+		mbtnAdd.UseVisualStyleBackColor = true;
+		mbtnCancel.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+		mbtnCancel.Image = Resources.cancl_16;
+		mbtnCancel.Location = new Point(572, 438);
+		mbtnCancel.Margin = new Padding(4);
+		mbtnCancel.Name = "m_btnCancel";
+		mbtnCancel.Size = new Size(100, 36);
+		mbtnCancel.TabIndex = 21;
+		mbtnCancel.Text = "Cancel";
+		mbtnCancel.TextAlign = ContentAlignment.MiddleRight;
+		mbtnCancel.TextImageRelation = TextImageRelation.ImageBeforeText;
+		mbtnCancel.UseVisualStyleBackColor = true;
+		separatorLine1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+		separatorLine1.Location = new Point(16, 81);
+		separatorLine1.Name = "separatorLine1";
+		separatorLine1.Size = new Size(656, 2);
+		separatorLine1.TabIndex = 50;
+		separatorLine1.TabStop = false;
+		label2.AutoSize = true;
+		label2.Font = new Font("Microsoft Sans Serif", 9.75f, FontStyle.Bold, GraphicsUnit.Point, 204);
+		label2.Location = new Point(79, 15);
+		label2.Margin = new Padding(4, 0, 4, 0);
+		label2.Name = "label2";
+		label2.Size = new Size(91, 16);
+		label2.TabIndex = 49;
+		label2.Text = "Add Country";
+		mimgBigIcon.Location = new Point(16, 15);
+		mimgBigIcon.Margin = new Padding(4);
+		mimgBigIcon.Name = "m_imgBigIcon";
+		mimgBigIcon.Size = new Size(48, 48);
+		mimgBigIcon.SizeMode = PictureBoxSizeMode.AutoSize;
+		mimgBigIcon.TabIndex = 47;
+		mimgBigIcon.TabStop = false;
+		lblCaption.AutoSize = true;
+		lblCaption.Location = new Point(79, 47);
+		lblCaption.Margin = new Padding(4, 0, 4, 0);
+		lblCaption.Name = "lblCaption";
+		lblCaption.Size = new Size(384, 16);
+		lblCaption.TabIndex = 48;
+		lblCaption.Text = "Select one or multiple countries from the list below and click Add";
+		mlnkOnlineHelp.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+		mlnkOnlineHelp.AutoSize = true;
+		mlnkOnlineHelp.LinkBehavior = LinkBehavior.NeverUnderline;
+		mlnkOnlineHelp.LinkColor = Color.FromArgb(38, 135, 200);
+		mlnkOnlineHelp.Location = new Point(599, 9);
+		mlnkOnlineHelp.Name = "m_lnkOnlineHelp";
+		mlnkOnlineHelp.Size = new Size(72, 16);
+		mlnkOnlineHelp.TabIndex = 55;
+		mlnkOnlineHelp.TabStop = true;
+		mlnkOnlineHelp.Text = "online help";
+		mlnkOnlineHelp.VisitedLinkColor = Color.FromArgb(38, 135, 200);
+		mlstCountries.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+		mlstCountries.GClass5_1 = new GClass5[0];
+		mlstCountries.IPListEntry_0 = new IPListEntry[0];
+		mlstCountries.Font = new Font("Microsoft Sans Serif", 9.75f, FontStyle.Regular, GraphicsUnit.Point, 204);
+		mlstCountries.Location = new Point(16, 98);
+		mlstCountries.Margin = new Padding(4);
+		mlstCountries.Name = "m_lstCountries";
+		mlstCountries.Size = new Size(656, 327);
+		mlstCountries.TabIndex = 56;
+		mpicLoading.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+		mpicLoading.Location = new Point(16, 458);
+		mpicLoading.Name = "m_picLoading";
+		mpicLoading.Size = new Size(16, 16);
+		mpicLoading.TabIndex = 76;
+		mpicLoading.TabStop = false;
+		mpicLoading.Visible = false;
+		mlblLoadingHint.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+		mlblLoadingHint.AutoSize = true;
+		mlblLoadingHint.ForeColor = SystemColors.ControlDarkDark;
+		mlblLoadingHint.Location = new Point(39, 458);
+		mlblLoadingHint.Margin = new Padding(4, 0, 4, 0);
+		mlblLoadingHint.Name = "m_lblLoadingHint";
+		mlblLoadingHint.Size = new Size(58, 16);
+		mlblLoadingHint.TabIndex = 77;
+		mlblLoadingHint.Text = "loading..";
 		base.AutoScaleDimensions = new SizeF(8f, 16f);
 		base.AutoScaleMode = AutoScaleMode.Font;
 		base.ClientSize = new Size(684, 487);
-		base.Controls.Add(class63_0);
-		base.Controls.Add(pictureBox_1);
-		base.Controls.Add(control1_0);
-		base.Controls.Add(gclass3_0);
-		base.Controls.Add(gcontrol0_0);
-		base.Controls.Add(class62_0);
-		base.Controls.Add(class62_1);
-		base.Controls.Add(pictureBox_0);
-		base.Controls.Add(class66_0);
-		base.Controls.Add(class66_1);
+		base.Controls.Add(mlblLoadingHint);
+		base.Controls.Add(mpicLoading);
+		base.Controls.Add(mlstCountries);
+		base.Controls.Add(mlnkOnlineHelp);
+		base.Controls.Add(separatorLine1);
+		base.Controls.Add(label2);
+		base.Controls.Add(lblCaption);
+		base.Controls.Add(mimgBigIcon);
+		base.Controls.Add(mbtnAdd);
+		base.Controls.Add(mbtnCancel);
 		Font = new Font("Microsoft Sans Serif", 9.75f, FontStyle.Regular, GraphicsUnit.Point, 204);
 		base.Margin = new Padding(5, 4, 5, 4);
 		base.Name = "GeoIPCountryAddDialog";
 		base.StartPosition = FormStartPosition.Manual;
 		Text = "Add Country";
-		((ISupportInitialize)pictureBox_0).EndInit();
-		((ISupportInitialize)pictureBox_1).EndInit();
+		((ISupportInitialize)mimgBigIcon).EndInit();
+		((ISupportInitialize)mpicLoading).EndInit();
 		ResumeLayout(performLayout: false);
 		PerformLayout();
 	}
 
 	private void Form7_Shown(object sender, EventArgs e)
 	{
-		InitializeComponents();
+		InitializeComponent();
 	}
 
 	private void LoadSettings(object sender, EventArgs e)
 	{
-		vmethod_0();
+		OnFormClosing();
 	}
 
 	private void OnTextChanged(object sender, MouseEventArgs e)
 	{
-		class66_0.PerformClick();
+		mbtnAdd.PerformClick();
 	}
 
-	private void class66_0_Click(object sender, EventArgs e)
+	private void mbtnAdd_Click(object sender, EventArgs e)
 	{
-		method_8(DialogResult.OK);
+		CloseDialog(DialogResult.OK);
 	}
 
-	private void class66_1_Click(object sender, EventArgs e)
+	private void mbtnCancel_Click(object sender, EventArgs e)
 	{
-		method_8(DialogResult.Cancel);
+		CloseDialog(DialogResult.Cancel);
 	}
 
-	private void gclass3_0_Click(object sender, EventArgs e)
+	private void mlnkOnlineHelp_Click(object sender, EventArgs e)
 	{
-		method_9(Class148.Class156.String_0);
+		ShowOnlineHelp(Class148.Class156.String_0);
 	}
 }

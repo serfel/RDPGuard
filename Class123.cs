@@ -10,7 +10,7 @@ internal sealed class Class123 : Class113
 
 	public override int Int32_0 => 1;
 
-	public override void vmethod_0(Dictionary<string, object> dictionary_0)
+	public override void OnFormClosing(Dictionary<string, object> dictionary_0)
 	{
 		dictionary_0.Add("xff", bool_3);
 		dictionary_0.Add("xff_fallback", bool_4);
@@ -30,12 +30,12 @@ internal sealed class Class123 : Class113
 		}
 	}
 
-	public string vmethod_2()
+	public string AdjustFormSize()
 	{
 		return "IIS";
 	}
 
-	public void vmethod_3(StringBuilder stringBuilder_0)
+	public void UpdateTaskType(StringBuilder stringBuilder_0)
 	{
 		stringBuilder_0.Append($"UseXForwardedFor: {bool_3}; ");
 		stringBuilder_0.Append($"XffFallbackToRemoteAddr: {bool_4}; ");

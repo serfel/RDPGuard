@@ -17,7 +17,7 @@ internal sealed class Class117 : Class113
 
 	public override int Int32_0 => 2;
 
-	public override void vmethod_0(Dictionary<string, object> dictionary_0)
+	public override void OnFormClosing(Dictionary<string, object> dictionary_0)
 	{
 		dictionary_0.Add(string_11, int_1);
 		if (string_10.Any())
@@ -37,7 +37,7 @@ internal sealed class Class117 : Class113
 		}
 	}
 
-	public void vmethod_2(StringBuilder stringBuilder_0)
+	public void AdjustFormSize(StringBuilder stringBuilder_0)
 	{
 		stringBuilder_0.Append("Events: " + string.Join(", ", int_1) + "; ");
 		if (string_10.Any())

@@ -379,7 +379,7 @@ public class GClass0 : ListView
 	{
 		if (Class163.Class163_0.Boolean_0 && !bool_0)
 		{
-			method_8();
+			CloseDialog();
 			if (View.Details == base.View && base.Columns.Count >= 1)
 			{
 				base.GridLines = false;
@@ -394,7 +394,7 @@ public class GClass0 : ListView
 		}
 	}
 
-	private void method_8()
+	private void CloseDialog()
 	{
 		if (BackgroundImage == null)
 		{
@@ -407,7 +407,7 @@ public class GClass0 : ListView
 		}
 	}
 
-	public void method_9(int int_0 = 30)
+	public void ShowOnlineHelp(int int_0 = 30)
 	{
 		if (base.Columns.Count < 1)
 		{

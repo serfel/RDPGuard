@@ -84,23 +84,23 @@ internal class Control2 : UserControl
 		}
 	}
 
-	protected virtual void vmethod_0()
+	protected virtual void OnFormClosing()
 	{
 	}
 
-	protected virtual void vmethod_1()
+	protected virtual void InitializeFormPosition()
 	{
 	}
 
 	public Control2()
 	{
-		vmethod_0();
-		vmethod_1();
-		Form0.smethod_3(this, InitializeHandlers, vmethod_2);
-		vmethod_2();
+		OnFormClosing();
+		InitializeFormPosition();
+		Form0.smethod_3(this, InitializeHandlers, AdjustFormSize);
+		AdjustFormSize();
 	}
 
-	protected virtual void vmethod_2()
+	protected virtual void AdjustFormSize()
 	{
 	}
 

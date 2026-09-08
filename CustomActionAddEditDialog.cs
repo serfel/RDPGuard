@@ -31,7 +31,7 @@ internal sealed class CustomActionAddEditDialog : Form0
 
 		internal void method_0(object sender, EventArgs e)
 		{
-			form9_0.class66_1.Enabled = control4_0.Boolean_0;
+			form9_0.mbtnOK.Enabled = control4_0.Boolean_0;
 		}
 	}
 
@@ -128,7 +128,7 @@ internal sealed class CustomActionAddEditDialog : Form0
 		},
 		{
 			GEnum2.const_2,
-			smethod_4
+			OnButtonOk
 		},
 		{
 			GEnum2.const_3,
@@ -148,37 +148,37 @@ internal sealed class CustomActionAddEditDialog : Form0
 
 	private IContainer icontainer_0;
 
-	private PictureBox pictureBox_0;
+	private PictureBox mimgBigIcon;
 
-	private Class62 class62_0;
+	private Class62 mlblSubCaption;
 
-	private Class62 class62_1;
+	private Class62 mlblCaption;
 
-	private Class66 class66_0;
+	private Class66 mbtnCancel;
 
-	private Class66 class66_1;
+	private Class66 mbtnOK;
 
-	private GControl0 gcontrol0_0;
+	private GControl0 separatorLine1;
 
-	private GClass3 gclass3_0;
+	private GClass3 mlnkOnlineHelp;
 
-	private Class0 class0_0;
+	private Class0 mcbAction;
 
-	private Class62 class62_2;
+	private Class62 mlblAction;
 
-	private Class63 class63_0;
+	private Class63 mlblActionHint;
 
-	private Panel panel_0;
+	private Panel mpanel;
 
-	private Class62 class62_3;
+	private Class62 mlblEvent;
 
-	private Class63 class63_1;
+	private Class63 mlblEventHint;
 
-	private Class0 class0_1;
+	private Class0 mcbEvent;
 
-	private Class61 class61_0;
+	private Class61 mchbEnabled;
 
-	private GClass3 gclass3_1;
+	private GClass3 mlnkConfigureEvent;
 
 	public Class94 Class94_0
 	{
@@ -186,15 +186,15 @@ internal sealed class CustomActionAddEditDialog : Form0
 		{
 			class94_0.class95_0 = dictionary_1[GEnum2_0];
 			class94_0.gclass10_0 = Control4_0.GClass10_0;
-			class94_0.bool_0 = class61_0.Checked;
+			class94_0.bool_0 = mchbEnabled.Checked;
 			return class94_0;
 		}
 		set
 		{
 			class94_0 = value;
-			class0_1.Text = Class185.Class185_0[value.class95_0.GEnum2_0];
-			class0_0.Text = Class186.Class186_0[value.gclass10_0.GEnum3_0];
-			class61_0.Checked = value.bool_0;
+			mcbEvent.Text = Class185.Class185_0[value.class95_0.GEnum2_0];
+			mcbAction.Text = Class186.Class186_0[value.gclass10_0.GEnum3_0];
+			mchbEnabled.Checked = value.bool_0;
 			dictionary_1[value.class95_0.GEnum2_0] = value.class95_0;
 			Control4_0.GClass10_0 = value.gclass10_0;
 		}
@@ -204,9 +204,9 @@ internal sealed class CustomActionAddEditDialog : Form0
 	{
 		get
 		{
-			if (!string.IsNullOrEmpty(class0_0.Text))
+			if (!string.IsNullOrEmpty(mcbAction.Text))
 			{
-				return Class186.Class186_0[class0_0.Text];
+				return Class186.Class186_0[mcbAction.Text];
 			}
 			return GEnum3.const_0;
 		}
@@ -214,16 +214,16 @@ internal sealed class CustomActionAddEditDialog : Form0
 
 	private Control4 Control4_0 => control4_0.Where(OnCheckedChanged).FirstOrDefault();
 
-	private GEnum2 GEnum2_0 => Class185.Class185_0[class0_1.Text];
+	private GEnum2 GEnum2_0 => Class185.Class185_0[mcbEvent.Text];
 
 	public CustomActionAddEditDialog(Class94 class94_1)
 		: base(new Size(685, 800))
 	{
 		OnTextChanged();
-		vmethod_1();
+		InitializeFormPosition();
 		OnButtonCancel();
 		OnLoad();
-		InitializeComponents();
+		InitializeComponent();
 		if (class94_1 == null)
 		{
 			Class94_0 = new Class94
@@ -232,45 +232,45 @@ internal sealed class CustomActionAddEditDialog : Form0
 				gclass10_0 = new Class175()
 			};
 			Text = "Add New Custom Action";
-			class62_1.Text = "New Custom Action";
-			class62_0.Text = "Specify Custom Action properties and click Add new custom action";
-			class66_1.Text = "Add new custom action";
-			pictureBox_0.Image = Resources.notifications_add_48;
-			gclass3_0.Click += gclass3_0_Click;
-			Control4_0.vmethod_3(GEnum2_0);
+			mlblCaption.Text = "New Custom Action";
+			mlblSubCaption.Text = "Specify Custom Action properties and click Add new custom action";
+			mbtnOK.Text = "Add new custom action";
+			mimgBigIcon.Image = Resources.notifications_add_48;
+			mlnkOnlineHelp.Click += mlnkOnlineHelp_Click;
+			Control4_0.UpdateTaskType(GEnum2_0);
 		}
 		else
 		{
 			Class94_0 = class94_1;
 			Text = "Edit Custom Action";
-			class62_1.Text = "Edit Custom Action";
-			class62_0.Text = "Edit Custom Action properties and click Save changes";
-			class66_1.Text = "Save changes";
-			pictureBox_0.Image = Resources.notifications_edit_48;
-			gclass3_0.Click += gclass3_0_Click_1;
+			mlblCaption.Text = "Edit Custom Action";
+			mlblSubCaption.Text = "Edit Custom Action properties and click Save changes";
+			mbtnOK.Text = "Save changes";
+			mimgBigIcon.Image = Resources.notifications_edit_48;
+			mlnkOnlineHelp.Click += gclass3_0_Click_1;
 		}
 	}
 
-	private void InitializeComponents()
+	private void InitializeComponent()
 	{
-		class0_1.Items.Clear();
-		ComboBox.ObjectCollection items = class0_1.Items;
+		mcbEvent.Items.Clear();
+		ComboBox.ObjectCollection items = mcbEvent.Items;
 		object[] prop_ = Class185.Class185_0.Prop_1;
 		object[] items2 = prop_;
 		items.AddRange(items2);
-		class0_1.SelectedIndex = 0;
+		mcbEvent.SelectedIndex = 0;
 	}
 
 	private void OnButtonOk()
 	{
-		class0_0.Items.Clear();
-		ComboBox.ObjectCollection items = class0_0.Items;
+		mcbAction.Items.Clear();
+		ComboBox.ObjectCollection items = mcbAction.Items;
 		GEnum3[] source = dictionary_0[GEnum2_0];
 		Func<GEnum3, string> selector = _003C_003Ec._003C_003E9.method_0;
 		object[] array = source.Select(selector).ToArray();
 		object[] items2 = array;
 		items.AddRange(items2);
-		class0_0.SelectedIndex = 0;
+		mcbAction.SelectedIndex = 0;
 	}
 
 	private void OnButtonCancel()
@@ -286,31 +286,31 @@ internal sealed class CustomActionAddEditDialog : Form0
 			@class.control4_0.Event_0 += method_21;
 			@class.control4_0.Dock = DockStyle.Fill;
 			@class.control4_0.Visible = false;
-			panel_0.Controls.Add(@class.control4_0);
+			mpanel.Controls.Add(@class.control4_0);
 		}
 	}
 
 	private void OnLoad()
 	{
-		class0_1.SelectedIndexChanged += class0_1_SelectedIndexChanged;
-		gclass3_1.Click += gclass3_1_Click;
-		class0_0.SelectedIndexChanged += class0_0_SelectedIndexChanged;
-		class66_0.Click += class66_0_Click;
-		class66_1.Click += class66_1_Click;
+		mcbEvent.SelectedIndexChanged += class0_1_SelectedIndexChanged;
+		mlnkConfigureEvent.Click += mlnkConfigureEvent_Click;
+		mcbAction.SelectedIndexChanged += class0_0_SelectedIndexChanged;
+		mbtnCancel.Click += mbtnCancel_Click;
+		mbtnOK.Click += mbtnOK_Click;
 	}
 
 	private void ValidateInput(bool bool_0)
 	{
-		class0_1.Enabled = bool_0;
-		class0_0.Enabled = bool_0;
-		class66_1.Enabled = bool_0;
+		mcbEvent.Enabled = bool_0;
+		mcbAction.Enabled = bool_0;
+		mbtnOK.Enabled = bool_0;
 	}
 
 	private void SaveSettings()
 	{
 		Class89.eventHandler_27 = (EventHandler<EventArgs3>)Delegate.Combine(Class89.eventHandler_27, new EventHandler<EventArgs3>(LoadSettings));
 		Class89.smethod_36(Class94_0);
-		Control4_0.vmethod_5(bool_1: false);
+		Control4_0.SetEditMode(bool_1: false);
 		ValidateInput(bool_0: false);
 	}
 
@@ -334,11 +334,11 @@ internal sealed class CustomActionAddEditDialog : Form0
 		{
 			MessageBox.Show("Unable to start test task.\r\n\r\nError Code: " + @class.eventArgs3_0.gclass10_0.string_0 + "\r\n\r\nError Message: " + @class.eventArgs3_0.gclass10_0.string_1, Class138.String_1, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 		}
-		Control4_0.vmethod_5(bool_1: true);
+		Control4_0.SetEditMode(bool_1: true);
 		ValidateInput(bool_0: true);
 	}
 
-	private static Class102 smethod_4(Class102 class102_0)
+	private static Class102 OnButtonOk(Class102 class102_0)
 	{
 		ProtocolRulesDialog form = new ProtocolRulesDialog
 		{
@@ -374,176 +374,176 @@ internal sealed class CustomActionAddEditDialog : Form0
 
 	private void OnTextChanged()
 	{
-		pictureBox_0 = new PictureBox();
-		class62_0 = new Class62();
-		class62_1 = new Class62();
-		class66_0 = new Class66();
-		class66_1 = new Class66();
-		gcontrol0_0 = new GControl0();
-		gclass3_0 = new GClass3();
-		class0_0 = new Class0();
-		class62_2 = new Class62();
-		class63_0 = new Class63();
-		panel_0 = new Panel();
-		class62_3 = new Class62();
-		class63_1 = new Class63();
-		class0_1 = new Class0();
-		class61_0 = new Class61();
-		gclass3_1 = new GClass3();
-		((ISupportInitialize)pictureBox_0).BeginInit();
+		mimgBigIcon = new PictureBox();
+		mlblSubCaption = new Class62();
+		mlblCaption = new Class62();
+		mbtnCancel = new Class66();
+		mbtnOK = new Class66();
+		separatorLine1 = new GControl0();
+		mlnkOnlineHelp = new GClass3();
+		mcbAction = new Class0();
+		mlblAction = new Class62();
+		mlblActionHint = new Class63();
+		mpanel = new Panel();
+		mlblEvent = new Class62();
+		mlblEventHint = new Class63();
+		mcbEvent = new Class0();
+		mchbEnabled = new Class61();
+		mlnkConfigureEvent = new GClass3();
+		((ISupportInitialize)mimgBigIcon).BeginInit();
 		SuspendLayout();
-		pictureBox_0.Location = new Point(16, 15);
-		pictureBox_0.Margin = new Padding(4);
-		pictureBox_0.Name = "m_imgBigIcon";
-		pictureBox_0.Size = new Size(48, 48);
-		pictureBox_0.SizeMode = PictureBoxSizeMode.AutoSize;
-		pictureBox_0.TabIndex = 0;
-		pictureBox_0.TabStop = false;
-		class62_0.AutoSize = true;
-		class62_0.Location = new Point(79, 47);
-		class62_0.Margin = new Padding(4, 0, 4, 0);
-		class62_0.Name = "m_lblSubCaption";
-		class62_0.Size = new Size(163, 16);
-		class62_0.TabIndex = 4;
-		class62_0.Text = "<description placeholder>";
-		class62_1.AutoSize = true;
-		class62_1.Font = new Font("Microsoft Sans Serif", 9.75f, FontStyle.Bold, GraphicsUnit.Point, 204);
-		class62_1.Location = new Point(79, 15);
-		class62_1.Margin = new Padding(4, 0, 4, 0);
-		class62_1.Name = "m_lblCaption";
-		class62_1.Size = new Size(187, 16);
-		class62_1.TabIndex = 14;
-		class62_1.Text = "<subcaption placeholder>";
-		class66_0.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-		class66_0.Image = Resources.cancl_16;
-		class66_0.Location = new Point(560, 713);
-		class66_0.Margin = new Padding(4);
-		class66_0.Name = "m_btnCancel";
-		class66_0.Size = new Size(100, 36);
-		class66_0.TabIndex = 5;
-		class66_0.Text = "Cancel";
-		class66_0.TextImageRelation = TextImageRelation.ImageBeforeText;
-		class66_0.UseVisualStyleBackColor = true;
-		class66_1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-		class66_1.Image = Resources.opts_16;
-		class66_1.Location = new Point(275, 713);
-		class66_1.Margin = new Padding(4);
-		class66_1.Name = "m_btnOK";
-		class66_1.Size = new Size(277, 36);
-		class66_1.TabIndex = 4;
-		class66_1.Text = "<ok_button>";
-		class66_1.TextImageRelation = TextImageRelation.ImageBeforeText;
-		class66_1.UseVisualStyleBackColor = true;
-		gcontrol0_0.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-		gcontrol0_0.Location = new Point(16, 73);
-		gcontrol0_0.Name = "separatorLine1";
-		gcontrol0_0.Size = new Size(638, 10);
-		gcontrol0_0.TabIndex = 35;
-		gcontrol0_0.TabStop = false;
-		gclass3_0.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-		gclass3_0.AutoSize = true;
-		gclass3_0.LinkColor = Color.FromArgb(38, 135, 200);
-		gclass3_0.Location = new Point(584, 9);
-		gclass3_0.Name = "m_lnkOnlineHelp";
-		gclass3_0.Size = new Size(73, 16);
-		gclass3_0.TabIndex = 6;
-		gclass3_0.TabStop = true;
-		gclass3_0.Text = "online help";
-		gclass3_0.VisitedLinkColor = Color.FromArgb(38, 135, 200);
-		class0_0.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-		class0_0.DropDownStyle = ComboBoxStyle.DropDownList;
-		class0_0.FormattingEnabled = true;
-		class0_0.Location = new Point(200, 167);
-		class0_0.Name = "m_cbAction";
-		class0_0.Size = new Size(454, 24);
-		class0_0.TabIndex = 1;
-		class62_2.AutoSize = true;
-		class62_2.Location = new Point(13, 167);
-		class62_2.Margin = new Padding(4, 0, 4, 0);
-		class62_2.Name = "m_lblAction";
-		class62_2.Size = new Size(48, 16);
-		class62_2.TabIndex = 67;
-		class62_2.Text = "Action:";
-		class63_0.AutoSize = true;
-		class63_0.ForeColor = SystemColors.ControlDarkDark;
-		class63_0.Location = new Point(197, 197);
-		class63_0.Margin = new Padding(4, 0, 4, 0);
-		class63_0.Name = "m_lblActionHint";
-		class63_0.Size = new Size(248, 16);
-		class63_0.TabIndex = 66;
-		class63_0.Text = "Specify the action that will occur when {0}";
-		panel_0.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-		panel_0.Location = new Point(9, 213);
-		panel_0.Margin = new Padding(0);
-		panel_0.Name = "m_panel";
-		panel_0.Size = new Size(651, 493);
-		panel_0.TabIndex = 2;
-		class62_3.AutoSize = true;
-		class62_3.Location = new Point(13, 97);
-		class62_3.Margin = new Padding(4, 0, 4, 0);
-		class62_3.Name = "m_lblEvent";
-		class62_3.Size = new Size(45, 16);
-		class62_3.TabIndex = 71;
-		class62_3.Text = "Event:";
-		class63_1.AutoSize = true;
-		class63_1.ForeColor = SystemColors.ControlDarkDark;
-		class63_1.Location = new Point(197, 127);
-		class63_1.Margin = new Padding(4, 0, 4, 0);
-		class63_1.Name = "m_lblEventHint";
-		class63_1.Size = new Size(180, 16);
-		class63_1.TabIndex = 70;
-		class63_1.Text = "Select event type from the list";
-		class0_1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-		class0_1.DropDownStyle = ComboBoxStyle.DropDownList;
-		class0_1.FormattingEnabled = true;
-		class0_1.Location = new Point(200, 97);
-		class0_1.Name = "m_cbEvent";
-		class0_1.Size = new Size(454, 24);
-		class0_1.TabIndex = 0;
-		class61_0.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-		class61_0.AutoSize = true;
-		class61_0.Location = new Point(16, 722);
-		class61_0.Name = "m_chbEnabled";
-		class61_0.Size = new Size(78, 20);
-		class61_0.TabIndex = 3;
-		class61_0.Text = "Enabled";
-		class61_0.UseVisualStyleBackColor = true;
-		gclass3_1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-		gclass3_1.AutoSize = true;
-		gclass3_1.LinkColor = Color.FromArgb(38, 135, 200);
-		gclass3_1.Location = new Point(585, 127);
-		gclass3_1.Name = "m_lnkConfigureEvent";
-		gclass3_1.Size = new Size(69, 16);
-		gclass3_1.TabIndex = 72;
-		gclass3_1.TabStop = true;
-		gclass3_1.Text = "configure..";
-		gclass3_1.Visible = false;
-		gclass3_1.VisitedLinkColor = Color.FromArgb(38, 135, 200);
+		mimgBigIcon.Location = new Point(16, 15);
+		mimgBigIcon.Margin = new Padding(4);
+		mimgBigIcon.Name = "m_imgBigIcon";
+		mimgBigIcon.Size = new Size(48, 48);
+		mimgBigIcon.SizeMode = PictureBoxSizeMode.AutoSize;
+		mimgBigIcon.TabIndex = 0;
+		mimgBigIcon.TabStop = false;
+		mlblSubCaption.AutoSize = true;
+		mlblSubCaption.Location = new Point(79, 47);
+		mlblSubCaption.Margin = new Padding(4, 0, 4, 0);
+		mlblSubCaption.Name = "m_lblSubCaption";
+		mlblSubCaption.Size = new Size(163, 16);
+		mlblSubCaption.TabIndex = 4;
+		mlblSubCaption.Text = "<description placeholder>";
+		mlblCaption.AutoSize = true;
+		mlblCaption.Font = new Font("Microsoft Sans Serif", 9.75f, FontStyle.Bold, GraphicsUnit.Point, 204);
+		mlblCaption.Location = new Point(79, 15);
+		mlblCaption.Margin = new Padding(4, 0, 4, 0);
+		mlblCaption.Name = "m_lblCaption";
+		mlblCaption.Size = new Size(187, 16);
+		mlblCaption.TabIndex = 14;
+		mlblCaption.Text = "<subcaption placeholder>";
+		mbtnCancel.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+		mbtnCancel.Image = Resources.cancl_16;
+		mbtnCancel.Location = new Point(560, 713);
+		mbtnCancel.Margin = new Padding(4);
+		mbtnCancel.Name = "m_btnCancel";
+		mbtnCancel.Size = new Size(100, 36);
+		mbtnCancel.TabIndex = 5;
+		mbtnCancel.Text = "Cancel";
+		mbtnCancel.TextImageRelation = TextImageRelation.ImageBeforeText;
+		mbtnCancel.UseVisualStyleBackColor = true;
+		mbtnOK.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+		mbtnOK.Image = Resources.opts_16;
+		mbtnOK.Location = new Point(275, 713);
+		mbtnOK.Margin = new Padding(4);
+		mbtnOK.Name = "m_btnOK";
+		mbtnOK.Size = new Size(277, 36);
+		mbtnOK.TabIndex = 4;
+		mbtnOK.Text = "<ok_button>";
+		mbtnOK.TextImageRelation = TextImageRelation.ImageBeforeText;
+		mbtnOK.UseVisualStyleBackColor = true;
+		separatorLine1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+		separatorLine1.Location = new Point(16, 73);
+		separatorLine1.Name = "separatorLine1";
+		separatorLine1.Size = new Size(638, 10);
+		separatorLine1.TabIndex = 35;
+		separatorLine1.TabStop = false;
+		mlnkOnlineHelp.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+		mlnkOnlineHelp.AutoSize = true;
+		mlnkOnlineHelp.LinkColor = Color.FromArgb(38, 135, 200);
+		mlnkOnlineHelp.Location = new Point(584, 9);
+		mlnkOnlineHelp.Name = "m_lnkOnlineHelp";
+		mlnkOnlineHelp.Size = new Size(73, 16);
+		mlnkOnlineHelp.TabIndex = 6;
+		mlnkOnlineHelp.TabStop = true;
+		mlnkOnlineHelp.Text = "online help";
+		mlnkOnlineHelp.VisitedLinkColor = Color.FromArgb(38, 135, 200);
+		mcbAction.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+		mcbAction.DropDownStyle = ComboBoxStyle.DropDownList;
+		mcbAction.FormattingEnabled = true;
+		mcbAction.Location = new Point(200, 167);
+		mcbAction.Name = "m_cbAction";
+		mcbAction.Size = new Size(454, 24);
+		mcbAction.TabIndex = 1;
+		mlblAction.AutoSize = true;
+		mlblAction.Location = new Point(13, 167);
+		mlblAction.Margin = new Padding(4, 0, 4, 0);
+		mlblAction.Name = "m_lblAction";
+		mlblAction.Size = new Size(48, 16);
+		mlblAction.TabIndex = 67;
+		mlblAction.Text = "Action:";
+		mlblActionHint.AutoSize = true;
+		mlblActionHint.ForeColor = SystemColors.ControlDarkDark;
+		mlblActionHint.Location = new Point(197, 197);
+		mlblActionHint.Margin = new Padding(4, 0, 4, 0);
+		mlblActionHint.Name = "m_lblActionHint";
+		mlblActionHint.Size = new Size(248, 16);
+		mlblActionHint.TabIndex = 66;
+		mlblActionHint.Text = "Specify the action that will occur when {0}";
+		mpanel.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+		mpanel.Location = new Point(9, 213);
+		mpanel.Margin = new Padding(0);
+		mpanel.Name = "m_panel";
+		mpanel.Size = new Size(651, 493);
+		mpanel.TabIndex = 2;
+		mlblEvent.AutoSize = true;
+		mlblEvent.Location = new Point(13, 97);
+		mlblEvent.Margin = new Padding(4, 0, 4, 0);
+		mlblEvent.Name = "m_lblEvent";
+		mlblEvent.Size = new Size(45, 16);
+		mlblEvent.TabIndex = 71;
+		mlblEvent.Text = "Event:";
+		mlblEventHint.AutoSize = true;
+		mlblEventHint.ForeColor = SystemColors.ControlDarkDark;
+		mlblEventHint.Location = new Point(197, 127);
+		mlblEventHint.Margin = new Padding(4, 0, 4, 0);
+		mlblEventHint.Name = "m_lblEventHint";
+		mlblEventHint.Size = new Size(180, 16);
+		mlblEventHint.TabIndex = 70;
+		mlblEventHint.Text = "Select event type from the list";
+		mcbEvent.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+		mcbEvent.DropDownStyle = ComboBoxStyle.DropDownList;
+		mcbEvent.FormattingEnabled = true;
+		mcbEvent.Location = new Point(200, 97);
+		mcbEvent.Name = "m_cbEvent";
+		mcbEvent.Size = new Size(454, 24);
+		mcbEvent.TabIndex = 0;
+		mchbEnabled.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+		mchbEnabled.AutoSize = true;
+		mchbEnabled.Location = new Point(16, 722);
+		mchbEnabled.Name = "m_chbEnabled";
+		mchbEnabled.Size = new Size(78, 20);
+		mchbEnabled.TabIndex = 3;
+		mchbEnabled.Text = "Enabled";
+		mchbEnabled.UseVisualStyleBackColor = true;
+		mlnkConfigureEvent.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+		mlnkConfigureEvent.AutoSize = true;
+		mlnkConfigureEvent.LinkColor = Color.FromArgb(38, 135, 200);
+		mlnkConfigureEvent.Location = new Point(585, 127);
+		mlnkConfigureEvent.Name = "m_lnkConfigureEvent";
+		mlnkConfigureEvent.Size = new Size(69, 16);
+		mlnkConfigureEvent.TabIndex = 72;
+		mlnkConfigureEvent.TabStop = true;
+		mlnkConfigureEvent.Text = "configure..";
+		mlnkConfigureEvent.Visible = false;
+		mlnkConfigureEvent.VisitedLinkColor = Color.FromArgb(38, 135, 200);
 		base.AutoScaleDimensions = new SizeF(8f, 16f);
 		base.AutoScaleMode = AutoScaleMode.Font;
 		base.ClientSize = new Size(669, 762);
-		base.Controls.Add(gclass3_1);
-		base.Controls.Add(class61_0);
-		base.Controls.Add(class0_1);
-		base.Controls.Add(class62_3);
-		base.Controls.Add(class63_1);
-		base.Controls.Add(panel_0);
-		base.Controls.Add(class0_0);
-		base.Controls.Add(class62_2);
-		base.Controls.Add(class63_0);
-		base.Controls.Add(gclass3_0);
-		base.Controls.Add(gcontrol0_0);
-		base.Controls.Add(class66_1);
-		base.Controls.Add(class66_0);
-		base.Controls.Add(class62_1);
-		base.Controls.Add(class62_0);
-		base.Controls.Add(pictureBox_0);
+		base.Controls.Add(mlnkConfigureEvent);
+		base.Controls.Add(mchbEnabled);
+		base.Controls.Add(mcbEvent);
+		base.Controls.Add(mlblEvent);
+		base.Controls.Add(mlblEventHint);
+		base.Controls.Add(mpanel);
+		base.Controls.Add(mcbAction);
+		base.Controls.Add(mlblAction);
+		base.Controls.Add(mlblActionHint);
+		base.Controls.Add(mlnkOnlineHelp);
+		base.Controls.Add(separatorLine1);
+		base.Controls.Add(mbtnOK);
+		base.Controls.Add(mbtnCancel);
+		base.Controls.Add(mlblCaption);
+		base.Controls.Add(mlblSubCaption);
+		base.Controls.Add(mimgBigIcon);
 		Font = new Font("Microsoft Sans Serif", 9.75f);
 		base.Margin = new Padding(4);
 		base.Name = "CustomActionAddEditDialog";
 		base.StartPosition = FormStartPosition.Manual;
 		Text = "<caption placeholder>";
-		((ISupportInitialize)pictureBox_0).EndInit();
+		((ISupportInitialize)mimgBigIcon).EndInit();
 		ResumeLayout(performLayout: false);
 		PerformLayout();
 	}
@@ -553,14 +553,14 @@ internal sealed class CustomActionAddEditDialog : Form0
 		return control4_1.GClass10_0.GEnum3_0 == GEnum3_0;
 	}
 
-	private void gclass3_0_Click(object sender, EventArgs e)
+	private void mlnkOnlineHelp_Click(object sender, EventArgs e)
 	{
-		method_9(Class148.Class153.String_1);
+		ShowOnlineHelp(Class148.Class153.String_1);
 	}
 
 	private void gclass3_0_Click_1(object sender, EventArgs e)
 	{
-		method_9(Class148.Class153.String_2);
+		ShowOnlineHelp(Class148.Class153.String_2);
 	}
 
 	private void OnSelectedIndexChanged(object sender, EventArgs e)
@@ -570,18 +570,18 @@ internal sealed class CustomActionAddEditDialog : Form0
 
 	private void method_21(object sender, EventArgs e)
 	{
-		class66_1.PerformClick();
+		mbtnOK.PerformClick();
 	}
 
 	private void class0_1_SelectedIndexChanged(object sender, EventArgs e)
 	{
 		OnButtonOk();
-		class63_0.Text = "Specify the action that will occur when " + class0_1.Text;
-		Control4_0.vmethod_3(GEnum2_0);
-		gclass3_1.Visible = dictionary_1[GEnum2_0].class102_0.Boolean_0;
+		mlblActionHint.Text = "Specify the action that will occur when " + mcbEvent.Text;
+		Control4_0.UpdateTaskType(GEnum2_0);
+		mlnkConfigureEvent.Visible = dictionary_1[GEnum2_0].class102_0.Boolean_0;
 	}
 
-	private void gclass3_1_Click(object sender, EventArgs e)
+	private void mlnkConfigureEvent_Click(object sender, EventArgs e)
 	{
 		dictionary_1[GEnum2_0].class102_0 = dictionary_2[GEnum2_0](dictionary_1[GEnum2_0].class102_0);
 	}
@@ -595,24 +595,24 @@ internal sealed class CustomActionAddEditDialog : Form0
 		{
 			control2.Visible = control.GClass10_0.GEnum3_0 == control2.GClass10_0.GEnum3_0;
 		}
-		int num = base.Width - panel_0.Width + control.Size_0.Width;
-		int num2 = base.Height - panel_0.Height + control.Size_0.Height;
+		int num = base.Width - mpanel.Width + control.Size_0.Width;
+		int num2 = base.Height - mpanel.Height + control.Size_0.Height;
 		MinimumSize = new Size(num, num2);
 		base.Height = num2;
-		class66_1.Enabled = control.Boolean_0;
-		control.vmethod_3(GEnum2_0);
+		mbtnOK.Enabled = control.Boolean_0;
+		control.UpdateTaskType(GEnum2_0);
 	}
 
-	private void class66_0_Click(object sender, EventArgs e)
+	private void mbtnCancel_Click(object sender, EventArgs e)
 	{
-		method_8(DialogResult.Cancel);
+		CloseDialog(DialogResult.Cancel);
 	}
 
-	private void class66_1_Click(object sender, EventArgs e)
+	private void mbtnOK_Click(object sender, EventArgs e)
 	{
-		if (Control4_0.vmethod_4())
+		if (Control4_0.ValidateInput())
 		{
-			method_8(DialogResult.OK);
+			CloseDialog(DialogResult.OK);
 		}
 	}
 }

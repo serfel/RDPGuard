@@ -11,39 +11,39 @@ internal sealed class HttpSettingsDialog : Form0
 
 	private IContainer icontainer_0;
 
-	private Class66 class66_0;
+	private Class66 mbtnSave;
 
-	private Class66 class66_1;
+	private Class66 mbtnCancel;
 
-	private GControl0 gcontrol0_0;
+	private GControl0 mspLine;
 
-	private Class62 class62_0;
+	private Class62 mlblCaption;
 
-	private PictureBox pictureBox_0;
+	private PictureBox mimgIcon;
 
-	private Class62 class62_1;
+	private Class62 mlblSubCaption;
 
-	private GClass3 gclass3_0;
+	private GClass3 mlnkOnlineHelp;
 
-	private Class61 class61_0;
+	private Class61 mchbEnableProtection;
 
-	private Class63 class63_0;
+	private Class63 mlblEnableProtectionHint;
 
-	private TextBox textBox_0;
+	private TextBox medRules;
 
-	private Class63 class63_1;
+	private Class63 mlblCustomRulesHint;
 
-	private Class62 class62_2;
+	private Class62 mlblLogDirectories;
 
-	private DirectoriesTable control15_0;
+	private DirectoriesTable mlstLogDirectories;
 
-	private Class61 class61_1;
+	private Class61 mchbOverrideStandardRules;
 
-	private Class63 class63_2;
+	private Class63 mchbOverrideStandardRulesHint;
 
-	private Class63 class63_3;
+	private Class63 mlblLogDirectoriesHint;
 
-	private GClass3 gclass3_1;
+	private GClass3 mlnkAdvancedSettings;
 
 	public Class115 Class115_0
 	{
@@ -51,20 +51,20 @@ internal sealed class HttpSettingsDialog : Form0
 		{
 			return new Class115
 			{
-				bool_0 = class61_0.Checked,
-				String_1 = control15_0.String_0,
-				bool_3 = class61_1.Checked,
-				string_11 = textBox_0.Text,
+				bool_0 = mchbEnableProtection.Checked,
+				String_1 = mlstLogDirectories.String_0,
+				bool_3 = mchbOverrideStandardRules.Checked,
+				string_11 = medRules.Text,
 				bool_4 = form2_0.Boolean_0,
 				bool_5 = form2_0.Boolean_1
 			};
 		}
 		set
 		{
-			class61_0.Checked = value.bool_0;
-			control15_0.String_0 = value.String_1;
-			class61_1.Checked = value.bool_3;
-			textBox_0.Text = value.String_2;
+			mchbEnableProtection.Checked = value.bool_0;
+			mlstLogDirectories.String_0 = value.String_1;
+			mchbOverrideStandardRules.Checked = value.bool_3;
+			medRules.Text = value.String_2;
 			form2_0.Boolean_0 = value.bool_4;
 			form2_0.Boolean_1 = value.bool_5;
 			OnLoad();
@@ -75,51 +75,51 @@ internal sealed class HttpSettingsDialog : Form0
 		: base(new Size(505, 675))
 	{
 		ValidateInput();
-		vmethod_1();
-		InitializeComponents();
+		InitializeFormPosition();
+		InitializeComponent();
 		OnButtonOk();
 		Class115_0 = class115_0;
 	}
 
-	private void InitializeComponents()
+	private void InitializeComponent()
 	{
 	}
 
 	private void OnButtonOk()
 	{
-		gclass3_0.Click += gclass3_0_Click;
-		class61_0.CheckedChanged += class61_0_CheckedChanged;
-		DirectoriesTable control = control15_0;
+		mlnkOnlineHelp.Click += mlnkOnlineHelp_Click;
+		mchbEnableProtection.CheckedChanged += mchbEnableProtection_CheckedChanged;
+		DirectoriesTable control = mlstLogDirectories;
 		control.eventHandler_0 = (EventHandler)Delegate.Combine(control.eventHandler_0, new EventHandler(SaveSettings));
-		class61_1.CheckedChanged += class61_1_CheckedChanged;
-		textBox_0.TextChanged += textBox_0_TextChanged;
-		class66_0.Click += class66_0_Click;
-		class66_1.Click += class66_1_Click;
-		gclass3_1.Click += gclass3_1_Click;
+		mchbOverrideStandardRules.CheckedChanged += mchbOverrideStandardRules_CheckedChanged;
+		medRules.TextChanged += medRules_TextChanged;
+		mbtnSave.Click += mbtnSave_Click;
+		mbtnCancel.Click += mbtnCancel_Click;
+		mlnkAdvancedSettings.Click += mlnkAdvancedSettings_Click;
 	}
 
 	private void OnButtonCancel()
 	{
-		bool flag = !class61_0.Checked || control15_0.String_0.Any();
-		if (class61_0.Checked && class61_1.Checked)
+		bool flag = !mchbEnableProtection.Checked || mlstLogDirectories.String_0.Any();
+		if (mchbEnableProtection.Checked && mchbOverrideStandardRules.Checked)
 		{
-			flag &= !string.IsNullOrEmpty(textBox_0.Text);
+			flag &= !string.IsNullOrEmpty(medRules.Text);
 		}
-		class66_0.Enabled = flag;
+		mbtnSave.Enabled = flag;
 	}
 
 	private void OnLoad()
 	{
-		bool flag = class61_0.Checked;
-		class62_2.Enabled = flag;
-		control15_0.Enabled = flag;
-		class63_3.Enabled = flag;
-		class61_1.Enabled = flag;
-		class63_2.Enabled = flag;
-		bool flag2 = class61_1.Checked;
-		textBox_0.Enabled = flag && flag2;
-		class63_1.Enabled = flag && flag2;
-		gclass3_1.Enabled = flag;
+		bool flag = mchbEnableProtection.Checked;
+		mlblLogDirectories.Enabled = flag;
+		mlstLogDirectories.Enabled = flag;
+		mlblLogDirectoriesHint.Enabled = flag;
+		mchbOverrideStandardRules.Enabled = flag;
+		mchbOverrideStandardRulesHint.Enabled = flag;
+		bool flag2 = mchbOverrideStandardRules.Checked;
+		medRules.Enabled = flag && flag2;
+		mlblCustomRulesHint.Enabled = flag && flag2;
+		mlnkAdvancedSettings.Enabled = flag;
 		OnButtonCancel();
 	}
 
@@ -134,203 +134,203 @@ internal sealed class HttpSettingsDialog : Form0
 
 	private void ValidateInput()
 	{
-		class66_0 = new Class66();
-		class66_1 = new Class66();
-		gcontrol0_0 = new GControl0();
-		class62_0 = new Class62();
-		pictureBox_0 = new PictureBox();
-		class62_1 = new Class62();
-		gclass3_0 = new GClass3();
-		class61_0 = new Class61();
-		class63_0 = new Class63();
-		textBox_0 = new TextBox();
-		class63_1 = new Class63();
-		class62_2 = new Class62();
-		control15_0 = new DirectoriesTable();
-		class61_1 = new Class61();
-		class63_2 = new Class63();
-		class63_3 = new Class63();
-		gclass3_1 = new GClass3();
-		((ISupportInitialize)pictureBox_0).BeginInit();
+		mbtnSave = new Class66();
+		mbtnCancel = new Class66();
+		mspLine = new GControl0();
+		mlblCaption = new Class62();
+		mimgIcon = new PictureBox();
+		mlblSubCaption = new Class62();
+		mlnkOnlineHelp = new GClass3();
+		mchbEnableProtection = new Class61();
+		mlblEnableProtectionHint = new Class63();
+		medRules = new TextBox();
+		mlblCustomRulesHint = new Class63();
+		mlblLogDirectories = new Class62();
+		mlstLogDirectories = new DirectoriesTable();
+		mchbOverrideStandardRules = new Class61();
+		mchbOverrideStandardRulesHint = new Class63();
+		mlblLogDirectoriesHint = new Class63();
+		mlnkAdvancedSettings = new GClass3();
+		((ISupportInitialize)mimgIcon).BeginInit();
 		SuspendLayout();
-		class66_0.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-		class66_0.Image = Resources.opts_16;
-		class66_0.Location = new Point(268, 587);
-		class66_0.Margin = new Padding(4);
-		class66_0.Name = "m_btnSave";
-		class66_0.Size = new Size(100, 36);
-		class66_0.TabIndex = 7;
-		class66_0.Text = "Save";
-		class66_0.TextAlign = ContentAlignment.MiddleRight;
-		class66_0.TextImageRelation = TextImageRelation.ImageBeforeText;
-		class66_0.UseVisualStyleBackColor = true;
-		class66_1.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-		class66_1.Image = Resources.cancl_16;
-		class66_1.Location = new Point(376, 587);
-		class66_1.Margin = new Padding(4);
-		class66_1.Name = "m_btnCancel";
-		class66_1.Size = new Size(100, 36);
-		class66_1.TabIndex = 8;
-		class66_1.Text = "Cancel";
-		class66_1.TextAlign = ContentAlignment.MiddleRight;
-		class66_1.TextImageRelation = TextImageRelation.ImageBeforeText;
-		class66_1.UseVisualStyleBackColor = true;
-		gcontrol0_0.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-		gcontrol0_0.Location = new Point(16, 81);
-		gcontrol0_0.Name = "m_spLine";
-		gcontrol0_0.Size = new Size(461, 2);
-		gcontrol0_0.TabIndex = 50;
-		gcontrol0_0.TabStop = false;
-		class62_0.AutoSize = true;
-		class62_0.Font = new Font("Microsoft Sans Serif", 9.75f, FontStyle.Bold, GraphicsUnit.Point, 204);
-		class62_0.Location = new Point(79, 15);
-		class62_0.Margin = new Padding(4, 0, 4, 0);
-		class62_0.Name = "m_lblCaption";
-		class62_0.Size = new Size(122, 16);
-		class62_0.TabIndex = 49;
-		class62_0.Text = "HTTP Protection";
-		pictureBox_0.Image = Resources.http_48;
-		pictureBox_0.Location = new Point(16, 15);
-		pictureBox_0.Margin = new Padding(4);
-		pictureBox_0.Name = "m_imgIcon";
-		pictureBox_0.Size = new Size(48, 48);
-		pictureBox_0.SizeMode = PictureBoxSizeMode.AutoSize;
-		pictureBox_0.TabIndex = 47;
-		pictureBox_0.TabStop = false;
-		class62_1.AutoSize = true;
-		class62_1.Location = new Point(79, 47);
-		class62_1.Margin = new Padding(4, 0, 4, 0);
-		class62_1.Name = "m_lblSubCaption";
-		class62_1.Size = new Size(155, 16);
-		class62_1.TabIndex = 48;
-		class62_1.Text = "HTTP protection settings";
-		gclass3_0.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-		gclass3_0.AutoSize = true;
-		gclass3_0.LinkBehavior = LinkBehavior.NeverUnderline;
-		gclass3_0.LinkColor = Color.FromArgb(38, 135, 200);
-		gclass3_0.Location = new Point(404, 9);
-		gclass3_0.Name = "m_lnkOnlineHelp";
-		gclass3_0.Size = new Size(72, 16);
-		gclass3_0.TabIndex = 9;
-		gclass3_0.TabStop = true;
-		gclass3_0.Text = "online help";
-		gclass3_0.VisitedLinkColor = Color.FromArgb(38, 135, 200);
-		class61_0.AutoSize = true;
-		class61_0.Location = new Point(16, 97);
-		class61_0.Name = "m_chbEnableProtection";
-		class61_0.Size = new Size(171, 20);
-		class61_0.TabIndex = 0;
-		class61_0.Text = "Enable HTTP protection";
-		class61_0.UseVisualStyleBackColor = true;
-		class63_0.AutoSize = true;
-		class63_0.ForeColor = SystemColors.ControlDarkDark;
-		class63_0.Location = new Point(13, 122);
-		class63_0.Name = "m_lblEnableProtectionHint";
-		class63_0.Size = new Size(213, 16);
-		class63_0.TabIndex = 58;
-		class63_0.Text = "Turn on to enable HTTP protection";
-		textBox_0.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-		textBox_0.Enabled = false;
-		textBox_0.Location = new Point(16, 387);
-		textBox_0.Multiline = true;
-		textBox_0.Name = "m_edRules";
-		textBox_0.ScrollBars = ScrollBars.Both;
-		textBox_0.Size = new Size(460, 159);
-		textBox_0.TabIndex = 2;
-		textBox_0.WordWrap = false;
-		class63_1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-		class63_1.AutoSize = true;
-		class63_1.Enabled = false;
-		class63_1.ForeColor = SystemColors.ControlDarkDark;
-		class63_1.Location = new Point(20, 550);
-		class63_1.Name = "m_lblCustomRulesHint";
-		class63_1.Size = new Size(0, 16);
-		class63_1.TabIndex = 62;
-		class62_2.AutoSize = true;
-		class62_2.Enabled = false;
-		class62_2.Location = new Point(13, 153);
-		class62_2.Name = "m_lblLogDirectories";
-		class62_2.Size = new Size(113, 16);
-		class62_2.TabIndex = 63;
-		class62_2.Text = "IIS log directories:";
-		control15_0.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-		control15_0.String_0 = new string[0];
-		control15_0.Font = new Font("Microsoft Sans Serif", 9.75f, FontStyle.Regular, GraphicsUnit.Point, 0);
-		control15_0.Location = new Point(16, 175);
-		control15_0.Margin = new Padding(4);
-		control15_0.Name = "m_lstLogDirectories";
-		control15_0.Size = new Size(460, 147);
-		control15_0.TabIndex = 64;
-		class61_1.AutoSize = true;
-		class61_1.Location = new Point(16, 361);
-		class61_1.Name = "m_chbOverrideStandardRules";
-		class61_1.Size = new Size(224, 20);
-		class61_1.TabIndex = 65;
-		class61_1.Text = "Override standard detection rules";
-		class61_1.UseVisualStyleBackColor = true;
-		class63_2.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-		class63_2.AutoSize = true;
-		class63_2.ForeColor = SystemColors.ControlDarkDark;
-		class63_2.Location = new Point(13, 554);
-		class63_2.Name = "m_chbOverrideStandardRulesHint";
-		class63_2.Size = new Size(472, 16);
-		class63_2.TabIndex = 67;
-		class63_2.Text = "Please check online help for rules syntax. Please do not edit if you are not sure.";
-		class63_3.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-		class63_3.AutoSize = true;
-		class63_3.ForeColor = SystemColors.ControlDarkDark;
-		class63_3.Location = new Point(12, 328);
-		class63_3.Name = "m_lblLogDirectoriesHint";
-		class63_3.Size = new Size(352, 16);
-		class63_3.TabIndex = 68;
-		class63_3.Text = "Select IIS log directories to monitor for dangerous patterns.";
-		gclass3_1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-		gclass3_1.AutoSize = true;
-		gclass3_1.LinkBehavior = LinkBehavior.NeverUnderline;
-		gclass3_1.LinkColor = Color.FromArgb(38, 135, 200);
-		gclass3_1.Location = new Point(12, 607);
-		gclass3_1.Name = "m_lnkAdvancedSettings";
-		gclass3_1.Size = new Size(123, 16);
-		gclass3_1.TabIndex = 69;
-		gclass3_1.TabStop = true;
-		gclass3_1.Text = "advanced settings..";
-		gclass3_1.VisitedLinkColor = Color.FromArgb(38, 135, 200);
+		mbtnSave.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+		mbtnSave.Image = Resources.opts_16;
+		mbtnSave.Location = new Point(268, 587);
+		mbtnSave.Margin = new Padding(4);
+		mbtnSave.Name = "m_btnSave";
+		mbtnSave.Size = new Size(100, 36);
+		mbtnSave.TabIndex = 7;
+		mbtnSave.Text = "Save";
+		mbtnSave.TextAlign = ContentAlignment.MiddleRight;
+		mbtnSave.TextImageRelation = TextImageRelation.ImageBeforeText;
+		mbtnSave.UseVisualStyleBackColor = true;
+		mbtnCancel.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+		mbtnCancel.Image = Resources.cancl_16;
+		mbtnCancel.Location = new Point(376, 587);
+		mbtnCancel.Margin = new Padding(4);
+		mbtnCancel.Name = "m_btnCancel";
+		mbtnCancel.Size = new Size(100, 36);
+		mbtnCancel.TabIndex = 8;
+		mbtnCancel.Text = "Cancel";
+		mbtnCancel.TextAlign = ContentAlignment.MiddleRight;
+		mbtnCancel.TextImageRelation = TextImageRelation.ImageBeforeText;
+		mbtnCancel.UseVisualStyleBackColor = true;
+		mspLine.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+		mspLine.Location = new Point(16, 81);
+		mspLine.Name = "m_spLine";
+		mspLine.Size = new Size(461, 2);
+		mspLine.TabIndex = 50;
+		mspLine.TabStop = false;
+		mlblCaption.AutoSize = true;
+		mlblCaption.Font = new Font("Microsoft Sans Serif", 9.75f, FontStyle.Bold, GraphicsUnit.Point, 204);
+		mlblCaption.Location = new Point(79, 15);
+		mlblCaption.Margin = new Padding(4, 0, 4, 0);
+		mlblCaption.Name = "m_lblCaption";
+		mlblCaption.Size = new Size(122, 16);
+		mlblCaption.TabIndex = 49;
+		mlblCaption.Text = "HTTP Protection";
+		mimgIcon.Image = Resources.http_48;
+		mimgIcon.Location = new Point(16, 15);
+		mimgIcon.Margin = new Padding(4);
+		mimgIcon.Name = "m_imgIcon";
+		mimgIcon.Size = new Size(48, 48);
+		mimgIcon.SizeMode = PictureBoxSizeMode.AutoSize;
+		mimgIcon.TabIndex = 47;
+		mimgIcon.TabStop = false;
+		mlblSubCaption.AutoSize = true;
+		mlblSubCaption.Location = new Point(79, 47);
+		mlblSubCaption.Margin = new Padding(4, 0, 4, 0);
+		mlblSubCaption.Name = "m_lblSubCaption";
+		mlblSubCaption.Size = new Size(155, 16);
+		mlblSubCaption.TabIndex = 48;
+		mlblSubCaption.Text = "HTTP protection settings";
+		mlnkOnlineHelp.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+		mlnkOnlineHelp.AutoSize = true;
+		mlnkOnlineHelp.LinkBehavior = LinkBehavior.NeverUnderline;
+		mlnkOnlineHelp.LinkColor = Color.FromArgb(38, 135, 200);
+		mlnkOnlineHelp.Location = new Point(404, 9);
+		mlnkOnlineHelp.Name = "m_lnkOnlineHelp";
+		mlnkOnlineHelp.Size = new Size(72, 16);
+		mlnkOnlineHelp.TabIndex = 9;
+		mlnkOnlineHelp.TabStop = true;
+		mlnkOnlineHelp.Text = "online help";
+		mlnkOnlineHelp.VisitedLinkColor = Color.FromArgb(38, 135, 200);
+		mchbEnableProtection.AutoSize = true;
+		mchbEnableProtection.Location = new Point(16, 97);
+		mchbEnableProtection.Name = "m_chbEnableProtection";
+		mchbEnableProtection.Size = new Size(171, 20);
+		mchbEnableProtection.TabIndex = 0;
+		mchbEnableProtection.Text = "Enable HTTP protection";
+		mchbEnableProtection.UseVisualStyleBackColor = true;
+		mlblEnableProtectionHint.AutoSize = true;
+		mlblEnableProtectionHint.ForeColor = SystemColors.ControlDarkDark;
+		mlblEnableProtectionHint.Location = new Point(13, 122);
+		mlblEnableProtectionHint.Name = "m_lblEnableProtectionHint";
+		mlblEnableProtectionHint.Size = new Size(213, 16);
+		mlblEnableProtectionHint.TabIndex = 58;
+		mlblEnableProtectionHint.Text = "Turn on to enable HTTP protection";
+		medRules.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+		medRules.Enabled = false;
+		medRules.Location = new Point(16, 387);
+		medRules.Multiline = true;
+		medRules.Name = "m_edRules";
+		medRules.ScrollBars = ScrollBars.Both;
+		medRules.Size = new Size(460, 159);
+		medRules.TabIndex = 2;
+		medRules.WordWrap = false;
+		mlblCustomRulesHint.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+		mlblCustomRulesHint.AutoSize = true;
+		mlblCustomRulesHint.Enabled = false;
+		mlblCustomRulesHint.ForeColor = SystemColors.ControlDarkDark;
+		mlblCustomRulesHint.Location = new Point(20, 550);
+		mlblCustomRulesHint.Name = "m_lblCustomRulesHint";
+		mlblCustomRulesHint.Size = new Size(0, 16);
+		mlblCustomRulesHint.TabIndex = 62;
+		mlblLogDirectories.AutoSize = true;
+		mlblLogDirectories.Enabled = false;
+		mlblLogDirectories.Location = new Point(13, 153);
+		mlblLogDirectories.Name = "m_lblLogDirectories";
+		mlblLogDirectories.Size = new Size(113, 16);
+		mlblLogDirectories.TabIndex = 63;
+		mlblLogDirectories.Text = "IIS log directories:";
+		mlstLogDirectories.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+		mlstLogDirectories.String_0 = new string[0];
+		mlstLogDirectories.Font = new Font("Microsoft Sans Serif", 9.75f, FontStyle.Regular, GraphicsUnit.Point, 0);
+		mlstLogDirectories.Location = new Point(16, 175);
+		mlstLogDirectories.Margin = new Padding(4);
+		mlstLogDirectories.Name = "m_lstLogDirectories";
+		mlstLogDirectories.Size = new Size(460, 147);
+		mlstLogDirectories.TabIndex = 64;
+		mchbOverrideStandardRules.AutoSize = true;
+		mchbOverrideStandardRules.Location = new Point(16, 361);
+		mchbOverrideStandardRules.Name = "m_chbOverrideStandardRules";
+		mchbOverrideStandardRules.Size = new Size(224, 20);
+		mchbOverrideStandardRules.TabIndex = 65;
+		mchbOverrideStandardRules.Text = "Override standard detection rules";
+		mchbOverrideStandardRules.UseVisualStyleBackColor = true;
+		mchbOverrideStandardRulesHint.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+		mchbOverrideStandardRulesHint.AutoSize = true;
+		mchbOverrideStandardRulesHint.ForeColor = SystemColors.ControlDarkDark;
+		mchbOverrideStandardRulesHint.Location = new Point(13, 554);
+		mchbOverrideStandardRulesHint.Name = "m_chbOverrideStandardRulesHint";
+		mchbOverrideStandardRulesHint.Size = new Size(472, 16);
+		mchbOverrideStandardRulesHint.TabIndex = 67;
+		mchbOverrideStandardRulesHint.Text = "Please check online help for rules syntax. Please do not edit if you are not sure.";
+		mlblLogDirectoriesHint.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+		mlblLogDirectoriesHint.AutoSize = true;
+		mlblLogDirectoriesHint.ForeColor = SystemColors.ControlDarkDark;
+		mlblLogDirectoriesHint.Location = new Point(12, 328);
+		mlblLogDirectoriesHint.Name = "m_lblLogDirectoriesHint";
+		mlblLogDirectoriesHint.Size = new Size(352, 16);
+		mlblLogDirectoriesHint.TabIndex = 68;
+		mlblLogDirectoriesHint.Text = "Select IIS log directories to monitor for dangerous patterns.";
+		mlnkAdvancedSettings.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+		mlnkAdvancedSettings.AutoSize = true;
+		mlnkAdvancedSettings.LinkBehavior = LinkBehavior.NeverUnderline;
+		mlnkAdvancedSettings.LinkColor = Color.FromArgb(38, 135, 200);
+		mlnkAdvancedSettings.Location = new Point(12, 607);
+		mlnkAdvancedSettings.Name = "m_lnkAdvancedSettings";
+		mlnkAdvancedSettings.Size = new Size(123, 16);
+		mlnkAdvancedSettings.TabIndex = 69;
+		mlnkAdvancedSettings.TabStop = true;
+		mlnkAdvancedSettings.Text = "advanced settings..";
+		mlnkAdvancedSettings.VisitedLinkColor = Color.FromArgb(38, 135, 200);
 		base.AutoScaleDimensions = new SizeF(8f, 16f);
 		base.AutoScaleMode = AutoScaleMode.Font;
 		base.ClientSize = new Size(489, 636);
-		base.Controls.Add(gclass3_1);
-		base.Controls.Add(class63_3);
-		base.Controls.Add(class63_2);
-		base.Controls.Add(class61_1);
-		base.Controls.Add(control15_0);
-		base.Controls.Add(class62_2);
-		base.Controls.Add(class63_1);
-		base.Controls.Add(textBox_0);
-		base.Controls.Add(class63_0);
-		base.Controls.Add(class61_0);
-		base.Controls.Add(gclass3_0);
-		base.Controls.Add(gcontrol0_0);
-		base.Controls.Add(class62_0);
-		base.Controls.Add(class62_1);
-		base.Controls.Add(pictureBox_0);
-		base.Controls.Add(class66_0);
-		base.Controls.Add(class66_1);
+		base.Controls.Add(mlnkAdvancedSettings);
+		base.Controls.Add(mlblLogDirectoriesHint);
+		base.Controls.Add(mchbOverrideStandardRulesHint);
+		base.Controls.Add(mchbOverrideStandardRules);
+		base.Controls.Add(mlstLogDirectories);
+		base.Controls.Add(mlblLogDirectories);
+		base.Controls.Add(mlblCustomRulesHint);
+		base.Controls.Add(medRules);
+		base.Controls.Add(mlblEnableProtectionHint);
+		base.Controls.Add(mchbEnableProtection);
+		base.Controls.Add(mlnkOnlineHelp);
+		base.Controls.Add(mspLine);
+		base.Controls.Add(mlblCaption);
+		base.Controls.Add(mlblSubCaption);
+		base.Controls.Add(mimgIcon);
+		base.Controls.Add(mbtnSave);
+		base.Controls.Add(mbtnCancel);
 		Font = new Font("Microsoft Sans Serif", 9.75f, FontStyle.Regular, GraphicsUnit.Point, 204);
 		base.Margin = new Padding(5, 4, 5, 4);
 		base.Name = "HttpSettingsDialog";
 		base.StartPosition = FormStartPosition.Manual;
 		Text = "HTTP Protection Settings";
-		((ISupportInitialize)pictureBox_0).EndInit();
+		((ISupportInitialize)mimgIcon).EndInit();
 		ResumeLayout(performLayout: false);
 		PerformLayout();
 	}
 
-	private void gclass3_0_Click(object sender, EventArgs e)
+	private void mlnkOnlineHelp_Click(object sender, EventArgs e)
 	{
-		method_9(Class148.Class151.String_3);
+		ShowOnlineHelp(Class148.Class151.String_3);
 	}
 
-	private void class61_0_CheckedChanged(object sender, EventArgs e)
+	private void mchbEnableProtection_CheckedChanged(object sender, EventArgs e)
 	{
 		OnLoad();
 	}
@@ -340,28 +340,28 @@ internal sealed class HttpSettingsDialog : Form0
 		OnButtonCancel();
 	}
 
-	private void class61_1_CheckedChanged(object sender, EventArgs e)
+	private void mchbOverrideStandardRules_CheckedChanged(object sender, EventArgs e)
 	{
 		OnLoad();
 		OnButtonCancel();
 	}
 
-	private void textBox_0_TextChanged(object sender, EventArgs e)
+	private void medRules_TextChanged(object sender, EventArgs e)
 	{
 		OnButtonCancel();
 	}
 
-	private void class66_0_Click(object sender, EventArgs e)
+	private void mbtnSave_Click(object sender, EventArgs e)
 	{
-		method_8(DialogResult.OK);
+		CloseDialog(DialogResult.OK);
 	}
 
-	private void class66_1_Click(object sender, EventArgs e)
+	private void mbtnCancel_Click(object sender, EventArgs e)
 	{
-		method_8(DialogResult.Cancel);
+		CloseDialog(DialogResult.Cancel);
 	}
 
-	private void gclass3_1_Click(object sender, EventArgs e)
+	private void mlnkAdvancedSettings_Click(object sender, EventArgs e)
 	{
 		form2_0.ShowDialog();
 	}

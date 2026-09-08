@@ -776,22 +776,22 @@ public struct GStruct1 : IFormattable, IComparable, IComparable<GStruct1>, IEqua
 
 	public static bool operator ==(GStruct1 gstruct1_4, long long_0)
 	{
-		return gstruct1_4.method_8(long_0);
+		return gstruct1_4.CloseDialog(long_0);
 	}
 
 	public static bool operator ==(long long_0, GStruct1 gstruct1_4)
 	{
-		return gstruct1_4.method_8(long_0);
+		return gstruct1_4.CloseDialog(long_0);
 	}
 
 	public static bool operator ==(GStruct1 gstruct1_4, ulong ulong_2)
 	{
-		return gstruct1_4.method_9(ulong_2);
+		return gstruct1_4.ShowOnlineHelp(ulong_2);
 	}
 
 	public static bool operator ==(ulong ulong_2, GStruct1 gstruct1_4)
 	{
-		return gstruct1_4.method_9(ulong_2);
+		return gstruct1_4.ShowOnlineHelp(ulong_2);
 	}
 
 	public static bool operator !=(GStruct1 gstruct1_4, GStruct1 gstruct1_5)
@@ -821,22 +821,22 @@ public struct GStruct1 : IFormattable, IComparable, IComparable<GStruct1>, IEqua
 
 	public static bool operator !=(GStruct1 gstruct1_4, long long_0)
 	{
-		return !gstruct1_4.method_8(long_0);
+		return !gstruct1_4.CloseDialog(long_0);
 	}
 
 	public static bool operator !=(long long_0, GStruct1 gstruct1_4)
 	{
-		return !gstruct1_4.method_8(long_0);
+		return !gstruct1_4.CloseDialog(long_0);
 	}
 
 	public static bool operator !=(GStruct1 gstruct1_4, ulong ulong_2)
 	{
-		return !gstruct1_4.method_9(ulong_2);
+		return !gstruct1_4.ShowOnlineHelp(ulong_2);
 	}
 
 	public static bool operator !=(ulong ulong_2, GStruct1 gstruct1_4)
 	{
-		return !gstruct1_4.method_9(ulong_2);
+		return !gstruct1_4.ShowOnlineHelp(ulong_2);
 	}
 
 	public int CompareTo(GStruct1 other)
@@ -978,7 +978,7 @@ public struct GStruct1 : IFormattable, IComparable, IComparable<GStruct1>, IEqua
 		return false;
 	}
 
-	public bool method_8(long long_0)
+	public bool CloseDialog(long long_0)
 	{
 		if (long_0 >= 0 && ulong_0 == (ulong)long_0)
 		{
@@ -987,7 +987,7 @@ public struct GStruct1 : IFormattable, IComparable, IComparable<GStruct1>, IEqua
 		return false;
 	}
 
-	public bool method_9(ulong ulong_2)
+	public bool ShowOnlineHelp(ulong ulong_2)
 	{
 		if (ulong_0 == ulong_2)
 		{

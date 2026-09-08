@@ -39,47 +39,47 @@ internal sealed class HttpPostTaskAddEditControl : Control4
 
 	private IContainer icontainer_0;
 
-	private Class65 class65_0;
+	private Class65 mgrbServer;
 
-	private Class65 class65_1;
+	private Class65 mgrBody;
 
-	private GClass3 gclass3_1;
+	private GClass3 mlnkSendTestRequest;
 
-	private TextBox textBox_0;
+	private TextBox medBody;
 
-	private Class63 class63_0;
+	private Class63 mlblBodyHint;
 
-	private PictureBox pictureBox_0;
+	private PictureBox mpicLoading;
 
-	private TextBox textBox_1;
+	private TextBox medEndpoint;
 
-	private Class62 class62_0;
+	private Class62 mlblEndpoint;
 
-	private Class63 class63_1;
+	private Class63 mlblEndpointHint;
 
-	private Class63 class63_2;
+	private Class63 mlblEnableBasicAuthHint;
 
-	private Class61 class61_0;
+	private Class61 mchbEnableBasicAuth;
 
-	private TextBox textBox_2;
+	private TextBox medBasicAuthPassword;
 
-	private Class62 class62_1;
+	private Class62 mlblBasicAuthPassword;
 
-	private Class63 class63_3;
+	private Class63 mlblBasicAuthPasswordHint;
 
-	private TextBox textBox_3;
+	private TextBox medBasicAuthUsername;
 
-	private Class62 class62_2;
+	private Class62 mlblBasicAuthUsername;
 
-	private Class63 class63_4;
+	private Class63 mlblBasicAuthUsernameHint;
 
-	private GClass3 gclass3_2;
+	private GClass3 mlnkXmlExample;
 
-	private GClass3 gclass3_3;
+	private GClass3 mlnkJsonExample;
 
 	public override Size Size_0 => new Size(640, 540);
 
-	public override GClass3 GClass3_0 => gclass3_1;
+	public override GClass3 GClass3_0 => mlnkSendTestRequest;
 
 	public override GClass10 GClass10_0
 	{
@@ -87,84 +87,84 @@ internal sealed class HttpPostTaskAddEditControl : Control4
 		{
 			return new Class173
 			{
-				string_2 = textBox_1.Text,
-				bool_0 = class61_0.Checked,
-				string_3 = textBox_3.Text,
-				string_4 = textBox_2.Text,
-				string_5 = textBox_0.Text
+				string_2 = medEndpoint.Text,
+				bool_0 = mchbEnableBasicAuth.Checked,
+				string_3 = medBasicAuthUsername.Text,
+				string_4 = medBasicAuthPassword.Text,
+				string_5 = medBody.Text
 			};
 		}
 		set
 		{
 			Class173 @class = value as Class173;
-			textBox_1.Text = @class.string_2;
-			class61_0.Checked = @class.bool_0;
-			textBox_3.Text = @class.string_3;
-			textBox_2.Text = @class.string_4;
-			textBox_0.Text = @class.string_5;
+			medEndpoint.Text = @class.string_2;
+			mchbEnableBasicAuth.Checked = @class.bool_0;
+			medBasicAuthUsername.Text = @class.string_3;
+			medBasicAuthPassword.Text = @class.string_4;
+			medBody.Text = @class.string_5;
 		}
 	}
 
-	public override void vmethod_3(GEnum2 genum2_1)
+	public override void UpdateTaskType(GEnum2 genum2_1)
 	{
 		genum2_0 = genum2_1;
-		gclass3_3.InitializeHandlers();
+		mlnkJsonExample.InitializeHandlers();
 	}
 
-	public override bool vmethod_4()
+	public override bool ValidateInput()
 	{
 		return true;
 	}
 
-	protected override void vmethod_0()
+	protected override void OnFormClosing()
 	{
 		InitializeComponent();
-		gclass3_3.Left = class63_0.Right;
-		gclass3_2.Left = gclass3_3.Right;
-		pictureBox_0.Image = ((Class163.Class163_0.Boolean_0 ? true : false) ? Resources.wait_16_dark : Resources.wait_16);
+		mlnkJsonExample.Left = mlblBodyHint.Right;
+		mlnkXmlExample.Left = mlnkJsonExample.Right;
+		mpicLoading.Image = ((Class163.Class163_0.Boolean_0 ? true : false) ? Resources.wait_16_dark : Resources.wait_16);
 	}
 
-	protected override void vmethod_1()
+	protected override void InitializeFormPosition()
 	{
-		class61_0.CheckedChanged += class61_0_CheckedChanged;
-		gclass3_3.Click += gclass3_3_Click;
-		gclass3_2.Click += gclass3_2_Click;
+		mchbEnableBasicAuth.CheckedChanged += mchbEnableBasicAuth_CheckedChanged;
+		mlnkJsonExample.Click += mlnkJsonExample_Click;
+		mlnkXmlExample.Click += mlnkXmlExample_Click;
 	}
 
 	private void AddTask(bool bool_1)
 	{
-		bool flag = class61_0.Checked;
-		class62_2.Enabled = bool_1 && flag;
-		class63_4.Enabled = bool_1 && flag;
-		textBox_3.Enabled = bool_1 && flag;
-		class62_1.Enabled = bool_1 && flag;
-		class63_3.Enabled = bool_1 && flag;
-		textBox_2.Enabled = bool_1 && flag;
+		bool flag = mchbEnableBasicAuth.Checked;
+		mlblBasicAuthUsername.Enabled = bool_1 && flag;
+		mlblBasicAuthUsernameHint.Enabled = bool_1 && flag;
+		medBasicAuthUsername.Enabled = bool_1 && flag;
+		mlblBasicAuthPassword.Enabled = bool_1 && flag;
+		mlblBasicAuthPasswordHint.Enabled = bool_1 && flag;
+		medBasicAuthPassword.Enabled = bool_1 && flag;
 	}
 
-	public override void vmethod_5(bool bool_1)
+	public override void SetEditMode(bool bool_1)
 	{
-		pictureBox_0.Visible = !bool_1;
-		class62_0.Enabled = bool_1;
-		textBox_1.Enabled = bool_1;
-		class63_1.Enabled = bool_1;
-		class61_0.Enabled = bool_1;
-		class63_2.Enabled = bool_1;
+		mpicLoading.Visible = !bool_1;
+		mlblEndpoint.Enabled = bool_1;
+		medEndpoint.Enabled = bool_1;
+		mlblEndpointHint.Enabled = bool_1;
+		mchbEnableBasicAuth.Enabled = bool_1;
+		mlblEnableBasicAuthHint.Enabled = bool_1;
 		AddTask(bool_1);
-		textBox_0.Enabled = bool_1;
-		class63_0.Enabled = bool_1;
-		gclass3_3.Enabled = bool_1;
-		gclass3_2.Enabled = bool_1;
-		gclass3_1.Enabled = bool_1;
+		medBody.Enabled = bool_1;
+		mlblBodyHint.Enabled = bool_1;
+		mlnkJsonExample.Enabled = bool_1;
+		mlnkXmlExample.Enabled = bool_1;
+		mlnkSendTestRequest.Enabled = bool_1;
 	}
 
-	protected override void vmethod_2()
+	protected override void AdjustFormSize()
 	{
 		base.Boolean_0 = true;
-		base.Boolean_0 &= !string.IsNullOrEmpty(textBox_1.Text);
-		bool flag = !class61_0.Checked || (!string.IsNullOrEmpty(textBox_3.Text) && !string.IsNullOrEmpty(textBox_2.Text));
+		base.Boolean_0 &= !string.IsNullOrEmpty(medEndpoint.Text);
+		bool flag = !mchbEnableBasicAuth.Checked || (!string.IsNullOrEmpty(medBasicAuthUsername.Text) && !string.IsNullOrEmpty(medBasicAuthPassword.Text));
 		base.Boolean_0 &= flag;
-		gclass3_1.Enabled = base.Boolean_0;
+		mlnkSendTestRequest.Enabled = base.Boolean_0;
 	}
 
 	protected override void Dispose(bool disposing)
@@ -178,229 +178,229 @@ internal sealed class HttpPostTaskAddEditControl : Control4
 
 	private void InitializeComponent()
 	{
-		class65_0 = new Class65();
-		textBox_2 = new TextBox();
-		class62_1 = new Class62();
-		class63_3 = new Class63();
-		textBox_3 = new TextBox();
-		class62_2 = new Class62();
-		class63_4 = new Class63();
-		class63_2 = new Class63();
-		class61_0 = new Class61();
-		textBox_1 = new TextBox();
-		class62_0 = new Class62();
-		class63_1 = new Class63();
-		class65_1 = new Class65();
-		gclass3_2 = new GClass3();
-		gclass3_3 = new GClass3();
-		pictureBox_0 = new PictureBox();
-		gclass3_1 = new GClass3();
-		textBox_0 = new TextBox();
-		class63_0 = new Class63();
-		class65_0.SuspendLayout();
-		class65_1.SuspendLayout();
-		((ISupportInitialize)pictureBox_0).BeginInit();
+		mgrbServer = new Class65();
+		medBasicAuthPassword = new TextBox();
+		mlblBasicAuthPassword = new Class62();
+		mlblBasicAuthPasswordHint = new Class63();
+		medBasicAuthUsername = new TextBox();
+		mlblBasicAuthUsername = new Class62();
+		mlblBasicAuthUsernameHint = new Class63();
+		mlblEnableBasicAuthHint = new Class63();
+		mchbEnableBasicAuth = new Class61();
+		medEndpoint = new TextBox();
+		mlblEndpoint = new Class62();
+		mlblEndpointHint = new Class63();
+		mgrBody = new Class65();
+		mlnkXmlExample = new GClass3();
+		mlnkJsonExample = new GClass3();
+		mpicLoading = new PictureBox();
+		mlnkSendTestRequest = new GClass3();
+		medBody = new TextBox();
+		mlblBodyHint = new Class63();
+		mgrbServer.SuspendLayout();
+		mgrBody.SuspendLayout();
+		((ISupportInitialize)mpicLoading).BeginInit();
 		SuspendLayout();
-		class65_0.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-		class65_0.Controls.Add(textBox_2);
-		class65_0.Controls.Add(class62_1);
-		class65_0.Controls.Add(class63_3);
-		class65_0.Controls.Add(textBox_3);
-		class65_0.Controls.Add(class62_2);
-		class65_0.Controls.Add(class63_4);
-		class65_0.Controls.Add(class63_2);
-		class65_0.Controls.Add(class61_0);
-		class65_0.Controls.Add(textBox_1);
-		class65_0.Controls.Add(class62_0);
-		class65_0.Controls.Add(class63_1);
-		class65_0.Location = new Point(4, 4);
-		class65_0.Margin = new Padding(4);
-		class65_0.Name = "m_grbServer";
-		class65_0.Padding = new Padding(4);
-		class65_0.Size = new Size(632, 288);
-		class65_0.TabIndex = 38;
-		class65_0.TabStop = false;
-		class65_0.Text = "Server";
-		textBox_2.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-		textBox_2.Enabled = false;
-		textBox_2.Location = new Point(187, 227);
-		textBox_2.Name = "m_edBasicAuthPassword";
-		textBox_2.Size = new Size(435, 22);
-		textBox_2.TabIndex = 83;
-		textBox_2.UseSystemPasswordChar = true;
-		class62_1.AutoSize = true;
-		class62_1.Enabled = false;
-		class62_1.Location = new Point(16, 227);
-		class62_1.Name = "m_lblBasicAuthPassword";
-		class62_1.Size = new Size(71, 16);
-		class62_1.TabIndex = 85;
-		class62_1.Text = "Password:";
-		class63_3.AutoSize = true;
-		class63_3.Enabled = false;
-		class63_3.ForeColor = SystemColors.ControlDarkDark;
-		class63_3.Location = new Point(184, 255);
-		class63_3.Name = "m_lblBasicAuthPasswordHint";
-		class63_3.Size = new Size(249, 16);
-		class63_3.TabIndex = 84;
-		class63_3.Text = "Password for Basic HTTP Authentication";
-		textBox_3.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-		textBox_3.Enabled = false;
-		textBox_3.Location = new Point(187, 162);
-		textBox_3.Name = "m_edBasicAuthUsername";
-		textBox_3.Size = new Size(435, 22);
-		textBox_3.TabIndex = 80;
-		class62_2.AutoSize = true;
-		class62_2.Enabled = false;
-		class62_2.Location = new Point(16, 162);
-		class62_2.Name = "m_lblBasicAuthUsername";
-		class62_2.Size = new Size(74, 16);
-		class62_2.TabIndex = 82;
-		class62_2.Text = "Username:";
-		class63_4.AutoSize = true;
-		class63_4.Enabled = false;
-		class63_4.ForeColor = SystemColors.ControlDarkDark;
-		class63_4.Location = new Point(184, 190);
-		class63_4.Name = "m_lblBasicAuthUsernameHint";
-		class63_4.Size = new Size(255, 16);
-		class63_4.TabIndex = 81;
-		class63_4.Text = "User name for Basic HTTP Authentication";
-		class63_2.AutoSize = true;
-		class63_2.ForeColor = SystemColors.ControlDarkDark;
-		class63_2.Location = new Point(16, 123);
-		class63_2.Name = "m_lblEnableBasicAuthHint";
-		class63_2.Size = new Size(509, 16);
-		class63_2.TabIndex = 79;
-		class63_2.Text = "Secure connection over SSL/TLS (HTTPS) is recommended if you enable this option";
-		class61_0.AutoSize = true;
-		class61_0.Location = new Point(19, 97);
-		class61_0.Name = "m_chbEnableBasicAuth";
-		class61_0.Size = new Size(233, 20);
-		class61_0.TabIndex = 78;
-		class61_0.Text = "Enable Basic HTTP Authentication";
-		class61_0.UseVisualStyleBackColor = true;
-		textBox_1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-		textBox_1.Location = new Point(187, 32);
-		textBox_1.Name = "m_edEndpoint";
-		textBox_1.Size = new Size(435, 22);
-		textBox_1.TabIndex = 70;
-		class62_0.AutoSize = true;
-		class62_0.Location = new Point(16, 32);
-		class62_0.Name = "m_lblEndpoint";
-		class62_0.Size = new Size(64, 16);
-		class62_0.TabIndex = 74;
-		class62_0.Text = "Endpoint:";
-		class63_1.AutoSize = true;
-		class63_1.ForeColor = SystemColors.ControlDarkDark;
-		class63_1.Location = new Point(184, 60);
-		class63_1.Name = "m_lblEndpointHint";
-		class63_1.Size = new Size(269, 16);
-		class63_1.TabIndex = 73;
-		class63_1.Text = "Example https://server.com:8443/page.aspx";
-		class65_1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-		class65_1.Controls.Add(gclass3_2);
-		class65_1.Controls.Add(gclass3_3);
-		class65_1.Controls.Add(pictureBox_0);
-		class65_1.Controls.Add(gclass3_1);
-		class65_1.Controls.Add(textBox_0);
-		class65_1.Controls.Add(class63_0);
-		class65_1.Location = new Point(4, 300);
-		class65_1.Margin = new Padding(4);
-		class65_1.Name = "m_grBody";
-		class65_1.Padding = new Padding(4);
-		class65_1.Size = new Size(632, 336);
-		class65_1.TabIndex = 39;
-		class65_1.TabStop = false;
-		class65_1.Text = "POST Body";
-		gclass3_2.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-		gclass3_2.AutoSize = true;
-		gclass3_2.Font = new Font("Microsoft Sans Serif", 9f, FontStyle.Regular, GraphicsUnit.Point, 204);
-		gclass3_2.LinkColor = Color.FromArgb(38, 135, 200);
-		gclass3_2.Location = new Point(255, 313);
-		gclass3_2.Name = "m_lnkXmlExample";
-		gclass3_2.RightToLeft = RightToLeft.No;
-		gclass3_2.Size = new Size(85, 15);
-		gclass3_2.TabIndex = 77;
-		gclass3_2.TabStop = true;
-		gclass3_2.Text = "XML Example";
-		gclass3_2.VisitedLinkColor = Color.FromArgb(38, 135, 200);
-		gclass3_3.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-		gclass3_3.AutoSize = true;
-		gclass3_3.Font = new Font("Microsoft Sans Serif", 9f, FontStyle.Regular, GraphicsUnit.Point, 204);
-		gclass3_3.LinkColor = Color.FromArgb(38, 135, 200);
-		gclass3_3.Location = new Point(148, 313);
-		gclass3_3.Name = "m_lnkJsonExample";
-		gclass3_3.RightToLeft = RightToLeft.No;
-		gclass3_3.Size = new Size(91, 15);
-		gclass3_3.TabIndex = 76;
-		gclass3_3.TabStop = true;
-		gclass3_3.Text = "JSON Example";
-		gclass3_3.VisitedLinkColor = Color.FromArgb(38, 135, 200);
-		pictureBox_0.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-		pictureBox_0.Location = new Point(491, 313);
-		pictureBox_0.Name = "m_picLoading";
-		pictureBox_0.Size = new Size(16, 16);
-		pictureBox_0.TabIndex = 75;
-		pictureBox_0.TabStop = false;
-		pictureBox_0.Visible = false;
-		gclass3_1.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-		gclass3_1.AutoSize = true;
-		gclass3_1.LinkColor = Color.FromArgb(38, 135, 200);
-		gclass3_1.Location = new Point(513, 313);
-		gclass3_1.Name = "m_lnkSendTestRequest";
-		gclass3_1.RightToLeft = RightToLeft.No;
-		gclass3_1.Size = new Size(112, 16);
-		gclass3_1.TabIndex = 16;
-		gclass3_1.TabStop = true;
-		gclass3_1.Text = "send test request";
-		gclass3_1.VisitedLinkColor = Color.FromArgb(38, 135, 200);
-		textBox_0.AcceptsReturn = true;
-		textBox_0.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-		textBox_0.Font = new Font("Courier New", 9.75f, FontStyle.Regular, GraphicsUnit.Point, 204);
-		textBox_0.Location = new Point(8, 23);
-		textBox_0.Margin = new Padding(4);
-		textBox_0.Multiline = true;
-		textBox_0.Name = "m_edBody";
-		textBox_0.ScrollBars = ScrollBars.Vertical;
-		textBox_0.Size = new Size(615, 283);
-		textBox_0.TabIndex = 15;
-		class63_0.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-		class63_0.AutoSize = true;
-		class63_0.ForeColor = SystemColors.ControlDarkDark;
-		class63_0.Location = new Point(8, 313);
-		class63_0.Margin = new Padding(4, 0, 4, 0);
-		class63_0.Name = "m_lblBodyHint";
-		class63_0.Size = new Size(130, 16);
-		class63_0.TabIndex = 72;
-		class63_0.Text = " Specify POST body";
+		mgrbServer.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+		mgrbServer.Controls.Add(medBasicAuthPassword);
+		mgrbServer.Controls.Add(mlblBasicAuthPassword);
+		mgrbServer.Controls.Add(mlblBasicAuthPasswordHint);
+		mgrbServer.Controls.Add(medBasicAuthUsername);
+		mgrbServer.Controls.Add(mlblBasicAuthUsername);
+		mgrbServer.Controls.Add(mlblBasicAuthUsernameHint);
+		mgrbServer.Controls.Add(mlblEnableBasicAuthHint);
+		mgrbServer.Controls.Add(mchbEnableBasicAuth);
+		mgrbServer.Controls.Add(medEndpoint);
+		mgrbServer.Controls.Add(mlblEndpoint);
+		mgrbServer.Controls.Add(mlblEndpointHint);
+		mgrbServer.Location = new Point(4, 4);
+		mgrbServer.Margin = new Padding(4);
+		mgrbServer.Name = "m_grbServer";
+		mgrbServer.Padding = new Padding(4);
+		mgrbServer.Size = new Size(632, 288);
+		mgrbServer.TabIndex = 38;
+		mgrbServer.TabStop = false;
+		mgrbServer.Text = "Server";
+		medBasicAuthPassword.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+		medBasicAuthPassword.Enabled = false;
+		medBasicAuthPassword.Location = new Point(187, 227);
+		medBasicAuthPassword.Name = "m_edBasicAuthPassword";
+		medBasicAuthPassword.Size = new Size(435, 22);
+		medBasicAuthPassword.TabIndex = 83;
+		medBasicAuthPassword.UseSystemPasswordChar = true;
+		mlblBasicAuthPassword.AutoSize = true;
+		mlblBasicAuthPassword.Enabled = false;
+		mlblBasicAuthPassword.Location = new Point(16, 227);
+		mlblBasicAuthPassword.Name = "m_lblBasicAuthPassword";
+		mlblBasicAuthPassword.Size = new Size(71, 16);
+		mlblBasicAuthPassword.TabIndex = 85;
+		mlblBasicAuthPassword.Text = "Password:";
+		mlblBasicAuthPasswordHint.AutoSize = true;
+		mlblBasicAuthPasswordHint.Enabled = false;
+		mlblBasicAuthPasswordHint.ForeColor = SystemColors.ControlDarkDark;
+		mlblBasicAuthPasswordHint.Location = new Point(184, 255);
+		mlblBasicAuthPasswordHint.Name = "m_lblBasicAuthPasswordHint";
+		mlblBasicAuthPasswordHint.Size = new Size(249, 16);
+		mlblBasicAuthPasswordHint.TabIndex = 84;
+		mlblBasicAuthPasswordHint.Text = "Password for Basic HTTP Authentication";
+		medBasicAuthUsername.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+		medBasicAuthUsername.Enabled = false;
+		medBasicAuthUsername.Location = new Point(187, 162);
+		medBasicAuthUsername.Name = "m_edBasicAuthUsername";
+		medBasicAuthUsername.Size = new Size(435, 22);
+		medBasicAuthUsername.TabIndex = 80;
+		mlblBasicAuthUsername.AutoSize = true;
+		mlblBasicAuthUsername.Enabled = false;
+		mlblBasicAuthUsername.Location = new Point(16, 162);
+		mlblBasicAuthUsername.Name = "m_lblBasicAuthUsername";
+		mlblBasicAuthUsername.Size = new Size(74, 16);
+		mlblBasicAuthUsername.TabIndex = 82;
+		mlblBasicAuthUsername.Text = "Username:";
+		mlblBasicAuthUsernameHint.AutoSize = true;
+		mlblBasicAuthUsernameHint.Enabled = false;
+		mlblBasicAuthUsernameHint.ForeColor = SystemColors.ControlDarkDark;
+		mlblBasicAuthUsernameHint.Location = new Point(184, 190);
+		mlblBasicAuthUsernameHint.Name = "m_lblBasicAuthUsernameHint";
+		mlblBasicAuthUsernameHint.Size = new Size(255, 16);
+		mlblBasicAuthUsernameHint.TabIndex = 81;
+		mlblBasicAuthUsernameHint.Text = "User name for Basic HTTP Authentication";
+		mlblEnableBasicAuthHint.AutoSize = true;
+		mlblEnableBasicAuthHint.ForeColor = SystemColors.ControlDarkDark;
+		mlblEnableBasicAuthHint.Location = new Point(16, 123);
+		mlblEnableBasicAuthHint.Name = "m_lblEnableBasicAuthHint";
+		mlblEnableBasicAuthHint.Size = new Size(509, 16);
+		mlblEnableBasicAuthHint.TabIndex = 79;
+		mlblEnableBasicAuthHint.Text = "Secure connection over SSL/TLS (HTTPS) is recommended if you enable this option";
+		mchbEnableBasicAuth.AutoSize = true;
+		mchbEnableBasicAuth.Location = new Point(19, 97);
+		mchbEnableBasicAuth.Name = "m_chbEnableBasicAuth";
+		mchbEnableBasicAuth.Size = new Size(233, 20);
+		mchbEnableBasicAuth.TabIndex = 78;
+		mchbEnableBasicAuth.Text = "Enable Basic HTTP Authentication";
+		mchbEnableBasicAuth.UseVisualStyleBackColor = true;
+		medEndpoint.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+		medEndpoint.Location = new Point(187, 32);
+		medEndpoint.Name = "m_edEndpoint";
+		medEndpoint.Size = new Size(435, 22);
+		medEndpoint.TabIndex = 70;
+		mlblEndpoint.AutoSize = true;
+		mlblEndpoint.Location = new Point(16, 32);
+		mlblEndpoint.Name = "m_lblEndpoint";
+		mlblEndpoint.Size = new Size(64, 16);
+		mlblEndpoint.TabIndex = 74;
+		mlblEndpoint.Text = "Endpoint:";
+		mlblEndpointHint.AutoSize = true;
+		mlblEndpointHint.ForeColor = SystemColors.ControlDarkDark;
+		mlblEndpointHint.Location = new Point(184, 60);
+		mlblEndpointHint.Name = "m_lblEndpointHint";
+		mlblEndpointHint.Size = new Size(269, 16);
+		mlblEndpointHint.TabIndex = 73;
+		mlblEndpointHint.Text = "Example https://server.com:8443/page.aspx";
+		mgrBody.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+		mgrBody.Controls.Add(mlnkXmlExample);
+		mgrBody.Controls.Add(mlnkJsonExample);
+		mgrBody.Controls.Add(mpicLoading);
+		mgrBody.Controls.Add(mlnkSendTestRequest);
+		mgrBody.Controls.Add(medBody);
+		mgrBody.Controls.Add(mlblBodyHint);
+		mgrBody.Location = new Point(4, 300);
+		mgrBody.Margin = new Padding(4);
+		mgrBody.Name = "m_grBody";
+		mgrBody.Padding = new Padding(4);
+		mgrBody.Size = new Size(632, 336);
+		mgrBody.TabIndex = 39;
+		mgrBody.TabStop = false;
+		mgrBody.Text = "POST Body";
+		mlnkXmlExample.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+		mlnkXmlExample.AutoSize = true;
+		mlnkXmlExample.Font = new Font("Microsoft Sans Serif", 9f, FontStyle.Regular, GraphicsUnit.Point, 204);
+		mlnkXmlExample.LinkColor = Color.FromArgb(38, 135, 200);
+		mlnkXmlExample.Location = new Point(255, 313);
+		mlnkXmlExample.Name = "m_lnkXmlExample";
+		mlnkXmlExample.RightToLeft = RightToLeft.No;
+		mlnkXmlExample.Size = new Size(85, 15);
+		mlnkXmlExample.TabIndex = 77;
+		mlnkXmlExample.TabStop = true;
+		mlnkXmlExample.Text = "XML Example";
+		mlnkXmlExample.VisitedLinkColor = Color.FromArgb(38, 135, 200);
+		mlnkJsonExample.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+		mlnkJsonExample.AutoSize = true;
+		mlnkJsonExample.Font = new Font("Microsoft Sans Serif", 9f, FontStyle.Regular, GraphicsUnit.Point, 204);
+		mlnkJsonExample.LinkColor = Color.FromArgb(38, 135, 200);
+		mlnkJsonExample.Location = new Point(148, 313);
+		mlnkJsonExample.Name = "m_lnkJsonExample";
+		mlnkJsonExample.RightToLeft = RightToLeft.No;
+		mlnkJsonExample.Size = new Size(91, 15);
+		mlnkJsonExample.TabIndex = 76;
+		mlnkJsonExample.TabStop = true;
+		mlnkJsonExample.Text = "JSON Example";
+		mlnkJsonExample.VisitedLinkColor = Color.FromArgb(38, 135, 200);
+		mpicLoading.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+		mpicLoading.Location = new Point(491, 313);
+		mpicLoading.Name = "m_picLoading";
+		mpicLoading.Size = new Size(16, 16);
+		mpicLoading.TabIndex = 75;
+		mpicLoading.TabStop = false;
+		mpicLoading.Visible = false;
+		mlnkSendTestRequest.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+		mlnkSendTestRequest.AutoSize = true;
+		mlnkSendTestRequest.LinkColor = Color.FromArgb(38, 135, 200);
+		mlnkSendTestRequest.Location = new Point(513, 313);
+		mlnkSendTestRequest.Name = "m_lnkSendTestRequest";
+		mlnkSendTestRequest.RightToLeft = RightToLeft.No;
+		mlnkSendTestRequest.Size = new Size(112, 16);
+		mlnkSendTestRequest.TabIndex = 16;
+		mlnkSendTestRequest.TabStop = true;
+		mlnkSendTestRequest.Text = "send test request";
+		mlnkSendTestRequest.VisitedLinkColor = Color.FromArgb(38, 135, 200);
+		medBody.AcceptsReturn = true;
+		medBody.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+		medBody.Font = new Font("Courier New", 9.75f, FontStyle.Regular, GraphicsUnit.Point, 204);
+		medBody.Location = new Point(8, 23);
+		medBody.Margin = new Padding(4);
+		medBody.Multiline = true;
+		medBody.Name = "m_edBody";
+		medBody.ScrollBars = ScrollBars.Vertical;
+		medBody.Size = new Size(615, 283);
+		medBody.TabIndex = 15;
+		mlblBodyHint.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+		mlblBodyHint.AutoSize = true;
+		mlblBodyHint.ForeColor = SystemColors.ControlDarkDark;
+		mlblBodyHint.Location = new Point(8, 313);
+		mlblBodyHint.Margin = new Padding(4, 0, 4, 0);
+		mlblBodyHint.Name = "m_lblBodyHint";
+		mlblBodyHint.Size = new Size(130, 16);
+		mlblBodyHint.TabIndex = 72;
+		mlblBodyHint.Text = " Specify POST body";
 		base.AutoScaleDimensions = new SizeF(8f, 16f);
 		base.AutoScaleMode = AutoScaleMode.Font;
-		base.Controls.Add(class65_1);
-		base.Controls.Add(class65_0);
+		base.Controls.Add(mgrBody);
+		base.Controls.Add(mgrbServer);
 		Font = new Font("Microsoft Sans Serif", 9.75f, FontStyle.Regular, GraphicsUnit.Point, 204);
 		base.Margin = new Padding(4);
 		base.Name = "HttpPostTaskAddEditControl";
 		base.Size = new Size(640, 640);
-		class65_0.ResumeLayout(performLayout: false);
-		class65_0.PerformLayout();
-		class65_1.ResumeLayout(performLayout: false);
-		class65_1.PerformLayout();
-		((ISupportInitialize)pictureBox_0).EndInit();
+		mgrbServer.ResumeLayout(performLayout: false);
+		mgrbServer.PerformLayout();
+		mgrBody.ResumeLayout(performLayout: false);
+		mgrBody.PerformLayout();
+		((ISupportInitialize)mpicLoading).EndInit();
 		ResumeLayout(performLayout: false);
 	}
 
-	private void class61_0_CheckedChanged(object sender, EventArgs e)
+	private void mchbEnableBasicAuth_CheckedChanged(object sender, EventArgs e)
 	{
 		AddTask(bool_1: true);
-		vmethod_2();
+		AdjustFormSize();
 	}
 
-	private void gclass3_3_Click(object sender, EventArgs e)
+	private void mlnkJsonExample_Click(object sender, EventArgs e)
 	{
-		textBox_0.Text = string.Format(dictionary_0[genum2_0][1], Class185.Class185_0[genum2_0].Replace(" ", ""), "{", "}");
+		medBody.Text = string.Format(dictionary_0[genum2_0][1], Class185.Class185_0[genum2_0].Replace(" ", ""), "{", "}");
 	}
 
-	private void gclass3_2_Click(object sender, EventArgs e)
+	private void mlnkXmlExample_Click(object sender, EventArgs e)
 	{
-		textBox_0.Text = string.Format(dictionary_0[genum2_0][0], Class185.Class185_0[genum2_0].Replace(" ", ""));
+		medBody.Text = string.Format(dictionary_0[genum2_0][0], Class185.Class185_0[genum2_0].Replace(" ", ""));
 	}
 }

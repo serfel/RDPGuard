@@ -10,115 +10,115 @@ internal sealed class SmtpServerAddEditDialog : Form0
 
 	private IContainer icontainer_0;
 
-	private PictureBox pictureBox_0;
+	private PictureBox mimgBigIcon;
 
-	private Class62 class62_0;
+	private Class62 mlblSubCaption;
 
-	private Class62 class62_1;
+	private Class62 mlblCaption;
 
-	private Class66 class66_0;
+	private Class66 mbtnCancel;
 
-	private Class66 class66_1;
+	private Class66 mbtnOK;
 
-	private GControl0 gcontrol0_0;
+	private GControl0 separatorLine1;
 
-	private GClass3 gclass3_0;
+	private GClass3 mlnkOnlineHelp;
 
-	private Class65 class65_0;
+	private Class65 mgrbTransport;
 
-	private TextBox textBox_0;
+	private TextBox medHost;
 
-	private Class62 class62_2;
+	private Class62 mlblHost;
 
-	private Class63 class63_0;
+	private Class63 mlblHostHint;
 
-	private Class62 class62_3;
+	private Class62 mlblPort;
 
-	private Class63 class63_1;
+	private Class63 mlblPortHint;
 
-	private NumericUpDown numericUpDown_0;
+	private NumericUpDown mnumPort;
 
-	private Class65 class65_1;
+	private Class65 mgrbAuthentication;
 
-	private TextBox textBox_1;
+	private TextBox medPassword;
 
-	private Class62 class62_4;
+	private Class62 mlblPassword;
 
-	private Class63 class63_2;
+	private Class63 mlblPasswordHint;
 
-	private TextBox textBox_2;
+	private TextBox medUsername;
 
-	private Class62 class62_5;
+	private Class62 mlblUsername;
 
-	private Class63 class63_3;
+	private Class63 mlblUsernameHint;
 
-	private Class63 class63_4;
+	private Class63 mlblSSLHint;
 
-	private Class61 class61_0;
+	private Class61 mchbSSL;
 
 	public Class109 Class109_0
 	{
 		get
 		{
-			class109_0.string_1 = textBox_0.Text;
-			class109_0.ushort_0 = (ushort)numericUpDown_0.Value;
-			class109_0.bool_0 = class61_0.Checked;
-			class109_0.string_2 = textBox_2.Text;
-			class109_0.string_3 = textBox_1.Text;
+			class109_0.string_1 = medHost.Text;
+			class109_0.ushort_0 = (ushort)mnumPort.Value;
+			class109_0.bool_0 = mchbSSL.Checked;
+			class109_0.string_2 = medUsername.Text;
+			class109_0.string_3 = medPassword.Text;
 			return class109_0;
 		}
 		set
 		{
 			class109_0 = value;
-			textBox_0.Text = class109_0.string_1;
-			numericUpDown_0.Value = class109_0.ushort_0;
-			class61_0.Checked = class109_0.bool_0;
-			textBox_2.Text = class109_0.string_2;
-			textBox_1.Text = class109_0.string_3;
+			medHost.Text = class109_0.string_1;
+			mnumPort.Value = class109_0.ushort_0;
+			mchbSSL.Checked = class109_0.bool_0;
+			medUsername.Text = class109_0.string_2;
+			medPassword.Text = class109_0.string_3;
 		}
 	}
 
-	protected override Button Button_0 => class66_1;
+	protected override Button Button_0 => mbtnOK;
 
 	public SmtpServerAddEditDialog(Class109 class109_1)
 		: base(new Size(560, 580))
 	{
 		OnButtonOk();
-		vmethod_1();
+		InitializeFormPosition();
 		if (class109_1 == null)
 		{
 			Class109_0 = new Class109();
 			Text = "Add New SMTP Server";
-			class62_1.Text = "New SMTP Server";
-			class62_0.Text = "Specify SMTP Server properties and click Add new server";
-			class66_1.Text = "Add new server";
-			pictureBox_0.Image = Resources.mail_server_add_48;
-			gclass3_0.Click += gclass3_0_Click;
+			mlblCaption.Text = "New SMTP Server";
+			mlblSubCaption.Text = "Specify SMTP Server properties and click Add new server";
+			mbtnOK.Text = "Add new server";
+			mimgBigIcon.Image = Resources.mail_server_add_48;
+			mlnkOnlineHelp.Click += mlnkOnlineHelp_Click;
 		}
 		else
 		{
 			Class109_0 = class109_1;
 			Text = "Edit SMTP Server";
-			class62_1.Text = "Edit SMTP Server";
-			class62_0.Text = "Edit SMTP Server properties and click Save changes";
-			class66_1.Text = "Save changes";
-			pictureBox_0.Image = Resources.mail_server_edit_48;
-			gclass3_0.Click += gclass3_0_Click_1;
+			mlblCaption.Text = "Edit SMTP Server";
+			mlblSubCaption.Text = "Edit SMTP Server properties and click Save changes";
+			mbtnOK.Text = "Save changes";
+			mimgBigIcon.Image = Resources.mail_server_edit_48;
+			mlnkOnlineHelp.Click += gclass3_0_Click_1;
 		}
-		InitializeComponents();
-		vmethod_0();
+		InitializeComponent();
+		OnFormClosing();
 	}
 
-	private void InitializeComponents()
+	private void InitializeComponent()
 	{
 		base.Shown += Form26_Shown;
-		class66_1.Click += class66_1_Click;
-		class66_0.Click += class66_0_Click;
+		mbtnOK.Click += mbtnOK_Click;
+		mbtnCancel.Click += mbtnCancel_Click;
 	}
 
-	protected override void vmethod_0()
+	protected override void OnFormClosing()
 	{
-		Button_0.Enabled = !string.IsNullOrEmpty(textBox_0.Text);
+		Button_0.Enabled = !string.IsNullOrEmpty(medHost.Text);
 	}
 
 	protected override void Dispose(bool disposing)
@@ -132,261 +132,261 @@ internal sealed class SmtpServerAddEditDialog : Form0
 
 	private void OnButtonOk()
 	{
-		pictureBox_0 = new PictureBox();
-		class62_0 = new Class62();
-		class62_1 = new Class62();
-		class66_0 = new Class66();
-		class66_1 = new Class66();
-		gcontrol0_0 = new GControl0();
-		gclass3_0 = new GClass3();
-		class65_0 = new Class65();
-		class63_4 = new Class63();
-		class61_0 = new Class61();
-		numericUpDown_0 = new NumericUpDown();
-		class62_3 = new Class62();
-		class63_1 = new Class63();
-		textBox_0 = new TextBox();
-		class62_2 = new Class62();
-		class63_0 = new Class63();
-		class65_1 = new Class65();
-		textBox_1 = new TextBox();
-		class62_4 = new Class62();
-		class63_2 = new Class63();
-		textBox_2 = new TextBox();
-		class62_5 = new Class62();
-		class63_3 = new Class63();
-		((ISupportInitialize)pictureBox_0).BeginInit();
-		class65_0.SuspendLayout();
-		((ISupportInitialize)numericUpDown_0).BeginInit();
-		class65_1.SuspendLayout();
+		mimgBigIcon = new PictureBox();
+		mlblSubCaption = new Class62();
+		mlblCaption = new Class62();
+		mbtnCancel = new Class66();
+		mbtnOK = new Class66();
+		separatorLine1 = new GControl0();
+		mlnkOnlineHelp = new GClass3();
+		mgrbTransport = new Class65();
+		mlblSSLHint = new Class63();
+		mchbSSL = new Class61();
+		mnumPort = new NumericUpDown();
+		mlblPort = new Class62();
+		mlblPortHint = new Class63();
+		medHost = new TextBox();
+		mlblHost = new Class62();
+		mlblHostHint = new Class63();
+		mgrbAuthentication = new Class65();
+		medPassword = new TextBox();
+		mlblPassword = new Class62();
+		mlblPasswordHint = new Class63();
+		medUsername = new TextBox();
+		mlblUsername = new Class62();
+		mlblUsernameHint = new Class63();
+		((ISupportInitialize)mimgBigIcon).BeginInit();
+		mgrbTransport.SuspendLayout();
+		((ISupportInitialize)mnumPort).BeginInit();
+		mgrbAuthentication.SuspendLayout();
 		SuspendLayout();
-		pictureBox_0.Location = new Point(16, 15);
-		pictureBox_0.Margin = new Padding(4);
-		pictureBox_0.Name = "m_imgBigIcon";
-		pictureBox_0.Size = new Size(48, 48);
-		pictureBox_0.SizeMode = PictureBoxSizeMode.AutoSize;
-		pictureBox_0.TabIndex = 0;
-		pictureBox_0.TabStop = false;
-		class62_0.AutoSize = true;
-		class62_0.Location = new Point(79, 47);
-		class62_0.Margin = new Padding(4, 0, 4, 0);
-		class62_0.Name = "m_lblSubCaption";
-		class62_0.Size = new Size(163, 16);
-		class62_0.TabIndex = 4;
-		class62_0.Text = "<description placeholder>";
-		class62_1.AutoSize = true;
-		class62_1.Font = new Font("Microsoft Sans Serif", 9.75f, FontStyle.Bold, GraphicsUnit.Point, 204);
-		class62_1.Location = new Point(79, 15);
-		class62_1.Margin = new Padding(4, 0, 4, 0);
-		class62_1.Name = "m_lblCaption";
-		class62_1.Size = new Size(187, 16);
-		class62_1.TabIndex = 14;
-		class62_1.Text = "<subcaption placeholder>";
-		class66_0.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-		class66_0.Image = Resources.cancl_16;
-		class66_0.Location = new Point(431, 493);
-		class66_0.Margin = new Padding(4);
-		class66_0.Name = "m_btnCancel";
-		class66_0.Size = new Size(100, 36);
-		class66_0.TabIndex = 6;
-		class66_0.Text = "Cancel";
-		class66_0.TextImageRelation = TextImageRelation.ImageBeforeText;
-		class66_0.UseVisualStyleBackColor = true;
-		class66_1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-		class66_1.Enabled = false;
-		class66_1.Image = Resources.opts_16;
-		class66_1.Location = new Point(271, 493);
-		class66_1.Margin = new Padding(4);
-		class66_1.Name = "m_btnOK";
-		class66_1.Size = new Size(152, 36);
-		class66_1.TabIndex = 5;
-		class66_1.Text = "<ok_button>";
-		class66_1.TextImageRelation = TextImageRelation.ImageBeforeText;
-		class66_1.UseVisualStyleBackColor = true;
-		gcontrol0_0.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-		gcontrol0_0.Location = new Point(16, 73);
-		gcontrol0_0.Name = "separatorLine1";
-		gcontrol0_0.Size = new Size(513, 10);
-		gcontrol0_0.TabIndex = 35;
-		gcontrol0_0.TabStop = false;
-		gclass3_0.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-		gclass3_0.AutoSize = true;
-		gclass3_0.LinkColor = Color.FromArgb(38, 135, 200);
-		gclass3_0.Location = new Point(459, 9);
-		gclass3_0.Name = "m_lnkOnlineHelp";
-		gclass3_0.Size = new Size(73, 16);
-		gclass3_0.TabIndex = 7;
-		gclass3_0.TabStop = true;
-		gclass3_0.Text = "online help";
-		gclass3_0.VisitedLinkColor = Color.FromArgb(38, 135, 200);
-		class65_0.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-		class65_0.Controls.Add(class63_4);
-		class65_0.Controls.Add(class61_0);
-		class65_0.Controls.Add(numericUpDown_0);
-		class65_0.Controls.Add(class62_3);
-		class65_0.Controls.Add(class63_1);
-		class65_0.Controls.Add(textBox_0);
-		class65_0.Controls.Add(class62_2);
-		class65_0.Controls.Add(class63_0);
-		class65_0.Location = new Point(16, 89);
-		class65_0.Name = "m_grbTransport";
-		class65_0.Size = new Size(516, 224);
-		class65_0.TabIndex = 36;
-		class65_0.TabStop = false;
-		class65_0.Text = "Transport";
-		class63_4.AutoSize = true;
-		class63_4.ForeColor = SystemColors.ControlDarkDark;
-		class63_4.Location = new Point(16, 188);
-		class63_4.Name = "m_lblSSLHint";
-		class63_4.Size = new Size(356, 16);
-		class63_4.TabIndex = 69;
-		class63_4.Text = " Turn on if your server supports secure SMTP connections. ";
-		class61_0.AutoSize = true;
-		class61_0.Location = new Point(19, 162);
-		class61_0.Name = "m_chbSSL";
-		class61_0.Size = new Size(127, 20);
-		class61_0.TabIndex = 2;
-		class61_0.Text = "Enable SSL/TLS";
-		class61_0.UseVisualStyleBackColor = true;
-		numericUpDown_0.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-		numericUpDown_0.Location = new Point(140, 96);
-		numericUpDown_0.Maximum = new decimal(new int[4] { 65535, 0, 0, 0 });
-		numericUpDown_0.Minimum = new decimal(new int[4] { 1, 0, 0, 0 });
-		numericUpDown_0.Name = "m_numPort";
-		numericUpDown_0.Size = new Size(372, 22);
-		numericUpDown_0.TabIndex = 1;
-		numericUpDown_0.Value = new decimal(new int[4] { 25, 0, 0, 0 });
-		class62_3.AutoSize = true;
-		class62_3.Location = new Point(16, 102);
-		class62_3.Name = "m_lblPort";
-		class62_3.Size = new Size(35, 16);
-		class62_3.TabIndex = 67;
-		class62_3.Text = "Port:";
-		class63_1.AutoSize = true;
-		class63_1.ForeColor = SystemColors.ControlDarkDark;
-		class63_1.Location = new Point(137, 124);
-		class63_1.Name = "m_lblPortHint";
-		class63_1.Size = new Size(348, 16);
-		class63_1.TabIndex = 66;
-		class63_1.Text = "Most common SMTP ports are 25 (plain) and 587 (secure)";
-		textBox_0.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-		textBox_0.Location = new Point(140, 26);
-		textBox_0.Name = "m_edHost";
-		textBox_0.Size = new Size(370, 22);
-		textBox_0.TabIndex = 0;
-		class62_2.AutoSize = true;
-		class62_2.Location = new Point(16, 32);
-		class62_2.Name = "m_lblHost";
-		class62_2.Size = new Size(39, 16);
-		class62_2.TabIndex = 64;
-		class62_2.Text = "Host:";
-		class63_0.AutoSize = true;
-		class63_0.ForeColor = SystemColors.ControlDarkDark;
-		class63_0.Location = new Point(137, 54);
-		class63_0.Name = "m_lblHostHint";
-		class63_0.Size = new Size(289, 16);
-		class63_0.TabIndex = 63;
-		class63_0.Text = " Specify SMTP server to use for sending emails";
-		class65_1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-		class65_1.Controls.Add(textBox_1);
-		class65_1.Controls.Add(class62_4);
-		class65_1.Controls.Add(class63_2);
-		class65_1.Controls.Add(textBox_2);
-		class65_1.Controls.Add(class62_5);
-		class65_1.Controls.Add(class63_3);
-		class65_1.Location = new Point(16, 319);
-		class65_1.Name = "m_grbAuthentication";
-		class65_1.Size = new Size(516, 160);
-		class65_1.TabIndex = 37;
-		class65_1.TabStop = false;
-		class65_1.Text = "Authentication";
-		textBox_1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-		textBox_1.Location = new Point(140, 95);
-		textBox_1.Name = "m_edPassword";
-		textBox_1.Size = new Size(370, 22);
-		textBox_1.TabIndex = 4;
-		textBox_1.UseSystemPasswordChar = true;
-		class62_4.AutoSize = true;
-		class62_4.Location = new Point(16, 101);
-		class62_4.Name = "m_lblPassword";
-		class62_4.Size = new Size(71, 16);
-		class62_4.TabIndex = 67;
-		class62_4.Text = "Password:";
-		class63_2.AutoSize = true;
-		class63_2.ForeColor = SystemColors.ControlDarkDark;
-		class63_2.Location = new Point(137, 123);
-		class63_2.Name = "m_lblPasswordHint";
-		class63_2.Size = new Size(265, 16);
-		class63_2.TabIndex = 66;
-		class63_2.Text = " Specify password for SMTP authentication ";
-		textBox_2.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-		textBox_2.Location = new Point(140, 26);
-		textBox_2.Name = "m_edUsername";
-		textBox_2.Size = new Size(370, 22);
-		textBox_2.TabIndex = 3;
-		class62_5.AutoSize = true;
-		class62_5.Location = new Point(16, 32);
-		class62_5.Name = "m_lblUsername";
-		class62_5.Size = new Size(77, 16);
-		class62_5.TabIndex = 64;
-		class62_5.Text = "User name:";
-		class63_3.AutoSize = true;
-		class63_3.ForeColor = SystemColors.ControlDark;
-		class63_3.Location = new Point(137, 54);
-		class63_3.Name = "m_lblUsernameHint";
-		class63_3.Size = new Size(269, 16);
-		class63_3.TabIndex = 63;
-		class63_3.Text = " Specify user name for SMTP authentication ";
+		mimgBigIcon.Location = new Point(16, 15);
+		mimgBigIcon.Margin = new Padding(4);
+		mimgBigIcon.Name = "m_imgBigIcon";
+		mimgBigIcon.Size = new Size(48, 48);
+		mimgBigIcon.SizeMode = PictureBoxSizeMode.AutoSize;
+		mimgBigIcon.TabIndex = 0;
+		mimgBigIcon.TabStop = false;
+		mlblSubCaption.AutoSize = true;
+		mlblSubCaption.Location = new Point(79, 47);
+		mlblSubCaption.Margin = new Padding(4, 0, 4, 0);
+		mlblSubCaption.Name = "m_lblSubCaption";
+		mlblSubCaption.Size = new Size(163, 16);
+		mlblSubCaption.TabIndex = 4;
+		mlblSubCaption.Text = "<description placeholder>";
+		mlblCaption.AutoSize = true;
+		mlblCaption.Font = new Font("Microsoft Sans Serif", 9.75f, FontStyle.Bold, GraphicsUnit.Point, 204);
+		mlblCaption.Location = new Point(79, 15);
+		mlblCaption.Margin = new Padding(4, 0, 4, 0);
+		mlblCaption.Name = "m_lblCaption";
+		mlblCaption.Size = new Size(187, 16);
+		mlblCaption.TabIndex = 14;
+		mlblCaption.Text = "<subcaption placeholder>";
+		mbtnCancel.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+		mbtnCancel.Image = Resources.cancl_16;
+		mbtnCancel.Location = new Point(431, 493);
+		mbtnCancel.Margin = new Padding(4);
+		mbtnCancel.Name = "m_btnCancel";
+		mbtnCancel.Size = new Size(100, 36);
+		mbtnCancel.TabIndex = 6;
+		mbtnCancel.Text = "Cancel";
+		mbtnCancel.TextImageRelation = TextImageRelation.ImageBeforeText;
+		mbtnCancel.UseVisualStyleBackColor = true;
+		mbtnOK.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+		mbtnOK.Enabled = false;
+		mbtnOK.Image = Resources.opts_16;
+		mbtnOK.Location = new Point(271, 493);
+		mbtnOK.Margin = new Padding(4);
+		mbtnOK.Name = "m_btnOK";
+		mbtnOK.Size = new Size(152, 36);
+		mbtnOK.TabIndex = 5;
+		mbtnOK.Text = "<ok_button>";
+		mbtnOK.TextImageRelation = TextImageRelation.ImageBeforeText;
+		mbtnOK.UseVisualStyleBackColor = true;
+		separatorLine1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+		separatorLine1.Location = new Point(16, 73);
+		separatorLine1.Name = "separatorLine1";
+		separatorLine1.Size = new Size(513, 10);
+		separatorLine1.TabIndex = 35;
+		separatorLine1.TabStop = false;
+		mlnkOnlineHelp.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+		mlnkOnlineHelp.AutoSize = true;
+		mlnkOnlineHelp.LinkColor = Color.FromArgb(38, 135, 200);
+		mlnkOnlineHelp.Location = new Point(459, 9);
+		mlnkOnlineHelp.Name = "m_lnkOnlineHelp";
+		mlnkOnlineHelp.Size = new Size(73, 16);
+		mlnkOnlineHelp.TabIndex = 7;
+		mlnkOnlineHelp.TabStop = true;
+		mlnkOnlineHelp.Text = "online help";
+		mlnkOnlineHelp.VisitedLinkColor = Color.FromArgb(38, 135, 200);
+		mgrbTransport.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+		mgrbTransport.Controls.Add(mlblSSLHint);
+		mgrbTransport.Controls.Add(mchbSSL);
+		mgrbTransport.Controls.Add(mnumPort);
+		mgrbTransport.Controls.Add(mlblPort);
+		mgrbTransport.Controls.Add(mlblPortHint);
+		mgrbTransport.Controls.Add(medHost);
+		mgrbTransport.Controls.Add(mlblHost);
+		mgrbTransport.Controls.Add(mlblHostHint);
+		mgrbTransport.Location = new Point(16, 89);
+		mgrbTransport.Name = "m_grbTransport";
+		mgrbTransport.Size = new Size(516, 224);
+		mgrbTransport.TabIndex = 36;
+		mgrbTransport.TabStop = false;
+		mgrbTransport.Text = "Transport";
+		mlblSSLHint.AutoSize = true;
+		mlblSSLHint.ForeColor = SystemColors.ControlDarkDark;
+		mlblSSLHint.Location = new Point(16, 188);
+		mlblSSLHint.Name = "m_lblSSLHint";
+		mlblSSLHint.Size = new Size(356, 16);
+		mlblSSLHint.TabIndex = 69;
+		mlblSSLHint.Text = " Turn on if your server supports secure SMTP connections. ";
+		mchbSSL.AutoSize = true;
+		mchbSSL.Location = new Point(19, 162);
+		mchbSSL.Name = "m_chbSSL";
+		mchbSSL.Size = new Size(127, 20);
+		mchbSSL.TabIndex = 2;
+		mchbSSL.Text = "Enable SSL/TLS";
+		mchbSSL.UseVisualStyleBackColor = true;
+		mnumPort.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+		mnumPort.Location = new Point(140, 96);
+		mnumPort.Maximum = new decimal(new int[4] { 65535, 0, 0, 0 });
+		mnumPort.Minimum = new decimal(new int[4] { 1, 0, 0, 0 });
+		mnumPort.Name = "m_numPort";
+		mnumPort.Size = new Size(372, 22);
+		mnumPort.TabIndex = 1;
+		mnumPort.Value = new decimal(new int[4] { 25, 0, 0, 0 });
+		mlblPort.AutoSize = true;
+		mlblPort.Location = new Point(16, 102);
+		mlblPort.Name = "m_lblPort";
+		mlblPort.Size = new Size(35, 16);
+		mlblPort.TabIndex = 67;
+		mlblPort.Text = "Port:";
+		mlblPortHint.AutoSize = true;
+		mlblPortHint.ForeColor = SystemColors.ControlDarkDark;
+		mlblPortHint.Location = new Point(137, 124);
+		mlblPortHint.Name = "m_lblPortHint";
+		mlblPortHint.Size = new Size(348, 16);
+		mlblPortHint.TabIndex = 66;
+		mlblPortHint.Text = "Most common SMTP ports are 25 (plain) and 587 (secure)";
+		medHost.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+		medHost.Location = new Point(140, 26);
+		medHost.Name = "m_edHost";
+		medHost.Size = new Size(370, 22);
+		medHost.TabIndex = 0;
+		mlblHost.AutoSize = true;
+		mlblHost.Location = new Point(16, 32);
+		mlblHost.Name = "m_lblHost";
+		mlblHost.Size = new Size(39, 16);
+		mlblHost.TabIndex = 64;
+		mlblHost.Text = "Host:";
+		mlblHostHint.AutoSize = true;
+		mlblHostHint.ForeColor = SystemColors.ControlDarkDark;
+		mlblHostHint.Location = new Point(137, 54);
+		mlblHostHint.Name = "m_lblHostHint";
+		mlblHostHint.Size = new Size(289, 16);
+		mlblHostHint.TabIndex = 63;
+		mlblHostHint.Text = " Specify SMTP server to use for sending emails";
+		mgrbAuthentication.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+		mgrbAuthentication.Controls.Add(medPassword);
+		mgrbAuthentication.Controls.Add(mlblPassword);
+		mgrbAuthentication.Controls.Add(mlblPasswordHint);
+		mgrbAuthentication.Controls.Add(medUsername);
+		mgrbAuthentication.Controls.Add(mlblUsername);
+		mgrbAuthentication.Controls.Add(mlblUsernameHint);
+		mgrbAuthentication.Location = new Point(16, 319);
+		mgrbAuthentication.Name = "m_grbAuthentication";
+		mgrbAuthentication.Size = new Size(516, 160);
+		mgrbAuthentication.TabIndex = 37;
+		mgrbAuthentication.TabStop = false;
+		mgrbAuthentication.Text = "Authentication";
+		medPassword.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+		medPassword.Location = new Point(140, 95);
+		medPassword.Name = "m_edPassword";
+		medPassword.Size = new Size(370, 22);
+		medPassword.TabIndex = 4;
+		medPassword.UseSystemPasswordChar = true;
+		mlblPassword.AutoSize = true;
+		mlblPassword.Location = new Point(16, 101);
+		mlblPassword.Name = "m_lblPassword";
+		mlblPassword.Size = new Size(71, 16);
+		mlblPassword.TabIndex = 67;
+		mlblPassword.Text = "Password:";
+		mlblPasswordHint.AutoSize = true;
+		mlblPasswordHint.ForeColor = SystemColors.ControlDarkDark;
+		mlblPasswordHint.Location = new Point(137, 123);
+		mlblPasswordHint.Name = "m_lblPasswordHint";
+		mlblPasswordHint.Size = new Size(265, 16);
+		mlblPasswordHint.TabIndex = 66;
+		mlblPasswordHint.Text = " Specify password for SMTP authentication ";
+		medUsername.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+		medUsername.Location = new Point(140, 26);
+		medUsername.Name = "m_edUsername";
+		medUsername.Size = new Size(370, 22);
+		medUsername.TabIndex = 3;
+		mlblUsername.AutoSize = true;
+		mlblUsername.Location = new Point(16, 32);
+		mlblUsername.Name = "m_lblUsername";
+		mlblUsername.Size = new Size(77, 16);
+		mlblUsername.TabIndex = 64;
+		mlblUsername.Text = "User name:";
+		mlblUsernameHint.AutoSize = true;
+		mlblUsernameHint.ForeColor = SystemColors.ControlDark;
+		mlblUsernameHint.Location = new Point(137, 54);
+		mlblUsernameHint.Name = "m_lblUsernameHint";
+		mlblUsernameHint.Size = new Size(269, 16);
+		mlblUsernameHint.TabIndex = 63;
+		mlblUsernameHint.Text = " Specify user name for SMTP authentication ";
 		base.AutoScaleDimensions = new SizeF(8f, 16f);
 		base.AutoScaleMode = AutoScaleMode.Font;
 		base.ClientSize = new Size(544, 542);
-		base.Controls.Add(class65_1);
-		base.Controls.Add(class65_0);
-		base.Controls.Add(gclass3_0);
-		base.Controls.Add(gcontrol0_0);
-		base.Controls.Add(class66_1);
-		base.Controls.Add(class66_0);
-		base.Controls.Add(class62_1);
-		base.Controls.Add(class62_0);
-		base.Controls.Add(pictureBox_0);
+		base.Controls.Add(mgrbAuthentication);
+		base.Controls.Add(mgrbTransport);
+		base.Controls.Add(mlnkOnlineHelp);
+		base.Controls.Add(separatorLine1);
+		base.Controls.Add(mbtnOK);
+		base.Controls.Add(mbtnCancel);
+		base.Controls.Add(mlblCaption);
+		base.Controls.Add(mlblSubCaption);
+		base.Controls.Add(mimgBigIcon);
 		Font = new Font("Microsoft Sans Serif", 9.75f);
 		base.Margin = new Padding(4);
 		base.Name = "SmtpServerAddEditDialog";
 		base.StartPosition = FormStartPosition.Manual;
 		Text = "<caption placeholder>";
-		((ISupportInitialize)pictureBox_0).EndInit();
-		class65_0.ResumeLayout(performLayout: false);
-		class65_0.PerformLayout();
-		((ISupportInitialize)numericUpDown_0).EndInit();
-		class65_1.ResumeLayout(performLayout: false);
-		class65_1.PerformLayout();
+		((ISupportInitialize)mimgBigIcon).EndInit();
+		mgrbTransport.ResumeLayout(performLayout: false);
+		mgrbTransport.PerformLayout();
+		((ISupportInitialize)mnumPort).EndInit();
+		mgrbAuthentication.ResumeLayout(performLayout: false);
+		mgrbAuthentication.PerformLayout();
 		ResumeLayout(performLayout: false);
 		PerformLayout();
 	}
 
-	private void gclass3_0_Click(object sender, EventArgs e)
+	private void mlnkOnlineHelp_Click(object sender, EventArgs e)
 	{
-		method_9(Class148.Class154.String_1);
+		ShowOnlineHelp(Class148.Class154.String_1);
 	}
 
 	private void gclass3_0_Click_1(object sender, EventArgs e)
 	{
-		method_9(Class148.Class154.String_2);
+		ShowOnlineHelp(Class148.Class154.String_2);
 	}
 
 	private void Form26_Shown(object sender, EventArgs e)
 	{
-		class65_1.Focus();
-		textBox_0.Focus();
+		mgrbAuthentication.Focus();
+		medHost.Focus();
 	}
 
-	private void class66_1_Click(object sender, EventArgs e)
+	private void mbtnOK_Click(object sender, EventArgs e)
 	{
-		method_8(DialogResult.OK);
+		CloseDialog(DialogResult.OK);
 	}
 
-	private void class66_0_Click(object sender, EventArgs e)
+	private void mbtnCancel_Click(object sender, EventArgs e)
 	{
-		method_8(DialogResult.Cancel);
+		CloseDialog(DialogResult.Cancel);
 	}
 }

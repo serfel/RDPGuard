@@ -74,33 +74,33 @@ internal sealed class EditableGeoIPCountriesTable : UserControl
 
 	private IContainer icontainer_0;
 
-	private Class67 class67_0;
+	private Class67 toolStrip1;
 
-	private GControl1 gcontrol1_0;
+	private GControl1 mchbTemporaryDenyRule;
 
-	private ToolStripButton toolStripButton_0;
+	private ToolStripButton mbtnLoading;
 
-	private ToolStripDropDownButton toolStripDropDownButton_0;
+	private ToolStripDropDownButton mbtnAddDropDown;
 
-	private ToolStripButton toolStripButton_1;
+	private ToolStripButton mbtnAdd;
 
-	private ToolStripButton toolStripButton_2;
+	private ToolStripButton mbtnEdit;
 
-	private ToolStripButton toolStripButton_3;
+	private ToolStripButton mbtnDelete;
 
-	private ToolStripButton toolStripButton_4;
+	private ToolStripButton mbtnAdvancedSettings;
 
-	private GeoIPCountriesTable control1_0;
+	private GeoIPCountriesTable mlstCountries;
 
 	public GClass5[] GClass5_0
 	{
 		get
 		{
-			return control1_0.GClass5_1;
+			return mlstCountries.GClass5_1;
 		}
 		set
 		{
-			control1_0.GClass5_1 = value;
+			mlstCountries.GClass5_1 = value;
 		}
 	}
 
@@ -108,11 +108,11 @@ internal sealed class EditableGeoIPCountriesTable : UserControl
 	{
 		get
 		{
-			return control1_0.IPListEntry_0;
+			return mlstCountries.IPListEntry_0;
 		}
 		set
 		{
-			control1_0.IPListEntry_0 = value;
+			mlstCountries.IPListEntry_0 = value;
 		}
 	}
 
@@ -120,11 +120,11 @@ internal sealed class EditableGeoIPCountriesTable : UserControl
 	{
 		get
 		{
-			return gcontrol1_0.Boolean_0;
+			return mchbTemporaryDenyRule.Boolean_0;
 		}
 		set
 		{
-			gcontrol1_0.Boolean_0 = value;
+			mchbTemporaryDenyRule.Boolean_0 = value;
 		}
 	}
 
@@ -133,10 +133,10 @@ internal sealed class EditableGeoIPCountriesTable : UserControl
 		set
 		{
 			bool flag = GeoIPMode.Allow == value;
-			gcontrol1_0.Visible = flag;
-			toolStripButton_1.Visible = !flag;
-			toolStripDropDownButton_0.Visible = flag;
-			toolStripButton_2.Visible = flag;
+			mchbTemporaryDenyRule.Visible = flag;
+			mbtnAdd.Visible = !flag;
+			mbtnAddDropDown.Visible = flag;
+			mbtnEdit.Visible = flag;
 		}
 	}
 
@@ -177,7 +177,7 @@ internal sealed class EditableGeoIPCountriesTable : UserControl
 
 	private void InitializeHandlers()
 	{
-		toolStripDropDownButton_0.DropDown = new Class57
+		mbtnAddDropDown.DropDown = new Class57
 		{
 			ToolStripItem_0 = new ToolStripItem[3]
 			{
@@ -197,19 +197,19 @@ internal sealed class EditableGeoIPCountriesTable : UserControl
 			},
 			ImageScalingSize = new Size(16, 16)
 		};
-		toolStripButton_0.Image = ((Class163.Class163_0.Boolean_0 ? true : false) ? Resources.wait_16_dark : Resources.wait_16);
+		mbtnLoading.Image = ((Class163.Class163_0.Boolean_0 ? true : false) ? Resources.wait_16_dark : Resources.wait_16);
 	}
 
 	private void AddItems()
 	{
-		control1_0.Event_0 += method_12;
-		control1_0.Event_1 += method_13;
-		control1_0.Event_2 += method_14;
-		control1_0.Event_3 += method_15;
-		toolStripButton_1.Click += toolStripButton_1_Click;
-		toolStripButton_2.Click += toolStripButton_2_Click;
-		toolStripButton_3.Click += toolStripButton_3_Click;
-		toolStripButton_4.Click += toolStripButton_4_Click;
+		mlstCountries.Event_0 += method_12;
+		mlstCountries.Event_1 += method_13;
+		mlstCountries.Event_2 += method_14;
+		mlstCountries.Event_3 += method_15;
+		mbtnAdd.Click += mbtnAdd_Click;
+		mbtnEdit.Click += mbtnEdit_Click;
+		mbtnDelete.Click += mbtnDelete_Click;
+		mbtnAdvancedSettings.Click += mbtnAdvancedSettings_Click;
 	}
 
 	private void AddItem()
@@ -217,7 +217,7 @@ internal sealed class EditableGeoIPCountriesTable : UserControl
 		using GeoIPCountryAddDialog form = new GeoIPCountryAddDialog(GClass5_0, geoIPDBVersion_0);
 		if (DialogResult.OK == form.ShowDialog())
 		{
-			control1_0.AddItems(form.GClass5_0);
+			mlstCountries.AddItems(form.GClass5_0);
 		}
 	}
 
@@ -233,14 +233,14 @@ internal sealed class EditableGeoIPCountriesTable : UserControl
 		{
 			if (DialogResult.OK == form.ShowDialog())
 			{
-				control1_0.UpdateCustomList(form.IPListEntry_0);
+				mlstCountries.UpdateCustomList(form.IPListEntry_0);
 			}
 		}
 	}
 
 	private void RemoveSelected()
 	{
-		if (!control1_0.Boolean_2)
+		if (!mlstCountries.Boolean_2)
 		{
 			return;
 		}
@@ -320,15 +320,15 @@ internal sealed class EditableGeoIPCountriesTable : UserControl
 		if (@class.eventArgs0_0.gclass29_0.Boolean_0)
 		{
 			Class5 class2 = new Class5();
-			GClass5[] gClass5_ = control1_0.GClass5_1;
+			GClass5[] gClass5_ = mlstCountries.GClass5_1;
 			Func<GClass5, string> selector = _003C_003Ec._003C_003E9.InitializeHandlers;
 			class2.string_0 = gClass5_.Select(selector).ToArray();
-			IPListEntry[] iPListEntry_ = control1_0.IPListEntry_0;
-			GeoIPCountriesTable control = control1_0;
+			IPListEntry[] iPListEntry_ = mlstCountries.IPListEntry_0;
+			GeoIPCountriesTable control = mlstCountries;
 			IEnumerable<GClass5> source = @class.eventArgs0_0.gclass29_0.gclass5_0.Where(class2.InitializeHandlers);
 			Func<GClass5, string> keySelector = _003C_003Ec._003C_003E9.AddItems;
 			control.GClass5_1 = source.OrderBy(keySelector).ToArray();
-			control1_0.IPListEntry_0 = iPListEntry_;
+			mlstCountries.IPListEntry_0 = iPListEntry_;
 		}
 		else
 		{
@@ -342,9 +342,9 @@ internal sealed class EditableGeoIPCountriesTable : UserControl
 
 	private void RemoveListItem(bool bool_4)
 	{
-		toolStripButton_0.Visible = bool_4;
-		control1_0.Enabled = !bool_4;
-		class67_0.Enabled = !bool_4;
+		mbtnLoading.Visible = bool_4;
+		mlstCountries.Enabled = !bool_4;
+		toolStrip1.Enabled = !bool_4;
 	}
 
 	protected override void Dispose(bool disposing)
@@ -358,108 +358,108 @@ internal sealed class EditableGeoIPCountriesTable : UserControl
 
 	private void InitializeComponent()
 	{
-		this.class67_0 = new Class67();
-		this.toolStripButton_4 = new System.Windows.Forms.ToolStripButton();
-		this.toolStripButton_3 = new System.Windows.Forms.ToolStripButton();
-		this.toolStripButton_2 = new System.Windows.Forms.ToolStripButton();
-		this.toolStripButton_1 = new System.Windows.Forms.ToolStripButton();
-		this.toolStripDropDownButton_0 = new System.Windows.Forms.ToolStripDropDownButton();
-		this.toolStripButton_0 = new System.Windows.Forms.ToolStripButton();
-		this.gcontrol1_0 = new GControl1();
-		this.control1_0 = new GeoIPCountriesTable();
-		this.class67_0.SuspendLayout();
+		this.toolStrip1 = new Class67();
+		this.mbtnAdvancedSettings = new System.Windows.Forms.ToolStripButton();
+		this.mbtnDelete = new System.Windows.Forms.ToolStripButton();
+		this.mbtnEdit = new System.Windows.Forms.ToolStripButton();
+		this.mbtnAdd = new System.Windows.Forms.ToolStripButton();
+		this.mbtnAddDropDown = new System.Windows.Forms.ToolStripDropDownButton();
+		this.mbtnLoading = new System.Windows.Forms.ToolStripButton();
+		this.mchbTemporaryDenyRule = new GControl1();
+		this.mlstCountries = new GeoIPCountriesTable();
+		this.toolStrip1.SuspendLayout();
 		base.SuspendLayout();
-		this.class67_0.Dock = System.Windows.Forms.DockStyle.Bottom;
-		this.class67_0.Font = new System.Drawing.Font("Segoe UI", 9f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 204);
-		this.class67_0.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
-		this.class67_0.ImageScalingSize = new System.Drawing.Size(10, 10);
-		this.class67_0.Items.AddRange(new System.Windows.Forms.ToolStripItem[7] { this.toolStripButton_4, this.toolStripButton_3, this.toolStripButton_2, this.toolStripButton_1, this.toolStripDropDownButton_0, this.toolStripButton_0, this.gcontrol1_0 });
-		this.class67_0.Location = new System.Drawing.Point(0, 258);
-		this.class67_0.Name = "toolStrip1";
-		this.class67_0.Size = new System.Drawing.Size(562, 27);
-		this.class67_0.TabIndex = 0;
-		this.class67_0.Text = "toolStrip1";
-		this.toolStripButton_4.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-		this.toolStripButton_4.Image = Properties.Resources.config_10_v2;
-		this.toolStripButton_4.ImageTransparentColor = System.Drawing.Color.Magenta;
-		this.toolStripButton_4.Margin = new System.Windows.Forms.Padding(0, 1, 1, 2);
-		this.toolStripButton_4.Name = "m_btnAdvancedSettings";
-		this.toolStripButton_4.Padding = new System.Windows.Forms.Padding(3, 3, 1, 3);
-		this.toolStripButton_4.Size = new System.Drawing.Size(23, 25);
-		this.toolStripButton_4.Text = "Settings";
-		this.toolStripButton_4.ToolTipText = "Click to open advanced settings";
-		this.toolStripButton_3.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-		this.toolStripButton_3.Enabled = false;
-		this.toolStripButton_3.Image = Properties.Resources.del_10;
-		this.toolStripButton_3.ImageTransparentColor = System.Drawing.Color.Magenta;
-		this.toolStripButton_3.Margin = new System.Windows.Forms.Padding(0, 1, 1, 2);
-		this.toolStripButton_3.Name = "m_btnDelete";
-		this.toolStripButton_3.Padding = new System.Windows.Forms.Padding(3, 3, 1, 3);
-		this.toolStripButton_3.Size = new System.Drawing.Size(60, 25);
-		this.toolStripButton_3.Text = "Delete";
-		this.toolStripButton_3.ToolTipText = "Click to delete selected countries";
-		this.toolStripButton_2.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-		this.toolStripButton_2.Enabled = false;
-		this.toolStripButton_2.Image = Properties.Resources.edit_10;
-		this.toolStripButton_2.ImageTransparentColor = System.Drawing.Color.Magenta;
-		this.toolStripButton_2.Margin = new System.Windows.Forms.Padding(0, 1, 1, 2);
-		this.toolStripButton_2.Name = "m_btnEdit";
-		this.toolStripButton_2.Padding = new System.Windows.Forms.Padding(3, 3, 1, 3);
-		this.toolStripButton_2.Size = new System.Drawing.Size(47, 25);
-		this.toolStripButton_2.Text = "Edit";
-		this.toolStripButton_2.ToolTipText = "Click to edit custom allow list";
-		this.toolStripButton_1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-		this.toolStripButton_1.Image = Properties.Resources.plus_10;
-		this.toolStripButton_1.ImageTransparentColor = System.Drawing.Color.Magenta;
-		this.toolStripButton_1.Margin = new System.Windows.Forms.Padding(0, 1, 1, 2);
-		this.toolStripButton_1.Name = "m_btnAdd";
-		this.toolStripButton_1.Padding = new System.Windows.Forms.Padding(3, 3, 1, 3);
-		this.toolStripButton_1.Size = new System.Drawing.Size(49, 25);
-		this.toolStripButton_1.Text = "Add";
-		this.toolStripButton_1.ToolTipText = "Click to add new country";
-		this.toolStripDropDownButton_0.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-		this.toolStripDropDownButton_0.Image = Properties.Resources.plus_10;
-		this.toolStripDropDownButton_0.ImageTransparentColor = System.Drawing.Color.Magenta;
-		this.toolStripDropDownButton_0.Margin = new System.Windows.Forms.Padding(0, 1, 1, 2);
-		this.toolStripDropDownButton_0.Name = "m_btnAddDropDown";
-		this.toolStripDropDownButton_0.Padding = new System.Windows.Forms.Padding(3, 3, 1, 3);
-		this.toolStripDropDownButton_0.Size = new System.Drawing.Size(58, 25);
-		this.toolStripDropDownButton_0.Text = "Add";
-		this.toolStripDropDownButton_0.ToolTipText = "Click to add new country or custom allow list";
-		this.toolStripButton_0.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-		this.toolStripButton_0.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-		this.toolStripButton_0.ImageTransparentColor = System.Drawing.Color.Magenta;
-		this.toolStripButton_0.Margin = new System.Windows.Forms.Padding(0, 0, 0, 2);
-		this.toolStripButton_0.Name = "m_btnLoading";
-		this.toolStripButton_0.Padding = new System.Windows.Forms.Padding(3);
-		this.toolStripButton_0.Size = new System.Drawing.Size(23, 25);
-		this.toolStripButton_0.Visible = false;
-		this.gcontrol1_0.Boolean_0 = false;
-		this.gcontrol1_0.Margin = new System.Windows.Forms.Padding(2, 0, 0, 0);
-		this.gcontrol1_0.Name = "m_chbTemporaryDenyRule";
-		this.gcontrol1_0.Padding = new System.Windows.Forms.Padding(3);
-		this.gcontrol1_0.Size = new System.Drawing.Size(268, 27);
-		this.gcontrol1_0.Text = "Test mode (all countries allowed again after reboot)";
-		this.gcontrol1_0.ToolTipText = "Use this mode to test blocking settings. After a restart, all countries will be allowed again to ensure access in case of configuration errors.";
-		this.control1_0.GClass5_1 = new GClass5[0];
-		this.control1_0.IPListEntry_0 = new rdpguard.lib.IPListEntry[0];
-		this.control1_0.Dock = System.Windows.Forms.DockStyle.Fill;
-		this.control1_0.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 204);
-		this.control1_0.Location = new System.Drawing.Point(0, 0);
-		this.control1_0.Margin = new System.Windows.Forms.Padding(4);
-		this.control1_0.Name = "m_lstCountries";
-		this.control1_0.Size = new System.Drawing.Size(562, 258);
-		this.control1_0.TabIndex = 1;
+		this.toolStrip1.Dock = System.Windows.Forms.DockStyle.Bottom;
+		this.toolStrip1.Font = new System.Drawing.Font("Segoe UI", 9f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 204);
+		this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+		this.toolStrip1.ImageScalingSize = new System.Drawing.Size(10, 10);
+		this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[7] { this.mbtnAdvancedSettings, this.mbtnDelete, this.mbtnEdit, this.mbtnAdd, this.mbtnAddDropDown, this.mbtnLoading, this.mchbTemporaryDenyRule });
+		this.toolStrip1.Location = new System.Drawing.Point(0, 258);
+		this.toolStrip1.Name = "toolStrip1";
+		this.toolStrip1.Size = new System.Drawing.Size(562, 27);
+		this.toolStrip1.TabIndex = 0;
+		this.toolStrip1.Text = "toolStrip1";
+		this.mbtnAdvancedSettings.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+		this.mbtnAdvancedSettings.Image = Properties.Resources.config_10_v2;
+		this.mbtnAdvancedSettings.ImageTransparentColor = System.Drawing.Color.Magenta;
+		this.mbtnAdvancedSettings.Margin = new System.Windows.Forms.Padding(0, 1, 1, 2);
+		this.mbtnAdvancedSettings.Name = "m_btnAdvancedSettings";
+		this.mbtnAdvancedSettings.Padding = new System.Windows.Forms.Padding(3, 3, 1, 3);
+		this.mbtnAdvancedSettings.Size = new System.Drawing.Size(23, 25);
+		this.mbtnAdvancedSettings.Text = "Settings";
+		this.mbtnAdvancedSettings.ToolTipText = "Click to open advanced settings";
+		this.mbtnDelete.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+		this.mbtnDelete.Enabled = false;
+		this.mbtnDelete.Image = Properties.Resources.del_10;
+		this.mbtnDelete.ImageTransparentColor = System.Drawing.Color.Magenta;
+		this.mbtnDelete.Margin = new System.Windows.Forms.Padding(0, 1, 1, 2);
+		this.mbtnDelete.Name = "m_btnDelete";
+		this.mbtnDelete.Padding = new System.Windows.Forms.Padding(3, 3, 1, 3);
+		this.mbtnDelete.Size = new System.Drawing.Size(60, 25);
+		this.mbtnDelete.Text = "Delete";
+		this.mbtnDelete.ToolTipText = "Click to delete selected countries";
+		this.mbtnEdit.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+		this.mbtnEdit.Enabled = false;
+		this.mbtnEdit.Image = Properties.Resources.edit_10;
+		this.mbtnEdit.ImageTransparentColor = System.Drawing.Color.Magenta;
+		this.mbtnEdit.Margin = new System.Windows.Forms.Padding(0, 1, 1, 2);
+		this.mbtnEdit.Name = "m_btnEdit";
+		this.mbtnEdit.Padding = new System.Windows.Forms.Padding(3, 3, 1, 3);
+		this.mbtnEdit.Size = new System.Drawing.Size(47, 25);
+		this.mbtnEdit.Text = "Edit";
+		this.mbtnEdit.ToolTipText = "Click to edit custom allow list";
+		this.mbtnAdd.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+		this.mbtnAdd.Image = Properties.Resources.plus_10;
+		this.mbtnAdd.ImageTransparentColor = System.Drawing.Color.Magenta;
+		this.mbtnAdd.Margin = new System.Windows.Forms.Padding(0, 1, 1, 2);
+		this.mbtnAdd.Name = "m_btnAdd";
+		this.mbtnAdd.Padding = new System.Windows.Forms.Padding(3, 3, 1, 3);
+		this.mbtnAdd.Size = new System.Drawing.Size(49, 25);
+		this.mbtnAdd.Text = "Add";
+		this.mbtnAdd.ToolTipText = "Click to add new country";
+		this.mbtnAddDropDown.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+		this.mbtnAddDropDown.Image = Properties.Resources.plus_10;
+		this.mbtnAddDropDown.ImageTransparentColor = System.Drawing.Color.Magenta;
+		this.mbtnAddDropDown.Margin = new System.Windows.Forms.Padding(0, 1, 1, 2);
+		this.mbtnAddDropDown.Name = "m_btnAddDropDown";
+		this.mbtnAddDropDown.Padding = new System.Windows.Forms.Padding(3, 3, 1, 3);
+		this.mbtnAddDropDown.Size = new System.Drawing.Size(58, 25);
+		this.mbtnAddDropDown.Text = "Add";
+		this.mbtnAddDropDown.ToolTipText = "Click to add new country or custom allow list";
+		this.mbtnLoading.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+		this.mbtnLoading.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+		this.mbtnLoading.ImageTransparentColor = System.Drawing.Color.Magenta;
+		this.mbtnLoading.Margin = new System.Windows.Forms.Padding(0, 0, 0, 2);
+		this.mbtnLoading.Name = "m_btnLoading";
+		this.mbtnLoading.Padding = new System.Windows.Forms.Padding(3);
+		this.mbtnLoading.Size = new System.Drawing.Size(23, 25);
+		this.mbtnLoading.Visible = false;
+		this.mchbTemporaryDenyRule.Boolean_0 = false;
+		this.mchbTemporaryDenyRule.Margin = new System.Windows.Forms.Padding(2, 0, 0, 0);
+		this.mchbTemporaryDenyRule.Name = "m_chbTemporaryDenyRule";
+		this.mchbTemporaryDenyRule.Padding = new System.Windows.Forms.Padding(3);
+		this.mchbTemporaryDenyRule.Size = new System.Drawing.Size(268, 27);
+		this.mchbTemporaryDenyRule.Text = "Test mode (all countries allowed again after reboot)";
+		this.mchbTemporaryDenyRule.ToolTipText = "Use this mode to test blocking settings. After a restart, all countries will be allowed again to ensure access in case of configuration errors.";
+		this.mlstCountries.GClass5_1 = new GClass5[0];
+		this.mlstCountries.IPListEntry_0 = new rdpguard.lib.IPListEntry[0];
+		this.mlstCountries.Dock = System.Windows.Forms.DockStyle.Fill;
+		this.mlstCountries.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 204);
+		this.mlstCountries.Location = new System.Drawing.Point(0, 0);
+		this.mlstCountries.Margin = new System.Windows.Forms.Padding(4);
+		this.mlstCountries.Name = "m_lstCountries";
+		this.mlstCountries.Size = new System.Drawing.Size(562, 258);
+		this.mlstCountries.TabIndex = 1;
 		base.AutoScaleDimensions = new System.Drawing.SizeF(8f, 16f);
 		base.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-		base.Controls.Add(this.control1_0);
-		base.Controls.Add(this.class67_0);
+		base.Controls.Add(this.mlstCountries);
+		base.Controls.Add(this.toolStrip1);
 		this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 204);
 		base.Margin = new System.Windows.Forms.Padding(4);
 		base.Name = "EditableGeoIPCountriesTable";
 		base.Size = new System.Drawing.Size(562, 285);
-		this.class67_0.ResumeLayout(false);
-		this.class67_0.PerformLayout();
+		this.toolStrip1.ResumeLayout(false);
+		this.toolStrip1.PerformLayout();
 		base.ResumeLayout(false);
 		base.PerformLayout();
 	}
@@ -476,8 +476,8 @@ internal sealed class EditableGeoIPCountriesTable : UserControl
 
 	private void method_12(object sender, EventArgs e)
 	{
-		toolStripButton_2.Enabled = control1_0.Boolean_2;
-		toolStripButton_3.Enabled = (control1_0.GClass5_0.Any() ? true : false) || control1_0.Boolean_2;
+		mbtnEdit.Enabled = mlstCountries.Boolean_2;
+		mbtnDelete.Enabled = (mlstCountries.GClass5_0.Any() ? true : false) || mlstCountries.Boolean_2;
 	}
 
 	private void method_13(object sender, EventArgs e)
@@ -489,11 +489,11 @@ internal sealed class EditableGeoIPCountriesTable : UserControl
 	{
 		if (Keys.Delete == e.KeyCode)
 		{
-			toolStripButton_3.PerformClick();
+			mbtnDelete.PerformClick();
 		}
 		if (Keys.Insert == e.KeyCode)
 		{
-			toolStripButton_1.PerformClick();
+			mbtnAdd.PerformClick();
 		}
 	}
 
@@ -502,22 +502,22 @@ internal sealed class EditableGeoIPCountriesTable : UserControl
 		RemoveSelected();
 	}
 
-	private void toolStripButton_1_Click(object sender, EventArgs e)
+	private void mbtnAdd_Click(object sender, EventArgs e)
 	{
 		AddItem();
 	}
 
-	private void toolStripButton_2_Click(object sender, EventArgs e)
+	private void mbtnEdit_Click(object sender, EventArgs e)
 	{
 		RemoveSelected();
 	}
 
-	private void toolStripButton_3_Click(object sender, EventArgs e)
+	private void mbtnDelete_Click(object sender, EventArgs e)
 	{
-		control1_0.RemoveSelected();
+		mlstCountries.RemoveSelected();
 	}
 
-	private void toolStripButton_4_Click(object sender, EventArgs e)
+	private void mbtnAdvancedSettings_Click(object sender, EventArgs e)
 	{
 		RemoveItem();
 	}

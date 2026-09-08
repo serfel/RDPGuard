@@ -13,93 +13,93 @@ internal sealed class AdvancedGeoIPSettingsDialog : Form0
 
 	private IContainer icontainer_0;
 
-	private Class66 class66_0;
+	private Class66 mbtnClose;
 
-	private GControl0 gcontrol0_0;
+	private GControl0 separatorLine1;
 
-	private Class62 class62_0;
+	private Class62 mlblCaption;
 
-	private PictureBox pictureBox_0;
+	private PictureBox mimgBigIcon;
 
-	private Class62 class62_1;
+	private Class62 mlblSubCaption;
 
-	private GClass3 gclass3_0;
+	private GClass3 mlnkOnlineHelp;
 
-	private Control14 control14_0;
+	private Control14 mtabMain;
 
-	private TabPage tabPage_0;
+	private TabPage mtpDenyMode;
 
-	private TabPage tabPage_1;
+	private TabPage mtpAllowMode;
 
-	private TabPage tabPage_2;
+	private TabPage mtpMiscellaneous;
 
-	private Class65 class65_0;
+	private Class65 mgbExceptionsAndSpecialNetworks;
 
-	private Class63 class63_0;
+	private Class63 mchbExcludeDatacentersHint;
 
-	private Class61 class61_0;
+	private Class61 mchbExcludeDatacenters;
 
-	private Class63 class63_1;
+	private Class63 mlblExcludeVpnAndTorHint;
 
-	private Class61 class61_1;
+	private Class61 mchbExcludeVpnAndTor;
 
-	private Class63 class63_2;
+	private Class63 mlblAllowLocalHint;
 
-	private Class61 class61_2;
+	private Class61 mchbAllowLocal;
 
-	private Class63 class63_3;
+	private Class63 mlblAllowLoopbackHint;
 
-	private Class61 class61_3;
+	private Class61 mchbAllowLoopback;
 
-	private Class65 class65_1;
+	private Class65 mgbDenyModeScope;
 
-	private Class64 class64_0;
+	private Class64 mrbDenyModeAllExceptSelected;
 
-	private Class64 class64_1;
+	private Class64 mrbDenyModeAllPorts;
 
-	private Class65 class65_2;
+	private Class65 mgbDbVersion;
 
-	private Class64 class64_2;
+	private Class64 mrbDbVersionMax;
 
-	private Class64 class64_3;
+	private Class64 mrbDbVersionLite;
 
-	private Class63 class63_4;
+	private Class63 mtxtDenyModeAllExceptSelectedHint;
 
-	private Class63 class63_5;
+	private Class63 mtxtDenyModeAllPortsHint;
 
-	private TextBox textBox_0;
+	private TextBox medDenyModeSelectedOnlyPorts;
 
-	private Class63 class63_6;
+	private Class63 mtxtDenyModeSelectedOnlyHint;
 
-	private Class64 class64_4;
+	private Class64 mrbDenyModeSelectedOnly;
 
-	private TextBox textBox_1;
+	private TextBox medDenyModeAllExceptSelectedPorts;
 
-	private Class65 class65_3;
+	private Class65 mgbAllowModeRules;
 
-	private TextBox textBox_2;
+	private TextBox medAllowModeAllowSelectedOnlyPorts;
 
-	private Class63 class63_7;
+	private Class63 mtxtAllowModeSelectedOnlyHint;
 
-	private Class63 class63_8;
+	private Class63 mtxtAllowModeAllPortsHint;
 
-	private Class64 class64_5;
+	private Class64 mrbAllowModeAllowSelectedOnly;
 
-	private Class64 class64_6;
+	private Class64 mrbAllowModeAllowAllPorts;
 
-	private Class65 class65_4;
+	private Class65 mgbAllowModeOther;
 
-	private TextBox textBox_3;
+	private TextBox medAllowModeBlockAllPortsExceptSelectedPorts;
 
-	private Class63 class63_9;
+	private Class63 mtxtAllowModeDenyAllExceptSelectedHint;
 
-	private Class63 class63_10;
+	private Class63 mtxtAllowModeOtherBlockAllPortsHint;
 
-	private Class64 class64_7;
+	private Class64 mrbAllowModeBlockAllPortsExceptSelected;
 
-	private Class64 class64_8;
+	private Class64 mrbAllowModeBlockAllPorts;
 
-	private Class3 Class3_0 => new Class3(class64_1, class64_0, textBox_1, class64_4, textBox_0);
+	private Class3 Class3_0 => new Class3(mrbDenyModeAllPorts, mrbDenyModeAllExceptSelected, medDenyModeAllExceptSelectedPorts, mrbDenyModeSelectedOnly, medDenyModeSelectedOnlyPorts);
 
 	public GClass7 GClass7_0
 	{
@@ -113,7 +113,7 @@ internal sealed class AdvancedGeoIPSettingsDialog : Form0
 		}
 	}
 
-	private Class3 Class3_1 => new Class3(class64_6, null, null, class64_5, textBox_2);
+	private Class3 Class3_1 => new Class3(mrbAllowModeAllowAllPorts, null, null, mrbAllowModeAllowSelectedOnly, medAllowModeAllowSelectedOnlyPorts);
 
 	public GClass7 GClass7_1
 	{
@@ -127,7 +127,7 @@ internal sealed class AdvancedGeoIPSettingsDialog : Form0
 		}
 	}
 
-	private Class3 Class3_2 => new Class3(class64_8, class64_7, textBox_3, null, null);
+	private Class3 Class3_2 => new Class3(mrbAllowModeBlockAllPorts, mrbAllowModeBlockAllPortsExceptSelected, medAllowModeBlockAllPortsExceptSelectedPorts, null, null);
 
 	public GClass7 GClass7_2
 	{
@@ -145,11 +145,11 @@ internal sealed class AdvancedGeoIPSettingsDialog : Form0
 	{
 		get
 		{
-			return class61_3.Checked;
+			return mchbAllowLoopback.Checked;
 		}
 		set
 		{
-			class61_3.Checked = value;
+			mchbAllowLoopback.Checked = value;
 		}
 	}
 
@@ -157,11 +157,11 @@ internal sealed class AdvancedGeoIPSettingsDialog : Form0
 	{
 		get
 		{
-			return class61_2.Checked;
+			return mchbAllowLocal.Checked;
 		}
 		set
 		{
-			class61_2.Checked = value;
+			mchbAllowLocal.Checked = value;
 		}
 	}
 
@@ -169,11 +169,11 @@ internal sealed class AdvancedGeoIPSettingsDialog : Form0
 	{
 		get
 		{
-			return class61_1.Checked;
+			return mchbExcludeVpnAndTor.Checked;
 		}
 		set
 		{
-			class61_1.Checked = value;
+			mchbExcludeVpnAndTor.Checked = value;
 		}
 	}
 
@@ -181,11 +181,11 @@ internal sealed class AdvancedGeoIPSettingsDialog : Form0
 	{
 		get
 		{
-			return class61_0.Checked;
+			return mchbExcludeDatacenters.Checked;
 		}
 		set
 		{
-			class61_0.Checked = value;
+			mchbExcludeDatacenters.Checked = value;
 		}
 	}
 
@@ -193,11 +193,11 @@ internal sealed class AdvancedGeoIPSettingsDialog : Form0
 	{
 		get
 		{
-			if (class64_3.Checked)
+			if (mrbDbVersionLite.Checked)
 			{
 				return GeoIPDBVersion.Lite;
 			}
-			if (class64_2.Checked)
+			if (mrbDbVersionMax.Checked)
 			{
 				return GeoIPDBVersion.Max;
 			}
@@ -208,11 +208,11 @@ internal sealed class AdvancedGeoIPSettingsDialog : Form0
 		{
 			if (value == GeoIPDBVersion.Lite)
 			{
-				class64_3.Checked = true;
+				mrbDbVersionLite.Checked = true;
 			}
 			else if (GeoIPDBVersion.Max == value)
 			{
-				class64_2.Checked = true;
+				mrbDbVersionMax.Checked = true;
 			}
 			else
 			{
@@ -225,35 +225,35 @@ internal sealed class AdvancedGeoIPSettingsDialog : Form0
 		: base(size_0)
 	{
 		OnLoad();
-		vmethod_1();
-		InitializeComponents();
+		InitializeFormPosition();
+		InitializeComponent();
 		OnButtonOk();
 	}
 
-	private void InitializeComponents()
+	private void InitializeComponent()
 	{
 		MinimumSize = size_0;
 		base.Size = size_0;
-		class64_2.Enabled = !Class178.Boolean_0;
-		pictureBox_0.Image = ((Class163.Class163_0.Boolean_0 ? true : false) ? Resources.location_pin_settings_48_dark : Resources.location_pin_settings_48);
+		mrbDbVersionMax.Enabled = !Class178.Boolean_0;
+		mimgBigIcon.Image = ((Class163.Class163_0.Boolean_0 ? true : false) ? Resources.location_pin_settings_48_dark : Resources.location_pin_settings_48);
 	}
 
 	private void OnButtonOk()
 	{
-		gclass3_0.Click += gclass3_0_Click;
-		control14_0.SelectedIndexChanged += control14_0_SelectedIndexChanged;
+		mlnkOnlineHelp.Click += mlnkOnlineHelp_Click;
+		mtabMain.SelectedIndexChanged += control14_0_SelectedIndexChanged;
 		Class3 class3_ = Class3_0;
 		class3_.eventHandler_0 = (EventHandler<EventArgs>)Delegate.Combine(class3_.eventHandler_0, new EventHandler<EventArgs>(ValidateInput));
 		Class3 class3_2 = Class3_1;
 		class3_2.eventHandler_0 = (EventHandler<EventArgs>)Delegate.Combine(class3_2.eventHandler_0, new EventHandler<EventArgs>(SaveSettings));
 		Class3 class3_3 = Class3_2;
 		class3_3.eventHandler_0 = (EventHandler<EventArgs>)Delegate.Combine(class3_3.eventHandler_0, new EventHandler<EventArgs>(LoadSettings));
-		class66_0.Click += class66_0_Click;
+		mbtnClose.Click += mbtnClose_Click;
 	}
 
 	private void OnButtonCancel()
 	{
-		class66_0.Enabled = Class3_0.method_1().Boolean_0 && Class3_1.method_1().Boolean_0 && Class3_2.method_1().Boolean_0;
+		mbtnClose.Enabled = Class3_0.method_1().Boolean_0 && Class3_1.method_1().Boolean_0 && Class3_2.method_1().Boolean_0;
 	}
 
 	protected override void Dispose(bool disposing)
@@ -267,457 +267,457 @@ internal sealed class AdvancedGeoIPSettingsDialog : Form0
 
 	private void OnLoad()
 	{
-		class66_0 = new Class66();
-		gcontrol0_0 = new GControl0();
-		class62_0 = new Class62();
-		pictureBox_0 = new PictureBox();
-		class62_1 = new Class62();
-		gclass3_0 = new GClass3();
-		control14_0 = new Control14();
-		tabPage_0 = new TabPage();
-		class65_1 = new Class65();
-		textBox_0 = new TextBox();
-		class63_6 = new Class63();
-		class64_4 = new Class64();
-		textBox_1 = new TextBox();
-		class63_4 = new Class63();
-		class63_5 = new Class63();
-		class64_0 = new Class64();
-		class64_1 = new Class64();
-		tabPage_1 = new TabPage();
-		class65_4 = new Class65();
-		textBox_3 = new TextBox();
-		class63_9 = new Class63();
-		class63_10 = new Class63();
-		class64_7 = new Class64();
-		class64_8 = new Class64();
-		class65_3 = new Class65();
-		textBox_2 = new TextBox();
-		class63_7 = new Class63();
-		class63_8 = new Class63();
-		class64_5 = new Class64();
-		class64_6 = new Class64();
-		class65_0 = new Class65();
-		class63_0 = new Class63();
-		class61_0 = new Class61();
-		class63_1 = new Class63();
-		class61_1 = new Class61();
-		class63_2 = new Class63();
-		class61_2 = new Class61();
-		class63_3 = new Class63();
-		class61_3 = new Class61();
-		tabPage_2 = new TabPage();
-		class65_2 = new Class65();
-		class64_2 = new Class64();
-		class64_3 = new Class64();
-		((ISupportInitialize)pictureBox_0).BeginInit();
-		control14_0.SuspendLayout();
-		tabPage_0.SuspendLayout();
-		class65_1.SuspendLayout();
-		tabPage_1.SuspendLayout();
-		class65_4.SuspendLayout();
-		class65_3.SuspendLayout();
-		class65_0.SuspendLayout();
-		tabPage_2.SuspendLayout();
-		class65_2.SuspendLayout();
+		mbtnClose = new Class66();
+		separatorLine1 = new GControl0();
+		mlblCaption = new Class62();
+		mimgBigIcon = new PictureBox();
+		mlblSubCaption = new Class62();
+		mlnkOnlineHelp = new GClass3();
+		mtabMain = new Control14();
+		mtpDenyMode = new TabPage();
+		mgbDenyModeScope = new Class65();
+		medDenyModeSelectedOnlyPorts = new TextBox();
+		mtxtDenyModeSelectedOnlyHint = new Class63();
+		mrbDenyModeSelectedOnly = new Class64();
+		medDenyModeAllExceptSelectedPorts = new TextBox();
+		mtxtDenyModeAllExceptSelectedHint = new Class63();
+		mtxtDenyModeAllPortsHint = new Class63();
+		mrbDenyModeAllExceptSelected = new Class64();
+		mrbDenyModeAllPorts = new Class64();
+		mtpAllowMode = new TabPage();
+		mgbAllowModeOther = new Class65();
+		medAllowModeBlockAllPortsExceptSelectedPorts = new TextBox();
+		mtxtAllowModeDenyAllExceptSelectedHint = new Class63();
+		mtxtAllowModeOtherBlockAllPortsHint = new Class63();
+		mrbAllowModeBlockAllPortsExceptSelected = new Class64();
+		mrbAllowModeBlockAllPorts = new Class64();
+		mgbAllowModeRules = new Class65();
+		medAllowModeAllowSelectedOnlyPorts = new TextBox();
+		mtxtAllowModeSelectedOnlyHint = new Class63();
+		mtxtAllowModeAllPortsHint = new Class63();
+		mrbAllowModeAllowSelectedOnly = new Class64();
+		mrbAllowModeAllowAllPorts = new Class64();
+		mgbExceptionsAndSpecialNetworks = new Class65();
+		mchbExcludeDatacentersHint = new Class63();
+		mchbExcludeDatacenters = new Class61();
+		mlblExcludeVpnAndTorHint = new Class63();
+		mchbExcludeVpnAndTor = new Class61();
+		mlblAllowLocalHint = new Class63();
+		mchbAllowLocal = new Class61();
+		mlblAllowLoopbackHint = new Class63();
+		mchbAllowLoopback = new Class61();
+		mtpMiscellaneous = new TabPage();
+		mgbDbVersion = new Class65();
+		mrbDbVersionMax = new Class64();
+		mrbDbVersionLite = new Class64();
+		((ISupportInitialize)mimgBigIcon).BeginInit();
+		mtabMain.SuspendLayout();
+		mtpDenyMode.SuspendLayout();
+		mgbDenyModeScope.SuspendLayout();
+		mtpAllowMode.SuspendLayout();
+		mgbAllowModeOther.SuspendLayout();
+		mgbAllowModeRules.SuspendLayout();
+		mgbExceptionsAndSpecialNetworks.SuspendLayout();
+		mtpMiscellaneous.SuspendLayout();
+		mgbDbVersion.SuspendLayout();
 		SuspendLayout();
-		class66_0.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-		class66_0.Image = Resources.opts_16;
-		class66_0.Location = new Point(451, 722);
-		class66_0.Margin = new Padding(4);
-		class66_0.Name = "m_btnClose";
-		class66_0.Size = new Size(100, 36);
-		class66_0.TabIndex = 7;
-		class66_0.Text = "Close";
-		class66_0.TextAlign = ContentAlignment.MiddleRight;
-		class66_0.TextImageRelation = TextImageRelation.ImageBeforeText;
-		class66_0.UseVisualStyleBackColor = false;
-		gcontrol0_0.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-		gcontrol0_0.Location = new Point(16, 81);
-		gcontrol0_0.Name = "separatorLine1";
-		gcontrol0_0.Size = new Size(532, 2);
-		gcontrol0_0.TabIndex = 50;
-		gcontrol0_0.TabStop = false;
-		class62_0.AutoSize = true;
-		class62_0.Font = new Font("Microsoft Sans Serif", 9.75f, FontStyle.Bold, GraphicsUnit.Point, 204);
-		class62_0.Location = new Point(79, 15);
-		class62_0.Margin = new Padding(4, 0, 4, 0);
-		class62_0.Name = "m_lblCaption";
-		class62_0.Size = new Size(115, 16);
-		class62_0.TabIndex = 49;
-		class62_0.Text = "Geo-IP Settings";
-		class62_0.Boolean_0 = false;
-		pictureBox_0.Location = new Point(16, 15);
-		pictureBox_0.Margin = new Padding(4);
-		pictureBox_0.Name = "m_imgBigIcon";
-		pictureBox_0.Size = new Size(48, 48);
-		pictureBox_0.SizeMode = PictureBoxSizeMode.AutoSize;
-		pictureBox_0.TabIndex = 47;
-		pictureBox_0.TabStop = false;
-		class62_1.AutoSize = true;
-		class62_1.Location = new Point(79, 47);
-		class62_1.Margin = new Padding(4, 0, 4, 0);
-		class62_1.Name = "m_lblSubCaption";
-		class62_1.Size = new Size(163, 16);
-		class62_1.TabIndex = 48;
-		class62_1.Text = "Advanced Geo-IP settings";
-		class62_1.Boolean_0 = false;
-		gclass3_0.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-		gclass3_0.AutoSize = true;
-		gclass3_0.LinkBehavior = LinkBehavior.NeverUnderline;
-		gclass3_0.LinkColor = Color.FromArgb(38, 135, 200);
-		gclass3_0.Location = new Point(476, 9);
-		gclass3_0.Name = "m_lnkOnlineHelp";
-		gclass3_0.Size = new Size(72, 16);
-		gclass3_0.TabIndex = 9;
-		gclass3_0.TabStop = true;
-		gclass3_0.Text = "online help";
-		gclass3_0.VisitedLinkColor = Color.FromArgb(38, 135, 200);
-		control14_0.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-		control14_0.Controls.Add(tabPage_0);
-		control14_0.Controls.Add(tabPage_1);
-		control14_0.Controls.Add(tabPage_2);
-		control14_0.Location = new Point(16, 97);
-		control14_0.Name = "m_tabMain";
-		control14_0.SelectedIndex = 0;
-		control14_0.Size = new Size(536, 618);
-		control14_0.TabIndex = 57;
-		tabPage_0.Controls.Add(class65_1);
-		tabPage_0.Location = new Point(4, 25);
-		tabPage_0.Name = "m_tpDenyMode";
-		tabPage_0.Padding = new Padding(3);
-		tabPage_0.Size = new Size(528, 589);
-		tabPage_0.TabIndex = 0;
-		tabPage_0.Text = "Deny Mode";
-		class65_1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-		class65_1.Controls.Add(textBox_0);
-		class65_1.Controls.Add(class63_6);
-		class65_1.Controls.Add(class64_4);
-		class65_1.Controls.Add(textBox_1);
-		class65_1.Controls.Add(class63_4);
-		class65_1.Controls.Add(class63_5);
-		class65_1.Controls.Add(class64_0);
-		class65_1.Controls.Add(class64_1);
-		class65_1.Location = new Point(6, 6);
-		class65_1.Name = "m_gbDenyModeScope";
-		class65_1.Size = new Size(516, 247);
-		class65_1.TabIndex = 53;
-		class65_1.TabStop = false;
-		class65_1.Text = "Blocking scope:";
-		textBox_0.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-		textBox_0.Enabled = false;
-		textBox_0.Location = new Point(36, 209);
-		textBox_0.Name = "m_edDenyModeSelectedOnlyPorts";
-		textBox_0.Size = new Size(474, 22);
-		textBox_0.TabIndex = 63;
-		class63_6.AutoSize = true;
-		class63_6.ForeColor = SystemColors.ControlDarkDark;
-		class63_6.Location = new Point(33, 186);
-		class63_6.Name = "m_txtDenyModeSelectedOnlyHint";
-		class63_6.Size = new Size(394, 16);
-		class63_6.TabIndex = 62;
-		class63_6.Text = "Deny access from blocked countries only to the ports listed below";
-		class63_6.Boolean_0 = false;
-		class64_4.AutoSize = true;
-		class64_4.Location = new Point(17, 163);
-		class64_4.Name = "m_rbDenyModeSelectedOnly";
-		class64_4.Size = new Size(175, 20);
-		class64_4.TabIndex = 61;
-		class64_4.TabStop = true;
-		class64_4.Text = "Block selected ports only";
-		class64_4.UseVisualStyleBackColor = false;
-		textBox_1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-		textBox_1.Enabled = false;
-		textBox_1.Location = new Point(36, 125);
-		textBox_1.Name = "m_edDenyModeAllExceptSelectedPorts";
-		textBox_1.Size = new Size(474, 22);
-		textBox_1.TabIndex = 60;
-		class63_4.AutoSize = true;
-		class63_4.ForeColor = SystemColors.ControlDarkDark;
-		class63_4.Location = new Point(33, 102);
-		class63_4.Name = "m_txtDenyModeAllExceptSelectedHint";
-		class63_4.Size = new Size(441, 16);
-		class63_4.TabIndex = 59;
-		class63_4.Text = "Deny access from blocked countries to all ports except those listed below";
-		class63_4.Boolean_0 = false;
-		class63_5.AutoSize = true;
-		class63_5.ForeColor = SystemColors.ControlDarkDark;
-		class63_5.Location = new Point(33, 47);
-		class63_5.Name = "m_txtDenyModeAllPortsHint";
-		class63_5.Size = new Size(288, 16);
-		class63_5.TabIndex = 58;
-		class63_5.Text = "Deny access from blocked countries to all ports";
-		class63_5.Boolean_0 = false;
-		class64_0.AutoSize = true;
-		class64_0.Location = new Point(17, 79);
-		class64_0.Name = "m_rbDenyModeAllExceptSelected";
-		class64_0.Size = new Size(207, 20);
-		class64_0.TabIndex = 2;
-		class64_0.TabStop = true;
-		class64_0.Text = "Block all ports except selected";
-		class64_0.UseVisualStyleBackColor = false;
-		class64_1.AutoSize = true;
-		class64_1.Location = new Point(17, 24);
-		class64_1.Name = "m_rbDenyModeAllPorts";
-		class64_1.Size = new Size(109, 20);
-		class64_1.TabIndex = 1;
-		class64_1.TabStop = true;
-		class64_1.Text = "Block all ports";
-		class64_1.UseVisualStyleBackColor = false;
-		tabPage_1.Controls.Add(class65_4);
-		tabPage_1.Controls.Add(class65_3);
-		tabPage_1.Controls.Add(class65_0);
-		tabPage_1.Location = new Point(4, 25);
-		tabPage_1.Name = "m_tpAllowMode";
-		tabPage_1.Padding = new Padding(3);
-		tabPage_1.Size = new Size(528, 589);
-		tabPage_1.TabIndex = 1;
-		tabPage_1.Text = "Allow Mode";
-		class65_4.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-		class65_4.Controls.Add(textBox_3);
-		class65_4.Controls.Add(class63_9);
-		class65_4.Controls.Add(class63_10);
-		class65_4.Controls.Add(class64_7);
-		class65_4.Controls.Add(class64_8);
-		class65_4.Location = new Point(6, 175);
-		class65_4.Name = "m_gbAllowModeOther";
-		class65_4.Size = new Size(516, 163);
-		class65_4.TabIndex = 59;
-		class65_4.TabStop = false;
-		class65_4.Text = "Other connections (from disallowed countries):";
-		textBox_3.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-		textBox_3.Enabled = false;
-		textBox_3.Location = new Point(36, 125);
-		textBox_3.Name = "m_edAllowModeBlockAllPortsExceptSelectedPorts";
-		textBox_3.Size = new Size(474, 22);
-		textBox_3.TabIndex = 60;
-		class63_9.AutoSize = true;
-		class63_9.ForeColor = SystemColors.ControlDarkDark;
-		class63_9.Location = new Point(33, 102);
-		class63_9.Name = "m_txtAllowModeDenyAllExceptSelectedHint";
-		class63_9.Size = new Size(457, 16);
-		class63_9.TabIndex = 59;
-		class63_9.Text = "Deny access from disallowed countries to all ports except those listed below";
-		class63_9.Boolean_0 = false;
-		class63_10.AutoSize = true;
-		class63_10.ForeColor = SystemColors.ControlDarkDark;
-		class63_10.Location = new Point(33, 47);
-		class63_10.Name = "m_txtAllowModeOtherBlockAllPortsHint";
-		class63_10.Size = new Size(257, 16);
-		class63_10.TabIndex = 58;
-		class63_10.Text = "Deny all access from disallowed countries";
-		class63_10.Boolean_0 = false;
-		class64_7.AutoSize = true;
-		class64_7.Location = new Point(17, 79);
-		class64_7.Name = "m_rbAllowModeBlockAllPortsExceptSelected";
-		class64_7.Size = new Size(207, 20);
-		class64_7.TabIndex = 2;
-		class64_7.TabStop = true;
-		class64_7.Text = "Block all ports except selected";
-		class64_7.UseVisualStyleBackColor = false;
-		class64_8.AutoSize = true;
-		class64_8.Location = new Point(17, 24);
-		class64_8.Name = "m_rbAllowModeBlockAllPorts";
-		class64_8.Size = new Size(109, 20);
-		class64_8.TabIndex = 1;
-		class64_8.TabStop = true;
-		class64_8.Text = "Block all ports";
-		class64_8.UseVisualStyleBackColor = false;
-		class65_3.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-		class65_3.Controls.Add(textBox_2);
-		class65_3.Controls.Add(class63_7);
-		class65_3.Controls.Add(class63_8);
-		class65_3.Controls.Add(class64_5);
-		class65_3.Controls.Add(class64_6);
-		class65_3.Location = new Point(6, 6);
-		class65_3.Name = "m_gbAllowModeRules";
-		class65_3.Size = new Size(516, 163);
-		class65_3.TabIndex = 58;
-		class65_3.TabStop = false;
-		class65_3.Text = "Allow rules:";
-		textBox_2.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-		textBox_2.Enabled = false;
-		textBox_2.Location = new Point(36, 125);
-		textBox_2.Name = "m_edAllowModeAllowSelectedOnlyPorts";
-		textBox_2.Size = new Size(474, 22);
-		textBox_2.TabIndex = 60;
-		class63_7.AutoSize = true;
-		class63_7.ForeColor = SystemColors.ControlDarkDark;
-		class63_7.Location = new Point(33, 102);
-		class63_7.Name = "m_txtAllowModeSelectedOnlyHint";
-		class63_7.Size = new Size(392, 16);
-		class63_7.TabIndex = 59;
-		class63_7.Text = "Allow connections from allowed countries to the ports listed below";
-		class63_7.Boolean_0 = false;
-		class63_8.AutoSize = true;
-		class63_8.ForeColor = SystemColors.ControlDarkDark;
-		class63_8.Location = new Point(33, 47);
-		class63_8.Name = "m_txtAllowModeAllPortsHint";
-		class63_8.Size = new Size(314, 16);
-		class63_8.TabIndex = 58;
-		class63_8.Text = "Allow connections from allowed countries to all ports";
-		class63_8.Boolean_0 = false;
-		class64_5.AutoSize = true;
-		class64_5.Location = new Point(17, 79);
-		class64_5.Name = "m_rbAllowModeAllowSelectedOnly";
-		class64_5.Size = new Size(234, 20);
-		class64_5.TabIndex = 2;
-		class64_5.TabStop = true;
-		class64_5.Text = "Allow access to selected ports only";
-		class64_5.UseVisualStyleBackColor = false;
-		class64_6.AutoSize = true;
-		class64_6.Location = new Point(17, 24);
-		class64_6.Name = "m_rbAllowModeAllowAllPorts";
-		class64_6.Size = new Size(168, 20);
-		class64_6.TabIndex = 1;
-		class64_6.TabStop = true;
-		class64_6.Text = "Allow access to all ports";
-		class64_6.UseVisualStyleBackColor = false;
-		class65_0.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-		class65_0.Controls.Add(class63_0);
-		class65_0.Controls.Add(class61_0);
-		class65_0.Controls.Add(class63_1);
-		class65_0.Controls.Add(class61_1);
-		class65_0.Controls.Add(class63_2);
-		class65_0.Controls.Add(class61_2);
-		class65_0.Controls.Add(class63_3);
-		class65_0.Controls.Add(class61_3);
-		class65_0.Location = new Point(6, 344);
-		class65_0.Name = "m_gbExceptionsAndSpecialNetworks";
-		class65_0.Size = new Size(516, 232);
-		class65_0.TabIndex = 57;
-		class65_0.TabStop = false;
-		class65_0.Text = "Exceptions and special networks";
-		class63_0.AutoSize = true;
-		class63_0.ForeColor = SystemColors.ControlDarkDark;
-		class63_0.Location = new Point(33, 200);
-		class63_0.Name = "m_chbExcludeDatacentersHint";
-		class63_0.Size = new Size(344, 16);
-		class63_0.TabIndex = 63;
-		class63_0.Text = "Exclude known data center networks from the allowed IPs";
-		class63_0.Boolean_0 = false;
-		class61_0.AutoSize = true;
-		class61_0.Location = new Point(17, 177);
-		class61_0.Name = "m_chbExcludeDatacenters";
-		class61_0.Size = new Size(375, 20);
-		class61_0.TabIndex = 62;
-		class61_0.Text = "Exclude data center networks from the allowed connections";
-		class61_0.UseVisualStyleBackColor = false;
-		class63_1.AutoSize = true;
-		class63_1.ForeColor = SystemColors.ControlDarkDark;
-		class63_1.Location = new Point(33, 150);
-		class63_1.Name = "m_lblExcludeVpnAndTorHint";
-		class63_1.Size = new Size(419, 16);
-		class63_1.TabIndex = 61;
-		class63_1.Text = "Exclude known VPN networks and Tor exit nodes from the allowed IPs";
-		class63_1.Boolean_0 = false;
-		class61_1.AutoSize = true;
-		class61_1.Location = new Point(17, 127);
-		class61_1.Name = "m_chbExcludeVpnAndTor";
-		class61_1.Size = new Size(450, 20);
-		class61_1.TabIndex = 60;
-		class61_1.Text = "Exclude VPN networks and Tor exit nodes from the allowed connections";
-		class61_1.UseVisualStyleBackColor = false;
-		class63_2.AutoSize = true;
-		class63_2.ForeColor = SystemColors.ControlDarkDark;
-		class63_2.Location = new Point(33, 100);
-		class63_2.Name = "m_lblAllowLocalHint";
-		class63_2.Size = new Size(425, 16);
-		class63_2.TabIndex = 59;
-		class63_2.Text = "Turn on if you want the machine to be accessible over the local network";
-		class63_2.Boolean_0 = false;
-		class61_2.AutoSize = true;
-		class61_2.Location = new Point(17, 77);
-		class61_2.Name = "m_chbAllowLocal";
-		class61_2.Size = new Size(165, 20);
-		class61_2.TabIndex = 58;
-		class61_2.Text = "Allow local connections";
-		class61_2.UseVisualStyleBackColor = false;
-		class63_3.AutoSize = true;
-		class63_3.ForeColor = SystemColors.ControlDarkDark;
-		class63_3.Location = new Point(33, 50);
-		class63_3.Name = "m_lblAllowLoopbackHint";
-		class63_3.Size = new Size(437, 16);
-		class63_3.TabIndex = 57;
-		class63_3.Text = "Blocking these connections could disrupt normal operation of many apps";
-		class63_3.Boolean_0 = false;
-		class61_3.AutoSize = true;
-		class61_3.Location = new Point(17, 27);
-		class61_3.Name = "m_chbAllowLoopback";
-		class61_3.Size = new Size(292, 20);
-		class61_3.TabIndex = 56;
-		class61_3.Text = "Allow loopback connections (recommended)";
-		class61_3.UseVisualStyleBackColor = false;
-		tabPage_2.Controls.Add(class65_2);
-		tabPage_2.Location = new Point(4, 25);
-		tabPage_2.Name = "m_tpMiscellaneous";
-		tabPage_2.Size = new Size(528, 589);
-		tabPage_2.TabIndex = 2;
-		tabPage_2.Text = "Miscellaneous";
-		class65_2.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-		class65_2.Controls.Add(class64_2);
-		class65_2.Controls.Add(class64_3);
-		class65_2.Location = new Point(6, 6);
-		class65_2.Name = "m_gbDbVersion";
-		class65_2.Size = new Size(516, 83);
-		class65_2.TabIndex = 52;
-		class65_2.TabStop = false;
-		class65_2.Text = "Database version:";
-		class64_2.Location = new Point(17, 50);
-		class64_2.Name = "m_rbDbVersionMax";
-		class64_2.Size = new Size(434, 20);
-		class64_2.TabIndex = 2;
-		class64_2.TabStop = true;
-		class64_2.Text = "Max (more entries, higher impact on OS performance, more accurate)";
-		class64_2.UseVisualStyleBackColor = false;
-		class64_3.Location = new Point(17, 24);
-		class64_3.Name = "m_rbDbVersionLite";
-		class64_3.Size = new Size(420, 20);
-		class64_3.TabIndex = 1;
-		class64_3.TabStop = true;
-		class64_3.Text = "Lite (fewer entries, lower impact on OS performance, less accurate)";
-		class64_3.UseVisualStyleBackColor = false;
+		mbtnClose.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+		mbtnClose.Image = Resources.opts_16;
+		mbtnClose.Location = new Point(451, 722);
+		mbtnClose.Margin = new Padding(4);
+		mbtnClose.Name = "m_btnClose";
+		mbtnClose.Size = new Size(100, 36);
+		mbtnClose.TabIndex = 7;
+		mbtnClose.Text = "Close";
+		mbtnClose.TextAlign = ContentAlignment.MiddleRight;
+		mbtnClose.TextImageRelation = TextImageRelation.ImageBeforeText;
+		mbtnClose.UseVisualStyleBackColor = false;
+		separatorLine1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+		separatorLine1.Location = new Point(16, 81);
+		separatorLine1.Name = "separatorLine1";
+		separatorLine1.Size = new Size(532, 2);
+		separatorLine1.TabIndex = 50;
+		separatorLine1.TabStop = false;
+		mlblCaption.AutoSize = true;
+		mlblCaption.Font = new Font("Microsoft Sans Serif", 9.75f, FontStyle.Bold, GraphicsUnit.Point, 204);
+		mlblCaption.Location = new Point(79, 15);
+		mlblCaption.Margin = new Padding(4, 0, 4, 0);
+		mlblCaption.Name = "m_lblCaption";
+		mlblCaption.Size = new Size(115, 16);
+		mlblCaption.TabIndex = 49;
+		mlblCaption.Text = "Geo-IP Settings";
+		mlblCaption.Boolean_0 = false;
+		mimgBigIcon.Location = new Point(16, 15);
+		mimgBigIcon.Margin = new Padding(4);
+		mimgBigIcon.Name = "m_imgBigIcon";
+		mimgBigIcon.Size = new Size(48, 48);
+		mimgBigIcon.SizeMode = PictureBoxSizeMode.AutoSize;
+		mimgBigIcon.TabIndex = 47;
+		mimgBigIcon.TabStop = false;
+		mlblSubCaption.AutoSize = true;
+		mlblSubCaption.Location = new Point(79, 47);
+		mlblSubCaption.Margin = new Padding(4, 0, 4, 0);
+		mlblSubCaption.Name = "m_lblSubCaption";
+		mlblSubCaption.Size = new Size(163, 16);
+		mlblSubCaption.TabIndex = 48;
+		mlblSubCaption.Text = "Advanced Geo-IP settings";
+		mlblSubCaption.Boolean_0 = false;
+		mlnkOnlineHelp.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+		mlnkOnlineHelp.AutoSize = true;
+		mlnkOnlineHelp.LinkBehavior = LinkBehavior.NeverUnderline;
+		mlnkOnlineHelp.LinkColor = Color.FromArgb(38, 135, 200);
+		mlnkOnlineHelp.Location = new Point(476, 9);
+		mlnkOnlineHelp.Name = "m_lnkOnlineHelp";
+		mlnkOnlineHelp.Size = new Size(72, 16);
+		mlnkOnlineHelp.TabIndex = 9;
+		mlnkOnlineHelp.TabStop = true;
+		mlnkOnlineHelp.Text = "online help";
+		mlnkOnlineHelp.VisitedLinkColor = Color.FromArgb(38, 135, 200);
+		mtabMain.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+		mtabMain.Controls.Add(mtpDenyMode);
+		mtabMain.Controls.Add(mtpAllowMode);
+		mtabMain.Controls.Add(mtpMiscellaneous);
+		mtabMain.Location = new Point(16, 97);
+		mtabMain.Name = "m_tabMain";
+		mtabMain.SelectedIndex = 0;
+		mtabMain.Size = new Size(536, 618);
+		mtabMain.TabIndex = 57;
+		mtpDenyMode.Controls.Add(mgbDenyModeScope);
+		mtpDenyMode.Location = new Point(4, 25);
+		mtpDenyMode.Name = "m_tpDenyMode";
+		mtpDenyMode.Padding = new Padding(3);
+		mtpDenyMode.Size = new Size(528, 589);
+		mtpDenyMode.TabIndex = 0;
+		mtpDenyMode.Text = "Deny Mode";
+		mgbDenyModeScope.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+		mgbDenyModeScope.Controls.Add(medDenyModeSelectedOnlyPorts);
+		mgbDenyModeScope.Controls.Add(mtxtDenyModeSelectedOnlyHint);
+		mgbDenyModeScope.Controls.Add(mrbDenyModeSelectedOnly);
+		mgbDenyModeScope.Controls.Add(medDenyModeAllExceptSelectedPorts);
+		mgbDenyModeScope.Controls.Add(mtxtDenyModeAllExceptSelectedHint);
+		mgbDenyModeScope.Controls.Add(mtxtDenyModeAllPortsHint);
+		mgbDenyModeScope.Controls.Add(mrbDenyModeAllExceptSelected);
+		mgbDenyModeScope.Controls.Add(mrbDenyModeAllPorts);
+		mgbDenyModeScope.Location = new Point(6, 6);
+		mgbDenyModeScope.Name = "m_gbDenyModeScope";
+		mgbDenyModeScope.Size = new Size(516, 247);
+		mgbDenyModeScope.TabIndex = 53;
+		mgbDenyModeScope.TabStop = false;
+		mgbDenyModeScope.Text = "Blocking scope:";
+		medDenyModeSelectedOnlyPorts.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+		medDenyModeSelectedOnlyPorts.Enabled = false;
+		medDenyModeSelectedOnlyPorts.Location = new Point(36, 209);
+		medDenyModeSelectedOnlyPorts.Name = "m_edDenyModeSelectedOnlyPorts";
+		medDenyModeSelectedOnlyPorts.Size = new Size(474, 22);
+		medDenyModeSelectedOnlyPorts.TabIndex = 63;
+		mtxtDenyModeSelectedOnlyHint.AutoSize = true;
+		mtxtDenyModeSelectedOnlyHint.ForeColor = SystemColors.ControlDarkDark;
+		mtxtDenyModeSelectedOnlyHint.Location = new Point(33, 186);
+		mtxtDenyModeSelectedOnlyHint.Name = "m_txtDenyModeSelectedOnlyHint";
+		mtxtDenyModeSelectedOnlyHint.Size = new Size(394, 16);
+		mtxtDenyModeSelectedOnlyHint.TabIndex = 62;
+		mtxtDenyModeSelectedOnlyHint.Text = "Deny access from blocked countries only to the ports listed below";
+		mtxtDenyModeSelectedOnlyHint.Boolean_0 = false;
+		mrbDenyModeSelectedOnly.AutoSize = true;
+		mrbDenyModeSelectedOnly.Location = new Point(17, 163);
+		mrbDenyModeSelectedOnly.Name = "m_rbDenyModeSelectedOnly";
+		mrbDenyModeSelectedOnly.Size = new Size(175, 20);
+		mrbDenyModeSelectedOnly.TabIndex = 61;
+		mrbDenyModeSelectedOnly.TabStop = true;
+		mrbDenyModeSelectedOnly.Text = "Block selected ports only";
+		mrbDenyModeSelectedOnly.UseVisualStyleBackColor = false;
+		medDenyModeAllExceptSelectedPorts.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+		medDenyModeAllExceptSelectedPorts.Enabled = false;
+		medDenyModeAllExceptSelectedPorts.Location = new Point(36, 125);
+		medDenyModeAllExceptSelectedPorts.Name = "m_edDenyModeAllExceptSelectedPorts";
+		medDenyModeAllExceptSelectedPorts.Size = new Size(474, 22);
+		medDenyModeAllExceptSelectedPorts.TabIndex = 60;
+		mtxtDenyModeAllExceptSelectedHint.AutoSize = true;
+		mtxtDenyModeAllExceptSelectedHint.ForeColor = SystemColors.ControlDarkDark;
+		mtxtDenyModeAllExceptSelectedHint.Location = new Point(33, 102);
+		mtxtDenyModeAllExceptSelectedHint.Name = "m_txtDenyModeAllExceptSelectedHint";
+		mtxtDenyModeAllExceptSelectedHint.Size = new Size(441, 16);
+		mtxtDenyModeAllExceptSelectedHint.TabIndex = 59;
+		mtxtDenyModeAllExceptSelectedHint.Text = "Deny access from blocked countries to all ports except those listed below";
+		mtxtDenyModeAllExceptSelectedHint.Boolean_0 = false;
+		mtxtDenyModeAllPortsHint.AutoSize = true;
+		mtxtDenyModeAllPortsHint.ForeColor = SystemColors.ControlDarkDark;
+		mtxtDenyModeAllPortsHint.Location = new Point(33, 47);
+		mtxtDenyModeAllPortsHint.Name = "m_txtDenyModeAllPortsHint";
+		mtxtDenyModeAllPortsHint.Size = new Size(288, 16);
+		mtxtDenyModeAllPortsHint.TabIndex = 58;
+		mtxtDenyModeAllPortsHint.Text = "Deny access from blocked countries to all ports";
+		mtxtDenyModeAllPortsHint.Boolean_0 = false;
+		mrbDenyModeAllExceptSelected.AutoSize = true;
+		mrbDenyModeAllExceptSelected.Location = new Point(17, 79);
+		mrbDenyModeAllExceptSelected.Name = "m_rbDenyModeAllExceptSelected";
+		mrbDenyModeAllExceptSelected.Size = new Size(207, 20);
+		mrbDenyModeAllExceptSelected.TabIndex = 2;
+		mrbDenyModeAllExceptSelected.TabStop = true;
+		mrbDenyModeAllExceptSelected.Text = "Block all ports except selected";
+		mrbDenyModeAllExceptSelected.UseVisualStyleBackColor = false;
+		mrbDenyModeAllPorts.AutoSize = true;
+		mrbDenyModeAllPorts.Location = new Point(17, 24);
+		mrbDenyModeAllPorts.Name = "m_rbDenyModeAllPorts";
+		mrbDenyModeAllPorts.Size = new Size(109, 20);
+		mrbDenyModeAllPorts.TabIndex = 1;
+		mrbDenyModeAllPorts.TabStop = true;
+		mrbDenyModeAllPorts.Text = "Block all ports";
+		mrbDenyModeAllPorts.UseVisualStyleBackColor = false;
+		mtpAllowMode.Controls.Add(mgbAllowModeOther);
+		mtpAllowMode.Controls.Add(mgbAllowModeRules);
+		mtpAllowMode.Controls.Add(mgbExceptionsAndSpecialNetworks);
+		mtpAllowMode.Location = new Point(4, 25);
+		mtpAllowMode.Name = "m_tpAllowMode";
+		mtpAllowMode.Padding = new Padding(3);
+		mtpAllowMode.Size = new Size(528, 589);
+		mtpAllowMode.TabIndex = 1;
+		mtpAllowMode.Text = "Allow Mode";
+		mgbAllowModeOther.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+		mgbAllowModeOther.Controls.Add(medAllowModeBlockAllPortsExceptSelectedPorts);
+		mgbAllowModeOther.Controls.Add(mtxtAllowModeDenyAllExceptSelectedHint);
+		mgbAllowModeOther.Controls.Add(mtxtAllowModeOtherBlockAllPortsHint);
+		mgbAllowModeOther.Controls.Add(mrbAllowModeBlockAllPortsExceptSelected);
+		mgbAllowModeOther.Controls.Add(mrbAllowModeBlockAllPorts);
+		mgbAllowModeOther.Location = new Point(6, 175);
+		mgbAllowModeOther.Name = "m_gbAllowModeOther";
+		mgbAllowModeOther.Size = new Size(516, 163);
+		mgbAllowModeOther.TabIndex = 59;
+		mgbAllowModeOther.TabStop = false;
+		mgbAllowModeOther.Text = "Other connections (from disallowed countries):";
+		medAllowModeBlockAllPortsExceptSelectedPorts.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+		medAllowModeBlockAllPortsExceptSelectedPorts.Enabled = false;
+		medAllowModeBlockAllPortsExceptSelectedPorts.Location = new Point(36, 125);
+		medAllowModeBlockAllPortsExceptSelectedPorts.Name = "m_edAllowModeBlockAllPortsExceptSelectedPorts";
+		medAllowModeBlockAllPortsExceptSelectedPorts.Size = new Size(474, 22);
+		medAllowModeBlockAllPortsExceptSelectedPorts.TabIndex = 60;
+		mtxtAllowModeDenyAllExceptSelectedHint.AutoSize = true;
+		mtxtAllowModeDenyAllExceptSelectedHint.ForeColor = SystemColors.ControlDarkDark;
+		mtxtAllowModeDenyAllExceptSelectedHint.Location = new Point(33, 102);
+		mtxtAllowModeDenyAllExceptSelectedHint.Name = "m_txtAllowModeDenyAllExceptSelectedHint";
+		mtxtAllowModeDenyAllExceptSelectedHint.Size = new Size(457, 16);
+		mtxtAllowModeDenyAllExceptSelectedHint.TabIndex = 59;
+		mtxtAllowModeDenyAllExceptSelectedHint.Text = "Deny access from disallowed countries to all ports except those listed below";
+		mtxtAllowModeDenyAllExceptSelectedHint.Boolean_0 = false;
+		mtxtAllowModeOtherBlockAllPortsHint.AutoSize = true;
+		mtxtAllowModeOtherBlockAllPortsHint.ForeColor = SystemColors.ControlDarkDark;
+		mtxtAllowModeOtherBlockAllPortsHint.Location = new Point(33, 47);
+		mtxtAllowModeOtherBlockAllPortsHint.Name = "m_txtAllowModeOtherBlockAllPortsHint";
+		mtxtAllowModeOtherBlockAllPortsHint.Size = new Size(257, 16);
+		mtxtAllowModeOtherBlockAllPortsHint.TabIndex = 58;
+		mtxtAllowModeOtherBlockAllPortsHint.Text = "Deny all access from disallowed countries";
+		mtxtAllowModeOtherBlockAllPortsHint.Boolean_0 = false;
+		mrbAllowModeBlockAllPortsExceptSelected.AutoSize = true;
+		mrbAllowModeBlockAllPortsExceptSelected.Location = new Point(17, 79);
+		mrbAllowModeBlockAllPortsExceptSelected.Name = "m_rbAllowModeBlockAllPortsExceptSelected";
+		mrbAllowModeBlockAllPortsExceptSelected.Size = new Size(207, 20);
+		mrbAllowModeBlockAllPortsExceptSelected.TabIndex = 2;
+		mrbAllowModeBlockAllPortsExceptSelected.TabStop = true;
+		mrbAllowModeBlockAllPortsExceptSelected.Text = "Block all ports except selected";
+		mrbAllowModeBlockAllPortsExceptSelected.UseVisualStyleBackColor = false;
+		mrbAllowModeBlockAllPorts.AutoSize = true;
+		mrbAllowModeBlockAllPorts.Location = new Point(17, 24);
+		mrbAllowModeBlockAllPorts.Name = "m_rbAllowModeBlockAllPorts";
+		mrbAllowModeBlockAllPorts.Size = new Size(109, 20);
+		mrbAllowModeBlockAllPorts.TabIndex = 1;
+		mrbAllowModeBlockAllPorts.TabStop = true;
+		mrbAllowModeBlockAllPorts.Text = "Block all ports";
+		mrbAllowModeBlockAllPorts.UseVisualStyleBackColor = false;
+		mgbAllowModeRules.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+		mgbAllowModeRules.Controls.Add(medAllowModeAllowSelectedOnlyPorts);
+		mgbAllowModeRules.Controls.Add(mtxtAllowModeSelectedOnlyHint);
+		mgbAllowModeRules.Controls.Add(mtxtAllowModeAllPortsHint);
+		mgbAllowModeRules.Controls.Add(mrbAllowModeAllowSelectedOnly);
+		mgbAllowModeRules.Controls.Add(mrbAllowModeAllowAllPorts);
+		mgbAllowModeRules.Location = new Point(6, 6);
+		mgbAllowModeRules.Name = "m_gbAllowModeRules";
+		mgbAllowModeRules.Size = new Size(516, 163);
+		mgbAllowModeRules.TabIndex = 58;
+		mgbAllowModeRules.TabStop = false;
+		mgbAllowModeRules.Text = "Allow rules:";
+		medAllowModeAllowSelectedOnlyPorts.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+		medAllowModeAllowSelectedOnlyPorts.Enabled = false;
+		medAllowModeAllowSelectedOnlyPorts.Location = new Point(36, 125);
+		medAllowModeAllowSelectedOnlyPorts.Name = "m_edAllowModeAllowSelectedOnlyPorts";
+		medAllowModeAllowSelectedOnlyPorts.Size = new Size(474, 22);
+		medAllowModeAllowSelectedOnlyPorts.TabIndex = 60;
+		mtxtAllowModeSelectedOnlyHint.AutoSize = true;
+		mtxtAllowModeSelectedOnlyHint.ForeColor = SystemColors.ControlDarkDark;
+		mtxtAllowModeSelectedOnlyHint.Location = new Point(33, 102);
+		mtxtAllowModeSelectedOnlyHint.Name = "m_txtAllowModeSelectedOnlyHint";
+		mtxtAllowModeSelectedOnlyHint.Size = new Size(392, 16);
+		mtxtAllowModeSelectedOnlyHint.TabIndex = 59;
+		mtxtAllowModeSelectedOnlyHint.Text = "Allow connections from allowed countries to the ports listed below";
+		mtxtAllowModeSelectedOnlyHint.Boolean_0 = false;
+		mtxtAllowModeAllPortsHint.AutoSize = true;
+		mtxtAllowModeAllPortsHint.ForeColor = SystemColors.ControlDarkDark;
+		mtxtAllowModeAllPortsHint.Location = new Point(33, 47);
+		mtxtAllowModeAllPortsHint.Name = "m_txtAllowModeAllPortsHint";
+		mtxtAllowModeAllPortsHint.Size = new Size(314, 16);
+		mtxtAllowModeAllPortsHint.TabIndex = 58;
+		mtxtAllowModeAllPortsHint.Text = "Allow connections from allowed countries to all ports";
+		mtxtAllowModeAllPortsHint.Boolean_0 = false;
+		mrbAllowModeAllowSelectedOnly.AutoSize = true;
+		mrbAllowModeAllowSelectedOnly.Location = new Point(17, 79);
+		mrbAllowModeAllowSelectedOnly.Name = "m_rbAllowModeAllowSelectedOnly";
+		mrbAllowModeAllowSelectedOnly.Size = new Size(234, 20);
+		mrbAllowModeAllowSelectedOnly.TabIndex = 2;
+		mrbAllowModeAllowSelectedOnly.TabStop = true;
+		mrbAllowModeAllowSelectedOnly.Text = "Allow access to selected ports only";
+		mrbAllowModeAllowSelectedOnly.UseVisualStyleBackColor = false;
+		mrbAllowModeAllowAllPorts.AutoSize = true;
+		mrbAllowModeAllowAllPorts.Location = new Point(17, 24);
+		mrbAllowModeAllowAllPorts.Name = "m_rbAllowModeAllowAllPorts";
+		mrbAllowModeAllowAllPorts.Size = new Size(168, 20);
+		mrbAllowModeAllowAllPorts.TabIndex = 1;
+		mrbAllowModeAllowAllPorts.TabStop = true;
+		mrbAllowModeAllowAllPorts.Text = "Allow access to all ports";
+		mrbAllowModeAllowAllPorts.UseVisualStyleBackColor = false;
+		mgbExceptionsAndSpecialNetworks.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+		mgbExceptionsAndSpecialNetworks.Controls.Add(mchbExcludeDatacentersHint);
+		mgbExceptionsAndSpecialNetworks.Controls.Add(mchbExcludeDatacenters);
+		mgbExceptionsAndSpecialNetworks.Controls.Add(mlblExcludeVpnAndTorHint);
+		mgbExceptionsAndSpecialNetworks.Controls.Add(mchbExcludeVpnAndTor);
+		mgbExceptionsAndSpecialNetworks.Controls.Add(mlblAllowLocalHint);
+		mgbExceptionsAndSpecialNetworks.Controls.Add(mchbAllowLocal);
+		mgbExceptionsAndSpecialNetworks.Controls.Add(mlblAllowLoopbackHint);
+		mgbExceptionsAndSpecialNetworks.Controls.Add(mchbAllowLoopback);
+		mgbExceptionsAndSpecialNetworks.Location = new Point(6, 344);
+		mgbExceptionsAndSpecialNetworks.Name = "m_gbExceptionsAndSpecialNetworks";
+		mgbExceptionsAndSpecialNetworks.Size = new Size(516, 232);
+		mgbExceptionsAndSpecialNetworks.TabIndex = 57;
+		mgbExceptionsAndSpecialNetworks.TabStop = false;
+		mgbExceptionsAndSpecialNetworks.Text = "Exceptions and special networks";
+		mchbExcludeDatacentersHint.AutoSize = true;
+		mchbExcludeDatacentersHint.ForeColor = SystemColors.ControlDarkDark;
+		mchbExcludeDatacentersHint.Location = new Point(33, 200);
+		mchbExcludeDatacentersHint.Name = "m_chbExcludeDatacentersHint";
+		mchbExcludeDatacentersHint.Size = new Size(344, 16);
+		mchbExcludeDatacentersHint.TabIndex = 63;
+		mchbExcludeDatacentersHint.Text = "Exclude known data center networks from the allowed IPs";
+		mchbExcludeDatacentersHint.Boolean_0 = false;
+		mchbExcludeDatacenters.AutoSize = true;
+		mchbExcludeDatacenters.Location = new Point(17, 177);
+		mchbExcludeDatacenters.Name = "m_chbExcludeDatacenters";
+		mchbExcludeDatacenters.Size = new Size(375, 20);
+		mchbExcludeDatacenters.TabIndex = 62;
+		mchbExcludeDatacenters.Text = "Exclude data center networks from the allowed connections";
+		mchbExcludeDatacenters.UseVisualStyleBackColor = false;
+		mlblExcludeVpnAndTorHint.AutoSize = true;
+		mlblExcludeVpnAndTorHint.ForeColor = SystemColors.ControlDarkDark;
+		mlblExcludeVpnAndTorHint.Location = new Point(33, 150);
+		mlblExcludeVpnAndTorHint.Name = "m_lblExcludeVpnAndTorHint";
+		mlblExcludeVpnAndTorHint.Size = new Size(419, 16);
+		mlblExcludeVpnAndTorHint.TabIndex = 61;
+		mlblExcludeVpnAndTorHint.Text = "Exclude known VPN networks and Tor exit nodes from the allowed IPs";
+		mlblExcludeVpnAndTorHint.Boolean_0 = false;
+		mchbExcludeVpnAndTor.AutoSize = true;
+		mchbExcludeVpnAndTor.Location = new Point(17, 127);
+		mchbExcludeVpnAndTor.Name = "m_chbExcludeVpnAndTor";
+		mchbExcludeVpnAndTor.Size = new Size(450, 20);
+		mchbExcludeVpnAndTor.TabIndex = 60;
+		mchbExcludeVpnAndTor.Text = "Exclude VPN networks and Tor exit nodes from the allowed connections";
+		mchbExcludeVpnAndTor.UseVisualStyleBackColor = false;
+		mlblAllowLocalHint.AutoSize = true;
+		mlblAllowLocalHint.ForeColor = SystemColors.ControlDarkDark;
+		mlblAllowLocalHint.Location = new Point(33, 100);
+		mlblAllowLocalHint.Name = "m_lblAllowLocalHint";
+		mlblAllowLocalHint.Size = new Size(425, 16);
+		mlblAllowLocalHint.TabIndex = 59;
+		mlblAllowLocalHint.Text = "Turn on if you want the machine to be accessible over the local network";
+		mlblAllowLocalHint.Boolean_0 = false;
+		mchbAllowLocal.AutoSize = true;
+		mchbAllowLocal.Location = new Point(17, 77);
+		mchbAllowLocal.Name = "m_chbAllowLocal";
+		mchbAllowLocal.Size = new Size(165, 20);
+		mchbAllowLocal.TabIndex = 58;
+		mchbAllowLocal.Text = "Allow local connections";
+		mchbAllowLocal.UseVisualStyleBackColor = false;
+		mlblAllowLoopbackHint.AutoSize = true;
+		mlblAllowLoopbackHint.ForeColor = SystemColors.ControlDarkDark;
+		mlblAllowLoopbackHint.Location = new Point(33, 50);
+		mlblAllowLoopbackHint.Name = "m_lblAllowLoopbackHint";
+		mlblAllowLoopbackHint.Size = new Size(437, 16);
+		mlblAllowLoopbackHint.TabIndex = 57;
+		mlblAllowLoopbackHint.Text = "Blocking these connections could disrupt normal operation of many apps";
+		mlblAllowLoopbackHint.Boolean_0 = false;
+		mchbAllowLoopback.AutoSize = true;
+		mchbAllowLoopback.Location = new Point(17, 27);
+		mchbAllowLoopback.Name = "m_chbAllowLoopback";
+		mchbAllowLoopback.Size = new Size(292, 20);
+		mchbAllowLoopback.TabIndex = 56;
+		mchbAllowLoopback.Text = "Allow loopback connections (recommended)";
+		mchbAllowLoopback.UseVisualStyleBackColor = false;
+		mtpMiscellaneous.Controls.Add(mgbDbVersion);
+		mtpMiscellaneous.Location = new Point(4, 25);
+		mtpMiscellaneous.Name = "m_tpMiscellaneous";
+		mtpMiscellaneous.Size = new Size(528, 589);
+		mtpMiscellaneous.TabIndex = 2;
+		mtpMiscellaneous.Text = "Miscellaneous";
+		mgbDbVersion.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+		mgbDbVersion.Controls.Add(mrbDbVersionMax);
+		mgbDbVersion.Controls.Add(mrbDbVersionLite);
+		mgbDbVersion.Location = new Point(6, 6);
+		mgbDbVersion.Name = "m_gbDbVersion";
+		mgbDbVersion.Size = new Size(516, 83);
+		mgbDbVersion.TabIndex = 52;
+		mgbDbVersion.TabStop = false;
+		mgbDbVersion.Text = "Database version:";
+		mrbDbVersionMax.Location = new Point(17, 50);
+		mrbDbVersionMax.Name = "m_rbDbVersionMax";
+		mrbDbVersionMax.Size = new Size(434, 20);
+		mrbDbVersionMax.TabIndex = 2;
+		mrbDbVersionMax.TabStop = true;
+		mrbDbVersionMax.Text = "Max (more entries, higher impact on OS performance, more accurate)";
+		mrbDbVersionMax.UseVisualStyleBackColor = false;
+		mrbDbVersionLite.Location = new Point(17, 24);
+		mrbDbVersionLite.Name = "m_rbDbVersionLite";
+		mrbDbVersionLite.Size = new Size(420, 20);
+		mrbDbVersionLite.TabIndex = 1;
+		mrbDbVersionLite.TabStop = true;
+		mrbDbVersionLite.Text = "Lite (fewer entries, lower impact on OS performance, less accurate)";
+		mrbDbVersionLite.UseVisualStyleBackColor = false;
 		base.AutoScaleDimensions = new SizeF(8f, 16f);
 		base.AutoScaleMode = AutoScaleMode.Font;
-		base.Controls.Add(control14_0);
-		base.Controls.Add(gclass3_0);
-		base.Controls.Add(gcontrol0_0);
-		base.Controls.Add(class62_0);
-		base.Controls.Add(class62_1);
-		base.Controls.Add(pictureBox_0);
-		base.Controls.Add(class66_0);
+		base.Controls.Add(mtabMain);
+		base.Controls.Add(mlnkOnlineHelp);
+		base.Controls.Add(separatorLine1);
+		base.Controls.Add(mlblCaption);
+		base.Controls.Add(mlblSubCaption);
+		base.Controls.Add(mimgBigIcon);
+		base.Controls.Add(mbtnClose);
 		Font = new Font("Microsoft Sans Serif", 9.75f, FontStyle.Regular, GraphicsUnit.Point, 204);
 		base.Margin = new Padding(5, 4, 5, 4);
 		base.Name = "AdvancedGeoIPSettingsDialog";
 		base.Size = new Size(580, 810);
 		base.StartPosition = FormStartPosition.Manual;
 		Text = "Advanced Geo-IP Settings";
-		((ISupportInitialize)pictureBox_0).EndInit();
-		control14_0.ResumeLayout(performLayout: false);
-		tabPage_0.ResumeLayout(performLayout: false);
-		class65_1.ResumeLayout(performLayout: false);
-		class65_1.PerformLayout();
-		tabPage_1.ResumeLayout(performLayout: false);
-		class65_4.ResumeLayout(performLayout: false);
-		class65_4.PerformLayout();
-		class65_3.ResumeLayout(performLayout: false);
-		class65_3.PerformLayout();
-		class65_0.ResumeLayout(performLayout: false);
-		class65_0.PerformLayout();
-		tabPage_2.ResumeLayout(performLayout: false);
-		class65_2.ResumeLayout(performLayout: false);
+		((ISupportInitialize)mimgBigIcon).EndInit();
+		mtabMain.ResumeLayout(performLayout: false);
+		mtpDenyMode.ResumeLayout(performLayout: false);
+		mgbDenyModeScope.ResumeLayout(performLayout: false);
+		mgbDenyModeScope.PerformLayout();
+		mtpAllowMode.ResumeLayout(performLayout: false);
+		mgbAllowModeOther.ResumeLayout(performLayout: false);
+		mgbAllowModeOther.PerformLayout();
+		mgbAllowModeRules.ResumeLayout(performLayout: false);
+		mgbAllowModeRules.PerformLayout();
+		mgbExceptionsAndSpecialNetworks.ResumeLayout(performLayout: false);
+		mgbExceptionsAndSpecialNetworks.PerformLayout();
+		mtpMiscellaneous.ResumeLayout(performLayout: false);
+		mgbDbVersion.ResumeLayout(performLayout: false);
 		ResumeLayout(performLayout: false);
 		PerformLayout();
 	}
 
-	private void gclass3_0_Click(object sender, EventArgs e)
+	private void mlnkOnlineHelp_Click(object sender, EventArgs e)
 	{
-		method_9(Class148.Class156.string_1);
+		ShowOnlineHelp(Class148.Class156.string_1);
 	}
 
 	private void control14_0_SelectedIndexChanged(object sender, EventArgs e)
 	{
-		if (tabPage_1 == control14_0.SelectedTab)
+		if (mtpAllowMode == mtabMain.SelectedTab)
 		{
 			MinimumSize = size_1;
 			base.Size = size_1;
@@ -744,8 +744,8 @@ internal sealed class AdvancedGeoIPSettingsDialog : Form0
 		OnButtonCancel();
 	}
 
-	private void class66_0_Click(object sender, EventArgs e)
+	private void mbtnClose_Click(object sender, EventArgs e)
 	{
-		method_8(DialogResult.OK);
+		CloseDialog(DialogResult.OK);
 	}
 }

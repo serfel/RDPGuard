@@ -11,53 +11,53 @@ internal sealed class RDWebSettingsDialog : Form0
 
 	private IContainer icontainer_0;
 
-	private Class66 class66_0;
+	private Class66 mbtnSave;
 
-	private Class66 class66_1;
+	private Class66 mbtnCancel;
 
-	private GControl0 gcontrol0_0;
+	private GControl0 separatorLine1;
 
-	private Class62 class62_0;
+	private Class62 mlblCaption;
 
-	private PictureBox pictureBox_0;
+	private PictureBox mimgBigIcon;
 
-	private Class62 class62_1;
+	private Class62 mlblSubCaption;
 
-	private GClass3 gclass3_0;
+	private GClass3 mlnkOnlineHelp;
 
-	private Class61 class61_0;
+	private Class61 mchbEnableRDWebEngine;
 
-	private Class61 class61_1;
+	private Class61 mchbAutodetectLogsLocation;
 
-	private Class63 class63_0;
+	private Class63 mlblEnableRDWebProtectionHint;
 
-	private Class63 class63_1;
+	private Class63 mlblAutomaticConfigLocationHint;
 
-	private Class54 class54_0;
+	private Class54 medLogFilesDirectory;
 
-	private Class62 class62_2;
+	private Class62 mlblLogFilesLocation;
 
-	private Class63 class63_2;
+	private Class63 mlblLogFilesLocationHint;
 
-	private GClass3 gclass3_1;
+	private GClass3 mlnkAdvancedSettings;
 
 	public Class123 Class123_0
 	{
 		get
 		{
 			Class123 @class = new Class123();
-			@class.bool_0 = class61_0.Checked;
-			@class.bool_2 = class61_1.Checked;
-			@class.String_1 = new string[1] { class54_0.Text };
+			@class.bool_0 = mchbEnableRDWebEngine.Checked;
+			@class.bool_2 = mchbAutodetectLogsLocation.Checked;
+			@class.String_1 = new string[1] { medLogFilesDirectory.Text };
 			@class.bool_3 = form2_0.Boolean_0;
 			@class.bool_4 = form2_0.Boolean_1;
 			return @class;
 		}
 		set
 		{
-			class61_0.Checked = value.bool_0;
-			class61_1.Checked = value.bool_2;
-			class54_0.Text = value.String_1[0];
+			mchbEnableRDWebEngine.Checked = value.bool_0;
+			mchbAutodetectLogsLocation.Checked = value.bool_2;
+			medLogFilesDirectory.Text = value.String_1[0];
 			form2_0.Boolean_0 = value.bool_3;
 			form2_0.Boolean_1 = value.bool_4;
 			OnLoad();
@@ -68,61 +68,61 @@ internal sealed class RDWebSettingsDialog : Form0
 		: base(new Size(550, 390))
 	{
 		ValidateInput();
-		vmethod_1();
-		InitializeComponents();
+		InitializeFormPosition();
+		InitializeComponent();
 		OnButtonOk();
 		Class123_0 = class123_0;
 	}
 
-	private void InitializeComponents()
+	private void InitializeComponent()
 	{
-		class54_0.bool_0 = true;
-		class54_0.String_0 = "Click to specify IIS log files location for RDWeb enabled website";
-		if (string.IsNullOrEmpty(class54_0.Text))
+		medLogFilesDirectory.bool_0 = true;
+		medLogFilesDirectory.String_0 = "Click to specify IIS log files location for RDWeb enabled website";
+		if (string.IsNullOrEmpty(medLogFilesDirectory.Text))
 		{
 			string text = "C:\\inetpub\\logs\\LogFiles";
 			if (Directory.Exists(text))
 			{
-				class54_0.String_1 = text;
+				medLogFilesDirectory.String_1 = text;
 			}
 		}
 		else
 		{
-			class54_0.String_1 = class54_0.Text;
+			medLogFilesDirectory.String_1 = medLogFilesDirectory.Text;
 		}
 	}
 
 	private void OnButtonOk()
 	{
-		gclass3_0.Click += gclass3_0_Click;
-		class61_0.CheckedChanged += class61_0_CheckedChanged;
-		class61_1.CheckedChanged += class61_1_CheckedChanged;
-		class54_0.TextChanged += class54_0_TextChanged;
-		class66_0.Click += class66_0_Click;
-		class66_1.Click += class66_1_Click;
-		gclass3_1.Click += gclass3_1_Click;
+		mlnkOnlineHelp.Click += mlnkOnlineHelp_Click;
+		mchbEnableRDWebEngine.CheckedChanged += mchbEnableRDWebEngine_CheckedChanged;
+		mchbAutodetectLogsLocation.CheckedChanged += mchbAutodetectLogsLocation_CheckedChanged;
+		medLogFilesDirectory.TextChanged += medLogFilesDirectory_TextChanged;
+		mbtnSave.Click += mbtnSave_Click;
+		mbtnCancel.Click += mbtnCancel_Click;
+		mlnkAdvancedSettings.Click += mlnkAdvancedSettings_Click;
 	}
 
 	private void OnButtonCancel()
 	{
 		bool flag = true;
-		if (class61_0.Checked && !class61_1.Checked)
+		if (mchbEnableRDWebEngine.Checked && !mchbAutodetectLogsLocation.Checked)
 		{
-			flag &= !string.IsNullOrEmpty(class54_0.Text);
+			flag &= !string.IsNullOrEmpty(medLogFilesDirectory.Text);
 		}
-		class66_0.Enabled = flag;
+		mbtnSave.Enabled = flag;
 	}
 
 	private void OnLoad()
 	{
-		bool flag = class61_0.Checked;
-		class61_1.Enabled = flag;
-		class63_1.Enabled = flag;
-		bool flag2 = class61_1.Checked;
-		class62_2.Enabled = flag && !flag2;
-		class54_0.Enabled = flag && !flag2;
-		class63_2.Enabled = flag && !flag2;
-		gclass3_1.Enabled = flag;
+		bool flag = mchbEnableRDWebEngine.Checked;
+		mchbAutodetectLogsLocation.Enabled = flag;
+		mlblAutomaticConfigLocationHint.Enabled = flag;
+		bool flag2 = mchbAutodetectLogsLocation.Checked;
+		mlblLogFilesLocation.Enabled = flag && !flag2;
+		medLogFilesDirectory.Enabled = flag && !flag2;
+		mlblLogFilesLocationHint.Enabled = flag && !flag2;
+		mlnkAdvancedSettings.Enabled = flag;
 		OnButtonCancel();
 	}
 
@@ -137,206 +137,206 @@ internal sealed class RDWebSettingsDialog : Form0
 
 	private void ValidateInput()
 	{
-		class66_0 = new Class66();
-		class66_1 = new Class66();
-		gcontrol0_0 = new GControl0();
-		class62_0 = new Class62();
-		pictureBox_0 = new PictureBox();
-		class62_1 = new Class62();
-		gclass3_0 = new GClass3();
-		class61_0 = new Class61();
-		class61_1 = new Class61();
-		class63_0 = new Class63();
-		class63_1 = new Class63();
-		class54_0 = new Class54();
-		class62_2 = new Class62();
-		class63_2 = new Class63();
-		gclass3_1 = new GClass3();
-		((ISupportInitialize)pictureBox_0).BeginInit();
+		mbtnSave = new Class66();
+		mbtnCancel = new Class66();
+		separatorLine1 = new GControl0();
+		mlblCaption = new Class62();
+		mimgBigIcon = new PictureBox();
+		mlblSubCaption = new Class62();
+		mlnkOnlineHelp = new GClass3();
+		mchbEnableRDWebEngine = new Class61();
+		mchbAutodetectLogsLocation = new Class61();
+		mlblEnableRDWebProtectionHint = new Class63();
+		mlblAutomaticConfigLocationHint = new Class63();
+		medLogFilesDirectory = new Class54();
+		mlblLogFilesLocation = new Class62();
+		mlblLogFilesLocationHint = new Class63();
+		mlnkAdvancedSettings = new GClass3();
+		((ISupportInitialize)mimgBigIcon).BeginInit();
 		SuspendLayout();
-		class66_0.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-		class66_0.Image = Resources.opts_16;
-		class66_0.Location = new Point(313, 302);
-		class66_0.Margin = new Padding(4);
-		class66_0.Name = "m_btnSave";
-		class66_0.Size = new Size(100, 36);
-		class66_0.TabIndex = 7;
-		class66_0.Text = "Save";
-		class66_0.TextAlign = ContentAlignment.MiddleRight;
-		class66_0.TextImageRelation = TextImageRelation.ImageBeforeText;
-		class66_0.UseVisualStyleBackColor = true;
-		class66_1.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-		class66_1.Image = Resources.cancl_16;
-		class66_1.Location = new Point(421, 302);
-		class66_1.Margin = new Padding(4);
-		class66_1.Name = "m_btnCancel";
-		class66_1.Size = new Size(100, 36);
-		class66_1.TabIndex = 8;
-		class66_1.Text = "Cancel";
-		class66_1.TextAlign = ContentAlignment.MiddleRight;
-		class66_1.TextImageRelation = TextImageRelation.ImageBeforeText;
-		class66_1.UseVisualStyleBackColor = true;
-		gcontrol0_0.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-		gcontrol0_0.Location = new Point(16, 81);
-		gcontrol0_0.Name = "separatorLine1";
-		gcontrol0_0.Size = new Size(506, 2);
-		gcontrol0_0.TabIndex = 50;
-		gcontrol0_0.TabStop = false;
-		class62_0.AutoSize = true;
-		class62_0.Font = new Font("Microsoft Sans Serif", 9.75f, FontStyle.Bold, GraphicsUnit.Point, 204);
-		class62_0.Location = new Point(79, 15);
-		class62_0.Margin = new Padding(4, 0, 4, 0);
-		class62_0.Name = "m_lblCaption";
-		class62_0.Size = new Size(121, 16);
-		class62_0.TabIndex = 49;
-		class62_0.Text = "RD Web Settings";
-		pictureBox_0.Image = Resources.rdweb_48;
-		pictureBox_0.Location = new Point(16, 15);
-		pictureBox_0.Margin = new Padding(4);
-		pictureBox_0.Name = "m_imgBigIcon";
-		pictureBox_0.Size = new Size(48, 48);
-		pictureBox_0.SizeMode = PictureBoxSizeMode.AutoSize;
-		pictureBox_0.TabIndex = 47;
-		pictureBox_0.TabStop = false;
-		class62_1.AutoSize = true;
-		class62_1.Location = new Point(79, 47);
-		class62_1.Margin = new Padding(4, 0, 4, 0);
-		class62_1.Name = "m_lblSubCaption";
-		class62_1.Size = new Size(230, 16);
-		class62_1.TabIndex = 48;
-		class62_1.Text = "Advanced RD Web protection settings";
-		gclass3_0.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-		gclass3_0.AutoSize = true;
-		gclass3_0.LinkBehavior = LinkBehavior.NeverUnderline;
-		gclass3_0.LinkColor = Color.FromArgb(38, 135, 200);
-		gclass3_0.Location = new Point(449, 9);
-		gclass3_0.Name = "m_lnkOnlineHelp";
-		gclass3_0.Size = new Size(72, 16);
-		gclass3_0.TabIndex = 9;
-		gclass3_0.TabStop = true;
-		gclass3_0.Text = "online help";
-		gclass3_0.VisitedLinkColor = Color.FromArgb(38, 135, 200);
-		class61_0.AutoSize = true;
-		class61_0.Location = new Point(16, 97);
-		class61_0.Name = "m_chbEnableRDWebEngine";
-		class61_0.Size = new Size(183, 20);
-		class61_0.TabIndex = 0;
-		class61_0.Text = "Enable RD Web protection";
-		class61_0.UseVisualStyleBackColor = true;
-		class61_1.AutoSize = true;
-		class61_1.Location = new Point(16, 157);
-		class61_1.Name = "m_chbAutodetectLogsLocation";
-		class61_1.Size = new Size(245, 20);
-		class61_1.TabIndex = 1;
-		class61_1.Text = "Automatically detect log files location";
-		class61_1.UseVisualStyleBackColor = true;
-		class63_0.AutoSize = true;
-		class63_0.ForeColor = SystemColors.ControlDarkDark;
-		class63_0.Location = new Point(13, 122);
-		class63_0.Name = "m_lblEnableRDWebProtectionHint";
-		class63_0.Size = new Size(225, 16);
-		class63_0.TabIndex = 58;
-		class63_0.Text = "Turn on to enable RD Web protection";
-		class63_1.AutoSize = true;
-		class63_1.ForeColor = SystemColors.ControlDarkDark;
-		class63_1.Location = new Point(13, 182);
-		class63_1.Name = "m_lblAutomaticConfigLocationHint";
-		class63_1.Size = new Size(481, 16);
-		class63_1.TabIndex = 59;
-		class63_1.Text = "RdpGuard will attempt to detect IIS log files location for RD Web enabled website";
-		class54_0.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-		class54_0.Enabled = false;
-		class54_0.String_1 = null;
-		class54_0.Location = new Point(23, 243);
-		class54_0.Name = "m_edLogFilesDirectory";
-		class54_0.Size = new Size(498, 22);
-		class54_0.TabIndex = 2;
-		class62_2.AutoSize = true;
-		class62_2.Enabled = false;
-		class62_2.Location = new Point(13, 217);
-		class62_2.Name = "m_lblLogFilesLocation";
-		class62_2.Size = new Size(124, 16);
-		class62_2.TabIndex = 61;
-		class62_2.Text = "IIS log files location:";
-		class63_2.AutoSize = true;
-		class63_2.Enabled = false;
-		class63_2.ForeColor = SystemColors.ControlDarkDark;
-		class63_2.Location = new Point(20, 268);
-		class63_2.Name = "m_lblLogFilesLocationHint";
-		class63_2.Size = new Size(341, 16);
-		class63_2.TabIndex = 62;
-		class63_2.Text = "Specify IIS log files location for RD Web enabled website";
-		gclass3_1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-		gclass3_1.AutoSize = true;
-		gclass3_1.LinkBehavior = LinkBehavior.NeverUnderline;
-		gclass3_1.LinkColor = Color.FromArgb(38, 135, 200);
-		gclass3_1.Location = new Point(13, 322);
-		gclass3_1.Name = "m_lnkAdvancedSettings";
-		gclass3_1.Size = new Size(123, 16);
-		gclass3_1.TabIndex = 70;
-		gclass3_1.TabStop = true;
-		gclass3_1.Text = "advanced settings..";
-		gclass3_1.VisitedLinkColor = Color.FromArgb(38, 135, 200);
+		mbtnSave.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+		mbtnSave.Image = Resources.opts_16;
+		mbtnSave.Location = new Point(313, 302);
+		mbtnSave.Margin = new Padding(4);
+		mbtnSave.Name = "m_btnSave";
+		mbtnSave.Size = new Size(100, 36);
+		mbtnSave.TabIndex = 7;
+		mbtnSave.Text = "Save";
+		mbtnSave.TextAlign = ContentAlignment.MiddleRight;
+		mbtnSave.TextImageRelation = TextImageRelation.ImageBeforeText;
+		mbtnSave.UseVisualStyleBackColor = true;
+		mbtnCancel.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+		mbtnCancel.Image = Resources.cancl_16;
+		mbtnCancel.Location = new Point(421, 302);
+		mbtnCancel.Margin = new Padding(4);
+		mbtnCancel.Name = "m_btnCancel";
+		mbtnCancel.Size = new Size(100, 36);
+		mbtnCancel.TabIndex = 8;
+		mbtnCancel.Text = "Cancel";
+		mbtnCancel.TextAlign = ContentAlignment.MiddleRight;
+		mbtnCancel.TextImageRelation = TextImageRelation.ImageBeforeText;
+		mbtnCancel.UseVisualStyleBackColor = true;
+		separatorLine1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+		separatorLine1.Location = new Point(16, 81);
+		separatorLine1.Name = "separatorLine1";
+		separatorLine1.Size = new Size(506, 2);
+		separatorLine1.TabIndex = 50;
+		separatorLine1.TabStop = false;
+		mlblCaption.AutoSize = true;
+		mlblCaption.Font = new Font("Microsoft Sans Serif", 9.75f, FontStyle.Bold, GraphicsUnit.Point, 204);
+		mlblCaption.Location = new Point(79, 15);
+		mlblCaption.Margin = new Padding(4, 0, 4, 0);
+		mlblCaption.Name = "m_lblCaption";
+		mlblCaption.Size = new Size(121, 16);
+		mlblCaption.TabIndex = 49;
+		mlblCaption.Text = "RD Web Settings";
+		mimgBigIcon.Image = Resources.rdweb_48;
+		mimgBigIcon.Location = new Point(16, 15);
+		mimgBigIcon.Margin = new Padding(4);
+		mimgBigIcon.Name = "m_imgBigIcon";
+		mimgBigIcon.Size = new Size(48, 48);
+		mimgBigIcon.SizeMode = PictureBoxSizeMode.AutoSize;
+		mimgBigIcon.TabIndex = 47;
+		mimgBigIcon.TabStop = false;
+		mlblSubCaption.AutoSize = true;
+		mlblSubCaption.Location = new Point(79, 47);
+		mlblSubCaption.Margin = new Padding(4, 0, 4, 0);
+		mlblSubCaption.Name = "m_lblSubCaption";
+		mlblSubCaption.Size = new Size(230, 16);
+		mlblSubCaption.TabIndex = 48;
+		mlblSubCaption.Text = "Advanced RD Web protection settings";
+		mlnkOnlineHelp.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+		mlnkOnlineHelp.AutoSize = true;
+		mlnkOnlineHelp.LinkBehavior = LinkBehavior.NeverUnderline;
+		mlnkOnlineHelp.LinkColor = Color.FromArgb(38, 135, 200);
+		mlnkOnlineHelp.Location = new Point(449, 9);
+		mlnkOnlineHelp.Name = "m_lnkOnlineHelp";
+		mlnkOnlineHelp.Size = new Size(72, 16);
+		mlnkOnlineHelp.TabIndex = 9;
+		mlnkOnlineHelp.TabStop = true;
+		mlnkOnlineHelp.Text = "online help";
+		mlnkOnlineHelp.VisitedLinkColor = Color.FromArgb(38, 135, 200);
+		mchbEnableRDWebEngine.AutoSize = true;
+		mchbEnableRDWebEngine.Location = new Point(16, 97);
+		mchbEnableRDWebEngine.Name = "m_chbEnableRDWebEngine";
+		mchbEnableRDWebEngine.Size = new Size(183, 20);
+		mchbEnableRDWebEngine.TabIndex = 0;
+		mchbEnableRDWebEngine.Text = "Enable RD Web protection";
+		mchbEnableRDWebEngine.UseVisualStyleBackColor = true;
+		mchbAutodetectLogsLocation.AutoSize = true;
+		mchbAutodetectLogsLocation.Location = new Point(16, 157);
+		mchbAutodetectLogsLocation.Name = "m_chbAutodetectLogsLocation";
+		mchbAutodetectLogsLocation.Size = new Size(245, 20);
+		mchbAutodetectLogsLocation.TabIndex = 1;
+		mchbAutodetectLogsLocation.Text = "Automatically detect log files location";
+		mchbAutodetectLogsLocation.UseVisualStyleBackColor = true;
+		mlblEnableRDWebProtectionHint.AutoSize = true;
+		mlblEnableRDWebProtectionHint.ForeColor = SystemColors.ControlDarkDark;
+		mlblEnableRDWebProtectionHint.Location = new Point(13, 122);
+		mlblEnableRDWebProtectionHint.Name = "m_lblEnableRDWebProtectionHint";
+		mlblEnableRDWebProtectionHint.Size = new Size(225, 16);
+		mlblEnableRDWebProtectionHint.TabIndex = 58;
+		mlblEnableRDWebProtectionHint.Text = "Turn on to enable RD Web protection";
+		mlblAutomaticConfigLocationHint.AutoSize = true;
+		mlblAutomaticConfigLocationHint.ForeColor = SystemColors.ControlDarkDark;
+		mlblAutomaticConfigLocationHint.Location = new Point(13, 182);
+		mlblAutomaticConfigLocationHint.Name = "m_lblAutomaticConfigLocationHint";
+		mlblAutomaticConfigLocationHint.Size = new Size(481, 16);
+		mlblAutomaticConfigLocationHint.TabIndex = 59;
+		mlblAutomaticConfigLocationHint.Text = "RdpGuard will attempt to detect IIS log files location for RD Web enabled website";
+		medLogFilesDirectory.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+		medLogFilesDirectory.Enabled = false;
+		medLogFilesDirectory.String_1 = null;
+		medLogFilesDirectory.Location = new Point(23, 243);
+		medLogFilesDirectory.Name = "m_edLogFilesDirectory";
+		medLogFilesDirectory.Size = new Size(498, 22);
+		medLogFilesDirectory.TabIndex = 2;
+		mlblLogFilesLocation.AutoSize = true;
+		mlblLogFilesLocation.Enabled = false;
+		mlblLogFilesLocation.Location = new Point(13, 217);
+		mlblLogFilesLocation.Name = "m_lblLogFilesLocation";
+		mlblLogFilesLocation.Size = new Size(124, 16);
+		mlblLogFilesLocation.TabIndex = 61;
+		mlblLogFilesLocation.Text = "IIS log files location:";
+		mlblLogFilesLocationHint.AutoSize = true;
+		mlblLogFilesLocationHint.Enabled = false;
+		mlblLogFilesLocationHint.ForeColor = SystemColors.ControlDarkDark;
+		mlblLogFilesLocationHint.Location = new Point(20, 268);
+		mlblLogFilesLocationHint.Name = "m_lblLogFilesLocationHint";
+		mlblLogFilesLocationHint.Size = new Size(341, 16);
+		mlblLogFilesLocationHint.TabIndex = 62;
+		mlblLogFilesLocationHint.Text = "Specify IIS log files location for RD Web enabled website";
+		mlnkAdvancedSettings.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+		mlnkAdvancedSettings.AutoSize = true;
+		mlnkAdvancedSettings.LinkBehavior = LinkBehavior.NeverUnderline;
+		mlnkAdvancedSettings.LinkColor = Color.FromArgb(38, 135, 200);
+		mlnkAdvancedSettings.Location = new Point(13, 322);
+		mlnkAdvancedSettings.Name = "m_lnkAdvancedSettings";
+		mlnkAdvancedSettings.Size = new Size(123, 16);
+		mlnkAdvancedSettings.TabIndex = 70;
+		mlnkAdvancedSettings.TabStop = true;
+		mlnkAdvancedSettings.Text = "advanced settings..";
+		mlnkAdvancedSettings.VisitedLinkColor = Color.FromArgb(38, 135, 200);
 		base.AutoScaleDimensions = new SizeF(8f, 16f);
 		base.AutoScaleMode = AutoScaleMode.Font;
 		base.ClientSize = new Size(534, 351);
-		base.Controls.Add(gclass3_1);
-		base.Controls.Add(class63_2);
-		base.Controls.Add(class62_2);
-		base.Controls.Add(class54_0);
-		base.Controls.Add(class63_1);
-		base.Controls.Add(class63_0);
-		base.Controls.Add(class61_1);
-		base.Controls.Add(class61_0);
-		base.Controls.Add(gclass3_0);
-		base.Controls.Add(gcontrol0_0);
-		base.Controls.Add(class62_0);
-		base.Controls.Add(class62_1);
-		base.Controls.Add(pictureBox_0);
-		base.Controls.Add(class66_0);
-		base.Controls.Add(class66_1);
+		base.Controls.Add(mlnkAdvancedSettings);
+		base.Controls.Add(mlblLogFilesLocationHint);
+		base.Controls.Add(mlblLogFilesLocation);
+		base.Controls.Add(medLogFilesDirectory);
+		base.Controls.Add(mlblAutomaticConfigLocationHint);
+		base.Controls.Add(mlblEnableRDWebProtectionHint);
+		base.Controls.Add(mchbAutodetectLogsLocation);
+		base.Controls.Add(mchbEnableRDWebEngine);
+		base.Controls.Add(mlnkOnlineHelp);
+		base.Controls.Add(separatorLine1);
+		base.Controls.Add(mlblCaption);
+		base.Controls.Add(mlblSubCaption);
+		base.Controls.Add(mimgBigIcon);
+		base.Controls.Add(mbtnSave);
+		base.Controls.Add(mbtnCancel);
 		Font = new Font("Microsoft Sans Serif", 9.75f, FontStyle.Regular, GraphicsUnit.Point, 204);
 		base.Margin = new Padding(5, 4, 5, 4);
 		base.Name = "RDWebSettingsDialog";
 		base.StartPosition = FormStartPosition.Manual;
 		Text = "RD Web Protection Settings";
-		((ISupportInitialize)pictureBox_0).EndInit();
+		((ISupportInitialize)mimgBigIcon).EndInit();
 		ResumeLayout(performLayout: false);
 		PerformLayout();
 	}
 
-	private void gclass3_0_Click(object sender, EventArgs e)
+	private void mlnkOnlineHelp_Click(object sender, EventArgs e)
 	{
-		method_9(Class148.Class151.String_12);
+		ShowOnlineHelp(Class148.Class151.String_12);
 	}
 
-	private void class61_0_CheckedChanged(object sender, EventArgs e)
+	private void mchbEnableRDWebEngine_CheckedChanged(object sender, EventArgs e)
 	{
 		OnLoad();
 	}
 
-	private void class61_1_CheckedChanged(object sender, EventArgs e)
+	private void mchbAutodetectLogsLocation_CheckedChanged(object sender, EventArgs e)
 	{
 		OnLoad();
 		OnButtonCancel();
 	}
 
-	private void class54_0_TextChanged(object sender, EventArgs e)
+	private void medLogFilesDirectory_TextChanged(object sender, EventArgs e)
 	{
 		OnButtonCancel();
 	}
 
-	private void class66_0_Click(object sender, EventArgs e)
+	private void mbtnSave_Click(object sender, EventArgs e)
 	{
-		method_8(DialogResult.OK);
+		CloseDialog(DialogResult.OK);
 	}
 
-	private void class66_1_Click(object sender, EventArgs e)
+	private void mbtnCancel_Click(object sender, EventArgs e)
 	{
-		method_8(DialogResult.Cancel);
+		CloseDialog(DialogResult.Cancel);
 	}
 
-	private void gclass3_1_Click(object sender, EventArgs e)
+	private void mlnkAdvancedSettings_Click(object sender, EventArgs e)
 	{
 		form2_0.ShowDialog();
 	}

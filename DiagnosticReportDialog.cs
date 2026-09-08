@@ -51,41 +51,41 @@ internal sealed class DiagnosticReportDialog : Form0
 
 	private IContainer icontainer_0;
 
-	private TextBox textBox_0;
+	private TextBox mtxtDiagnosticReport;
 
-	private Class66 class66_0;
+	private Class66 mbtnSend;
 
-	private Class66 class66_1;
+	private Class66 mbtnCancel;
 
-	private PictureBox pictureBox_0;
+	private PictureBox picWait;
 
-	private GControl0 gcontrol0_0;
+	private GControl0 separatorLine1;
 
-	private Class62 class62_0;
+	private Class62 label2;
 
-	private PictureBox pictureBox_1;
+	private PictureBox imgBigIcon;
 
-	private Class62 class62_1;
+	private Class62 lblCaption;
 
-	private Class62 class62_2;
+	private Class62 mlblName;
 
-	private TextBox textBox_1;
+	private TextBox medName;
 
-	private TextBox textBox_2;
+	private TextBox medEmail;
 
-	private Class62 class62_3;
+	private Class62 mlblEmail;
 
-	private TextBox textBox_3;
+	private TextBox medDescription;
 
-	private Class62 class62_4;
+	private Class62 mlblDescription;
 
 	private bool Boolean_0
 	{
 		get
 		{
-			if (!string.IsNullOrEmpty(textBox_1.Text) && !string.IsNullOrEmpty(textBox_2.Text))
+			if (!string.IsNullOrEmpty(medName.Text) && !string.IsNullOrEmpty(medEmail.Text))
 			{
-				return !string.IsNullOrEmpty(textBox_3.Text);
+				return !string.IsNullOrEmpty(medDescription.Text);
 			}
 			return false;
 		}
@@ -95,13 +95,13 @@ internal sealed class DiagnosticReportDialog : Form0
 		: base(new Size(700, 620))
 	{
 		OnCheckedChanged();
-		vmethod_1();
+		InitializeFormPosition();
 		SaveSettings();
 		LoadSettings();
 		base.Shown += Form34_Shown;
 	}
 
-	private void InitializeComponents()
+	private void InitializeComponent()
 	{
 		Class89.eventHandler_3 = (EventHandler<EventArgs8>)Delegate.Combine(Class89.eventHandler_3, new EventHandler<EventArgs8>(OnButtonOk));
 		Class89.smethod_21();
@@ -121,7 +121,7 @@ internal sealed class DiagnosticReportDialog : Form0
 			return;
 		}
 		OnTextChanged(bool_0: false);
-		textBox_0.Text = @class.eventArgs8_0.class141_0.string_2;
+		mtxtDiagnosticReport.Text = @class.eventArgs8_0.class141_0.string_2;
 	}
 
 	private void OnButtonCancel(string string_0, string string_1, string string_2)
@@ -133,9 +133,9 @@ internal sealed class DiagnosticReportDialog : Form0
 			Name = string_0,
 			string_0 = string_1,
 			string_1 = string_2,
-			string_2 = textBox_0.Text
+			string_2 = mtxtDiagnosticReport.Text
 		});
-		textBox_0.Clear();
+		mtxtDiagnosticReport.Clear();
 		OnTextChanged(bool_0: true);
 	}
 
@@ -151,7 +151,7 @@ internal sealed class DiagnosticReportDialog : Form0
 		}
 		else
 		{
-			textBox_0.AppendText(@class.eventArgs9_0.string_0);
+			mtxtDiagnosticReport.AppendText(@class.eventArgs9_0.string_0);
 		}
 	}
 
@@ -172,37 +172,37 @@ internal sealed class DiagnosticReportDialog : Form0
 		if (@class.eventArgs10_0.bool_0)
 		{
 			Thread.Sleep(2000);
-			method_8(DialogResult.OK);
+			CloseDialog(DialogResult.OK);
 		}
 	}
 
 	private void SaveSettings()
 	{
-		class62_1.Text = string.Format(class62_1.Text, "RdpGuard");
-		textBox_0.Text = "Loading data...";
-		class66_0.Enabled = Boolean_0;
-		pictureBox_0.Image = ((Class163.Class163_0.Boolean_0 ? true : false) ? Resources.wait_25_dark : Resources.wait_25);
+		lblCaption.Text = string.Format(lblCaption.Text, "RdpGuard");
+		mtxtDiagnosticReport.Text = "Loading data...";
+		mbtnSend.Enabled = Boolean_0;
+		picWait.Image = ((Class163.Class163_0.Boolean_0 ? true : false) ? Resources.wait_25_dark : Resources.wait_25);
 	}
 
 	private void LoadSettings()
 	{
-		textBox_1.TextChanged += textBox_1_TextChanged;
-		textBox_2.TextChanged += textBox_2_TextChanged;
-		textBox_3.TextChanged += textBox_3_TextChanged;
-		class66_0.Click += class66_0_Click;
-		class66_1.Click += class66_1_Click;
+		medName.TextChanged += medName_TextChanged;
+		medEmail.TextChanged += medEmail_TextChanged;
+		medDescription.TextChanged += medDescription_TextChanged;
+		mbtnSend.Click += mbtnSend_Click;
+		mbtnCancel.Click += mbtnCancel_Click;
 	}
 
 	private void OnTextChanged(bool bool_0)
 	{
-		pictureBox_0.Visible = bool_0;
-		class66_0.Enabled = !bool_0 && Boolean_0;
-		class62_2.Enabled = !bool_0;
-		textBox_1.Enabled = !bool_0;
-		class62_3.Enabled = !bool_0;
-		textBox_2.Enabled = !bool_0;
-		class62_4.Enabled = !bool_0;
-		textBox_3.Enabled = !bool_0;
+		picWait.Visible = bool_0;
+		mbtnSend.Enabled = !bool_0 && Boolean_0;
+		mlblName.Enabled = !bool_0;
+		medName.Enabled = !bool_0;
+		mlblEmail.Enabled = !bool_0;
+		medEmail.Enabled = !bool_0;
+		mlblDescription.Enabled = !bool_0;
+		medDescription.Enabled = !bool_0;
 	}
 
 	protected override void Dispose(bool disposing)
@@ -217,187 +217,187 @@ internal sealed class DiagnosticReportDialog : Form0
 	private void OnCheckedChanged()
 	{
 		new ComponentResourceManager(typeof(DiagnosticReportDialog));
-		textBox_0 = new TextBox();
-		class66_0 = new Class66();
-		class66_1 = new Class66();
-		pictureBox_0 = new PictureBox();
-		gcontrol0_0 = new GControl0();
-		class62_0 = new Class62();
-		pictureBox_1 = new PictureBox();
-		class62_1 = new Class62();
-		class62_2 = new Class62();
-		textBox_1 = new TextBox();
-		textBox_2 = new TextBox();
-		class62_3 = new Class62();
-		textBox_3 = new TextBox();
-		class62_4 = new Class62();
-		((ISupportInitialize)pictureBox_0).BeginInit();
-		((ISupportInitialize)pictureBox_1).BeginInit();
+		mtxtDiagnosticReport = new TextBox();
+		mbtnSend = new Class66();
+		mbtnCancel = new Class66();
+		picWait = new PictureBox();
+		separatorLine1 = new GControl0();
+		label2 = new Class62();
+		imgBigIcon = new PictureBox();
+		lblCaption = new Class62();
+		mlblName = new Class62();
+		medName = new TextBox();
+		medEmail = new TextBox();
+		mlblEmail = new Class62();
+		medDescription = new TextBox();
+		mlblDescription = new Class62();
+		((ISupportInitialize)picWait).BeginInit();
+		((ISupportInitialize)imgBigIcon).BeginInit();
 		SuspendLayout();
-		textBox_0.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-		textBox_0.Font = new Font("Courier New", 8.25f, FontStyle.Regular, GraphicsUnit.Point, 204);
-		textBox_0.Location = new Point(16, 98);
-		textBox_0.Margin = new Padding(5, 4, 5, 4);
-		textBox_0.Multiline = true;
-		textBox_0.Name = "m_txtDiagnosticReport";
-		textBox_0.ReadOnly = true;
-		textBox_0.ScrollBars = ScrollBars.Both;
-		textBox_0.Size = new Size(665, 308);
-		textBox_0.TabIndex = 0;
-		textBox_0.WordWrap = false;
-		class66_0.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-		class66_0.Enabled = false;
-		class66_0.Image = Resources.opts_16;
-		class66_0.Location = new Point(471, 542);
-		class66_0.Margin = new Padding(4);
-		class66_0.Name = "m_btnSend";
-		class66_0.Size = new Size(100, 36);
-		class66_0.TabIndex = 20;
-		class66_0.Text = "Send";
-		class66_0.TextImageRelation = TextImageRelation.ImageBeforeText;
-		class66_0.UseVisualStyleBackColor = true;
-		class66_1.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-		class66_1.Image = Resources.cancl_16;
-		class66_1.Location = new Point(579, 542);
-		class66_1.Margin = new Padding(4);
-		class66_1.Name = "m_btnCancel";
-		class66_1.Size = new Size(100, 36);
-		class66_1.TabIndex = 21;
-		class66_1.Text = "Cancel";
-		class66_1.TextImageRelation = TextImageRelation.ImageBeforeText;
-		class66_1.UseVisualStyleBackColor = true;
-		pictureBox_0.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-		pictureBox_0.Location = new Point(440, 549);
-		pictureBox_0.Name = "picWait";
-		pictureBox_0.Size = new Size(25, 25);
-		pictureBox_0.TabIndex = 46;
-		pictureBox_0.TabStop = false;
-		pictureBox_0.Visible = false;
-		gcontrol0_0.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-		gcontrol0_0.Location = new Point(16, 81);
-		gcontrol0_0.Name = "separatorLine1";
-		gcontrol0_0.Size = new Size(664, 2);
-		gcontrol0_0.TabIndex = 50;
-		gcontrol0_0.TabStop = false;
-		class62_0.AutoSize = true;
-		class62_0.Font = new Font("Microsoft Sans Serif", 9.75f, FontStyle.Bold, GraphicsUnit.Point, 204);
-		class62_0.Location = new Point(79, 15);
-		class62_0.Margin = new Padding(4, 0, 4, 0);
-		class62_0.Name = "label2";
-		class62_0.Size = new Size(133, 16);
-		class62_0.TabIndex = 49;
-		class62_0.Text = "Diagnostic Report";
-		pictureBox_1.Image = Resources.diagnostics_48;
-		pictureBox_1.Location = new Point(16, 15);
-		pictureBox_1.Margin = new Padding(4);
-		pictureBox_1.Name = "imgBigIcon";
-		pictureBox_1.Size = new Size(48, 48);
-		pictureBox_1.SizeMode = PictureBoxSizeMode.AutoSize;
-		pictureBox_1.TabIndex = 47;
-		pictureBox_1.TabStop = false;
-		class62_1.AutoSize = true;
-		class62_1.Location = new Point(79, 47);
-		class62_1.Margin = new Padding(4, 0, 4, 0);
-		class62_1.Name = "lblCaption";
-		class62_1.Size = new Size(404, 16);
-		class62_1.TabIndex = 48;
-		class62_1.Text = "Please send us diagnostic report if you have any problems with {0}.";
-		class62_2.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-		class62_2.AutoSize = true;
-		class62_2.Location = new Point(13, 421);
-		class62_2.Name = "m_lblName";
-		class62_2.Size = new Size(76, 16);
-		class62_2.TabIndex = 51;
-		class62_2.Text = "Your name:";
-		textBox_1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-		textBox_1.Location = new Point(25, 440);
-		textBox_1.Name = "m_edName";
-		textBox_1.Size = new Size(247, 22);
-		textBox_1.TabIndex = 52;
-		textBox_2.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-		textBox_2.Location = new Point(25, 498);
-		textBox_2.Name = "m_edEmail";
-		textBox_2.Size = new Size(247, 22);
-		textBox_2.TabIndex = 54;
-		class62_3.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-		class62_3.AutoSize = true;
-		class62_3.Location = new Point(13, 479);
-		class62_3.Name = "m_lblEmail";
-		class62_3.Size = new Size(75, 16);
-		class62_3.TabIndex = 53;
-		class62_3.Text = "Your email:";
-		textBox_3.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-		textBox_3.Font = new Font("Courier New", 8.25f, FontStyle.Regular, GraphicsUnit.Point, 204);
-		textBox_3.Location = new Point(291, 440);
-		textBox_3.Margin = new Padding(5, 4, 5, 4);
-		textBox_3.MaxLength = 2048;
-		textBox_3.Multiline = true;
-		textBox_3.Name = "m_edDescription";
-		textBox_3.ScrollBars = ScrollBars.Both;
-		textBox_3.Size = new Size(389, 80);
-		textBox_3.TabIndex = 55;
-		class62_4.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-		class62_4.AutoSize = true;
-		class62_4.Location = new Point(279, 421);
-		class62_4.Name = "m_lblDescription";
-		class62_4.Size = new Size(131, 16);
-		class62_4.TabIndex = 56;
-		class62_4.Text = "Problem description:";
+		mtxtDiagnosticReport.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+		mtxtDiagnosticReport.Font = new Font("Courier New", 8.25f, FontStyle.Regular, GraphicsUnit.Point, 204);
+		mtxtDiagnosticReport.Location = new Point(16, 98);
+		mtxtDiagnosticReport.Margin = new Padding(5, 4, 5, 4);
+		mtxtDiagnosticReport.Multiline = true;
+		mtxtDiagnosticReport.Name = "m_txtDiagnosticReport";
+		mtxtDiagnosticReport.ReadOnly = true;
+		mtxtDiagnosticReport.ScrollBars = ScrollBars.Both;
+		mtxtDiagnosticReport.Size = new Size(665, 308);
+		mtxtDiagnosticReport.TabIndex = 0;
+		mtxtDiagnosticReport.WordWrap = false;
+		mbtnSend.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+		mbtnSend.Enabled = false;
+		mbtnSend.Image = Resources.opts_16;
+		mbtnSend.Location = new Point(471, 542);
+		mbtnSend.Margin = new Padding(4);
+		mbtnSend.Name = "m_btnSend";
+		mbtnSend.Size = new Size(100, 36);
+		mbtnSend.TabIndex = 20;
+		mbtnSend.Text = "Send";
+		mbtnSend.TextImageRelation = TextImageRelation.ImageBeforeText;
+		mbtnSend.UseVisualStyleBackColor = true;
+		mbtnCancel.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+		mbtnCancel.Image = Resources.cancl_16;
+		mbtnCancel.Location = new Point(579, 542);
+		mbtnCancel.Margin = new Padding(4);
+		mbtnCancel.Name = "m_btnCancel";
+		mbtnCancel.Size = new Size(100, 36);
+		mbtnCancel.TabIndex = 21;
+		mbtnCancel.Text = "Cancel";
+		mbtnCancel.TextImageRelation = TextImageRelation.ImageBeforeText;
+		mbtnCancel.UseVisualStyleBackColor = true;
+		picWait.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+		picWait.Location = new Point(440, 549);
+		picWait.Name = "picWait";
+		picWait.Size = new Size(25, 25);
+		picWait.TabIndex = 46;
+		picWait.TabStop = false;
+		picWait.Visible = false;
+		separatorLine1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+		separatorLine1.Location = new Point(16, 81);
+		separatorLine1.Name = "separatorLine1";
+		separatorLine1.Size = new Size(664, 2);
+		separatorLine1.TabIndex = 50;
+		separatorLine1.TabStop = false;
+		label2.AutoSize = true;
+		label2.Font = new Font("Microsoft Sans Serif", 9.75f, FontStyle.Bold, GraphicsUnit.Point, 204);
+		label2.Location = new Point(79, 15);
+		label2.Margin = new Padding(4, 0, 4, 0);
+		label2.Name = "label2";
+		label2.Size = new Size(133, 16);
+		label2.TabIndex = 49;
+		label2.Text = "Diagnostic Report";
+		imgBigIcon.Image = Resources.diagnostics_48;
+		imgBigIcon.Location = new Point(16, 15);
+		imgBigIcon.Margin = new Padding(4);
+		imgBigIcon.Name = "imgBigIcon";
+		imgBigIcon.Size = new Size(48, 48);
+		imgBigIcon.SizeMode = PictureBoxSizeMode.AutoSize;
+		imgBigIcon.TabIndex = 47;
+		imgBigIcon.TabStop = false;
+		lblCaption.AutoSize = true;
+		lblCaption.Location = new Point(79, 47);
+		lblCaption.Margin = new Padding(4, 0, 4, 0);
+		lblCaption.Name = "lblCaption";
+		lblCaption.Size = new Size(404, 16);
+		lblCaption.TabIndex = 48;
+		lblCaption.Text = "Please send us diagnostic report if you have any problems with {0}.";
+		mlblName.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+		mlblName.AutoSize = true;
+		mlblName.Location = new Point(13, 421);
+		mlblName.Name = "m_lblName";
+		mlblName.Size = new Size(76, 16);
+		mlblName.TabIndex = 51;
+		mlblName.Text = "Your name:";
+		medName.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+		medName.Location = new Point(25, 440);
+		medName.Name = "m_edName";
+		medName.Size = new Size(247, 22);
+		medName.TabIndex = 52;
+		medEmail.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+		medEmail.Location = new Point(25, 498);
+		medEmail.Name = "m_edEmail";
+		medEmail.Size = new Size(247, 22);
+		medEmail.TabIndex = 54;
+		mlblEmail.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+		mlblEmail.AutoSize = true;
+		mlblEmail.Location = new Point(13, 479);
+		mlblEmail.Name = "m_lblEmail";
+		mlblEmail.Size = new Size(75, 16);
+		mlblEmail.TabIndex = 53;
+		mlblEmail.Text = "Your email:";
+		medDescription.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+		medDescription.Font = new Font("Courier New", 8.25f, FontStyle.Regular, GraphicsUnit.Point, 204);
+		medDescription.Location = new Point(291, 440);
+		medDescription.Margin = new Padding(5, 4, 5, 4);
+		medDescription.MaxLength = 2048;
+		medDescription.Multiline = true;
+		medDescription.Name = "m_edDescription";
+		medDescription.ScrollBars = ScrollBars.Both;
+		medDescription.Size = new Size(389, 80);
+		medDescription.TabIndex = 55;
+		mlblDescription.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+		mlblDescription.AutoSize = true;
+		mlblDescription.Location = new Point(279, 421);
+		mlblDescription.Name = "m_lblDescription";
+		mlblDescription.Size = new Size(131, 16);
+		mlblDescription.TabIndex = 56;
+		mlblDescription.Text = "Problem description:";
 		base.AutoScaleDimensions = new SizeF(8f, 16f);
 		base.AutoScaleMode = AutoScaleMode.Font;
 		base.ClientSize = new Size(692, 591);
-		base.Controls.Add(class62_4);
-		base.Controls.Add(textBox_3);
-		base.Controls.Add(textBox_2);
-		base.Controls.Add(class62_3);
-		base.Controls.Add(textBox_1);
-		base.Controls.Add(class62_2);
-		base.Controls.Add(gcontrol0_0);
-		base.Controls.Add(class62_0);
-		base.Controls.Add(class62_1);
-		base.Controls.Add(pictureBox_1);
-		base.Controls.Add(pictureBox_0);
-		base.Controls.Add(class66_0);
-		base.Controls.Add(class66_1);
-		base.Controls.Add(textBox_0);
+		base.Controls.Add(mlblDescription);
+		base.Controls.Add(medDescription);
+		base.Controls.Add(medEmail);
+		base.Controls.Add(mlblEmail);
+		base.Controls.Add(medName);
+		base.Controls.Add(mlblName);
+		base.Controls.Add(separatorLine1);
+		base.Controls.Add(label2);
+		base.Controls.Add(lblCaption);
+		base.Controls.Add(imgBigIcon);
+		base.Controls.Add(picWait);
+		base.Controls.Add(mbtnSend);
+		base.Controls.Add(mbtnCancel);
+		base.Controls.Add(mtxtDiagnosticReport);
 		Font = new Font("Microsoft Sans Serif", 9.75f, FontStyle.Regular, GraphicsUnit.Point, 204);
 		base.Margin = new Padding(5, 4, 5, 4);
 		base.Name = "DiagnosticReportDialog";
 		base.StartPosition = FormStartPosition.Manual;
 		Text = "Diagnostic Report";
-		((ISupportInitialize)pictureBox_0).EndInit();
-		((ISupportInitialize)pictureBox_1).EndInit();
+		((ISupportInitialize)picWait).EndInit();
+		((ISupportInitialize)imgBigIcon).EndInit();
 		ResumeLayout(performLayout: false);
 		PerformLayout();
 	}
 
 	private void Form34_Shown(object sender, EventArgs e)
 	{
-		InitializeComponents();
+		InitializeComponent();
 	}
 
-	private void textBox_1_TextChanged(object sender, EventArgs e)
+	private void medName_TextChanged(object sender, EventArgs e)
 	{
-		class66_0.Enabled = Boolean_0;
+		mbtnSend.Enabled = Boolean_0;
 	}
 
-	private void textBox_2_TextChanged(object sender, EventArgs e)
+	private void medEmail_TextChanged(object sender, EventArgs e)
 	{
-		class66_0.Enabled = Boolean_0;
+		mbtnSend.Enabled = Boolean_0;
 	}
 
-	private void textBox_3_TextChanged(object sender, EventArgs e)
+	private void medDescription_TextChanged(object sender, EventArgs e)
 	{
-		class66_0.Enabled = Boolean_0;
+		mbtnSend.Enabled = Boolean_0;
 	}
 
-	private void class66_0_Click(object sender, EventArgs e)
+	private void mbtnSend_Click(object sender, EventArgs e)
 	{
-		OnButtonCancel(textBox_1.Text, textBox_2.Text, textBox_3.Text);
+		OnButtonCancel(medName.Text, medEmail.Text, medDescription.Text);
 	}
 
-	private void class66_1_Click(object sender, EventArgs e)
+	private void mbtnCancel_Click(object sender, EventArgs e)
 	{
-		method_8(DialogResult.Cancel);
+		CloseDialog(DialogResult.Cancel);
 	}
 }

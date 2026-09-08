@@ -84,12 +84,12 @@ public static class GClass23
 			return unicastIPAddressInformationCollection_0;
 		}
 
-		internal bool method_8(UnicastIPAddressInformation unicastIPAddressInformation_0)
+		internal bool CloseDialog(UnicastIPAddressInformation unicastIPAddressInformation_0)
 		{
 			return AddressFamily.InterNetwork == unicastIPAddressInformation_0.Address.AddressFamily;
 		}
 
-		internal GClass24 method_9(UnicastIPAddressInformation unicastIPAddressInformation_0)
+		internal GClass24 ShowOnlineHelp(UnicastIPAddressInformation unicastIPAddressInformation_0)
 		{
 			return new GClass24(unicastIPAddressInformation_0.Address);
 		}
@@ -162,9 +162,9 @@ public static class GClass23
 					IEnumerable<UnicastIPAddressInformationCollection> source2 = source.Select(selector);
 					Func<UnicastIPAddressInformationCollection, IEnumerable<UnicastIPAddressInformation>> selector2 = _003C_003Ec._003C_003E9.InitializeComponent;
 					IEnumerable<UnicastIPAddressInformation> source3 = source2.SelectMany(selector2);
-					Func<UnicastIPAddressInformation, bool> predicate2 = _003C_003Ec._003C_003E9.method_8;
+					Func<UnicastIPAddressInformation, bool> predicate2 = _003C_003Ec._003C_003E9.CloseDialog;
 					IEnumerable<UnicastIPAddressInformation> source4 = source3.Where(predicate2);
-					Func<UnicastIPAddressInformation, GClass24> selector3 = _003C_003Ec._003C_003E9.method_9;
+					Func<UnicastIPAddressInformation, GClass24> selector3 = _003C_003Ec._003C_003E9.ShowOnlineHelp;
 					gclass24_3 = source4.Select(selector3).ToArray();
 				}
 			}

@@ -47,7 +47,7 @@ internal sealed class CustomActionsDialog : Form0
 
 		internal void method_0()
 		{
-			form24_0.InitializeComponents(object_0, eventArgs2_0);
+			form24_0.InitializeComponent(object_0, eventArgs2_0);
 		}
 
 		internal void method_1(Class94 class94_0)
@@ -60,45 +60,45 @@ internal sealed class CustomActionsDialog : Form0
 
 	private IContainer icontainer_0;
 
-	private GControl0 gcontrol0_0;
+	private GControl0 separatorLine1;
 
-	private Class62 class62_0;
+	private Class62 label2;
 
-	private PictureBox pictureBox_0;
+	private PictureBox imgBigIcon;
 
-	private Class62 class62_1;
+	private Class62 lblCaption;
 
-	private Class47 class47_0;
+	private Class47 mlstActions;
 
 	private ColumnHeader columnHeader_0;
 
 	private ColumnHeader columnHeader_1;
 
-	private GClass3 gclass3_0;
+	private GClass3 mlnkOnlineHelp;
 
 	private ColumnHeader columnHeader_2;
 
 	private ColumnHeader columnHeader_3;
 
-	private Class67 class67_0;
+	private Class67 toolStrip1;
 
-	private ToolStripButton toolStripButton_0;
+	private ToolStripButton mbtnAdd;
 
-	private ToolStripButton toolStripButton_1;
+	private ToolStripButton mbtnEdit;
 
-	private ToolStripButton toolStripButton_2;
+	private ToolStripButton mbtnDelete;
 
-	private ToolStripButton toolStripButton_3;
+	private ToolStripButton mbtnCancel;
 
-	private ToolStripButton toolStripButton_4;
+	private ToolStripButton mbtnSaveChanges;
 
-	private ToolStripLabel toolStripLabel_0;
+	private ToolStripLabel mlblAdminRightsRequiredWarning;
 
 	private Class94[] Class94_0
 	{
 		get
 		{
-			IEnumerable<ListViewItem> source = class47_0.Items.Cast<ListViewItem>();
+			IEnumerable<ListViewItem> source = mlstActions.Items.Cast<ListViewItem>();
 			Func<ListViewItem, Class94> selector = _003C_003Ec._003C_003E9.method_0;
 			return source.Select(selector).ToArray();
 		}
@@ -107,21 +107,21 @@ internal sealed class CustomActionsDialog : Form0
 	public CustomActionsDialog()
 		: base(new Size(750, 525))
 	{
-		method_21();
-		vmethod_1();
-		Class89.eventHandler_25 = (EventHandler<EventArgs2>)Delegate.Combine(Class89.eventHandler_25, new EventHandler<EventArgs2>(InitializeComponents));
+		ValidateInput();
+		InitializeFormPosition();
+		Class89.eventHandler_25 = (EventHandler<EventArgs2>)Delegate.Combine(Class89.eventHandler_25, new EventHandler<EventArgs2>(InitializeComponent));
 		Class89.smethod_34();
 		SaveSettings();
 		LoadSettings();
 	}
 
-	private void InitializeComponents(object sender, EventArgs2 e)
+	private void InitializeComponent(object sender, EventArgs2 e)
 	{
 		Class18 @class = new Class18();
 		@class.form24_0 = this;
 		@class.object_0 = sender;
 		@class.eventArgs2_0 = e;
-		Class89.eventHandler_25 = (EventHandler<EventArgs2>)Delegate.Remove(Class89.eventHandler_25, new EventHandler<EventArgs2>(InitializeComponents));
+		Class89.eventHandler_25 = (EventHandler<EventArgs2>)Delegate.Remove(Class89.eventHandler_25, new EventHandler<EventArgs2>(InitializeComponent));
 		if (base.InvokeRequired)
 		{
 			BeginInvoke(new Action(@class.method_0));
@@ -151,16 +151,16 @@ internal sealed class CustomActionsDialog : Form0
 
 	private void OnLoad()
 	{
-		if (!class47_0.Boolean_2)
+		if (!mlstActions.Boolean_2)
 		{
 			return;
 		}
-		CustomActionAddEditDialog form = new CustomActionAddEditDialog(class47_0.SelectedItems[0].Tag as Class94);
+		CustomActionAddEditDialog form = new CustomActionAddEditDialog(mlstActions.SelectedItems[0].Tag as Class94);
 		using (form)
 		{
 			if (DialogResult.OK == form.ShowDialog())
 			{
-				class47_0.SelectedItems[0].Tag = form.Class94_0;
+				mlstActions.SelectedItems[0].Tag = form.Class94_0;
 				OnSelectedIndexChanged();
 			}
 		}
@@ -168,9 +168,9 @@ internal sealed class CustomActionsDialog : Form0
 
 	private void ValidateInput()
 	{
-		if (class47_0.Boolean_1 ? true : false)
+		if (mlstActions.Boolean_1 ? true : false)
 		{
-			IEnumerable<ListViewItem> ienumerable_ = class47_0.SelectedItems.Cast<ListViewItem>();
+			IEnumerable<ListViewItem> ienumerable_ = mlstActions.SelectedItems.Cast<ListViewItem>();
 			Action<ListViewItem> action_ = _003C_003Ec._003C_003E9.method_1;
 			ienumerable_.smethod_0(action_);
 		}
@@ -178,37 +178,37 @@ internal sealed class CustomActionsDialog : Form0
 
 	private void SaveSettings()
 	{
-		class67_0.Renderer = new GClass4();
-		toolStripLabel_0.Visible = !bool_0;
-		toolStripButton_0.Enabled = bool_0;
-		toolStripButton_4.Enabled = bool_0;
+		toolStrip1.Renderer = new GClass4();
+		mlblAdminRightsRequiredWarning.Visible = !bool_0;
+		mbtnAdd.Enabled = bool_0;
+		mbtnSaveChanges.Enabled = bool_0;
 	}
 
 	private void LoadSettings()
 	{
-		class47_0.SelectedIndexChanged += class47_0_SelectedIndexChanged;
-		class47_0.MouseDoubleClick += class47_0_MouseDoubleClick;
-		class47_0.KeyUp += class47_0_KeyUp;
-		Class47 @class = class47_0;
+		mlstActions.SelectedIndexChanged += class47_0_SelectedIndexChanged;
+		mlstActions.MouseDoubleClick += mlstActions_MouseDoubleClick;
+		mlstActions.KeyUp += mlstActions_KeyUp;
+		Class47 @class = mlstActions;
 		ItemCheckedEventHandler value = _003C_003Ec._003C_003E9.method_2;
 		@class.ItemChecked += value;
-		toolStripButton_0.Click += toolStripButton_0_Click;
-		toolStripButton_1.Click += toolStripButton_1_Click;
-		toolStripButton_2.Click += toolStripButton_2_Click;
-		toolStripButton_4.Click += toolStripButton_4_Click;
-		toolStripButton_3.Click += toolStripButton_3_Click;
-		gclass3_0.Click += gclass3_0_Click;
+		mbtnAdd.Click += mbtnAdd_Click;
+		mbtnEdit.Click += mbtnEdit_Click;
+		mbtnDelete.Click += mbtnDelete_Click;
+		mbtnSaveChanges.Click += mbtnSaveChanges_Click;
+		mbtnCancel.Click += mbtnCancel_Click;
+		mlnkOnlineHelp.Click += mlnkOnlineHelp_Click;
 	}
 
 	private void OnTextChanged()
 	{
-		toolStripButton_1.Enabled = bool_0 && class47_0.Boolean_2;
-		toolStripButton_2.Enabled = bool_0 && class47_0.Boolean_1;
+		mbtnEdit.Enabled = bool_0 && mlstActions.Boolean_2;
+		mbtnDelete.Enabled = bool_0 && mlstActions.Boolean_1;
 	}
 
 	private void OnCheckedChanged(Class94 class94_0)
 	{
-		class47_0.Items.Add(new ListViewItem
+		mlstActions.Items.Add(new ListViewItem
 		{
 			Tag = class94_0,
 			Checked = class94_0.bool_0
@@ -217,7 +217,7 @@ internal sealed class CustomActionsDialog : Form0
 
 	private void OnSelectedIndexChanged()
 	{
-		IEnumerator enumerator = class47_0.Items.GetEnumerator();
+		IEnumerator enumerator = mlstActions.Items.GetEnumerator();
 		try
 		{
 			while (enumerator.MoveNext() ? true : false)
@@ -252,73 +252,73 @@ internal sealed class CustomActionsDialog : Form0
 		base.Dispose(disposing);
 	}
 
-	private void method_21()
+	private void ValidateInput()
 	{
-		gcontrol0_0 = new GControl0();
-		class62_0 = new Class62();
-		pictureBox_0 = new PictureBox();
-		class62_1 = new Class62();
-		class47_0 = new Class47();
+		separatorLine1 = new GControl0();
+		label2 = new Class62();
+		imgBigIcon = new PictureBox();
+		lblCaption = new Class62();
+		mlstActions = new Class47();
 		columnHeader_3 = new ColumnHeader();
 		columnHeader_0 = new ColumnHeader();
 		columnHeader_1 = new ColumnHeader();
 		columnHeader_2 = new ColumnHeader();
-		gclass3_0 = new GClass3();
-		class67_0 = new Class67();
-		toolStripButton_0 = new ToolStripButton();
-		toolStripButton_1 = new ToolStripButton();
-		toolStripButton_2 = new ToolStripButton();
-		toolStripButton_3 = new ToolStripButton();
-		toolStripButton_4 = new ToolStripButton();
-		toolStripLabel_0 = new ToolStripLabel();
-		((ISupportInitialize)pictureBox_0).BeginInit();
-		class67_0.SuspendLayout();
+		mlnkOnlineHelp = new GClass3();
+		toolStrip1 = new Class67();
+		mbtnAdd = new ToolStripButton();
+		mbtnEdit = new ToolStripButton();
+		mbtnDelete = new ToolStripButton();
+		mbtnCancel = new ToolStripButton();
+		mbtnSaveChanges = new ToolStripButton();
+		mlblAdminRightsRequiredWarning = new ToolStripLabel();
+		((ISupportInitialize)imgBigIcon).BeginInit();
+		toolStrip1.SuspendLayout();
 		SuspendLayout();
-		gcontrol0_0.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-		gcontrol0_0.Location = new Point(10, 86);
-		gcontrol0_0.Name = "separatorLine1";
-		gcontrol0_0.Size = new Size(827, 2);
-		gcontrol0_0.TabIndex = 50;
-		gcontrol0_0.TabStop = false;
-		class62_0.AutoSize = true;
-		class62_0.Font = new Font("Microsoft Sans Serif", 9.75f, FontStyle.Bold, GraphicsUnit.Point, 204);
-		class62_0.Location = new Point(87, 19);
-		class62_0.Margin = new Padding(4, 0, 4, 0);
-		class62_0.Name = "label2";
-		class62_0.Size = new Size(113, 16);
-		class62_0.TabIndex = 49;
-		class62_0.Text = "Custom Actions";
-		class62_0.Boolean_0 = false;
-		pictureBox_0.Image = Resources.notifications_48;
-		pictureBox_0.Location = new Point(16, 19);
-		pictureBox_0.Margin = new Padding(4);
-		pictureBox_0.Name = "imgBigIcon";
-		pictureBox_0.Size = new Size(48, 48);
-		pictureBox_0.SizeMode = PictureBoxSizeMode.AutoSize;
-		pictureBox_0.TabIndex = 47;
-		pictureBox_0.TabStop = false;
-		class62_1.AutoSize = true;
-		class62_1.Location = new Point(87, 51);
-		class62_1.Margin = new Padding(4, 0, 4, 0);
-		class62_1.Name = "lblCaption";
-		class62_1.Size = new Size(321, 16);
-		class62_1.TabIndex = 48;
-		class62_1.Text = "Define your own custom actions for RdpGuard events";
-		class62_1.Boolean_0 = false;
-		class47_0.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-		class47_0.CheckBoxes = true;
-		class47_0.Columns.AddRange(new ColumnHeader[4] { columnHeader_3, columnHeader_0, columnHeader_1, columnHeader_2 });
-		class47_0.ColumnHeader_0 = new ColumnHeader[4] { columnHeader_3, columnHeader_0, columnHeader_1, columnHeader_2 };
-		class47_0.FullRowSelect = true;
-		class47_0.GridLines = true;
-		class47_0.HideSelection = false;
-		class47_0.Location = new Point(10, 105);
-		class47_0.Margin = new Padding(0, 0, 0, 20);
-		class47_0.Name = "m_lstActions";
-		class47_0.Size = new Size(827, 530);
-		class47_0.TabIndex = 6;
-		class47_0.UseCompatibleStateImageBehavior = false;
-		class47_0.View = View.Details;
+		separatorLine1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+		separatorLine1.Location = new Point(10, 86);
+		separatorLine1.Name = "separatorLine1";
+		separatorLine1.Size = new Size(827, 2);
+		separatorLine1.TabIndex = 50;
+		separatorLine1.TabStop = false;
+		label2.AutoSize = true;
+		label2.Font = new Font("Microsoft Sans Serif", 9.75f, FontStyle.Bold, GraphicsUnit.Point, 204);
+		label2.Location = new Point(87, 19);
+		label2.Margin = new Padding(4, 0, 4, 0);
+		label2.Name = "label2";
+		label2.Size = new Size(113, 16);
+		label2.TabIndex = 49;
+		label2.Text = "Custom Actions";
+		label2.Boolean_0 = false;
+		imgBigIcon.Image = Resources.notifications_48;
+		imgBigIcon.Location = new Point(16, 19);
+		imgBigIcon.Margin = new Padding(4);
+		imgBigIcon.Name = "imgBigIcon";
+		imgBigIcon.Size = new Size(48, 48);
+		imgBigIcon.SizeMode = PictureBoxSizeMode.AutoSize;
+		imgBigIcon.TabIndex = 47;
+		imgBigIcon.TabStop = false;
+		lblCaption.AutoSize = true;
+		lblCaption.Location = new Point(87, 51);
+		lblCaption.Margin = new Padding(4, 0, 4, 0);
+		lblCaption.Name = "lblCaption";
+		lblCaption.Size = new Size(321, 16);
+		lblCaption.TabIndex = 48;
+		lblCaption.Text = "Define your own custom actions for RdpGuard events";
+		lblCaption.Boolean_0 = false;
+		mlstActions.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+		mlstActions.CheckBoxes = true;
+		mlstActions.Columns.AddRange(new ColumnHeader[4] { columnHeader_3, columnHeader_0, columnHeader_1, columnHeader_2 });
+		mlstActions.ColumnHeader_0 = new ColumnHeader[4] { columnHeader_3, columnHeader_0, columnHeader_1, columnHeader_2 };
+		mlstActions.FullRowSelect = true;
+		mlstActions.GridLines = true;
+		mlstActions.HideSelection = false;
+		mlstActions.Location = new Point(10, 105);
+		mlstActions.Margin = new Padding(0, 0, 0, 20);
+		mlstActions.Name = "m_lstActions";
+		mlstActions.Size = new Size(827, 530);
+		mlstActions.TabIndex = 6;
+		mlstActions.UseCompatibleStateImageBehavior = false;
+		mlstActions.View = View.Details;
 		columnHeader_3.Text = "✓";
 		columnHeader_3.Width = 30;
 		columnHeader_0.Text = "Event";
@@ -327,92 +327,92 @@ internal sealed class CustomActionsDialog : Form0
 		columnHeader_1.Width = 150;
 		columnHeader_2.Text = "Details";
 		columnHeader_2.Width = 100;
-		gclass3_0.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-		gclass3_0.AutoSize = true;
-		gclass3_0.LinkBehavior = LinkBehavior.NeverUnderline;
-		gclass3_0.LinkColor = Color.FromArgb(38, 135, 200);
-		gclass3_0.Location = new Point(764, 15);
-		gclass3_0.Name = "m_lnkOnlineHelp";
-		gclass3_0.Size = new Size(72, 16);
-		gclass3_0.TabIndex = 5;
-		gclass3_0.TabStop = true;
-		gclass3_0.Text = "online help";
-		gclass3_0.VisitedLinkColor = Color.FromArgb(38, 135, 200);
-		class67_0.Dock = DockStyle.Bottom;
-		class67_0.GripStyle = ToolStripGripStyle.Hidden;
-		class67_0.Items.AddRange(new ToolStripItem[6] { toolStripButton_0, toolStripButton_1, toolStripButton_2, toolStripButton_3, toolStripButton_4, toolStripLabel_0 });
-		class67_0.Location = new Point(7, 640);
-		class67_0.Name = "toolStrip1";
-		class67_0.Padding = new Padding(3, 0, 3, 0);
-		class67_0.RenderMode = ToolStripRenderMode.Professional;
-		class67_0.Size = new Size(834, 26);
-		class67_0.TabIndex = 51;
-		toolStripButton_0.Image = Resources.add_16_pale;
-		toolStripButton_0.ImageTransparentColor = Color.Magenta;
-		toolStripButton_0.Margin = new Padding(0);
-		toolStripButton_0.Name = "m_btnAdd";
-		toolStripButton_0.Padding = new Padding(3);
-		toolStripButton_0.Size = new Size(55, 26);
-		toolStripButton_0.Text = "Add";
-		toolStripButton_1.Enabled = false;
-		toolStripButton_1.Image = Resources.edit_16_pale;
-		toolStripButton_1.ImageTransparentColor = Color.Magenta;
-		toolStripButton_1.Margin = new Padding(0);
-		toolStripButton_1.Name = "m_btnEdit";
-		toolStripButton_1.Padding = new Padding(3);
-		toolStripButton_1.Size = new Size(53, 26);
-		toolStripButton_1.Text = "Edit";
-		toolStripButton_2.Enabled = false;
-		toolStripButton_2.Image = Resources.delete_16_pale;
-		toolStripButton_2.ImageTransparentColor = Color.Magenta;
-		toolStripButton_2.Margin = new Padding(0);
-		toolStripButton_2.Name = "m_btnDelete";
-		toolStripButton_2.Padding = new Padding(3);
-		toolStripButton_2.Size = new Size(66, 26);
-		toolStripButton_2.Text = "Delete";
-		toolStripButton_3.Alignment = ToolStripItemAlignment.Right;
-		toolStripButton_3.Image = Resources.cancel_16_pale;
-		toolStripButton_3.ImageTransparentColor = Color.Magenta;
-		toolStripButton_3.Margin = new Padding(0);
-		toolStripButton_3.Name = "m_btnCancel";
-		toolStripButton_3.Padding = new Padding(3);
-		toolStripButton_3.Size = new Size(69, 26);
-		toolStripButton_3.Text = "Cancel";
-		toolStripButton_4.Alignment = ToolStripItemAlignment.Right;
-		toolStripButton_4.Image = Resources.ok_16_pale;
-		toolStripButton_4.ImageTransparentColor = Color.Magenta;
-		toolStripButton_4.Margin = new Padding(0);
-		toolStripButton_4.Name = "m_btnSaveChanges";
-		toolStripButton_4.Padding = new Padding(3);
-		toolStripButton_4.Size = new Size(106, 26);
-		toolStripButton_4.Text = "Save Changes";
-		toolStripLabel_0.Alignment = ToolStripItemAlignment.Right;
-		toolStripLabel_0.ForeColor = Color.Red;
-		toolStripLabel_0.Name = "m_lblAdminRightsRequiredWarning";
-		toolStripLabel_0.Padding = new Padding(0, 0, 10, 0);
-		toolStripLabel_0.Size = new Size(348, 23);
-		toolStripLabel_0.Tag = "ThemeIndependentForeColor";
-		toolStripLabel_0.Text = "Administrator privileges are required to modify custom actions";
-		toolStripLabel_0.Visible = false;
+		mlnkOnlineHelp.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+		mlnkOnlineHelp.AutoSize = true;
+		mlnkOnlineHelp.LinkBehavior = LinkBehavior.NeverUnderline;
+		mlnkOnlineHelp.LinkColor = Color.FromArgb(38, 135, 200);
+		mlnkOnlineHelp.Location = new Point(764, 15);
+		mlnkOnlineHelp.Name = "m_lnkOnlineHelp";
+		mlnkOnlineHelp.Size = new Size(72, 16);
+		mlnkOnlineHelp.TabIndex = 5;
+		mlnkOnlineHelp.TabStop = true;
+		mlnkOnlineHelp.Text = "online help";
+		mlnkOnlineHelp.VisitedLinkColor = Color.FromArgb(38, 135, 200);
+		toolStrip1.Dock = DockStyle.Bottom;
+		toolStrip1.GripStyle = ToolStripGripStyle.Hidden;
+		toolStrip1.Items.AddRange(new ToolStripItem[6] { mbtnAdd, mbtnEdit, mbtnDelete, mbtnCancel, mbtnSaveChanges, mlblAdminRightsRequiredWarning });
+		toolStrip1.Location = new Point(7, 640);
+		toolStrip1.Name = "toolStrip1";
+		toolStrip1.Padding = new Padding(3, 0, 3, 0);
+		toolStrip1.RenderMode = ToolStripRenderMode.Professional;
+		toolStrip1.Size = new Size(834, 26);
+		toolStrip1.TabIndex = 51;
+		mbtnAdd.Image = Resources.add_16_pale;
+		mbtnAdd.ImageTransparentColor = Color.Magenta;
+		mbtnAdd.Margin = new Padding(0);
+		mbtnAdd.Name = "m_btnAdd";
+		mbtnAdd.Padding = new Padding(3);
+		mbtnAdd.Size = new Size(55, 26);
+		mbtnAdd.Text = "Add";
+		mbtnEdit.Enabled = false;
+		mbtnEdit.Image = Resources.edit_16_pale;
+		mbtnEdit.ImageTransparentColor = Color.Magenta;
+		mbtnEdit.Margin = new Padding(0);
+		mbtnEdit.Name = "m_btnEdit";
+		mbtnEdit.Padding = new Padding(3);
+		mbtnEdit.Size = new Size(53, 26);
+		mbtnEdit.Text = "Edit";
+		mbtnDelete.Enabled = false;
+		mbtnDelete.Image = Resources.delete_16_pale;
+		mbtnDelete.ImageTransparentColor = Color.Magenta;
+		mbtnDelete.Margin = new Padding(0);
+		mbtnDelete.Name = "m_btnDelete";
+		mbtnDelete.Padding = new Padding(3);
+		mbtnDelete.Size = new Size(66, 26);
+		mbtnDelete.Text = "Delete";
+		mbtnCancel.Alignment = ToolStripItemAlignment.Right;
+		mbtnCancel.Image = Resources.cancel_16_pale;
+		mbtnCancel.ImageTransparentColor = Color.Magenta;
+		mbtnCancel.Margin = new Padding(0);
+		mbtnCancel.Name = "m_btnCancel";
+		mbtnCancel.Padding = new Padding(3);
+		mbtnCancel.Size = new Size(69, 26);
+		mbtnCancel.Text = "Cancel";
+		mbtnSaveChanges.Alignment = ToolStripItemAlignment.Right;
+		mbtnSaveChanges.Image = Resources.ok_16_pale;
+		mbtnSaveChanges.ImageTransparentColor = Color.Magenta;
+		mbtnSaveChanges.Margin = new Padding(0);
+		mbtnSaveChanges.Name = "m_btnSaveChanges";
+		mbtnSaveChanges.Padding = new Padding(3);
+		mbtnSaveChanges.Size = new Size(106, 26);
+		mbtnSaveChanges.Text = "Save Changes";
+		mlblAdminRightsRequiredWarning.Alignment = ToolStripItemAlignment.Right;
+		mlblAdminRightsRequiredWarning.ForeColor = Color.Red;
+		mlblAdminRightsRequiredWarning.Name = "m_lblAdminRightsRequiredWarning";
+		mlblAdminRightsRequiredWarning.Padding = new Padding(0, 0, 10, 0);
+		mlblAdminRightsRequiredWarning.Size = new Size(348, 23);
+		mlblAdminRightsRequiredWarning.Tag = "ThemeIndependentForeColor";
+		mlblAdminRightsRequiredWarning.Text = "Administrator privileges are required to modify custom actions";
+		mlblAdminRightsRequiredWarning.Visible = false;
 		base.AutoScaleDimensions = new SizeF(8f, 16f);
 		base.AutoScaleMode = AutoScaleMode.Font;
 		base.ClientSize = new Size(848, 671);
-		base.Controls.Add(gclass3_0);
-		base.Controls.Add(class47_0);
-		base.Controls.Add(gcontrol0_0);
-		base.Controls.Add(class62_0);
-		base.Controls.Add(class62_1);
-		base.Controls.Add(pictureBox_0);
-		base.Controls.Add(class67_0);
+		base.Controls.Add(mlnkOnlineHelp);
+		base.Controls.Add(mlstActions);
+		base.Controls.Add(separatorLine1);
+		base.Controls.Add(label2);
+		base.Controls.Add(lblCaption);
+		base.Controls.Add(imgBigIcon);
+		base.Controls.Add(toolStrip1);
 		Font = new Font("Microsoft Sans Serif", 9.75f, FontStyle.Regular, GraphicsUnit.Point, 204);
 		base.Margin = new Padding(5, 4, 5, 4);
 		base.Name = "CustomActionsDialog";
 		base.Padding = new Padding(7, 10, 7, 5);
 		base.StartPosition = FormStartPosition.Manual;
 		Text = "Custom Actions";
-		((ISupportInitialize)pictureBox_0).EndInit();
-		class67_0.ResumeLayout(performLayout: false);
-		class67_0.PerformLayout();
+		((ISupportInitialize)imgBigIcon).EndInit();
+		toolStrip1.ResumeLayout(performLayout: false);
+		toolStrip1.PerformLayout();
 		ResumeLayout(performLayout: false);
 		PerformLayout();
 	}
@@ -422,55 +422,55 @@ internal sealed class CustomActionsDialog : Form0
 		OnTextChanged();
 	}
 
-	private void class47_0_MouseDoubleClick(object sender, MouseEventArgs e)
+	private void mlstActions_MouseDoubleClick(object sender, MouseEventArgs e)
 	{
 		OnLoad();
 	}
 
-	private void class47_0_KeyUp(object sender, KeyEventArgs e)
+	private void mlstActions_KeyUp(object sender, KeyEventArgs e)
 	{
 		if (Keys.Delete == e.KeyCode)
 		{
-			toolStripButton_2.PerformClick();
+			mbtnDelete.PerformClick();
 		}
 		if (Keys.Insert == e.KeyCode)
 		{
-			toolStripButton_0.PerformClick();
+			mbtnAdd.PerformClick();
 		}
 		if (Keys.F2 == e.KeyCode)
 		{
-			toolStripButton_1.PerformClick();
+			mbtnEdit.PerformClick();
 		}
 	}
 
-	private void toolStripButton_0_Click(object sender, EventArgs e)
+	private void mbtnAdd_Click(object sender, EventArgs e)
 	{
 		OnButtonCancel();
 	}
 
-	private void toolStripButton_1_Click(object sender, EventArgs e)
+	private void mbtnEdit_Click(object sender, EventArgs e)
 	{
 		OnLoad();
 	}
 
-	private void toolStripButton_2_Click(object sender, EventArgs e)
+	private void mbtnDelete_Click(object sender, EventArgs e)
 	{
 		ValidateInput();
 	}
 
-	private void toolStripButton_4_Click(object sender, EventArgs e)
+	private void mbtnSaveChanges_Click(object sender, EventArgs e)
 	{
 		OnButtonOk();
-		method_8(DialogResult.OK);
+		CloseDialog(DialogResult.OK);
 	}
 
-	private void toolStripButton_3_Click(object sender, EventArgs e)
+	private void mbtnCancel_Click(object sender, EventArgs e)
 	{
-		method_8(DialogResult.Cancel);
+		CloseDialog(DialogResult.Cancel);
 	}
 
-	private void gclass3_0_Click(object sender, EventArgs e)
+	private void mlnkOnlineHelp_Click(object sender, EventArgs e)
 	{
-		method_9(Class148.Class153.String_0);
+		ShowOnlineHelp(Class148.Class153.String_0);
 	}
 }

@@ -8,41 +8,41 @@ internal sealed class AboutDialog : Form0
 {
 	private IContainer icontainer_0;
 
-	private PictureBox pictureBox_0;
+	private PictureBox pictureBox1;
 
-	private Class62 class62_0;
+	private Class62 lblCaption;
 
-	private Class66 class66_0;
+	private Class66 btnOK;
 
-	private Class62 class62_1;
+	private Class62 mlblSubCaption;
 
-	private GClass3 gclass3_0;
+	private GClass3 lnkHomePage;
 
-	private GClass3 gclass3_1;
+	private GClass3 lnkBuyProVersion;
 
-	private GClass3 gclass3_2;
+	private GClass3 lnkContactUs;
 
 	public AboutDialog(string string_0)
 		: base(new Size(600, 235))
 	{
 		OnButtonCancel();
-		vmethod_1();
-		InitializeComponents(string_0);
+		InitializeFormPosition();
+		InitializeComponent(string_0);
 		OnButtonOk();
 	}
 
-	private void InitializeComponents(string string_0)
+	private void InitializeComponent(string string_0)
 	{
-		class62_0.Text = string_0;
-		class62_1.Text = "Copyright © 2012-2026 Netsdk Software. All rights reserved.";
+		lblCaption.Text = string_0;
+		mlblSubCaption.Text = "Copyright © 2012-2026 Netsdk Software. All rights reserved.";
 	}
 
 	private void OnButtonOk()
 	{
-		class66_0.Click += class66_0_Click;
-		gclass3_0.LinkClicked += gclass3_0_LinkClicked;
-		gclass3_1.LinkClicked += gclass3_1_LinkClicked;
-		gclass3_2.LinkClicked += gclass3_2_LinkClicked;
+		btnOK.Click += btnOK_Click;
+		lnkHomePage.LinkClicked += lnkHomePage_LinkClicked;
+		lnkBuyProVersion.LinkClicked += lnkBuyProVersion_LinkClicked;
+		lnkContactUs.LinkClicked += lnkContactUs_LinkClicked;
 	}
 
 	protected override void Dispose(bool disposing)
@@ -56,114 +56,114 @@ internal sealed class AboutDialog : Form0
 
 	private void OnButtonCancel()
 	{
-		pictureBox_0 = new PictureBox();
-		class62_0 = new Class62();
-		class66_0 = new Class66();
-		class62_1 = new Class62();
-		gclass3_0 = new GClass3();
-		gclass3_1 = new GClass3();
-		gclass3_2 = new GClass3();
-		((ISupportInitialize)pictureBox_0).BeginInit();
+		pictureBox1 = new PictureBox();
+		lblCaption = new Class62();
+		btnOK = new Class66();
+		mlblSubCaption = new Class62();
+		lnkHomePage = new GClass3();
+		lnkBuyProVersion = new GClass3();
+		lnkContactUs = new GClass3();
+		((ISupportInitialize)pictureBox1).BeginInit();
 		SuspendLayout();
-		pictureBox_0.Image = Resources.rdpguard_logo_128;
-		pictureBox_0.Location = new Point(16, 15);
-		pictureBox_0.Margin = new Padding(4);
-		pictureBox_0.Name = "pictureBox1";
-		pictureBox_0.Size = new Size(128, 128);
-		pictureBox_0.SizeMode = PictureBoxSizeMode.AutoSize;
-		pictureBox_0.TabIndex = 0;
-		pictureBox_0.TabStop = false;
-		class62_0.AutoSize = true;
-		class62_0.Font = new Font("Microsoft Sans Serif", 9.75f, FontStyle.Bold, GraphicsUnit.Point, 204);
-		class62_0.Location = new Point(176, 15);
-		class62_0.Margin = new Padding(4, 0, 4, 0);
-		class62_0.Name = "lblCaption";
-		class62_0.Size = new Size(61, 16);
-		class62_0.TabIndex = 1;
-		class62_0.Text = "Caption";
-		class66_0.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-		class66_0.Image = Resources.opts_16;
-		class66_0.Location = new Point(471, 143);
-		class66_0.Margin = new Padding(4);
-		class66_0.Name = "btnOK";
-		class66_0.Size = new Size(100, 36);
-		class66_0.TabIndex = 3;
-		class66_0.Text = "OK";
-		class66_0.TextImageRelation = TextImageRelation.ImageBeforeText;
-		class66_0.UseVisualStyleBackColor = true;
-		class62_1.AutoSize = true;
-		class62_1.Location = new Point(176, 47);
-		class62_1.Margin = new Padding(4, 0, 4, 0);
-		class62_1.Name = "m_lblSubCaption";
-		class62_1.Size = new Size(397, 16);
-		class62_1.TabIndex = 4;
-		gclass3_0.AutoSize = true;
-		gclass3_0.LinkColor = Color.FromArgb(38, 135, 200);
-		gclass3_0.Location = new Point(176, 92);
-		gclass3_0.Name = "lnkHomePage";
-		gclass3_0.RightToLeft = RightToLeft.No;
-		gclass3_0.Size = new Size(147, 16);
-		gclass3_0.TabIndex = 11;
-		gclass3_0.TabStop = true;
-		gclass3_0.Text = "RdpGuard Home Page";
-		gclass3_0.VisitedLinkColor = Color.FromArgb(38, 135, 200);
-		gclass3_1.AutoSize = true;
-		gclass3_1.LinkColor = Color.FromArgb(38, 135, 200);
-		gclass3_1.Location = new Point(176, 123);
-		gclass3_1.Name = "lnkBuyProVersion";
-		gclass3_1.RightToLeft = RightToLeft.No;
-		gclass3_1.Size = new Size(105, 16);
-		gclass3_1.TabIndex = 12;
-		gclass3_1.TabStop = true;
-		gclass3_1.Text = "Get License Key";
-		gclass3_1.VisitedLinkColor = Color.FromArgb(38, 135, 200);
-		gclass3_2.AutoSize = true;
-		gclass3_2.LinkColor = Color.FromArgb(38, 135, 200);
-		gclass3_2.Location = new Point(176, 156);
-		gclass3_2.Name = "lnkContactUs";
-		gclass3_2.RightToLeft = RightToLeft.No;
-		gclass3_2.Size = new Size(70, 16);
-		gclass3_2.TabIndex = 13;
-		gclass3_2.TabStop = true;
-		gclass3_2.Text = "Contact us";
-		gclass3_2.VisitedLinkColor = Color.FromArgb(38, 135, 200);
+		pictureBox1.Image = Resources.rdpguard_logo_128;
+		pictureBox1.Location = new Point(16, 15);
+		pictureBox1.Margin = new Padding(4);
+		pictureBox1.Name = "pictureBox1";
+		pictureBox1.Size = new Size(128, 128);
+		pictureBox1.SizeMode = PictureBoxSizeMode.AutoSize;
+		pictureBox1.TabIndex = 0;
+		pictureBox1.TabStop = false;
+		lblCaption.AutoSize = true;
+		lblCaption.Font = new Font("Microsoft Sans Serif", 9.75f, FontStyle.Bold, GraphicsUnit.Point, 204);
+		lblCaption.Location = new Point(176, 15);
+		lblCaption.Margin = new Padding(4, 0, 4, 0);
+		lblCaption.Name = "lblCaption";
+		lblCaption.Size = new Size(61, 16);
+		lblCaption.TabIndex = 1;
+		lblCaption.Text = "Caption";
+		btnOK.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+		btnOK.Image = Resources.opts_16;
+		btnOK.Location = new Point(471, 143);
+		btnOK.Margin = new Padding(4);
+		btnOK.Name = "btnOK";
+		btnOK.Size = new Size(100, 36);
+		btnOK.TabIndex = 3;
+		btnOK.Text = "OK";
+		btnOK.TextImageRelation = TextImageRelation.ImageBeforeText;
+		btnOK.UseVisualStyleBackColor = true;
+		mlblSubCaption.AutoSize = true;
+		mlblSubCaption.Location = new Point(176, 47);
+		mlblSubCaption.Margin = new Padding(4, 0, 4, 0);
+		mlblSubCaption.Name = "m_lblSubCaption";
+		mlblSubCaption.Size = new Size(397, 16);
+		mlblSubCaption.TabIndex = 4;
+		lnkHomePage.AutoSize = true;
+		lnkHomePage.LinkColor = Color.FromArgb(38, 135, 200);
+		lnkHomePage.Location = new Point(176, 92);
+		lnkHomePage.Name = "lnkHomePage";
+		lnkHomePage.RightToLeft = RightToLeft.No;
+		lnkHomePage.Size = new Size(147, 16);
+		lnkHomePage.TabIndex = 11;
+		lnkHomePage.TabStop = true;
+		lnkHomePage.Text = "RdpGuard Home Page";
+		lnkHomePage.VisitedLinkColor = Color.FromArgb(38, 135, 200);
+		lnkBuyProVersion.AutoSize = true;
+		lnkBuyProVersion.LinkColor = Color.FromArgb(38, 135, 200);
+		lnkBuyProVersion.Location = new Point(176, 123);
+		lnkBuyProVersion.Name = "lnkBuyProVersion";
+		lnkBuyProVersion.RightToLeft = RightToLeft.No;
+		lnkBuyProVersion.Size = new Size(105, 16);
+		lnkBuyProVersion.TabIndex = 12;
+		lnkBuyProVersion.TabStop = true;
+		lnkBuyProVersion.Text = "Get License Key";
+		lnkBuyProVersion.VisitedLinkColor = Color.FromArgb(38, 135, 200);
+		lnkContactUs.AutoSize = true;
+		lnkContactUs.LinkColor = Color.FromArgb(38, 135, 200);
+		lnkContactUs.Location = new Point(176, 156);
+		lnkContactUs.Name = "lnkContactUs";
+		lnkContactUs.RightToLeft = RightToLeft.No;
+		lnkContactUs.Size = new Size(70, 16);
+		lnkContactUs.TabIndex = 13;
+		lnkContactUs.TabStop = true;
+		lnkContactUs.Text = "Contact us";
+		lnkContactUs.VisitedLinkColor = Color.FromArgb(38, 135, 200);
 		base.AutoScaleDimensions = new SizeF(8f, 16f);
 		base.AutoScaleMode = AutoScaleMode.Font;
 		base.ClientSize = new Size(584, 192);
-		base.Controls.Add(gclass3_2);
-		base.Controls.Add(gclass3_1);
-		base.Controls.Add(gclass3_0);
-		base.Controls.Add(class62_1);
-		base.Controls.Add(class66_0);
-		base.Controls.Add(class62_0);
-		base.Controls.Add(pictureBox_0);
+		base.Controls.Add(lnkContactUs);
+		base.Controls.Add(lnkBuyProVersion);
+		base.Controls.Add(lnkHomePage);
+		base.Controls.Add(mlblSubCaption);
+		base.Controls.Add(btnOK);
+		base.Controls.Add(lblCaption);
+		base.Controls.Add(pictureBox1);
 		Font = new Font("Microsoft Sans Serif", 9.75f);
 		base.Margin = new Padding(4);
 		base.Name = "AboutDialog";
 		base.StartPosition = FormStartPosition.Manual;
 		Text = "About RdpGuard";
-		((ISupportInitialize)pictureBox_0).EndInit();
+		((ISupportInitialize)pictureBox1).EndInit();
 		ResumeLayout(performLayout: false);
 		PerformLayout();
 	}
 
-	private void class66_0_Click(object sender, EventArgs e)
+	private void btnOK_Click(object sender, EventArgs e)
 	{
 		Close();
 	}
 
-	private void gclass3_0_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+	private void lnkHomePage_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
 	{
-		method_9(Class148.String_2);
+		ShowOnlineHelp(Class148.String_2);
 	}
 
-	private void gclass3_1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+	private void lnkBuyProVersion_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
 	{
-		method_9(Class148.Class150.smethod_0("about"));
+		ShowOnlineHelp(Class148.Class150.smethod_0("about"));
 	}
 
-	private void gclass3_2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+	private void lnkContactUs_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
 	{
-		method_9(Class148.String_1);
+		ShowOnlineHelp(Class148.String_1);
 	}
 }

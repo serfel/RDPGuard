@@ -2,7 +2,7 @@ using Properties;
 
 internal sealed class Class55 : Class53
 {
-	protected override void vmethod_0()
+	protected override void OnFormClosing()
 	{
 		Class77.smethod_0(Text);
 	}

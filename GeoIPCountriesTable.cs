@@ -119,7 +119,7 @@ internal sealed class GeoIPCountriesTable : UserControl
 
 	private IContainer icontainer_0;
 
-	private GClass0 gclass0_0;
+	private GClass0 mlstCountries;
 
 	private ColumnHeader columnHeader_0;
 
@@ -129,13 +129,13 @@ internal sealed class GeoIPCountriesTable : UserControl
 
 	private ColumnHeader columnHeader_3;
 
-	public bool Boolean_0 => gclass0_0.Boolean_1;
+	public bool Boolean_0 => mlstCountries.Boolean_1;
 
 	public GClass5[] GClass5_0
 	{
 		get
 		{
-			IEnumerable<ListViewItem> source = gclass0_0.SelectedItems.Cast<ListViewItem>();
+			IEnumerable<ListViewItem> source = mlstCountries.SelectedItems.Cast<ListViewItem>();
 			Func<ListViewItem, bool> predicate = _003C_003Ec._003C_003E9.InitializeHandlers;
 			IEnumerable<ListViewItem> source2 = source.Where(predicate);
 			Func<ListViewItem, GClass5> selector = _003C_003Ec._003C_003E9.AddItems;
@@ -147,7 +147,7 @@ internal sealed class GeoIPCountriesTable : UserControl
 	{
 		get
 		{
-			IEnumerable<ListViewItem> source = gclass0_0.Items.Cast<ListViewItem>();
+			IEnumerable<ListViewItem> source = mlstCountries.Items.Cast<ListViewItem>();
 			Func<ListViewItem, bool> predicate = _003C_003Ec._003C_003E9.AddItem;
 			IEnumerable<ListViewItem> source2 = source.Where(predicate);
 			Func<ListViewItem, GClass5> selector = _003C_003Ec._003C_003E9.UpdateCustomList;
@@ -155,7 +155,7 @@ internal sealed class GeoIPCountriesTable : UserControl
 		}
 		set
 		{
-			gclass0_0.Items.Clear();
+			mlstCountries.Items.Clear();
 			AddItems(value);
 		}
 	}
@@ -164,7 +164,7 @@ internal sealed class GeoIPCountriesTable : UserControl
 	{
 		get
 		{
-			IEnumerable<ListViewItem> source = gclass0_0.Items.Cast<ListViewItem>();
+			IEnumerable<ListViewItem> source = mlstCountries.Items.Cast<ListViewItem>();
 			Func<ListViewItem, bool> predicate = _003C_003Ec._003C_003E9.RemoveSelected;
 			return source.FirstOrDefault(predicate);
 		}
@@ -205,7 +205,7 @@ internal sealed class GeoIPCountriesTable : UserControl
 	{
 		get
 		{
-			IEnumerable<ListViewItem> source = gclass0_0.Items.Cast<ListViewItem>();
+			IEnumerable<ListViewItem> source = mlstCountries.Items.Cast<ListViewItem>();
 			Func<ListViewItem, bool> predicate = _003C_003Ec._003C_003E9.RemoveItem;
 			return source.Where(predicate).Cast<Class7>().FirstOrDefault();
 		}
@@ -215,7 +215,7 @@ internal sealed class GeoIPCountriesTable : UserControl
 	{
 		get
 		{
-			IEnumerable<ListViewItem> source = gclass0_0.Items.Cast<ListViewItem>();
+			IEnumerable<ListViewItem> source = mlstCountries.Items.Cast<ListViewItem>();
 			Func<ListViewItem, bool> predicate = _003C_003Ec._003C_003E9.UpdateTotals;
 			return source.Where(predicate).Cast<Class8>().FirstOrDefault();
 		}
@@ -341,22 +341,22 @@ internal sealed class GeoIPCountriesTable : UserControl
 
 	private void InitializeHandlers()
 	{
-		gclass0_0.SelectedIndexChanged += gclass0_0_SelectedIndexChanged;
-		gclass0_0.KeyUp += gclass0_0_KeyUp;
-		gclass0_0.MouseDoubleClick += gclass0_0_MouseDoubleClick;
+		mlstCountries.SelectedIndexChanged += gclass0_0_SelectedIndexChanged;
+		mlstCountries.KeyUp += mlstCountries_KeyUp;
+		mlstCountries.MouseDoubleClick += mlstCountries_MouseDoubleClick;
 	}
 
 	public void AddItems(GClass5[] gclass5_0)
 	{
-		gclass0_0.BeginUpdate();
+		mlstCountries.BeginUpdate();
 		gclass5_0?.smethod_0(RemoveListItem);
-		gclass0_0.EndUpdate();
+		mlstCountries.EndUpdate();
 		UpdateTotals();
 	}
 
 	private void AddItem(GClass5 gclass5_0)
 	{
-		gclass0_0.Items.Add(new ListViewItem(new string[4]
+		mlstCountries.Items.Add(new ListViewItem(new string[4]
 		{
 			gclass5_0.Name + " (" + gclass5_0.string_1 + ")",
 			gclass5_0.long_0.ToString(),
@@ -375,7 +375,7 @@ internal sealed class GeoIPCountriesTable : UserControl
 		{
 			if (!Boolean_1)
 			{
-				gclass0_0.AddItems(new ListViewItem(new string[4]
+				mlstCountries.AddItems(new ListViewItem(new string[4]
 				{
 					"Custom allow list",
 					string.Empty,
@@ -399,21 +399,21 @@ internal sealed class GeoIPCountriesTable : UserControl
 
 	public void RemoveSelected()
 	{
-		gclass0_0.BeginUpdate();
+		mlstCountries.BeginUpdate();
 		GClass5_0.smethod_0(RemoveCountry);
 		if (Boolean_2)
 		{
 			ListViewItem_0?.Remove();
 		}
 		UpdateTotals();
-		gclass0_0.EndUpdate();
+		mlstCountries.EndUpdate();
 	}
 
 	private void RemoveItem(GClass5 gclass5_0)
 	{
 		Class6 @class = new Class6();
 		@class.gclass5_0 = gclass5_0;
-		IEnumerable<ListViewItem> ienumerable_ = gclass0_0.Items.Cast<ListViewItem>().Where(@class.InitializeHandlers);
+		IEnumerable<ListViewItem> ienumerable_ = mlstCountries.Items.Cast<ListViewItem>().Where(@class.InitializeHandlers);
 		Action<ListViewItem> action_ = _003C_003Ec._003C_003E9.RemoveListItem;
 		ienumerable_.smethod_0(action_);
 		eventHandler_1?.Invoke(this, EventArgs.Empty);
@@ -425,8 +425,8 @@ internal sealed class GeoIPCountriesTable : UserControl
 		Class8_0?.Remove();
 		if (GClass5_1.Length + (Boolean_1 ? 1 : 0) >= 2)
 		{
-			gclass0_0.AddItems(new Class7());
-			gclass0_0.AddItems(new Class8());
+			mlstCountries.AddItems(new Class7());
+			mlstCountries.AddItems(new Class8());
 			GClass5[] gClass5_ = GClass5_1;
 			Func<GClass5, long> selector = _003C_003Ec._003C_003E9.RemoveCountry;
 			long int64_ = gClass5_.Select(selector).Sum() + IPListEntry_0.Length;
@@ -453,24 +453,24 @@ internal sealed class GeoIPCountriesTable : UserControl
 
 	private void InitializeComponent()
 	{
-		gclass0_0 = new GClass0();
+		mlstCountries = new GClass0();
 		columnHeader_0 = new ColumnHeader();
 		columnHeader_1 = new ColumnHeader();
 		columnHeader_2 = new ColumnHeader();
 		columnHeader_3 = new ColumnHeader();
 		SuspendLayout();
-		gclass0_0.Columns.AddRange(new ColumnHeader[4] { columnHeader_0, columnHeader_1, columnHeader_2, columnHeader_3 });
-		gclass0_0.Dock = DockStyle.Fill;
-		gclass0_0.ColumnHeader_0 = new ColumnHeader[4] { columnHeader_0, columnHeader_1, columnHeader_2, columnHeader_3 };
-		gclass0_0.FullRowSelect = true;
-		gclass0_0.GridLines = true;
-		gclass0_0.HideSelection = false;
-		gclass0_0.Location = new Point(0, 0);
-		gclass0_0.Name = "m_lstCountries";
-		gclass0_0.Size = new Size(535, 214);
-		gclass0_0.TabIndex = 26;
-		gclass0_0.UseCompatibleStateImageBehavior = false;
-		gclass0_0.View = View.Details;
+		mlstCountries.Columns.AddRange(new ColumnHeader[4] { columnHeader_0, columnHeader_1, columnHeader_2, columnHeader_3 });
+		mlstCountries.Dock = DockStyle.Fill;
+		mlstCountries.ColumnHeader_0 = new ColumnHeader[4] { columnHeader_0, columnHeader_1, columnHeader_2, columnHeader_3 };
+		mlstCountries.FullRowSelect = true;
+		mlstCountries.GridLines = true;
+		mlstCountries.HideSelection = false;
+		mlstCountries.Location = new Point(0, 0);
+		mlstCountries.Name = "m_lstCountries";
+		mlstCountries.Size = new Size(535, 214);
+		mlstCountries.TabIndex = 26;
+		mlstCountries.UseCompatibleStateImageBehavior = false;
+		mlstCountries.View = View.Details;
 		columnHeader_0.Text = "Country";
 		columnHeader_0.Width = 190;
 		columnHeader_1.Text = "Entries";
@@ -481,7 +481,7 @@ internal sealed class GeoIPCountriesTable : UserControl
 		columnHeader_3.Width = 120;
 		base.AutoScaleDimensions = new SizeF(8f, 16f);
 		base.AutoScaleMode = AutoScaleMode.Font;
-		base.Controls.Add(gclass0_0);
+		base.Controls.Add(mlstCountries);
 		Font = new Font("Microsoft Sans Serif", 9.75f, FontStyle.Regular, GraphicsUnit.Point, 204);
 		base.Margin = new Padding(4);
 		base.Name = "GeoIPCountriesTable";
@@ -494,12 +494,12 @@ internal sealed class GeoIPCountriesTable : UserControl
 		eventHandler_0?.Invoke(sender, e);
 	}
 
-	private void gclass0_0_KeyUp(object sender, KeyEventArgs e)
+	private void mlstCountries_KeyUp(object sender, KeyEventArgs e)
 	{
 		keyEventHandler_0?.Invoke(sender, e);
 	}
 
-	private void gclass0_0_MouseDoubleClick(object sender, MouseEventArgs e)
+	private void mlstCountries_MouseDoubleClick(object sender, MouseEventArgs e)
 	{
 		mouseEventHandler_0?.Invoke(sender, e);
 	}

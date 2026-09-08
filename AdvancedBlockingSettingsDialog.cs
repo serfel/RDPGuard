@@ -8,31 +8,31 @@ internal sealed class AdvancedBlockingSettingsDialog : Form0
 {
 	private IContainer icontainer_0;
 
-	private Class66 class66_0;
+	private Class66 mbtnSave;
 
-	private Class66 class66_1;
+	private Class66 btnCancel;
 
-	private GControl0 gcontrol0_0;
+	private GControl0 separatorLine1;
 
-	private Class62 class62_0;
+	private Class62 label2;
 
-	private PictureBox pictureBox_0;
+	private PictureBox imgBigIcon;
 
-	private Class62 class62_1;
+	private Class62 lblCaption;
 
-	private GClass3 gclass3_0;
+	private GClass3 mlnkOnlineHelp;
 
-	private Class61 class61_0;
+	private Class61 mchbBlockAllPorts;
 
-	private Class63 class63_0;
+	private Class63 mlblBlockAllPortsHint;
 
-	private Class63 class63_1;
+	private Class63 mlblPortsHint;
 
-	private Class62 class62_2;
+	private Class62 mlblPorts;
 
-	private TextBox textBox_0;
+	private TextBox medPorts;
 
-	private Class62 class62_3;
+	private Class62 mlblPerformanceWarning;
 
 	public Class169 Class169_0
 	{
@@ -40,41 +40,41 @@ internal sealed class AdvancedBlockingSettingsDialog : Form0
 		{
 			return new Class169
 			{
-				ushort_0 = Class168.smethod_1(textBox_0.Text),
-				Boolean_0 = class61_0.Checked
+				ushort_0 = Class168.smethod_1(medPorts.Text),
+				Boolean_0 = mchbBlockAllPorts.Checked
 			};
 		}
 		set
 		{
-			class61_0.CheckState = CheckState.Checked;
-			class61_0.Checked = !value.Boolean_1;
-			textBox_0.Text = Class168.smethod_0(value.ushort_0);
+			mchbBlockAllPorts.CheckState = CheckState.Checked;
+			mchbBlockAllPorts.Checked = !value.Boolean_1;
+			medPorts.Text = Class168.smethod_0(value.ushort_0);
 		}
 	}
 
-	protected override Button Button_0 => class66_0;
+	protected override Button Button_0 => mbtnSave;
 
 	public AdvancedBlockingSettingsDialog(Class169 class169_0)
 		: base(new Size(500, 345))
 	{
 		OnButtonCancel();
-		vmethod_1();
-		InitializeComponents();
+		InitializeFormPosition();
+		InitializeComponent();
 		OnButtonOk();
 		Class169_0 = class169_0;
 	}
 
-	private void InitializeComponents()
+	private void InitializeComponent()
 	{
-		class62_3.Left = class62_2.Right;
+		mlblPerformanceWarning.Left = mlblPorts.Right;
 	}
 
 	private void OnButtonOk()
 	{
-		gclass3_0.Click += gclass3_0_Click;
-		class61_0.CheckedChanged += class61_0_CheckedChanged;
-		class66_0.Click += class66_0_Click;
-		class66_1.Click += class66_1_Click;
+		mlnkOnlineHelp.Click += mlnkOnlineHelp_Click;
+		mchbBlockAllPorts.CheckedChanged += mchbBlockAllPorts_CheckedChanged;
+		mbtnSave.Click += mbtnSave_Click;
+		btnCancel.Click += btnCancel_Click;
 	}
 
 	protected override void Dispose(bool disposing)
@@ -90,169 +90,169 @@ internal sealed class AdvancedBlockingSettingsDialog : Form0
 	{
 		icontainer_0 = new Container();
 		new ComponentResourceManager(typeof(AdvancedBlockingSettingsDialog));
-		class66_0 = new Class66();
-		class66_1 = new Class66();
-		gcontrol0_0 = new GControl0();
-		class62_0 = new Class62();
-		pictureBox_0 = new PictureBox();
-		class62_1 = new Class62();
-		gclass3_0 = new GClass3();
-		class61_0 = new Class61();
-		class63_0 = new Class63();
-		class63_1 = new Class63();
-		class62_2 = new Class62();
-		textBox_0 = new TextBox();
-		class62_3 = new Class62();
-		((ISupportInitialize)pictureBox_0).BeginInit();
+		mbtnSave = new Class66();
+		btnCancel = new Class66();
+		separatorLine1 = new GControl0();
+		label2 = new Class62();
+		imgBigIcon = new PictureBox();
+		lblCaption = new Class62();
+		mlnkOnlineHelp = new GClass3();
+		mchbBlockAllPorts = new Class61();
+		mlblBlockAllPortsHint = new Class63();
+		mlblPortsHint = new Class63();
+		mlblPorts = new Class62();
+		medPorts = new TextBox();
+		mlblPerformanceWarning = new Class62();
+		((ISupportInitialize)imgBigIcon).BeginInit();
 		SuspendLayout();
-		class66_0.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-		class66_0.Image = Resources.opts_16;
-		class66_0.Location = new Point(263, 257);
-		class66_0.Margin = new Padding(4);
-		class66_0.Name = "m_btnSave";
-		class66_0.Size = new Size(100, 36);
-		class66_0.TabIndex = 7;
-		class66_0.Text = "Save";
-		class66_0.TextAlign = ContentAlignment.MiddleRight;
-		class66_0.TextImageRelation = TextImageRelation.ImageBeforeText;
-		class66_0.UseVisualStyleBackColor = true;
-		class66_1.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-		class66_1.Image = Resources.cancl_16;
-		class66_1.Location = new Point(371, 257);
-		class66_1.Margin = new Padding(4);
-		class66_1.Name = "btnCancel";
-		class66_1.Size = new Size(100, 36);
-		class66_1.TabIndex = 8;
-		class66_1.Text = "Cancel";
-		class66_1.TextAlign = ContentAlignment.MiddleRight;
-		class66_1.TextImageRelation = TextImageRelation.ImageBeforeText;
-		class66_1.UseVisualStyleBackColor = true;
-		gcontrol0_0.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-		gcontrol0_0.Location = new Point(16, 81);
-		gcontrol0_0.Name = "separatorLine1";
-		gcontrol0_0.Size = new Size(456, 2);
-		gcontrol0_0.TabIndex = 50;
-		gcontrol0_0.TabStop = false;
-		class62_0.AutoSize = true;
-		class62_0.Font = new Font("Microsoft Sans Serif", 9.75f, FontStyle.Bold, GraphicsUnit.Point, 204);
-		class62_0.Location = new Point(79, 15);
-		class62_0.Margin = new Padding(4, 0, 4, 0);
-		class62_0.Name = "label2";
-		class62_0.Size = new Size(199, 16);
-		class62_0.TabIndex = 49;
-		class62_0.Text = "Advanced blocking settings";
-		pictureBox_0.Image = Resources.firewall_edit_48;
-		pictureBox_0.Location = new Point(16, 15);
-		pictureBox_0.Margin = new Padding(4);
-		pictureBox_0.Name = "imgBigIcon";
-		pictureBox_0.Size = new Size(48, 48);
-		pictureBox_0.SizeMode = PictureBoxSizeMode.AutoSize;
-		pictureBox_0.TabIndex = 47;
-		pictureBox_0.TabStop = false;
-		class62_1.AutoSize = true;
-		class62_1.Location = new Point(79, 47);
-		class62_1.Margin = new Padding(4, 0, 4, 0);
-		class62_1.Name = "lblCaption";
-		class62_1.Size = new Size(206, 16);
-		class62_1.TabIndex = 48;
-		class62_1.Text = "Advanced settings for IP blocking";
-		gclass3_0.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-		gclass3_0.AutoSize = true;
-		gclass3_0.LinkColor = Color.FromArgb(38, 135, 200);
-		gclass3_0.Location = new Point(399, 9);
-		gclass3_0.Name = "m_lnkOnlineHelp";
-		gclass3_0.Size = new Size(73, 16);
-		gclass3_0.TabIndex = 9;
-		gclass3_0.TabStop = true;
-		gclass3_0.Text = "online help";
-		gclass3_0.VisitedLinkColor = Color.FromArgb(38, 135, 200);
-		class61_0.AutoSize = true;
-		class61_0.Location = new Point(16, 97);
-		class61_0.Name = "m_chbBlockAllPorts";
-		class61_0.Size = new Size(351, 20);
-		class61_0.TabIndex = 0;
-		class61_0.Text = "Block access to all ports on the server (recommended)";
-		class61_0.UseVisualStyleBackColor = true;
-		class63_0.AutoSize = true;
-		class63_0.ForeColor = SystemColors.ControlDarkDark;
-		class63_0.Location = new Point(13, 122);
-		class63_0.Name = "m_lblBlockAllPortsHint";
-		class63_0.Size = new Size(297, 16);
-		class63_0.TabIndex = 58;
-		class63_0.Text = "Turn on to block access to all ports  on the server";
-		class63_1.AutoSize = true;
-		class63_1.ForeColor = SystemColors.ControlDarkDark;
-		class63_1.Location = new Point(20, 213);
-		class63_1.Name = "m_lblPortsHint";
-		class63_1.Size = new Size(426, 16);
-		class63_1.TabIndex = 71;
-		class63_1.Text = "You can also specify multiple comma-separated ports, i.e. 3389, 21, 25";
-		class62_2.AutoSize = true;
-		class62_2.Location = new Point(13, 157);
-		class62_2.Name = "m_lblPorts";
-		class62_2.Size = new Size(92, 16);
-		class62_2.TabIndex = 70;
-		class62_2.Text = "Ports to block:";
-		textBox_0.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-		textBox_0.Location = new Point(23, 183);
-		textBox_0.Name = "m_edPorts";
-		textBox_0.Size = new Size(448, 22);
-		textBox_0.TabIndex = 77;
-		class62_3.AutoSize = true;
-		class62_3.ForeColor = Color.Red;
-		class62_3.Location = new Point(103, 157);
-		class62_3.Name = "m_lblPerformanceWarning";
-		class62_3.Size = new Size(356, 16);
-		class62_3.TabIndex = 78;
-		class62_3.Text = "(network performance may be affected, please check help)";
-		class62_3.Boolean_0 = true;
+		mbtnSave.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+		mbtnSave.Image = Resources.opts_16;
+		mbtnSave.Location = new Point(263, 257);
+		mbtnSave.Margin = new Padding(4);
+		mbtnSave.Name = "m_btnSave";
+		mbtnSave.Size = new Size(100, 36);
+		mbtnSave.TabIndex = 7;
+		mbtnSave.Text = "Save";
+		mbtnSave.TextAlign = ContentAlignment.MiddleRight;
+		mbtnSave.TextImageRelation = TextImageRelation.ImageBeforeText;
+		mbtnSave.UseVisualStyleBackColor = true;
+		btnCancel.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+		btnCancel.Image = Resources.cancl_16;
+		btnCancel.Location = new Point(371, 257);
+		btnCancel.Margin = new Padding(4);
+		btnCancel.Name = "btnCancel";
+		btnCancel.Size = new Size(100, 36);
+		btnCancel.TabIndex = 8;
+		btnCancel.Text = "Cancel";
+		btnCancel.TextAlign = ContentAlignment.MiddleRight;
+		btnCancel.TextImageRelation = TextImageRelation.ImageBeforeText;
+		btnCancel.UseVisualStyleBackColor = true;
+		separatorLine1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+		separatorLine1.Location = new Point(16, 81);
+		separatorLine1.Name = "separatorLine1";
+		separatorLine1.Size = new Size(456, 2);
+		separatorLine1.TabIndex = 50;
+		separatorLine1.TabStop = false;
+		label2.AutoSize = true;
+		label2.Font = new Font("Microsoft Sans Serif", 9.75f, FontStyle.Bold, GraphicsUnit.Point, 204);
+		label2.Location = new Point(79, 15);
+		label2.Margin = new Padding(4, 0, 4, 0);
+		label2.Name = "label2";
+		label2.Size = new Size(199, 16);
+		label2.TabIndex = 49;
+		label2.Text = "Advanced blocking settings";
+		imgBigIcon.Image = Resources.firewall_edit_48;
+		imgBigIcon.Location = new Point(16, 15);
+		imgBigIcon.Margin = new Padding(4);
+		imgBigIcon.Name = "imgBigIcon";
+		imgBigIcon.Size = new Size(48, 48);
+		imgBigIcon.SizeMode = PictureBoxSizeMode.AutoSize;
+		imgBigIcon.TabIndex = 47;
+		imgBigIcon.TabStop = false;
+		lblCaption.AutoSize = true;
+		lblCaption.Location = new Point(79, 47);
+		lblCaption.Margin = new Padding(4, 0, 4, 0);
+		lblCaption.Name = "lblCaption";
+		lblCaption.Size = new Size(206, 16);
+		lblCaption.TabIndex = 48;
+		lblCaption.Text = "Advanced settings for IP blocking";
+		mlnkOnlineHelp.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+		mlnkOnlineHelp.AutoSize = true;
+		mlnkOnlineHelp.LinkColor = Color.FromArgb(38, 135, 200);
+		mlnkOnlineHelp.Location = new Point(399, 9);
+		mlnkOnlineHelp.Name = "m_lnkOnlineHelp";
+		mlnkOnlineHelp.Size = new Size(73, 16);
+		mlnkOnlineHelp.TabIndex = 9;
+		mlnkOnlineHelp.TabStop = true;
+		mlnkOnlineHelp.Text = "online help";
+		mlnkOnlineHelp.VisitedLinkColor = Color.FromArgb(38, 135, 200);
+		mchbBlockAllPorts.AutoSize = true;
+		mchbBlockAllPorts.Location = new Point(16, 97);
+		mchbBlockAllPorts.Name = "m_chbBlockAllPorts";
+		mchbBlockAllPorts.Size = new Size(351, 20);
+		mchbBlockAllPorts.TabIndex = 0;
+		mchbBlockAllPorts.Text = "Block access to all ports on the server (recommended)";
+		mchbBlockAllPorts.UseVisualStyleBackColor = true;
+		mlblBlockAllPortsHint.AutoSize = true;
+		mlblBlockAllPortsHint.ForeColor = SystemColors.ControlDarkDark;
+		mlblBlockAllPortsHint.Location = new Point(13, 122);
+		mlblBlockAllPortsHint.Name = "m_lblBlockAllPortsHint";
+		mlblBlockAllPortsHint.Size = new Size(297, 16);
+		mlblBlockAllPortsHint.TabIndex = 58;
+		mlblBlockAllPortsHint.Text = "Turn on to block access to all ports  on the server";
+		mlblPortsHint.AutoSize = true;
+		mlblPortsHint.ForeColor = SystemColors.ControlDarkDark;
+		mlblPortsHint.Location = new Point(20, 213);
+		mlblPortsHint.Name = "m_lblPortsHint";
+		mlblPortsHint.Size = new Size(426, 16);
+		mlblPortsHint.TabIndex = 71;
+		mlblPortsHint.Text = "You can also specify multiple comma-separated ports, i.e. 3389, 21, 25";
+		mlblPorts.AutoSize = true;
+		mlblPorts.Location = new Point(13, 157);
+		mlblPorts.Name = "m_lblPorts";
+		mlblPorts.Size = new Size(92, 16);
+		mlblPorts.TabIndex = 70;
+		mlblPorts.Text = "Ports to block:";
+		medPorts.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+		medPorts.Location = new Point(23, 183);
+		medPorts.Name = "m_edPorts";
+		medPorts.Size = new Size(448, 22);
+		medPorts.TabIndex = 77;
+		mlblPerformanceWarning.AutoSize = true;
+		mlblPerformanceWarning.ForeColor = Color.Red;
+		mlblPerformanceWarning.Location = new Point(103, 157);
+		mlblPerformanceWarning.Name = "m_lblPerformanceWarning";
+		mlblPerformanceWarning.Size = new Size(356, 16);
+		mlblPerformanceWarning.TabIndex = 78;
+		mlblPerformanceWarning.Text = "(network performance may be affected, please check help)";
+		mlblPerformanceWarning.Boolean_0 = true;
 		base.AutoScaleDimensions = new SizeF(8f, 16f);
 		base.AutoScaleMode = AutoScaleMode.Font;
 		base.ClientSize = new Size(484, 306);
-		base.Controls.Add(class62_3);
-		base.Controls.Add(textBox_0);
-		base.Controls.Add(class63_1);
-		base.Controls.Add(class62_2);
-		base.Controls.Add(class63_0);
-		base.Controls.Add(class61_0);
-		base.Controls.Add(gclass3_0);
-		base.Controls.Add(gcontrol0_0);
-		base.Controls.Add(class62_0);
-		base.Controls.Add(class62_1);
-		base.Controls.Add(pictureBox_0);
-		base.Controls.Add(class66_0);
-		base.Controls.Add(class66_1);
+		base.Controls.Add(mlblPerformanceWarning);
+		base.Controls.Add(medPorts);
+		base.Controls.Add(mlblPortsHint);
+		base.Controls.Add(mlblPorts);
+		base.Controls.Add(mlblBlockAllPortsHint);
+		base.Controls.Add(mchbBlockAllPorts);
+		base.Controls.Add(mlnkOnlineHelp);
+		base.Controls.Add(separatorLine1);
+		base.Controls.Add(label2);
+		base.Controls.Add(lblCaption);
+		base.Controls.Add(imgBigIcon);
+		base.Controls.Add(mbtnSave);
+		base.Controls.Add(btnCancel);
 		Font = new Font("Microsoft Sans Serif", 9.75f, FontStyle.Regular, GraphicsUnit.Point, 204);
 		base.Margin = new Padding(5, 4, 5, 4);
 		base.Name = "AdvancedBlockingSettingsDialog";
 		base.StartPosition = FormStartPosition.Manual;
 		Text = "Blocking Settings";
-		((ISupportInitialize)pictureBox_0).EndInit();
+		((ISupportInitialize)imgBigIcon).EndInit();
 		ResumeLayout(performLayout: false);
 		PerformLayout();
 	}
 
-	private void gclass3_0_Click(object sender, EventArgs e)
+	private void mlnkOnlineHelp_Click(object sender, EventArgs e)
 	{
-		method_9(Class148.String_5);
+		ShowOnlineHelp(Class148.String_5);
 	}
 
-	private void class61_0_CheckedChanged(object sender, EventArgs e)
+	private void mchbBlockAllPorts_CheckedChanged(object sender, EventArgs e)
 	{
-		bool enabled = !class61_0.Checked;
-		class62_2.Enabled = enabled;
-		class62_3.Enabled = enabled;
-		textBox_0.Enabled = enabled;
-		class63_1.Enabled = enabled;
+		bool enabled = !mchbBlockAllPorts.Checked;
+		mlblPorts.Enabled = enabled;
+		mlblPerformanceWarning.Enabled = enabled;
+		medPorts.Enabled = enabled;
+		mlblPortsHint.Enabled = enabled;
 	}
 
-	private void class66_0_Click(object sender, EventArgs e)
+	private void mbtnSave_Click(object sender, EventArgs e)
 	{
-		method_8(DialogResult.OK);
+		CloseDialog(DialogResult.OK);
 	}
 
-	private void class66_1_Click(object sender, EventArgs e)
+	private void btnCancel_Click(object sender, EventArgs e)
 	{
-		method_8(DialogResult.Cancel);
+		CloseDialog(DialogResult.Cancel);
 	}
 }

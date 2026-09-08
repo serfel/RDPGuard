@@ -38,7 +38,7 @@ internal static class Class10
 
 		internal bool method_3(Class90 class90_0)
 		{
-			if (!Form23_0.Class135_0.vmethod_0(class90_0.gclass11_0.gclass24_0))
+			if (!Form23_0.Class135_0.OnFormClosing(class90_0.gclass11_0.gclass24_0))
 			{
 				return class90_0.gclass11_0.gclass24_0.method_1(Form23_0.Class135_0.gclass24_0);
 			}

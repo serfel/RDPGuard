@@ -16,7 +16,7 @@ internal sealed class LicenseActivatationOfflineDialog : Form0
 
 		internal void method_0()
 		{
-			form10_0.InitializeComponents(object_0, eventArgs11_0);
+			form10_0.InitializeComponent(object_0, eventArgs11_0);
 		}
 	}
 
@@ -40,58 +40,58 @@ internal sealed class LicenseActivatationOfflineDialog : Form0
 
 	private IContainer icontainer_0;
 
-	private PictureBox pictureBox_0;
+	private PictureBox pictureBox1;
 
-	private Class62 class62_0;
+	private Class62 mlblSubCaption;
 
-	private Class62 class62_1;
+	private Class62 lblCaption;
 
-	private Class66 class66_0;
+	private Class66 mbtnActivate;
 
-	private Class66 class66_1;
+	private Class66 mbtnCancel;
 
-	private TextBox textBox_0;
+	private TextBox medActivationKey;
 
-	public Label label_0;
+	public Label mlblActivationKey;
 
-	private GControl0 gcontrol0_0;
+	private GControl0 separatorLine1;
 
-	private Class62 class62_2;
+	private Class62 label2;
 
-	private Class62 class62_3;
+	private Class62 label1;
 
-	private TextBox textBox_1;
+	private TextBox medActivationRequest;
 
-	private GClass3 gclass3_0;
+	private GClass3 mlnkContactUs;
 
-	private Class62 class62_4;
+	private Class62 label3;
 
-	private TextBox textBox_2;
+	private TextBox medActivationResponse;
 
-	public Label label_1;
+	public Label label4;
 
-	private GClass3 gclass3_1;
+	private GClass3 mlnkCopy;
 
-	private GClass3 gclass3_2;
+	private GClass3 mlnkPaste;
 
 	public LicenseActivatationOfflineDialog()
 		: base(new Size(583, 757))
 	{
 		SaveSettings();
-		vmethod_1();
+		InitializeFormPosition();
 		OnButtonOk();
 		OnButtonCancel();
-		Class89.eventHandler_11 = (EventHandler<EventArgs11>)Delegate.Combine(Class89.eventHandler_11, new EventHandler<EventArgs11>(InitializeComponents));
+		Class89.eventHandler_11 = (EventHandler<EventArgs11>)Delegate.Combine(Class89.eventHandler_11, new EventHandler<EventArgs11>(InitializeComponent));
 		Class89.smethod_10();
 	}
 
-	private void InitializeComponents(object sender, EventArgs11 e)
+	private void InitializeComponent(object sender, EventArgs11 e)
 	{
 		Class15 @class = new Class15();
 		@class.form10_0 = this;
 		@class.object_0 = sender;
 		@class.eventArgs11_0 = e;
-		Class89.eventHandler_11 = (EventHandler<EventArgs11>)Delegate.Remove(Class89.eventHandler_11, new EventHandler<EventArgs11>(InitializeComponents));
+		Class89.eventHandler_11 = (EventHandler<EventArgs11>)Delegate.Remove(Class89.eventHandler_11, new EventHandler<EventArgs11>(InitializeComponent));
 		if (base.InvokeRequired)
 		{
 			BeginInvoke(new Action(@class.method_0));
@@ -104,18 +104,18 @@ internal sealed class LicenseActivatationOfflineDialog : Form0
 
 	public void OnButtonOk()
 	{
-		class62_0.Text = "Use this dialog to activate RdpGuard if you unable to use online activation";
+		mlblSubCaption.Text = "Use this dialog to activate RdpGuard if you unable to use online activation";
 	}
 
 	public void OnButtonCancel()
 	{
-		textBox_0.TextChanged += textBox_0_TextChanged;
-		gclass3_1.Click += gclass3_1_Click;
-		textBox_2.TextChanged += textBox_2_TextChanged;
-		gclass3_2.Click += gclass3_2_Click;
-		gclass3_0.LinkClicked += gclass3_0_LinkClicked;
-		class66_0.Click += class66_0_Click;
-		class66_1.Click += class66_1_Click;
+		medActivationKey.TextChanged += medActivationKey_TextChanged;
+		mlnkCopy.Click += mlnkCopy_Click;
+		medActivationResponse.TextChanged += medActivationResponse_TextChanged;
+		mlnkPaste.Click += mlnkPaste_Click;
+		mlnkContactUs.LinkClicked += mlnkContactUs_LinkClicked;
+		mbtnActivate.Click += mbtnActivate_Click;
+		mbtnCancel.Click += mbtnCancel_Click;
 	}
 
 	private void OnLoad(string string_1)
@@ -136,7 +136,7 @@ internal sealed class LicenseActivatationOfflineDialog : Form0
 			return;
 		}
 		class146_0 = @class.eventArgs11_0.class146_0;
-		method_8(DialogResult.OK);
+		CloseDialog(DialogResult.OK);
 	}
 
 	protected override void Dispose(bool disposing)
@@ -150,231 +150,231 @@ internal sealed class LicenseActivatationOfflineDialog : Form0
 
 	private void SaveSettings()
 	{
-		pictureBox_0 = new PictureBox();
-		class62_0 = new Class62();
-		class62_1 = new Class62();
-		class66_0 = new Class66();
-		class66_1 = new Class66();
-		textBox_0 = new TextBox();
-		label_0 = new Class62();
-		gcontrol0_0 = new GControl0();
-		class62_2 = new Class62();
-		class62_3 = new Class62();
-		textBox_1 = new TextBox();
-		gclass3_0 = new GClass3();
-		class62_4 = new Class62();
-		textBox_2 = new TextBox();
-		label_1 = new Class62();
-		gclass3_1 = new GClass3();
-		gclass3_2 = new GClass3();
-		((ISupportInitialize)pictureBox_0).BeginInit();
+		pictureBox1 = new PictureBox();
+		mlblSubCaption = new Class62();
+		lblCaption = new Class62();
+		mbtnActivate = new Class66();
+		mbtnCancel = new Class66();
+		medActivationKey = new TextBox();
+		mlblActivationKey = new Class62();
+		separatorLine1 = new GControl0();
+		label2 = new Class62();
+		label1 = new Class62();
+		medActivationRequest = new TextBox();
+		mlnkContactUs = new GClass3();
+		label3 = new Class62();
+		medActivationResponse = new TextBox();
+		label4 = new Class62();
+		mlnkCopy = new GClass3();
+		mlnkPaste = new GClass3();
+		((ISupportInitialize)pictureBox1).BeginInit();
 		SuspendLayout();
-		pictureBox_0.Image = Resources.activate_pro_48;
-		pictureBox_0.Location = new Point(16, 15);
-		pictureBox_0.Margin = new Padding(4);
-		pictureBox_0.Name = "pictureBox1";
-		pictureBox_0.Size = new Size(48, 48);
-		pictureBox_0.SizeMode = PictureBoxSizeMode.AutoSize;
-		pictureBox_0.TabIndex = 0;
-		pictureBox_0.TabStop = false;
-		class62_0.AutoSize = true;
-		class62_0.Location = new Point(79, 47);
-		class62_0.Margin = new Padding(4, 0, 4, 0);
-		class62_0.Name = "m_lblSubCaption";
-		class62_0.Size = new Size(421, 16);
-		class62_0.TabIndex = 4;
-		class62_0.Text = "Use this dialog to activate {0} Pro if you unable to use online activation";
-		class62_1.AutoSize = true;
-		class62_1.Font = new Font("Microsoft Sans Serif", 9.75f, FontStyle.Bold, GraphicsUnit.Point, 204);
-		class62_1.Location = new Point(79, 15);
-		class62_1.Margin = new Padding(4, 0, 4, 0);
-		class62_1.Name = "lblCaption";
-		class62_1.Size = new Size(124, 16);
-		class62_1.TabIndex = 14;
-		class62_1.Text = "Offline Activation";
-		class66_0.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-		class66_0.Enabled = false;
-		class66_0.Image = Resources.opts_16;
-		class66_0.Location = new Point(324, 663);
-		class66_0.Margin = new Padding(4);
-		class66_0.Name = "m_btnActivate";
-		class66_0.Size = new Size(100, 36);
-		class66_0.TabIndex = 1;
-		class66_0.Text = "Activate";
-		class66_0.TextImageRelation = TextImageRelation.ImageBeforeText;
-		class66_0.UseVisualStyleBackColor = true;
-		class66_1.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-		class66_1.Image = Resources.cancl_16;
-		class66_1.Location = new Point(432, 663);
-		class66_1.Margin = new Padding(4);
-		class66_1.Name = "m_btnCancel";
-		class66_1.Size = new Size(100, 36);
-		class66_1.TabIndex = 2;
-		class66_1.Text = "Cancel";
-		class66_1.TextImageRelation = TextImageRelation.ImageBeforeText;
-		class66_1.UseVisualStyleBackColor = true;
-		textBox_0.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-		textBox_0.Location = new Point(33, 123);
-		textBox_0.Margin = new Padding(4);
-		textBox_0.Name = "m_edActivationKey";
-		textBox_0.Size = new Size(496, 22);
-		textBox_0.TabIndex = 0;
-		label_0.AutoSize = true;
-		label_0.Location = new Point(13, 97);
-		label_0.Margin = new Padding(4, 0, 4, 0);
-		label_0.Name = "m_lblActivationKey";
-		label_0.Size = new Size(171, 16);
-		label_0.TabIndex = 15;
-		label_0.Text = "1. Enter your Activation Key:";
-		gcontrol0_0.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-		gcontrol0_0.Location = new Point(16, 81);
-		gcontrol0_0.Name = "separatorLine1";
-		gcontrol0_0.Size = new Size(513, 2);
-		gcontrol0_0.TabIndex = 36;
-		gcontrol0_0.TabStop = false;
-		class62_2.AutoSize = true;
-		class62_2.ForeColor = SystemColors.ControlDarkDark;
-		class62_2.Location = new Point(30, 150);
-		class62_2.Name = "label2";
-		class62_2.Size = new Size(334, 16);
-		class62_2.TabIndex = 97;
-		class62_2.Text = "Enter your Activation Key from order confirmation e-mail";
-		class62_3.AutoSize = true;
-		class62_3.ForeColor = SystemColors.ControlDarkDark;
-		class62_3.Location = new Point(30, 396);
-		class62_3.Name = "label1";
-		class62_3.Size = new Size(221, 16);
-		class62_3.TabIndex = 100;
-		class62_3.Text = "Send us the text from the field above";
-		textBox_1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-		textBox_1.Font = new Font("Courier New", 9.75f, FontStyle.Bold, GraphicsUnit.Point, 0);
-		textBox_1.Location = new Point(33, 213);
-		textBox_1.Margin = new Padding(4);
-		textBox_1.Multiline = true;
-		textBox_1.Name = "m_edActivationRequest";
-		textBox_1.ReadOnly = true;
-		textBox_1.ScrollBars = ScrollBars.Both;
-		textBox_1.Size = new Size(496, 178);
-		textBox_1.TabIndex = 98;
-		gclass3_0.AutoSize = true;
-		gclass3_0.LinkColor = Color.FromArgb(38, 135, 200);
-		gclass3_0.Location = new Point(13, 187);
-		gclass3_0.Name = "m_lnkContactUs";
-		gclass3_0.Size = new Size(185, 16);
-		gclass3_0.TabIndex = 101;
-		gclass3_0.TabStop = true;
-		gclass3_0.Text = "2. Send us Activation Request";
-		gclass3_0.VisitedLinkColor = Color.FromArgb(38, 135, 200);
-		class62_4.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-		class62_4.AutoSize = true;
-		class62_4.ForeColor = SystemColors.ControlDarkDark;
-		class62_4.Location = new Point(30, 642);
-		class62_4.Name = "label3";
-		class62_4.Size = new Size(293, 16);
-		class62_4.TabIndex = 103;
-		class62_4.Text = "Paste the Activation Response received from us";
-		textBox_2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-		textBox_2.Font = new Font("Courier New", 9.75f, FontStyle.Bold, GraphicsUnit.Point, 0);
-		textBox_2.Location = new Point(33, 459);
-		textBox_2.Margin = new Padding(4);
-		textBox_2.Multiline = true;
-		textBox_2.Name = "m_edActivationResponse";
-		textBox_2.ScrollBars = ScrollBars.Both;
-		textBox_2.Size = new Size(496, 178);
-		textBox_2.TabIndex = 102;
-		label_1.AutoSize = true;
-		label_1.Location = new Point(13, 433);
-		label_1.Margin = new Padding(4, 0, 4, 0);
-		label_1.Name = "label4";
-		label_1.Size = new Size(182, 16);
-		label_1.TabIndex = 104;
-		label_1.Text = "3. Enter Activation Response:";
-		gclass3_1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-		gclass3_1.AutoSize = true;
-		gclass3_1.LinkColor = Color.FromArgb(38, 135, 200);
-		gclass3_1.Location = new Point(491, 187);
-		gclass3_1.Name = "m_lnkCopy";
-		gclass3_1.Size = new Size(38, 16);
-		gclass3_1.TabIndex = 105;
-		gclass3_1.TabStop = true;
-		gclass3_1.Text = "copy";
-		gclass3_1.VisitedLinkColor = Color.FromArgb(38, 135, 200);
-		gclass3_2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-		gclass3_2.AutoSize = true;
-		gclass3_2.LinkColor = Color.FromArgb(38, 135, 200);
-		gclass3_2.Location = new Point(487, 433);
-		gclass3_2.Name = "m_lnkPaste";
-		gclass3_2.Size = new Size(42, 16);
-		gclass3_2.TabIndex = 106;
-		gclass3_2.TabStop = true;
-		gclass3_2.Text = "paste";
-		gclass3_2.VisitedLinkColor = Color.FromArgb(38, 135, 200);
+		pictureBox1.Image = Resources.activate_pro_48;
+		pictureBox1.Location = new Point(16, 15);
+		pictureBox1.Margin = new Padding(4);
+		pictureBox1.Name = "pictureBox1";
+		pictureBox1.Size = new Size(48, 48);
+		pictureBox1.SizeMode = PictureBoxSizeMode.AutoSize;
+		pictureBox1.TabIndex = 0;
+		pictureBox1.TabStop = false;
+		mlblSubCaption.AutoSize = true;
+		mlblSubCaption.Location = new Point(79, 47);
+		mlblSubCaption.Margin = new Padding(4, 0, 4, 0);
+		mlblSubCaption.Name = "m_lblSubCaption";
+		mlblSubCaption.Size = new Size(421, 16);
+		mlblSubCaption.TabIndex = 4;
+		mlblSubCaption.Text = "Use this dialog to activate {0} Pro if you unable to use online activation";
+		lblCaption.AutoSize = true;
+		lblCaption.Font = new Font("Microsoft Sans Serif", 9.75f, FontStyle.Bold, GraphicsUnit.Point, 204);
+		lblCaption.Location = new Point(79, 15);
+		lblCaption.Margin = new Padding(4, 0, 4, 0);
+		lblCaption.Name = "lblCaption";
+		lblCaption.Size = new Size(124, 16);
+		lblCaption.TabIndex = 14;
+		lblCaption.Text = "Offline Activation";
+		mbtnActivate.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+		mbtnActivate.Enabled = false;
+		mbtnActivate.Image = Resources.opts_16;
+		mbtnActivate.Location = new Point(324, 663);
+		mbtnActivate.Margin = new Padding(4);
+		mbtnActivate.Name = "m_btnActivate";
+		mbtnActivate.Size = new Size(100, 36);
+		mbtnActivate.TabIndex = 1;
+		mbtnActivate.Text = "Activate";
+		mbtnActivate.TextImageRelation = TextImageRelation.ImageBeforeText;
+		mbtnActivate.UseVisualStyleBackColor = true;
+		mbtnCancel.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+		mbtnCancel.Image = Resources.cancl_16;
+		mbtnCancel.Location = new Point(432, 663);
+		mbtnCancel.Margin = new Padding(4);
+		mbtnCancel.Name = "m_btnCancel";
+		mbtnCancel.Size = new Size(100, 36);
+		mbtnCancel.TabIndex = 2;
+		mbtnCancel.Text = "Cancel";
+		mbtnCancel.TextImageRelation = TextImageRelation.ImageBeforeText;
+		mbtnCancel.UseVisualStyleBackColor = true;
+		medActivationKey.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+		medActivationKey.Location = new Point(33, 123);
+		medActivationKey.Margin = new Padding(4);
+		medActivationKey.Name = "m_edActivationKey";
+		medActivationKey.Size = new Size(496, 22);
+		medActivationKey.TabIndex = 0;
+		mlblActivationKey.AutoSize = true;
+		mlblActivationKey.Location = new Point(13, 97);
+		mlblActivationKey.Margin = new Padding(4, 0, 4, 0);
+		mlblActivationKey.Name = "m_lblActivationKey";
+		mlblActivationKey.Size = new Size(171, 16);
+		mlblActivationKey.TabIndex = 15;
+		mlblActivationKey.Text = "1. Enter your Activation Key:";
+		separatorLine1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+		separatorLine1.Location = new Point(16, 81);
+		separatorLine1.Name = "separatorLine1";
+		separatorLine1.Size = new Size(513, 2);
+		separatorLine1.TabIndex = 36;
+		separatorLine1.TabStop = false;
+		label2.AutoSize = true;
+		label2.ForeColor = SystemColors.ControlDarkDark;
+		label2.Location = new Point(30, 150);
+		label2.Name = "label2";
+		label2.Size = new Size(334, 16);
+		label2.TabIndex = 97;
+		label2.Text = "Enter your Activation Key from order confirmation e-mail";
+		label1.AutoSize = true;
+		label1.ForeColor = SystemColors.ControlDarkDark;
+		label1.Location = new Point(30, 396);
+		label1.Name = "label1";
+		label1.Size = new Size(221, 16);
+		label1.TabIndex = 100;
+		label1.Text = "Send us the text from the field above";
+		medActivationRequest.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+		medActivationRequest.Font = new Font("Courier New", 9.75f, FontStyle.Bold, GraphicsUnit.Point, 0);
+		medActivationRequest.Location = new Point(33, 213);
+		medActivationRequest.Margin = new Padding(4);
+		medActivationRequest.Multiline = true;
+		medActivationRequest.Name = "m_edActivationRequest";
+		medActivationRequest.ReadOnly = true;
+		medActivationRequest.ScrollBars = ScrollBars.Both;
+		medActivationRequest.Size = new Size(496, 178);
+		medActivationRequest.TabIndex = 98;
+		mlnkContactUs.AutoSize = true;
+		mlnkContactUs.LinkColor = Color.FromArgb(38, 135, 200);
+		mlnkContactUs.Location = new Point(13, 187);
+		mlnkContactUs.Name = "m_lnkContactUs";
+		mlnkContactUs.Size = new Size(185, 16);
+		mlnkContactUs.TabIndex = 101;
+		mlnkContactUs.TabStop = true;
+		mlnkContactUs.Text = "2. Send us Activation Request";
+		mlnkContactUs.VisitedLinkColor = Color.FromArgb(38, 135, 200);
+		label3.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+		label3.AutoSize = true;
+		label3.ForeColor = SystemColors.ControlDarkDark;
+		label3.Location = new Point(30, 642);
+		label3.Name = "label3";
+		label3.Size = new Size(293, 16);
+		label3.TabIndex = 103;
+		label3.Text = "Paste the Activation Response received from us";
+		medActivationResponse.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+		medActivationResponse.Font = new Font("Courier New", 9.75f, FontStyle.Bold, GraphicsUnit.Point, 0);
+		medActivationResponse.Location = new Point(33, 459);
+		medActivationResponse.Margin = new Padding(4);
+		medActivationResponse.Multiline = true;
+		medActivationResponse.Name = "m_edActivationResponse";
+		medActivationResponse.ScrollBars = ScrollBars.Both;
+		medActivationResponse.Size = new Size(496, 178);
+		medActivationResponse.TabIndex = 102;
+		label4.AutoSize = true;
+		label4.Location = new Point(13, 433);
+		label4.Margin = new Padding(4, 0, 4, 0);
+		label4.Name = "label4";
+		label4.Size = new Size(182, 16);
+		label4.TabIndex = 104;
+		label4.Text = "3. Enter Activation Response:";
+		mlnkCopy.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+		mlnkCopy.AutoSize = true;
+		mlnkCopy.LinkColor = Color.FromArgb(38, 135, 200);
+		mlnkCopy.Location = new Point(491, 187);
+		mlnkCopy.Name = "m_lnkCopy";
+		mlnkCopy.Size = new Size(38, 16);
+		mlnkCopy.TabIndex = 105;
+		mlnkCopy.TabStop = true;
+		mlnkCopy.Text = "copy";
+		mlnkCopy.VisitedLinkColor = Color.FromArgb(38, 135, 200);
+		mlnkPaste.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+		mlnkPaste.AutoSize = true;
+		mlnkPaste.LinkColor = Color.FromArgb(38, 135, 200);
+		mlnkPaste.Location = new Point(487, 433);
+		mlnkPaste.Name = "m_lnkPaste";
+		mlnkPaste.Size = new Size(42, 16);
+		mlnkPaste.TabIndex = 106;
+		mlnkPaste.TabStop = true;
+		mlnkPaste.Text = "paste";
+		mlnkPaste.VisitedLinkColor = Color.FromArgb(38, 135, 200);
 		base.AutoScaleDimensions = new SizeF(8f, 16f);
 		base.AutoScaleMode = AutoScaleMode.Font;
 		base.ClientSize = new Size(542, 712);
-		base.Controls.Add(gclass3_2);
-		base.Controls.Add(gclass3_1);
-		base.Controls.Add(label_1);
-		base.Controls.Add(class62_4);
-		base.Controls.Add(textBox_2);
-		base.Controls.Add(gclass3_0);
-		base.Controls.Add(class62_3);
-		base.Controls.Add(textBox_1);
-		base.Controls.Add(class62_2);
-		base.Controls.Add(gcontrol0_0);
-		base.Controls.Add(class66_0);
-		base.Controls.Add(class66_1);
-		base.Controls.Add(textBox_0);
-		base.Controls.Add(label_0);
-		base.Controls.Add(class62_1);
-		base.Controls.Add(class62_0);
-		base.Controls.Add(pictureBox_0);
+		base.Controls.Add(mlnkPaste);
+		base.Controls.Add(mlnkCopy);
+		base.Controls.Add(label4);
+		base.Controls.Add(label3);
+		base.Controls.Add(medActivationResponse);
+		base.Controls.Add(mlnkContactUs);
+		base.Controls.Add(label1);
+		base.Controls.Add(medActivationRequest);
+		base.Controls.Add(label2);
+		base.Controls.Add(separatorLine1);
+		base.Controls.Add(mbtnActivate);
+		base.Controls.Add(mbtnCancel);
+		base.Controls.Add(medActivationKey);
+		base.Controls.Add(mlblActivationKey);
+		base.Controls.Add(lblCaption);
+		base.Controls.Add(mlblSubCaption);
+		base.Controls.Add(pictureBox1);
 		Font = new Font("Microsoft Sans Serif", 9.75f);
 		base.Margin = new Padding(4);
 		base.Name = "LicenseActivatationOfflineDialog";
 		base.StartPosition = FormStartPosition.Manual;
 		Text = "Offline Activation";
-		((ISupportInitialize)pictureBox_0).EndInit();
+		((ISupportInitialize)pictureBox1).EndInit();
 		ResumeLayout(performLayout: false);
 		PerformLayout();
 	}
 
-	private void textBox_0_TextChanged(object sender, EventArgs e)
+	private void medActivationKey_TextChanged(object sender, EventArgs e)
 	{
-		GClass31 gClass = new GClass31(GClass32.Get(textBox_0.Text), null, null, string_0, "10.2.1", 5250827023818041824L);
-		textBox_1.Text = gClass.Serialize(3);
+		GClass31 gClass = new GClass31(GClass32.Get(medActivationKey.Text), null, null, string_0, "10.2.1", 5250827023818041824L);
+		medActivationRequest.Text = gClass.Serialize(3);
 	}
 
-	private void gclass3_1_Click(object sender, EventArgs e)
+	private void mlnkCopy_Click(object sender, EventArgs e)
 	{
-		if (!string.IsNullOrEmpty(textBox_1.Text))
+		if (!string.IsNullOrEmpty(medActivationRequest.Text))
 		{
-			Class77.smethod_0(textBox_1.Text);
+			Class77.smethod_0(medActivationRequest.Text);
 		}
-		textBox_1.SelectAll();
+		medActivationRequest.SelectAll();
 	}
 
-	private void textBox_2_TextChanged(object sender, EventArgs e)
+	private void medActivationResponse_TextChanged(object sender, EventArgs e)
 	{
-		class66_0.Enabled = !string.IsNullOrEmpty(textBox_2.Text);
+		mbtnActivate.Enabled = !string.IsNullOrEmpty(medActivationResponse.Text);
 	}
 
-	private void gclass3_2_Click(object sender, EventArgs e)
+	private void mlnkPaste_Click(object sender, EventArgs e)
 	{
-		textBox_2.Text = Class77.smethod_1();
+		medActivationResponse.Text = Class77.smethod_1();
 	}
 
-	private void gclass3_0_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+	private void mlnkContactUs_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
 	{
-		method_9(Class148.String_1);
+		ShowOnlineHelp(Class148.String_1);
 	}
 
-	private void class66_0_Click(object sender, EventArgs e)
+	private void mbtnActivate_Click(object sender, EventArgs e)
 	{
 		GClass31 gClass = null;
 		try
 		{
-			gClass = GClass31.smethod_0(textBox_2.Text, 3);
+			gClass = GClass31.smethod_0(medActivationResponse.Text, 3);
 		}
 		catch
 		{
@@ -399,8 +399,8 @@ internal sealed class LicenseActivatationOfflineDialog : Form0
 		}
 	}
 
-	private void class66_1_Click(object sender, EventArgs e)
+	private void mbtnCancel_Click(object sender, EventArgs e)
 	{
-		method_8(DialogResult.Cancel);
+		CloseDialog(DialogResult.Cancel);
 	}
 }

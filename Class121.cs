@@ -11,7 +11,7 @@ internal sealed class Class121 : Class113
 
 	public override ushort[] UInt16_1 => new ushort[1] { 110 };
 
-	public override void vmethod_0(Dictionary<string, object> dictionary_0)
+	public override void OnFormClosing(Dictionary<string, object> dictionary_0)
 	{
 		dictionary_0.Add(string_10, (int)genum10_0);
 	}
@@ -22,7 +22,7 @@ internal sealed class Class121 : Class113
 		genum10_0 = (GEnum10)(int)_jo[string_10];
 	}
 
-	public string vmethod_2()
+	public string AdjustFormSize()
 	{
 		return Class194.Class194_0[genum10_0];
 	}

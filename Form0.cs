@@ -288,7 +288,7 @@ internal class Form0 : Form
 		Show();
 	}
 
-	protected virtual void vmethod_0()
+	protected virtual void OnFormClosing()
 	{
 	}
 
@@ -355,7 +355,7 @@ internal class Form0 : Form
 		{
 			if ((0 | (method_3(this, "btnCancel") ? 1 : 0) | (method_3(this, "m_btnCancel") ? 1 : 0) | (method_3(this, "btnClose") ? 1 : 0) | (method_3(this, "m_btnClose") ? 1 : 0)) == 0 && !(this is DashboardDialog))
 			{
-				method_8(DialogResult.Cancel);
+				CloseDialog(DialogResult.Cancel);
 			}
 		}
 		else if (Keys.F1 == e.KeyCode)
@@ -437,7 +437,7 @@ internal class Form0 : Form
 		return new Size((int)((float)size_0.Width * num), (int)((float)size_0.Height * num));
 	}
 
-	public virtual void vmethod_1(bool bool_0 = false)
+	public virtual void InitializeFormPosition(bool bool_0 = false)
 	{
 		if (base.StartPosition != FormStartPosition.Manual)
 		{
@@ -500,10 +500,10 @@ internal class Form0 : Form
 			base.Height = int32_2;
 		}
 		base.WindowState = ((flag ? true : false) ? FormWindowState.Maximized : FormWindowState.Normal);
-		vmethod_2();
+		AdjustFormSize();
 	}
 
-	public virtual void vmethod_2()
+	public virtual void AdjustFormSize()
 	{
 		IEnumerator enumerator = base.Controls.GetEnumerator();
 		try
@@ -735,13 +735,13 @@ internal class Form0 : Form
 		}
 	}
 
-	protected void method_8(DialogResult dialogResult_0)
+	protected void CloseDialog(DialogResult dialogResult_0)
 	{
 		base.DialogResult = dialogResult_0;
 		Close();
 	}
 
-	protected void method_9(string string_0)
+	protected void ShowOnlineHelp(string string_0)
 	{
 		Help.ShowHelp(this, string_0);
 	}
@@ -749,7 +749,7 @@ internal class Form0 : Form
 	private void Form0_Shown(object sender, EventArgs e)
 	{
 		method_5(base.Controls);
-		smethod_3(this, method_10, vmethod_0);
+		smethod_3(this, method_10, OnFormClosing);
 		method_2(this);
 		smethod_0(this);
 		smethod_1(this);

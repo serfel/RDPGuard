@@ -22,28 +22,28 @@ internal class Control4 : Control2
 		}
 	}
 
-	protected override void vmethod_0()
+	protected override void OnFormClosing()
 	{
 	}
 
-	protected override void vmethod_1()
+	protected override void InitializeFormPosition()
 	{
 	}
 
-	protected override void vmethod_2()
+	protected override void AdjustFormSize()
 	{
 	}
 
-	public virtual void vmethod_3(GEnum2 genum2_0)
+	public virtual void UpdateTaskType(GEnum2 genum2_0)
 	{
 	}
 
-	public virtual bool vmethod_4()
+	public virtual bool ValidateInput()
 	{
 		return true;
 	}
 
-	public virtual void vmethod_5(bool bool_1)
+	public virtual void SetEditMode(bool bool_1)
 	{
 	}
 }

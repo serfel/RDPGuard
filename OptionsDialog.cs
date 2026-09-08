@@ -38,147 +38,147 @@ internal sealed class OptionsDialog : Form0
 
 	private IContainer icontainer_0;
 
-	private Control14 control14_0;
+	private Control14 tabControl1;
 
-	private TabPage tabPage_0;
+	private TabPage mtabGeneral;
 
-	private TabPage tabPage_1;
+	private TabPage mtabInterface;
 
-	private Class66 class66_0;
+	private Class66 mbtnSave;
 
-	private Class66 class66_1;
+	private Class66 mbtnCancel;
 
-	private Class61 class61_0;
+	private Class61 mchbCheckForSoftwareUpdates;
 
-	private Class62 class62_0;
+	private Class62 mchbCheckForSoftwareUpdatesHint;
 
-	private Class62 class62_1;
+	private Class62 mchbMinimizeToSystemTrayTip;
 
-	private Class62 class62_2;
+	private Class62 mlblShowSystrayIconTip;
 
-	private Class61 class61_1;
+	private Class61 mchbAllwaysShowSystemTrayIcon;
 
-	private Class61 class61_2;
+	private Class61 mchbMinimizeToSystemTray;
 
-	private TabPage tabPage_2;
+	private TabPage mtabLogging;
 
-	private Class63 class63_0;
+	private Class63 mlblMaxFailedLogonAttemptsHint;
 
-	private NumericUpDown numericUpDown_0;
+	private NumericUpDown mnumMaxFailedLogonAttempts;
 
-	private Class62 class62_3;
+	private Class62 mlblMaxFailedLogonAttempts;
 
-	private Class62 class62_4;
+	private Class62 mlblAutoUnban;
 
-	private NumericUpDown numericUpDown_1;
+	private NumericUpDown mnumAutoUnbanPeriod;
 
-	private Class63 class63_1;
+	private Class63 mlblAutoUnbanHint;
 
-	private NumericUpDown numericUpDown_2;
+	private NumericUpDown mnumResetCountersAfter;
 
-	private Class62 class62_5;
+	private Class62 mlblResetCountersAfter;
 
-	private Class63 class63_2;
+	private Class63 mlblResetCountersAfterHint;
 
-	private Class62 class62_6;
+	private Class62 label16;
 
-	private Class61 class61_3;
+	private Class61 chbHideWhenMimimized;
 
-	private TabPage tabPage_3;
+	private TabPage mtabConnection;
 
-	private Class65 class65_0;
+	private Class65 mgbProxySettings;
 
-	private Class0 class0_0;
+	private Class0 mcbProxyMode;
 
-	private NumericUpDown numericUpDown_3;
+	private NumericUpDown mnumProxyPort;
 
-	private TextBox textBox_0;
+	private TextBox medProxyDomain;
 
-	private Class62 class62_7;
+	private Class62 mlblProxyDomain;
 
-	private Class61 class61_4;
+	private Class61 mchbProxyAuthentication;
 
-	private TextBox textBox_1;
+	private TextBox medProxyPassword;
 
-	private Class62 class62_8;
+	private Class62 mlblProxyPassword;
 
-	private TextBox textBox_2;
+	private TextBox medProxyUsername;
 
-	private Class62 class62_9;
+	private Class62 mlblProxyUserName;
 
-	private Class62 class62_10;
+	private Class62 mlblProxyPort;
 
-	private TextBox textBox_3;
+	private TextBox medProxyAddress;
 
-	private Class62 class62_11;
+	private Class62 mlblProxyAddress;
 
-	private GClass3 gclass3_0;
+	private GClass3 mlnkAdvancedBlockingSettings;
 
-	private Class62 class62_12;
+	private Class62 mchbCloseToSystemTrayTip;
 
-	private Class61 class61_5;
+	private Class61 mchbCloseToSystemTray;
 
-	private NumericUpDown numericUpDown_4;
+	private NumericUpDown mnumIPPageSize;
 
-	private Class62 class62_13;
+	private Class62 mlblIPPageSize;
 
-	private Class63 class63_3;
+	private Class63 mlblIPPageSizeHint;
 
-	private TabPage tabPage_4;
+	private TabPage mtabGeoIP;
 
-	private TabPage tabPage_5;
+	private TabPage mtabCloud;
 
-	private Class63 class63_4;
+	private Class63 mlblEnableGeoIPEngineHint;
 
-	private Class61 class61_6;
+	private Class61 mchbEnableGeoIPEngine;
 
-	private Class61 class61_7;
+	private Class61 mchbEnableIPCloud;
 
-	private EditableGeoIPCountriesTable control0_0;
+	private EditableGeoIPCountriesTable mlstGeoIPCountries;
 
-	private Class65 class65_1;
+	private Class65 mgbGeoIPMode;
 
-	private Class64 class64_0;
+	private Class64 mrbGeoIPModeAllow;
 
-	private Class64 class64_1;
+	private Class64 mrbGeoIPModeDeny;
 
-	private GClass2 gclass2_0;
+	private GClass2 medEnableIPCloudHint;
 
-	private Class62 class62_14;
+	private Class62 mlblColorTheme;
 
-	private Class63 class63_5;
+	private Class63 mlblColorThemeHint;
 
-	private Class0 class0_1;
+	private Class0 mcbColorTheme;
 
-	private Class62 class62_15;
+	private Class62 mlblGeoIPWarning;
 
-	private GClass3 gclass3_1;
+	private GClass3 mlnkGeoIPHelp;
 
-	private Class65 class65_2;
+	private Class65 mgbLogging;
 
-	private Class61 class61_8;
+	private Class61 mchbLogSaveToFile;
 
-	private Class63 class63_6;
+	private Class63 mlblLogSaveToFileHint;
 
-	private GClass3 gclass3_2;
+	private GClass3 mlnkLogsView;
 
-	private Class61 class61_9;
+	private Class61 mchbLogRemoveOld;
 
-	private NumericUpDown numericUpDown_5;
+	private NumericUpDown mnumLogRemoveOldLogsDays;
 
-	private Class63 class63_7;
+	private Class63 mlblLogRemoveOldHint;
 
-	private Class62 class62_16;
+	private Class62 mlblLogVerbosityLevel;
 
-	private Class0 class0_2;
+	private Class0 mcbLogVerbosityLevel;
 
-	private Class63 class63_8;
+	private Class63 mlblLogVerbosityLevelHint;
 
-	private GClass3 gclass3_3;
+	private GClass3 mlnkLogSuccessfulLoginAttemptsConfiguration;
 
-	private Class63 class63_9;
+	private Class63 mchbLogSuccessfulLoginAttemptsHint;
 
-	private Class61 class61_10;
+	private Class61 mchbLogSuccessfulLoginAttempts;
 
 	private GClass8 GClass8_0
 	{
@@ -186,21 +186,21 @@ internal sealed class OptionsDialog : Form0
 		{
 			return new GClass8
 			{
-				genum17_0 = GClass18.GClass18_0[class0_2.Text],
-				bool_0 = class61_8.Checked,
-				bool_1 = class61_9.Checked,
-				int_0 = (int)numericUpDown_5.Value,
-				bool_2 = class61_10.Checked,
+				genum17_0 = GClass18.GClass18_0[mcbLogVerbosityLevel.Text],
+				bool_0 = mchbLogSaveToFile.Checked,
+				bool_1 = mchbLogRemoveOld.Checked,
+				int_0 = (int)mnumLogRemoveOldLogsDays.Value,
+				bool_2 = mchbLogSuccessfulLoginAttempts.Checked,
 				string_0 = string_0
 			};
 		}
 		set
 		{
-			class0_2.Text = GClass18.GClass18_0[value.genum17_0];
-			class61_8.Checked = value.bool_0;
-			class61_9.Checked = value.bool_1;
-			numericUpDown_5.Value = value.int_0;
-			class61_10.Checked = value.bool_2;
+			mcbLogVerbosityLevel.Text = GClass18.GClass18_0[value.genum17_0];
+			mchbLogSaveToFile.Checked = value.bool_0;
+			mchbLogRemoveOld.Checked = value.bool_1;
+			mnumLogRemoveOldLogsDays.Value = value.int_0;
+			mchbLogSuccessfulLoginAttempts.Checked = value.bool_2;
 			string_0 = value.string_0;
 		}
 	}
@@ -211,24 +211,24 @@ internal sealed class OptionsDialog : Form0
 		{
 			return new Class159
 			{
-				genum13_0 = (GEnum13)class0_0.SelectedIndex,
-				string_0 = textBox_3.Text,
-				int_0 = (int)numericUpDown_3.Value,
-				bool_0 = class61_4.Checked,
-				string_1 = textBox_2.Text,
-				string_2 = textBox_1.Text,
-				string_3 = textBox_0.Text
+				genum13_0 = (GEnum13)mcbProxyMode.SelectedIndex,
+				string_0 = medProxyAddress.Text,
+				int_0 = (int)mnumProxyPort.Value,
+				bool_0 = mchbProxyAuthentication.Checked,
+				string_1 = medProxyUsername.Text,
+				string_2 = medProxyPassword.Text,
+				string_3 = medProxyDomain.Text
 			};
 		}
 		set
 		{
-			class0_0.SelectedIndex = (int)value.genum13_0;
-			textBox_3.Text = value.string_0;
-			numericUpDown_3.Value = value.int_0;
-			class61_4.Checked = value.bool_0;
-			textBox_2.Text = value.string_1;
-			textBox_1.Text = value.string_2;
-			textBox_0.Text = value.string_3;
+			mcbProxyMode.SelectedIndex = (int)value.genum13_0;
+			medProxyAddress.Text = value.string_0;
+			mnumProxyPort.Value = value.int_0;
+			mchbProxyAuthentication.Checked = value.bool_0;
+			medProxyUsername.Text = value.string_1;
+			medProxyPassword.Text = value.string_2;
+			medProxyDomain.Text = value.string_3;
 		}
 	}
 
@@ -236,11 +236,11 @@ internal sealed class OptionsDialog : Form0
 	{
 		get
 		{
-			if (class64_1.Checked)
+			if (mrbGeoIPModeDeny.Checked)
 			{
 				return GeoIPMode.Deny;
 			}
-			if (class64_0.Checked)
+			if (mrbGeoIPModeAllow.Checked)
 			{
 				return GeoIPMode.Allow;
 			}
@@ -251,11 +251,11 @@ internal sealed class OptionsDialog : Form0
 		{
 			if (value == GeoIPMode.Deny)
 			{
-				class64_1.Checked = true;
+				mrbGeoIPModeDeny.Checked = true;
 			}
 			else if (GeoIPMode.Allow == value)
 			{
-				class64_0.Checked = true;
+				mrbGeoIPModeAllow.Checked = true;
 			}
 			else
 			{
@@ -270,56 +270,56 @@ internal sealed class OptionsDialog : Form0
 		{
 			return new Class132
 			{
-				bool_0 = class61_6.Checked,
+				bool_0 = mchbEnableGeoIPEngine.Checked,
 				geoIPMode_0 = GeoIPMode_0,
-				geoIPDBVersion_0 = control0_0.geoIPDBVersion_0,
-				bool_1 = control0_0.Boolean_0,
+				geoIPDBVersion_0 = mlstGeoIPCountries.geoIPDBVersion_0,
+				bool_1 = mlstGeoIPCountries.Boolean_0,
 				bool_2 = false,
-				gclass5_0 = control0_0.GClass5_0,
-				iplistEntry_0 = control0_0.IPListEntry_0,
-				gclass7_0 = control0_0.gclass7_0,
-				gclass7_1 = control0_0.gclass7_1,
-				gclass7_2 = control0_0.gclass7_2,
-				bool_3 = control0_0.bool_0,
-				bool_4 = control0_0.bool_1,
-				bool_5 = control0_0.bool_2,
-				bool_6 = control0_0.bool_3
+				gclass5_0 = mlstGeoIPCountries.GClass5_0,
+				iplistEntry_0 = mlstGeoIPCountries.IPListEntry_0,
+				gclass7_0 = mlstGeoIPCountries.gclass7_0,
+				gclass7_1 = mlstGeoIPCountries.gclass7_1,
+				gclass7_2 = mlstGeoIPCountries.gclass7_2,
+				bool_3 = mlstGeoIPCountries.bool_0,
+				bool_4 = mlstGeoIPCountries.bool_1,
+				bool_5 = mlstGeoIPCountries.bool_2,
+				bool_6 = mlstGeoIPCountries.bool_3
 			};
 		}
 		set
 		{
-			class61_6.Checked = value.bool_0;
-			control0_0.geoIPDBVersion_0 = value.geoIPDBVersion_0;
+			mchbEnableGeoIPEngine.Checked = value.bool_0;
+			mlstGeoIPCountries.geoIPDBVersion_0 = value.geoIPDBVersion_0;
 			GeoIPMode_0 = value.geoIPMode_0;
-			control0_0.Boolean_0 = value.bool_1;
-			control0_0.GClass5_0 = value.gclass5_0;
-			control0_0.IPListEntry_0 = value.iplistEntry_0;
-			control0_0.gclass7_0 = value.gclass7_0;
-			control0_0.gclass7_1 = value.gclass7_1;
-			control0_0.gclass7_2 = value.gclass7_2;
-			control0_0.bool_0 = value.bool_3;
-			control0_0.bool_1 = value.bool_4;
-			control0_0.bool_2 = value.bool_5;
-			control0_0.bool_3 = value.bool_6;
+			mlstGeoIPCountries.Boolean_0 = value.bool_1;
+			mlstGeoIPCountries.GClass5_0 = value.gclass5_0;
+			mlstGeoIPCountries.IPListEntry_0 = value.iplistEntry_0;
+			mlstGeoIPCountries.gclass7_0 = value.gclass7_0;
+			mlstGeoIPCountries.gclass7_1 = value.gclass7_1;
+			mlstGeoIPCountries.gclass7_2 = value.gclass7_2;
+			mlstGeoIPCountries.bool_0 = value.bool_3;
+			mlstGeoIPCountries.bool_1 = value.bool_4;
+			mlstGeoIPCountries.bool_2 = value.bool_5;
+			mlstGeoIPCountries.bool_3 = value.bool_6;
 		}
 	}
 
-	protected override Button Button_0 => class66_0;
+	protected override Button Button_0 => mbtnSave;
 
 	public OptionsDialog(Class164 class164_1)
 		: base(new Size(640, 600))
 	{
 		OnCheckedChanged();
-		vmethod_1();
-		InitializeComponents();
+		InitializeFormPosition();
+		InitializeComponent();
 		OnButtonOk();
 		class164_0 = class164_1;
 		OnButtonCancel();
 	}
 
-	private void InitializeComponents()
+	private void InitializeComponent()
 	{
-		control14_0.ImageList = new ImageList
+		tabControl1.ImageList = new ImageList
 		{
 			ImageSize = new Size(24, 24),
 			TransparentColor = Color.Transparent,
@@ -334,124 +334,124 @@ internal sealed class OptionsDialog : Form0
 				(Image)Resources.docs_24
 			}
 		};
-		gclass2_0.BackColor = tabPage_5.BackColor;
-		ComboBox.ObjectCollection items = class0_2.Items;
+		medEnableIPCloudHint.BackColor = mtabCloud.BackColor;
+		ComboBox.ObjectCollection items = mcbLogVerbosityLevel.Items;
 		object[] prop_ = GClass18.GClass18_0.Prop_1;
 		object[] items2 = prop_;
 		items.AddRange(items2);
-		gclass3_2.Left = class63_6.Right;
-		gclass3_3.Left = class61_10.Right;
+		mlnkLogsView.Left = mlblLogSaveToFileHint.Right;
+		mlnkLogSuccessfulLoginAttemptsConfiguration.Left = mchbLogSuccessfulLoginAttempts.Right;
 	}
 
 	private void OnButtonOk()
 	{
-		gclass3_0.Click += gclass3_0_Click;
-		class0_0.SelectedIndexChanged += class0_0_SelectedIndexChanged;
-		class61_4.Click += class61_4_Click;
-		GClass3 gClass = gclass3_2;
+		mlnkAdvancedBlockingSettings.Click += mlnkAdvancedBlockingSettings_Click;
+		mcbProxyMode.SelectedIndexChanged += class0_0_SelectedIndexChanged;
+		mchbProxyAuthentication.Click += mchbProxyAuthentication_Click;
+		GClass3 gClass = mlnkLogsView;
 		EventHandler value = _003C_003Ec._003C_003E9.method_0;
 		gClass.Click += value;
-		class61_9.Click += class61_9_Click;
-		gclass3_3.Click += gclass3_3_Click;
-		class61_6.CheckedChanged += class61_6_CheckedChanged;
-		class64_1.CheckedChanged += class64_1_CheckedChanged;
-		class64_0.CheckedChanged += class64_0_CheckedChanged;
-		control0_0.Event_0 += OnSelectedIndexChanged;
-		gclass3_1.Click += gclass3_1_Click;
-		control14_0.SelectedIndexChanged += control14_0_SelectedIndexChanged;
-		class66_0.Click += class66_0_Click;
-		class66_1.Click += class66_1_Click;
+		mchbLogRemoveOld.Click += mchbLogRemoveOld_Click;
+		mlnkLogSuccessfulLoginAttemptsConfiguration.Click += mlnkLogSuccessfulLoginAttemptsConfiguration_Click;
+		mchbEnableGeoIPEngine.CheckedChanged += mchbEnableGeoIPEngine_CheckedChanged;
+		mrbGeoIPModeDeny.CheckedChanged += mrbGeoIPModeDeny_CheckedChanged;
+		mrbGeoIPModeAllow.CheckedChanged += mrbGeoIPModeAllow_CheckedChanged;
+		mlstGeoIPCountries.Event_0 += OnSelectedIndexChanged;
+		mlnkGeoIPHelp.Click += mlnkGeoIPHelp_Click;
+		tabControl1.SelectedIndexChanged += control14_0_SelectedIndexChanged;
+		mbtnSave.Click += mbtnSave_Click;
+		mbtnCancel.Click += mbtnCancel_Click;
 	}
 
 	private void OnButtonCancel()
 	{
-		class61_0.Checked = class164_0.class166_1.Boolean_0;
-		numericUpDown_0.Value = class164_0.class166_2.Int32_0;
-		numericUpDown_2.Value = class164_0.class166_4.Int32_0;
-		numericUpDown_1.Value = class164_0.class166_3.Int32_0;
+		mchbCheckForSoftwareUpdates.Checked = class164_0.class166_1.Boolean_0;
+		mnumMaxFailedLogonAttempts.Value = class164_0.class166_2.Int32_0;
+		mnumResetCountersAfter.Value = class164_0.class166_4.Int32_0;
+		mnumAutoUnbanPeriod.Value = class164_0.class166_3.Int32_0;
 		Class159_0 = class164_0.Class159_0;
 		SaveSettings();
 		GClass8_0 = class164_0.GClass8_0;
 		ValidateInput();
-		class61_7.Checked = class164_0.class166_19.Boolean_0;
+		mchbEnableIPCloud.Checked = class164_0.class166_19.Boolean_0;
 		Class132_0 = class164_0.Class132_0;
-		class61_1.Checked = Class163.Class163_0.class166_2.Boolean_0;
-		class61_2.Checked = Class163.Class163_0.class166_3.Boolean_0;
-		class61_5.Checked = Class163.Class163_0.class166_4.Boolean_0;
-		numericUpDown_4.Value = Class163.Class163_0.class166_7.Int32_0;
-		ComboBox.ObjectCollection items = class0_1.Items;
+		mchbAllwaysShowSystemTrayIcon.Checked = Class163.Class163_0.class166_2.Boolean_0;
+		mchbMinimizeToSystemTray.Checked = Class163.Class163_0.class166_3.Boolean_0;
+		mchbCloseToSystemTray.Checked = Class163.Class163_0.class166_4.Boolean_0;
+		mnumIPPageSize.Value = Class163.Class163_0.class166_7.Int32_0;
+		ComboBox.ObjectCollection items = mcbColorTheme.Items;
 		object[] prop_ = Class184.Class184_0.Prop_1;
 		object[] items2 = prop_;
 		items.AddRange(items2);
-		class0_1.Text = Class184.Class184_0[Class163.Class163_0.Int32_0];
+		mcbColorTheme.Text = Class184.Class184_0[Class163.Class163_0.Int32_0];
 	}
 
 	private void OnLoad()
 	{
-		class164_0.class166_1.Boolean_0 = class61_0.Checked;
-		class164_0.class166_2.Int32_0 = (int)numericUpDown_0.Value;
-		class164_0.class166_4.Int32_0 = (int)numericUpDown_2.Value;
+		class164_0.class166_1.Boolean_0 = mchbCheckForSoftwareUpdates.Checked;
+		class164_0.class166_2.Int32_0 = (int)mnumMaxFailedLogonAttempts.Value;
+		class164_0.class166_4.Int32_0 = (int)mnumResetCountersAfter.Value;
 		class164_0.Class159_0 = Class159_0;
-		class164_0.class166_3.Int32_0 = (int)numericUpDown_1.Value;
+		class164_0.class166_3.Int32_0 = (int)mnumAutoUnbanPeriod.Value;
 		class164_0.GClass8_0 = GClass8_0;
-		class164_0.class166_19.Boolean_0 = class61_7.Checked;
+		class164_0.class166_19.Boolean_0 = mchbEnableIPCloud.Checked;
 		class164_0.Class132_0 = Class132_0;
-		Class163.Class163_0.class166_2.Boolean_0 = class61_1.Checked;
-		Class163.Class163_0.class166_3.Boolean_0 = class61_2.Checked;
-		Class163.Class163_0.class166_4.Boolean_0 = class61_5.Checked;
-		Class163.Class163_0.class166_7.Int32_0 = (int)numericUpDown_4.Value;
-		Class163.Class163_0.Int32_0 = Class184.Class184_0[class0_1.Text];
+		Class163.Class163_0.class166_2.Boolean_0 = mchbAllwaysShowSystemTrayIcon.Checked;
+		Class163.Class163_0.class166_3.Boolean_0 = mchbMinimizeToSystemTray.Checked;
+		Class163.Class163_0.class166_4.Boolean_0 = mchbCloseToSystemTray.Checked;
+		Class163.Class163_0.class166_7.Int32_0 = (int)mnumIPPageSize.Value;
+		Class163.Class163_0.Int32_0 = Class184.Class184_0[mcbColorTheme.Text];
 		Class163.Class163_0.method_3();
 	}
 
 	private void ValidateInput()
 	{
-		numericUpDown_5.Enabled = class61_9.Checked;
-		class63_7.Enabled = class61_9.Checked;
+		mnumLogRemoveOldLogsDays.Enabled = mchbLogRemoveOld.Checked;
+		mlblLogRemoveOldHint.Enabled = mchbLogRemoveOld.Checked;
 	}
 
 	private void SaveSettings()
 	{
-		bool flag = 2 == class0_0.SelectedIndex;
-		class62_11.Enabled = flag;
-		textBox_3.Enabled = flag;
-		class62_10.Enabled = flag;
-		numericUpDown_3.Enabled = flag;
-		class61_4.Enabled = flag;
-		bool enabled = class61_4.Checked && flag;
-		class62_9.Enabled = enabled;
-		textBox_2.Enabled = enabled;
-		class62_8.Enabled = enabled;
-		textBox_1.Enabled = enabled;
-		class62_7.Enabled = enabled;
-		textBox_0.Enabled = enabled;
+		bool flag = 2 == mcbProxyMode.SelectedIndex;
+		mlblProxyAddress.Enabled = flag;
+		medProxyAddress.Enabled = flag;
+		mlblProxyPort.Enabled = flag;
+		mnumProxyPort.Enabled = flag;
+		mchbProxyAuthentication.Enabled = flag;
+		bool enabled = mchbProxyAuthentication.Checked && flag;
+		mlblProxyUserName.Enabled = enabled;
+		medProxyUsername.Enabled = enabled;
+		mlblProxyPassword.Enabled = enabled;
+		medProxyPassword.Enabled = enabled;
+		mlblProxyDomain.Enabled = enabled;
+		medProxyDomain.Enabled = enabled;
 	}
 
 	private void LoadSettings()
 	{
-		if (class64_0.Checked)
+		if (mrbGeoIPModeAllow.Checked)
 		{
-			gclass5_0 = control0_0.GClass5_0;
+			gclass5_0 = mlstGeoIPCountries.GClass5_0;
 		}
 		else
 		{
-			gclass5_1 = control0_0.GClass5_0;
+			gclass5_1 = mlstGeoIPCountries.GClass5_0;
 		}
-		control0_0.GClass5_0 = ((class64_0.Checked ? true : false) ? gclass5_1 : gclass5_0);
-		control0_0.GeoIPMode_0 = GeoIPMode_0;
+		mlstGeoIPCountries.GClass5_0 = ((mrbGeoIPModeAllow.Checked ? true : false) ? gclass5_1 : gclass5_0);
+		mlstGeoIPCountries.GeoIPMode_0 = GeoIPMode_0;
 		OnTextChanged();
 	}
 
 	private void OnTextChanged()
 	{
-		GClass5[] gClass5_ = control0_0.GClass5_0;
+		GClass5[] gClass5_ = mlstGeoIPCountries.GClass5_0;
 		Func<GClass5, long> selector = _003C_003Ec._003C_003E9.method_1;
-		bool visible = gClass5_.Select(selector).Sum() > 10000 && control14_0.SelectedTab == tabPage_4 && class61_6.Checked;
-		class62_15.Visible = visible;
-		gclass3_1.Visible = visible;
+		bool visible = gClass5_.Select(selector).Sum() > 10000 && tabControl1.SelectedTab == mtabGeoIP && mchbEnableGeoIPEngine.Checked;
+		mlblGeoIPWarning.Visible = visible;
+		mlnkGeoIPHelp.Visible = visible;
 	}
 
-	private static string smethod_4(string string_1)
+	private static string OnButtonOk(string string_1)
 	{
 		ProtocolRulesDialog form = new ProtocolRulesDialog
 		{
@@ -484,760 +484,760 @@ internal sealed class OptionsDialog : Form0
 
 	private void OnCheckedChanged()
 	{
-		control14_0 = new Control14();
-		tabPage_0 = new TabPage();
-		numericUpDown_2 = new NumericUpDown();
-		class62_5 = new Class62();
-		class63_2 = new Class63();
-		class62_4 = new Class62();
-		numericUpDown_1 = new NumericUpDown();
-		class63_1 = new Class63();
-		numericUpDown_0 = new NumericUpDown();
-		class62_3 = new Class62();
-		class63_0 = new Class63();
-		class62_0 = new Class62();
-		class61_0 = new Class61();
-		gclass3_0 = new GClass3();
-		tabPage_5 = new TabPage();
-		gclass2_0 = new GClass2();
-		class61_7 = new Class61();
-		tabPage_4 = new TabPage();
-		class65_1 = new Class65();
-		class64_0 = new Class64();
-		class64_1 = new Class64();
-		control0_0 = new EditableGeoIPCountriesTable();
-		class63_4 = new Class63();
-		class61_6 = new Class61();
-		tabPage_1 = new TabPage();
-		class63_5 = new Class63();
-		class0_1 = new Class0();
-		class62_14 = new Class62();
-		numericUpDown_4 = new NumericUpDown();
-		class62_13 = new Class62();
-		class63_3 = new Class63();
-		class62_12 = new Class62();
-		class61_5 = new Class61();
-		class62_1 = new Class62();
-		class62_2 = new Class62();
-		class61_1 = new Class61();
-		class61_2 = new Class61();
-		tabPage_3 = new TabPage();
-		class65_0 = new Class65();
-		textBox_0 = new TextBox();
-		class62_7 = new Class62();
-		class0_0 = new Class0();
-		numericUpDown_3 = new NumericUpDown();
-		class61_4 = new Class61();
-		textBox_1 = new TextBox();
-		class62_8 = new Class62();
-		textBox_2 = new TextBox();
-		class62_9 = new Class62();
-		class62_10 = new Class62();
-		textBox_3 = new TextBox();
-		class62_11 = new Class62();
-		tabPage_2 = new TabPage();
-		class65_2 = new Class65();
-		gclass3_3 = new GClass3();
-		class63_9 = new Class63();
-		class61_10 = new Class61();
-		numericUpDown_5 = new NumericUpDown();
-		class63_7 = new Class63();
-		class61_9 = new Class61();
-		class63_8 = new Class63();
-		class0_2 = new Class0();
-		gclass3_2 = new GClass3();
-		class62_16 = new Class62();
-		class63_6 = new Class63();
-		class61_8 = new Class61();
-		class66_0 = new Class66();
-		class66_1 = new Class66();
-		class62_6 = new Class62();
-		class61_3 = new Class61();
-		class62_15 = new Class62();
-		gclass3_1 = new GClass3();
-		control14_0.SuspendLayout();
-		tabPage_0.SuspendLayout();
-		((ISupportInitialize)numericUpDown_2).BeginInit();
-		((ISupportInitialize)numericUpDown_1).BeginInit();
-		((ISupportInitialize)numericUpDown_0).BeginInit();
-		tabPage_5.SuspendLayout();
-		tabPage_4.SuspendLayout();
-		class65_1.SuspendLayout();
-		tabPage_1.SuspendLayout();
-		((ISupportInitialize)numericUpDown_4).BeginInit();
-		tabPage_3.SuspendLayout();
-		class65_0.SuspendLayout();
-		((ISupportInitialize)numericUpDown_3).BeginInit();
-		tabPage_2.SuspendLayout();
-		class65_2.SuspendLayout();
-		((ISupportInitialize)numericUpDown_5).BeginInit();
+		tabControl1 = new Control14();
+		mtabGeneral = new TabPage();
+		mnumResetCountersAfter = new NumericUpDown();
+		mlblResetCountersAfter = new Class62();
+		mlblResetCountersAfterHint = new Class63();
+		mlblAutoUnban = new Class62();
+		mnumAutoUnbanPeriod = new NumericUpDown();
+		mlblAutoUnbanHint = new Class63();
+		mnumMaxFailedLogonAttempts = new NumericUpDown();
+		mlblMaxFailedLogonAttempts = new Class62();
+		mlblMaxFailedLogonAttemptsHint = new Class63();
+		mchbCheckForSoftwareUpdatesHint = new Class62();
+		mchbCheckForSoftwareUpdates = new Class61();
+		mlnkAdvancedBlockingSettings = new GClass3();
+		mtabCloud = new TabPage();
+		medEnableIPCloudHint = new GClass2();
+		mchbEnableIPCloud = new Class61();
+		mtabGeoIP = new TabPage();
+		mgbGeoIPMode = new Class65();
+		mrbGeoIPModeAllow = new Class64();
+		mrbGeoIPModeDeny = new Class64();
+		mlstGeoIPCountries = new EditableGeoIPCountriesTable();
+		mlblEnableGeoIPEngineHint = new Class63();
+		mchbEnableGeoIPEngine = new Class61();
+		mtabInterface = new TabPage();
+		mlblColorThemeHint = new Class63();
+		mcbColorTheme = new Class0();
+		mlblColorTheme = new Class62();
+		mnumIPPageSize = new NumericUpDown();
+		mlblIPPageSize = new Class62();
+		mlblIPPageSizeHint = new Class63();
+		mchbCloseToSystemTrayTip = new Class62();
+		mchbCloseToSystemTray = new Class61();
+		mchbMinimizeToSystemTrayTip = new Class62();
+		mlblShowSystrayIconTip = new Class62();
+		mchbAllwaysShowSystemTrayIcon = new Class61();
+		mchbMinimizeToSystemTray = new Class61();
+		mtabConnection = new TabPage();
+		mgbProxySettings = new Class65();
+		medProxyDomain = new TextBox();
+		mlblProxyDomain = new Class62();
+		mcbProxyMode = new Class0();
+		mnumProxyPort = new NumericUpDown();
+		mchbProxyAuthentication = new Class61();
+		medProxyPassword = new TextBox();
+		mlblProxyPassword = new Class62();
+		medProxyUsername = new TextBox();
+		mlblProxyUserName = new Class62();
+		mlblProxyPort = new Class62();
+		medProxyAddress = new TextBox();
+		mlblProxyAddress = new Class62();
+		mtabLogging = new TabPage();
+		mgbLogging = new Class65();
+		mlnkLogSuccessfulLoginAttemptsConfiguration = new GClass3();
+		mchbLogSuccessfulLoginAttemptsHint = new Class63();
+		mchbLogSuccessfulLoginAttempts = new Class61();
+		mnumLogRemoveOldLogsDays = new NumericUpDown();
+		mlblLogRemoveOldHint = new Class63();
+		mchbLogRemoveOld = new Class61();
+		mlblLogVerbosityLevelHint = new Class63();
+		mcbLogVerbosityLevel = new Class0();
+		mlnkLogsView = new GClass3();
+		mlblLogVerbosityLevel = new Class62();
+		mlblLogSaveToFileHint = new Class63();
+		mchbLogSaveToFile = new Class61();
+		mbtnSave = new Class66();
+		mbtnCancel = new Class66();
+		label16 = new Class62();
+		chbHideWhenMimimized = new Class61();
+		mlblGeoIPWarning = new Class62();
+		mlnkGeoIPHelp = new GClass3();
+		tabControl1.SuspendLayout();
+		mtabGeneral.SuspendLayout();
+		((ISupportInitialize)mnumResetCountersAfter).BeginInit();
+		((ISupportInitialize)mnumAutoUnbanPeriod).BeginInit();
+		((ISupportInitialize)mnumMaxFailedLogonAttempts).BeginInit();
+		mtabCloud.SuspendLayout();
+		mtabGeoIP.SuspendLayout();
+		mgbGeoIPMode.SuspendLayout();
+		mtabInterface.SuspendLayout();
+		((ISupportInitialize)mnumIPPageSize).BeginInit();
+		mtabConnection.SuspendLayout();
+		mgbProxySettings.SuspendLayout();
+		((ISupportInitialize)mnumProxyPort).BeginInit();
+		mtabLogging.SuspendLayout();
+		mgbLogging.SuspendLayout();
+		((ISupportInitialize)mnumLogRemoveOldLogsDays).BeginInit();
 		SuspendLayout();
-		control14_0.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-		control14_0.Controls.Add(tabPage_0);
-		control14_0.Controls.Add(tabPage_5);
-		control14_0.Controls.Add(tabPage_4);
-		control14_0.Controls.Add(tabPage_1);
-		control14_0.Controls.Add(tabPage_3);
-		control14_0.Controls.Add(tabPage_2);
-		control14_0.ImeMode = ImeMode.Disable;
-		control14_0.ItemSize = new Size(96, 36);
-		control14_0.Location = new Point(12, 12);
-		control14_0.Multiline = true;
-		control14_0.Name = "tabControl1";
-		control14_0.Padding = new Point(6, 6);
-		control14_0.SelectedIndex = 0;
-		control14_0.Size = new Size(600, 490);
-		control14_0.SizeMode = TabSizeMode.FillToRight;
-		control14_0.TabIndex = 0;
-		tabPage_0.Controls.Add(numericUpDown_2);
-		tabPage_0.Controls.Add(class62_5);
-		tabPage_0.Controls.Add(class63_2);
-		tabPage_0.Controls.Add(class62_4);
-		tabPage_0.Controls.Add(numericUpDown_1);
-		tabPage_0.Controls.Add(class63_1);
-		tabPage_0.Controls.Add(numericUpDown_0);
-		tabPage_0.Controls.Add(class62_3);
-		tabPage_0.Controls.Add(class63_0);
-		tabPage_0.Controls.Add(class62_0);
-		tabPage_0.Controls.Add(class61_0);
-		tabPage_0.Controls.Add(gclass3_0);
-		tabPage_0.ImageIndex = 0;
-		tabPage_0.Location = new Point(4, 40);
-		tabPage_0.Name = "m_tabGeneral";
-		tabPage_0.Padding = new Padding(3);
-		tabPage_0.Size = new Size(592, 446);
-		tabPage_0.TabIndex = 0;
-		tabPage_0.Text = "General";
-		tabPage_0.UseVisualStyleBackColor = true;
-		numericUpDown_2.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-		numericUpDown_2.Location = new Point(34, 184);
-		numericUpDown_2.Maximum = new decimal(new int[4] { 999, 0, 0, 0 });
-		numericUpDown_2.Minimum = new decimal(new int[4] { 1, 0, 0, 0 });
-		numericUpDown_2.Name = "m_numResetCountersAfter";
-		numericUpDown_2.Size = new Size(552, 22);
-		numericUpDown_2.TabIndex = 2;
-		numericUpDown_2.Value = new decimal(new int[4] { 1, 0, 0, 0 });
-		class62_5.AutoSize = true;
-		class62_5.Location = new Point(20, 163);
-		class62_5.Name = "m_lblResetCountersAfter";
-		class62_5.Size = new Size(314, 16);
-		class62_5.TabIndex = 31;
-		class62_5.Text = "Reset counters of failed logon attempts after (hours):";
-		class62_5.Boolean_0 = false;
-		class63_2.AutoSize = true;
-		class63_2.ForeColor = SystemColors.ControlDarkDark;
-		class63_2.Location = new Point(31, 209);
-		class63_2.Name = "m_lblResetCountersAfterHint";
-		class63_2.Size = new Size(508, 16);
-		class63_2.TabIndex = 30;
-		class63_2.Text = "Set the interval (in hours) after which the counters of failed logon attempts will be reset.";
-		class63_2.Boolean_0 = false;
-		class62_4.AutoSize = true;
-		class62_4.Location = new Point(20, 246);
-		class62_4.Name = "m_lblAutoUnban";
-		class62_4.Size = new Size(288, 16);
-		class62_4.TabIndex = 29;
-		class62_4.Text = "Unban IP addresses automatically after (hours):";
-		class62_4.Boolean_0 = false;
-		numericUpDown_1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-		numericUpDown_1.Location = new Point(34, 267);
-		numericUpDown_1.Maximum = new decimal(new int[4] { 8760, 0, 0, 0 });
-		numericUpDown_1.Minimum = new decimal(new int[4] { 1, 0, 0, 0 });
-		numericUpDown_1.Name = "m_numAutoUnbanPeriod";
-		numericUpDown_1.Size = new Size(552, 22);
-		numericUpDown_1.TabIndex = 3;
-		numericUpDown_1.Value = new decimal(new int[4] { 1, 0, 0, 0 });
-		class63_1.AutoSize = true;
-		class63_1.ForeColor = SystemColors.ControlDarkDark;
-		class63_1.Location = new Point(31, 292);
-		class63_1.Name = "m_lblAutoUnbanHint";
-		class63_1.Size = new Size(354, 16);
-		class63_1.TabIndex = 26;
-		class63_1.Text = "Specify how long should attacker's IP address be blocked.";
-		class63_1.Boolean_0 = false;
-		numericUpDown_0.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-		numericUpDown_0.Location = new Point(34, 101);
-		numericUpDown_0.Minimum = new decimal(new int[4] { 1, 0, 0, 0 });
-		numericUpDown_0.Name = "m_numMaxFailedLogonAttempts";
-		numericUpDown_0.Size = new Size(552, 22);
-		numericUpDown_0.TabIndex = 1;
-		numericUpDown_0.Value = new decimal(new int[4] { 1, 0, 0, 0 });
-		class62_3.AutoSize = true;
-		class62_3.Location = new Point(20, 80);
-		class62_3.Name = "m_lblMaxFailedLogonAttempts";
-		class62_3.Size = new Size(341, 16);
-		class62_3.TabIndex = 24;
-		class62_3.Text = "Maximum failed logon attempts from a single IP address:";
-		class62_3.Boolean_0 = false;
-		class63_0.AutoSize = true;
-		class63_0.ForeColor = SystemColors.ControlDarkDark;
-		class63_0.Location = new Point(31, 126);
-		class63_0.Name = "m_lblMaxFailedLogonAttemptsHint";
-		class63_0.Size = new Size(479, 16);
-		class63_0.TabIndex = 23;
-		class63_0.Text = "How many failed logon attempts should be received before banning IP address.";
-		class63_0.Boolean_0 = false;
-		class62_0.AutoSize = true;
-		class62_0.ForeColor = SystemColors.ControlDarkDark;
-		class62_0.Location = new Point(20, 43);
-		class62_0.Name = "m_chbCheckForSoftwareUpdatesHint";
-		class62_0.Size = new Size(452, 16);
-		class62_0.TabIndex = 21;
-		class62_0.Text = "RdpGuard will check for updates and notify you when new version available";
-		class62_0.Boolean_0 = false;
-		class61_0.AutoSize = true;
-		class61_0.Location = new Point(23, 20);
-		class61_0.Name = "m_chbCheckForSoftwareUpdates";
-		class61_0.Size = new Size(274, 20);
-		class61_0.TabIndex = 0;
-		class61_0.Text = "Automatically check for software updates  ";
-		class61_0.UseVisualStyleBackColor = true;
-		gclass3_0.AutoSize = true;
-		gclass3_0.LinkBehavior = LinkBehavior.NeverUnderline;
-		gclass3_0.LinkColor = Color.FromArgb(38, 135, 200);
-		gclass3_0.Location = new Point(20, 326);
-		gclass3_0.Name = "m_lnkAdvancedBlockingSettings";
-		gclass3_0.Size = new Size(177, 16);
-		gclass3_0.TabIndex = 7;
-		gclass3_0.TabStop = true;
-		gclass3_0.Text = "advanced blocking settings..";
-		gclass3_0.VisitedLinkColor = Color.FromArgb(38, 135, 200);
-		tabPage_5.Controls.Add(gclass2_0);
-		tabPage_5.Controls.Add(class61_7);
-		tabPage_5.ImageIndex = 1;
-		tabPage_5.Location = new Point(4, 40);
-		tabPage_5.Name = "m_tabCloud";
-		tabPage_5.Padding = new Padding(3);
-		tabPage_5.Size = new Size(592, 446);
-		tabPage_5.TabIndex = 8;
-		tabPage_5.Text = "IP Cloud";
-		tabPage_5.UseVisualStyleBackColor = true;
-		gclass2_0.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-		gclass2_0.BackColor = SystemColors.Control;
-		gclass2_0.BorderStyle = BorderStyle.None;
-		gclass2_0.Cursor = Cursors.Default;
-		gclass2_0.ForeColor = SystemColors.ControlDarkDark;
-		gclass2_0.Location = new Point(23, 46);
-		gclass2_0.Multiline = true;
-		gclass2_0.Name = "m_edEnableIPCloudHint";
-		gclass2_0.ReadOnly = true;
-		gclass2_0.Size = new Size(563, 52);
-		gclass2_0.TabIndex = 25;
-		gclass2_0.TabStop = false;
-		gclass2_0.Text = "Enable this option for preemptive blocking of IP addresses detected by other participants. Any attacks detected on your PC will also be reported to the cloud.";
-		gclass2_0.Boolean_0 = false;
-		class61_7.AutoSize = true;
-		class61_7.Location = new Point(23, 20);
-		class61_7.Name = "m_chbEnableIPCloud";
-		class61_7.Size = new Size(188, 20);
-		class61_7.TabIndex = 24;
-		class61_7.Text = "Enable RdpGuard IP Cloud";
-		class61_7.UseVisualStyleBackColor = true;
-		tabPage_4.Controls.Add(class65_1);
-		tabPage_4.Controls.Add(control0_0);
-		tabPage_4.Controls.Add(class63_4);
-		tabPage_4.Controls.Add(class61_6);
-		tabPage_4.ImageIndex = 2;
-		tabPage_4.Location = new Point(4, 40);
-		tabPage_4.Name = "m_tabGeoIP";
-		tabPage_4.Padding = new Padding(3);
-		tabPage_4.Size = new Size(592, 446);
-		tabPage_4.TabIndex = 7;
-		tabPage_4.Text = "GeoIP";
-		tabPage_4.UseVisualStyleBackColor = true;
-		class65_1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-		class65_1.Controls.Add(class64_0);
-		class65_1.Controls.Add(class64_1);
-		class65_1.Enabled = false;
-		class65_1.Location = new Point(9, 75);
-		class65_1.Name = "m_gbGeoIPMode";
-		class65_1.Size = new Size(576, 83);
-		class65_1.TabIndex = 28;
-		class65_1.TabStop = false;
-		class65_1.Text = "Geo-IP mode:";
-		class64_0.AutoSize = true;
-		class64_0.Location = new Point(17, 50);
-		class64_0.Name = "m_rbGeoIPModeAllow";
-		class64_0.Size = new Size(363, 20);
-		class64_0.TabIndex = 2;
-		class64_0.TabStop = true;
-		class64_0.Text = "Allow specific countries (all other countries will be denied)";
-		class64_0.UseVisualStyleBackColor = true;
-		class64_1.AutoSize = true;
-		class64_1.Location = new Point(17, 24);
-		class64_1.Name = "m_rbGeoIPModeDeny";
-		class64_1.Size = new Size(379, 20);
-		class64_1.TabIndex = 1;
-		class64_1.TabStop = true;
-		class64_1.Text = "Deny specific countries (all other countries will have access)";
-		class64_1.UseVisualStyleBackColor = true;
-		control0_0.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-		control0_0.GClass5_0 = new GClass5[0];
-		control0_0.IPListEntry_0 = new IPListEntry[0];
-		control0_0.Boolean_0 = false;
-		control0_0.Enabled = false;
-		control0_0.Font = new Font("Microsoft Sans Serif", 9.75f, FontStyle.Regular, GraphicsUnit.Point, 204);
-		control0_0.Location = new Point(9, 165);
-		control0_0.Margin = new Padding(4);
-		control0_0.Name = "m_lstGeoIPCountries";
-		control0_0.Size = new Size(576, 274);
-		control0_0.TabIndex = 25;
-		class63_4.AutoSize = true;
-		class63_4.ForeColor = SystemColors.ControlDarkDark;
-		class63_4.Location = new Point(20, 43);
-		class63_4.Name = "m_lblEnableGeoIPEngineHint";
-		class63_4.Size = new Size(359, 16);
-		class63_4.TabIndex = 23;
-		class63_4.Text = "Block or allow access to your server from specific countries.";
-		class63_4.Boolean_0 = false;
-		class61_6.AutoSize = true;
-		class61_6.Location = new Point(23, 20);
-		class61_6.Name = "m_chbEnableGeoIPEngine";
-		class61_6.Size = new Size(114, 20);
-		class61_6.TabIndex = 22;
-		class61_6.Text = "Enable Geo-IP";
-		class61_6.UseVisualStyleBackColor = true;
-		tabPage_1.Controls.Add(class63_5);
-		tabPage_1.Controls.Add(class0_1);
-		tabPage_1.Controls.Add(class62_14);
-		tabPage_1.Controls.Add(numericUpDown_4);
-		tabPage_1.Controls.Add(class62_13);
-		tabPage_1.Controls.Add(class63_3);
-		tabPage_1.Controls.Add(class62_12);
-		tabPage_1.Controls.Add(class61_5);
-		tabPage_1.Controls.Add(class62_1);
-		tabPage_1.Controls.Add(class62_2);
-		tabPage_1.Controls.Add(class61_1);
-		tabPage_1.Controls.Add(class61_2);
-		tabPage_1.ImageIndex = 3;
-		tabPage_1.Location = new Point(4, 40);
-		tabPage_1.Name = "m_tabInterface";
-		tabPage_1.Padding = new Padding(3);
-		tabPage_1.Size = new Size(592, 446);
-		tabPage_1.TabIndex = 2;
-		tabPage_1.Text = "Interface";
-		tabPage_1.UseVisualStyleBackColor = true;
-		class63_5.AutoSize = true;
-		class63_5.ForeColor = SystemColors.ControlDarkDark;
-		class63_5.Location = new Point(29, 311);
-		class63_5.Name = "m_lblColorThemeHint";
-		class63_5.Size = new Size(385, 16);
-		class63_5.TabIndex = 33;
-		class63_5.Text = "Changing the theme requires an application restart to take effect.";
-		class63_5.Boolean_0 = false;
-		class0_1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-		class0_1.DropDownStyle = ComboBoxStyle.DropDownList;
-		class0_1.FormattingEnabled = true;
-		class0_1.Location = new Point(32, 284);
-		class0_1.Name = "m_cbColorTheme";
-		class0_1.Size = new Size(554, 24);
-		class0_1.TabIndex = 32;
-		class62_14.AutoSize = true;
-		class62_14.Location = new Point(20, 265);
-		class62_14.Name = "m_lblColorTheme";
-		class62_14.Size = new Size(82, 16);
-		class62_14.TabIndex = 31;
-		class62_14.Text = "Color theme:";
-		class62_14.Boolean_0 = false;
-		numericUpDown_4.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-		numericUpDown_4.Location = new Point(32, 207);
-		numericUpDown_4.Maximum = new decimal(new int[4] { 5000, 0, 0, 0 });
-		numericUpDown_4.Minimum = new decimal(new int[4] { 10, 0, 0, 0 });
-		numericUpDown_4.Name = "m_numIPPageSize";
-		numericUpDown_4.Size = new Size(554, 22);
-		numericUpDown_4.TabIndex = 28;
-		numericUpDown_4.Value = new decimal(new int[4] { 100, 0, 0, 0 });
-		class62_13.AutoSize = true;
-		class62_13.Location = new Point(20, 188);
-		class62_13.Name = "m_lblIPPageSize";
-		class62_13.Size = new Size(270, 16);
-		class62_13.TabIndex = 30;
-		class62_13.Text = "Maximum number of IP addresses per page:";
-		class62_13.Boolean_0 = false;
-		class63_3.AutoSize = true;
-		class63_3.ForeColor = SystemColors.ControlDarkDark;
-		class63_3.Location = new Point(29, 232);
-		class63_3.Name = "m_lblIPPageSizeHint";
-		class63_3.Size = new Size(531, 16);
-		class63_3.TabIndex = 29;
-		class63_3.Text = "The number of IP addresses to show on a single page in the Blocked IP Addresses table";
-		class63_3.Boolean_0 = false;
-		class62_12.AutoSize = true;
-		class62_12.ForeColor = SystemColors.ControlDarkDark;
-		class62_12.Location = new Point(20, 155);
-		class62_12.Name = "m_chbCloseToSystemTrayTip";
-		class62_12.Size = new Size(265, 16);
-		class62_12.TabIndex = 27;
-		class62_12.Text = "Hide RdpGuard to system tray when closed";
-		class62_12.Boolean_0 = false;
-		class61_5.AutoSize = true;
-		class61_5.Location = new Point(23, 132);
-		class61_5.Name = "m_chbCloseToSystemTray";
-		class61_5.Size = new Size(146, 20);
-		class61_5.TabIndex = 2;
-		class61_5.Text = "Close to system tray";
-		class61_5.UseVisualStyleBackColor = true;
-		class62_1.AutoSize = true;
-		class62_1.ForeColor = SystemColors.ControlDarkDark;
-		class62_1.Location = new Point(20, 99);
-		class62_1.Name = "m_chbMinimizeToSystemTrayTip";
-		class62_1.Size = new Size(284, 16);
-		class62_1.TabIndex = 25;
-		class62_1.Text = "Hide RdpGuard to system tray when minimized";
-		class62_1.Boolean_0 = false;
-		class62_2.AutoSize = true;
-		class62_2.ForeColor = SystemColors.ControlDarkDark;
-		class62_2.Location = new Point(20, 43);
-		class62_2.Name = "m_lblShowSystrayIconTip";
-		class62_2.Size = new Size(390, 16);
-		class62_2.TabIndex = 24;
-		class62_2.Text = "This check toggles whether RdpGuard has an icon in system tray";
-		class62_2.Boolean_0 = false;
-		class61_1.AutoSize = true;
-		class61_1.Location = new Point(23, 20);
-		class61_1.Name = "m_chbAllwaysShowSystemTrayIcon";
-		class61_1.Size = new Size(281, 20);
-		class61_1.TabIndex = 0;
-		class61_1.Text = "Always show RdpGuard icon in system tray";
-		class61_1.UseVisualStyleBackColor = true;
-		class61_2.AutoSize = true;
-		class61_2.Location = new Point(23, 76);
-		class61_2.Name = "m_chbMinimizeToSystemTray";
-		class61_2.Size = new Size(163, 20);
-		class61_2.TabIndex = 1;
-		class61_2.Text = "Minimize to system tray";
-		class61_2.UseVisualStyleBackColor = true;
-		tabPage_3.Controls.Add(class65_0);
-		tabPage_3.ImageIndex = 4;
-		tabPage_3.Location = new Point(4, 40);
-		tabPage_3.Name = "m_tabConnection";
-		tabPage_3.Padding = new Padding(3);
-		tabPage_3.Size = new Size(592, 446);
-		tabPage_3.TabIndex = 6;
-		tabPage_3.Text = "Connection";
-		tabPage_3.UseVisualStyleBackColor = true;
-		class65_0.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-		class65_0.Controls.Add(textBox_0);
-		class65_0.Controls.Add(class62_7);
-		class65_0.Controls.Add(class0_0);
-		class65_0.Controls.Add(numericUpDown_3);
-		class65_0.Controls.Add(class61_4);
-		class65_0.Controls.Add(textBox_1);
-		class65_0.Controls.Add(class62_8);
-		class65_0.Controls.Add(textBox_2);
-		class65_0.Controls.Add(class62_9);
-		class65_0.Controls.Add(class62_10);
-		class65_0.Controls.Add(textBox_3);
-		class65_0.Controls.Add(class62_11);
-		class65_0.Location = new Point(6, 6);
-		class65_0.Name = "m_gbProxySettings";
-		class65_0.Size = new Size(580, 414);
-		class65_0.TabIndex = 47;
-		class65_0.TabStop = false;
-		class65_0.Text = "Proxy";
-		textBox_0.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-		textBox_0.Location = new Point(29, 375);
-		textBox_0.Name = "m_edProxyDomain";
-		textBox_0.Size = new Size(545, 22);
-		textBox_0.TabIndex = 6;
-		class62_7.AutoSize = true;
-		class62_7.Location = new Point(15, 350);
-		class62_7.Name = "m_lblProxyDomain";
-		class62_7.Size = new Size(57, 16);
-		class62_7.TabIndex = 10;
-		class62_7.Text = "Domain:";
-		class62_7.Boolean_0 = false;
-		class0_0.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-		class0_0.DropDownStyle = ComboBoxStyle.DropDownList;
-		class0_0.FormattingEnabled = true;
-		class0_0.Items.AddRange(new object[3] { "Do not use proxy (direct connection)", "Autodetect proxy settings", "Use proxy settings below" });
-		class0_0.Location = new Point(17, 30);
-		class0_0.Name = "m_cbProxyMode";
-		class0_0.Size = new Size(557, 24);
-		class0_0.TabIndex = 0;
-		numericUpDown_3.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-		numericUpDown_3.Location = new Point(17, 150);
-		numericUpDown_3.Maximum = new decimal(new int[4] { 65535, 0, 0, 0 });
-		numericUpDown_3.Minimum = new decimal(new int[4] { 1, 0, 0, 0 });
-		numericUpDown_3.Name = "m_numProxyPort";
-		numericUpDown_3.Size = new Size(557, 22);
-		numericUpDown_3.TabIndex = 2;
-		numericUpDown_3.Value = new decimal(new int[4] { 8080, 0, 0, 0 });
-		class61_4.AutoSize = true;
-		class61_4.Location = new Point(9, 195);
-		class61_4.Name = "m_chbProxyAuthentication";
-		class61_4.Size = new Size(258, 20);
-		class61_4.TabIndex = 3;
-		class61_4.Text = "My proxy server requires authentication";
-		class61_4.UseVisualStyleBackColor = true;
-		textBox_1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-		textBox_1.Location = new Point(29, 315);
-		textBox_1.Name = "m_edProxyPassword";
-		textBox_1.Size = new Size(545, 22);
-		textBox_1.TabIndex = 5;
-		textBox_1.UseSystemPasswordChar = true;
-		class62_8.AutoSize = true;
-		class62_8.Location = new Point(15, 290);
-		class62_8.Name = "m_lblProxyPassword";
-		class62_8.Size = new Size(70, 16);
-		class62_8.TabIndex = 7;
-		class62_8.Text = "Password:";
-		class62_8.Boolean_0 = false;
-		textBox_2.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-		textBox_2.Location = new Point(29, 255);
-		textBox_2.Name = "m_edProxyUsername";
-		textBox_2.Size = new Size(545, 22);
-		textBox_2.TabIndex = 4;
-		class62_9.AutoSize = true;
-		class62_9.Location = new Point(15, 230);
-		class62_9.Name = "m_lblProxyUserName";
-		class62_9.Size = new Size(73, 16);
-		class62_9.TabIndex = 5;
-		class62_9.Text = "Username:";
-		class62_9.Boolean_0 = false;
-		class62_10.AutoSize = true;
-		class62_10.Location = new Point(6, 125);
-		class62_10.Name = "m_lblProxyPort";
-		class62_10.Size = new Size(34, 16);
-		class62_10.TabIndex = 3;
-		class62_10.Text = "Port:";
-		class62_10.Boolean_0 = false;
-		textBox_3.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-		textBox_3.Location = new Point(17, 90);
-		textBox_3.Name = "m_edProxyAddress";
-		textBox_3.Size = new Size(557, 22);
-		textBox_3.TabIndex = 1;
-		class62_11.AutoSize = true;
-		class62_11.Location = new Point(6, 65);
-		class62_11.Name = "m_lblProxyAddress";
-		class62_11.Size = new Size(61, 16);
-		class62_11.TabIndex = 0;
-		class62_11.Text = "Address:";
-		class62_11.Boolean_0 = false;
-		tabPage_2.Controls.Add(class65_2);
-		tabPage_2.ImageIndex = 5;
-		tabPage_2.Location = new Point(4, 40);
-		tabPage_2.Name = "m_tabLogging";
-		tabPage_2.Padding = new Padding(3);
-		tabPage_2.Size = new Size(592, 446);
-		tabPage_2.TabIndex = 5;
-		tabPage_2.Text = "Logging";
-		tabPage_2.UseVisualStyleBackColor = true;
-		class65_2.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-		class65_2.Controls.Add(gclass3_3);
-		class65_2.Controls.Add(class63_9);
-		class65_2.Controls.Add(class61_10);
-		class65_2.Controls.Add(numericUpDown_5);
-		class65_2.Controls.Add(class63_7);
-		class65_2.Controls.Add(class61_9);
-		class65_2.Controls.Add(class63_8);
-		class65_2.Controls.Add(class0_2);
-		class65_2.Controls.Add(gclass3_2);
-		class65_2.Controls.Add(class62_16);
-		class65_2.Controls.Add(class63_6);
-		class65_2.Controls.Add(class61_8);
-		class65_2.Location = new Point(6, 6);
-		class65_2.Name = "m_gbLogging";
-		class65_2.Size = new Size(580, 308);
-		class65_2.TabIndex = 45;
-		class65_2.TabStop = false;
-		class65_2.Text = "Logging:";
-		gclass3_3.AutoSize = true;
-		gclass3_3.LinkBehavior = LinkBehavior.NeverUnderline;
-		gclass3_3.LinkColor = Color.FromArgb(38, 135, 200);
-		gclass3_3.Location = new Point(303, 253);
-		gclass3_3.Margin = new Padding(0);
-		gclass3_3.Name = "m_lnkLogSuccessfulLoginAttemptsConfiguration";
-		gclass3_3.Size = new Size(68, 16);
-		gclass3_3.TabIndex = 53;
-		gclass3_3.TabStop = true;
-		gclass3_3.Text = "configure..";
-		gclass3_3.VisitedLinkColor = Color.FromArgb(38, 135, 200);
-		class63_9.AutoSize = true;
-		class63_9.ForeColor = SystemColors.ControlDarkDark;
-		class63_9.Location = new Point(14, 275);
-		class63_9.Margin = new Padding(0);
-		class63_9.Name = "m_chbLogSuccessfulLoginAttemptsHint";
-		class63_9.Size = new Size(409, 16);
-		class63_9.TabIndex = 54;
-		class63_9.Text = "This option enables or disables logging of successful login attempts";
-		class63_9.Boolean_0 = false;
-		class61_10.AutoSize = true;
-		class61_10.Location = new Point(17, 252);
-		class61_10.Name = "m_chbLogSuccessfulLoginAttempts";
-		class61_10.Size = new Size(283, 20);
-		class61_10.TabIndex = 52;
-		class61_10.Text = "Enable logging of successful login attempts";
-		class61_10.UseVisualStyleBackColor = true;
-		numericUpDown_5.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-		numericUpDown_5.Location = new Point(17, 109);
-		numericUpDown_5.Maximum = new decimal(new int[4] { 365, 0, 0, 0 });
-		numericUpDown_5.Minimum = new decimal(new int[4] { 1, 0, 0, 0 });
-		numericUpDown_5.Name = "m_numLogRemoveOldLogsDays";
-		numericUpDown_5.Size = new Size(557, 22);
-		numericUpDown_5.TabIndex = 11;
-		numericUpDown_5.Value = new decimal(new int[4] { 30, 0, 0, 0 });
-		class63_7.AutoSize = true;
-		class63_7.ForeColor = SystemColors.ControlDarkDark;
-		class63_7.Location = new Point(14, 136);
-		class63_7.Name = "m_lblLogRemoveOldHint";
-		class63_7.Size = new Size(376, 16);
-		class63_7.TabIndex = 51;
-		class63_7.Text = "Specify the number of days after which old logs will be deleted.";
-		class63_7.Boolean_0 = false;
-		class61_9.AutoSize = true;
-		class61_9.Location = new Point(17, 83);
-		class61_9.Name = "m_chbLogRemoveOld";
-		class61_9.Size = new Size(233, 20);
-		class61_9.TabIndex = 10;
-		class61_9.Text = "Remove log files older than (days):";
-		class61_9.UseVisualStyleBackColor = true;
-		class63_8.AutoSize = true;
-		class63_8.ForeColor = SystemColors.ControlDarkDark;
-		class63_8.Location = new Point(14, 219);
-		class63_8.Name = "m_lblLogVerbosityLevelHint";
-		class63_8.Size = new Size(563, 16);
-		class63_8.TabIndex = 48;
-		class63_8.Text = "Choose the log detail level: verbose (detailed), brief (summarized), or errors and warnings only";
-		class63_8.Boolean_0 = false;
-		class0_2.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-		class0_2.DropDownStyle = ComboBoxStyle.DropDownList;
-		class0_2.FormattingEnabled = true;
-		class0_2.Location = new Point(17, 190);
-		class0_2.Name = "m_cbLogVerbosityLevel";
-		class0_2.Size = new Size(557, 24);
-		class0_2.TabIndex = 20;
-		gclass3_2.AutoSize = true;
-		gclass3_2.LinkBehavior = LinkBehavior.NeverUnderline;
-		gclass3_2.LinkColor = Color.FromArgb(38, 135, 200);
-		gclass3_2.Location = new Point(352, 50);
-		gclass3_2.Margin = new Padding(0);
-		gclass3_2.Name = "m_lnkLogsView";
-		gclass3_2.Size = new Size(89, 16);
-		gclass3_2.TabIndex = 1;
-		gclass3_2.TabStop = true;
-		gclass3_2.Text = "view log files..";
-		gclass3_2.VisitedLinkColor = Color.FromArgb(38, 135, 200);
-		class62_16.AutoSize = true;
-		class62_16.Location = new Point(14, 168);
-		class62_16.Name = "m_lblLogVerbosityLevel";
-		class62_16.Size = new Size(96, 16);
-		class62_16.TabIndex = 3;
-		class62_16.Text = "Verbosity level";
-		class62_16.Boolean_0 = false;
-		class63_6.AutoSize = true;
-		class63_6.ForeColor = SystemColors.ControlDarkDark;
-		class63_6.Location = new Point(14, 50);
-		class63_6.Margin = new Padding(0);
-		class63_6.Name = "m_lblLogSaveToFileHint";
-		class63_6.Size = new Size(338, 16);
-		class63_6.TabIndex = 46;
-		class63_6.Text = "If checked, all log messages will be saved to the log file,";
-		class63_6.Boolean_0 = false;
-		class61_8.AutoSize = true;
-		class61_8.Location = new Point(17, 27);
-		class61_8.Name = "m_chbLogSaveToFile";
-		class61_8.Size = new Size(150, 20);
-		class61_8.TabIndex = 0;
-		class61_8.Text = "Save event log to file";
-		class61_8.UseVisualStyleBackColor = true;
-		class66_0.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-		class66_0.Image = Resources.opts_16;
-		class66_0.Location = new Point(403, 512);
-		class66_0.Margin = new Padding(4);
-		class66_0.Name = "m_btnSave";
-		class66_0.Size = new Size(100, 36);
-		class66_0.TabIndex = 99;
-		class66_0.Text = "Save";
-		class66_0.TextImageRelation = TextImageRelation.ImageBeforeText;
-		class66_0.UseVisualStyleBackColor = true;
-		class66_1.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-		class66_1.Image = Resources.cancl_16;
-		class66_1.Location = new Point(511, 512);
-		class66_1.Margin = new Padding(4);
-		class66_1.Name = "m_btnCancel";
-		class66_1.Size = new Size(100, 36);
-		class66_1.TabIndex = 100;
-		class66_1.Text = "Cancel";
-		class66_1.TextImageRelation = TextImageRelation.ImageBeforeText;
-		class66_1.UseVisualStyleBackColor = true;
-		class62_6.AutoSize = true;
-		class62_6.Location = new Point(33, 54);
-		class62_6.Name = "label16";
-		class62_6.Size = new Size(48, 13);
-		class62_6.TabIndex = 0;
-		class62_6.Text = "Address:";
-		class62_6.Boolean_0 = false;
-		class61_3.Location = new Point(0, 0);
-		class61_3.Name = "chbHideWhenMimimized";
-		class61_3.Size = new Size(104, 24);
-		class61_3.TabIndex = 0;
-		class62_15.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-		class62_15.AutoSize = true;
-		class62_15.Font = new Font("Microsoft Sans Serif", 9.75f, FontStyle.Regular, GraphicsUnit.Point, 204);
-		class62_15.ForeColor = Color.Red;
-		class62_15.Location = new Point(9, 507);
-		class62_15.Name = "m_lblGeoIPWarning";
-		class62_15.Size = new Size(336, 16);
-		class62_15.TabIndex = 101;
-		class62_15.Text = "Please keep the number of entries as short as possible,";
-		class62_15.Boolean_0 = true;
-		class62_15.Visible = false;
-		gclass3_1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-		gclass3_1.AutoSize = true;
-		gclass3_1.Font = new Font("Microsoft Sans Serif", 9.75f, FontStyle.Regular, GraphicsUnit.Point, 204);
-		gclass3_1.LinkBehavior = LinkBehavior.NeverUnderline;
-		gclass3_1.LinkColor = Color.FromArgb(38, 135, 200);
-		gclass3_1.Location = new Point(9, 530);
-		gclass3_1.Margin = new Padding(0);
-		gclass3_1.Name = "m_lnkGeoIPHelp";
-		gclass3_1.RightToLeft = RightToLeft.No;
-		gclass3_1.Size = new Size(165, 16);
-		gclass3_1.TabIndex = 102;
-		gclass3_1.TabStop = true;
-		gclass3_1.Text = "click here for more details..";
-		gclass3_1.Visible = false;
-		gclass3_1.VisitedLinkColor = Color.FromArgb(38, 135, 200);
+		tabControl1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+		tabControl1.Controls.Add(mtabGeneral);
+		tabControl1.Controls.Add(mtabCloud);
+		tabControl1.Controls.Add(mtabGeoIP);
+		tabControl1.Controls.Add(mtabInterface);
+		tabControl1.Controls.Add(mtabConnection);
+		tabControl1.Controls.Add(mtabLogging);
+		tabControl1.ImeMode = ImeMode.Disable;
+		tabControl1.ItemSize = new Size(96, 36);
+		tabControl1.Location = new Point(12, 12);
+		tabControl1.Multiline = true;
+		tabControl1.Name = "tabControl1";
+		tabControl1.Padding = new Point(6, 6);
+		tabControl1.SelectedIndex = 0;
+		tabControl1.Size = new Size(600, 490);
+		tabControl1.SizeMode = TabSizeMode.FillToRight;
+		tabControl1.TabIndex = 0;
+		mtabGeneral.Controls.Add(mnumResetCountersAfter);
+		mtabGeneral.Controls.Add(mlblResetCountersAfter);
+		mtabGeneral.Controls.Add(mlblResetCountersAfterHint);
+		mtabGeneral.Controls.Add(mlblAutoUnban);
+		mtabGeneral.Controls.Add(mnumAutoUnbanPeriod);
+		mtabGeneral.Controls.Add(mlblAutoUnbanHint);
+		mtabGeneral.Controls.Add(mnumMaxFailedLogonAttempts);
+		mtabGeneral.Controls.Add(mlblMaxFailedLogonAttempts);
+		mtabGeneral.Controls.Add(mlblMaxFailedLogonAttemptsHint);
+		mtabGeneral.Controls.Add(mchbCheckForSoftwareUpdatesHint);
+		mtabGeneral.Controls.Add(mchbCheckForSoftwareUpdates);
+		mtabGeneral.Controls.Add(mlnkAdvancedBlockingSettings);
+		mtabGeneral.ImageIndex = 0;
+		mtabGeneral.Location = new Point(4, 40);
+		mtabGeneral.Name = "m_tabGeneral";
+		mtabGeneral.Padding = new Padding(3);
+		mtabGeneral.Size = new Size(592, 446);
+		mtabGeneral.TabIndex = 0;
+		mtabGeneral.Text = "General";
+		mtabGeneral.UseVisualStyleBackColor = true;
+		mnumResetCountersAfter.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+		mnumResetCountersAfter.Location = new Point(34, 184);
+		mnumResetCountersAfter.Maximum = new decimal(new int[4] { 999, 0, 0, 0 });
+		mnumResetCountersAfter.Minimum = new decimal(new int[4] { 1, 0, 0, 0 });
+		mnumResetCountersAfter.Name = "m_numResetCountersAfter";
+		mnumResetCountersAfter.Size = new Size(552, 22);
+		mnumResetCountersAfter.TabIndex = 2;
+		mnumResetCountersAfter.Value = new decimal(new int[4] { 1, 0, 0, 0 });
+		mlblResetCountersAfter.AutoSize = true;
+		mlblResetCountersAfter.Location = new Point(20, 163);
+		mlblResetCountersAfter.Name = "m_lblResetCountersAfter";
+		mlblResetCountersAfter.Size = new Size(314, 16);
+		mlblResetCountersAfter.TabIndex = 31;
+		mlblResetCountersAfter.Text = "Reset counters of failed logon attempts after (hours):";
+		mlblResetCountersAfter.Boolean_0 = false;
+		mlblResetCountersAfterHint.AutoSize = true;
+		mlblResetCountersAfterHint.ForeColor = SystemColors.ControlDarkDark;
+		mlblResetCountersAfterHint.Location = new Point(31, 209);
+		mlblResetCountersAfterHint.Name = "m_lblResetCountersAfterHint";
+		mlblResetCountersAfterHint.Size = new Size(508, 16);
+		mlblResetCountersAfterHint.TabIndex = 30;
+		mlblResetCountersAfterHint.Text = "Set the interval (in hours) after which the counters of failed logon attempts will be reset.";
+		mlblResetCountersAfterHint.Boolean_0 = false;
+		mlblAutoUnban.AutoSize = true;
+		mlblAutoUnban.Location = new Point(20, 246);
+		mlblAutoUnban.Name = "m_lblAutoUnban";
+		mlblAutoUnban.Size = new Size(288, 16);
+		mlblAutoUnban.TabIndex = 29;
+		mlblAutoUnban.Text = "Unban IP addresses automatically after (hours):";
+		mlblAutoUnban.Boolean_0 = false;
+		mnumAutoUnbanPeriod.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+		mnumAutoUnbanPeriod.Location = new Point(34, 267);
+		mnumAutoUnbanPeriod.Maximum = new decimal(new int[4] { 8760, 0, 0, 0 });
+		mnumAutoUnbanPeriod.Minimum = new decimal(new int[4] { 1, 0, 0, 0 });
+		mnumAutoUnbanPeriod.Name = "m_numAutoUnbanPeriod";
+		mnumAutoUnbanPeriod.Size = new Size(552, 22);
+		mnumAutoUnbanPeriod.TabIndex = 3;
+		mnumAutoUnbanPeriod.Value = new decimal(new int[4] { 1, 0, 0, 0 });
+		mlblAutoUnbanHint.AutoSize = true;
+		mlblAutoUnbanHint.ForeColor = SystemColors.ControlDarkDark;
+		mlblAutoUnbanHint.Location = new Point(31, 292);
+		mlblAutoUnbanHint.Name = "m_lblAutoUnbanHint";
+		mlblAutoUnbanHint.Size = new Size(354, 16);
+		mlblAutoUnbanHint.TabIndex = 26;
+		mlblAutoUnbanHint.Text = "Specify how long should attacker's IP address be blocked.";
+		mlblAutoUnbanHint.Boolean_0 = false;
+		mnumMaxFailedLogonAttempts.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+		mnumMaxFailedLogonAttempts.Location = new Point(34, 101);
+		mnumMaxFailedLogonAttempts.Minimum = new decimal(new int[4] { 1, 0, 0, 0 });
+		mnumMaxFailedLogonAttempts.Name = "m_numMaxFailedLogonAttempts";
+		mnumMaxFailedLogonAttempts.Size = new Size(552, 22);
+		mnumMaxFailedLogonAttempts.TabIndex = 1;
+		mnumMaxFailedLogonAttempts.Value = new decimal(new int[4] { 1, 0, 0, 0 });
+		mlblMaxFailedLogonAttempts.AutoSize = true;
+		mlblMaxFailedLogonAttempts.Location = new Point(20, 80);
+		mlblMaxFailedLogonAttempts.Name = "m_lblMaxFailedLogonAttempts";
+		mlblMaxFailedLogonAttempts.Size = new Size(341, 16);
+		mlblMaxFailedLogonAttempts.TabIndex = 24;
+		mlblMaxFailedLogonAttempts.Text = "Maximum failed logon attempts from a single IP address:";
+		mlblMaxFailedLogonAttempts.Boolean_0 = false;
+		mlblMaxFailedLogonAttemptsHint.AutoSize = true;
+		mlblMaxFailedLogonAttemptsHint.ForeColor = SystemColors.ControlDarkDark;
+		mlblMaxFailedLogonAttemptsHint.Location = new Point(31, 126);
+		mlblMaxFailedLogonAttemptsHint.Name = "m_lblMaxFailedLogonAttemptsHint";
+		mlblMaxFailedLogonAttemptsHint.Size = new Size(479, 16);
+		mlblMaxFailedLogonAttemptsHint.TabIndex = 23;
+		mlblMaxFailedLogonAttemptsHint.Text = "How many failed logon attempts should be received before banning IP address.";
+		mlblMaxFailedLogonAttemptsHint.Boolean_0 = false;
+		mchbCheckForSoftwareUpdatesHint.AutoSize = true;
+		mchbCheckForSoftwareUpdatesHint.ForeColor = SystemColors.ControlDarkDark;
+		mchbCheckForSoftwareUpdatesHint.Location = new Point(20, 43);
+		mchbCheckForSoftwareUpdatesHint.Name = "m_chbCheckForSoftwareUpdatesHint";
+		mchbCheckForSoftwareUpdatesHint.Size = new Size(452, 16);
+		mchbCheckForSoftwareUpdatesHint.TabIndex = 21;
+		mchbCheckForSoftwareUpdatesHint.Text = "RdpGuard will check for updates and notify you when new version available";
+		mchbCheckForSoftwareUpdatesHint.Boolean_0 = false;
+		mchbCheckForSoftwareUpdates.AutoSize = true;
+		mchbCheckForSoftwareUpdates.Location = new Point(23, 20);
+		mchbCheckForSoftwareUpdates.Name = "m_chbCheckForSoftwareUpdates";
+		mchbCheckForSoftwareUpdates.Size = new Size(274, 20);
+		mchbCheckForSoftwareUpdates.TabIndex = 0;
+		mchbCheckForSoftwareUpdates.Text = "Automatically check for software updates  ";
+		mchbCheckForSoftwareUpdates.UseVisualStyleBackColor = true;
+		mlnkAdvancedBlockingSettings.AutoSize = true;
+		mlnkAdvancedBlockingSettings.LinkBehavior = LinkBehavior.NeverUnderline;
+		mlnkAdvancedBlockingSettings.LinkColor = Color.FromArgb(38, 135, 200);
+		mlnkAdvancedBlockingSettings.Location = new Point(20, 326);
+		mlnkAdvancedBlockingSettings.Name = "m_lnkAdvancedBlockingSettings";
+		mlnkAdvancedBlockingSettings.Size = new Size(177, 16);
+		mlnkAdvancedBlockingSettings.TabIndex = 7;
+		mlnkAdvancedBlockingSettings.TabStop = true;
+		mlnkAdvancedBlockingSettings.Text = "advanced blocking settings..";
+		mlnkAdvancedBlockingSettings.VisitedLinkColor = Color.FromArgb(38, 135, 200);
+		mtabCloud.Controls.Add(medEnableIPCloudHint);
+		mtabCloud.Controls.Add(mchbEnableIPCloud);
+		mtabCloud.ImageIndex = 1;
+		mtabCloud.Location = new Point(4, 40);
+		mtabCloud.Name = "m_tabCloud";
+		mtabCloud.Padding = new Padding(3);
+		mtabCloud.Size = new Size(592, 446);
+		mtabCloud.TabIndex = 8;
+		mtabCloud.Text = "IP Cloud";
+		mtabCloud.UseVisualStyleBackColor = true;
+		medEnableIPCloudHint.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+		medEnableIPCloudHint.BackColor = SystemColors.Control;
+		medEnableIPCloudHint.BorderStyle = BorderStyle.None;
+		medEnableIPCloudHint.Cursor = Cursors.Default;
+		medEnableIPCloudHint.ForeColor = SystemColors.ControlDarkDark;
+		medEnableIPCloudHint.Location = new Point(23, 46);
+		medEnableIPCloudHint.Multiline = true;
+		medEnableIPCloudHint.Name = "m_edEnableIPCloudHint";
+		medEnableIPCloudHint.ReadOnly = true;
+		medEnableIPCloudHint.Size = new Size(563, 52);
+		medEnableIPCloudHint.TabIndex = 25;
+		medEnableIPCloudHint.TabStop = false;
+		medEnableIPCloudHint.Text = "Enable this option for preemptive blocking of IP addresses detected by other participants. Any attacks detected on your PC will also be reported to the cloud.";
+		medEnableIPCloudHint.Boolean_0 = false;
+		mchbEnableIPCloud.AutoSize = true;
+		mchbEnableIPCloud.Location = new Point(23, 20);
+		mchbEnableIPCloud.Name = "m_chbEnableIPCloud";
+		mchbEnableIPCloud.Size = new Size(188, 20);
+		mchbEnableIPCloud.TabIndex = 24;
+		mchbEnableIPCloud.Text = "Enable RdpGuard IP Cloud";
+		mchbEnableIPCloud.UseVisualStyleBackColor = true;
+		mtabGeoIP.Controls.Add(mgbGeoIPMode);
+		mtabGeoIP.Controls.Add(mlstGeoIPCountries);
+		mtabGeoIP.Controls.Add(mlblEnableGeoIPEngineHint);
+		mtabGeoIP.Controls.Add(mchbEnableGeoIPEngine);
+		mtabGeoIP.ImageIndex = 2;
+		mtabGeoIP.Location = new Point(4, 40);
+		mtabGeoIP.Name = "m_tabGeoIP";
+		mtabGeoIP.Padding = new Padding(3);
+		mtabGeoIP.Size = new Size(592, 446);
+		mtabGeoIP.TabIndex = 7;
+		mtabGeoIP.Text = "GeoIP";
+		mtabGeoIP.UseVisualStyleBackColor = true;
+		mgbGeoIPMode.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+		mgbGeoIPMode.Controls.Add(mrbGeoIPModeAllow);
+		mgbGeoIPMode.Controls.Add(mrbGeoIPModeDeny);
+		mgbGeoIPMode.Enabled = false;
+		mgbGeoIPMode.Location = new Point(9, 75);
+		mgbGeoIPMode.Name = "m_gbGeoIPMode";
+		mgbGeoIPMode.Size = new Size(576, 83);
+		mgbGeoIPMode.TabIndex = 28;
+		mgbGeoIPMode.TabStop = false;
+		mgbGeoIPMode.Text = "Geo-IP mode:";
+		mrbGeoIPModeAllow.AutoSize = true;
+		mrbGeoIPModeAllow.Location = new Point(17, 50);
+		mrbGeoIPModeAllow.Name = "m_rbGeoIPModeAllow";
+		mrbGeoIPModeAllow.Size = new Size(363, 20);
+		mrbGeoIPModeAllow.TabIndex = 2;
+		mrbGeoIPModeAllow.TabStop = true;
+		mrbGeoIPModeAllow.Text = "Allow specific countries (all other countries will be denied)";
+		mrbGeoIPModeAllow.UseVisualStyleBackColor = true;
+		mrbGeoIPModeDeny.AutoSize = true;
+		mrbGeoIPModeDeny.Location = new Point(17, 24);
+		mrbGeoIPModeDeny.Name = "m_rbGeoIPModeDeny";
+		mrbGeoIPModeDeny.Size = new Size(379, 20);
+		mrbGeoIPModeDeny.TabIndex = 1;
+		mrbGeoIPModeDeny.TabStop = true;
+		mrbGeoIPModeDeny.Text = "Deny specific countries (all other countries will have access)";
+		mrbGeoIPModeDeny.UseVisualStyleBackColor = true;
+		mlstGeoIPCountries.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+		mlstGeoIPCountries.GClass5_0 = new GClass5[0];
+		mlstGeoIPCountries.IPListEntry_0 = new IPListEntry[0];
+		mlstGeoIPCountries.Boolean_0 = false;
+		mlstGeoIPCountries.Enabled = false;
+		mlstGeoIPCountries.Font = new Font("Microsoft Sans Serif", 9.75f, FontStyle.Regular, GraphicsUnit.Point, 204);
+		mlstGeoIPCountries.Location = new Point(9, 165);
+		mlstGeoIPCountries.Margin = new Padding(4);
+		mlstGeoIPCountries.Name = "m_lstGeoIPCountries";
+		mlstGeoIPCountries.Size = new Size(576, 274);
+		mlstGeoIPCountries.TabIndex = 25;
+		mlblEnableGeoIPEngineHint.AutoSize = true;
+		mlblEnableGeoIPEngineHint.ForeColor = SystemColors.ControlDarkDark;
+		mlblEnableGeoIPEngineHint.Location = new Point(20, 43);
+		mlblEnableGeoIPEngineHint.Name = "m_lblEnableGeoIPEngineHint";
+		mlblEnableGeoIPEngineHint.Size = new Size(359, 16);
+		mlblEnableGeoIPEngineHint.TabIndex = 23;
+		mlblEnableGeoIPEngineHint.Text = "Block or allow access to your server from specific countries.";
+		mlblEnableGeoIPEngineHint.Boolean_0 = false;
+		mchbEnableGeoIPEngine.AutoSize = true;
+		mchbEnableGeoIPEngine.Location = new Point(23, 20);
+		mchbEnableGeoIPEngine.Name = "m_chbEnableGeoIPEngine";
+		mchbEnableGeoIPEngine.Size = new Size(114, 20);
+		mchbEnableGeoIPEngine.TabIndex = 22;
+		mchbEnableGeoIPEngine.Text = "Enable Geo-IP";
+		mchbEnableGeoIPEngine.UseVisualStyleBackColor = true;
+		mtabInterface.Controls.Add(mlblColorThemeHint);
+		mtabInterface.Controls.Add(mcbColorTheme);
+		mtabInterface.Controls.Add(mlblColorTheme);
+		mtabInterface.Controls.Add(mnumIPPageSize);
+		mtabInterface.Controls.Add(mlblIPPageSize);
+		mtabInterface.Controls.Add(mlblIPPageSizeHint);
+		mtabInterface.Controls.Add(mchbCloseToSystemTrayTip);
+		mtabInterface.Controls.Add(mchbCloseToSystemTray);
+		mtabInterface.Controls.Add(mchbMinimizeToSystemTrayTip);
+		mtabInterface.Controls.Add(mlblShowSystrayIconTip);
+		mtabInterface.Controls.Add(mchbAllwaysShowSystemTrayIcon);
+		mtabInterface.Controls.Add(mchbMinimizeToSystemTray);
+		mtabInterface.ImageIndex = 3;
+		mtabInterface.Location = new Point(4, 40);
+		mtabInterface.Name = "m_tabInterface";
+		mtabInterface.Padding = new Padding(3);
+		mtabInterface.Size = new Size(592, 446);
+		mtabInterface.TabIndex = 2;
+		mtabInterface.Text = "Interface";
+		mtabInterface.UseVisualStyleBackColor = true;
+		mlblColorThemeHint.AutoSize = true;
+		mlblColorThemeHint.ForeColor = SystemColors.ControlDarkDark;
+		mlblColorThemeHint.Location = new Point(29, 311);
+		mlblColorThemeHint.Name = "m_lblColorThemeHint";
+		mlblColorThemeHint.Size = new Size(385, 16);
+		mlblColorThemeHint.TabIndex = 33;
+		mlblColorThemeHint.Text = "Changing the theme requires an application restart to take effect.";
+		mlblColorThemeHint.Boolean_0 = false;
+		mcbColorTheme.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+		mcbColorTheme.DropDownStyle = ComboBoxStyle.DropDownList;
+		mcbColorTheme.FormattingEnabled = true;
+		mcbColorTheme.Location = new Point(32, 284);
+		mcbColorTheme.Name = "m_cbColorTheme";
+		mcbColorTheme.Size = new Size(554, 24);
+		mcbColorTheme.TabIndex = 32;
+		mlblColorTheme.AutoSize = true;
+		mlblColorTheme.Location = new Point(20, 265);
+		mlblColorTheme.Name = "m_lblColorTheme";
+		mlblColorTheme.Size = new Size(82, 16);
+		mlblColorTheme.TabIndex = 31;
+		mlblColorTheme.Text = "Color theme:";
+		mlblColorTheme.Boolean_0 = false;
+		mnumIPPageSize.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+		mnumIPPageSize.Location = new Point(32, 207);
+		mnumIPPageSize.Maximum = new decimal(new int[4] { 5000, 0, 0, 0 });
+		mnumIPPageSize.Minimum = new decimal(new int[4] { 10, 0, 0, 0 });
+		mnumIPPageSize.Name = "m_numIPPageSize";
+		mnumIPPageSize.Size = new Size(554, 22);
+		mnumIPPageSize.TabIndex = 28;
+		mnumIPPageSize.Value = new decimal(new int[4] { 100, 0, 0, 0 });
+		mlblIPPageSize.AutoSize = true;
+		mlblIPPageSize.Location = new Point(20, 188);
+		mlblIPPageSize.Name = "m_lblIPPageSize";
+		mlblIPPageSize.Size = new Size(270, 16);
+		mlblIPPageSize.TabIndex = 30;
+		mlblIPPageSize.Text = "Maximum number of IP addresses per page:";
+		mlblIPPageSize.Boolean_0 = false;
+		mlblIPPageSizeHint.AutoSize = true;
+		mlblIPPageSizeHint.ForeColor = SystemColors.ControlDarkDark;
+		mlblIPPageSizeHint.Location = new Point(29, 232);
+		mlblIPPageSizeHint.Name = "m_lblIPPageSizeHint";
+		mlblIPPageSizeHint.Size = new Size(531, 16);
+		mlblIPPageSizeHint.TabIndex = 29;
+		mlblIPPageSizeHint.Text = "The number of IP addresses to show on a single page in the Blocked IP Addresses table";
+		mlblIPPageSizeHint.Boolean_0 = false;
+		mchbCloseToSystemTrayTip.AutoSize = true;
+		mchbCloseToSystemTrayTip.ForeColor = SystemColors.ControlDarkDark;
+		mchbCloseToSystemTrayTip.Location = new Point(20, 155);
+		mchbCloseToSystemTrayTip.Name = "m_chbCloseToSystemTrayTip";
+		mchbCloseToSystemTrayTip.Size = new Size(265, 16);
+		mchbCloseToSystemTrayTip.TabIndex = 27;
+		mchbCloseToSystemTrayTip.Text = "Hide RdpGuard to system tray when closed";
+		mchbCloseToSystemTrayTip.Boolean_0 = false;
+		mchbCloseToSystemTray.AutoSize = true;
+		mchbCloseToSystemTray.Location = new Point(23, 132);
+		mchbCloseToSystemTray.Name = "m_chbCloseToSystemTray";
+		mchbCloseToSystemTray.Size = new Size(146, 20);
+		mchbCloseToSystemTray.TabIndex = 2;
+		mchbCloseToSystemTray.Text = "Close to system tray";
+		mchbCloseToSystemTray.UseVisualStyleBackColor = true;
+		mchbMinimizeToSystemTrayTip.AutoSize = true;
+		mchbMinimizeToSystemTrayTip.ForeColor = SystemColors.ControlDarkDark;
+		mchbMinimizeToSystemTrayTip.Location = new Point(20, 99);
+		mchbMinimizeToSystemTrayTip.Name = "m_chbMinimizeToSystemTrayTip";
+		mchbMinimizeToSystemTrayTip.Size = new Size(284, 16);
+		mchbMinimizeToSystemTrayTip.TabIndex = 25;
+		mchbMinimizeToSystemTrayTip.Text = "Hide RdpGuard to system tray when minimized";
+		mchbMinimizeToSystemTrayTip.Boolean_0 = false;
+		mlblShowSystrayIconTip.AutoSize = true;
+		mlblShowSystrayIconTip.ForeColor = SystemColors.ControlDarkDark;
+		mlblShowSystrayIconTip.Location = new Point(20, 43);
+		mlblShowSystrayIconTip.Name = "m_lblShowSystrayIconTip";
+		mlblShowSystrayIconTip.Size = new Size(390, 16);
+		mlblShowSystrayIconTip.TabIndex = 24;
+		mlblShowSystrayIconTip.Text = "This check toggles whether RdpGuard has an icon in system tray";
+		mlblShowSystrayIconTip.Boolean_0 = false;
+		mchbAllwaysShowSystemTrayIcon.AutoSize = true;
+		mchbAllwaysShowSystemTrayIcon.Location = new Point(23, 20);
+		mchbAllwaysShowSystemTrayIcon.Name = "m_chbAllwaysShowSystemTrayIcon";
+		mchbAllwaysShowSystemTrayIcon.Size = new Size(281, 20);
+		mchbAllwaysShowSystemTrayIcon.TabIndex = 0;
+		mchbAllwaysShowSystemTrayIcon.Text = "Always show RdpGuard icon in system tray";
+		mchbAllwaysShowSystemTrayIcon.UseVisualStyleBackColor = true;
+		mchbMinimizeToSystemTray.AutoSize = true;
+		mchbMinimizeToSystemTray.Location = new Point(23, 76);
+		mchbMinimizeToSystemTray.Name = "m_chbMinimizeToSystemTray";
+		mchbMinimizeToSystemTray.Size = new Size(163, 20);
+		mchbMinimizeToSystemTray.TabIndex = 1;
+		mchbMinimizeToSystemTray.Text = "Minimize to system tray";
+		mchbMinimizeToSystemTray.UseVisualStyleBackColor = true;
+		mtabConnection.Controls.Add(mgbProxySettings);
+		mtabConnection.ImageIndex = 4;
+		mtabConnection.Location = new Point(4, 40);
+		mtabConnection.Name = "m_tabConnection";
+		mtabConnection.Padding = new Padding(3);
+		mtabConnection.Size = new Size(592, 446);
+		mtabConnection.TabIndex = 6;
+		mtabConnection.Text = "Connection";
+		mtabConnection.UseVisualStyleBackColor = true;
+		mgbProxySettings.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+		mgbProxySettings.Controls.Add(medProxyDomain);
+		mgbProxySettings.Controls.Add(mlblProxyDomain);
+		mgbProxySettings.Controls.Add(mcbProxyMode);
+		mgbProxySettings.Controls.Add(mnumProxyPort);
+		mgbProxySettings.Controls.Add(mchbProxyAuthentication);
+		mgbProxySettings.Controls.Add(medProxyPassword);
+		mgbProxySettings.Controls.Add(mlblProxyPassword);
+		mgbProxySettings.Controls.Add(medProxyUsername);
+		mgbProxySettings.Controls.Add(mlblProxyUserName);
+		mgbProxySettings.Controls.Add(mlblProxyPort);
+		mgbProxySettings.Controls.Add(medProxyAddress);
+		mgbProxySettings.Controls.Add(mlblProxyAddress);
+		mgbProxySettings.Location = new Point(6, 6);
+		mgbProxySettings.Name = "m_gbProxySettings";
+		mgbProxySettings.Size = new Size(580, 414);
+		mgbProxySettings.TabIndex = 47;
+		mgbProxySettings.TabStop = false;
+		mgbProxySettings.Text = "Proxy";
+		medProxyDomain.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+		medProxyDomain.Location = new Point(29, 375);
+		medProxyDomain.Name = "m_edProxyDomain";
+		medProxyDomain.Size = new Size(545, 22);
+		medProxyDomain.TabIndex = 6;
+		mlblProxyDomain.AutoSize = true;
+		mlblProxyDomain.Location = new Point(15, 350);
+		mlblProxyDomain.Name = "m_lblProxyDomain";
+		mlblProxyDomain.Size = new Size(57, 16);
+		mlblProxyDomain.TabIndex = 10;
+		mlblProxyDomain.Text = "Domain:";
+		mlblProxyDomain.Boolean_0 = false;
+		mcbProxyMode.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+		mcbProxyMode.DropDownStyle = ComboBoxStyle.DropDownList;
+		mcbProxyMode.FormattingEnabled = true;
+		mcbProxyMode.Items.AddRange(new object[3] { "Do not use proxy (direct connection)", "Autodetect proxy settings", "Use proxy settings below" });
+		mcbProxyMode.Location = new Point(17, 30);
+		mcbProxyMode.Name = "m_cbProxyMode";
+		mcbProxyMode.Size = new Size(557, 24);
+		mcbProxyMode.TabIndex = 0;
+		mnumProxyPort.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+		mnumProxyPort.Location = new Point(17, 150);
+		mnumProxyPort.Maximum = new decimal(new int[4] { 65535, 0, 0, 0 });
+		mnumProxyPort.Minimum = new decimal(new int[4] { 1, 0, 0, 0 });
+		mnumProxyPort.Name = "m_numProxyPort";
+		mnumProxyPort.Size = new Size(557, 22);
+		mnumProxyPort.TabIndex = 2;
+		mnumProxyPort.Value = new decimal(new int[4] { 8080, 0, 0, 0 });
+		mchbProxyAuthentication.AutoSize = true;
+		mchbProxyAuthentication.Location = new Point(9, 195);
+		mchbProxyAuthentication.Name = "m_chbProxyAuthentication";
+		mchbProxyAuthentication.Size = new Size(258, 20);
+		mchbProxyAuthentication.TabIndex = 3;
+		mchbProxyAuthentication.Text = "My proxy server requires authentication";
+		mchbProxyAuthentication.UseVisualStyleBackColor = true;
+		medProxyPassword.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+		medProxyPassword.Location = new Point(29, 315);
+		medProxyPassword.Name = "m_edProxyPassword";
+		medProxyPassword.Size = new Size(545, 22);
+		medProxyPassword.TabIndex = 5;
+		medProxyPassword.UseSystemPasswordChar = true;
+		mlblProxyPassword.AutoSize = true;
+		mlblProxyPassword.Location = new Point(15, 290);
+		mlblProxyPassword.Name = "m_lblProxyPassword";
+		mlblProxyPassword.Size = new Size(70, 16);
+		mlblProxyPassword.TabIndex = 7;
+		mlblProxyPassword.Text = "Password:";
+		mlblProxyPassword.Boolean_0 = false;
+		medProxyUsername.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+		medProxyUsername.Location = new Point(29, 255);
+		medProxyUsername.Name = "m_edProxyUsername";
+		medProxyUsername.Size = new Size(545, 22);
+		medProxyUsername.TabIndex = 4;
+		mlblProxyUserName.AutoSize = true;
+		mlblProxyUserName.Location = new Point(15, 230);
+		mlblProxyUserName.Name = "m_lblProxyUserName";
+		mlblProxyUserName.Size = new Size(73, 16);
+		mlblProxyUserName.TabIndex = 5;
+		mlblProxyUserName.Text = "Username:";
+		mlblProxyUserName.Boolean_0 = false;
+		mlblProxyPort.AutoSize = true;
+		mlblProxyPort.Location = new Point(6, 125);
+		mlblProxyPort.Name = "m_lblProxyPort";
+		mlblProxyPort.Size = new Size(34, 16);
+		mlblProxyPort.TabIndex = 3;
+		mlblProxyPort.Text = "Port:";
+		mlblProxyPort.Boolean_0 = false;
+		medProxyAddress.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+		medProxyAddress.Location = new Point(17, 90);
+		medProxyAddress.Name = "m_edProxyAddress";
+		medProxyAddress.Size = new Size(557, 22);
+		medProxyAddress.TabIndex = 1;
+		mlblProxyAddress.AutoSize = true;
+		mlblProxyAddress.Location = new Point(6, 65);
+		mlblProxyAddress.Name = "m_lblProxyAddress";
+		mlblProxyAddress.Size = new Size(61, 16);
+		mlblProxyAddress.TabIndex = 0;
+		mlblProxyAddress.Text = "Address:";
+		mlblProxyAddress.Boolean_0 = false;
+		mtabLogging.Controls.Add(mgbLogging);
+		mtabLogging.ImageIndex = 5;
+		mtabLogging.Location = new Point(4, 40);
+		mtabLogging.Name = "m_tabLogging";
+		mtabLogging.Padding = new Padding(3);
+		mtabLogging.Size = new Size(592, 446);
+		mtabLogging.TabIndex = 5;
+		mtabLogging.Text = "Logging";
+		mtabLogging.UseVisualStyleBackColor = true;
+		mgbLogging.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+		mgbLogging.Controls.Add(mlnkLogSuccessfulLoginAttemptsConfiguration);
+		mgbLogging.Controls.Add(mchbLogSuccessfulLoginAttemptsHint);
+		mgbLogging.Controls.Add(mchbLogSuccessfulLoginAttempts);
+		mgbLogging.Controls.Add(mnumLogRemoveOldLogsDays);
+		mgbLogging.Controls.Add(mlblLogRemoveOldHint);
+		mgbLogging.Controls.Add(mchbLogRemoveOld);
+		mgbLogging.Controls.Add(mlblLogVerbosityLevelHint);
+		mgbLogging.Controls.Add(mcbLogVerbosityLevel);
+		mgbLogging.Controls.Add(mlnkLogsView);
+		mgbLogging.Controls.Add(mlblLogVerbosityLevel);
+		mgbLogging.Controls.Add(mlblLogSaveToFileHint);
+		mgbLogging.Controls.Add(mchbLogSaveToFile);
+		mgbLogging.Location = new Point(6, 6);
+		mgbLogging.Name = "m_gbLogging";
+		mgbLogging.Size = new Size(580, 308);
+		mgbLogging.TabIndex = 45;
+		mgbLogging.TabStop = false;
+		mgbLogging.Text = "Logging:";
+		mlnkLogSuccessfulLoginAttemptsConfiguration.AutoSize = true;
+		mlnkLogSuccessfulLoginAttemptsConfiguration.LinkBehavior = LinkBehavior.NeverUnderline;
+		mlnkLogSuccessfulLoginAttemptsConfiguration.LinkColor = Color.FromArgb(38, 135, 200);
+		mlnkLogSuccessfulLoginAttemptsConfiguration.Location = new Point(303, 253);
+		mlnkLogSuccessfulLoginAttemptsConfiguration.Margin = new Padding(0);
+		mlnkLogSuccessfulLoginAttemptsConfiguration.Name = "m_lnkLogSuccessfulLoginAttemptsConfiguration";
+		mlnkLogSuccessfulLoginAttemptsConfiguration.Size = new Size(68, 16);
+		mlnkLogSuccessfulLoginAttemptsConfiguration.TabIndex = 53;
+		mlnkLogSuccessfulLoginAttemptsConfiguration.TabStop = true;
+		mlnkLogSuccessfulLoginAttemptsConfiguration.Text = "configure..";
+		mlnkLogSuccessfulLoginAttemptsConfiguration.VisitedLinkColor = Color.FromArgb(38, 135, 200);
+		mchbLogSuccessfulLoginAttemptsHint.AutoSize = true;
+		mchbLogSuccessfulLoginAttemptsHint.ForeColor = SystemColors.ControlDarkDark;
+		mchbLogSuccessfulLoginAttemptsHint.Location = new Point(14, 275);
+		mchbLogSuccessfulLoginAttemptsHint.Margin = new Padding(0);
+		mchbLogSuccessfulLoginAttemptsHint.Name = "m_chbLogSuccessfulLoginAttemptsHint";
+		mchbLogSuccessfulLoginAttemptsHint.Size = new Size(409, 16);
+		mchbLogSuccessfulLoginAttemptsHint.TabIndex = 54;
+		mchbLogSuccessfulLoginAttemptsHint.Text = "This option enables or disables logging of successful login attempts";
+		mchbLogSuccessfulLoginAttemptsHint.Boolean_0 = false;
+		mchbLogSuccessfulLoginAttempts.AutoSize = true;
+		mchbLogSuccessfulLoginAttempts.Location = new Point(17, 252);
+		mchbLogSuccessfulLoginAttempts.Name = "m_chbLogSuccessfulLoginAttempts";
+		mchbLogSuccessfulLoginAttempts.Size = new Size(283, 20);
+		mchbLogSuccessfulLoginAttempts.TabIndex = 52;
+		mchbLogSuccessfulLoginAttempts.Text = "Enable logging of successful login attempts";
+		mchbLogSuccessfulLoginAttempts.UseVisualStyleBackColor = true;
+		mnumLogRemoveOldLogsDays.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+		mnumLogRemoveOldLogsDays.Location = new Point(17, 109);
+		mnumLogRemoveOldLogsDays.Maximum = new decimal(new int[4] { 365, 0, 0, 0 });
+		mnumLogRemoveOldLogsDays.Minimum = new decimal(new int[4] { 1, 0, 0, 0 });
+		mnumLogRemoveOldLogsDays.Name = "m_numLogRemoveOldLogsDays";
+		mnumLogRemoveOldLogsDays.Size = new Size(557, 22);
+		mnumLogRemoveOldLogsDays.TabIndex = 11;
+		mnumLogRemoveOldLogsDays.Value = new decimal(new int[4] { 30, 0, 0, 0 });
+		mlblLogRemoveOldHint.AutoSize = true;
+		mlblLogRemoveOldHint.ForeColor = SystemColors.ControlDarkDark;
+		mlblLogRemoveOldHint.Location = new Point(14, 136);
+		mlblLogRemoveOldHint.Name = "m_lblLogRemoveOldHint";
+		mlblLogRemoveOldHint.Size = new Size(376, 16);
+		mlblLogRemoveOldHint.TabIndex = 51;
+		mlblLogRemoveOldHint.Text = "Specify the number of days after which old logs will be deleted.";
+		mlblLogRemoveOldHint.Boolean_0 = false;
+		mchbLogRemoveOld.AutoSize = true;
+		mchbLogRemoveOld.Location = new Point(17, 83);
+		mchbLogRemoveOld.Name = "m_chbLogRemoveOld";
+		mchbLogRemoveOld.Size = new Size(233, 20);
+		mchbLogRemoveOld.TabIndex = 10;
+		mchbLogRemoveOld.Text = "Remove log files older than (days):";
+		mchbLogRemoveOld.UseVisualStyleBackColor = true;
+		mlblLogVerbosityLevelHint.AutoSize = true;
+		mlblLogVerbosityLevelHint.ForeColor = SystemColors.ControlDarkDark;
+		mlblLogVerbosityLevelHint.Location = new Point(14, 219);
+		mlblLogVerbosityLevelHint.Name = "m_lblLogVerbosityLevelHint";
+		mlblLogVerbosityLevelHint.Size = new Size(563, 16);
+		mlblLogVerbosityLevelHint.TabIndex = 48;
+		mlblLogVerbosityLevelHint.Text = "Choose the log detail level: verbose (detailed), brief (summarized), or errors and warnings only";
+		mlblLogVerbosityLevelHint.Boolean_0 = false;
+		mcbLogVerbosityLevel.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+		mcbLogVerbosityLevel.DropDownStyle = ComboBoxStyle.DropDownList;
+		mcbLogVerbosityLevel.FormattingEnabled = true;
+		mcbLogVerbosityLevel.Location = new Point(17, 190);
+		mcbLogVerbosityLevel.Name = "m_cbLogVerbosityLevel";
+		mcbLogVerbosityLevel.Size = new Size(557, 24);
+		mcbLogVerbosityLevel.TabIndex = 20;
+		mlnkLogsView.AutoSize = true;
+		mlnkLogsView.LinkBehavior = LinkBehavior.NeverUnderline;
+		mlnkLogsView.LinkColor = Color.FromArgb(38, 135, 200);
+		mlnkLogsView.Location = new Point(352, 50);
+		mlnkLogsView.Margin = new Padding(0);
+		mlnkLogsView.Name = "m_lnkLogsView";
+		mlnkLogsView.Size = new Size(89, 16);
+		mlnkLogsView.TabIndex = 1;
+		mlnkLogsView.TabStop = true;
+		mlnkLogsView.Text = "view log files..";
+		mlnkLogsView.VisitedLinkColor = Color.FromArgb(38, 135, 200);
+		mlblLogVerbosityLevel.AutoSize = true;
+		mlblLogVerbosityLevel.Location = new Point(14, 168);
+		mlblLogVerbosityLevel.Name = "m_lblLogVerbosityLevel";
+		mlblLogVerbosityLevel.Size = new Size(96, 16);
+		mlblLogVerbosityLevel.TabIndex = 3;
+		mlblLogVerbosityLevel.Text = "Verbosity level";
+		mlblLogVerbosityLevel.Boolean_0 = false;
+		mlblLogSaveToFileHint.AutoSize = true;
+		mlblLogSaveToFileHint.ForeColor = SystemColors.ControlDarkDark;
+		mlblLogSaveToFileHint.Location = new Point(14, 50);
+		mlblLogSaveToFileHint.Margin = new Padding(0);
+		mlblLogSaveToFileHint.Name = "m_lblLogSaveToFileHint";
+		mlblLogSaveToFileHint.Size = new Size(338, 16);
+		mlblLogSaveToFileHint.TabIndex = 46;
+		mlblLogSaveToFileHint.Text = "If checked, all log messages will be saved to the log file,";
+		mlblLogSaveToFileHint.Boolean_0 = false;
+		mchbLogSaveToFile.AutoSize = true;
+		mchbLogSaveToFile.Location = new Point(17, 27);
+		mchbLogSaveToFile.Name = "m_chbLogSaveToFile";
+		mchbLogSaveToFile.Size = new Size(150, 20);
+		mchbLogSaveToFile.TabIndex = 0;
+		mchbLogSaveToFile.Text = "Save event log to file";
+		mchbLogSaveToFile.UseVisualStyleBackColor = true;
+		mbtnSave.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+		mbtnSave.Image = Resources.opts_16;
+		mbtnSave.Location = new Point(403, 512);
+		mbtnSave.Margin = new Padding(4);
+		mbtnSave.Name = "m_btnSave";
+		mbtnSave.Size = new Size(100, 36);
+		mbtnSave.TabIndex = 99;
+		mbtnSave.Text = "Save";
+		mbtnSave.TextImageRelation = TextImageRelation.ImageBeforeText;
+		mbtnSave.UseVisualStyleBackColor = true;
+		mbtnCancel.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+		mbtnCancel.Image = Resources.cancl_16;
+		mbtnCancel.Location = new Point(511, 512);
+		mbtnCancel.Margin = new Padding(4);
+		mbtnCancel.Name = "m_btnCancel";
+		mbtnCancel.Size = new Size(100, 36);
+		mbtnCancel.TabIndex = 100;
+		mbtnCancel.Text = "Cancel";
+		mbtnCancel.TextImageRelation = TextImageRelation.ImageBeforeText;
+		mbtnCancel.UseVisualStyleBackColor = true;
+		label16.AutoSize = true;
+		label16.Location = new Point(33, 54);
+		label16.Name = "label16";
+		label16.Size = new Size(48, 13);
+		label16.TabIndex = 0;
+		label16.Text = "Address:";
+		label16.Boolean_0 = false;
+		chbHideWhenMimimized.Location = new Point(0, 0);
+		chbHideWhenMimimized.Name = "chbHideWhenMimimized";
+		chbHideWhenMimimized.Size = new Size(104, 24);
+		chbHideWhenMimimized.TabIndex = 0;
+		mlblGeoIPWarning.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+		mlblGeoIPWarning.AutoSize = true;
+		mlblGeoIPWarning.Font = new Font("Microsoft Sans Serif", 9.75f, FontStyle.Regular, GraphicsUnit.Point, 204);
+		mlblGeoIPWarning.ForeColor = Color.Red;
+		mlblGeoIPWarning.Location = new Point(9, 507);
+		mlblGeoIPWarning.Name = "m_lblGeoIPWarning";
+		mlblGeoIPWarning.Size = new Size(336, 16);
+		mlblGeoIPWarning.TabIndex = 101;
+		mlblGeoIPWarning.Text = "Please keep the number of entries as short as possible,";
+		mlblGeoIPWarning.Boolean_0 = true;
+		mlblGeoIPWarning.Visible = false;
+		mlnkGeoIPHelp.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+		mlnkGeoIPHelp.AutoSize = true;
+		mlnkGeoIPHelp.Font = new Font("Microsoft Sans Serif", 9.75f, FontStyle.Regular, GraphicsUnit.Point, 204);
+		mlnkGeoIPHelp.LinkBehavior = LinkBehavior.NeverUnderline;
+		mlnkGeoIPHelp.LinkColor = Color.FromArgb(38, 135, 200);
+		mlnkGeoIPHelp.Location = new Point(9, 530);
+		mlnkGeoIPHelp.Margin = new Padding(0);
+		mlnkGeoIPHelp.Name = "m_lnkGeoIPHelp";
+		mlnkGeoIPHelp.RightToLeft = RightToLeft.No;
+		mlnkGeoIPHelp.Size = new Size(165, 16);
+		mlnkGeoIPHelp.TabIndex = 102;
+		mlnkGeoIPHelp.TabStop = true;
+		mlnkGeoIPHelp.Text = "click here for more details..";
+		mlnkGeoIPHelp.Visible = false;
+		mlnkGeoIPHelp.VisitedLinkColor = Color.FromArgb(38, 135, 200);
 		base.AutoScaleDimensions = new SizeF(8f, 16f);
 		base.AutoScaleMode = AutoScaleMode.Font;
 		base.ClientSize = new Size(624, 561);
-		base.Controls.Add(gclass3_1);
-		base.Controls.Add(class62_15);
-		base.Controls.Add(class66_0);
-		base.Controls.Add(class66_1);
-		base.Controls.Add(control14_0);
+		base.Controls.Add(mlnkGeoIPHelp);
+		base.Controls.Add(mlblGeoIPWarning);
+		base.Controls.Add(mbtnSave);
+		base.Controls.Add(mbtnCancel);
+		base.Controls.Add(tabControl1);
 		Font = new Font("Microsoft Sans Serif", 9.75f, FontStyle.Regular, GraphicsUnit.Point, 204);
 		base.Name = "OptionsDialog";
 		base.StartPosition = FormStartPosition.Manual;
 		Text = "RdpGuard Options";
-		control14_0.ResumeLayout(performLayout: false);
-		tabPage_0.ResumeLayout(performLayout: false);
-		tabPage_0.PerformLayout();
-		((ISupportInitialize)numericUpDown_2).EndInit();
-		((ISupportInitialize)numericUpDown_1).EndInit();
-		((ISupportInitialize)numericUpDown_0).EndInit();
-		tabPage_5.ResumeLayout(performLayout: false);
-		tabPage_5.PerformLayout();
-		tabPage_4.ResumeLayout(performLayout: false);
-		tabPage_4.PerformLayout();
-		class65_1.ResumeLayout(performLayout: false);
-		class65_1.PerformLayout();
-		tabPage_1.ResumeLayout(performLayout: false);
-		tabPage_1.PerformLayout();
-		((ISupportInitialize)numericUpDown_4).EndInit();
-		tabPage_3.ResumeLayout(performLayout: false);
-		class65_0.ResumeLayout(performLayout: false);
-		class65_0.PerformLayout();
-		((ISupportInitialize)numericUpDown_3).EndInit();
-		tabPage_2.ResumeLayout(performLayout: false);
-		class65_2.ResumeLayout(performLayout: false);
-		class65_2.PerformLayout();
-		((ISupportInitialize)numericUpDown_5).EndInit();
+		tabControl1.ResumeLayout(performLayout: false);
+		mtabGeneral.ResumeLayout(performLayout: false);
+		mtabGeneral.PerformLayout();
+		((ISupportInitialize)mnumResetCountersAfter).EndInit();
+		((ISupportInitialize)mnumAutoUnbanPeriod).EndInit();
+		((ISupportInitialize)mnumMaxFailedLogonAttempts).EndInit();
+		mtabCloud.ResumeLayout(performLayout: false);
+		mtabCloud.PerformLayout();
+		mtabGeoIP.ResumeLayout(performLayout: false);
+		mtabGeoIP.PerformLayout();
+		mgbGeoIPMode.ResumeLayout(performLayout: false);
+		mgbGeoIPMode.PerformLayout();
+		mtabInterface.ResumeLayout(performLayout: false);
+		mtabInterface.PerformLayout();
+		((ISupportInitialize)mnumIPPageSize).EndInit();
+		mtabConnection.ResumeLayout(performLayout: false);
+		mgbProxySettings.ResumeLayout(performLayout: false);
+		mgbProxySettings.PerformLayout();
+		((ISupportInitialize)mnumProxyPort).EndInit();
+		mtabLogging.ResumeLayout(performLayout: false);
+		mgbLogging.ResumeLayout(performLayout: false);
+		mgbLogging.PerformLayout();
+		((ISupportInitialize)mnumLogRemoveOldLogsDays).EndInit();
 		ResumeLayout(performLayout: false);
 		PerformLayout();
 	}
 
-	private void gclass3_0_Click(object sender, EventArgs e)
+	private void mlnkAdvancedBlockingSettings_Click(object sender, EventArgs e)
 	{
 		AdvancedBlockingSettingsDialog form = new AdvancedBlockingSettingsDialog(class164_0.Class169_0);
 		using (form)
@@ -1254,35 +1254,35 @@ internal sealed class OptionsDialog : Form0
 		SaveSettings();
 	}
 
-	private void class61_4_Click(object sender, EventArgs e)
+	private void mchbProxyAuthentication_Click(object sender, EventArgs e)
 	{
 		SaveSettings();
 	}
 
-	private void class61_9_Click(object sender, EventArgs e)
+	private void mchbLogRemoveOld_Click(object sender, EventArgs e)
 	{
 		ValidateInput();
 	}
 
-	private void gclass3_3_Click(object sender, EventArgs e)
+	private void mlnkLogSuccessfulLoginAttemptsConfiguration_Click(object sender, EventArgs e)
 	{
-		string_0 = smethod_4(string_0);
+		string_0 = OnButtonOk(string_0);
 	}
 
-	private void class61_6_CheckedChanged(object sender, EventArgs e)
+	private void mchbEnableGeoIPEngine_CheckedChanged(object sender, EventArgs e)
 	{
-		bool enabled = class61_6.Checked;
-		class65_1.Enabled = enabled;
-		control0_0.Enabled = enabled;
+		bool enabled = mchbEnableGeoIPEngine.Checked;
+		mgbGeoIPMode.Enabled = enabled;
+		mlstGeoIPCountries.Enabled = enabled;
 		OnTextChanged();
 	}
 
-	private void class64_1_CheckedChanged(object sender, EventArgs e)
+	private void mrbGeoIPModeDeny_CheckedChanged(object sender, EventArgs e)
 	{
 		LoadSettings();
 	}
 
-	private void class64_0_CheckedChanged(object sender, EventArgs e)
+	private void mrbGeoIPModeAllow_CheckedChanged(object sender, EventArgs e)
 	{
 		LoadSettings();
 	}
@@ -1292,9 +1292,9 @@ internal sealed class OptionsDialog : Form0
 		OnTextChanged();
 	}
 
-	private void gclass3_1_Click(object sender, EventArgs e)
+	private void mlnkGeoIPHelp_Click(object sender, EventArgs e)
 	{
-		method_9(Class148.Class156.String_1);
+		ShowOnlineHelp(Class148.Class156.String_1);
 	}
 
 	private void control14_0_SelectedIndexChanged(object sender, EventArgs e)
@@ -1302,14 +1302,14 @@ internal sealed class OptionsDialog : Form0
 		OnTextChanged();
 	}
 
-	private void class66_0_Click(object sender, EventArgs e)
+	private void mbtnSave_Click(object sender, EventArgs e)
 	{
 		OnLoad();
-		method_8(DialogResult.OK);
+		CloseDialog(DialogResult.OK);
 	}
 
-	private void class66_1_Click(object sender, EventArgs e)
+	private void mbtnCancel_Click(object sender, EventArgs e)
 	{
-		method_8(DialogResult.Cancel);
+		CloseDialog(DialogResult.Cancel);
 	}
 }
