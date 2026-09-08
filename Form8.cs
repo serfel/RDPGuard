@@ -4,7 +4,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using Properties;
 
-internal sealed class Form8 : Form0
+internal sealed class WebFormsSettingsDialog : Form0
 {
 	private IContainer icontainer_0;
 
@@ -56,7 +56,7 @@ internal sealed class Form8 : Form0
 		}
 	}
 
-	public Form8(Class126 class126_0)
+	public WebFormsSettingsDialog(Class126 class126_0)
 		: base(new Size(500, 560))
 	{
 		method_15();

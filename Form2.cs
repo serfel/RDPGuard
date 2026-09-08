@@ -4,7 +4,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using Properties;
 
-internal sealed class Form2 : Form0
+internal sealed class AdvancedHttpSettingsDialog : Form0
 {
 	private readonly string string_0 = string.Empty;
 
@@ -58,7 +58,7 @@ internal sealed class Form2 : Form0
 		}
 	}
 
-	public Form2(string string_1)
+	public AdvancedHttpSettingsDialog(string string_1)
 		: base(new Size(470, 330))
 	{
 		string_0 = string_1;

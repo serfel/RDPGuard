@@ -3,7 +3,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using Properties;
 
-internal sealed class Control6 : Control4
+internal sealed class ReportToAbuseIPDBAddEditControl : Control4
 {
 	private IContainer icontainer_0;
 
@@ -83,7 +83,7 @@ internal sealed class Control6 : Control4
 
 	private void method_1()
 	{
-		new ComponentResourceManager(typeof(Control6));
+		new ComponentResourceManager(typeof(ReportToAbuseIPDBAddEditControl));
 		class65_0 = new Class65();
 		pictureBox_0 = new PictureBox();
 		gclass3_1 = new GClass3();

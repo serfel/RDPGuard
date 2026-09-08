@@ -4,11 +4,11 @@ using System.Drawing;
 using System.Windows.Forms;
 using Properties;
 
-internal sealed class Form10 : Form0
+internal sealed class LicenseActivatationOfflineDialog : Form0
 {
 	private sealed class Class15
 	{
-		public Form10 form10_0;
+		public LicenseActivatationOfflineDialog form10_0;
 
 		public object object_0;
 
@@ -22,7 +22,7 @@ internal sealed class Form10 : Form0
 
 	private sealed class Class16
 	{
-		public Form10 form10_0;
+		public LicenseActivatationOfflineDialog form10_0;
 
 		public object object_0;
 
@@ -74,7 +74,7 @@ internal sealed class Form10 : Form0
 
 	private GClass3 gclass3_2;
 
-	public Form10()
+	public LicenseActivatationOfflineDialog()
 		: base(new Size(583, 757))
 	{
 		method_16();

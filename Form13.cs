@@ -4,7 +4,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using Properties;
 
-internal sealed class Form13 : Form0
+internal sealed class MsSqlExclusionsDialog : Form0
 {
 	private IContainer icontainer_0;
 
@@ -40,7 +40,7 @@ internal sealed class Form13 : Form0
 		}
 	}
 
-	public Form13()
+	public MsSqlExclusionsDialog()
 		: base(new Size(465, 415))
 	{
 		method_12();
@@ -67,7 +67,7 @@ internal sealed class Form13 : Form0
 	private void method_12()
 	{
 		icontainer_0 = new Container();
-		new ComponentResourceManager(typeof(Form13));
+		new ComponentResourceManager(typeof(MsSqlExclusionsDialog));
 		class66_0 = new Class66();
 		class66_1 = new Class66();
 		pictureBox_0 = new PictureBox();

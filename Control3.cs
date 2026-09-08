@@ -4,7 +4,7 @@ using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 
-internal sealed class Control3 : Control2
+internal sealed class FtpMonitoringViaLogsControl : Control2
 {
 	[Serializable]
 	private sealed class _003C_003Ec
@@ -35,7 +35,7 @@ internal sealed class Control3 : Control2
 
 	private Class54 class54_0;
 
-	private Control15 control15_0;
+	private DirectoriesTable control15_0;
 
 	private Class62 class62_1;
 
@@ -105,7 +105,7 @@ internal sealed class Control3 : Control2
 	protected override void vmethod_1()
 	{
 		class0_0.SelectedIndexChanged += class0_0_SelectedIndexChanged;
-		Control15 control = control15_0;
+		DirectoriesTable control = control15_0;
 		control.eventHandler_0 = (EventHandler)Delegate.Combine(control.eventHandler_0, new EventHandler(method_3));
 	}
 
@@ -202,7 +202,7 @@ internal sealed class Control3 : Control2
 		gclass2_0 = new GClass2();
 		class62_0 = new Class62();
 		class54_0 = new Class54();
-		control15_0 = new Control15();
+		control15_0 = new DirectoriesTable();
 		class62_1 = new Class62();
 		class0_0 = new Class0();
 		class63_0 = new Class63();

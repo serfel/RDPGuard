@@ -4,7 +4,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using Properties;
 
-internal sealed class Form5 : Form0
+internal sealed class ProtocolRulesDialog : Form0
 {
 	public string string_0 = string.Empty;
 
@@ -82,7 +82,7 @@ internal sealed class Form5 : Form0
 		}
 	}
 
-	public Form5()
+	public ProtocolRulesDialog()
 		: base(new Size(580, 470))
 	{
 		method_12();
@@ -109,7 +109,7 @@ internal sealed class Form5 : Form0
 	private void method_12()
 	{
 		icontainer_0 = new Container();
-		new ComponentResourceManager(typeof(Form5));
+		new ComponentResourceManager(typeof(ProtocolRulesDialog));
 		class66_0 = new Class66();
 		class66_1 = new Class66();
 		pictureBox_0 = new PictureBox();

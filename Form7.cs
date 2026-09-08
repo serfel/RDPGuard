@@ -7,7 +7,7 @@ using System.Windows.Forms;
 using Properties;
 using rdpguard.lib;
 
-internal sealed class Form7 : Form0
+internal sealed class GeoIPCountryAddDialog : Form0
 {
 	[Serializable]
 	private sealed class _003C_003Ec
@@ -31,7 +31,7 @@ internal sealed class Form7 : Form0
 
 	private sealed class Class9
 	{
-		public Form7 form7_0;
+		public GeoIPCountryAddDialog form7_0;
 
 		public object object_0;
 
@@ -68,7 +68,7 @@ internal sealed class Form7 : Form0
 
 	private GClass3 gclass3_0;
 
-	private Control1 control1_0;
+	private GeoIPCountriesTable control1_0;
 
 	private PictureBox pictureBox_1;
 
@@ -78,7 +78,7 @@ internal sealed class Form7 : Form0
 
 	protected override Button Button_0 => class66_0;
 
-	public Form7(GClass5[] gclass5_0, GeoIPDBVersion geoIPDBVersion_1)
+	public GeoIPCountryAddDialog(GClass5[] gclass5_0, GeoIPDBVersion geoIPDBVersion_1)
 		: base(new Size(600, 525))
 	{
 		Func<GClass5, string> selector = _003C_003Ec._003C_003E9.method_0;
@@ -111,7 +111,7 @@ internal sealed class Form7 : Form0
 			return;
 		}
 		method_15(bool_0: false);
-		Control1 control = control1_0;
+		GeoIPCountriesTable control = control1_0;
 		IEnumerable<GClass5> source = @class.eventArgs0_0.gclass29_0.gclass5_0.Where(@class.method_1);
 		Func<GClass5, string> keySelector = _003C_003Ec._003C_003E9.method_1;
 		control.GClass5_1 = source.OrderBy(keySelector).ToArray();
@@ -166,7 +166,7 @@ internal sealed class Form7 : Form0
 		pictureBox_0 = new PictureBox();
 		class62_1 = new Class62();
 		gclass3_0 = new GClass3();
-		control1_0 = new Control1();
+		control1_0 = new GeoIPCountriesTable();
 		pictureBox_1 = new PictureBox();
 		class63_0 = new Class63();
 		((ISupportInitialize)pictureBox_0).BeginInit();

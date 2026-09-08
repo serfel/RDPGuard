@@ -5,9 +5,9 @@ using System.Linq;
 using System.Windows.Forms;
 using Properties;
 
-internal sealed class Form4 : Form0
+internal sealed class HttpSettingsDialog : Form0
 {
-	private readonly Form2 form2_0 = new Form2(Class148.Class151.String_4);
+	private readonly AdvancedHttpSettingsDialog form2_0 = new AdvancedHttpSettingsDialog(Class148.Class151.String_4);
 
 	private IContainer icontainer_0;
 
@@ -35,7 +35,7 @@ internal sealed class Form4 : Form0
 
 	private Class62 class62_2;
 
-	private Control15 control15_0;
+	private DirectoriesTable control15_0;
 
 	private Class61 class61_1;
 
@@ -71,7 +71,7 @@ internal sealed class Form4 : Form0
 		}
 	}
 
-	public Form4(Class115 class115_0)
+	public HttpSettingsDialog(Class115 class115_0)
 		: base(new Size(505, 675))
 	{
 		method_15();
@@ -89,7 +89,7 @@ internal sealed class Form4 : Form0
 	{
 		gclass3_0.Click += gclass3_0_Click;
 		class61_0.CheckedChanged += class61_0_CheckedChanged;
-		Control15 control = control15_0;
+		DirectoriesTable control = control15_0;
 		control.eventHandler_0 = (EventHandler)Delegate.Combine(control.eventHandler_0, new EventHandler(method_16));
 		class61_1.CheckedChanged += class61_1_CheckedChanged;
 		textBox_0.TextChanged += textBox_0_TextChanged;
@@ -146,7 +146,7 @@ internal sealed class Form4 : Form0
 		textBox_0 = new TextBox();
 		class63_1 = new Class63();
 		class62_2 = new Class62();
-		control15_0 = new Control15();
+		control15_0 = new DirectoriesTable();
 		class61_1 = new Class61();
 		class63_2 = new Class63();
 		class63_3 = new Class63();

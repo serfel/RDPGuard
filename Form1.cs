@@ -5,7 +5,7 @@ using System.Windows.Forms;
 using Properties;
 using rdpguard.lib;
 
-internal sealed class Form1 : Form0
+internal sealed class AdvancedGeoIPSettingsDialog : Form0
 {
 	private static Size size_0 = new Size(580, 485);
 
@@ -221,7 +221,7 @@ internal sealed class Form1 : Form0
 		}
 	}
 
-	public Form1()
+	public AdvancedGeoIPSettingsDialog()
 		: base(size_0)
 	{
 		method_14();

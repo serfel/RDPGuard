@@ -4,11 +4,11 @@ using System.Drawing;
 using System.Windows.Forms;
 using Properties;
 
-internal sealed class Form17 : Form0
+internal sealed class ImapSettingsDialog : Form0
 {
-	private Control12 control12_0;
+	private TrafficMonitoringControl control12_0;
 
-	private Control11 control11_0;
+	private ImapMonitoringViaLogsControl control11_0;
 
 	private IContainer icontainer_0;
 
@@ -106,7 +106,7 @@ internal sealed class Form17 : Form0
 		}
 	}
 
-	public Form17(Class116 class116_0)
+	public ImapSettingsDialog(Class116 class116_0)
 		: base(new Size(565, 655))
 	{
 		method_14();
@@ -119,7 +119,7 @@ internal sealed class Form17 : Form0
 
 	private void method_11()
 	{
-		control12_0 = new Control12(new Class116().UInt16_1)
+		control12_0 = new TrafficMonitoringControl(new Class116().UInt16_1)
 		{
 			String_0 = "Select monitoring method for IMAP traffic:",
 			String_1 = "Specify IMAP port:",
@@ -127,7 +127,7 @@ internal sealed class Form17 : Form0
 			Dock = DockStyle.Fill
 		};
 		panel_0.Controls.Add(control12_0);
-		control11_0 = new Control11
+		control11_0 = new ImapMonitoringViaLogsControl
 		{
 			Dock = DockStyle.Fill
 		};

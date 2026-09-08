@@ -4,11 +4,11 @@ using System.Drawing;
 using System.Windows.Forms;
 using Properties;
 
-internal sealed class Form30 : Form0
+internal sealed class LicenseActivatationDialog : Form0
 {
 	private sealed class Class21
 	{
-		public Form30 form30_0;
+		public LicenseActivatationDialog form30_0;
 
 		public object object_0;
 
@@ -22,7 +22,7 @@ internal sealed class Form30 : Form0
 
 	private sealed class Class22
 	{
-		public Form30 form30_0;
+		public LicenseActivatationDialog form30_0;
 
 		public object object_0;
 
@@ -41,7 +41,7 @@ internal sealed class Form30 : Form0
 
 	private sealed class Class23
 	{
-		public Form30 form30_0;
+		public LicenseActivatationDialog form30_0;
 
 		public object object_0;
 
@@ -65,7 +65,7 @@ internal sealed class Form30 : Form0
 
 	private sealed class Class24
 	{
-		public Form30 form30_0;
+		public LicenseActivatationDialog form30_0;
 
 		public object object_0;
 
@@ -79,7 +79,7 @@ internal sealed class Form30 : Form0
 
 	private sealed class Class25
 	{
-		public Form30 form30_0;
+		public LicenseActivatationDialog form30_0;
 
 		public object object_0;
 
@@ -129,7 +129,7 @@ internal sealed class Form30 : Form0
 
 	protected override Button Button_0 => class66_0;
 
-	public Form30()
+	public LicenseActivatationDialog()
 		: base(new Size(700, 285))
 	{
 		method_23();
@@ -359,7 +359,7 @@ internal sealed class Form30 : Form0
 
 	private void method_23()
 	{
-		ComponentResourceManager componentResourceManager = new ComponentResourceManager(typeof(Form30));
+		ComponentResourceManager componentResourceManager = new ComponentResourceManager(typeof(LicenseActivatationDialog));
 		pictureBox_0 = new PictureBox();
 		class62_0 = new Class62();
 		gclass3_0 = new GClass3();
@@ -543,7 +543,7 @@ internal sealed class Form30 : Form0
 
 	private void pictureBox_0_MouseDoubleClick(object sender, MouseEventArgs e)
 	{
-		Form10 form = new Form10();
+		LicenseActivatationOfflineDialog form = new LicenseActivatationOfflineDialog();
 		using (form)
 		{
 			if (DialogResult.OK == form.ShowDialog())

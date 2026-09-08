@@ -5,7 +5,7 @@ using System.Linq;
 using System.Windows.Forms;
 using Properties;
 
-internal sealed class Control15 : UserControl
+internal sealed class DirectoriesTable : UserControl
 {
 	[Serializable]
 	private sealed class _003C_003Ec
@@ -52,7 +52,7 @@ internal sealed class Control15 : UserControl
 		}
 	}
 
-	public Control15()
+	public DirectoriesTable()
 	{
 		InitializeComponent();
 		method_0();
@@ -213,7 +213,7 @@ internal sealed class Control15 : UserControl
 	private void InitializeComponent()
 	{
 		this.icontainer_0 = new System.ComponentModel.Container();
-		System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Control15));
+		System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DirectoriesTable));
 		this.class67_0 = new Class67();
 		this.toolStripButton_0 = new System.Windows.Forms.ToolStripButton();
 		this.toolStripButton_1 = new System.Windows.Forms.ToolStripButton();

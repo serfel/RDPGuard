@@ -8,7 +8,7 @@ using System.Windows.Forms;
 using Properties;
 using rdpguard.lib;
 
-internal sealed class Control0 : UserControl
+internal sealed class EditableGeoIPCountriesTable : UserControl
 {
 	[Serializable]
 	private sealed class _003C_003Ec
@@ -32,7 +32,7 @@ internal sealed class Control0 : UserControl
 
 	private sealed class Class4
 	{
-		public Control0 control0_0;
+		public EditableGeoIPCountriesTable control0_0;
 
 		public object object_0;
 
@@ -90,7 +90,7 @@ internal sealed class Control0 : UserControl
 
 	private ToolStripButton toolStripButton_4;
 
-	private Control1 control1_0;
+	private GeoIPCountriesTable control1_0;
 
 	public GClass5[] GClass5_0
 	{
@@ -168,7 +168,7 @@ internal sealed class Control0 : UserControl
 		}
 	}
 
-	public Control0()
+	public EditableGeoIPCountriesTable()
 	{
 		InitializeComponent();
 		method_0();
@@ -214,7 +214,7 @@ internal sealed class Control0 : UserControl
 
 	private void method_2()
 	{
-		using Form7 form = new Form7(GClass5_0, geoIPDBVersion_0);
+		using GeoIPCountryAddDialog form = new GeoIPCountryAddDialog(GClass5_0, geoIPDBVersion_0);
 		if (DialogResult.OK == form.ShowDialog())
 		{
 			control1_0.method_1(form.GClass5_0);
@@ -223,7 +223,7 @@ internal sealed class Control0 : UserControl
 
 	private void method_3()
 	{
-		Form27 form = new Form27(null)
+		IPListEntryAddEditDialog form = new IPListEntryAddEditDialog(null)
 		{
 			Image_0 = Resources.whitelist_add_48,
 			string_0 = Class148.Class156.string_0,
@@ -244,7 +244,7 @@ internal sealed class Control0 : UserControl
 		{
 			return;
 		}
-		Form28 form = new Form28(IPListEntry_0)
+		IPListDialog form = new IPListDialog(IPListEntry_0)
 		{
 			string_0 = Class148.Class156.string_0,
 			Image_0 = Resources.whitelist_48,
@@ -265,7 +265,7 @@ internal sealed class Control0 : UserControl
 
 	private void method_5()
 	{
-		Form1 form = new Form1
+		AdvancedGeoIPSettingsDialog form = new AdvancedGeoIPSettingsDialog
 		{
 			GClass7_0 = gclass7_0,
 			GClass7_1 = gclass7_1,
@@ -324,7 +324,7 @@ internal sealed class Control0 : UserControl
 			Func<GClass5, string> selector = _003C_003Ec._003C_003E9.method_0;
 			class2.string_0 = gClass5_.Select(selector).ToArray();
 			IPListEntry[] iPListEntry_ = control1_0.IPListEntry_0;
-			Control1 control = control1_0;
+			GeoIPCountriesTable control = control1_0;
 			IEnumerable<GClass5> source = @class.eventArgs0_0.gclass29_0.gclass5_0.Where(class2.method_0);
 			Func<GClass5, string> keySelector = _003C_003Ec._003C_003E9.method_1;
 			control.GClass5_1 = source.OrderBy(keySelector).ToArray();
@@ -366,7 +366,7 @@ internal sealed class Control0 : UserControl
 		this.toolStripDropDownButton_0 = new System.Windows.Forms.ToolStripDropDownButton();
 		this.toolStripButton_0 = new System.Windows.Forms.ToolStripButton();
 		this.gcontrol1_0 = new GControl1();
-		this.control1_0 = new Control1();
+		this.control1_0 = new GeoIPCountriesTable();
 		this.class67_0.SuspendLayout();
 		base.SuspendLayout();
 		this.class67_0.Dock = System.Windows.Forms.DockStyle.Bottom;

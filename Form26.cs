@@ -4,7 +4,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using Properties;
 
-internal sealed class Form26 : Form0
+internal sealed class SmtpServerAddEditDialog : Form0
 {
 	private Class109 class109_0;
 
@@ -80,7 +80,7 @@ internal sealed class Form26 : Form0
 
 	protected override Button Button_0 => class66_1;
 
-	public Form26(Class109 class109_1)
+	public SmtpServerAddEditDialog(Class109 class109_1)
 		: base(new Size(560, 580))
 	{
 		method_12();

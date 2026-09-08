@@ -4,9 +4,9 @@ using System.Drawing;
 using System.Windows.Forms;
 using Properties;
 
-internal sealed class Form12 : Form0
+internal sealed class SipSettingsDialog : Form0
 {
-	private Control12 control12_0;
+	private TrafficMonitoringControl control12_0;
 
 	private IContainer icontainer_0;
 
@@ -55,7 +55,7 @@ internal sealed class Form12 : Form0
 		}
 	}
 
-	public Form12(Class124 class124_0)
+	public SipSettingsDialog(Class124 class124_0)
 		: base(new Size(565, 495))
 	{
 		method_14();
@@ -68,7 +68,7 @@ internal sealed class Form12 : Form0
 
 	private void method_11()
 	{
-		control12_0 = new Control12(new Class124().UInt16_1)
+		control12_0 = new TrafficMonitoringControl(new Class124().UInt16_1)
 		{
 			String_0 = "Select monitoring method for SIP protocol:",
 			String_1 = "Specify SIP port:",
@@ -107,7 +107,7 @@ internal sealed class Form12 : Form0
 	private void method_14()
 	{
 		icontainer_0 = new Container();
-		new ComponentResourceManager(typeof(Form12));
+		new ComponentResourceManager(typeof(SipSettingsDialog));
 		class66_0 = new Class66();
 		class66_1 = new Class66();
 		gcontrol0_0 = new GControl0();

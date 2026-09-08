@@ -11,7 +11,7 @@ using Properties;
 using rdpguard_ui;
 using rdpguard.lib;
 
-internal sealed class Form28 : Form0
+internal sealed class IPListDialog : Form0
 {
 	[Serializable]
 	private sealed class _003C_003Ec
@@ -205,7 +205,7 @@ internal sealed class Form28 : Form0
 		}
 	}
 
-	public Form28(IPListEntry[] iplistEntry_0)
+	public IPListDialog(IPListEntry[] iplistEntry_0)
 		: base(new Size(640, 480))
 	{
 		method_24();
@@ -216,7 +216,7 @@ internal sealed class Form28 : Form0
 
 	private void method_11()
 	{
-		Form27 form = new Form27(null)
+		IPListEntryAddEditDialog form = new IPListEntryAddEditDialog(null)
 		{
 			Image_0 = Image_1
 		};
@@ -231,7 +231,7 @@ internal sealed class Form28 : Form0
 
 	private void method_12()
 	{
-		Form27 form = new Form27(class46_0.IPListEntry_1)
+		IPListEntryAddEditDialog form = new IPListEntryAddEditDialog(class46_0.IPListEntry_1)
 		{
 			Image_0 = Image_2
 		};

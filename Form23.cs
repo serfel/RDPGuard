@@ -4,7 +4,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using Properties;
 
-internal sealed class Form23 : Form0
+internal sealed class IPFilterDialog : Form0
 {
 	private Class135 class135_0;
 
@@ -52,7 +52,7 @@ internal sealed class Form23 : Form0
 		Class135_0 = null;
 	}
 
-	public Form23()
+	public IPFilterDialog()
 		: base(new Size(520, 265))
 	{
 		method_14();

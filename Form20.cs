@@ -4,11 +4,11 @@ using System.Drawing;
 using System.Windows.Forms;
 using Properties;
 
-internal sealed class Form20 : Form0
+internal sealed class SmtpSettingsDialog : Form0
 {
-	private Control12 control12_0;
+	private TrafficMonitoringControl control12_0;
 
-	private Control13 control13_0;
+	private SmtpMonitoringViaLogsControl control13_0;
 
 	private Class131 class131_0 = new Class131();
 
@@ -112,7 +112,7 @@ internal sealed class Form20 : Form0
 		}
 	}
 
-	public Form20(Class125 class125_0)
+	public SmtpSettingsDialog(Class125 class125_0)
 		: base(new Size(565, 655))
 	{
 		method_14();
@@ -125,7 +125,7 @@ internal sealed class Form20 : Form0
 
 	private void method_11()
 	{
-		control12_0 = new Control12(new Class125().UInt16_1)
+		control12_0 = new TrafficMonitoringControl(new Class125().UInt16_1)
 		{
 			String_0 = "Select monitoring method for SMTP traffic:",
 			String_1 = "Specify SMTP port:",
@@ -133,7 +133,7 @@ internal sealed class Form20 : Form0
 			Dock = DockStyle.Fill
 		};
 		panel_0.Controls.Add(control12_0);
-		control13_0 = new Control13
+		control13_0 = new SmtpMonitoringViaLogsControl
 		{
 			Dock = DockStyle.Fill
 		};
@@ -419,7 +419,7 @@ internal sealed class Form20 : Form0
 
 	private void gclass3_1_Click(object sender, EventArgs e)
 	{
-		using Form6 form = new Form6(class131_0);
+		using AdvancedSmtpSettingsDialog form = new AdvancedSmtpSettingsDialog(class131_0);
 		if (DialogResult.OK == form.ShowDialog())
 		{
 			class131_0 = form.Class131_0;

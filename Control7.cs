@@ -4,7 +4,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using Properties;
 
-internal sealed class Control7 : Control4
+internal sealed class ExecuteProgramAddEditControl : Control4
 {
 	private readonly Dictionary<GEnum2, string> dictionary_0 = new Dictionary<GEnum2, string>
 	{

@@ -3,7 +3,7 @@ using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
 
-internal sealed class Control12 : Control2
+internal sealed class TrafficMonitoringControl : Control2
 {
 	public ushort[] ushort_0;
 
@@ -109,7 +109,7 @@ internal sealed class Control12 : Control2
 		}
 	}
 
-	public Control12(ushort[] ushort_1)
+	public TrafficMonitoringControl(ushort[] ushort_1)
 	{
 		ushort_0 = ushort_1;
 	}
@@ -314,7 +314,7 @@ internal sealed class Control12 : Control2
 
 	private void gclass3_1_Click(object sender, EventArgs e)
 	{
-		Form19 form = new Form19
+		RawSocketsDialog form = new RawSocketsDialog
 		{
 			Boolean_0 = bool_1,
 			GClass24_0 = gclass24_0
@@ -331,7 +331,7 @@ internal sealed class Control12 : Control2
 
 	private void gclass3_0_Click(object sender, EventArgs e)
 	{
-		using Form18 form = new Form18(class127_0);
+		using WinPcapDialog form = new WinPcapDialog(class127_0);
 		if (DialogResult.OK == form.ShowDialog())
 		{
 			Class127 @class = form.Class127_0;

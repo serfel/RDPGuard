@@ -5,7 +5,7 @@ using System.IO;
 using System.Windows.Forms;
 using Properties;
 
-internal sealed class Form16 : Form0
+internal sealed class MySqlSettingsDialog : Form0
 {
 	private IContainer icontainer_0;
 
@@ -114,7 +114,7 @@ internal sealed class Form16 : Form0
 		}
 	}
 
-	public Form16(Class119 class119_0)
+	public MySqlSettingsDialog(Class119 class119_0)
 		: base(new Size(595, 680))
 	{
 		method_15();

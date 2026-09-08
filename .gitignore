@@ -1,0 +1,52 @@
+```
+# Compiled and build artifacts
+*.exe
+*.dll
+*.pdb
+*.obj
+*.lib
+*.so
+*.dylib
+*.class
+*.jar
+*.war
+*.ear
+*.o
+*.a
+*.out
+
+# Dependencies
+packages/
+bin/
+obj/
+Debug/
+Release/
+.vs/
+*.user
+*.userosscache
+*.suo
+*.userprefs
+
+# Logs and temp files
+*.log
+*.tmp
+*.temp
+*.cache
+
+# Environment
+.env
+.env.local
+*.env.*
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Build outputs
+build/
+dist/
+out/
+target/
+```

@@ -6,7 +6,7 @@ using System.Linq;
 using System.Windows.Forms;
 using Properties;
 
-internal sealed class Form14 : Form0
+internal sealed class MsSqlSettingsDialog : Form0
 {
 	private string[] string_0 = new string[0];
 
@@ -90,7 +90,7 @@ internal sealed class Form14 : Form0
 		}
 	}
 
-	public Form14(Class117 class117_0)
+	public MsSqlSettingsDialog(Class117 class117_0)
 		: base(new Size(465, 415))
 	{
 		method_13();
@@ -136,7 +136,7 @@ internal sealed class Form14 : Form0
 	private void method_13()
 	{
 		icontainer_0 = new Container();
-		new ComponentResourceManager(typeof(Form14));
+		new ComponentResourceManager(typeof(MsSqlSettingsDialog));
 		class66_0 = new Class66();
 		class66_1 = new Class66();
 		gcontrol0_0 = new GControl0();
@@ -347,7 +347,7 @@ internal sealed class Form14 : Form0
 
 	private void gclass3_1_Click(object sender, EventArgs e)
 	{
-		Form13 form = new Form13
+		MsSqlExclusionsDialog form = new MsSqlExclusionsDialog
 		{
 			String_0 = string_0
 		};

@@ -4,7 +4,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using Properties;
 
-internal sealed class Form29 : Form0
+internal sealed class AboutDialog : Form0
 {
 	private IContainer icontainer_0;
 
@@ -22,7 +22,7 @@ internal sealed class Form29 : Form0
 
 	private GClass3 gclass3_2;
 
-	public Form29(string string_0)
+	public AboutDialog(string string_0)
 		: base(new Size(600, 235))
 	{
 		method_13();

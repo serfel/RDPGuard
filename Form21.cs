@@ -4,9 +4,9 @@ using System.Drawing;
 using System.Windows.Forms;
 using Properties;
 
-internal sealed class Form21 : Form0
+internal sealed class RdpSettingsDialog : Form0
 {
-	private Control12 control12_0;
+	private TrafficMonitoringControl control12_0;
 
 	private string string_0 = string.Empty;
 
@@ -70,7 +70,7 @@ internal sealed class Form21 : Form0
 
 	protected override Button Button_0 => class66_0;
 
-	public Form21()
+	public RdpSettingsDialog()
 		: base(new Size(565, 550))
 	{
 		method_15();
@@ -81,7 +81,7 @@ internal sealed class Form21 : Form0
 
 	private void method_11()
 	{
-		control12_0 = new Control12(null)
+		control12_0 = new TrafficMonitoringControl(null)
 		{
 			String_0 = "Select monitoring method for RDP over TLS:",
 			String_1 = "RDP port (leave it empty to detect automatically):",
@@ -115,7 +115,7 @@ internal sealed class Form21 : Form0
 
 	private void method_14()
 	{
-		Form5 form = new Form5
+		ProtocolRulesDialog form = new ProtocolRulesDialog
 		{
 			String_0 = "RDP Exclusions",
 			String_1 = "RDP Exclusions",
@@ -151,7 +151,7 @@ internal sealed class Form21 : Form0
 	private void method_15()
 	{
 		icontainer_0 = new Container();
-		new ComponentResourceManager(typeof(Form21));
+		new ComponentResourceManager(typeof(RdpSettingsDialog));
 		class66_0 = new Class66();
 		class66_1 = new Class66();
 		gcontrol0_0 = new GControl0();

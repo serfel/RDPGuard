@@ -7,7 +7,7 @@ using System.Linq;
 using System.Windows.Forms;
 using Properties;
 
-internal sealed class Form25 : Form0
+internal sealed class SmtpServersDialog : Form0
 {
 	[Serializable]
 	private sealed class _003C_003Ec
@@ -31,7 +31,7 @@ internal sealed class Form25 : Form0
 
 	private sealed class Class19
 	{
-		public Form25 form25_0;
+		public SmtpServersDialog form25_0;
 
 		public object object_0;
 
@@ -92,7 +92,7 @@ internal sealed class Form25 : Form0
 		}
 	}
 
-	public Form25()
+	public SmtpServersDialog()
 		: base(new Size(700, 525))
 	{
 		method_21();
@@ -130,7 +130,7 @@ internal sealed class Form25 : Form0
 
 	private void method_14()
 	{
-		using Form26 form = new Form26(null);
+		using SmtpServerAddEditDialog form = new SmtpServerAddEditDialog(null);
 		if (DialogResult.OK == form.ShowDialog())
 		{
 			method_19(form.Class109_0);
@@ -140,7 +140,7 @@ internal sealed class Form25 : Form0
 
 	private void method_15()
 	{
-		using Form26 form = new Form26(gclass0_0.SelectedItems[0].Tag as Class109);
+		using SmtpServerAddEditDialog form = new SmtpServerAddEditDialog(gclass0_0.SelectedItems[0].Tag as Class109);
 		if (DialogResult.OK == form.ShowDialog())
 		{
 			gclass0_0.SelectedItems[0].Tag = form.Class109_0;

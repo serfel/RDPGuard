@@ -5,11 +5,11 @@ using System.Threading;
 using System.Windows.Forms;
 using Properties;
 
-internal sealed class Form34 : Form0
+internal sealed class DiagnosticReportDialog : Form0
 {
 	private sealed class Class39
 	{
-		public Form34 form34_0;
+		public DiagnosticReportDialog form34_0;
 
 		public object object_0;
 
@@ -23,7 +23,7 @@ internal sealed class Form34 : Form0
 
 	private sealed class Class40
 	{
-		public Form34 form34_0;
+		public DiagnosticReportDialog form34_0;
 
 		public object object_0;
 
@@ -37,7 +37,7 @@ internal sealed class Form34 : Form0
 
 	private sealed class Class41
 	{
-		public Form34 form34_0;
+		public DiagnosticReportDialog form34_0;
 
 		public object object_0;
 
@@ -91,7 +91,7 @@ internal sealed class Form34 : Form0
 		}
 	}
 
-	public Form34()
+	public DiagnosticReportDialog()
 		: base(new Size(700, 620))
 	{
 		method_19();
@@ -216,7 +216,7 @@ internal sealed class Form34 : Form0
 
 	private void method_19()
 	{
-		new ComponentResourceManager(typeof(Form34));
+		new ComponentResourceManager(typeof(DiagnosticReportDialog));
 		textBox_0 = new TextBox();
 		class66_0 = new Class66();
 		class66_1 = new Class66();

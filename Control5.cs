@@ -6,11 +6,11 @@ using System.Linq;
 using System.Windows.Forms;
 using Properties;
 
-internal sealed class Control5 : Control4
+internal sealed class TelegramSendTaskAddEditControl : Control4
 {
 	private sealed class Class1
 	{
-		public Control5 control5_0;
+		public TelegramSendTaskAddEditControl control5_0;
 
 		public object object_0;
 

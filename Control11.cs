@@ -3,7 +3,7 @@ using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
 
-internal sealed class Control11 : Control2
+internal sealed class ImapMonitoringViaLogsControl : Control2
 {
 	private IContainer icontainer_0;
 

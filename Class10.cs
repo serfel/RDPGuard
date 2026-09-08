@@ -62,7 +62,7 @@ internal static class Class10
 
 	private static Class79 class79_0 = null;
 
-	private static readonly Lazy<Form23> lazy_2 = new Lazy<Form23>();
+	private static readonly Lazy<IPFilterDialog> lazy_2 = new Lazy<IPFilterDialog>();
 
 	private static be<Class90> be_0 = null;
 
@@ -108,7 +108,7 @@ internal static class Class10
 
 	private static string String_1 => lazy_1.Value;
 
-	private static Form23 Form23_0 => lazy_2.Value;
+	private static IPFilterDialog Form23_0 => lazy_2.Value;
 
 	public static GEnum16 GEnum16_0
 	{

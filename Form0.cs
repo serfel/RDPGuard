@@ -353,7 +353,7 @@ internal class Form0 : Form
 	{
 		if (Keys.Escape == e.KeyCode)
 		{
-			if ((0 | (method_3(this, "btnCancel") ? 1 : 0) | (method_3(this, "m_btnCancel") ? 1 : 0) | (method_3(this, "btnClose") ? 1 : 0) | (method_3(this, "m_btnClose") ? 1 : 0)) == 0 && !(this is Form32))
+			if ((0 | (method_3(this, "btnCancel") ? 1 : 0) | (method_3(this, "m_btnCancel") ? 1 : 0) | (method_3(this, "btnClose") ? 1 : 0) | (method_3(this, "m_btnClose") ? 1 : 0)) == 0 && !(this is DashboardDialog))
 			{
 				method_8(DialogResult.Cancel);
 			}

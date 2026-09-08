@@ -5,11 +5,11 @@ using System.Drawing;
 using System.Windows.Forms;
 using Properties;
 
-internal sealed class Control9 : Control4
+internal sealed class MailSendTaskAddEditControl : Control4
 {
 	private sealed class Class68
 	{
-		public Control9 control9_0;
+		public MailSendTaskAddEditControl control9_0;
 
 		public object object_0;
 
@@ -485,7 +485,7 @@ internal sealed class Control9 : Control4
 
 	private void class66_0_Click(object sender, EventArgs e)
 	{
-		if (DialogResult.OK == new Form25().ShowDialog())
+		if (DialogResult.OK == new SmtpServersDialog().ShowDialog())
 		{
 			Class89.eventHandler_23 = (EventHandler<EventArgs4>)Delegate.Combine(Class89.eventHandler_23, new EventHandler<EventArgs4>(method_1));
 			Class89.smethod_32();

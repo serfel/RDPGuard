@@ -5,7 +5,7 @@ using System.Linq;
 using System.Windows.Forms;
 using Properties;
 
-internal sealed class Form18 : Form0
+internal sealed class WinPcapDialog : Form0
 {
 	[Serializable]
 	private sealed class _003C_003Ec
@@ -29,7 +29,7 @@ internal sealed class Form18 : Form0
 
 	private sealed class Class17
 	{
-		public Form18 form18_0;
+		public WinPcapDialog form18_0;
 
 		public object object_0;
 
@@ -85,7 +85,7 @@ internal sealed class Form18 : Form0
 
 	protected override Button Button_0 => class66_0;
 
-	public Form18(Class127 class127_2)
+	public WinPcapDialog(Class127 class127_2)
 		: base(new Size(550, 400))
 	{
 		Class127_0 = class127_2;
@@ -202,7 +202,7 @@ internal sealed class Form18 : Form0
 	private void method_18()
 	{
 		icontainer_0 = new Container();
-		ComponentResourceManager componentResourceManager = new ComponentResourceManager(typeof(Form18));
+		ComponentResourceManager componentResourceManager = new ComponentResourceManager(typeof(WinPcapDialog));
 		class66_0 = new Class66();
 		class66_1 = new Class66();
 		gcontrol0_0 = new GControl0();

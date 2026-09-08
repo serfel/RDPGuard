@@ -9,7 +9,7 @@ using System.Windows.Forms;
 using Properties;
 using rdpguard.lib;
 
-internal sealed class Form32 : Form0
+internal sealed class DashboardDialog : Form0
 {
 	[Serializable]
 	private sealed class _003C_003Ec
@@ -51,7 +51,7 @@ internal sealed class Form32 : Form0
 
 	private sealed class Class26
 	{
-		public Form32 form32_0;
+		public DashboardDialog form32_0;
 
 		public object object_0;
 
@@ -65,7 +65,7 @@ internal sealed class Form32 : Form0
 
 	private sealed class Class27
 	{
-		public Form32 form32_0;
+		public DashboardDialog form32_0;
 
 		public object object_0;
 
@@ -79,7 +79,7 @@ internal sealed class Form32 : Form0
 
 	private sealed class Class28
 	{
-		public Form32 form32_0;
+		public DashboardDialog form32_0;
 
 		public object object_0;
 
@@ -93,7 +93,7 @@ internal sealed class Form32 : Form0
 
 	private sealed class Class29
 	{
-		public Form32 form32_0;
+		public DashboardDialog form32_0;
 
 		public object object_0;
 
@@ -107,7 +107,7 @@ internal sealed class Form32 : Form0
 
 	private sealed class Class30
 	{
-		public Form32 form32_0;
+		public DashboardDialog form32_0;
 
 		public object object_0;
 
@@ -121,7 +121,7 @@ internal sealed class Form32 : Form0
 
 	private sealed class Class31
 	{
-		public Form32 form32_0;
+		public DashboardDialog form32_0;
 
 		public object object_0;
 
@@ -135,7 +135,7 @@ internal sealed class Form32 : Form0
 
 	private sealed class Class32
 	{
-		public Form32 form32_0;
+		public DashboardDialog form32_0;
 
 		public object object_0;
 
@@ -149,7 +149,7 @@ internal sealed class Form32 : Form0
 
 	private sealed class Class33
 	{
-		public Form32 form32_0;
+		public DashboardDialog form32_0;
 
 		public object object_0;
 
@@ -163,7 +163,7 @@ internal sealed class Form32 : Form0
 
 	private sealed class Class34
 	{
-		public Form32 form32_0;
+		public DashboardDialog form32_0;
 
 		public object object_0;
 
@@ -177,7 +177,7 @@ internal sealed class Form32 : Form0
 
 	private sealed class Class35
 	{
-		public Form32 form32_0;
+		public DashboardDialog form32_0;
 
 		public object object_0;
 
@@ -193,7 +193,7 @@ internal sealed class Form32 : Form0
 	{
 		public Class169 class169_0;
 
-		public Form32 form32_0;
+		public DashboardDialog form32_0;
 
 		internal void method_0()
 		{
@@ -227,7 +227,7 @@ internal sealed class Form32 : Form0
 
 		public GClass24 gclass24_0;
 
-		public Form32 form32_0;
+		public DashboardDialog form32_0;
 
 		internal void method_0(object sender, EventArgs e)
 		{
@@ -265,7 +265,7 @@ internal sealed class Form32 : Form0
 
 	private readonly Class86 class86_0 = new Class86();
 
-	private Form31 form31_0;
+	private EventLogDialog form31_0;
 
 	private bool bool_0;
 
@@ -380,7 +380,7 @@ internal sealed class Form32 : Form0
 		}
 	}
 
-	public Form32()
+	public DashboardDialog()
 		: base(new Size(600, 700))
 	{
 		base.Controls.Add(method_44());
@@ -420,7 +420,7 @@ internal sealed class Form32 : Form0
 	private void method_12()
 	{
 		Text = Class138.String_1;
-		form31_0 = new Form31();
+		form31_0 = new EventLogDialog();
 		Class10.smethod_1(class79_0);
 		class78_0 = new Class78
 		{
@@ -470,7 +470,7 @@ internal sealed class Form32 : Form0
 		{
 			return;
 		}
-		Form30 form = new Form30();
+		LicenseActivatationDialog form = new LicenseActivatationDialog();
 		using (form)
 		{
 			if (DialogResult.OK == form.ShowDialog())
@@ -501,7 +501,7 @@ internal sealed class Form32 : Form0
 			BeginInvoke(new Action(@class.method_0));
 			return;
 		}
-		Form28 form = new Form28(@class.eventArgs7_0.iplistEntry_0)
+		IPListDialog form = new IPListDialog(@class.eventArgs7_0.iplistEntry_0)
 		{
 			Image_0 = Resources.whitelist_48,
 			Image_1 = Resources.whitelist_add_48,
@@ -540,7 +540,7 @@ internal sealed class Form32 : Form0
 			BeginInvoke(new Action(@class.method_0));
 			return;
 		}
-		Form28 form = new Form28(@class.eventArgs7_0.iplistEntry_0)
+		IPListDialog form = new IPListDialog(@class.eventArgs7_0.iplistEntry_0)
 		{
 			Image_0 = Resources.blacklist_48,
 			Image_1 = Resources.blacklist_add_48,
@@ -787,7 +787,7 @@ internal sealed class Form32 : Form0
 		{
 			if (form31_0 == null)
 			{
-				form31_0 = new Form31();
+				form31_0 = new EventLogDialog();
 			}
 			form31_0.method_1();
 			form31_0.Visible = true;
@@ -874,7 +874,7 @@ internal sealed class Form32 : Form0
 				Thread.Sleep(100);
 			}
 			@class.class169_0 = class164_0.Class169_0;
-			Form35 form = new Form35(class164_0);
+			OptionsDialog form = new OptionsDialog(class164_0);
 			if (DialogResult.OK == form.ShowDialog())
 			{
 				method_56(@class.method_0);
@@ -1062,7 +1062,7 @@ internal sealed class Form32 : Form0
 
 	private void method_57(object sender, HtmlElementEventArgs e)
 	{
-		Form21 form = new Form21
+		RdpSettingsDialog form = new RdpSettingsDialog
 		{
 			Class122_0 = class164_0.Class122_0
 		};
@@ -1078,7 +1078,7 @@ internal sealed class Form32 : Form0
 
 	private void method_58(object sender, HtmlElementEventArgs e)
 	{
-		Form3 form = new Form3(class164_0.Class114_0);
+		FtpSettingsDialog form = new FtpSettingsDialog(class164_0.Class114_0);
 		using (form)
 		{
 			if (DialogResult.OK == form.ShowDialog())
@@ -1091,7 +1091,7 @@ internal sealed class Form32 : Form0
 
 	private void method_59(object sender, HtmlElementEventArgs e)
 	{
-		Form4 form = new Form4(class164_0.Class115_0);
+		HttpSettingsDialog form = new HttpSettingsDialog(class164_0.Class115_0);
 		using (form)
 		{
 			if (DialogResult.OK == form.ShowDialog())
@@ -1104,7 +1104,7 @@ internal sealed class Form32 : Form0
 
 	private void method_60(object sender, HtmlElementEventArgs e)
 	{
-		Form20 form = new Form20(class164_0.Class125_0);
+		SmtpSettingsDialog form = new SmtpSettingsDialog(class164_0.Class125_0);
 		if (DialogResult.OK == form.ShowDialog())
 		{
 			class164_0.Class125_0 = form.Class125_0;
@@ -1114,7 +1114,7 @@ internal sealed class Form32 : Form0
 
 	private void method_61(object sender, HtmlElementEventArgs e)
 	{
-		Form17 form = new Form17(class164_0.Class116_0);
+		ImapSettingsDialog form = new ImapSettingsDialog(class164_0.Class116_0);
 		if (DialogResult.OK == form.ShowDialog())
 		{
 			class164_0.Class116_0 = form.Class116_0;
@@ -1124,7 +1124,7 @@ internal sealed class Form32 : Form0
 
 	private void method_62(object sender, HtmlElementEventArgs e)
 	{
-		Form11 form = new Form11(class164_0.Class121_0);
+		Pop3SettingsDialog form = new Pop3SettingsDialog(class164_0.Class121_0);
 		if (DialogResult.OK == form.ShowDialog())
 		{
 			class164_0.Class121_0 = form.Class121_0;
@@ -1134,7 +1134,7 @@ internal sealed class Form32 : Form0
 
 	private void method_63(object sender, HtmlElementEventArgs e)
 	{
-		Form16 form = new Form16(class164_0.Class119_0);
+		MySqlSettingsDialog form = new MySqlSettingsDialog(class164_0.Class119_0);
 		if (DialogResult.OK == form.ShowDialog())
 		{
 			class164_0.Class119_0 = form.Class119_0;
@@ -1144,7 +1144,7 @@ internal sealed class Form32 : Form0
 
 	private void method_64(object sender, HtmlElementEventArgs e)
 	{
-		Form14 form = new Form14(class164_0.Class117_0);
+		MsSqlSettingsDialog form = new MsSqlSettingsDialog(class164_0.Class117_0);
 		if (DialogResult.OK == form.ShowDialog())
 		{
 			class164_0.Class117_0 = form.Class117_0;
@@ -1154,7 +1154,7 @@ internal sealed class Form32 : Form0
 
 	private void method_65(object sender, HtmlElementEventArgs e)
 	{
-		Form12 form = new Form12(class164_0.Class124_0);
+		SipSettingsDialog form = new SipSettingsDialog(class164_0.Class124_0);
 		if (DialogResult.OK == form.ShowDialog())
 		{
 			class164_0.Class124_0 = form.Class124_0;
@@ -1173,7 +1173,7 @@ internal sealed class Form32 : Form0
 
 	private void method_67(object sender, HtmlElementEventArgs e)
 	{
-		using Form8 form = new Form8(class164_0.Class126_0);
+		using WebFormsSettingsDialog form = new WebFormsSettingsDialog(class164_0.Class126_0);
 		if (DialogResult.OK == form.ShowDialog())
 		{
 			class164_0.Class126_0 = form.Class126_0;
@@ -1183,7 +1183,7 @@ internal sealed class Form32 : Form0
 
 	private void method_68(object sender, HtmlElementEventArgs e)
 	{
-		Form15 form = new Form15(class164_0.Class123_0);
+		RDWebSettingsDialog form = new RDWebSettingsDialog(class164_0.Class123_0);
 		if (DialogResult.OK == form.ShowDialog())
 		{
 			class164_0.Class123_0 = form.Class123_0;
@@ -1793,7 +1793,7 @@ internal sealed class Form32 : Form0
 	{
 		if (method_21())
 		{
-			new Form24().ShowDialog();
+			new CustomActionsDialog().ShowDialog();
 		}
 	}
 
@@ -1801,7 +1801,7 @@ internal sealed class Form32 : Form0
 	{
 		if (method_21())
 		{
-			new Form34().method_1();
+			new DiagnosticReportDialog().method_1();
 		}
 	}
 
@@ -1852,7 +1852,7 @@ internal sealed class Form32 : Form0
 
 	private void toolStripMenuItem_18_Click(object sender, EventArgs e)
 	{
-		new Form29(Text).method_1();
+		new AboutDialog(Text).method_1();
 	}
 
 	private void form31_0_FormClosing(object sender, FormClosingEventArgs e)

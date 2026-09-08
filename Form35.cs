@@ -6,7 +6,7 @@ using System.Windows.Forms;
 using Properties;
 using rdpguard.lib;
 
-internal sealed class Form35 : Form0
+internal sealed class OptionsDialog : Form0
 {
 	[Serializable]
 	private sealed class _003C_003Ec
@@ -134,7 +134,7 @@ internal sealed class Form35 : Form0
 
 	private Class61 class61_7;
 
-	private Control0 control0_0;
+	private EditableGeoIPCountriesTable control0_0;
 
 	private Class65 class65_1;
 
@@ -306,7 +306,7 @@ internal sealed class Form35 : Form0
 
 	protected override Button Button_0 => class66_0;
 
-	public Form35(Class164 class164_1)
+	public OptionsDialog(Class164 class164_1)
 		: base(new Size(640, 600))
 	{
 		method_19();
@@ -453,7 +453,7 @@ internal sealed class Form35 : Form0
 
 	private static string smethod_4(string string_1)
 	{
-		Form5 form = new Form5
+		ProtocolRulesDialog form = new ProtocolRulesDialog
 		{
 			String_0 = "Exclusion Rules for Successful Logins",
 			String_1 = "Exclusion Rules for Successful Logins",
@@ -505,7 +505,7 @@ internal sealed class Form35 : Form0
 		class65_1 = new Class65();
 		class64_0 = new Class64();
 		class64_1 = new Class64();
-		control0_0 = new Control0();
+		control0_0 = new EditableGeoIPCountriesTable();
 		class63_4 = new Class63();
 		class61_6 = new Class61();
 		tabPage_1 = new TabPage();
@@ -1239,7 +1239,7 @@ internal sealed class Form35 : Form0
 
 	private void gclass3_0_Click(object sender, EventArgs e)
 	{
-		Form22 form = new Form22(class164_0.Class169_0);
+		AdvancedBlockingSettingsDialog form = new AdvancedBlockingSettingsDialog(class164_0.Class169_0);
 		using (form)
 		{
 			if (DialogResult.OK == form.ShowDialog())

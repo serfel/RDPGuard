@@ -5,9 +5,9 @@ using System.IO;
 using System.Windows.Forms;
 using Properties;
 
-internal sealed class Form15 : Form0
+internal sealed class RDWebSettingsDialog : Form0
 {
-	private Form2 form2_0 = new Form2(Class148.Class151.String_13);
+	private AdvancedHttpSettingsDialog form2_0 = new AdvancedHttpSettingsDialog(Class148.Class151.String_13);
 
 	private IContainer icontainer_0;
 
@@ -64,7 +64,7 @@ internal sealed class Form15 : Form0
 		}
 	}
 
-	public Form15(Class123 class123_0)
+	public RDWebSettingsDialog(Class123 class123_0)
 		: base(new Size(550, 390))
 	{
 		method_15();

@@ -7,7 +7,7 @@ using System.Linq;
 using System.Windows.Forms;
 using Properties;
 
-internal sealed class Form24 : Form0
+internal sealed class CustomActionsDialog : Form0
 {
 	[Serializable]
 	private sealed class _003C_003Ec
@@ -39,7 +39,7 @@ internal sealed class Form24 : Form0
 
 	private sealed class Class18
 	{
-		public Form24 form24_0;
+		public CustomActionsDialog form24_0;
 
 		public object object_0;
 
@@ -104,7 +104,7 @@ internal sealed class Form24 : Form0
 		}
 	}
 
-	public Form24()
+	public CustomActionsDialog()
 		: base(new Size(750, 525))
 	{
 		method_21();
@@ -138,7 +138,7 @@ internal sealed class Form24 : Form0
 
 	private void method_13()
 	{
-		Form9 form = new Form9(null);
+		CustomActionAddEditDialog form = new CustomActionAddEditDialog(null);
 		using (form)
 		{
 			if (DialogResult.OK == form.ShowDialog())
@@ -155,7 +155,7 @@ internal sealed class Form24 : Form0
 		{
 			return;
 		}
-		Form9 form = new Form9(class47_0.SelectedItems[0].Tag as Class94);
+		CustomActionAddEditDialog form = new CustomActionAddEditDialog(class47_0.SelectedItems[0].Tag as Class94);
 		using (form)
 		{
 			if (DialogResult.OK == form.ShowDialog())

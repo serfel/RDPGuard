@@ -4,11 +4,11 @@ using System.Drawing;
 using System.Windows.Forms;
 using Properties;
 
-internal sealed class Form11 : Form0
+internal sealed class Pop3SettingsDialog : Form0
 {
-	private Control12 control12_0;
+	private TrafficMonitoringControl control12_0;
 
-	private Control10 control10_0;
+	private Pop3MonitoringViaLogsControl control10_0;
 
 	private IContainer icontainer_0;
 
@@ -106,7 +106,7 @@ internal sealed class Form11 : Form0
 		}
 	}
 
-	public Form11(Class121 class121_0)
+	public Pop3SettingsDialog(Class121 class121_0)
 		: base(new Size(565, 655))
 	{
 		method_14();
@@ -119,7 +119,7 @@ internal sealed class Form11 : Form0
 
 	private void method_11()
 	{
-		control12_0 = new Control12(new Class121().UInt16_1)
+		control12_0 = new TrafficMonitoringControl(new Class121().UInt16_1)
 		{
 			String_0 = "Select monitoring method for POP3 traffic:",
 			String_1 = "Specify POP3 port:",
@@ -127,7 +127,7 @@ internal sealed class Form11 : Form0
 			Dock = DockStyle.Fill
 		};
 		panel_0.Controls.Add(control12_0);
-		control10_0 = new Control10
+		control10_0 = new Pop3MonitoringViaLogsControl
 		{
 			Dock = DockStyle.Fill
 		};

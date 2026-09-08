@@ -6,7 +6,7 @@ using System.Linq;
 using System.Windows.Forms;
 using Properties;
 
-internal sealed class Form9 : Form0
+internal sealed class CustomActionAddEditDialog : Form0
 {
 	private delegate Class102 Delegate0(Class102 class102_0);
 
@@ -27,7 +27,7 @@ internal sealed class Form9 : Form0
 	{
 		public Control4 control4_0;
 
-		public Form9 form9_0;
+		public CustomActionAddEditDialog form9_0;
 
 		internal void method_0(object sender, EventArgs e)
 		{
@@ -37,7 +37,7 @@ internal sealed class Form9 : Form0
 
 	private sealed class Class14
 	{
-		public Form9 form9_0;
+		public CustomActionAddEditDialog form9_0;
 
 		public object object_0;
 
@@ -51,11 +51,11 @@ internal sealed class Form9 : Form0
 
 	private readonly Control4[] control4_0 = new Control4[5]
 	{
-		new Control9(),
-		new Control8(),
-		new Control7(),
-		new Control6(),
-		new Control5()
+		new MailSendTaskAddEditControl(),
+		new HttpPostTaskAddEditControl(),
+		new ExecuteProgramAddEditControl(),
+		new ReportToAbuseIPDBAddEditControl(),
+		new TelegramSendTaskAddEditControl()
 	};
 
 	private static readonly GEnum3[] genum3_0 = Class186.Class186_0.Prop_0.Except(new GEnum3[1] { GEnum3.const_3 }).ToArray();
@@ -216,7 +216,7 @@ internal sealed class Form9 : Form0
 
 	private GEnum2 GEnum2_0 => Class185.Class185_0[class0_1.Text];
 
-	public Form9(Class94 class94_1)
+	public CustomActionAddEditDialog(Class94 class94_1)
 		: base(new Size(685, 800))
 	{
 		method_18();
@@ -340,7 +340,7 @@ internal sealed class Form9 : Form0
 
 	private static Class102 smethod_4(Class102 class102_0)
 	{
-		Form5 form = new Form5
+		ProtocolRulesDialog form = new ProtocolRulesDialog
 		{
 			String_0 = "Exclusion Rules for Successful Logins",
 			String_1 = "Exclusion Rules for Successful Logins",

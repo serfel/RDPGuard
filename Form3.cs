@@ -4,11 +4,11 @@ using System.Drawing;
 using System.Windows.Forms;
 using Properties;
 
-internal sealed class Form3 : Form0
+internal sealed class FtpSettingsDialog : Form0
 {
-	private Control12 control12_0;
+	private TrafficMonitoringControl control12_0;
 
-	private Control3 control3_0;
+	private FtpMonitoringViaLogsControl control3_0;
 
 	private IContainer icontainer_0;
 
@@ -107,7 +107,7 @@ internal sealed class Form3 : Form0
 		}
 	}
 
-	public Form3(Class114 class114_0)
+	public FtpSettingsDialog(Class114 class114_0)
 		: base(new Size(570, 670))
 	{
 		method_14();
@@ -120,7 +120,7 @@ internal sealed class Form3 : Form0
 
 	private void method_11()
 	{
-		control12_0 = new Control12(new Class114().UInt16_1)
+		control12_0 = new TrafficMonitoringControl(new Class114().UInt16_1)
 		{
 			String_0 = "Select monitoring method for FTP traffic:",
 			String_1 = "Specify FTP port:",
@@ -128,7 +128,7 @@ internal sealed class Form3 : Form0
 			Dock = DockStyle.Fill
 		};
 		panel_0.Controls.Add(control12_0);
-		control3_0 = new Control3
+		control3_0 = new FtpMonitoringViaLogsControl
 		{
 			Dock = DockStyle.Fill,
 			eventHandler_2 = method_15

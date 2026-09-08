@@ -6,7 +6,7 @@ using System.Linq;
 using System.Windows.Forms;
 using Properties;
 
-internal sealed class Form19 : Form0
+internal sealed class RawSocketsDialog : Form0
 {
 	[Serializable]
 	private sealed class _003C_003Ec
@@ -142,7 +142,7 @@ internal sealed class Form19 : Form0
 
 	protected override Button Button_0 => class66_0;
 
-	public Form19()
+	public RawSocketsDialog()
 		: base(new Size(560, 480))
 	{
 		method_13();

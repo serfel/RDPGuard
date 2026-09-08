@@ -4,7 +4,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using Properties;
 
-internal sealed class Form6 : Form0
+internal sealed class AdvancedSmtpSettingsDialog : Form0
 {
 	private IContainer icontainer_0;
 
@@ -63,7 +63,7 @@ internal sealed class Form6 : Form0
 		}
 	}
 
-	public Form6(Class131 class131_0)
+	public AdvancedSmtpSettingsDialog(Class131 class131_0)
 		: base(new Size(640, 480))
 	{
 		method_13();

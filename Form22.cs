@@ -4,7 +4,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using Properties;
 
-internal sealed class Form22 : Form0
+internal sealed class AdvancedBlockingSettingsDialog : Form0
 {
 	private IContainer icontainer_0;
 
@@ -54,7 +54,7 @@ internal sealed class Form22 : Form0
 
 	protected override Button Button_0 => class66_0;
 
-	public Form22(Class169 class169_0)
+	public AdvancedBlockingSettingsDialog(Class169 class169_0)
 		: base(new Size(500, 345))
 	{
 		method_13();
@@ -89,7 +89,7 @@ internal sealed class Form22 : Form0
 	private void method_13()
 	{
 		icontainer_0 = new Container();
-		new ComponentResourceManager(typeof(Form22));
+		new ComponentResourceManager(typeof(AdvancedBlockingSettingsDialog));
 		class66_0 = new Class66();
 		class66_1 = new Class66();
 		gcontrol0_0 = new GControl0();

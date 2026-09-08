@@ -4,7 +4,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using Properties;
 
-internal sealed class Form33 : Form0
+internal sealed class formCrashReport : Form0
 {
 	private IContainer icontainer_0;
 
@@ -28,7 +28,7 @@ internal sealed class Form33 : Form0
 
 	private GClass3 gclass3_0;
 
-	public Form33(string string_0)
+	public formCrashReport(string string_0)
 	{
 		InitializeComponent();
 		vmethod_1();

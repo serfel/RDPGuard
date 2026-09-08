@@ -7,7 +7,7 @@ using System.Windows.Forms;
 using Properties;
 using rdpguard.lib;
 
-internal sealed class Form27 : Form0
+internal sealed class IPListEntryAddEditDialog : Form0
 {
 	[Serializable]
 	private sealed class _003C_003Ec
@@ -84,7 +84,7 @@ internal sealed class Form27 : Form0
 
 	protected override Button Button_0 => class66_1;
 
-	public Form27(IPListEntry iplistEntry_0)
+	public IPListEntryAddEditDialog(IPListEntry iplistEntry_0)
 		: base(new Size(590, 425))
 	{
 		method_14();

@@ -7,7 +7,7 @@ using System.Threading;
 using System.Windows.Forms;
 using rdpguard.lib;
 
-internal sealed class Control1 : UserControl
+internal sealed class GeoIPCountriesTable : UserControl
 {
 	[Serializable]
 	private sealed class _003C_003Ec
@@ -333,7 +333,7 @@ internal sealed class Control1 : UserControl
 		}
 	}
 
-	public Control1()
+	public GeoIPCountriesTable()
 	{
 		method_7();
 		method_0();

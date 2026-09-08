@@ -3,7 +3,7 @@ using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
 
-internal sealed class Form31 : Form0
+internal sealed class EventLogDialog : Form0
 {
 	private readonly Class12 class12_0;
 
@@ -13,7 +13,7 @@ internal sealed class Form31 : Form0
 
 	private ColumnHeader columnHeader_0;
 
-	public Form31()
+	public EventLogDialog()
 		: base(new Size(320, 240))
 	{
 		method_11();
