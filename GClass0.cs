@@ -375,7 +375,7 @@ public class GClass0 : ListView
 		class48_0.method_1(string_0, int_0);
 	}
 
-	public void method_7()
+	public void InitializeComponent()
 	{
 		if (Class163.Class163_0.Boolean_0 && !bool_0)
 		{

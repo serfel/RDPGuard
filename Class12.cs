@@ -82,7 +82,7 @@ internal sealed class Class12
 	{
 		gclass0_0 = gclass0_1;
 		method_6();
-		method_7();
+		InitializeComponent();
 		Class89.eventHandler_1 = (EventHandler<EventArgs12>)Delegate.Combine(Class89.eventHandler_1, new EventHandler<EventArgs12>(method_1));
 		if (Class89.Boolean_0)
 		{
@@ -176,7 +176,7 @@ internal sealed class Class12
 		gclass0_0.ContextMenuStrip = method_9();
 	}
 
-	private void method_7()
+	private void InitializeComponent()
 	{
 		gclass0_0.Resize += gclass0_0_Resize;
 	}

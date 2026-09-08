@@ -40,7 +40,7 @@ internal static class Program
 			}
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(defaultValue: false);
-			Application.Run(new Form32());
+			Application.Run(new DashboardDialog());
 		}
 		catch (Exception exception_)
 		{

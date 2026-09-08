@@ -21,7 +21,7 @@ internal sealed class Control14 : TabControl
 			{
 				paintEventArgs_0.Graphics.FillRectangle(brush, paintEventArgs_0.ClipRectangle);
 			}
-			TabPage page = base.TabPages.Cast<TabPage>().OrderByDescending(method_0).First();
+			TabPage page = base.TabPages.Cast<TabPage>().OrderByDescending(InitializeHandlers).First();
 			Rectangle tabRect = GetTabRect(base.TabPages.IndexOf(page));
 			using (Pen pen = new Pen(Class70.color_13))
 			{
@@ -69,7 +69,7 @@ internal sealed class Control14 : TabControl
 		}
 	}
 
-	private int method_0(TabPage tabPage_0)
+	private int InitializeHandlers(TabPage tabPage_0)
 	{
 		return GetTabRect(base.TabPages.IndexOf(tabPage_0)).Y;
 	}

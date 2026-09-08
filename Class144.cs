@@ -37,7 +37,7 @@ internal sealed class Class144 : Class143
 		DialogResult dialogResult = DialogResult.Cancel;
 		try
 		{
-			Form33 form = new Form33(string_0);
+			formCrashReport form = new formCrashReport(string_0);
 			using (form)
 			{
 				dialogResult = form.ShowDialog();

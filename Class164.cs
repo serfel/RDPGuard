@@ -311,7 +311,7 @@ internal sealed class Class164 : Class162
 		return (Class113)GetType().GetProperties(BindingFlags.Instance | BindingFlags.Public).Select(@class.method_0).FirstOrDefault(@class.method_1);
 	}
 
-	public void method_7(Class113 class113_0)
+	public void InitializeComponent(Class113 class113_0)
 	{
 		Class171 @class = new Class171();
 		@class.class113_0 = class113_0;

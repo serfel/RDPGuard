@@ -766,12 +766,12 @@ public struct GStruct1 : IFormattable, IComparable, IComparable<GStruct1>, IEqua
 
 	public static bool operator ==(GStruct1 gstruct1_4, uint uint_0)
 	{
-		return gstruct1_4.method_7(uint_0);
+		return gstruct1_4.InitializeComponent(uint_0);
 	}
 
 	public static bool operator ==(uint uint_0, GStruct1 gstruct1_4)
 	{
-		return gstruct1_4.method_7(uint_0);
+		return gstruct1_4.InitializeComponent(uint_0);
 	}
 
 	public static bool operator ==(GStruct1 gstruct1_4, long long_0)
@@ -811,12 +811,12 @@ public struct GStruct1 : IFormattable, IComparable, IComparable<GStruct1>, IEqua
 
 	public static bool operator !=(GStruct1 gstruct1_4, uint uint_0)
 	{
-		return !gstruct1_4.method_7(uint_0);
+		return !gstruct1_4.InitializeComponent(uint_0);
 	}
 
 	public static bool operator !=(uint uint_0, GStruct1 gstruct1_4)
 	{
-		return !gstruct1_4.method_7(uint_0);
+		return !gstruct1_4.InitializeComponent(uint_0);
 	}
 
 	public static bool operator !=(GStruct1 gstruct1_4, long long_0)
@@ -969,7 +969,7 @@ public struct GStruct1 : IFormattable, IComparable, IComparable<GStruct1>, IEqua
 		return false;
 	}
 
-	public bool method_7(uint uint_0)
+	public bool InitializeComponent(uint uint_0)
 	{
 		if (ulong_0 == uint_0)
 		{
