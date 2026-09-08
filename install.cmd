@@ -1,5 +1,5 @@
 echo "# RDPGuard" >> README.md
-git push origin main
+git push -f -u origin main
 git rm -r .
 git init
 git add .
