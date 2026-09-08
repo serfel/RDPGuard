@@ -1583,7 +1583,7 @@ internal sealed class DashboardDialog : Form0
 		this.toolStripMenuItem_9.Image = Properties.Resources.redo_16;
 		this.toolStripMenuItem_9.Name = "mainMenuToolsRdpGuardServiceRestart";
 		this.toolStripMenuItem_9.Size = new System.Drawing.Size(113, 22);
-		this.toolStripMenuItem_9.Text = "Restart";
+		this.toolStripMenuItem_9.Text = "Перезапуск";
 		this.toolStripSeparator_1.Name = "toolStripSeparator3";
 		this.toolStripSeparator_1.Size = new System.Drawing.Size(235, 6);
 		this.toolStripMenuItem_19.Image = Properties.Resources.whitelist_16;
