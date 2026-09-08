@@ -22,7 +22,7 @@ public class GControl1 : ToolStripControlHost
 	public GControl1()
 		: base(new Class61())
 	{
-		((CheckBox)base.Control).CheckedChanged += method_0;
+		((CheckBox)base.Control).CheckedChanged += InitializeHandlers;
 	}
 
 	protected override void OnMouseLeave(EventArgs eventArgs_0)
@@ -31,7 +31,7 @@ public class GControl1 : ToolStripControlHost
 		base.Parent.Focus();
 	}
 
-	private void method_0(object sender, EventArgs e)
+	private void InitializeHandlers(object sender, EventArgs e)
 	{
 		eventHandler_0?.Invoke(sender, e);
 	}

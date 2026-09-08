@@ -137,7 +137,7 @@ internal class Form0 : Form
 					listView.BorderStyle = BorderStyle.FixedSingle;
 					if (listView is GClass0 gClass2)
 					{
-						gClass2.method_7();
+						gClass2.InitializeComponent();
 					}
 				}
 				if (control is ToolStrip toolStrip)
@@ -353,7 +353,7 @@ internal class Form0 : Form
 	{
 		if (Keys.Escape == e.KeyCode)
 		{
-			if ((0 | (method_3(this, "btnCancel") ? 1 : 0) | (method_3(this, "m_btnCancel") ? 1 : 0) | (method_3(this, "btnClose") ? 1 : 0) | (method_3(this, "m_btnClose") ? 1 : 0)) == 0 && !(this is Form32))
+			if ((0 | (method_3(this, "btnCancel") ? 1 : 0) | (method_3(this, "m_btnCancel") ? 1 : 0) | (method_3(this, "btnClose") ? 1 : 0) | (method_3(this, "m_btnClose") ? 1 : 0)) == 0 && !(this is DashboardDialog))
 			{
 				method_8(DialogResult.Cancel);
 			}
@@ -646,7 +646,7 @@ internal class Form0 : Form
 		@class.method_0(new Class166("Maximized", FormWindowState.Maximized == base.WindowState));
 		try
 		{
-			method_7(@class, base.Controls);
+			InitializeComponent(@class, base.Controls);
 		}
 		catch (Exception ex)
 		{
@@ -656,7 +656,7 @@ internal class Form0 : Form
 		Class163.Class163_0.method_3();
 	}
 
-	public void method_7(Class166 class166_0, Control.ControlCollection controlCollection_0)
+	public void InitializeComponent(Class166 class166_0, Control.ControlCollection controlCollection_0)
 	{
 		if (controlCollection_0 == null || controlCollection_0.Count == 0)
 		{
@@ -722,7 +722,7 @@ internal class Form0 : Form
 				{
 					class166_0.method_0(new Class166(string_3, splitContainer.SplitterDistance));
 				}
-				method_7(class166_0, control.Controls);
+				InitializeComponent(class166_0, control.Controls);
 			}
 		}
 		finally

@@ -61,7 +61,7 @@ internal sealed class Class79 : WebBrowser
 		dictionary_0.smethod_0(method_11);
 	}
 
-	public void method_7(string string_0, HtmlElementEventHandler htmlElementEventHandler_0)
+	public void InitializeComponent(string string_0, HtmlElementEventHandler htmlElementEventHandler_0)
 	{
 		HtmlElement htmlElement = method_10(string_0);
 		if (null != htmlElement)
@@ -93,7 +93,7 @@ internal sealed class Class79 : WebBrowser
 
 	private void method_11(KeyValuePair<string, HtmlElementEventHandler> keyValuePair_0)
 	{
-		method_7(keyValuePair_0.Key, keyValuePair_0.Value);
+		InitializeComponent(keyValuePair_0.Key, keyValuePair_0.Value);
 	}
 
 	private void method_12(KeyValuePair<string, HtmlElementEventHandler> keyValuePair_0)

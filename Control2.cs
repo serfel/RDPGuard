@@ -96,7 +96,7 @@ internal class Control2 : UserControl
 	{
 		vmethod_0();
 		vmethod_1();
-		Form0.smethod_3(this, method_0, vmethod_2);
+		Form0.smethod_3(this, InitializeHandlers, vmethod_2);
 		vmethod_2();
 	}
 
@@ -104,7 +104,7 @@ internal class Control2 : UserControl
 	{
 	}
 
-	private void method_0()
+	private void InitializeHandlers()
 	{
 		eventHandler_0?.Invoke(this, EventArgs.Empty);
 	}

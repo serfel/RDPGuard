@@ -79,7 +79,7 @@ public static class GClass23
 			return networkInterface_0.GetIPProperties().UnicastAddresses;
 		}
 
-		internal IEnumerable<UnicastIPAddressInformation> method_7(UnicastIPAddressInformationCollection unicastIPAddressInformationCollection_0)
+		internal IEnumerable<UnicastIPAddressInformation> InitializeComponent(UnicastIPAddressInformationCollection unicastIPAddressInformationCollection_0)
 		{
 			return unicastIPAddressInformationCollection_0;
 		}
@@ -160,7 +160,7 @@ public static class GClass23
 					IEnumerable<NetworkInterface> source = allNetworkInterfaces.Where(predicate);
 					Func<NetworkInterface, UnicastIPAddressInformationCollection> selector = _003C_003Ec._003C_003E9.method_6;
 					IEnumerable<UnicastIPAddressInformationCollection> source2 = source.Select(selector);
-					Func<UnicastIPAddressInformationCollection, IEnumerable<UnicastIPAddressInformation>> selector2 = _003C_003Ec._003C_003E9.method_7;
+					Func<UnicastIPAddressInformationCollection, IEnumerable<UnicastIPAddressInformation>> selector2 = _003C_003Ec._003C_003E9.InitializeComponent;
 					IEnumerable<UnicastIPAddressInformation> source3 = source2.SelectMany(selector2);
 					Func<UnicastIPAddressInformation, bool> predicate2 = _003C_003Ec._003C_003E9.method_8;
 					IEnumerable<UnicastIPAddressInformation> source4 = source3.Where(predicate2);
