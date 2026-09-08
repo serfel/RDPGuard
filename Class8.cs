@@ -30,7 +30,7 @@ internal sealed class Class8 : ListViewItem
 	public Class8()
 	{
 		base.BackColor = SystemColors.Control;
-		base.Text = "Total";
+		base.Text = "Всего";
 		base.SubItems.AddRange(new string[3]
 		{
 			string.Empty,

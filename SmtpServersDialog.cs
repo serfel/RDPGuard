@@ -245,7 +245,7 @@ internal sealed class SmtpServersDialog : Form0
 		class66_0.Name = "m_btnSave";
 		class66_0.Size = new Size(100, 36);
 		class66_0.TabIndex = 3;
-		class66_0.Text = "Save";
+		class66_0.Text = "Сохранить";
 		class66_0.TextAlign = ContentAlignment.MiddleRight;
 		class66_0.TextImageRelation = TextImageRelation.ImageBeforeText;
 		class66_0.UseVisualStyleBackColor = true;
@@ -256,7 +256,7 @@ internal sealed class SmtpServersDialog : Form0
 		class66_1.Name = "btnCancel";
 		class66_1.Size = new Size(100, 36);
 		class66_1.TabIndex = 4;
-		class66_1.Text = "Cancel";
+		class66_1.Text = "Отмена";
 		class66_1.TextAlign = ContentAlignment.MiddleRight;
 		class66_1.TextImageRelation = TextImageRelation.ImageBeforeText;
 		class66_1.UseVisualStyleBackColor = true;
@@ -273,7 +273,7 @@ internal sealed class SmtpServersDialog : Form0
 		class62_0.Name = "label2";
 		class62_0.Size = new Size(108, 16);
 		class62_0.TabIndex = 49;
-		class62_0.Text = "SMTP Servers";
+		class62_0"SMTP Servers";
 		pictureBox_0.Image = Resources.mail_server_48;
 		pictureBox_0.Location = new Point(16, 15);
 		pictureBox_0.Margin = new Padding(4);
@@ -288,7 +288,7 @@ internal sealed class SmtpServersDialog : Form0
 		class62_1.Name = "lblCaption";
 		class62_1.Size = new Size(251, 16);
 		class62_1.TabIndex = 48;
-		class62_1.Text = "SMTP servers  to use for sending emails.";
+		class62_1"SMTP servers  to use for sending emails.";
 		gclass0_0.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 		gclass0_0.Columns.AddRange(new ColumnHeader[5] { columnHeader_0, columnHeader_1, columnHeader_2, columnHeader_3, columnHeader_4 });
 		gclass0_0.FullRowSelect = true;
@@ -300,15 +300,15 @@ internal sealed class SmtpServersDialog : Form0
 		gclass0_0.TabIndex = 6;
 		gclass0_0.UseCompatibleStateImageBehavior = false;
 		gclass0_0.View = View.Details;
-		columnHeader_0.Text = "Host";
+		columnHeader_0"Host";
 		columnHeader_0.Width = 100;
-		columnHeader_1.Text = "Port";
+		columnHeader_1"Port";
 		columnHeader_1.Width = 100;
-		columnHeader_2.Text = "SSL/TLS";
+		columnHeader_2"SSL/TLS";
 		columnHeader_2.Width = 100;
-		columnHeader_3.Text = "User name";
+		columnHeader_3"User name";
 		columnHeader_3.Width = 100;
-		columnHeader_4.Text = "Password";
+		columnHeader_4"Password";
 		columnHeader_4.Width = 100;
 		class66_2.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
 		class66_2.Enabled = false;
@@ -319,7 +319,7 @@ internal sealed class SmtpServersDialog : Form0
 		class66_2.Name = "m_btnDelete";
 		class66_2.Size = new Size(100, 36);
 		class66_2.TabIndex = 2;
-		class66_2.Text = "Delete";
+		class66_2.Text = "Удалить";
 		class66_2.TextImageRelation = TextImageRelation.ImageBeforeText;
 		class66_2.UseVisualStyleBackColor = true;
 		class66_3.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
@@ -331,7 +331,7 @@ internal sealed class SmtpServersDialog : Form0
 		class66_3.Name = "m_btnEdit";
 		class66_3.Size = new Size(100, 36);
 		class66_3.TabIndex = 1;
-		class66_3.Text = "Edit";
+		class66_3.Text = "Изменить";
 		class66_3.TextImageRelation = TextImageRelation.ImageBeforeText;
 		class66_3.UseVisualStyleBackColor = true;
 		class66_4.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
@@ -342,7 +342,7 @@ internal sealed class SmtpServersDialog : Form0
 		class66_4.Name = "m_btnAdd";
 		class66_4.Size = new Size(100, 36);
 		class66_4.TabIndex = 0;
-		class66_4.Text = "Add";
+		class66_4.Text = "Добавить";
 		class66_4.TextImageRelation = TextImageRelation.ImageBeforeText;
 		class66_4.UseVisualStyleBackColor = true;
 		gclass3_0.Anchor = AnchorStyles.Top | AnchorStyles.Right;
@@ -353,7 +353,7 @@ internal sealed class SmtpServersDialog : Form0
 		gclass3_0.Size = new Size(73, 16);
 		gclass3_0.TabIndex = 5;
 		gclass3_0.TabStop = true;
-		gclass3_0.Text = "online help";
+		gclass3_0.Text = "справка онлайн";
 		gclass3_0.VisitedLinkColor = Color.FromArgb(38, 135, 200);
 		base.AutoScaleDimensions = new SizeF(8f, 16f);
 		base.AutoScaleMode = AutoScaleMode.Font;

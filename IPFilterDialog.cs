@@ -110,7 +110,7 @@ internal sealed class IPFilterDialog : Form0
 		class62_0.Name = "m_lblSubCaption";
 		class62_0.Size = new Size(329, 16);
 		class62_0.TabIndex = 4;
-		class62_0.Text = "Filter allows you to display only a certain IP addresses";
+		class62_0"Filter allows you to display only a certain IP addresses";
 		class62_1.AutoSize = true;
 		class62_1.Font = new Font("Microsoft Sans Serif", 9.75f, FontStyle.Bold, GraphicsUnit.Point, 204);
 		class62_1.Location = new Point(79, 15);
@@ -118,13 +118,13 @@ internal sealed class IPFilterDialog : Form0
 		class62_1.Name = "lblCaption";
 		class62_1.Size = new Size(89, 16);
 		class62_1.TabIndex = 14;
-		class62_1.Text = "IP List Filter";
+		class62_1"IP List Filter";
 		class62_2.AutoSize = true;
 		class62_2.Location = new Point(13, 97);
 		class62_2.Name = "m_lblFilter";
 		class62_2.Size = new Size(174, 16);
 		class62_2.TabIndex = 20;
-		class62_2.Text = "IP Address, Range or CIDR:";
+		class62_2"IP Address, Range or CIDR:";
 		textBox_0.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
 		textBox_0.Location = new Point(34, 123);
 		textBox_0.Name = "m_edFilter";
@@ -138,7 +138,7 @@ internal sealed class IPFilterDialog : Form0
 		class66_0.Name = "m_btnSetFilter";
 		class66_0.Size = new Size(125, 36);
 		class66_0.TabIndex = 1;
-		class66_0.Text = "Set filter";
+		class66_0"Set filter";
 		class66_0.TextAlign = ContentAlignment.MiddleLeft;
 		class66_0.TextImageRelation = TextImageRelation.ImageBeforeText;
 		class66_0.UseVisualStyleBackColor = true;
@@ -150,7 +150,7 @@ internal sealed class IPFilterDialog : Form0
 		class66_1.Name = "m_btnCancel";
 		class66_1.Size = new Size(100, 36);
 		class66_1.TabIndex = 2;
-		class66_1.Text = "Cancel";
+		class66_1.Text = "Отмена";
 		class66_1.TextAlign = ContentAlignment.MiddleRight;
 		class66_1.TextImageRelation = TextImageRelation.ImageBeforeText;
 		class66_1.UseVisualStyleBackColor = true;
@@ -169,7 +169,7 @@ internal sealed class IPFilterDialog : Form0
 		gclass3_0.Size = new Size(73, 16);
 		gclass3_0.TabIndex = 43;
 		gclass3_0.TabStop = true;
-		gclass3_0.Text = "online help";
+		gclass3_0.Text = "справка онлайн";
 		gclass3_0.VisitedLinkColor = Color.FromArgb(38, 135, 200);
 		class62_3.AutoSize = true;
 		class62_3.ForeColor = SystemColors.ControlDarkDark;
@@ -177,7 +177,7 @@ internal sealed class IPFilterDialog : Form0
 		class62_3.Name = "label4";
 		class62_3.Size = new Size(449, 16);
 		class62_3.TabIndex = 44;
-		class62_3.Text = "Example 1.2.3.4 or 192.168.2.1-192.168.2.255 or 192.168.0.* or 192.168.0.0/24";
+		class62_3"Example 1.2.3.4 or 192.168.2.1-192.168.2.255 or 192.168.0.* or 192.168.0.0/24";
 		base.AutoScaleDimensions = new SizeF(8f, 16f);
 		base.AutoScaleMode = AutoScaleMode.Font;
 		base.ClientSize = new Size(504, 227);

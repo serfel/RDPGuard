@@ -66,65 +66,65 @@ internal sealed class SmtpMonitoringViaLogsControl : Control2
 		switch (GEnum11_0)
 		{
 		default:
-			class62_0.Text = "Log file or directory:";
-			gclass2_0.Text = "Specify the log file/directory location";
+			class62_0.Text = "Файл или папка журнала:";
+			gclass2_0"Specify the log file/directory location";
 			break;
 		case GEnum11.const_0:
-			class62_0.Text = "Log files directory:";
+			class62_0.Text = "Папка журналов:";
 			class54_0.bool_0 = true;
 			class54_0.String_1 = "C:\\Program Files (x86)\\Mail Enable\\Logging";
-			gclass2_0.Text = "Specify SMTP log files directory, usually C:\\Program Files (x86)\\Mail Enable\\Logging\\SMTP";
+			gclass2_0"Specify SMTP log files directory, usually C:\\Program Files (x86)\\Mail Enable\\Logging\\SMTP";
 			break;
 		case GEnum11.const_1:
-			class62_0.Text = "Security log file:";
+			class62_0.Text = "Файл журнала безопасности:";
 			class54_0.bool_0 = false;
 			class54_0.String_1 = "C:\\Program Files\\Kerio\\MailServer\\store\\logs";
-			gclass2_0.Text = "Specify the Security log file location, usually C:\\Program Files\\Kerio\\MailServer\\store\\logs\\security.log";
+			gclass2_0"Specify the Security log file location, usually C:\\Program Files\\Kerio\\MailServer\\store\\logs\\security.log";
 			break;
 		case GEnum11.const_2:
-			class62_0.Text = "Log files directory:";
+			class62_0.Text = "Папка журналов:";
 			class54_0.bool_0 = true;
 			class54_0.String_1 = "C:\\hMailServer\\Logs";
-			gclass2_0.Text = "Specify hMailServer log files directory (for example C:\\hMailServer\\Logs)";
+			gclass2_0"Specify hMailServer log files directory (for example C:\\hMailServer\\Logs)";
 			break;
 		case GEnum11.const_3:
-			class62_0.Text = "Log files directory:";
+			class62_0.Text = "Папка журналов:";
 			class54_0.bool_0 = true;
 			class54_0.String_1 = "C:\\Program Files\\Microsoft\\Exchange Server\\V15\\TransportRoles\\Logs\\FrontEnd\\ProtocolLog\\SmtpReceive";
-			gclass2_0.Text = "Specify SmtpReceive log files directory location, usually C:\\Program Files\\Microsoft\\Exchange Server\\V15\\TransportRoles\\Logs\\FrontEnd\\ProtocolLog\\SmtpReceive";
+			gclass2_0"Specify SmtpReceive log files directory location, usually C:\\Program Files\\Microsoft\\Exchange Server\\V15\\TransportRoles\\Logs\\FrontEnd\\ProtocolLog\\SmtpReceive";
 			gclass2_0.Text += "\r\n\r\nLeave this field empty if you would like to use the Application event log instead (1035 event IDs)";
 			break;
 		case GEnum11.const_4:
-			class62_0.Text = "Console log file location:";
+			class62_0"Console log file location:";
 			class54_0.bool_0 = false;
 			class54_0.String_1 = "C:\\Program Files\\IBM\\Domino\\data\\IBM_TECHNICAL_SUPPORT";
-			gclass2_0.Text = "Specify the Console log file location, usually C:\\Program Files\\IBM\\Domino\\data\\IBM_TECHNICAL_SUPPORT\\console.log";
+			gclass2_0"Specify the Console log file location, usually C:\\Program Files\\IBM\\Domino\\data\\IBM_TECHNICAL_SUPPORT\\console.log";
 			break;
 		case GEnum11.const_5:
-			class62_0.Text = "Security log file:";
+			class62_0.Text = "Файл журнала безопасности:";
 			class54_0.bool_0 = false;
 			class54_0.String_1 = "C:\\Program Files\\Axigen Mail Server\\log";
-			gclass2_0.Text = "Specify the security log file location, usually C:\\Program Files\\Axigen Mail Server\\log\\security.txt";
+			gclass2_0"Specify the security log file location, usually C:\\Program Files\\Axigen Mail Server\\log\\security.txt";
 			gclass2_0.Text += "\r\n\r\nTo enable security logging set 'enableSecurityLog = yes' in the following config file:\r\n";
 			gclass2_0.Text += "C:\\Program Files\\Axigen Mail Server\\run\\axigen.cfg";
 			break;
 		case GEnum11.const_6:
-			class62_0.Text = "Log files directory:";
+			class62_0.Text = "Папка журналов:";
 			class54_0.bool_0 = true;
 			class54_0.String_1 = "C:\\MDaemon\\Logs";
-			gclass2_0.Text = "Specify MDaemon log files directory (for example C:\\MDaemon\\Logs)";
+			gclass2_0"Specify MDaemon log files directory (for example C:\\MDaemon\\Logs)";
 			break;
 		case GEnum11.const_7:
-			class62_0.Text = "Log files directory:";
+			class62_0.Text = "Папка журналов:";
 			class54_0.bool_0 = true;
 			class54_0.String_1 = "C:\\SmarterMail\\Logs";
-			gclass2_0.Text = "Specify SmarterMail log files directory (for example C:\\SmarterMail\\Logs)";
+			gclass2_0"Specify SmarterMail log files directory (for example C:\\SmarterMail\\Logs)";
 			break;
 		case GEnum11.const_8:
-			class62_0.Text = "Log files directory:";
+			class62_0.Text = "Папка журналов:";
 			class54_0.bool_0 = true;
 			class54_0.String_1 = "C:\\ProgramData\\E-MailRelay";
-			gclass2_0.Text = "Specify the E-MailRelay log files directory (for example C:\\ProgramData\\E-MailRelay)";
+			gclass2_0"Specify the E-MailRelay log files directory (for example C:\\ProgramData\\E-MailRelay)";
 			gclass2_0.Text += " or leave this field empty if you would like to use the Application event log instead.";
 			gclass2_0.Text += "\r\n\r\nBe sure to use the --log-address or --log-format=address start parameters to include the network address of remote clients in the logging output.";
 			break;
@@ -169,7 +169,7 @@ internal sealed class SmtpMonitoringViaLogsControl : Control2
 		class65_0.Size = new Size(600, 240);
 		class65_0.TabIndex = 0;
 		class65_0.TabStop = false;
-		class65_0.Text = "Server type and log location";
+		class65_0.Text = "Тип сервера и путь к журналу";
 		gclass2_0.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 		gclass2_0.BackColor = SystemColors.Control;
 		gclass2_0.BorderStyle = BorderStyle.None;
@@ -182,7 +182,7 @@ internal sealed class SmtpMonitoringViaLogsControl : Control2
 		gclass2_0.Size = new Size(566, 69);
 		gclass2_0.TabIndex = 142;
 		gclass2_0.TabStop = false;
-		gclass2_0.Text = "<LOG_FILES_LOCATION_HINT>";
+		gclass2_0"<LOG_FILES_LOCATION_HINT>";
 		class54_0.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
 		class54_0.String_1 = null;
 		class54_0.Location = new Point(28, 137);
@@ -194,14 +194,14 @@ internal sealed class SmtpMonitoringViaLogsControl : Control2
 		class62_0.Name = "m_lblLogFilesLocation";
 		class62_0.Size = new Size(165, 16);
 		class62_0.TabIndex = 146;
-		class62_0.Text = "<LOG_FILES_LOCATION>";
+		class62_0"<LOG_FILES_LOCATION>";
 		class63_0.AutoSize = true;
 		class63_0.ForeColor = SystemColors.ControlDarkDark;
 		class63_0.Location = new Point(25, 84);
 		class63_0.Name = "m_lblServerTypeHint";
 		class63_0.Size = new Size(329, 16);
 		class63_0.TabIndex = 145;
-		class63_0.Text = "Select SMTP server software installed on the machine.";
+		class63_0"Select SMTP server software installed on the machine.";
 		class0_0.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
 		class0_0.DropDownStyle = ComboBoxStyle.DropDownList;
 		class0_0.FormattingEnabled = true;
@@ -214,7 +214,7 @@ internal sealed class SmtpMonitoringViaLogsControl : Control2
 		class62_1.Name = "m_lblServerType";
 		class62_1.Size = new Size(118, 16);
 		class62_1.TabIndex = 143;
-		class62_1.Text = "Select server type:";
+		class62_1"Select server type:";
 		base.AutoScaleDimensions = new SizeF(8f, 16f);
 		base.AutoScaleMode = AutoScaleMode.Font;
 		base.Controls.Add(class65_0);

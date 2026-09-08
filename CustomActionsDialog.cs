@@ -287,7 +287,7 @@ internal sealed class CustomActionsDialog : Form0
 		class62_0.Name = "label2";
 		class62_0.Size = new Size(113, 16);
 		class62_0.TabIndex = 49;
-		class62_0.Text = "Custom Actions";
+		class62_0"Custom Actions";
 		class62_0.Boolean_0 = false;
 		pictureBox_0.Image = Resources.notifications_48;
 		pictureBox_0.Location = new Point(16, 19);
@@ -303,7 +303,7 @@ internal sealed class CustomActionsDialog : Form0
 		class62_1.Name = "lblCaption";
 		class62_1.Size = new Size(321, 16);
 		class62_1.TabIndex = 48;
-		class62_1.Text = "Define your own custom actions for RdpGuard events";
+		class62_1"Define your own custom actions for RdpGuard events";
 		class62_1.Boolean_0 = false;
 		class47_0.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 		class47_0.CheckBoxes = true;
@@ -319,13 +319,13 @@ internal sealed class CustomActionsDialog : Form0
 		class47_0.TabIndex = 6;
 		class47_0.UseCompatibleStateImageBehavior = false;
 		class47_0.View = View.Details;
-		columnHeader_3.Text = "✓";
+		columnHeader_3"✓";
 		columnHeader_3.Width = 30;
-		columnHeader_0.Text = "Event";
+		columnHeader_0"Event";
 		columnHeader_0.Width = 100;
-		columnHeader_1.Text = "Task";
+		columnHeader_1"Task";
 		columnHeader_1.Width = 150;
-		columnHeader_2.Text = "Details";
+		columnHeader_2"Details";
 		columnHeader_2.Width = 100;
 		gclass3_0.Anchor = AnchorStyles.Top | AnchorStyles.Right;
 		gclass3_0.AutoSize = true;
@@ -336,7 +336,7 @@ internal sealed class CustomActionsDialog : Form0
 		gclass3_0.Size = new Size(72, 16);
 		gclass3_0.TabIndex = 5;
 		gclass3_0.TabStop = true;
-		gclass3_0.Text = "online help";
+		gclass3_0.Text = "справка онлайн";
 		gclass3_0.VisitedLinkColor = Color.FromArgb(38, 135, 200);
 		class67_0.Dock = DockStyle.Bottom;
 		class67_0.GripStyle = ToolStripGripStyle.Hidden;
@@ -353,7 +353,7 @@ internal sealed class CustomActionsDialog : Form0
 		toolStripButton_0.Name = "m_btnAdd";
 		toolStripButton_0.Padding = new Padding(3);
 		toolStripButton_0.Size = new Size(55, 26);
-		toolStripButton_0.Text = "Add";
+		toolStripButton_0.Text = "Добавить";
 		toolStripButton_1.Enabled = false;
 		toolStripButton_1.Image = Resources.edit_16_pale;
 		toolStripButton_1.ImageTransparentColor = Color.Magenta;
@@ -361,7 +361,7 @@ internal sealed class CustomActionsDialog : Form0
 		toolStripButton_1.Name = "m_btnEdit";
 		toolStripButton_1.Padding = new Padding(3);
 		toolStripButton_1.Size = new Size(53, 26);
-		toolStripButton_1.Text = "Edit";
+		toolStripButton_1.Text = "Изменить";
 		toolStripButton_2.Enabled = false;
 		toolStripButton_2.Image = Resources.delete_16_pale;
 		toolStripButton_2.ImageTransparentColor = Color.Magenta;
@@ -369,7 +369,7 @@ internal sealed class CustomActionsDialog : Form0
 		toolStripButton_2.Name = "m_btnDelete";
 		toolStripButton_2.Padding = new Padding(3);
 		toolStripButton_2.Size = new Size(66, 26);
-		toolStripButton_2.Text = "Delete";
+		toolStripButton_2.Text = "Удалить";
 		toolStripButton_3.Alignment = ToolStripItemAlignment.Right;
 		toolStripButton_3.Image = Resources.cancel_16_pale;
 		toolStripButton_3.ImageTransparentColor = Color.Magenta;
@@ -377,7 +377,7 @@ internal sealed class CustomActionsDialog : Form0
 		toolStripButton_3.Name = "m_btnCancel";
 		toolStripButton_3.Padding = new Padding(3);
 		toolStripButton_3.Size = new Size(69, 26);
-		toolStripButton_3.Text = "Cancel";
+		toolStripButton_3.Text = "Отмена";
 		toolStripButton_4.Alignment = ToolStripItemAlignment.Right;
 		toolStripButton_4.Image = Resources.ok_16_pale;
 		toolStripButton_4.ImageTransparentColor = Color.Magenta;
@@ -385,14 +385,14 @@ internal sealed class CustomActionsDialog : Form0
 		toolStripButton_4.Name = "m_btnSaveChanges";
 		toolStripButton_4.Padding = new Padding(3);
 		toolStripButton_4.Size = new Size(106, 26);
-		toolStripButton_4.Text = "Save Changes";
+		toolStripButton_4.Text = "Сохранить Changes";
 		toolStripLabel_0.Alignment = ToolStripItemAlignment.Right;
 		toolStripLabel_0.ForeColor = Color.Red;
 		toolStripLabel_0.Name = "m_lblAdminRightsRequiredWarning";
 		toolStripLabel_0.Padding = new Padding(0, 0, 10, 0);
 		toolStripLabel_0.Size = new Size(348, 23);
 		toolStripLabel_0.Tag = "ThemeIndependentForeColor";
-		toolStripLabel_0.Text = "Administrator privileges are required to modify custom actions";
+		toolStripLabel_0"Administrator privileges are required to modify custom actions";
 		toolStripLabel_0.Visible = false;
 		base.AutoScaleDimensions = new SizeF(8f, 16f);
 		base.AutoScaleMode = AutoScaleMode.Font;

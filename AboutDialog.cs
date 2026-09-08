@@ -34,7 +34,7 @@ internal sealed class AboutDialog : Form0
 	private void method_11(string string_0)
 	{
 		class62_0.Text = string_0;
-		class62_1.Text = "Copyright © 2012-2026 Netsdk Software. All rights reserved.";
+		class62_1.Text = "© 2012-2026 Netsdk Software. Все права защищены.";
 	}
 
 	private void ReInitializeComponent()
@@ -91,7 +91,7 @@ internal sealed class AboutDialog : Form0
             this.class62_0.Name = "class62_0";
             this.class62_0.Size = new System.Drawing.Size(60, 16);
             this.class62_0.TabIndex = 1;
-            this.class62_0.Text = "Caption";
+            this.class62_0.Text = "Заголовок";
             // 
             // class66_0
             // 
@@ -105,7 +105,7 @@ internal sealed class AboutDialog : Form0
             this.class66_0.Name = "class66_0";
             this.class66_0.Size = new System.Drawing.Size(100, 36);
             this.class66_0.TabIndex = 3;
-            this.class66_0.Text = "OK";
+            this.class66_0"OK";
             this.class66_0.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.class66_0.UseVisualStyleBackColor = false;
             // 
@@ -134,7 +134,7 @@ internal sealed class AboutDialog : Form0
             this.gclass3_0.Size = new System.Drawing.Size(146, 16);
             this.gclass3_0.TabIndex = 11;
             this.gclass3_0.TabStop = true;
-            this.gclass3_0.Text = "RdpGuard Home Page";
+            this.gclass3_0"RdpGuard Home Page";
             this.gclass3_0.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(135)))), ((int)(((byte)(200)))));
             // 
             // gclass3_1
@@ -150,7 +150,7 @@ internal sealed class AboutDialog : Form0
             this.gclass3_1.Size = new System.Drawing.Size(104, 16);
             this.gclass3_1.TabIndex = 12;
             this.gclass3_1.TabStop = true;
-            this.gclass3_1.Text = "Get License Key";
+            this.gclass3_1"Get License Key";
             this.gclass3_1.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(135)))), ((int)(((byte)(200)))));
             // 
             // gclass3_2
@@ -166,7 +166,7 @@ internal sealed class AboutDialog : Form0
             this.gclass3_2.Size = new System.Drawing.Size(69, 16);
             this.gclass3_2.TabIndex = 13;
             this.gclass3_2.TabStop = true;
-            this.gclass3_2.Text = "Contact us";
+            this.gclass3_2"Contact us";
             this.gclass3_2.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(135)))), ((int)(((byte)(200)))));
             // 
             // AboutDialog
@@ -186,7 +186,7 @@ internal sealed class AboutDialog : Form0
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AboutDialog";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Text = "About RdpGuard";
+            this"About RdpGuard";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_0)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

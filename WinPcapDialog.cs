@@ -223,7 +223,7 @@ internal sealed class WinPcapDialog : Form0
 		class66_0.Name = "m_btnSave";
 		class66_0.Size = new Size(100, 36);
 		class66_0.TabIndex = 7;
-		class66_0.Text = "Save";
+		class66_0.Text = "Сохранить";
 		class66_0.TextAlign = ContentAlignment.MiddleRight;
 		class66_0.TextImageRelation = TextImageRelation.ImageBeforeText;
 		class66_0.UseVisualStyleBackColor = true;
@@ -234,7 +234,7 @@ internal sealed class WinPcapDialog : Form0
 		class66_1.Name = "m_btnCancel";
 		class66_1.Size = new Size(100, 36);
 		class66_1.TabIndex = 8;
-		class66_1.Text = "Cancel";
+		class66_1.Text = "Отмена";
 		class66_1.TextAlign = ContentAlignment.MiddleRight;
 		class66_1.TextImageRelation = TextImageRelation.ImageBeforeText;
 		class66_1.UseVisualStyleBackColor = true;
@@ -251,7 +251,7 @@ internal sealed class WinPcapDialog : Form0
 		class62_0.Name = "m_lblCaption";
 		class62_0.Size = new Size(181, 16);
 		class62_0.TabIndex = 49;
-		class62_0.Text = "WinPcap/Npcap Settings";
+		class62_0.Text = "Настройки WinPcap/Npcap";
 		pictureBox_0.Image = Resources.traffic_monitoring_48;
 		pictureBox_0.Location = new Point(16, 15);
 		pictureBox_0.Margin = new Padding(4);
@@ -266,7 +266,7 @@ internal sealed class WinPcapDialog : Form0
 		class62_1.Name = "m_lblSubCaption";
 		class62_1.Size = new Size(397, 16);
 		class62_1.TabIndex = 48;
-		class62_1.Text = "Please select network adapter for traffic monitoring and click Save";
+		class62_1.Text = "Выберите сетевой адаптер для мониторинга трафика и нажмите «Сохранить»";
 		gclass3_0.Anchor = AnchorStyles.Top | AnchorStyles.Right;
 		gclass3_0.AutoSize = true;
 		gclass3_0.LinkColor = Color.FromArgb(38, 135, 200);
@@ -275,7 +275,7 @@ internal sealed class WinPcapDialog : Form0
 		gclass3_0.Size = new Size(73, 16);
 		gclass3_0.TabIndex = 9;
 		gclass3_0.TabStop = true;
-		gclass3_0.Text = "online help";
+		gclass3_0.Text = "справка онлайн";
 		gclass3_0.VisitedLinkColor = Color.FromArgb(38, 135, 200);
 		imageList_0.ImageStream = (ImageListStreamer)componentResourceManager.GetObject("m_smallImageList.ImageStream");
 		imageList_0.TransparentColor = Color.Transparent;
@@ -288,7 +288,7 @@ internal sealed class WinPcapDialog : Form0
 		gclass3_1.Size = new Size(244, 16);
 		gclass3_1.TabIndex = 137;
 		gclass3_1.TabStop = true;
-		gclass3_1.Text = "click here to download WinPcap/Npcap";
+		gclass3_1.Text = "нажмите здесь для загрузки WinPcap/Npcap";
 		gclass3_1.Visible = false;
 		gclass3_1.VisitedLinkColor = Color.FromArgb(38, 135, 200);
 		class62_2.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
@@ -299,7 +299,7 @@ internal sealed class WinPcapDialog : Form0
 		class62_2.Name = "m_lblWinPcapWarning";
 		class62_2.Size = new Size(235, 16);
 		class62_2.TabIndex = 138;
-		class62_2.Text = "WinPcap/Npcap driver is not installed,";
+		class62_2.Text = "Драйвер WinPcap/Npcap не установлен,";
 		class62_2.Boolean_0 = true;
 		class62_2.Visible = false;
 		class61_0.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
@@ -310,7 +310,7 @@ internal sealed class WinPcapDialog : Form0
 		class61_0.Name = "m_chbHideIrrelevantAdapters";
 		class61_0.Size = new Size(171, 20);
 		class61_0.TabIndex = 140;
-		class61_0.Text = "Hide irrelevant adapters";
+		class61_0.Text = "Скрыть ненужные адаптеры";
 		class61_0.UseVisualStyleBackColor = true;
 		base.AutoScaleDimensions = new SizeF(8f, 16f);
 		base.AutoScaleMode = AutoScaleMode.Font;

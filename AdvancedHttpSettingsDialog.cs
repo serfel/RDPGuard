@@ -123,7 +123,7 @@ internal sealed class AdvancedHttpSettingsDialog : Form0
             this.class66_0.Name = "class66_0";
             this.class66_0.Size = new System.Drawing.Size(100, 36);
             this.class66_0.TabIndex = 7;
-            this.class66_0.Text = "Save";
+            this.class66_0.Text = "Сохранить";
             this.class66_0.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.class66_0.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.class66_0.UseVisualStyleBackColor = false;
@@ -140,7 +140,7 @@ internal sealed class AdvancedHttpSettingsDialog : Form0
             this.class66_1.Name = "class66_1";
             this.class66_1.Size = new System.Drawing.Size(100, 36);
             this.class66_1.TabIndex = 8;
-            this.class66_1.Text = "Cancel";
+            this.class66_1.Text = "Отмена";
             this.class66_1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.class66_1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.class66_1.UseVisualStyleBackColor = false;
@@ -169,7 +169,7 @@ internal sealed class AdvancedHttpSettingsDialog : Form0
             this.class62_0.Name = "class62_0";
             this.class62_0.Size = new System.Drawing.Size(108, 16);
             this.class62_0.TabIndex = 49;
-            this.class62_0.Text = "HTTP Settings";
+            this.class62_0"HTTP Settings";
             // 
             // pictureBox_0
             // 
@@ -195,7 +195,7 @@ internal sealed class AdvancedHttpSettingsDialog : Form0
             this.class62_1.Name = "class62_1";
             this.class62_1.Size = new System.Drawing.Size(220, 16);
             this.class62_1.TabIndex = 48;
-            this.class62_1.Text = "Advanced HTTP protection settings";
+            this.class62_1"Advanced HTTP protection settings";
             // 
             // gclass3_0
             // 
@@ -210,7 +210,7 @@ internal sealed class AdvancedHttpSettingsDialog : Form0
             this.gclass3_0.Size = new System.Drawing.Size(72, 16);
             this.gclass3_0.TabIndex = 9;
             this.gclass3_0.TabStop = true;
-            this.gclass3_0.Text = "online help";
+            this.gclass3_0.Text = "справка онлайн";
             this.gclass3_0.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(135)))), ((int)(((byte)(200)))));
             // 
             // class61_0
@@ -222,7 +222,7 @@ internal sealed class AdvancedHttpSettingsDialog : Form0
             this.class61_0.Name = "class61_0";
             this.class61_0.Size = new System.Drawing.Size(351, 20);
             this.class61_0.TabIndex = 65;
-            this.class61_0.Text = "Use the X-Forwarded-For field to read client IP address";
+            this.class61_0"Use the X-Forwarded-For field to read client IP address";
             this.class61_0.UseVisualStyleBackColor = false;
             // 
             // class63_0
@@ -235,7 +235,7 @@ internal sealed class AdvancedHttpSettingsDialog : Form0
             this.class63_0.Name = "class63_0";
             this.class63_0.Size = new System.Drawing.Size(391, 16);
             this.class63_0.TabIndex = 67;
-            this.class63_0.Text = "Do not enable unless you are hosting the website behind a proxy.";
+            this.class63_0"Do not enable unless you are hosting the website behind a proxy.";
             // 
             // gclass3_1
             // 
@@ -249,7 +249,7 @@ internal sealed class AdvancedHttpSettingsDialog : Form0
             this.gclass3_1.Size = new System.Drawing.Size(405, 16);
             this.gclass3_1.TabIndex = 68;
             this.gclass3_1.TabStop = true;
-            this.gclass3_1.Text = "Additional configuration required for the proxy and the HTTP server.";
+            this.gclass3_1.Text = "Добавитьitional configuration required for the proxy and the HTTP server.";
             this.gclass3_1.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(135)))), ((int)(((byte)(200)))));
             // 
             // class61_1
@@ -261,7 +261,7 @@ internal sealed class AdvancedHttpSettingsDialog : Form0
             this.class61_1.Name = "class61_1";
             this.class61_1.Size = new System.Drawing.Size(356, 20);
             this.class61_1.TabIndex = 69;
-            this.class61_1.Text = "Fall back to the client IP address if the header is missing";
+            this.class61_1"Fall back to the client IP address if the header is missing";
             this.class61_1.UseVisualStyleBackColor = false;
             // 
             // class63_1
@@ -274,7 +274,7 @@ internal sealed class AdvancedHttpSettingsDialog : Form0
             this.class63_1.Name = "class63_1";
             this.class63_1.Size = new System.Drawing.Size(414, 16);
             this.class63_1.TabIndex = 70;
-            this.class63_1.Text = "Allows using the client IP when the X-Forwarded-For header is not set.";
+            this.class63_1"Allows using the client IP when the X-Forwarded-For header is not set.";
             // 
             // AdvancedHttpSettingsDialog
             // 
@@ -298,7 +298,7 @@ internal sealed class AdvancedHttpSettingsDialog : Form0
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Name = "AdvancedHttpSettingsDialog";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Text = "Advanced HTTP Settings";
+            this"Advanced HTTP Settings";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_0)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

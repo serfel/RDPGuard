@@ -125,7 +125,7 @@ internal sealed class AdvancedSmtpSettingsDialog : Form0
             this.class66_0.Name = "class66_0";
             this.class66_0.Size = new System.Drawing.Size(100, 36);
             this.class66_0.TabIndex = 7;
-            this.class66_0.Text = "Save";
+            this.class66_0.Text = "Сохранить";
             this.class66_0.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.class66_0.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.class66_0.UseVisualStyleBackColor = false;
@@ -142,7 +142,7 @@ internal sealed class AdvancedSmtpSettingsDialog : Form0
             this.class66_1.Name = "class66_1";
             this.class66_1.Size = new System.Drawing.Size(100, 36);
             this.class66_1.TabIndex = 8;
-            this.class66_1.Text = "Cancel";
+            this.class66_1.Text = "Отмена";
             this.class66_1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.class66_1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.class66_1.UseVisualStyleBackColor = false;
@@ -171,7 +171,7 @@ internal sealed class AdvancedSmtpSettingsDialog : Form0
             this.class62_0.Name = "class62_0";
             this.class62_0.Size = new System.Drawing.Size(109, 16);
             this.class62_0.TabIndex = 49;
-            this.class62_0.Text = "SMTP Settings";
+            this.class62_0"SMTP Settings";
             // 
             // pictureBox_0
             // 
@@ -197,7 +197,7 @@ internal sealed class AdvancedSmtpSettingsDialog : Form0
             this.class62_1.Name = "class62_1";
             this.class62_1.Size = new System.Drawing.Size(221, 16);
             this.class62_1.TabIndex = 48;
-            this.class62_1.Text = "Advanced SMTP protection settings";
+            this.class62_1"Advanced SMTP protection settings";
             // 
             // gclass3_0
             // 
@@ -212,7 +212,7 @@ internal sealed class AdvancedSmtpSettingsDialog : Form0
             this.gclass3_0.Size = new System.Drawing.Size(72, 16);
             this.gclass3_0.TabIndex = 9;
             this.gclass3_0.TabStop = true;
-            this.gclass3_0.Text = "online help";
+            this.gclass3_0.Text = "справка онлайн";
             this.gclass3_0.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(135)))), ((int)(((byte)(200)))));
             // 
             // class61_0
@@ -224,7 +224,7 @@ internal sealed class AdvancedSmtpSettingsDialog : Form0
             this.class61_0.Name = "class61_0";
             this.class61_0.Size = new System.Drawing.Size(257, 20);
             this.class61_0.TabIndex = 51;
-            this.class61_0.Text = "Block  username enumeration attempts";
+            this.class61_0"Block  username enumeration attempts";
             this.class61_0.UseVisualStyleBackColor = false;
             // 
             // class61_1
@@ -236,7 +236,7 @@ internal sealed class AdvancedSmtpSettingsDialog : Form0
             this.class61_1.Name = "class61_1";
             this.class61_1.Size = new System.Drawing.Size(147, 20);
             this.class61_1.TabIndex = 52;
-            this.class61_1.Text = "Block relay attempts";
+            this.class61_1"Block relay attempts";
             this.class61_1.UseVisualStyleBackColor = false;
             // 
             // class61_2
@@ -248,7 +248,7 @@ internal sealed class AdvancedSmtpSettingsDialog : Form0
             this.class61_2.Name = "class61_2";
             this.class61_2.Size = new System.Drawing.Size(143, 20);
             this.class61_2.TabIndex = 53;
-            this.class61_2.Text = "Block spam attacks";
+            this.class61_2"Block spam attacks";
             this.class61_2.UseVisualStyleBackColor = false;
             // 
             // class61_3
@@ -260,7 +260,7 @@ internal sealed class AdvancedSmtpSettingsDialog : Form0
             this.class61_3.Name = "class61_3";
             this.class61_3.Size = new System.Drawing.Size(203, 20);
             this.class61_3.TabIndex = 54;
-            this.class61_3.Text = "Block failed web admin logins";
+            this.class61_3"Block failed web admin logins";
             this.class61_3.UseVisualStyleBackColor = false;
             // 
             // class61_4
@@ -272,7 +272,7 @@ internal sealed class AdvancedSmtpSettingsDialog : Form0
             this.class61_4.Name = "class61_4";
             this.class61_4.Size = new System.Drawing.Size(191, 20);
             this.class61_4.TabIndex = 55;
-            this.class61_4.Text = "Block failed web mail logins";
+            this.class61_4"Block failed web mail logins";
             this.class61_4.UseVisualStyleBackColor = false;
             // 
             // class61_5
@@ -284,7 +284,7 @@ internal sealed class AdvancedSmtpSettingsDialog : Form0
             this.class61_5.Name = "class61_5";
             this.class61_5.Size = new System.Drawing.Size(243, 20);
             this.class61_5.TabIndex = 56;
-            this.class61_5.Text = "Block DNS blacklisted IP addresses";
+            this.class61_5"Block DNS blacklisted IP addresses";
             this.class61_5.UseVisualStyleBackColor = false;
             // 
             // class61_6
@@ -296,7 +296,7 @@ internal sealed class AdvancedSmtpSettingsDialog : Form0
             this.class61_6.Name = "class61_6";
             this.class61_6.Size = new System.Drawing.Size(267, 20);
             this.class61_6.TabIndex = 57;
-            this.class61_6.Text = "Block IP addresses with no reverse DNS";
+            this.class61_6"Block IP addresses with no reverse DNS";
             this.class61_6.UseVisualStyleBackColor = false;
             // 
             // AdvancedSmtpSettingsDialog
@@ -323,7 +323,7 @@ internal sealed class AdvancedSmtpSettingsDialog : Form0
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Name = "AdvancedSmtpSettingsDialog";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Text = "Advanced SMTP Settings";
+            this"Advanced SMTP Settings";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_0)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

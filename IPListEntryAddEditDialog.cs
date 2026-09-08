@@ -99,10 +99,10 @@ internal sealed class IPListEntryAddEditDialog : Form0
 		if (null == iplistEntry_0)
 		{
 			Text = "Add New IP Addresses";
-			class62_1.Text = "New IP Addresses";
-			class62_0.Text = "Enter addresses and optional comment and click Add new addresses";
-			class62_3.Text = "IP Addresses, Ranges or CIDRs:";
-			class66_1.Text = "Add new addresses";
+			class62_1"New IP Addresses";
+			class62_0"Enter addresses and optional comment and click Add new addresses";
+			class62_3"IP Addresses, Ranges or CIDRs:";
+			class66_1.Text = "Добавить new addresses";
 			MinimumSize = new Size(590, 425);
 			textBox_0.Multiline = true;
 			TextBox textBox = textBox_0;
@@ -121,10 +121,10 @@ internal sealed class IPListEntryAddEditDialog : Form0
 		{
 			IPListEntry_0 = new IPListEntry[1] { iplistEntry_0 };
 			Text = "Edit IP Address";
-			class62_1.Text = "Edit IP Address";
-			class62_0.Text = "Edit IP Address and Comment and click Save changes";
-			class62_3.Text = "IP Address, Range or CIDR:";
-			class66_1.Text = "Save changes";
+			class62_1.Text = "Изменить IP Address";
+			class62_0.Text = "Изменить IP Address and Comment and click Save changes";
+			class62_3"IP Address, Range or CIDR:";
+			class66_1.Text = "Сохранить изменения";
 			MinimumSize = new Size(590, 370);
 			base.Height = 370;
 			textBox_0.Multiline = false;
@@ -214,7 +214,7 @@ internal sealed class IPListEntryAddEditDialog : Form0
 		class62_0.Name = "m_lblSubCaption";
 		class62_0.Size = new Size(163, 16);
 		class62_0.TabIndex = 4;
-		class62_0.Text = "<description placeholder>";
+		class62_0"<description placeholder>";
 		class62_1.AutoSize = true;
 		class62_1.Font = new Font("Microsoft Sans Serif", 9.75f, FontStyle.Bold, GraphicsUnit.Point, 204);
 		class62_1.Location = new Point(79, 15);
@@ -222,7 +222,7 @@ internal sealed class IPListEntryAddEditDialog : Form0
 		class62_1.Name = "m_lblCaption";
 		class62_1.Size = new Size(187, 16);
 		class62_1.TabIndex = 14;
-		class62_1.Text = "<subcaption placeholder>";
+		class62_1"<subcaption placeholder>";
 		class66_0.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
 		class66_0.Image = Resources.cancel_16_pale;
 		class66_0.Location = new Point(461, 337);
@@ -230,7 +230,7 @@ internal sealed class IPListEntryAddEditDialog : Form0
 		class66_0.Name = "btnCancel";
 		class66_0.Size = new Size(100, 36);
 		class66_0.TabIndex = 3;
-		class66_0.Text = "Cancel";
+		class66_0.Text = "Отмена";
 		class66_0.TextImageRelation = TextImageRelation.ImageBeforeText;
 		class66_0.UseVisualStyleBackColor = true;
 		class66_1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
@@ -240,7 +240,7 @@ internal sealed class IPListEntryAddEditDialog : Form0
 		class66_1.Name = "m_btnOK";
 		class66_1.Size = new Size(162, 36);
 		class66_1.TabIndex = 2;
-		class66_1.Text = "<ok_button>";
+		class66_1"<ok_button>";
 		class66_1.TextImageRelation = TextImageRelation.ImageBeforeText;
 		class66_1.UseVisualStyleBackColor = true;
 		gcontrol0_0.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
@@ -266,7 +266,7 @@ internal sealed class IPListEntryAddEditDialog : Form0
 		class62_2.Name = "m_lblComment";
 		class62_2.Size = new Size(127, 16);
 		class62_2.TabIndex = 55;
-		class62_2.Text = "Comment (optional):";
+		class62_2.Text = "Комментарий (optional):";
 		class63_0.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
 		class63_0.AutoSize = true;
 		class63_0.ForeColor = SystemColors.ControlDarkDark;
@@ -274,13 +274,13 @@ internal sealed class IPListEntryAddEditDialog : Form0
 		class63_0.Name = "m_lblCommentHint";
 		class63_0.Size = new Size(417, 16);
 		class63_0.TabIndex = 54;
-		class63_0.Text = "You can specify optional comment about these addresses or ranges";
+		class63_0"You can specify optional comment about these addresses or ranges";
 		class62_3.AutoSize = true;
 		class62_3.Location = new Point(13, 97);
 		class62_3.Name = "m_lblIPAddress";
 		class62_3.Size = new Size(206, 16);
 		class62_3.TabIndex = 53;
-		class62_3.Text = "{IP_ADDRESS_CAPTION}";
+		class62_3"{IP_ADDRESS_CAPTION}";
 		class63_1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
 		class63_1.AutoSize = true;
 		class63_1.ForeColor = SystemColors.ControlDarkDark;
@@ -288,7 +288,7 @@ internal sealed class IPListEntryAddEditDialog : Form0
 		class63_1.Name = "m_lblIPAddressHint";
 		class63_1.Size = new Size(142, 16);
 		class63_1.TabIndex = 52;
-		class63_1.Text = "{IP_ADDRESS_HINT}";
+		class63_1"{IP_ADDRESS_HINT}";
 		gclass3_0.Anchor = AnchorStyles.Top | AnchorStyles.Right;
 		gclass3_0.AutoSize = true;
 		gclass3_0.LinkColor = Color.FromArgb(38, 135, 200);
@@ -297,7 +297,7 @@ internal sealed class IPListEntryAddEditDialog : Form0
 		gclass3_0.Size = new Size(73, 16);
 		gclass3_0.TabIndex = 4;
 		gclass3_0.TabStop = true;
-		gclass3_0.Text = "online help";
+		gclass3_0.Text = "справка онлайн";
 		gclass3_0.VisitedLinkColor = Color.FromArgb(38, 135, 200);
 		base.AutoScaleDimensions = new SizeF(8f, 16f);
 		base.AutoScaleMode = AutoScaleMode.Font;

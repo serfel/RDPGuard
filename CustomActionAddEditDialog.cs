@@ -232,9 +232,9 @@ internal sealed class CustomActionAddEditDialog : Form0
 				gclass10_0 = new Class175()
 			};
 			Text = "Add New Custom Action";
-			class62_1.Text = "New Custom Action";
-			class62_0.Text = "Specify Custom Action properties and click Add new custom action";
-			class66_1.Text = "Add new custom action";
+			class62_1.Text = "Новое действие";
+			class62_0.Text = "Задайте параметры действия и нажмите «Добавить»";
+			class66_1.Text = "Добавить новое действие";
 			pictureBox_0.Image = Resources.notifications_add_48;
 			gclass3_0.Click += gclass3_0_Click;
 			Control4_0.vmethod_3(GEnum2_0);
@@ -243,9 +243,9 @@ internal sealed class CustomActionAddEditDialog : Form0
 		{
 			Class94_0 = class94_1;
 			Text = "Edit Custom Action";
-			class62_1.Text = "Edit Custom Action";
-			class62_0.Text = "Edit Custom Action properties and click Save changes";
-			class66_1.Text = "Save changes";
+			class62_1.Text = "Изменить действие";
+			class62_0.Text = "Измените параметры и нажмите «Сохранить»";
+			class66_1.Text = "Сохранить изменения";
 			pictureBox_0.Image = Resources.notifications_edit_48;
 			gclass3_0.Click += gclass3_0_Click_1;
 		}
@@ -417,7 +417,7 @@ internal sealed class CustomActionAddEditDialog : Form0
             this.class62_0.Name = "class62_0";
             this.class62_0.Size = new System.Drawing.Size(162, 16);
             this.class62_0.TabIndex = 4;
-            this.class62_0.Text = "<description placeholder>";
+            this.class62_0"<description placeholder>";
             // 
             // class62_1
             // 
@@ -431,7 +431,7 @@ internal sealed class CustomActionAddEditDialog : Form0
             this.class62_1.Name = "class62_1";
             this.class62_1.Size = new System.Drawing.Size(186, 16);
             this.class62_1.TabIndex = 14;
-            this.class62_1.Text = "<subcaption placeholder>";
+            this.class62_1"<subcaption placeholder>";
             // 
             // class66_0
             // 
@@ -445,7 +445,7 @@ internal sealed class CustomActionAddEditDialog : Form0
             this.class66_0.Name = "class66_0";
             this.class66_0.Size = new System.Drawing.Size(100, 36);
             this.class66_0.TabIndex = 5;
-            this.class66_0.Text = "Cancel";
+            this.class66_0.Text = "Отмена";
             this.class66_0.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.class66_0.UseVisualStyleBackColor = false;
             // 
@@ -462,7 +462,7 @@ internal sealed class CustomActionAddEditDialog : Form0
             this.class66_1.Name = "class66_1";
             this.class66_1.Size = new System.Drawing.Size(277, 36);
             this.class66_1.TabIndex = 4;
-            this.class66_1.Text = "<ok_button>";
+            this.class66_1"<ok_button>";
             this.class66_1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.class66_1.UseVisualStyleBackColor = false;
             // 
@@ -491,7 +491,7 @@ internal sealed class CustomActionAddEditDialog : Form0
             this.gclass3_0.Size = new System.Drawing.Size(72, 16);
             this.gclass3_0.TabIndex = 6;
             this.gclass3_0.TabStop = true;
-            this.gclass3_0.Text = "online help";
+            this.gclass3_0.Text = "справка онлайн";
             this.gclass3_0.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(135)))), ((int)(((byte)(200)))));
             // 
             // class0_0
@@ -520,7 +520,7 @@ internal sealed class CustomActionAddEditDialog : Form0
             this.class62_2.Name = "class62_2";
             this.class62_2.Size = new System.Drawing.Size(47, 16);
             this.class62_2.TabIndex = 67;
-            this.class62_2.Text = "Action:";
+            this.class62_2.Text = "Действие:";
             // 
             // class63_0
             // 
@@ -533,7 +533,7 @@ internal sealed class CustomActionAddEditDialog : Form0
             this.class63_0.Name = "class63_0";
             this.class63_0.Size = new System.Drawing.Size(247, 16);
             this.class63_0.TabIndex = 66;
-            this.class63_0.Text = "Specify the action that will occur when {0}";
+            this.class63_0.Text = "Укажите действие при событии {0}";
             // 
             // panel_0
             // 
@@ -559,7 +559,7 @@ internal sealed class CustomActionAddEditDialog : Form0
             this.class62_3.Name = "class62_3";
             this.class62_3.Size = new System.Drawing.Size(44, 16);
             this.class62_3.TabIndex = 71;
-            this.class62_3.Text = "Event:";
+            this.class62_3.Text = "Событие:";
             // 
             // class63_1
             // 
@@ -572,7 +572,7 @@ internal sealed class CustomActionAddEditDialog : Form0
             this.class63_1.Name = "class63_1";
             this.class63_1.Size = new System.Drawing.Size(179, 16);
             this.class63_1.TabIndex = 70;
-            this.class63_1.Text = "Select event type from the list";
+            this.class63_1.Text = "Выберите тип события из списка";
             // 
             // class0_1
             // 
@@ -599,7 +599,7 @@ internal sealed class CustomActionAddEditDialog : Form0
             this.class61_0.Name = "class61_0";
             this.class61_0.Size = new System.Drawing.Size(77, 20);
             this.class61_0.TabIndex = 3;
-            this.class61_0.Text = "Enabled";
+            this.class61_0.Text = "Включено";
             this.class61_0.UseVisualStyleBackColor = false;
             // 
             // gclass3_1
@@ -615,7 +615,7 @@ internal sealed class CustomActionAddEditDialog : Form0
             this.gclass3_1.Size = new System.Drawing.Size(68, 16);
             this.gclass3_1.TabIndex = 72;
             this.gclass3_1.TabStop = true;
-            this.gclass3_1.Text = "configure..";
+            this.gclass3_1.Text = "настроить..";
             this.gclass3_1.Visible = false;
             this.gclass3_1.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(135)))), ((int)(((byte)(200)))));
             // 
@@ -645,7 +645,7 @@ internal sealed class CustomActionAddEditDialog : Form0
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "CustomActionAddEditDialog";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Text = "<caption placeholder>";
+            this"<caption placeholder>";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_0)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -680,7 +680,7 @@ internal sealed class CustomActionAddEditDialog : Form0
 	private void class0_1_SelectedIndexChanged(object sender, EventArgs e)
 	{
 		method_12();
-		class63_0.Text = "Specify the action that will occur when " + class0_1.Text;
+		class63_0.Text = "Укажите действие при " + class0_1.Text;
 		Control4_0.vmethod_3(GEnum2_0);
 		gclass3_1.Visible = dictionary_1[GEnum2_0].class102_0.Boolean_0;
 	}

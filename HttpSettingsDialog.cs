@@ -160,7 +160,7 @@ internal sealed class HttpSettingsDialog : Form0
 		class66_0.Name = "m_btnSave";
 		class66_0.Size = new Size(100, 36);
 		class66_0.TabIndex = 7;
-		class66_0.Text = "Save";
+		class66_0.Text = "Сохранить";
 		class66_0.TextAlign = ContentAlignment.MiddleRight;
 		class66_0.TextImageRelation = TextImageRelation.ImageBeforeText;
 		class66_0.UseVisualStyleBackColor = true;
@@ -171,7 +171,7 @@ internal sealed class HttpSettingsDialog : Form0
 		class66_1.Name = "m_btnCancel";
 		class66_1.Size = new Size(100, 36);
 		class66_1.TabIndex = 8;
-		class66_1.Text = "Cancel";
+		class66_1.Text = "Отмена";
 		class66_1.TextAlign = ContentAlignment.MiddleRight;
 		class66_1.TextImageRelation = TextImageRelation.ImageBeforeText;
 		class66_1.UseVisualStyleBackColor = true;
@@ -188,7 +188,7 @@ internal sealed class HttpSettingsDialog : Form0
 		class62_0.Name = "m_lblCaption";
 		class62_0.Size = new Size(122, 16);
 		class62_0.TabIndex = 49;
-		class62_0.Text = "HTTP Protection";
+		class62_0"HTTP Protection";
 		pictureBox_0.Image = Resources.http_48;
 		pictureBox_0.Location = new Point(16, 15);
 		pictureBox_0.Margin = new Padding(4);
@@ -203,7 +203,7 @@ internal sealed class HttpSettingsDialog : Form0
 		class62_1.Name = "m_lblSubCaption";
 		class62_1.Size = new Size(155, 16);
 		class62_1.TabIndex = 48;
-		class62_1.Text = "HTTP protection settings";
+		class62_1"HTTP protection settings";
 		gclass3_0.Anchor = AnchorStyles.Top | AnchorStyles.Right;
 		gclass3_0.AutoSize = true;
 		gclass3_0.LinkBehavior = LinkBehavior.NeverUnderline;
@@ -213,14 +213,14 @@ internal sealed class HttpSettingsDialog : Form0
 		gclass3_0.Size = new Size(72, 16);
 		gclass3_0.TabIndex = 9;
 		gclass3_0.TabStop = true;
-		gclass3_0.Text = "online help";
+		gclass3_0.Text = "справка онлайн";
 		gclass3_0.VisitedLinkColor = Color.FromArgb(38, 135, 200);
 		class61_0.AutoSize = true;
 		class61_0.Location = new Point(16, 97);
 		class61_0.Name = "m_chbEnableProtection";
 		class61_0.Size = new Size(171, 20);
 		class61_0.TabIndex = 0;
-		class61_0.Text = "Enable HTTP protection";
+		class61_0"Enable HTTP protection";
 		class61_0.UseVisualStyleBackColor = true;
 		class63_0.AutoSize = true;
 		class63_0.ForeColor = SystemColors.ControlDarkDark;
@@ -228,7 +228,7 @@ internal sealed class HttpSettingsDialog : Form0
 		class63_0.Name = "m_lblEnableProtectionHint";
 		class63_0.Size = new Size(213, 16);
 		class63_0.TabIndex = 58;
-		class63_0.Text = "Turn on to enable HTTP protection";
+		class63_0"Turn on to enable HTTP protection";
 		textBox_0.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 		textBox_0.Enabled = false;
 		textBox_0.Location = new Point(16, 387);
@@ -252,7 +252,7 @@ internal sealed class HttpSettingsDialog : Form0
 		class62_2.Name = "m_lblLogDirectories";
 		class62_2.Size = new Size(113, 16);
 		class62_2.TabIndex = 63;
-		class62_2.Text = "IIS log directories:";
+		class62_2"IIS log directories:";
 		control15_0.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
 		control15_0.String_0 = new string[0];
 		control15_0.Font = new Font("Microsoft Sans Serif", 9.75f, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -266,7 +266,7 @@ internal sealed class HttpSettingsDialog : Form0
 		class61_1.Name = "m_chbOverrideStandardRules";
 		class61_1.Size = new Size(224, 20);
 		class61_1.TabIndex = 65;
-		class61_1.Text = "Override standard detection rules";
+		class61_1"Override standard detection rules";
 		class61_1.UseVisualStyleBackColor = true;
 		class63_2.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 		class63_2.AutoSize = true;
@@ -275,7 +275,7 @@ internal sealed class HttpSettingsDialog : Form0
 		class63_2.Name = "m_chbOverrideStandardRulesHint";
 		class63_2.Size = new Size(472, 16);
 		class63_2.TabIndex = 67;
-		class63_2.Text = "Please check online help for rules syntax. Please do not edit if you are not sure.";
+		class63_2"Please check online help for rules syntax. Please do not edit if you are not sure.";
 		class63_3.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
 		class63_3.AutoSize = true;
 		class63_3.ForeColor = SystemColors.ControlDarkDark;
@@ -283,7 +283,7 @@ internal sealed class HttpSettingsDialog : Form0
 		class63_3.Name = "m_lblLogDirectoriesHint";
 		class63_3.Size = new Size(352, 16);
 		class63_3.TabIndex = 68;
-		class63_3.Text = "Select IIS log directories to monitor for dangerous patterns.";
+		class63_3"Select IIS log directories to monitor for dangerous patterns.";
 		gclass3_1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
 		gclass3_1.AutoSize = true;
 		gclass3_1.LinkBehavior = LinkBehavior.NeverUnderline;
@@ -293,7 +293,7 @@ internal sealed class HttpSettingsDialog : Form0
 		gclass3_1.Size = new Size(123, 16);
 		gclass3_1.TabIndex = 69;
 		gclass3_1.TabStop = true;
-		gclass3_1.Text = "advanced settings..";
+		gclass3_1"advanced settings..";
 		gclass3_1.VisitedLinkColor = Color.FromArgb(38, 135, 200);
 		base.AutoScaleDimensions = new SizeF(8f, 16f);
 		base.AutoScaleMode = AutoScaleMode.Font;

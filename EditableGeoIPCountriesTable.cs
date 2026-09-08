@@ -378,7 +378,7 @@ internal sealed class EditableGeoIPCountriesTable : UserControl
 		this.class67_0.Name = "toolStrip1";
 		this.class67_0.Size = new System.Drawing.Size(562, 27);
 		this.class67_0.TabIndex = 0;
-		this.class67_0.Text = "toolStrip1";
+		this.class67_0"toolStrip1";
 		this.toolStripButton_4.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
 		this.toolStripButton_4.Image = Properties.Resources.config_10_v2;
 		this.toolStripButton_4.ImageTransparentColor = System.Drawing.Color.Magenta;
@@ -386,7 +386,7 @@ internal sealed class EditableGeoIPCountriesTable : UserControl
 		this.toolStripButton_4.Name = "m_btnAdvancedSettings";
 		this.toolStripButton_4.Padding = new System.Windows.Forms.Padding(3, 3, 1, 3);
 		this.toolStripButton_4.Size = new System.Drawing.Size(23, 25);
-		this.toolStripButton_4.Text = "Settings";
+		this.toolStripButton_4"Settings";
 		this.toolStripButton_4.ToolTipText = "Click to open advanced settings";
 		this.toolStripButton_3.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
 		this.toolStripButton_3.Enabled = false;
@@ -396,7 +396,7 @@ internal sealed class EditableGeoIPCountriesTable : UserControl
 		this.toolStripButton_3.Name = "m_btnDelete";
 		this.toolStripButton_3.Padding = new System.Windows.Forms.Padding(3, 3, 1, 3);
 		this.toolStripButton_3.Size = new System.Drawing.Size(60, 25);
-		this.toolStripButton_3.Text = "Delete";
+		this.toolStripButton_3.Text = "Удалить";
 		this.toolStripButton_3.ToolTipText = "Click to delete selected countries";
 		this.toolStripButton_2.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
 		this.toolStripButton_2.Enabled = false;
@@ -406,7 +406,7 @@ internal sealed class EditableGeoIPCountriesTable : UserControl
 		this.toolStripButton_2.Name = "m_btnEdit";
 		this.toolStripButton_2.Padding = new System.Windows.Forms.Padding(3, 3, 1, 3);
 		this.toolStripButton_2.Size = new System.Drawing.Size(47, 25);
-		this.toolStripButton_2.Text = "Edit";
+		this.toolStripButton_2.Text = "Изменить";
 		this.toolStripButton_2.ToolTipText = "Click to edit custom allow list";
 		this.toolStripButton_1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
 		this.toolStripButton_1.Image = Properties.Resources.plus_10;
@@ -415,7 +415,7 @@ internal sealed class EditableGeoIPCountriesTable : UserControl
 		this.toolStripButton_1.Name = "m_btnAdd";
 		this.toolStripButton_1.Padding = new System.Windows.Forms.Padding(3, 3, 1, 3);
 		this.toolStripButton_1.Size = new System.Drawing.Size(49, 25);
-		this.toolStripButton_1.Text = "Add";
+		this.toolStripButton_1.Text = "Добавить";
 		this.toolStripButton_1.ToolTipText = "Click to add new country";
 		this.toolStripDropDownButton_0.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
 		this.toolStripDropDownButton_0.Image = Properties.Resources.plus_10;
@@ -424,7 +424,7 @@ internal sealed class EditableGeoIPCountriesTable : UserControl
 		this.toolStripDropDownButton_0.Name = "m_btnAddDropDown";
 		this.toolStripDropDownButton_0.Padding = new System.Windows.Forms.Padding(3, 3, 1, 3);
 		this.toolStripDropDownButton_0.Size = new System.Drawing.Size(58, 25);
-		this.toolStripDropDownButton_0.Text = "Add";
+		this.toolStripDropDownButton_0.Text = "Добавить";
 		this.toolStripDropDownButton_0.ToolTipText = "Click to add new country or custom allow list";
 		this.toolStripButton_0.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
 		this.toolStripButton_0.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -439,7 +439,7 @@ internal sealed class EditableGeoIPCountriesTable : UserControl
 		this.gcontrol1_0.Name = "m_chbTemporaryDenyRule";
 		this.gcontrol1_0.Padding = new System.Windows.Forms.Padding(3);
 		this.gcontrol1_0.Size = new System.Drawing.Size(268, 27);
-		this.gcontrol1_0.Text = "Test mode (all countries allowed again after reboot)";
+		this.gcontrol1_0"Test mode (all countries allowed again after reboot)";
 		this.gcontrol1_0.ToolTipText = "Use this mode to test blocking settings. After a restart, all countries will be allowed again to ensure access in case of configuration errors.";
 		this.control1_0.GClass5_1 = new GClass5[0];
 		this.control1_0.IPListEntry_0 = new rdpguard.lib.IPListEntry[0];

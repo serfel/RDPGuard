@@ -259,7 +259,7 @@ internal sealed class TelegramSendTaskAddEditControl : Control4
 		class65_0.Size = new Size(605, 427);
 		class65_0.TabIndex = 39;
 		class65_0.TabStop = false;
-		class65_0.Text = "Settings";
+		class65_0.Text = "Настройки";
 		class62_3.AutoSize = true;
 		class62_3.ForeColor = Color.Red;
 		class62_3.Location = new Point(184, 86);
@@ -267,7 +267,7 @@ internal sealed class TelegramSendTaskAddEditControl : Control4
 		class62_3.Name = "m_lblChatWarning";
 		class62_3.Size = new Size(92, 16);
 		class62_3.TabIndex = 82;
-		class62_3.Text = "{chat-warning}";
+		class62_3"{chat-warning}";
 		class62_3.Boolean_0 = true;
 		class62_3.Visible = false;
 		class66_0.Anchor = AnchorStyles.Top | AnchorStyles.Right;
@@ -290,7 +290,7 @@ internal sealed class TelegramSendTaskAddEditControl : Control4
 		class62_2.Name = "m_lblChat";
 		class62_2.Size = new Size(37, 16);
 		class62_2.TabIndex = 80;
-		class62_2.Text = "Chat:";
+		class62_2"Chat:";
 		class63_2.AutoSize = true;
 		class63_2.ForeColor = SystemColors.ControlDarkDark;
 		class63_2.Location = new Point(184, 135);
@@ -298,7 +298,7 @@ internal sealed class TelegramSendTaskAddEditControl : Control4
 		class63_2.Name = "m_lblChatHint";
 		class63_2.Size = new Size(324, 16);
 		class63_2.TabIndex = 79;
-		class63_2.Text = "The chat where you want the bot to send messages to";
+		class63_2"The chat where you want the bot to send messages to";
 		pictureBox_0.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
 		pictureBox_0.Location = new Point(452, 407);
 		pictureBox_0.Name = "m_picLoading";
@@ -315,7 +315,7 @@ internal sealed class TelegramSendTaskAddEditControl : Control4
 		gclass3_1.Size = new Size(121, 16);
 		gclass3_1.TabIndex = 16;
 		gclass3_1.TabStop = true;
-		gclass3_1.Text = "send test message";
+		gclass3_1"send test message";
 		gclass3_1.VisitedLinkColor = Color.FromArgb(38, 135, 200);
 		textBox_1.AcceptsReturn = true;
 		textBox_1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
@@ -331,7 +331,7 @@ internal sealed class TelegramSendTaskAddEditControl : Control4
 		class62_1.Name = "m_lblMessage";
 		class62_1.Size = new Size(42, 16);
 		class62_1.TabIndex = 73;
-		class62_1.Text = "Body:";
+		class62_1"Body:";
 		class63_1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
 		class63_1.AutoSize = true;
 		class63_1.ForeColor = SystemColors.ControlDarkDark;
@@ -340,7 +340,7 @@ internal sealed class TelegramSendTaskAddEditControl : Control4
 		class63_1.Name = "m_lblMessageHint";
 		class63_1.Size = new Size(152, 16);
 		class63_1.TabIndex = 72;
-		class63_1.Text = " Specify message body ";
+		class63_1" Specify message body ";
 		textBox_0.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
 		textBox_0.Location = new Point(187, 32);
 		textBox_0.Margin = new Padding(4);
@@ -353,7 +353,7 @@ internal sealed class TelegramSendTaskAddEditControl : Control4
 		class62_0.Name = "m_lblBotToken";
 		class62_0.Size = new Size(66, 16);
 		class62_0.TabIndex = 64;
-		class62_0.Text = "Bot token:";
+		class62_0"Bot token:";
 		class63_0.AutoSize = true;
 		class63_0.ForeColor = SystemColors.ControlDarkDark;
 		class63_0.Location = new Point(184, 61);
@@ -361,7 +361,7 @@ internal sealed class TelegramSendTaskAddEditControl : Control4
 		class63_0.Name = "m_lblBotTokenHint";
 		class63_0.Size = new Size(413, 16);
 		class63_0.TabIndex = 63;
-		class63_0.Text = "Unique identifier for your bot, provided by @BotFather after bot creation";
+		class63_0"Unique identifier for your bot, provided by @BotFather after bot creation";
 		base.AutoScaleDimensions = new SizeF(8f, 16f);
 		base.AutoScaleMode = AutoScaleMode.Font;
 		base.Controls.Add(class65_0);

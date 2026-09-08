@@ -89,9 +89,9 @@ internal sealed class SmtpServerAddEditDialog : Form0
 		{
 			Class109_0 = new Class109();
 			Text = "Add New SMTP Server";
-			class62_1.Text = "New SMTP Server";
-			class62_0.Text = "Specify SMTP Server properties and click Add new server";
-			class66_1.Text = "Add new server";
+			class62_1.Text = "Новый SMTP-сервер";
+			class62_0.Text = "Задайте параметры SMTP и нажмите «Добавить»";
+			class66_1.Text = "Добавить сервер";
 			pictureBox_0.Image = Resources.mail_server_add_48;
 			gclass3_0.Click += gclass3_0_Click;
 		}
@@ -99,9 +99,9 @@ internal sealed class SmtpServerAddEditDialog : Form0
 		{
 			Class109_0 = class109_1;
 			Text = "Edit SMTP Server";
-			class62_1.Text = "Edit SMTP Server";
-			class62_0.Text = "Edit SMTP Server properties and click Save changes";
-			class66_1.Text = "Save changes";
+			class62_1.Text = "Изменить SMTP-сервер";
+			class62_0.Text = "Измените параметры SMTP и нажмите «Сохранить»";
+			class66_1.Text = "Сохранить изменения";
 			pictureBox_0.Image = Resources.mail_server_edit_48;
 			gclass3_0.Click += gclass3_0_Click_1;
 		}
@@ -173,7 +173,7 @@ internal sealed class SmtpServerAddEditDialog : Form0
 		class62_0.Name = "m_lblSubCaption";
 		class62_0.Size = new Size(163, 16);
 		class62_0.TabIndex = 4;
-		class62_0.Text = "<description placeholder>";
+		class62_0"<description placeholder>";
 		class62_1.AutoSize = true;
 		class62_1.Font = new Font("Microsoft Sans Serif", 9.75f, FontStyle.Bold, GraphicsUnit.Point, 204);
 		class62_1.Location = new Point(79, 15);
@@ -181,7 +181,7 @@ internal sealed class SmtpServerAddEditDialog : Form0
 		class62_1.Name = "m_lblCaption";
 		class62_1.Size = new Size(187, 16);
 		class62_1.TabIndex = 14;
-		class62_1.Text = "<subcaption placeholder>";
+		class62_1"<subcaption placeholder>";
 		class66_0.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
 		class66_0.Image = Resources.cancl_16;
 		class66_0.Location = new Point(431, 493);
@@ -189,7 +189,7 @@ internal sealed class SmtpServerAddEditDialog : Form0
 		class66_0.Name = "m_btnCancel";
 		class66_0.Size = new Size(100, 36);
 		class66_0.TabIndex = 6;
-		class66_0.Text = "Cancel";
+		class66_0.Text = "Отмена";
 		class66_0.TextImageRelation = TextImageRelation.ImageBeforeText;
 		class66_0.UseVisualStyleBackColor = true;
 		class66_1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
@@ -200,7 +200,7 @@ internal sealed class SmtpServerAddEditDialog : Form0
 		class66_1.Name = "m_btnOK";
 		class66_1.Size = new Size(152, 36);
 		class66_1.TabIndex = 5;
-		class66_1.Text = "<ok_button>";
+		class66_1"<ok_button>";
 		class66_1.TextImageRelation = TextImageRelation.ImageBeforeText;
 		class66_1.UseVisualStyleBackColor = true;
 		gcontrol0_0.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
@@ -217,7 +217,7 @@ internal sealed class SmtpServerAddEditDialog : Form0
 		gclass3_0.Size = new Size(73, 16);
 		gclass3_0.TabIndex = 7;
 		gclass3_0.TabStop = true;
-		gclass3_0.Text = "online help";
+		gclass3_0.Text = "справка онлайн";
 		gclass3_0.VisitedLinkColor = Color.FromArgb(38, 135, 200);
 		class65_0.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
 		class65_0.Controls.Add(class63_4);
@@ -233,20 +233,20 @@ internal sealed class SmtpServerAddEditDialog : Form0
 		class65_0.Size = new Size(516, 224);
 		class65_0.TabIndex = 36;
 		class65_0.TabStop = false;
-		class65_0.Text = "Transport";
+		class65_0"Transport";
 		class63_4.AutoSize = true;
 		class63_4.ForeColor = SystemColors.ControlDarkDark;
 		class63_4.Location = new Point(16, 188);
 		class63_4.Name = "m_lblSSLHint";
 		class63_4.Size = new Size(356, 16);
 		class63_4.TabIndex = 69;
-		class63_4.Text = " Turn on if your server supports secure SMTP connections. ";
+		class63_4" Turn on if your server supports secure SMTP connections. ";
 		class61_0.AutoSize = true;
 		class61_0.Location = new Point(19, 162);
 		class61_0.Name = "m_chbSSL";
 		class61_0.Size = new Size(127, 20);
 		class61_0.TabIndex = 2;
-		class61_0.Text = "Enable SSL/TLS";
+		class61_0.Text = "Включить SSL/TLS";
 		class61_0.UseVisualStyleBackColor = true;
 		numericUpDown_0.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
 		numericUpDown_0.Location = new Point(140, 96);
@@ -261,14 +261,14 @@ internal sealed class SmtpServerAddEditDialog : Form0
 		class62_3.Name = "m_lblPort";
 		class62_3.Size = new Size(35, 16);
 		class62_3.TabIndex = 67;
-		class62_3.Text = "Port:";
+		class62_3.Text = "Порт:";
 		class63_1.AutoSize = true;
 		class63_1.ForeColor = SystemColors.ControlDarkDark;
 		class63_1.Location = new Point(137, 124);
 		class63_1.Name = "m_lblPortHint";
 		class63_1.Size = new Size(348, 16);
 		class63_1.TabIndex = 66;
-		class63_1.Text = "Most common SMTP ports are 25 (plain) and 587 (secure)";
+		class63_1.Text = "Обычные порты SMTP: 25 (простой) и 587 (защищённый)";
 		textBox_0.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
 		textBox_0.Location = new Point(140, 26);
 		textBox_0.Name = "m_edHost";
@@ -279,14 +279,14 @@ internal sealed class SmtpServerAddEditDialog : Form0
 		class62_2.Name = "m_lblHost";
 		class62_2.Size = new Size(39, 16);
 		class62_2.TabIndex = 64;
-		class62_2.Text = "Host:";
+		class62_2.Text = "Хост:";
 		class63_0.AutoSize = true;
 		class63_0.ForeColor = SystemColors.ControlDarkDark;
 		class63_0.Location = new Point(137, 54);
 		class63_0.Name = "m_lblHostHint";
 		class63_0.Size = new Size(289, 16);
 		class63_0.TabIndex = 63;
-		class63_0.Text = " Specify SMTP server to use for sending emails";
+		class63_0" Specify SMTP server to use for sending emails";
 		class65_1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
 		class65_1.Controls.Add(textBox_1);
 		class65_1.Controls.Add(class62_4);
@@ -299,7 +299,7 @@ internal sealed class SmtpServerAddEditDialog : Form0
 		class65_1.Size = new Size(516, 160);
 		class65_1.TabIndex = 37;
 		class65_1.TabStop = false;
-		class65_1.Text = "Authentication";
+		class65_1"Authentication";
 		textBox_1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
 		textBox_1.Location = new Point(140, 95);
 		textBox_1.Name = "m_edPassword";
@@ -311,14 +311,14 @@ internal sealed class SmtpServerAddEditDialog : Form0
 		class62_4.Name = "m_lblPassword";
 		class62_4.Size = new Size(71, 16);
 		class62_4.TabIndex = 67;
-		class62_4.Text = "Password:";
+		class62_4.Text = "Пароль:";
 		class63_2.AutoSize = true;
 		class63_2.ForeColor = SystemColors.ControlDarkDark;
 		class63_2.Location = new Point(137, 123);
 		class63_2.Name = "m_lblPasswordHint";
 		class63_2.Size = new Size(265, 16);
 		class63_2.TabIndex = 66;
-		class63_2.Text = " Specify password for SMTP authentication ";
+		class63_2" Specify password for SMTP authentication ";
 		textBox_2.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
 		textBox_2.Location = new Point(140, 26);
 		textBox_2.Name = "m_edUsername";
@@ -329,14 +329,14 @@ internal sealed class SmtpServerAddEditDialog : Form0
 		class62_5.Name = "m_lblUsername";
 		class62_5.Size = new Size(77, 16);
 		class62_5.TabIndex = 64;
-		class62_5.Text = "User name:";
+		class62_5.Text = "Имя пользователя:";
 		class63_3.AutoSize = true;
 		class63_3.ForeColor = SystemColors.ControlDark;
 		class63_3.Location = new Point(137, 54);
 		class63_3.Name = "m_lblUsernameHint";
 		class63_3.Size = new Size(269, 16);
 		class63_3.TabIndex = 63;
-		class63_3.Text = " Specify user name for SMTP authentication ";
+		class63_3" Specify user name for SMTP authentication ";
 		base.AutoScaleDimensions = new SizeF(8f, 16f);
 		base.AutoScaleMode = AutoScaleMode.Font;
 		base.ClientSize = new Size(544, 542);
