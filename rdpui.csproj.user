@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <Compile Update="AboutDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="AdvancedBlockingSettingsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="AdvancedGeoIPSettingsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="AdvancedHttpSettingsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="AdvancedSmtpSettingsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="bi.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Class0.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Class46.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Class47.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Class53.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Class54.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Class55.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Class56.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Class57.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Class61.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Class62.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Class63.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Class64.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Class65.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Class66.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Class67.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Class78.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Class79.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Control14.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Control2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Control4.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="CustomActionAddEditDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="CustomActionsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="DashboardDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="DiagnosticReportDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="DirectoriesTable.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="EditableGeoIPCountriesTable.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="EventLogDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ExecuteProgramAddEditControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Form0.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="formCrashReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FtpMonitoringViaLogsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="FtpSettingsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ListViewWithScroll.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="GClass2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="GClass3.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="GControl0.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="GControl1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="GeoIPCountriesTable.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="GeoIPCountryAddDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="HttpPostTaskAddEditControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="HttpSettingsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ImapMonitoringViaLogsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="ImapSettingsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="IPFilterDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="IPListDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="IPListEntryAddEditDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="LicenseActivatationDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="LicenseActivatationOfflineDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="MailSendTaskAddEditControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="MsSqlExclusionsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="MsSqlSettingsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="MySqlSettingsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="OptionsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Pop3MonitoringViaLogsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Pop3SettingsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ProtocolRulesDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="RawSocketsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="RdpSettingsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="RDWebSettingsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ReportToAbuseIPDBAddEditControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="SipSettingsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="SmtpMonitoringViaLogsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="SmtpServerAddEditDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="SmtpServersDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="SmtpSettingsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="TelegramSendTaskAddEditControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="TrafficMonitoringControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="WebFormsSettingsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="WinPcapDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>
