@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <Compile Update="bi.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Class0.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Class46.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Class47.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Class53.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Class54.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Class55.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Class56.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Class57.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Class61.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Class62.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Class63.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Class64.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Class65.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Class66.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Class67.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Class78.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Class79.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Control0.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Control1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Control10.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Control11.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Control12.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Control13.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Control14.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Control15.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Control2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Control3.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Control4.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Control5.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Control6.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Control7.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Control8.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Control9.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Form0.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Form10.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Form11.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Form12.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Form13.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Form14.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Form15.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Form16.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Form17.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Form18.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Form19.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Form20.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Form21.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Form22.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Form23.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Form24.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Form25.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Form26.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Form27.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Form28.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Form29.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Form3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Form30.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Form31.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Form32.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Form33.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Form34.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Form35.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Form4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Form5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Form6.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Form7.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Form8.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Form9.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GClass0.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="GClass2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="GClass3.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="GControl0.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="GControl1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>
