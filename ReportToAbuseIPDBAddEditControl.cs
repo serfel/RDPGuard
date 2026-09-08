@@ -106,7 +106,7 @@ internal sealed class ReportToAbuseIPDBAddEditControl : Control4
 		class65_0.Size = new Size(608, 315);
 		class65_0.TabIndex = 38;
 		class65_0.TabStop = false;
-		class65_0.Text = "Settings";
+		class65_0.Text = "Настройки";
 		pictureBox_0.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
 		pictureBox_0.Location = new Point(523, 295);
 		pictureBox_0.Name = "m_picLoading";
@@ -123,7 +123,7 @@ internal sealed class ReportToAbuseIPDBAddEditControl : Control4
 		gclass3_1.Size = new Size(56, 16);
 		gclass3_1.TabIndex = 86;
 		gclass3_1.TabStop = true;
-		gclass3_1.Text = "test run";
+		gclass3_1.Text = "тестовый запуск";
 		gclass3_1.VisitedLinkColor = Color.FromArgb(38, 135, 200);
 		textBox_0.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
 		textBox_0.Location = new Point(187, 32);
@@ -135,14 +135,14 @@ internal sealed class ReportToAbuseIPDBAddEditControl : Control4
 		class62_0.Name = "m_lblApiKey";
 		class62_0.Size = new Size(99, 16);
 		class62_0.TabIndex = 82;
-		class62_0.Text = "API key:";
+		class62_0"API key:";
 		class63_0.AutoSize = true;
 		class63_0.ForeColor = SystemColors.ControlDarkDark;
 		class63_0.Location = new Point(184, 60);
 		class63_0.Name = "m_lblApiKeyHint";
 		class63_0.Size = new Size(332, 16);
 		class63_0.TabIndex = 81;
-		class63_0.Text = "Please enter your AbuseIPDB API key";
+		class63_0"Please enter your AbuseIPDB API key";
 		base.AutoScaleDimensions = new SizeF(8f, 16f);
 		base.AutoScaleMode = AutoScaleMode.Font;
 		base.Controls.Add(class65_0);

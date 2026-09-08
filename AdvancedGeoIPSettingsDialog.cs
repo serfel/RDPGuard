@@ -335,7 +335,7 @@ internal sealed class AdvancedGeoIPSettingsDialog : Form0
             this.class66_0.Name = "class66_0";
             this.class66_0.Size = new System.Drawing.Size(100, 36);
             this.class66_0.TabIndex = 7;
-            this.class66_0.Text = "Close";
+            this.class66_0"Close";
             this.class66_0.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.class66_0.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.class66_0.UseVisualStyleBackColor = false;
@@ -364,7 +364,7 @@ internal sealed class AdvancedGeoIPSettingsDialog : Form0
             this.class62_0.Name = "class62_0";
             this.class62_0.Size = new System.Drawing.Size(115, 16);
             this.class62_0.TabIndex = 49;
-            this.class62_0.Text = "Geo-IP Settings";
+            this.class62_0"Geo-IP Settings";
             // 
             // pictureBox_0
             // 
@@ -389,7 +389,7 @@ internal sealed class AdvancedGeoIPSettingsDialog : Form0
             this.class62_1.Name = "class62_1";
             this.class62_1.Size = new System.Drawing.Size(163, 16);
             this.class62_1.TabIndex = 48;
-            this.class62_1.Text = "Advanced Geo-IP settings";
+            this.class62_1"Advanced Geo-IP settings";
             // 
             // gclass3_0
             // 
@@ -404,7 +404,7 @@ internal sealed class AdvancedGeoIPSettingsDialog : Form0
             this.gclass3_0.Size = new System.Drawing.Size(72, 16);
             this.gclass3_0.TabIndex = 9;
             this.gclass3_0.TabStop = true;
-            this.gclass3_0.Text = "online help";
+            this.gclass3_0.Text = "справка онлайн";
             this.gclass3_0.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(135)))), ((int)(((byte)(200)))));
             // 
             // control14_0
@@ -432,7 +432,7 @@ internal sealed class AdvancedGeoIPSettingsDialog : Form0
             this.tabPage_0.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage_0.Size = new System.Drawing.Size(528, 589);
             this.tabPage_0.TabIndex = 0;
-            this.tabPage_0.Text = "Deny Mode";
+            this.tabPage_0"Deny Mode";
             // 
             // class65_1
             // 
@@ -453,7 +453,7 @@ internal sealed class AdvancedGeoIPSettingsDialog : Form0
             this.class65_1.Size = new System.Drawing.Size(516, 247);
             this.class65_1.TabIndex = 53;
             this.class65_1.TabStop = false;
-            this.class65_1.Text = "Blocking scope:";
+            this.class65_1"Blocking scope:";
             // 
             // textBox_0
             // 
@@ -478,7 +478,7 @@ internal sealed class AdvancedGeoIPSettingsDialog : Form0
             this.class63_6.Name = "class63_6";
             this.class63_6.Size = new System.Drawing.Size(394, 16);
             this.class63_6.TabIndex = 62;
-            this.class63_6.Text = "Deny access from blocked countries only to the ports listed below";
+            this.class63_6"Deny access from blocked countries only to the ports listed below";
             // 
             // class64_4
             // 
@@ -489,7 +489,7 @@ internal sealed class AdvancedGeoIPSettingsDialog : Form0
             this.class64_4.Size = new System.Drawing.Size(177, 20);
             this.class64_4.TabIndex = 61;
             this.class64_4.TabStop = true;
-            this.class64_4.Text = "Block selected ports only";
+            this.class64_4"Block selected ports only";
             this.class64_4.UseVisualStyleBackColor = false;
             // 
             // textBox_1
@@ -515,7 +515,7 @@ internal sealed class AdvancedGeoIPSettingsDialog : Form0
             this.class63_4.Name = "class63_4";
             this.class63_4.Size = new System.Drawing.Size(441, 16);
             this.class63_4.TabIndex = 59;
-            this.class63_4.Text = "Deny access from blocked countries to all ports except those listed below";
+            this.class63_4"Deny access from blocked countries to all ports except those listed below";
             // 
             // class63_5
             // 
@@ -527,7 +527,7 @@ internal sealed class AdvancedGeoIPSettingsDialog : Form0
             this.class63_5.Name = "class63_5";
             this.class63_5.Size = new System.Drawing.Size(288, 16);
             this.class63_5.TabIndex = 58;
-            this.class63_5.Text = "Deny access from blocked countries to all ports";
+            this.class63_5"Deny access from blocked countries to all ports";
             // 
             // class64_0
             // 
@@ -538,7 +538,7 @@ internal sealed class AdvancedGeoIPSettingsDialog : Form0
             this.class64_0.Size = new System.Drawing.Size(209, 20);
             this.class64_0.TabIndex = 2;
             this.class64_0.TabStop = true;
-            this.class64_0.Text = "Block all ports except selected";
+            this.class64_0"Block all ports except selected";
             this.class64_0.UseVisualStyleBackColor = false;
             // 
             // class64_1
@@ -550,7 +550,7 @@ internal sealed class AdvancedGeoIPSettingsDialog : Form0
             this.class64_1.Size = new System.Drawing.Size(111, 20);
             this.class64_1.TabIndex = 1;
             this.class64_1.TabStop = true;
-            this.class64_1.Text = "Block all ports";
+            this.class64_1"Block all ports";
             this.class64_1.UseVisualStyleBackColor = false;
             // 
             // tabPage_1
@@ -565,7 +565,7 @@ internal sealed class AdvancedGeoIPSettingsDialog : Form0
             this.tabPage_1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage_1.Size = new System.Drawing.Size(528, 589);
             this.tabPage_1.TabIndex = 1;
-            this.tabPage_1.Text = "Allow Mode";
+            this.tabPage_1"Allow Mode";
             // 
             // class65_4
             // 
@@ -583,7 +583,7 @@ internal sealed class AdvancedGeoIPSettingsDialog : Form0
             this.class65_4.Size = new System.Drawing.Size(516, 163);
             this.class65_4.TabIndex = 59;
             this.class65_4.TabStop = false;
-            this.class65_4.Text = "Other connections (from disallowed countries):";
+            this.class65_4"Other connections (from disallowed countries):";
             // 
             // textBox_3
             // 
@@ -608,7 +608,7 @@ internal sealed class AdvancedGeoIPSettingsDialog : Form0
             this.class63_9.Name = "class63_9";
             this.class63_9.Size = new System.Drawing.Size(457, 16);
             this.class63_9.TabIndex = 59;
-            this.class63_9.Text = "Deny access from disallowed countries to all ports except those listed below";
+            this.class63_9"Deny access from disallowed countries to all ports except those listed below";
             // 
             // class63_10
             // 
@@ -620,7 +620,7 @@ internal sealed class AdvancedGeoIPSettingsDialog : Form0
             this.class63_10.Name = "class63_10";
             this.class63_10.Size = new System.Drawing.Size(257, 16);
             this.class63_10.TabIndex = 58;
-            this.class63_10.Text = "Deny all access from disallowed countries";
+            this.class63_10"Deny all access from disallowed countries";
             // 
             // class64_7
             // 
@@ -632,7 +632,7 @@ internal sealed class AdvancedGeoIPSettingsDialog : Form0
             this.class64_7.Size = new System.Drawing.Size(207, 20);
             this.class64_7.TabIndex = 2;
             this.class64_7.TabStop = true;
-            this.class64_7.Text = "Block all ports except selected";
+            this.class64_7"Block all ports except selected";
             this.class64_7.UseVisualStyleBackColor = false;
             // 
             // class64_8
@@ -645,7 +645,7 @@ internal sealed class AdvancedGeoIPSettingsDialog : Form0
             this.class64_8.Size = new System.Drawing.Size(109, 20);
             this.class64_8.TabIndex = 1;
             this.class64_8.TabStop = true;
-            this.class64_8.Text = "Block all ports";
+            this.class64_8"Block all ports";
             this.class64_8.UseVisualStyleBackColor = false;
             // 
             // class65_3
@@ -664,7 +664,7 @@ internal sealed class AdvancedGeoIPSettingsDialog : Form0
             this.class65_3.Size = new System.Drawing.Size(516, 163);
             this.class65_3.TabIndex = 58;
             this.class65_3.TabStop = false;
-            this.class65_3.Text = "Allow rules:";
+            this.class65_3"Allow rules:";
             // 
             // textBox_2
             // 
@@ -689,7 +689,7 @@ internal sealed class AdvancedGeoIPSettingsDialog : Form0
             this.class63_7.Name = "class63_7";
             this.class63_7.Size = new System.Drawing.Size(392, 16);
             this.class63_7.TabIndex = 59;
-            this.class63_7.Text = "Allow connections from allowed countries to the ports listed below";
+            this.class63_7"Allow connections from allowed countries to the ports listed below";
             // 
             // class63_8
             // 
@@ -701,7 +701,7 @@ internal sealed class AdvancedGeoIPSettingsDialog : Form0
             this.class63_8.Name = "class63_8";
             this.class63_8.Size = new System.Drawing.Size(314, 16);
             this.class63_8.TabIndex = 58;
-            this.class63_8.Text = "Allow connections from allowed countries to all ports";
+            this.class63_8"Allow connections from allowed countries to all ports";
             // 
             // class64_5
             // 
@@ -713,7 +713,7 @@ internal sealed class AdvancedGeoIPSettingsDialog : Form0
             this.class64_5.Size = new System.Drawing.Size(234, 20);
             this.class64_5.TabIndex = 2;
             this.class64_5.TabStop = true;
-            this.class64_5.Text = "Allow access to selected ports only";
+            this.class64_5"Allow access to selected ports only";
             this.class64_5.UseVisualStyleBackColor = false;
             // 
             // class64_6
@@ -726,7 +726,7 @@ internal sealed class AdvancedGeoIPSettingsDialog : Form0
             this.class64_6.Size = new System.Drawing.Size(168, 20);
             this.class64_6.TabIndex = 1;
             this.class64_6.TabStop = true;
-            this.class64_6.Text = "Allow access to all ports";
+            this.class64_6"Allow access to all ports";
             this.class64_6.UseVisualStyleBackColor = false;
             // 
             // class65_0
@@ -748,7 +748,7 @@ internal sealed class AdvancedGeoIPSettingsDialog : Form0
             this.class65_0.Size = new System.Drawing.Size(516, 232);
             this.class65_0.TabIndex = 57;
             this.class65_0.TabStop = false;
-            this.class65_0.Text = "Exceptions and special networks";
+            this.class65_0"Exceptions and special networks";
             // 
             // class63_0
             // 
@@ -760,7 +760,7 @@ internal sealed class AdvancedGeoIPSettingsDialog : Form0
             this.class63_0.Name = "class63_0";
             this.class63_0.Size = new System.Drawing.Size(344, 16);
             this.class63_0.TabIndex = 63;
-            this.class63_0.Text = "Exclude known data center networks from the allowed IPs";
+            this.class63_0"Exclude known data center networks from the allowed IPs";
             // 
             // class61_0
             // 
@@ -771,7 +771,7 @@ internal sealed class AdvancedGeoIPSettingsDialog : Form0
             this.class61_0.Name = "class61_0";
             this.class61_0.Size = new System.Drawing.Size(375, 20);
             this.class61_0.TabIndex = 62;
-            this.class61_0.Text = "Exclude data center networks from the allowed connections";
+            this.class61_0"Exclude data center networks from the allowed connections";
             this.class61_0.UseVisualStyleBackColor = false;
             // 
             // class63_1
@@ -784,7 +784,7 @@ internal sealed class AdvancedGeoIPSettingsDialog : Form0
             this.class63_1.Name = "class63_1";
             this.class63_1.Size = new System.Drawing.Size(419, 16);
             this.class63_1.TabIndex = 61;
-            this.class63_1.Text = "Exclude known VPN networks and Tor exit nodes from the allowed IPs";
+            this.class63_1"Exclude known VPN networks and Tor exit nodes from the allowed IPs";
             // 
             // class61_1
             // 
@@ -795,7 +795,7 @@ internal sealed class AdvancedGeoIPSettingsDialog : Form0
             this.class61_1.Name = "class61_1";
             this.class61_1.Size = new System.Drawing.Size(450, 20);
             this.class61_1.TabIndex = 60;
-            this.class61_1.Text = "Exclude VPN networks and Tor exit nodes from the allowed connections";
+            this.class61_1"Exclude VPN networks and Tor exit nodes from the allowed connections";
             this.class61_1.UseVisualStyleBackColor = false;
             // 
             // class63_2
@@ -808,7 +808,7 @@ internal sealed class AdvancedGeoIPSettingsDialog : Form0
             this.class63_2.Name = "class63_2";
             this.class63_2.Size = new System.Drawing.Size(425, 16);
             this.class63_2.TabIndex = 59;
-            this.class63_2.Text = "Turn on if you want the machine to be accessible over the local network";
+            this.class63_2"Turn on if you want the machine to be accessible over the local network";
             // 
             // class61_2
             // 
@@ -819,7 +819,7 @@ internal sealed class AdvancedGeoIPSettingsDialog : Form0
             this.class61_2.Name = "class61_2";
             this.class61_2.Size = new System.Drawing.Size(165, 20);
             this.class61_2.TabIndex = 58;
-            this.class61_2.Text = "Allow local connections";
+            this.class61_2"Allow local connections";
             this.class61_2.UseVisualStyleBackColor = false;
             // 
             // class63_3
@@ -832,7 +832,7 @@ internal sealed class AdvancedGeoIPSettingsDialog : Form0
             this.class63_3.Name = "class63_3";
             this.class63_3.Size = new System.Drawing.Size(437, 16);
             this.class63_3.TabIndex = 57;
-            this.class63_3.Text = "Blocking these connections could disrupt normal operation of many apps";
+            this.class63_3"Blocking these connections could disrupt normal operation of many apps";
             // 
             // class61_3
             // 
@@ -843,7 +843,7 @@ internal sealed class AdvancedGeoIPSettingsDialog : Form0
             this.class61_3.Name = "class61_3";
             this.class61_3.Size = new System.Drawing.Size(292, 20);
             this.class61_3.TabIndex = 56;
-            this.class61_3.Text = "Allow loopback connections (recommended)";
+            this.class61_3"Allow loopback connections (recommended)";
             this.class61_3.UseVisualStyleBackColor = false;
             // 
             // tabPage_2
@@ -855,7 +855,7 @@ internal sealed class AdvancedGeoIPSettingsDialog : Form0
             this.tabPage_2.Name = "tabPage_2";
             this.tabPage_2.Size = new System.Drawing.Size(528, 589);
             this.tabPage_2.TabIndex = 2;
-            this.tabPage_2.Text = "Miscellaneous";
+            this.tabPage_2"Miscellaneous";
             // 
             // class65_2
             // 
@@ -870,7 +870,7 @@ internal sealed class AdvancedGeoIPSettingsDialog : Form0
             this.class65_2.Size = new System.Drawing.Size(516, 83);
             this.class65_2.TabIndex = 52;
             this.class65_2.TabStop = false;
-            this.class65_2.Text = "Database version:";
+            this.class65_2"Database version:";
             // 
             // class64_2
             // 
@@ -881,7 +881,7 @@ internal sealed class AdvancedGeoIPSettingsDialog : Form0
             this.class64_2.Size = new System.Drawing.Size(434, 20);
             this.class64_2.TabIndex = 2;
             this.class64_2.TabStop = true;
-            this.class64_2.Text = "Max (more entries, higher impact on OS performance, more accurate)";
+            this.class64_2"Max (more entries, higher impact on OS performance, more accurate)";
             this.class64_2.UseVisualStyleBackColor = false;
             // 
             // class64_3
@@ -893,7 +893,7 @@ internal sealed class AdvancedGeoIPSettingsDialog : Form0
             this.class64_3.Size = new System.Drawing.Size(420, 20);
             this.class64_3.TabIndex = 1;
             this.class64_3.TabStop = true;
-            this.class64_3.Text = "Lite (fewer entries, lower impact on OS performance, less accurate)";
+            this.class64_3"Lite (fewer entries, lower impact on OS performance, less accurate)";
             this.class64_3.UseVisualStyleBackColor = false;
             // 
             // AdvancedGeoIPSettingsDialog
@@ -913,7 +913,7 @@ internal sealed class AdvancedGeoIPSettingsDialog : Form0
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Name = "AdvancedGeoIPSettingsDialog";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Text = "Advanced Geo-IP Settings";
+            this"Advanced Geo-IP Settings";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_0)).EndInit();
             this.control14_0.ResumeLayout(false);
             this.tabPage_0.ResumeLayout(false);

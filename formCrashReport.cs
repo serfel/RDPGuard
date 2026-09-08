@@ -92,7 +92,7 @@ internal sealed class formCrashReport : Form0
             this.class62_0.Name = "class62_0";
             this.class62_0.Size = new System.Drawing.Size(207, 16);
             this.class62_0.TabIndex = 16;
-            this.class62_0.Text = "Sorry, something went wrong.";
+            this.class62_0"Sorry, something went wrong.";
             // 
             // textBox_0
             // 
@@ -125,7 +125,7 @@ internal sealed class formCrashReport : Form0
             this.class66_0.Name = "class66_0";
             this.class66_0.Size = new System.Drawing.Size(100, 36);
             this.class66_0.TabIndex = 18;
-            this.class66_0.Text = "Send";
+            this.class66_0"Send";
             this.class66_0.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.class66_0.UseVisualStyleBackColor = false;
             // 
@@ -141,7 +141,7 @@ internal sealed class formCrashReport : Form0
             this.class66_1.Name = "class66_1";
             this.class66_1.Size = new System.Drawing.Size(100, 36);
             this.class66_1.TabIndex = 19;
-            this.class66_1.Text = "Cancel";
+            this.class66_1.Text = "Отмена";
             this.class66_1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.class66_1.UseVisualStyleBackColor = false;
             // 
@@ -156,7 +156,7 @@ internal sealed class formCrashReport : Form0
             this.class62_1.Name = "class62_1";
             this.class62_1.Size = new System.Drawing.Size(448, 16);
             this.class62_1.TabIndex = 15;
-            this.class62_1.Text = "A detailed error report has been created and pasted into the text box below";
+            this.class62_1"A detailed error report has been created and pasted into the text box below";
             // 
             // class62_2
             // 
@@ -170,7 +170,7 @@ internal sealed class formCrashReport : Form0
             this.class62_2.Name = "class62_2";
             this.class62_2.Size = new System.Drawing.Size(605, 16);
             this.class62_2.TabIndex = 23;
-            this.class62_2.Text = "You can send it to help us improve RdpGuard. We will treat this report as confide" +
+            this.class62_2"You can send it to help us improve RdpGuard. We will treat this report as confide" +
     "ntial and anonymous.";
             // 
             // class62_3
@@ -186,7 +186,7 @@ internal sealed class formCrashReport : Form0
             this.class62_3.Name = "class62_3";
             this.class62_3.Size = new System.Drawing.Size(196, 16);
             this.class62_3.TabIndex = 24;
-            this.class62_3.Text = "This bug might already be fixed.";
+            this.class62_3"This bug might already be fixed.";
             // 
             // class62_4
             // 
@@ -201,7 +201,7 @@ internal sealed class formCrashReport : Form0
             this.class62_4.Name = "class62_4";
             this.class62_4.Size = new System.Drawing.Size(318, 16);
             this.class62_4.TabIndex = 25;
-            this.class62_4.Text = "to check if a newer version is available for download.";
+            this.class62_4"to check if a newer version is available for download.";
             // 
             // gclass3_0
             // 
@@ -216,7 +216,7 @@ internal sealed class formCrashReport : Form0
             this.gclass3_0.Size = new System.Drawing.Size(66, 16);
             this.gclass3_0.TabIndex = 26;
             this.gclass3_0.TabStop = true;
-            this.gclass3_0.Text = "Click here";
+            this.gclass3_0"Click here";
             this.gclass3_0.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(135)))), ((int)(((byte)(200)))));
             // 
             // formCrashReport
@@ -240,7 +240,7 @@ internal sealed class formCrashReport : Form0
             this.MinimumSize = new System.Drawing.Size(710, 400);
             this.Name = "formCrashReport";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Program Crashed";
+            this"Program Crashed";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_0)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -72,7 +72,7 @@ internal sealed class EventLogDialog : Form0
             this.Location = new System.Drawing.Point(0, 0);
             this.Name = "EventLogDialog";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Text = "Event Log";
+            this.Text = "Журнал событий";
             this.ResumeLayout(false);
 
 	}

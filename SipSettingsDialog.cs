@@ -128,7 +128,7 @@ internal sealed class SipSettingsDialog : Form0
 		class66_0.Name = "m_btnSave";
 		class66_0.Size = new Size(100, 36);
 		class66_0.TabIndex = 7;
-		class66_0.Text = "Save";
+		class66_0.Text = "Сохранить";
 		class66_0.TextAlign = ContentAlignment.MiddleRight;
 		class66_0.TextImageRelation = TextImageRelation.ImageBeforeText;
 		class66_0.UseVisualStyleBackColor = true;
@@ -139,7 +139,7 @@ internal sealed class SipSettingsDialog : Form0
 		class66_1.Name = "m_btnCancel";
 		class66_1.Size = new Size(100, 36);
 		class66_1.TabIndex = 8;
-		class66_1.Text = "Cancel";
+		class66_1.Text = "Отмена";
 		class66_1.TextAlign = ContentAlignment.MiddleRight;
 		class66_1.TextImageRelation = TextImageRelation.ImageBeforeText;
 		class66_1.UseVisualStyleBackColor = true;
@@ -156,7 +156,7 @@ internal sealed class SipSettingsDialog : Form0
 		class62_0.Name = "m_lblCaption";
 		class62_0.Size = new Size(92, 16);
 		class62_0.TabIndex = 49;
-		class62_0.Text = "SIP Settings";
+		class62_0"SIP Settings";
 		pictureBox_0.Image = Resources.telephone_48;
 		pictureBox_0.Location = new Point(16, 15);
 		pictureBox_0.Margin = new Padding(4);
@@ -171,7 +171,7 @@ internal sealed class SipSettingsDialog : Form0
 		class62_1.Name = "m_lblSubCaption";
 		class62_1.Size = new Size(205, 16);
 		class62_1.TabIndex = 48;
-		class62_1.Text = "Advanced SIP protection settings";
+		class62_1"Advanced SIP protection settings";
 		gclass3_0.Anchor = AnchorStyles.Top | AnchorStyles.Right;
 		gclass3_0.AutoSize = true;
 		gclass3_0.LinkColor = Color.FromArgb(38, 135, 200);
@@ -180,14 +180,14 @@ internal sealed class SipSettingsDialog : Form0
 		gclass3_0.Size = new Size(73, 16);
 		gclass3_0.TabIndex = 9;
 		gclass3_0.TabStop = true;
-		gclass3_0.Text = "online help";
+		gclass3_0.Text = "справка онлайн";
 		gclass3_0.VisitedLinkColor = Color.FromArgb(38, 135, 200);
 		class61_0.AutoSize = true;
 		class61_0.Location = new Point(16, 97);
 		class61_0.Name = "m_chbEnableSipEngine";
 		class61_0.Size = new Size(156, 20);
 		class61_0.TabIndex = 0;
-		class61_0.Text = "Enable SIP protection";
+		class61_0"Enable SIP protection";
 		class61_0.UseVisualStyleBackColor = true;
 		class62_2.AutoSize = true;
 		class62_2.ForeColor = SystemColors.ControlDarkDark;
@@ -195,7 +195,7 @@ internal sealed class SipSettingsDialog : Form0
 		class62_2.Name = "m_lblEnableSipProtectionHint";
 		class62_2.Size = new Size(198, 16);
 		class62_2.TabIndex = 58;
-		class62_2.Text = "Turn on to enable SIP protection";
+		class62_2"Turn on to enable SIP protection";
 		panel_0.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 		panel_0.Location = new Point(12, 154);
 		panel_0.Name = "m_panel";

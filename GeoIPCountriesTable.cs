@@ -471,13 +471,13 @@ internal sealed class GeoIPCountriesTable : UserControl
 		gclass0_0.TabIndex = 26;
 		gclass0_0.UseCompatibleStateImageBehavior = false;
 		gclass0_0.View = View.Details;
-		columnHeader_0.Text = "Country";
+		columnHeader_0"Country";
 		columnHeader_0.Width = 190;
-		columnHeader_1.Text = "Entries";
+		columnHeader_1"Entries";
 		columnHeader_1.Width = 100;
-		columnHeader_2.Text = "Addresses";
+		columnHeader_2.Text = "Добавитьresses";
 		columnHeader_2.Width = 100;
-		columnHeader_3.Text = "Updated";
+		columnHeader_3"Updated";
 		columnHeader_3.Width = 120;
 		base.AutoScaleDimensions = new SizeF(8f, 16f);
 		base.AutoScaleMode = AutoScaleMode.Font;

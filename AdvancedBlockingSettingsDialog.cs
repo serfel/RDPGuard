@@ -112,7 +112,7 @@ internal sealed class AdvancedBlockingSettingsDialog : Form0
             this.class66_0.Name = "class66_0";
             this.class66_0.Size = new System.Drawing.Size(100, 36);
             this.class66_0.TabIndex = 7;
-            this.class66_0.Text = "Save";
+            this.class66_0.Text = "Сохранить";
             this.class66_0.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.class66_0.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.class66_0.UseVisualStyleBackColor = false;
@@ -129,7 +129,7 @@ internal sealed class AdvancedBlockingSettingsDialog : Form0
             this.class66_1.Name = "class66_1";
             this.class66_1.Size = new System.Drawing.Size(100, 36);
             this.class66_1.TabIndex = 8;
-            this.class66_1.Text = "Cancel";
+            this.class66_1.Text = "Отмена";
             this.class66_1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.class66_1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.class66_1.UseVisualStyleBackColor = false;
@@ -158,7 +158,7 @@ internal sealed class AdvancedBlockingSettingsDialog : Form0
             this.class62_0.Name = "class62_0";
             this.class62_0.Size = new System.Drawing.Size(198, 16);
             this.class62_0.TabIndex = 49;
-            this.class62_0.Text = "Advanced blocking settings";
+            this.class62_0.Text = "Расширенные настройки блокировки";
             // 
             // pictureBox_0
             // 
@@ -184,7 +184,7 @@ internal sealed class AdvancedBlockingSettingsDialog : Form0
             this.class62_1.Name = "class62_1";
             this.class62_1.Size = new System.Drawing.Size(205, 16);
             this.class62_1.TabIndex = 48;
-            this.class62_1.Text = "Advanced settings for IP blocking";
+            this.class62_1.Text = "Расширенные настройки IP-блокировки";
             // 
             // gclass3_0
             // 
@@ -199,7 +199,7 @@ internal sealed class AdvancedBlockingSettingsDialog : Form0
             this.gclass3_0.Size = new System.Drawing.Size(72, 16);
             this.gclass3_0.TabIndex = 9;
             this.gclass3_0.TabStop = true;
-            this.gclass3_0.Text = "online help";
+            this.gclass3_0.Text = "справка онлайн";
             this.gclass3_0.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(135)))), ((int)(((byte)(200)))));
             // 
             // class61_0
@@ -211,7 +211,7 @@ internal sealed class AdvancedBlockingSettingsDialog : Form0
             this.class61_0.Name = "class61_0";
             this.class61_0.Size = new System.Drawing.Size(350, 20);
             this.class61_0.TabIndex = 0;
-            this.class61_0.Text = "Block access to all ports on the server (recommended)";
+            this.class61_0.Text = "Блокировать все порты на сервере (рекомендуется)";
             this.class61_0.UseVisualStyleBackColor = false;
             // 
             // class63_0
@@ -224,7 +224,7 @@ internal sealed class AdvancedBlockingSettingsDialog : Form0
             this.class63_0.Name = "class63_0";
             this.class63_0.Size = new System.Drawing.Size(296, 16);
             this.class63_0.TabIndex = 58;
-            this.class63_0.Text = "Turn on to block access to all ports  on the server";
+            this.class63_0.Text = "Включите для блокировки всех портов на сервере";
             // 
             // class63_1
             // 
@@ -236,7 +236,7 @@ internal sealed class AdvancedBlockingSettingsDialog : Form0
             this.class63_1.Name = "class63_1";
             this.class63_1.Size = new System.Drawing.Size(421, 16);
             this.class63_1.TabIndex = 71;
-            this.class63_1.Text = "You can also specify multiple comma-separated ports, i.e. 3389, 21, 25";
+            this.class63_1.Text = "Можно указать несколько портов через запятую, например 3389, 21, 25";
             // 
             // class62_2
             // 
@@ -248,7 +248,7 @@ internal sealed class AdvancedBlockingSettingsDialog : Form0
             this.class62_2.Name = "class62_2";
             this.class62_2.Size = new System.Drawing.Size(91, 16);
             this.class62_2.TabIndex = 70;
-            this.class62_2.Text = "Ports to block:";
+            this.class62_2.Text = "Порты для блокировки:";
             // 
             // textBox_0
             // 
@@ -272,7 +272,7 @@ internal sealed class AdvancedBlockingSettingsDialog : Form0
             this.class62_3.Name = "class62_3";
             this.class62_3.Size = new System.Drawing.Size(355, 16);
             this.class62_3.TabIndex = 78;
-            this.class62_3.Text = "(network performance may be affected, please check help)";
+            this.class62_3.Text = "(может повлиять на скорость сети, см. справку)";
             // 
             // AdvancedBlockingSettingsDialog
             // 
@@ -297,7 +297,7 @@ internal sealed class AdvancedBlockingSettingsDialog : Form0
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Name = "AdvancedBlockingSettingsDialog";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Text = "Blocking Settings";
+            this.Text = "Настройки блокировки";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_0)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

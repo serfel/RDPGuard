@@ -110,7 +110,7 @@ internal sealed class ExecuteProgramAddEditControl : Control4
 	{
 		textBox_0.Text = dictionary_0[genum2_0];
 		string text = dictionary_1[genum2_0];
-		gclass2_0.Text = "You can use the following variables as arguments:\r\n" + new string('-', 100) + "\r\n" + text + ((string.IsNullOrEmpty(text) ? true : false) ? null : "\r\n") + "%HOSTNAME% - Host name\r\n%TOTAL_IP_BLOCKED% - Total IP addresses currently blocked";
+		gclass2_0"You can use the following variables as arguments:\r\n" + new string('-', 100) + "\r\n" + text + ((string.IsNullOrEmpty(text) ? true : false) ? null : "\r\n") + "%HOSTNAME% - Host name\r\n%TOTAL_IP_BLOCKED% - Total IP addresses currently blocked";
 	}
 
 	public override bool vmethod_4()
@@ -187,7 +187,7 @@ internal sealed class ExecuteProgramAddEditControl : Control4
 		class65_0.Size = new Size(559, 333);
 		class65_0.TabIndex = 38;
 		class65_0.TabStop = false;
-		class65_0.Text = "Settings";
+		class65_0.Text = "Настройки";
 		gclass2_0.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 		gclass2_0.BackColor = SystemColors.Control;
 		gclass2_0.BorderStyle = BorderStyle.None;
@@ -214,7 +214,7 @@ internal sealed class ExecuteProgramAddEditControl : Control4
 		gclass3_1.Size = new Size(49, 16);
 		gclass3_1.TabIndex = 86;
 		gclass3_1.TabStop = true;
-		gclass3_1.Text = "test run";
+		gclass3_1.Text = "тестовый запуск";
 		gclass3_1.VisitedLinkColor = Color.FromArgb(38, 135, 200);
 		textBox_0.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
 		textBox_0.Location = new Point(187, 97);
@@ -226,14 +226,14 @@ internal sealed class ExecuteProgramAddEditControl : Control4
 		class62_0.Name = "m_lblArguments";
 		class62_0.Size = new Size(74, 16);
 		class62_0.TabIndex = 85;
-		class62_0.Text = "Arguments:";
+		class62_0.Text = "Аргументы:";
 		class63_0.AutoSize = true;
 		class63_0.ForeColor = SystemColors.ControlDarkDark;
 		class63_0.Location = new Point(184, 125);
 		class63_0.Name = "m_lblArgumentsHint";
 		class63_0.Size = new Size(123, 16);
 		class63_0.TabIndex = 84;
-		class63_0.Text = "Optional arguments";
+		class63_0.Text = "Необязательные аргументы";
 		class54_0.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
 		class54_0.String_1 = null;
 		class54_0.Location = new Point(187, 32);
@@ -245,14 +245,14 @@ internal sealed class ExecuteProgramAddEditControl : Control4
 		class62_1.Name = "m_lblPath";
 		class62_1.Size = new Size(98, 16);
 		class62_1.TabIndex = 82;
-		class62_1.Text = "Program/script:";
+		class62_1"Program/script:";
 		class63_1.AutoSize = true;
 		class63_1.ForeColor = SystemColors.ControlDarkDark;
 		class63_1.Location = new Point(184, 60);
 		class63_1.Name = "m_lblPathHint";
 		class63_1.Size = new Size(331, 16);
 		class63_1.TabIndex = 81;
-		class63_1.Text = "Specify the path of the program or script you want to run";
+		class63_1"Specify the path of the program or script you want to run";
 		base.AutoScaleDimensions = new SizeF(8f, 16f);
 		base.AutoScaleMode = AutoScaleMode.Font;
 		base.Controls.Add(class65_0);

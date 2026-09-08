@@ -284,7 +284,7 @@ internal sealed class MailSendTaskAddEditControl : Control4
 		class65_0.Size = new Size(622, 93);
 		class65_0.TabIndex = 38;
 		class65_0.TabStop = false;
-		class65_0.Text = "SMTP Server";
+		class65_0.Text = "SMTP-сервер";
 		class66_0.Anchor = AnchorStyles.Top | AnchorStyles.Right;
 		class66_0.Image = Resources.edit_16;
 		class66_0.Location = new Point(588, 31);
@@ -305,7 +305,7 @@ internal sealed class MailSendTaskAddEditControl : Control4
 		class62_0.Name = "m_lblServer";
 		class62_0.Size = new Size(50, 16);
 		class62_0.TabIndex = 64;
-		class62_0.Text = "Server:";
+		class62_0.Text = "Сервер:";
 		class63_0.AutoSize = true;
 		class63_0.ForeColor = SystemColors.ControlDarkDark;
 		class63_0.Location = new Point(184, 61);
@@ -313,7 +313,7 @@ internal sealed class MailSendTaskAddEditControl : Control4
 		class63_0.Name = "m_lblServerHint";
 		class63_0.Size = new Size(321, 16);
 		class63_0.TabIndex = 63;
-		class63_0.Text = " Select SMTP server from the list or add the new one. ";
+		class63_0" Select SMTP server from the list or add the new one. ";
 		class65_1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 		class65_1.Controls.Add(class62_5);
 		class65_1.Controls.Add(class62_6);
@@ -338,7 +338,7 @@ internal sealed class MailSendTaskAddEditControl : Control4
 		class65_1.Size = new Size(620, 430);
 		class65_1.TabIndex = 39;
 		class65_1.TabStop = false;
-		class65_1.Text = "Message";
+		class65_1.Text = "Сообщение";
 		class62_5.Anchor = AnchorStyles.Top | AnchorStyles.Right;
 		class62_5.AutoSize = true;
 		class62_5.ForeColor = Color.Red;
@@ -347,7 +347,7 @@ internal sealed class MailSendTaskAddEditControl : Control4
 		class62_5.Name = "m_lblInvalidEmailAddress2";
 		class62_5.Size = new Size(139, 16);
 		class62_5.TabIndex = 77;
-		class62_5.Text = "Invalid e-mail address";
+		class62_5.Text = "Неверный адрес эл. почты";
 		class62_5.Visible = false;
 		class62_5.Boolean_0 = true;
 		class62_6.Anchor = AnchorStyles.Top | AnchorStyles.Right;
@@ -358,7 +358,7 @@ internal sealed class MailSendTaskAddEditControl : Control4
 		class62_6.Name = "m_lblInvalidEmailAddress1";
 		class62_6.Size = new Size(139, 16);
 		class62_6.TabIndex = 76;
-		class62_6.Text = "Invalid e-mail address";
+		class62_6.Text = "Неверный адрес эл. почты";
 		class62_6.Visible = false;
 		class62_6.Boolean_0 = true;
 		pictureBox_0.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
@@ -377,7 +377,7 @@ internal sealed class MailSendTaskAddEditControl : Control4
 		gclass3_1.Size = new Size(101, 16);
 		gclass3_1.TabIndex = 16;
 		gclass3_1.TabStop = true;
-		gclass3_1.Text = "send test e-mail";
+		gclass3_1.Text = "отправить тестовое письмо";
 		gclass3_1.VisitedLinkColor = Color.FromArgb(38, 135, 200);
 		textBox_3.AcceptsReturn = true;
 		textBox_3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
@@ -393,7 +393,7 @@ internal sealed class MailSendTaskAddEditControl : Control4
 		class62_4.Name = "m_lblBody";
 		class62_4.Size = new Size(42, 16);
 		class62_4.TabIndex = 73;
-		class62_4.Text = "Body:";
+		class62_4.Text = "Текст письма:";
 		class63_4.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
 		class63_4.AutoSize = true;
 		class63_4.ForeColor = SystemColors.ControlDarkDark;
@@ -402,7 +402,7 @@ internal sealed class MailSendTaskAddEditControl : Control4
 		class63_4.Name = "m_lblBodyHint";
 		class63_4.Size = new Size(152, 16);
 		class63_4.TabIndex = 72;
-		class63_4.Text = " Specify message body ";
+		class63_4" Specify message body ";
 		textBox_2.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
 		textBox_2.Location = new Point(187, 172);
 		textBox_2.Margin = new Padding(4);
@@ -415,7 +415,7 @@ internal sealed class MailSendTaskAddEditControl : Control4
 		class62_3.Name = "m_lblSubject";
 		class62_3.Size = new Size(55, 16);
 		class62_3.TabIndex = 70;
-		class62_3.Text = "Subject:";
+		class62_3.Text = "Тема:";
 		class63_3.AutoSize = true;
 		class63_3.ForeColor = SystemColors.ControlDarkDark;
 		class63_3.Location = new Point(184, 201);
@@ -423,7 +423,7 @@ internal sealed class MailSendTaskAddEditControl : Control4
 		class63_3.Name = "m_lblSubjectHint";
 		class63_3.Size = new Size(161, 16);
 		class63_3.TabIndex = 69;
-		class63_3.Text = " Specify message subject";
+		class63_3" Specify message subject";
 		textBox_0.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
 		textBox_0.Location = new Point(187, 102);
 		textBox_0.Margin = new Padding(4);
@@ -436,7 +436,7 @@ internal sealed class MailSendTaskAddEditControl : Control4
 		class62_1.Name = "m_lblTo";
 		class62_1.Size = new Size(27, 16);
 		class62_1.TabIndex = 67;
-		class62_1.Text = "To:";
+		class62_1.Text = "Кому:";
 		class63_1.AutoSize = true;
 		class63_1.ForeColor = SystemColors.ControlDarkDark;
 		class63_1.Location = new Point(184, 131);
@@ -444,7 +444,7 @@ internal sealed class MailSendTaskAddEditControl : Control4
 		class63_1.Name = "m_lblToHint";
 		class63_1.Size = new Size(177, 16);
 		class63_1.TabIndex = 66;
-		class63_1.Text = " Specify message recepient ";
+		class63_1" Specify message recepient ";
 		textBox_1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
 		textBox_1.Location = new Point(187, 32);
 		textBox_1.Margin = new Padding(4);
@@ -457,7 +457,7 @@ internal sealed class MailSendTaskAddEditControl : Control4
 		class62_2.Name = "m_lblFrom";
 		class62_2.Size = new Size(41, 16);
 		class62_2.TabIndex = 64;
-		class62_2.Text = "From:";
+		class62_2.Text = "От кого:";
 		class63_2.AutoSize = true;
 		class63_2.ForeColor = SystemColors.ControlDarkDark;
 		class63_2.Location = new Point(184, 61);
@@ -465,7 +465,7 @@ internal sealed class MailSendTaskAddEditControl : Control4
 		class63_2.Name = "m_lblFromHint";
 		class63_2.Size = new Size(184, 16);
 		class63_2.TabIndex = 63;
-		class63_2.Text = " Specify the message sender ";
+		class63_2" Specify the message sender ";
 		base.AutoScaleDimensions = new SizeF(8f, 16f);
 		base.AutoScaleMode = AutoScaleMode.Font;
 		base.Controls.Add(class65_1);

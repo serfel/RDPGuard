@@ -179,7 +179,7 @@ internal sealed class GeoIPCountryAddDialog : Form0
 		class66_0.Name = "m_btnAdd";
 		class66_0.Size = new Size(100, 36);
 		class66_0.TabIndex = 20;
-		class66_0.Text = "Add";
+		class66_0.Text = "Добавить";
 		class66_0.TextAlign = ContentAlignment.MiddleRight;
 		class66_0.TextImageRelation = TextImageRelation.ImageBeforeText;
 		class66_0.UseVisualStyleBackColor = true;
@@ -190,7 +190,7 @@ internal sealed class GeoIPCountryAddDialog : Form0
 		class66_1.Name = "m_btnCancel";
 		class66_1.Size = new Size(100, 36);
 		class66_1.TabIndex = 21;
-		class66_1.Text = "Cancel";
+		class66_1.Text = "Отмена";
 		class66_1.TextAlign = ContentAlignment.MiddleRight;
 		class66_1.TextImageRelation = TextImageRelation.ImageBeforeText;
 		class66_1.UseVisualStyleBackColor = true;
@@ -207,7 +207,7 @@ internal sealed class GeoIPCountryAddDialog : Form0
 		class62_0.Name = "label2";
 		class62_0.Size = new Size(91, 16);
 		class62_0.TabIndex = 49;
-		class62_0.Text = "Add Country";
+		class62_0.Text = "Добавить Country";
 		pictureBox_0.Location = new Point(16, 15);
 		pictureBox_0.Margin = new Padding(4);
 		pictureBox_0.Name = "m_imgBigIcon";
@@ -221,7 +221,7 @@ internal sealed class GeoIPCountryAddDialog : Form0
 		class62_1.Name = "lblCaption";
 		class62_1.Size = new Size(384, 16);
 		class62_1.TabIndex = 48;
-		class62_1.Text = "Select one or multiple countries from the list below and click Add";
+		class62_1"Select one or multiple countries from the list below and click Add";
 		gclass3_0.Anchor = AnchorStyles.Top | AnchorStyles.Right;
 		gclass3_0.AutoSize = true;
 		gclass3_0.LinkBehavior = LinkBehavior.NeverUnderline;
@@ -231,7 +231,7 @@ internal sealed class GeoIPCountryAddDialog : Form0
 		gclass3_0.Size = new Size(72, 16);
 		gclass3_0.TabIndex = 55;
 		gclass3_0.TabStop = true;
-		gclass3_0.Text = "online help";
+		gclass3_0.Text = "справка онлайн";
 		gclass3_0.VisitedLinkColor = Color.FromArgb(38, 135, 200);
 		control1_0.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 		control1_0.GClass5_1 = new GClass5[0];
@@ -257,7 +257,7 @@ internal sealed class GeoIPCountryAddDialog : Form0
 		class63_0.Name = "m_lblLoadingHint";
 		class63_0.Size = new Size(58, 16);
 		class63_0.TabIndex = 77;
-		class63_0.Text = "loading..";
+		class63_0"loading..";
 		base.AutoScaleDimensions = new SizeF(8f, 16f);
 		base.AutoScaleMode = AutoScaleMode.Font;
 		base.ClientSize = new Size(684, 487);
