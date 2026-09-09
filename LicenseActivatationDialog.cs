@@ -184,7 +184,7 @@ internal sealed class LicenseActivatationDialog : Form0
 			gclass3_1.Click += @class.method_1;
 			gclass3_0.Visible = false;
 			class66_0.Visible = false;
-			class66_1"Close";
+			class66_1.Text = "Закрыть";
 			class66_1.Image = Resources.opts_16;
 			class62_2.Visible = false;
 			textBox_0.Visible = false;
@@ -313,7 +313,7 @@ internal sealed class LicenseActivatationDialog : Form0
 
 	private void method_19()
 	{
-		class62_0"To activate RdpGuard enter your License Key into the box below and click Activate.";
+		class62_0.Text = "To activate RdpGuard enter your License Key into the box below and click Activate.";
 		string text = (class62_1"RdpGuard Activation");
 		string text3 = text;
 		Text = text3;
@@ -404,7 +404,7 @@ internal sealed class LicenseActivatationDialog : Form0
 		gclass3_0.Size = new Size(217, 16);
 		gclass3_0.TabIndex = 12;
 		gclass3_0.TabStop = true;
-		gclass3_0"Click here to obtain the License Key";
+		gclass3_0.Text = "Click here to obtain the License Key";
 		gclass3_0.VisitedLinkColor = Color.FromArgb(38, 135, 200);
 		class62_1.AutoSize = true;
 		class62_1.Font = new Font("Microsoft Sans Serif", 9.75f, FontStyle.Bold, GraphicsUnit.Point, 204);
@@ -421,7 +421,7 @@ internal sealed class LicenseActivatationDialog : Form0
 		class66_0.Name = "m_btnActivate";
 		class66_0.Size = new Size(100, 36);
 		class66_0.TabIndex = 17;
-		class66_0"Activate";
+		class66_0.Text = "Activate";
 		class66_0.TextImageRelation = TextImageRelation.ImageBeforeText;
 		class66_0.UseVisualStyleBackColor = true;
 		class66_1.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
@@ -446,7 +446,7 @@ internal sealed class LicenseActivatationDialog : Form0
 		class62_2.Name = "m_lblActivationKey";
 		class62_2.Size = new Size(83, 16);
 		class62_2.TabIndex = 15;
-		class62_2"License Key:";
+		class62_2.Text = "License Key:";
 		class55_0.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
 		class55_0.Location = new Point(119, 102);
 		class55_0.Margin = new Padding(4);
@@ -460,7 +460,7 @@ internal sealed class LicenseActivatationDialog : Form0
 		class62_3.Name = "label2";
 		class62_3.Size = new Size(85, 16);
 		class62_3.TabIndex = 22;
-		class62_3"Hardware ID:";
+		class62_3.Text = "Hardware ID:";
 		gcontrol0_0.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
 		gcontrol0_0.Location = new Point(16, 81);
 		gcontrol0_0.Name = "separatorLine1";
@@ -471,7 +471,7 @@ internal sealed class LicenseActivatationDialog : Form0
 		statusStrip_0.Name = "statusStrip1";
 		statusStrip_0.Size = new Size(684, 22);
 		statusStrip_0.TabIndex = 42;
-		statusStrip_0"statusStrip1";
+		statusStrip_0.Text = "statusStrip1";
 		toolStripStatusLabel_0.Name = "toolStripStatusLabel1";
 		toolStripStatusLabel_0.Size = new Size(669, 17);
 		toolStripStatusLabel_0.Spring = true;
@@ -490,7 +490,7 @@ internal sealed class LicenseActivatationDialog : Form0
 		class62_4.Name = "m_lblAlreadyActivated";
 		class62_4.Size = new Size(258, 16);
 		class62_4.TabIndex = 44;
-		class62_4"License key already activated. Thank you.";
+		class62_4.Text = "License key already activated. Thank you.";
 		class62_4.Boolean_0 = true;
 		class62_4.Visible = false;
 		gclass3_1.AutoSize = true;
@@ -502,7 +502,7 @@ internal sealed class LicenseActivatationDialog : Form0
 		gclass3_1.Size = new Size(353, 16);
 		gclass3_1.TabIndex = 45;
 		gclass3_1.TabStop = true;
-		gclass3_1"Click here to deactivate your License key on this computer.";
+		gclass3_1.Text = "Щёлкните здесь, чтобы деактивировать ключ лицензии на этом компьютере.";
 		gclass3_1.Visible = false;
 		gclass3_1.VisitedLinkColor = Color.FromArgb(38, 135, 200);
 		base.AutoScaleDimensions = new SizeF(8f, 16f);

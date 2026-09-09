@@ -135,14 +135,14 @@ internal sealed class ReportToAbuseIPDBAddEditControl : Control4
 		class62_0.Name = "m_lblApiKey";
 		class62_0.Size = new Size(99, 16);
 		class62_0.TabIndex = 82;
-		class62_0"API key:";
+		class62_0.Text = "API key:";
 		class63_0.AutoSize = true;
 		class63_0.ForeColor = SystemColors.ControlDarkDark;
 		class63_0.Location = new Point(184, 60);
 		class63_0.Name = "m_lblApiKeyHint";
 		class63_0.Size = new Size(332, 16);
 		class63_0.TabIndex = 81;
-		class63_0"Please enter your AbuseIPDB API key";
+		class63_0.Text = "Please enter your AbuseIPDB API key";
 		base.AutoScaleDimensions = new SizeF(8f, 16f);
 		base.AutoScaleMode = AutoScaleMode.Font;
 		base.Controls.Add(class65_0);

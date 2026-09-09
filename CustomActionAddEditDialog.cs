@@ -417,7 +417,7 @@ internal sealed class CustomActionAddEditDialog : Form0
             this.class62_0.Name = "class62_0";
             this.class62_0.Size = new System.Drawing.Size(162, 16);
             this.class62_0.TabIndex = 4;
-            this.class62_0"<description placeholder>";
+            this.class62_0.Text = "<заполнитель описания>";
             // 
             // class62_1
             // 
@@ -431,7 +431,7 @@ internal sealed class CustomActionAddEditDialog : Form0
             this.class62_1.Name = "class62_1";
             this.class62_1.Size = new System.Drawing.Size(186, 16);
             this.class62_1.TabIndex = 14;
-            this.class62_1"<subcaption placeholder>";
+            this.class62_1.Text = "<заполнитель подзаголовка>";
             // 
             // class66_0
             // 
@@ -462,7 +462,7 @@ internal sealed class CustomActionAddEditDialog : Form0
             this.class66_1.Name = "class66_1";
             this.class66_1.Size = new System.Drawing.Size(277, 36);
             this.class66_1.TabIndex = 4;
-            this.class66_1"<ok_button>";
+            this.class66_1.Text = "ОК";
             this.class66_1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.class66_1.UseVisualStyleBackColor = false;
             // 
@@ -645,7 +645,7 @@ internal sealed class CustomActionAddEditDialog : Form0
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "CustomActionAddEditDialog";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this"<caption placeholder>";
+            this.Text = "<caption placeholder>";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_0)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

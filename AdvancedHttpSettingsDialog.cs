@@ -169,7 +169,7 @@ internal sealed class AdvancedHttpSettingsDialog : Form0
             this.class62_0.Name = "class62_0";
             this.class62_0.Size = new System.Drawing.Size(108, 16);
             this.class62_0.TabIndex = 49;
-            this.class62_0"HTTP Settings";
+            this.class62_0.Text = "Параметры HTTP";
             // 
             // pictureBox_0
             // 
@@ -195,7 +195,7 @@ internal sealed class AdvancedHttpSettingsDialog : Form0
             this.class62_1.Name = "class62_1";
             this.class62_1.Size = new System.Drawing.Size(220, 16);
             this.class62_1.TabIndex = 48;
-            this.class62_1"Advanced HTTP protection settings";
+            this.class62_1.Text = "Дополнительные параметры защиты HTTP";
             // 
             // gclass3_0
             // 
@@ -222,7 +222,7 @@ internal sealed class AdvancedHttpSettingsDialog : Form0
             this.class61_0.Name = "class61_0";
             this.class61_0.Size = new System.Drawing.Size(351, 20);
             this.class61_0.TabIndex = 65;
-            this.class61_0"Use the X-Forwarded-For field to read client IP address";
+            this.class61_0.Text = "Использовать поле X-Forwarded-For для получения IP-адреса клиента";
             this.class61_0.UseVisualStyleBackColor = false;
             // 
             // class63_0
@@ -235,7 +235,7 @@ internal sealed class AdvancedHttpSettingsDialog : Form0
             this.class63_0.Name = "class63_0";
             this.class63_0.Size = new System.Drawing.Size(391, 16);
             this.class63_0.TabIndex = 67;
-            this.class63_0"Do not enable unless you are hosting the website behind a proxy.";
+            this.class63_0.Text = "Не включайте,除非 сайт размещён за прокси.";
             // 
             // gclass3_1
             // 
@@ -261,7 +261,7 @@ internal sealed class AdvancedHttpSettingsDialog : Form0
             this.class61_1.Name = "class61_1";
             this.class61_1.Size = new System.Drawing.Size(356, 20);
             this.class61_1.TabIndex = 69;
-            this.class61_1"Fall back to the client IP address if the header is missing";
+            this.class61_1.Text = "Использовать IP клиента, если заголовок отсутствует";
             this.class61_1.UseVisualStyleBackColor = false;
             // 
             // class63_1
@@ -274,7 +274,7 @@ internal sealed class AdvancedHttpSettingsDialog : Form0
             this.class63_1.Name = "class63_1";
             this.class63_1.Size = new System.Drawing.Size(414, 16);
             this.class63_1.TabIndex = 70;
-            this.class63_1"Allows using the client IP when the X-Forwarded-For header is not set.";
+            this.class63_1.Text = "Позволяет использовать IP клиента, если заголовок X-Forwarded-For не установлен.";
             // 
             // AdvancedHttpSettingsDialog
             // 
@@ -298,7 +298,7 @@ internal sealed class AdvancedHttpSettingsDialog : Form0
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Name = "AdvancedHttpSettingsDialog";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this"Advanced HTTP Settings";
+            this.Text = "Advanced HTTP Settings";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_0)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

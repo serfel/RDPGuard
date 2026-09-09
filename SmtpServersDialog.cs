@@ -273,7 +273,7 @@ internal sealed class SmtpServersDialog : Form0
 		class62_0.Name = "label2";
 		class62_0.Size = new Size(108, 16);
 		class62_0.TabIndex = 49;
-		class62_0"SMTP Servers";
+		class62_0.Text = "SMTP Servers";
 		pictureBox_0.Image = Resources.mail_server_48;
 		pictureBox_0.Location = new Point(16, 15);
 		pictureBox_0.Margin = new Padding(4);
@@ -288,7 +288,7 @@ internal sealed class SmtpServersDialog : Form0
 		class62_1.Name = "lblCaption";
 		class62_1.Size = new Size(251, 16);
 		class62_1.TabIndex = 48;
-		class62_1"SMTP servers  to use for sending emails.";
+		class62_1.Text = "SMTP servers  to use for sending emails.";
 		gclass0_0.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 		gclass0_0.Columns.AddRange(new ColumnHeader[5] { columnHeader_0, columnHeader_1, columnHeader_2, columnHeader_3, columnHeader_4 });
 		gclass0_0.FullRowSelect = true;
@@ -300,15 +300,15 @@ internal sealed class SmtpServersDialog : Form0
 		gclass0_0.TabIndex = 6;
 		gclass0_0.UseCompatibleStateImageBehavior = false;
 		gclass0_0.View = View.Details;
-		columnHeader_0"Host";
+		columnHeader_0.Text = "Host";
 		columnHeader_0.Width = 100;
-		columnHeader_1"Port";
+		columnHeader_1.Text = "Port";
 		columnHeader_1.Width = 100;
-		columnHeader_2"SSL/TLS";
+		columnHeader_2.Text = "SSL/TLS";
 		columnHeader_2.Width = 100;
-		columnHeader_3"User name";
+		columnHeader_3.Text = "User name";
 		columnHeader_3.Width = 100;
-		columnHeader_4"Password";
+		columnHeader_4.Text = "Password";
 		columnHeader_4.Width = 100;
 		class66_2.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
 		class66_2.Enabled = false;

@@ -245,14 +245,14 @@ internal sealed class ExecuteProgramAddEditControl : Control4
 		class62_1.Name = "m_lblPath";
 		class62_1.Size = new Size(98, 16);
 		class62_1.TabIndex = 82;
-		class62_1"Program/script:";
+		class62_1.Text = "Program/script:";
 		class63_1.AutoSize = true;
 		class63_1.ForeColor = SystemColors.ControlDarkDark;
 		class63_1.Location = new Point(184, 60);
 		class63_1.Name = "m_lblPathHint";
 		class63_1.Size = new Size(331, 16);
 		class63_1.TabIndex = 81;
-		class63_1"Specify the path of the program or script you want to run";
+		class63_1.Text = "Specify the path of the program or script you want to run";
 		base.AutoScaleDimensions = new SizeF(8f, 16f);
 		base.AutoScaleMode = AutoScaleMode.Font;
 		base.Controls.Add(class65_0);

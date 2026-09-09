@@ -158,7 +158,7 @@ internal sealed class ProtocolRulesDialog : Form0
 		class62_0.Name = "m_lblSubCaption";
 		class62_0.Size = new Size(104, 16);
 		class62_0.TabIndex = 48;
-		class62_0"{SUBCAPTION}";
+		class62_0.Text = "{SUBCAPTION}";
 		class62_1.AutoSize = true;
 		class62_1.Font = new Font("Microsoft Sans Serif", 9.75f, FontStyle.Bold, GraphicsUnit.Point, 204);
 		class62_1.Location = new Point(79, 15);
@@ -166,7 +166,7 @@ internal sealed class ProtocolRulesDialog : Form0
 		class62_1.Name = "m_lblCaption";
 		class62_1.Size = new Size(85, 16);
 		class62_1.TabIndex = 49;
-		class62_1"{CAPTION}";
+		class62_1.Text = "{CAPTION}";
 		gcontrol0_0.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
 		gcontrol0_0.Location = new Point(16, 81);
 		gcontrol0_0.Name = "separatorLine1";
@@ -198,7 +198,7 @@ internal sealed class ProtocolRulesDialog : Form0
 		class62_2.Name = "m_lblRules";
 		class62_2.Size = new Size(128, 16);
 		class62_2.TabIndex = 52;
-		class62_2"{RULES_CAPTION}";
+		class62_2.Text = "{RULES_CAPTION}";
 		class63_0.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
 		class63_0.AutoSize = true;
 		class63_0.ForeColor = SystemColors.ControlDarkDark;
@@ -206,7 +206,7 @@ internal sealed class ProtocolRulesDialog : Form0
 		class63_0.Name = "m_lblRulesHint";
 		class63_0.Size = new Size(101, 16);
 		class63_0.TabIndex = 59;
-		class63_0"{RULES_HINT}";
+		class63_0.Text = "{RULES_HINT}";
 		base.AutoScaleDimensions = new SizeF(8f, 16f);
 		base.AutoScaleMode = AutoScaleMode.Font;
 		base.ClientSize = new Size(515, 482);

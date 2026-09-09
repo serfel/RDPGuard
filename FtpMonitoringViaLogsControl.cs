@@ -132,25 +132,25 @@ internal sealed class FtpMonitoringViaLogsControl : Control2
 		{
 		default:
 			class62_1.Text = "Файл или папка журнала:";
-			gclass2_0"Specify the log file/directory location";
+			gclass2_0.Text = "Укажите путь к файлу/папке журнала";
 			break;
 		case GEnum7.const_0:
 			class62_1.Text = "Папка журналов:";
 			class54_0.bool_0 = true;
 			class54_0.String_1 = "C:\\inetpub\\logs\\LogFiles";
-			gclass2_0"Specify one or multiple IIS FTP log file directories, for example C:\\inetpub\\logs\\LogFiles\\FTPSVC1";
+			gclass2_0.Text = "Specify one or multiple IIS FTP log file directories, for example C:\\inetpub\\logs\\LogFiles\\FTPSVC1";
 			break;
 		case GEnum7.const_1:
 			class62_1.Text = "Папка журналов:";
 			class54_0.bool_0 = true;
 			class54_0.String_1 = "C:\\Program Files (x86)\\FileZilla Server\\Logs";
-			gclass2_0"Specify log files directory, usually C:\\Program Files (x86)\\FileZilla Server\\Logs";
+			gclass2_0.Text = "Specify log files directory, usually C:\\Program Files (x86)\\FileZilla Server\\Logs";
 			break;
 		case GEnum7.const_2:
 			class62_1.Text = "Файл журнала безопасности:";
 			class54_0.bool_0 = false;
 			class54_0.String_1 = "C:\\Program Files\\Axigen Mail Server\\log";
-			gclass2_0"Specify the security log file location, usually C:\\Program Files\\Axigen Mail Server\\log\\security.txt";
+			gclass2_0.Text = "Укажите путь к журналу безопасности, обычно C:\\Program Files\\Axigen Mail Server\\log\\security.txt";
 			gclass2_0.Text += "\r\n\r\nTo enable security logging set 'enableSecurityLog = yes' in the following config file:\r\n";
 			gclass2_0.Text += "C:\\Program Files\\Axigen Mail Server\\run\\axigen.cfg";
 			break;
@@ -158,13 +158,13 @@ internal sealed class FtpMonitoringViaLogsControl : Control2
 			class62_1.Text = "Папка журналов:";
 			class54_0.bool_0 = true;
 			class54_0.String_1 = "C:\\ProgramData\\SolarWinds";
-			gclass2_0"Specify log files directory, usually C:\\ProgramData\\SolarWinds";
+			gclass2_0.Text = "Specify log files directory, usually C:\\ProgramData\\SolarWinds";
 			break;
 		case GEnum7.const_4:
 			class62_1.Text = "Папка журналов:";
 			class54_0.bool_0 = true;
 			class54_0.String_1 = "C:\\Serv-U\\Logs";
-			gclass2_0"Specify dedicated log files directory, for example C:\\Serv-U\\Logs";
+			gclass2_0.Text = "Specify dedicated log files directory, for example C:\\Serv-U\\Logs";
 			gclass2_0.Text += "\r\n\r\nTo enable logging to a dedicated directory open the Serv-U Management Console, Domain, Domain Activity, Settings and enable logging to file and specify the log file directory. The logging to file must be enabled for Security messages, FTP replies, SSH replies, HTTP replies";
 			break;
 		}
@@ -234,13 +234,13 @@ internal sealed class FtpMonitoringViaLogsControl : Control2
 		gclass2_0.Size = new Size(474, 64);
 		gclass2_0.TabIndex = 149;
 		gclass2_0.TabStop = false;
-		gclass2_0"<LOG_FILES_LOCATION_HINT>";
+		gclass2_0.Text = "<подсказка_расположения_файлов_журнала>";
 		class62_0.AutoSize = true;
 		class62_0.Location = new Point(15, 32);
 		class62_0.Name = "m_lblServerType";
 		class62_0.Size = new Size(77, 16);
 		class62_0.TabIndex = 144;
-		class62_0"FTP server:";
+		class62_0.Text = "FTP server:";
 		class54_0.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
 		class54_0.String_1 = null;
 		class54_0.Location = new Point(28, 137);
@@ -260,7 +260,7 @@ internal sealed class FtpMonitoringViaLogsControl : Control2
 		class62_1.Name = "m_lblLogFilesLocation";
 		class62_1.Size = new Size(165, 16);
 		class62_1.TabIndex = 147;
-		class62_1"<LOG_FILES_LOCATION>";
+		class62_1.Text = "<расположение_файлов_журнала>";
 		class0_0.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
 		class0_0.DropDownStyle = ComboBoxStyle.DropDownList;
 		class0_0.FormattingEnabled = true;
@@ -274,7 +274,7 @@ internal sealed class FtpMonitoringViaLogsControl : Control2
 		class63_0.Name = "m_lblServerTypeHint";
 		class63_0.Size = new Size(317, 16);
 		class63_0.TabIndex = 146;
-		class63_0"Select FTP server software installed on the machine.";
+		class63_0.Text = "Select FTP server software installed on the machine.";
 		base.AutoScaleDimensions = new SizeF(8f, 16f);
 		base.AutoScaleMode = AutoScaleMode.Font;
 		base.Controls.Add(class65_0);

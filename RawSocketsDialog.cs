@@ -236,7 +236,7 @@ internal sealed class RawSocketsDialog : Form0
 		class62_0.Name = "m_lblCaption";
 		class62_0.Size = new Size(193, 16);
 		class62_0.TabIndex = 49;
-		class62_0"Raw Sockets Configuration";
+		class62_0.Text = "Raw Sockets Configuration";
 		pictureBox_0.Image = Resources.traffic_monitoring_48;
 		pictureBox_0.Location = new Point(16, 15);
 		pictureBox_0.Margin = new Padding(4);
@@ -251,7 +251,7 @@ internal sealed class RawSocketsDialog : Form0
 		class62_1.Name = "m_lblSubCaption";
 		class62_1.Size = new Size(328, 16);
 		class62_1.TabIndex = 48;
-		class62_1"Advanced settings of Raw Sockets monitoring method";
+		class62_1.Text = "Advanced settings of Raw Sockets monitoring method";
 		gclass3_0.Anchor = AnchorStyles.Top | AnchorStyles.Right;
 		gclass3_0.AutoSize = true;
 		gclass3_0.LinkColor = Color.FromArgb(38, 135, 200);
@@ -272,7 +272,7 @@ internal sealed class RawSocketsDialog : Form0
 		class65_0.Size = new Size(515, 288);
 		class65_0.TabIndex = 136;
 		class65_0.TabStop = false;
-		class65_0"Select IP addresses for monitoring";
+		class65_0.Text = "Select IP addresses for monitoring";
 		textBox_0.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 		textBox_0.Location = new Point(15, 116);
 		textBox_0.Multiline = true;
@@ -285,14 +285,14 @@ internal sealed class RawSocketsDialog : Form0
 		class63_0.Name = "m_lblMonitoringViaRawSocketsHint";
 		class63_0.Size = new Size(472, 16);
 		class63_0.TabIndex = 135;
-		class63_0"Monitor traffic on all IP addresses associated with the machine (may work slow)";
+		class63_0.Text = "Monitor traffic on all IP addresses associated with the machine (may work slow)";
 		class64_0.AutoSize = true;
 		class64_0.Location = new Point(15, 85);
 		class64_0.Name = "m_rbMonitorSelectedAddresses";
 		class64_0.Size = new Size(210, 20);
 		class64_0.TabIndex = 134;
 		class64_0.TabStop = true;
-		class64_0"Monitor Selected IP Addresses";
+		class64_0.Text = "Monitor Selected IP Addresses";
 		class64_0.UseVisualStyleBackColor = true;
 		class64_1.AutoSize = true;
 		class64_1.Location = new Point(15, 32);
@@ -300,7 +300,7 @@ internal sealed class RawSocketsDialog : Form0
 		class64_1.Size = new Size(170, 20);
 		class64_1.TabIndex = 133;
 		class64_1.TabStop = true;
-		class64_1"Monitor All IP Addresses";
+		class64_1.Text = "Monitor All IP Addresses";
 		class64_1.UseVisualStyleBackColor = true;
 		base.AutoScaleDimensions = new SizeF(8f, 16f);
 		base.AutoScaleMode = AutoScaleMode.Font;

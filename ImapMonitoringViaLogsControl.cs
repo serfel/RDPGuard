@@ -67,31 +67,31 @@ internal sealed class ImapMonitoringViaLogsControl : Control2
 		{
 		default:
 			class62_0.Text = "Файл или папка журнала:";
-			gclass2_0"Specify the log file/directory location";
+			gclass2_0.Text = "Укажите путь к файлу/папке журнала";
 			break;
 		case GEnum8.const_0:
 			class62_0.Text = "Папка журналов:";
 			class54_0.bool_0 = true;
 			class54_0.String_1 = "C:\\Program Files (x86)\\Mail Enable\\Logging";
-			gclass2_0"Specify log files directory, usually C:\\Program Files (x86)\\Mail Enable\\Logging\\IMAP";
+			gclass2_0.Text = "Specify log files directory, usually C:\\Program Files (x86)\\Mail Enable\\Logging\\IMAP";
 			break;
 		case GEnum8.const_1:
 			class62_0.Text = "Файл журнала безопасности:";
 			class54_0.bool_0 = false;
 			class54_0.String_1 = "C:\\Program Files\\Kerio\\MailServer\\store\\logs";
-			gclass2_0"Specify the Security log file location, usually C:\\Program Files\\Kerio\\MailServer\\store\\logs\\security.log";
+			gclass2_0.Text = "Укажите путь к журналу безопасности, обычно C:\\Program Files\\Kerio\\MailServer\\store\\logs\\security.log";
 			break;
 		case GEnum8.const_2:
 			class62_0.Text = "Папка журналов:";
 			class54_0.bool_0 = true;
 			class54_0.String_1 = "C:\\hMailServer\\Logs";
-			gclass2_0"Specify hMailServer log files directory (for example C:\\hMailServer\\Logs)";
+			gclass2_0.Text = "Укажите папку журналов hMailServer (например C:\\hMailServer\\Logs)";
 			break;
 		case GEnum8.const_3:
 			class62_0.Text = "Папка журналов:";
 			class54_0.bool_0 = true;
 			class54_0.String_1 = "C:\\Program Files\\Microsoft\\Exchange Server\\V15\\Logging\\Imap4";
-			gclass2_0"Specify log files directory, usually C:\\Program Files\\Microsoft\\Exchange Server\\V15\\Logging\\Imap4";
+			gclass2_0.Text = "Specify log files directory, usually C:\\Program Files\\Microsoft\\Exchange Server\\V15\\Logging\\Imap4";
 			gclass2_0.Text += "\r\n\r\nUse the following command in Exchange Management Shell to enable logging:";
 			gclass2_0.Text += "\r\nSet-ImapSettings -Server \"YOUR-SERVER-NAME\" -ProtocolLogEnabled $true";
 			break;
@@ -99,7 +99,7 @@ internal sealed class ImapMonitoringViaLogsControl : Control2
 			class62_0.Text = "Файл журнала безопасности:";
 			class54_0.bool_0 = false;
 			class54_0.String_1 = "C:\\Program Files\\Axigen Mail Server\\log";
-			gclass2_0"Specify the security log file location, usually C:\\Program Files\\Axigen Mail Server\\log\\security.txt";
+			gclass2_0.Text = "Укажите путь к журналу безопасности, обычно C:\\Program Files\\Axigen Mail Server\\log\\security.txt";
 			gclass2_0.Text += "\r\n\r\nTo enable security logging set 'enableSecurityLog = yes' in the following config file:\r\n";
 			gclass2_0.Text += "C:\\Program Files\\Axigen Mail Server\\run\\axigen.cfg";
 			break;
@@ -107,13 +107,13 @@ internal sealed class ImapMonitoringViaLogsControl : Control2
 			class62_0.Text = "Папка журналов:";
 			class54_0.bool_0 = true;
 			class54_0.String_1 = "C:\\MDaemon\\Logs";
-			gclass2_0"Specify MDaemon log files directory (for example C:\\MDaemon\\Logs)";
+			gclass2_0.Text = "Укажите папку журналов MDaemon (например C:\\MDaemon\\Logs)";
 			break;
 		case GEnum8.const_6:
 			class62_0.Text = "Папка журналов:";
 			class54_0.bool_0 = true;
 			class54_0.String_1 = "C:\\SmarterMail\\Logs";
-			gclass2_0"Specify SmarterMail log files directory (for example C:\\SmarterMail\\Logs)";
+			gclass2_0.Text = "Укажите папку журналов SmarterMail (например C:\\SmarterMail\\Logs)";
 			break;
 		}
 		vmethod_2();
@@ -169,7 +169,7 @@ internal sealed class ImapMonitoringViaLogsControl : Control2
 		gclass2_0.Size = new Size(566, 69);
 		gclass2_0.TabIndex = 142;
 		gclass2_0.TabStop = false;
-		gclass2_0"<LOG_FILES_LOCATION_HINT>";
+		gclass2_0.Text = "<подсказка_расположения_файлов_журнала>";
 		class54_0.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
 		class54_0.String_1 = null;
 		class54_0.Location = new Point(28, 137);
@@ -181,14 +181,14 @@ internal sealed class ImapMonitoringViaLogsControl : Control2
 		class62_0.Name = "m_lblLogFilesLocation";
 		class62_0.Size = new Size(165, 16);
 		class62_0.TabIndex = 146;
-		class62_0"<LOG_FILES_LOCATION>";
+		class62_0.Text = "<расположение_файлов_журнала>";
 		class63_0.AutoSize = true;
 		class63_0.ForeColor = SystemColors.ControlDarkDark;
 		class63_0.Location = new Point(25, 84);
 		class63_0.Name = "m_lblServerTypeHint";
 		class63_0.Size = new Size(323, 16);
 		class63_0.TabIndex = 145;
-		class63_0"Select IMAP server software installed on the machine.";
+		class63_0.Text = "Select IMAP server software installed on the machine.";
 		class0_0.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
 		class0_0.DropDownStyle = ComboBoxStyle.DropDownList;
 		class0_0.FormattingEnabled = true;
@@ -201,7 +201,7 @@ internal sealed class ImapMonitoringViaLogsControl : Control2
 		class62_1.Name = "m_lblServerType";
 		class62_1.Size = new Size(85, 16);
 		class62_1.TabIndex = 143;
-		class62_1"IMAP Server:";
+		class62_1.Text = "IMAP Server:";
 		base.AutoScaleDimensions = new SizeF(8f, 16f);
 		base.AutoScaleMode = AutoScaleMode.Font;
 		base.Controls.Add(class65_0);

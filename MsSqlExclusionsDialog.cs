@@ -116,7 +116,7 @@ internal sealed class MsSqlExclusionsDialog : Form0
 		class62_0.Name = "lblCaption";
 		class62_0.Size = new Size(180, 16);
 		class62_0.TabIndex = 48;
-		class62_0"Exclusions for Event ID 18456";
+		class62_0.Text = "Исключения для события с кодом 18456";
 		class62_1.AutoSize = true;
 		class62_1.Font = new Font("Microsoft Sans Serif", 9.75f, FontStyle.Bold, GraphicsUnit.Point, 204);
 		class62_1.Location = new Point(79, 15);
@@ -124,7 +124,7 @@ internal sealed class MsSqlExclusionsDialog : Form0
 		class62_1.Name = "label2";
 		class62_1.Size = new Size(141, 16);
 		class62_1.TabIndex = 49;
-		class62_1"MS-SQL Exclusions";
+		class62_1.Text = "Исключения MS-SQL";
 		gcontrol0_0.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
 		gcontrol0_0.Location = new Point(16, 81);
 		gcontrol0_0.Name = "separatorLine1";
@@ -153,13 +153,13 @@ internal sealed class MsSqlExclusionsDialog : Form0
 		class62_2.Name = "label1";
 		class62_2.Size = new Size(236, 16);
 		class62_2.TabIndex = 52;
-		class62_2"Exclusion patterns for the Reason field:";
+		class62_2.Text = "Exclusion patterns for the Reason field:";
 		gclass2_0.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 		gclass2_0.Location = new Point(16, 363);
 		gclass2_0.Name = "m_lblExlucionsHint";
 		gclass2_0.Size = new Size(486, 46);
 		gclass2_0.TabIndex = 53;
-		gclass2_0"You can specify one exclusion pattern per line. Event ID 18456 is skipped if the Reason field contains any of the exclusion patterns.";
+		gclass2_0.Text = "You can specify one exclusion pattern per line. Event ID 18456 is skipped if the Reason field contains any of the exclusion patterns.";
 		base.AutoScaleDimensions = new SizeF(8f, 16f);
 		base.AutoScaleMode = AutoScaleMode.Font;
 		base.ClientSize = new Size(515, 465);

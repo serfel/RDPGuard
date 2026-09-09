@@ -189,7 +189,7 @@ internal sealed class RDWebSettingsDialog : Form0
 		class62_0.Name = "m_lblCaption";
 		class62_0.Size = new Size(121, 16);
 		class62_0.TabIndex = 49;
-		class62_0"RD Web Settings";
+		class62_0.Text = "RD Web Settings";
 		pictureBox_0.Image = Resources.rdweb_48;
 		pictureBox_0.Location = new Point(16, 15);
 		pictureBox_0.Margin = new Padding(4);
@@ -204,7 +204,7 @@ internal sealed class RDWebSettingsDialog : Form0
 		class62_1.Name = "m_lblSubCaption";
 		class62_1.Size = new Size(230, 16);
 		class62_1.TabIndex = 48;
-		class62_1"Advanced RD Web protection settings";
+		class62_1.Text = "Advanced RD Web protection settings";
 		gclass3_0.Anchor = AnchorStyles.Top | AnchorStyles.Right;
 		gclass3_0.AutoSize = true;
 		gclass3_0.LinkBehavior = LinkBehavior.NeverUnderline;
@@ -221,14 +221,14 @@ internal sealed class RDWebSettingsDialog : Form0
 		class61_0.Name = "m_chbEnableRDWebEngine";
 		class61_0.Size = new Size(183, 20);
 		class61_0.TabIndex = 0;
-		class61_0"Enable RD Web protection";
+		class61_0.Text = "Enable RD Web protection";
 		class61_0.UseVisualStyleBackColor = true;
 		class61_1.AutoSize = true;
 		class61_1.Location = new Point(16, 157);
 		class61_1.Name = "m_chbAutodetectLogsLocation";
 		class61_1.Size = new Size(245, 20);
 		class61_1.TabIndex = 1;
-		class61_1"Automatically detect log files location";
+		class61_1.Text = "Automatically detect log files location";
 		class61_1.UseVisualStyleBackColor = true;
 		class63_0.AutoSize = true;
 		class63_0.ForeColor = SystemColors.ControlDarkDark;
@@ -236,14 +236,14 @@ internal sealed class RDWebSettingsDialog : Form0
 		class63_0.Name = "m_lblEnableRDWebProtectionHint";
 		class63_0.Size = new Size(225, 16);
 		class63_0.TabIndex = 58;
-		class63_0"Turn on to enable RD Web protection";
+		class63_0.Text = "Turn on to enable RD Web protection";
 		class63_1.AutoSize = true;
 		class63_1.ForeColor = SystemColors.ControlDarkDark;
 		class63_1.Location = new Point(13, 182);
 		class63_1.Name = "m_lblAutomaticConfigLocationHint";
 		class63_1.Size = new Size(481, 16);
 		class63_1.TabIndex = 59;
-		class63_1"RdpGuard will attempt to detect IIS log files location for RD Web enabled website";
+		class63_1.Text = "RdpGuard will attempt to detect IIS log files location for RD Web enabled website";
 		class54_0.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
 		class54_0.Enabled = false;
 		class54_0.String_1 = null;
@@ -257,7 +257,7 @@ internal sealed class RDWebSettingsDialog : Form0
 		class62_2.Name = "m_lblLogFilesLocation";
 		class62_2.Size = new Size(124, 16);
 		class62_2.TabIndex = 61;
-		class62_2"IIS log files location:";
+		class62_2.Text = "IIS log files location:";
 		class63_2.AutoSize = true;
 		class63_2.Enabled = false;
 		class63_2.ForeColor = SystemColors.ControlDarkDark;
@@ -265,7 +265,7 @@ internal sealed class RDWebSettingsDialog : Form0
 		class63_2.Name = "m_lblLogFilesLocationHint";
 		class63_2.Size = new Size(341, 16);
 		class63_2.TabIndex = 62;
-		class63_2"Specify IIS log files location for RD Web enabled website";
+		class63_2.Text = "Specify IIS log files location for RD Web enabled website";
 		gclass3_1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
 		gclass3_1.AutoSize = true;
 		gclass3_1.LinkBehavior = LinkBehavior.NeverUnderline;
@@ -275,7 +275,7 @@ internal sealed class RDWebSettingsDialog : Form0
 		gclass3_1.Size = new Size(123, 16);
 		gclass3_1.TabIndex = 70;
 		gclass3_1.TabStop = true;
-		gclass3_1"advanced settings..";
+		gclass3_1.Text = "advanced settings..";
 		gclass3_1.VisitedLinkColor = Color.FromArgb(38, 135, 200);
 		base.AutoScaleDimensions = new SizeF(8f, 16f);
 		base.AutoScaleMode = AutoScaleMode.Font;

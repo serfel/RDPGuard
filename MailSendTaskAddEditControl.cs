@@ -313,7 +313,7 @@ internal sealed class MailSendTaskAddEditControl : Control4
 		class63_0.Name = "m_lblServerHint";
 		class63_0.Size = new Size(321, 16);
 		class63_0.TabIndex = 63;
-		class63_0" Select SMTP server from the list or add the new one. ";
+		class63_0.Text = " Select SMTP server from the list or add the new one. ";
 		class65_1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 		class65_1.Controls.Add(class62_5);
 		class65_1.Controls.Add(class62_6);
@@ -402,7 +402,7 @@ internal sealed class MailSendTaskAddEditControl : Control4
 		class63_4.Name = "m_lblBodyHint";
 		class63_4.Size = new Size(152, 16);
 		class63_4.TabIndex = 72;
-		class63_4" Specify message body ";
+		class63_4.Text = " Specify message body ";
 		textBox_2.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
 		textBox_2.Location = new Point(187, 172);
 		textBox_2.Margin = new Padding(4);
@@ -423,7 +423,7 @@ internal sealed class MailSendTaskAddEditControl : Control4
 		class63_3.Name = "m_lblSubjectHint";
 		class63_3.Size = new Size(161, 16);
 		class63_3.TabIndex = 69;
-		class63_3" Specify message subject";
+		class63_3.Text = " Specify message subject";
 		textBox_0.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
 		textBox_0.Location = new Point(187, 102);
 		textBox_0.Margin = new Padding(4);
@@ -444,7 +444,7 @@ internal sealed class MailSendTaskAddEditControl : Control4
 		class63_1.Name = "m_lblToHint";
 		class63_1.Size = new Size(177, 16);
 		class63_1.TabIndex = 66;
-		class63_1" Specify message recepient ";
+		class63_1.Text = " Specify message recepient ";
 		textBox_1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
 		textBox_1.Location = new Point(187, 32);
 		textBox_1.Margin = new Padding(4);
@@ -465,7 +465,7 @@ internal sealed class MailSendTaskAddEditControl : Control4
 		class63_2.Name = "m_lblFromHint";
 		class63_2.Size = new Size(184, 16);
 		class63_2.TabIndex = 63;
-		class63_2" Specify the message sender ";
+		class63_2.Text = " Specify the message sender ";
 		base.AutoScaleDimensions = new SizeF(8f, 16f);
 		base.AutoScaleMode = AutoScaleMode.Font;
 		base.Controls.Add(class65_1);
