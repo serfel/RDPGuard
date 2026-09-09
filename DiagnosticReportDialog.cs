@@ -179,7 +179,7 @@ internal sealed class DiagnosticReportDialog : Form0
 	private void method_16()
 	{
 		class62_1.Text = string.Format(class62_1.Text, "RdpGuard");
-		textBox_0"Loading data...";
+		textBox_0.Text = "Loading data...";
 		class66_0.Enabled = Boolean_0;
 		pictureBox_0.Image = ((Class163.Class163_0.Boolean_0 ? true : false) ? Resources.wait_25_dark : Resources.wait_25);
 	}
@@ -266,7 +266,7 @@ internal sealed class DiagnosticReportDialog : Form0
             this.class66_0.Name = "class66_0";
             this.class66_0.Size = new System.Drawing.Size(100, 36);
             this.class66_0.TabIndex = 20;
-            this.class66_0"Send";
+            this.class66_0.Text = "Отправить";
             this.class66_0.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.class66_0.UseVisualStyleBackColor = false;
             // 
@@ -322,7 +322,7 @@ internal sealed class DiagnosticReportDialog : Form0
             this.class62_0.Name = "class62_0";
             this.class62_0.Size = new System.Drawing.Size(132, 16);
             this.class62_0.TabIndex = 49;
-            this.class62_0"Diagnostic Report";
+            this.class62_0.Text = "Диагностический отчёт";
             // 
             // pictureBox_1
             // 
@@ -348,7 +348,7 @@ internal sealed class DiagnosticReportDialog : Form0
             this.class62_1.Name = "class62_1";
             this.class62_1.Size = new System.Drawing.Size(403, 16);
             this.class62_1.TabIndex = 48;
-            this.class62_1"Please send us diagnostic report if you have any problems with {0}.";
+            this.class62_1.Text = "Пожалуйста, отправьте нам диагностический отчёт, если у вас возникли проблемы с {0}.";
             // 
             // class62_2
             // 
@@ -361,7 +361,7 @@ internal sealed class DiagnosticReportDialog : Form0
             this.class62_2.Name = "class62_2";
             this.class62_2.Size = new System.Drawing.Size(75, 16);
             this.class62_2.TabIndex = 51;
-            this.class62_2"Your name:";
+            this.class62_2.Text = "Ваше имя:";
             // 
             // textBox_1
             // 
@@ -396,7 +396,7 @@ internal sealed class DiagnosticReportDialog : Form0
             this.class62_3.Name = "class62_3";
             this.class62_3.Size = new System.Drawing.Size(74, 16);
             this.class62_3.TabIndex = 53;
-            this.class62_3"Your email:";
+            this.class62_3.Text = "Ваш email:";
             // 
             // textBox_3
             // 
@@ -426,7 +426,7 @@ internal sealed class DiagnosticReportDialog : Form0
             this.class62_4.Name = "class62_4";
             this.class62_4.Size = new System.Drawing.Size(130, 16);
             this.class62_4.TabIndex = 56;
-            this.class62_4"Problem description:";
+            this.class62_4.Text = "Описание проблемы:";
             // 
             // DiagnosticReportDialog
             // 
@@ -452,7 +452,7 @@ internal sealed class DiagnosticReportDialog : Form0
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Name = "DiagnosticReportDialog";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this"Diagnostic Report";
+            this.Text = "Диагностический отчёт";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_0)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_1)).EndInit();
             this.ResumeLayout(false);

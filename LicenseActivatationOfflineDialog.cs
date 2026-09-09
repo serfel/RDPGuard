@@ -104,7 +104,7 @@ internal sealed class LicenseActivatationOfflineDialog : Form0
 
 	public void method_12()
 	{
-		class62_0"Use this dialog to activate RdpGuard if you unable to use online activation";
+		class62_0.Text = "Use this dialog to activate RdpGuard if you unable to use online activation";
 	}
 
 	public void method_13()
@@ -183,7 +183,7 @@ internal sealed class LicenseActivatationOfflineDialog : Form0
 		class62_0.Name = "m_lblSubCaption";
 		class62_0.Size = new Size(421, 16);
 		class62_0.TabIndex = 4;
-		class62_0"Use this dialog to activate {0} Pro if you unable to use online activation";
+		class62_0.Text = "Use this dialog to activate {0} Pro if you unable to use online activation";
 		class62_1.AutoSize = true;
 		class62_1.Font = new Font("Microsoft Sans Serif", 9.75f, FontStyle.Bold, GraphicsUnit.Point, 204);
 		class62_1.Location = new Point(79, 15);
@@ -191,7 +191,7 @@ internal sealed class LicenseActivatationOfflineDialog : Form0
 		class62_1.Name = "lblCaption";
 		class62_1.Size = new Size(124, 16);
 		class62_1.TabIndex = 14;
-		class62_1"Offline Activation";
+		class62_1.Text = "Offline Activation";
 		class66_0.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
 		class66_0.Enabled = false;
 		class66_0.Image = Resources.opts_16;
@@ -200,7 +200,7 @@ internal sealed class LicenseActivatationOfflineDialog : Form0
 		class66_0.Name = "m_btnActivate";
 		class66_0.Size = new Size(100, 36);
 		class66_0.TabIndex = 1;
-		class66_0"Activate";
+		class66_0.Text = "Activate";
 		class66_0.TextImageRelation = TextImageRelation.ImageBeforeText;
 		class66_0.UseVisualStyleBackColor = true;
 		class66_1.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
@@ -225,7 +225,7 @@ internal sealed class LicenseActivatationOfflineDialog : Form0
 		label_0.Name = "m_lblActivationKey";
 		label_0.Size = new Size(171, 16);
 		label_0.TabIndex = 15;
-		label_0"1. Enter your Activation Key:";
+		label_0.Text = "1. Enter your Activation Key:";
 		gcontrol0_0.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
 		gcontrol0_0.Location = new Point(16, 81);
 		gcontrol0_0.Name = "separatorLine1";
@@ -238,14 +238,14 @@ internal sealed class LicenseActivatationOfflineDialog : Form0
 		class62_2.Name = "label2";
 		class62_2.Size = new Size(334, 16);
 		class62_2.TabIndex = 97;
-		class62_2"Enter your Activation Key from order confirmation e-mail";
+		class62_2.Text = "Enter your Activation Key from order confirmation e-mail";
 		class62_3.AutoSize = true;
 		class62_3.ForeColor = SystemColors.ControlDarkDark;
 		class62_3.Location = new Point(30, 396);
 		class62_3.Name = "label1";
 		class62_3.Size = new Size(221, 16);
 		class62_3.TabIndex = 100;
-		class62_3"Send us the text from the field above";
+		class62_3.Text = "Send us the text from the field above";
 		textBox_1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
 		textBox_1.Font = new Font("Courier New", 9.75f, FontStyle.Bold, GraphicsUnit.Point, 0);
 		textBox_1.Location = new Point(33, 213);
@@ -263,7 +263,7 @@ internal sealed class LicenseActivatationOfflineDialog : Form0
 		gclass3_0.Size = new Size(185, 16);
 		gclass3_0.TabIndex = 101;
 		gclass3_0.TabStop = true;
-		gclass3_0"2. Send us Activation Request";
+		gclass3_0.Text = "2. Send us Activation Request";
 		gclass3_0.VisitedLinkColor = Color.FromArgb(38, 135, 200);
 		class62_4.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
 		class62_4.AutoSize = true;
@@ -272,7 +272,7 @@ internal sealed class LicenseActivatationOfflineDialog : Form0
 		class62_4.Name = "label3";
 		class62_4.Size = new Size(293, 16);
 		class62_4.TabIndex = 103;
-		class62_4"Paste the Activation Response received from us";
+		class62_4.Text = "Paste the Activation Response received from us";
 		textBox_2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 		textBox_2.Font = new Font("Courier New", 9.75f, FontStyle.Bold, GraphicsUnit.Point, 0);
 		textBox_2.Location = new Point(33, 459);
@@ -288,7 +288,7 @@ internal sealed class LicenseActivatationOfflineDialog : Form0
 		label_1.Name = "label4";
 		label_1.Size = new Size(182, 16);
 		label_1.TabIndex = 104;
-		label_1"3. Enter Activation Response:";
+		label_1.Text = "3. Enter Activation Response:";
 		gclass3_1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
 		gclass3_1.AutoSize = true;
 		gclass3_1.LinkColor = Color.FromArgb(38, 135, 200);
@@ -297,7 +297,7 @@ internal sealed class LicenseActivatationOfflineDialog : Form0
 		gclass3_1.Size = new Size(38, 16);
 		gclass3_1.TabIndex = 105;
 		gclass3_1.TabStop = true;
-		gclass3_1"copy";
+		gclass3_1.Text = "copy";
 		gclass3_1.VisitedLinkColor = Color.FromArgb(38, 135, 200);
 		gclass3_2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
 		gclass3_2.AutoSize = true;
@@ -307,7 +307,7 @@ internal sealed class LicenseActivatationOfflineDialog : Form0
 		gclass3_2.Size = new Size(42, 16);
 		gclass3_2.TabIndex = 106;
 		gclass3_2.TabStop = true;
-		gclass3_2"paste";
+		gclass3_2.Text = "paste";
 		gclass3_2.VisitedLinkColor = Color.FromArgb(38, 135, 200);
 		base.AutoScaleDimensions = new SizeF(8f, 16f);
 		base.AutoScaleMode = AutoScaleMode.Font;

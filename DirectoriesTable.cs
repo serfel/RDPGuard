@@ -231,7 +231,7 @@ internal sealed class DirectoriesTable : UserControl
 		this.class67_0.Padding = new System.Windows.Forms.Padding(1);
 		this.class67_0.Size = new System.Drawing.Size(470, 25);
 		this.class67_0.TabIndex = 0;
-		this.class67_0"toolStrip1";
+		this.class67_0.Text = "панель инструментов 1";
 		this.toolStripButton_0.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
 		this.toolStripButton_0.Image = Properties.Resources.delete_16_pale;
 		this.toolStripButton_0.ImageTransparentColor = System.Drawing.Color.Magenta;

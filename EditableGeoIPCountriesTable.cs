@@ -378,7 +378,7 @@ internal sealed class EditableGeoIPCountriesTable : UserControl
 		this.class67_0.Name = "toolStrip1";
 		this.class67_0.Size = new System.Drawing.Size(562, 27);
 		this.class67_0.TabIndex = 0;
-		this.class67_0"toolStrip1";
+		this.class67_0.Text = "панель инструментов 1";
 		this.toolStripButton_4.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
 		this.toolStripButton_4.Image = Properties.Resources.config_10_v2;
 		this.toolStripButton_4.ImageTransparentColor = System.Drawing.Color.Magenta;
@@ -386,7 +386,7 @@ internal sealed class EditableGeoIPCountriesTable : UserControl
 		this.toolStripButton_4.Name = "m_btnAdvancedSettings";
 		this.toolStripButton_4.Padding = new System.Windows.Forms.Padding(3, 3, 1, 3);
 		this.toolStripButton_4.Size = new System.Drawing.Size(23, 25);
-		this.toolStripButton_4"Settings";
+		this.toolStripButton_4.Text = "Параметры";
 		this.toolStripButton_4.ToolTipText = "Click to open advanced settings";
 		this.toolStripButton_3.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
 		this.toolStripButton_3.Enabled = false;
@@ -439,7 +439,7 @@ internal sealed class EditableGeoIPCountriesTable : UserControl
 		this.gcontrol1_0.Name = "m_chbTemporaryDenyRule";
 		this.gcontrol1_0.Padding = new System.Windows.Forms.Padding(3);
 		this.gcontrol1_0.Size = new System.Drawing.Size(268, 27);
-		this.gcontrol1_0"Test mode (all countries allowed again after reboot)";
+		this.gcontrol1_0.Text = "Тестовый режим (все страны разрешены снова после перезагрузки)";
 		this.gcontrol1_0.ToolTipText = "Use this mode to test blocking settings. After a restart, all countries will be allowed again to ensure access in case of configuration errors.";
 		this.control1_0.GClass5_1 = new GClass5[0];
 		this.control1_0.IPListEntry_0 = new rdpguard.lib.IPListEntry[0];

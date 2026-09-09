@@ -568,7 +568,7 @@ internal sealed class IPListDialog : Form0
 		class62_0.Name = "m_lblTopTitle";
 		class62_0.Size = new Size(100, 16);
 		class62_0.TabIndex = 49;
-		class62_0"{TOP_TITLE}";
+		class62_0.Text = "{ЗАГОЛОВОК}";
 		pictureBox_0.Location = new Point(16, 15);
 		pictureBox_0.Margin = new Padding(4);
 		pictureBox_0.Name = "m_imgTopIcon";
@@ -582,7 +582,7 @@ internal sealed class IPListDialog : Form0
 		class62_1.Name = "m_lblTopDescription";
 		class62_1.Size = new Size(143, 16);
 		class62_1.TabIndex = 48;
-		class62_1"{TOP_DESCRIPTION}";
+		class62_1.Text = "{ОПИСАНИЕ}";
 		gclass3_0.Anchor = AnchorStyles.Top | AnchorStyles.Right;
 		gclass3_0.AutoSize = true;
 		gclass3_0.LinkBehavior = LinkBehavior.NeverUnderline;
@@ -616,7 +616,7 @@ internal sealed class IPListDialog : Form0
 		class46_0.View = View.Details;
 		columnHeader_0.Text = "IP-адрес/диапазон";
 		columnHeader_0.Width = 400;
-		columnHeader_1"CIDR";
+		columnHeader_1.Text = "CIDR";
 		columnHeader_1.Width = 139;
 		columnHeader_2.Text = "Комментарий";
 		columnHeader_2.Width = 215;

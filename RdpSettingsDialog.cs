@@ -203,7 +203,7 @@ internal sealed class RdpSettingsDialog : Form0
 		class62_0.Name = "m_lblCaption";
 		class62_0.Size = new Size(99, 16);
 		class62_0.TabIndex = 49;
-		class62_0"RDP Settings";
+		class62_0.Text = "RDP Settings";
 		pictureBox_0.Image = Resources.rdp_48;
 		pictureBox_0.Location = new Point(16, 15);
 		pictureBox_0.Margin = new Padding(4);
@@ -218,7 +218,7 @@ internal sealed class RdpSettingsDialog : Form0
 		class62_1.Name = "m_lblSubCaption";
 		class62_1.Size = new Size(212, 16);
 		class62_1.TabIndex = 48;
-		class62_1"Advanced RDP protection settings";
+		class62_1.Text = "Advanced RDP protection settings";
 		gclass3_0.Anchor = AnchorStyles.Top | AnchorStyles.Right;
 		gclass3_0.AutoSize = true;
 		gclass3_0.LinkBehavior = LinkBehavior.NeverUnderline;
@@ -235,7 +235,7 @@ internal sealed class RdpSettingsDialog : Form0
 		class61_0.Name = "m_chbEnableRdpEngine";
 		class61_0.Size = new Size(163, 20);
 		class61_0.TabIndex = 0;
-		class61_0"Enable RDP protection";
+		class61_0.Text = "Enable RDP protection";
 		class61_0.UseVisualStyleBackColor = true;
 		class63_0.AutoSize = true;
 		class63_0.ForeColor = SystemColors.ControlDarkDark;
@@ -243,7 +243,7 @@ internal sealed class RdpSettingsDialog : Form0
 		class63_0.Name = "m_lblEnableRdpProtectionHint";
 		class63_0.Size = new Size(205, 16);
 		class63_0.TabIndex = 58;
-		class63_0"Turn on to enable RDP protection";
+		class63_0.Text = "Turn on to enable RDP protection";
 		panel_0.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 		panel_0.Location = new Point(12, 211);
 		panel_0.Name = "m_panel";
@@ -255,13 +255,13 @@ internal sealed class RdpSettingsDialog : Form0
 		class63_1.Name = "m_lblEnableTrafficMonitoringHint";
 		class63_1.Size = new Size(514, 16);
 		class63_1.TabIndex = 114;
-		class63_1"Required on Windows Server 2008, usually not needed on other versions, check help..";
+		class63_1.Text = "Required on Windows Server 2008, usually not needed on other versions, check help..";
 		class61_1.AutoSize = true;
 		class61_1.Location = new Point(16, 153);
 		class61_1.Name = "m_chbEnableTrafficMonitoring";
 		class61_1.Size = new Size(168, 20);
 		class61_1.TabIndex = 113;
-		class61_1"Enable traffic monitoring";
+		class61_1.Text = "Enable traffic monitoring";
 		class61_1.UseVisualStyleBackColor = true;
 		gclass3_1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
 		gclass3_1.AutoSize = true;
@@ -272,7 +272,7 @@ internal sealed class RdpSettingsDialog : Form0
 		gclass3_1.Size = new Size(77, 16);
 		gclass3_1.TabIndex = 115;
 		gclass3_1.TabStop = true;
-		gclass3_1"Exclusions..";
+		gclass3_1.Text = "Exclusions..";
 		gclass3_1.VisitedLinkColor = Color.FromArgb(38, 135, 200);
 		base.AutoScaleDimensions = new SizeF(8f, 16f);
 		base.AutoScaleMode = AutoScaleMode.Font;

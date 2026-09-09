@@ -221,7 +221,7 @@ internal sealed class GeoIPCountryAddDialog : Form0
 		class62_1.Name = "lblCaption";
 		class62_1.Size = new Size(384, 16);
 		class62_1.TabIndex = 48;
-		class62_1"Select one or multiple countries from the list below and click Add";
+		class62_1.Text = "Select one or multiple countries from the list below and click Add";
 		gclass3_0.Anchor = AnchorStyles.Top | AnchorStyles.Right;
 		gclass3_0.AutoSize = true;
 		gclass3_0.LinkBehavior = LinkBehavior.NeverUnderline;
@@ -257,7 +257,7 @@ internal sealed class GeoIPCountryAddDialog : Form0
 		class63_0.Name = "m_lblLoadingHint";
 		class63_0.Size = new Size(58, 16);
 		class63_0.TabIndex = 77;
-		class63_0"loading..";
+		class63_0.Text = "loading..";
 		base.AutoScaleDimensions = new SizeF(8f, 16f);
 		base.AutoScaleMode = AutoScaleMode.Font;
 		base.ClientSize = new Size(684, 487);

@@ -287,7 +287,7 @@ internal sealed class CustomActionsDialog : Form0
 		class62_0.Name = "label2";
 		class62_0.Size = new Size(113, 16);
 		class62_0.TabIndex = 49;
-		class62_0"Custom Actions";
+		class62_0.Text = "Custom Actions";
 		class62_0.Boolean_0 = false;
 		pictureBox_0.Image = Resources.notifications_48;
 		pictureBox_0.Location = new Point(16, 19);
@@ -303,7 +303,7 @@ internal sealed class CustomActionsDialog : Form0
 		class62_1.Name = "lblCaption";
 		class62_1.Size = new Size(321, 16);
 		class62_1.TabIndex = 48;
-		class62_1"Define your own custom actions for RdpGuard events";
+		class62_1.Text = "Define your own custom actions for RdpGuard events";
 		class62_1.Boolean_0 = false;
 		class47_0.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 		class47_0.CheckBoxes = true;
@@ -319,13 +319,13 @@ internal sealed class CustomActionsDialog : Form0
 		class47_0.TabIndex = 6;
 		class47_0.UseCompatibleStateImageBehavior = false;
 		class47_0.View = View.Details;
-		columnHeader_3"✓";
+		columnHeader_3.Text = "✓";
 		columnHeader_3.Width = 30;
-		columnHeader_0"Event";
+		columnHeader_0.Text = "Event";
 		columnHeader_0.Width = 100;
-		columnHeader_1"Task";
+		columnHeader_1.Text = "Task";
 		columnHeader_1.Width = 150;
-		columnHeader_2"Details";
+		columnHeader_2.Text = "Details";
 		columnHeader_2.Width = 100;
 		gclass3_0.Anchor = AnchorStyles.Top | AnchorStyles.Right;
 		gclass3_0.AutoSize = true;
@@ -392,7 +392,7 @@ internal sealed class CustomActionsDialog : Form0
 		toolStripLabel_0.Padding = new Padding(0, 0, 10, 0);
 		toolStripLabel_0.Size = new Size(348, 23);
 		toolStripLabel_0.Tag = "ThemeIndependentForeColor";
-		toolStripLabel_0"Administrator privileges are required to modify custom actions";
+		toolStripLabel_0.Text = "Administrator privileges are required to modify custom actions";
 		toolStripLabel_0.Visible = false;
 		base.AutoScaleDimensions = new SizeF(8f, 16f);
 		base.AutoScaleMode = AutoScaleMode.Font;

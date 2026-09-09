@@ -259,7 +259,7 @@ internal sealed class FtpSettingsDialog : Form0
             this.class62_0.Name = "class62_0";
             this.class62_0.Size = new System.Drawing.Size(96, 16);
             this.class62_0.TabIndex = 49;
-            this.class62_0"FTP Settings";
+            this.class62_0.Text = "Параметры FTP";
             // 
             // pictureBox_0
             // 
@@ -285,7 +285,7 @@ internal sealed class FtpSettingsDialog : Form0
             this.class62_1.Name = "class62_1";
             this.class62_1.Size = new System.Drawing.Size(207, 16);
             this.class62_1.TabIndex = 48;
-            this.class62_1"Configure FTP protection settings.";
+            this.class62_1.Text = "Настройте параметры защиты FTP.";
             // 
             // gclass3_0
             // 
@@ -344,7 +344,7 @@ internal sealed class FtpSettingsDialog : Form0
             this.class65_0.Size = new System.Drawing.Size(530, 145);
             this.class65_0.TabIndex = 113;
             this.class65_0.TabStop = false;
-            this.class65_0"Monitoring method for FTP protocol:";
+            this.class65_0.Text = "Способ мониторинга протокола FTP:";
             // 
             // class63_0
             // 
@@ -356,7 +356,7 @@ internal sealed class FtpSettingsDialog : Form0
             this.class63_0.Name = "class63_0";
             this.class63_0.Size = new System.Drawing.Size(453, 16);
             this.class63_0.TabIndex = 113;
-            this.class63_0"Works with particular FTP server logs, SSL/TLS connections are supported.";
+            this.class63_0.Text = "Работает с журналами FTP-сервера, поддерживаются соединения SSL/TLS.";
             // 
             // class63_1
             // 
@@ -368,7 +368,7 @@ internal sealed class FtpSettingsDialog : Form0
             this.class63_1.Name = "class63_1";
             this.class63_1.Size = new System.Drawing.Size(414, 16);
             this.class63_1.TabIndex = 112;
-            this.class63_1"Works with any FTP Server. SSL/TLS connections are not supported.";
+            this.class63_1.Text = "Работает с любым FTP-сервером. Соединения SSL/TLS не поддерживаются.";
             // 
             // class64_0
             // 
@@ -379,7 +379,7 @@ internal sealed class FtpSettingsDialog : Form0
             this.class64_0.Size = new System.Drawing.Size(57, 20);
             this.class64_0.TabIndex = 111;
             this.class64_0.TabStop = true;
-            this.class64_0"Logs";
+            this.class64_0.Text = "Журналы";
             this.class64_0.UseVisualStyleBackColor = false;
             // 
             // class64_1
@@ -391,7 +391,7 @@ internal sealed class FtpSettingsDialog : Form0
             this.class64_1.Size = new System.Drawing.Size(64, 20);
             this.class64_1.TabIndex = 110;
             this.class64_1.TabStop = true;
-            this.class64_1"Traffic";
+            this.class64_1.Text = "Трафик";
             this.class64_1.UseVisualStyleBackColor = false;
             // 
             // class63_2
@@ -404,7 +404,7 @@ internal sealed class FtpSettingsDialog : Form0
             this.class63_2.Name = "class63_2";
             this.class63_2.Size = new System.Drawing.Size(202, 16);
             this.class63_2.TabIndex = 112;
-            this.class63_2"Turn on to enable FTP protection";
+            this.class63_2.Text = "Включите для защиты FTP";
             // 
             // class61_0
             // 
@@ -415,7 +415,7 @@ internal sealed class FtpSettingsDialog : Form0
             this.class61_0.Name = "class61_0";
             this.class61_0.Size = new System.Drawing.Size(160, 20);
             this.class61_0.TabIndex = 111;
-            this.class61_0"Enable FTP protection";
+            this.class61_0.Text = "Включить защиту FTP";
             this.class61_0.UseVisualStyleBackColor = false;
             // 
             // FtpSettingsDialog
@@ -437,7 +437,7 @@ internal sealed class FtpSettingsDialog : Form0
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Name = "FtpSettingsDialog";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this"FTP Settings";
+            this.Text = "Параметры FTP";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_0)).EndInit();
             this.panel_1.ResumeLayout(false);
             this.panel_1.PerformLayout();
